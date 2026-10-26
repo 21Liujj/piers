@@ -1,0 +1,5 @@
+suite: M-memory
+seed: 0
+variants: [current, nocompress_ref, uniform_budget, topk_fixed, pos_dedup, pos_dedup_priority, neighborhood]
+budget_tokens: 2048
+report: [kept_tokens, participating_tokens, select_ms, attn_ms, step_ms, peak_mem, miou, smallclass_iou]

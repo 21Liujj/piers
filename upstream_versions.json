@@ -1,0 +1,23 @@
+{
+  "effective_omnisam": {
+    "url": "https://github.com/21Liujj/Effective-Omnisam",
+    "note": "private fork of OmniSAM; source branch is the user's working branch (feature/scm-circular-memory at audit 2026-10-26, commit ef46a4c6007623173ccd6e70b5745e48951f70d). Re-verify on checkout; do NOT silently fall back to upstream main or paper-original OmniSAM.",
+    "audited_commit": "ef46a4c6007623173ccd6e70b5745e48951f70d",
+    "audited_branch": "feature/scm-circular-memory",
+    "audited_date": "2026-10-26",
+    "status": "pending_reverify_no_network_or_missing_checkout"
+  },
+  "grounded_sam2": {
+    "url": "https://github.com/IDEA-Research/Grounded-SAM-2",
+    "audited_commit": "b7a9c29f196edff0eb54dbe14588d7ae5e3dde28",
+    "audited_branch": "main",
+    "audited_date": "2026-10-26",
+    "vendor_dir": "third_party/grounded_sam2",
+    "status": "pending_vendor_snapshot"
+  },
+  "target_repo": {
+    "name": "21Liujj/piers-ljj",
+    "visibility": "private (keep same as source)",
+    "push_policy": "local commit only until user confirms remote exists + auth via PAT/SSH; never force-push; never push to upstream-effective"
+  }
+}

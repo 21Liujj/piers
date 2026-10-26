@@ -1,0 +1,10 @@
+# piers-omni env: Effective-Omnisam path (SAM2 via sam/ bootstrap).
+# Install AFTER core; versions pinned after auditing Effective-Omnisam source.
+# Placeholder pins — doctor will verify against actual source on GPU machine.
+--extra-index-url https://download.pytorch.org/whl/cu121
+torch>=2.5.1
+torchvision>=0.20.1
+hydra-core>=1.3
+wandb>=0.16
+opencv-python>=4.8
+# SAM2 CUDA ext: build with SAM2_BUILD_CUDA=0 for CPU-only check, rebuild on GPU host.

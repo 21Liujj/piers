@@ -1,0 +1,15 @@
+# code / predictions / logs
+__pycache__/
+*.pyc
+.venv/
+runs/
+outputs/
+*.npz
+*.pth
+*.pt
+*.ckpt
+# personal paths (never commit real paths)
+configs/piers/paths.yaml
+# OS
+.DS_Store
+Thumbs.db

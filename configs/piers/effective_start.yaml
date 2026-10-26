@@ -1,0 +1,13 @@
+# effective_start snapshot (frozen). Values re-verified in repository_audit.
+run_id: E0-effective-start
+seed: 0
+data:
+  src: Cityscapes
+  tgt_train: DensePASS-train
+  tgt_val: DensePASS-val
+  class_space: densepass13@v1
+fov: {win_w: 2048, win_h: 400, note: "verify against actual checkout; do NOT assume 2:1 ERP"}
+collab: none
+memory: {policy: current}
+seam: {strategy: fixed_scm}
+checkpoint: {path: null, sha256: null, status: pending_user_path}

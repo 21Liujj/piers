@@ -1,0 +1,6 @@
+suite: T2-semantic-to-text
+seed: 0
+_base_: T1_grounded_fov.yaml
+collab: semantic_to_text
+collab_params: {alpha: 0.5, hard_thr: null}
+semantic_cache: runs/E0/semantics

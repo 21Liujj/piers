@@ -1,0 +1,2 @@
+[console_scripts]
+piers_ljj = piers_ljj.cli:main

@@ -1,0 +1,10 @@
+# piers-grounded env: HF Grounding-DINO + SAM2 Image Predictor path.
+--extra-index-url https://download.pytorch.org/whl/cu121
+torch>=2.5.1
+torchvision>=0.20.1
+transformers>=4.45
+pillow>=10.0
+opencv-python>=4.8
+numpy>=1.24
+pyyaml>=6.0
+# Grounding-DINO native custom ops NOT required when disable_custom_kernels=True.

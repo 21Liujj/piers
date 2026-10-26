@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: piers-ljj
+Version: 0.1.0
+Summary: Text-specified efficient panoramic segmentation: UDA + grounded text branch
+Requires-Python: >=3.10
+Requires-Dist: numpy>=1.24
+Requires-Dist: pyyaml>=6.0
+Requires-Dist: pillow>=10.0

@@ -1,0 +1,7 @@
+suite: T1-grounded-fov
+seed: 0
+text_backend: hf_grounding_dino_sam2
+fov: {win_w: 1024, win_h: 1024, stride_x: 512}
+thresholds: {det: 0.35, text: 0.25}
+collab: none
+seam: {strategy: fixed_scm, extra_budget_B: 0}
