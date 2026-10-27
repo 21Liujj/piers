@@ -13,7 +13,13 @@
     "audited_branch": "main",
     "audited_date": "2026-10-26",
     "vendor_dir": "third_party/grounded_sam2",
-    "status": "pending_vendor_snapshot"
+    "vendor_status": "vendored_2026-10-27_from_zip",
+    "vendor_zip": "D:/piers2027/Grounded-SAM-2-main.zip",
+    "vendor_zip_sha256": "b63ad8ec9d576bd05e222b1c258974c24379493385e2597dbadbe0853b398d49",
+    "vendor_zip_bytes": 118638620,
+    "commit_verify": "pending_git_clone_revparse (zip has no git metadata; audited b7a9c29 NOT yet confirmed for this snapshot)",
+    "vendor_note": "filtered snapshot: 199 files kept, media/notebooks excluded; see third_party/grounded_sam2/VENDOR_PIERS.md",
+    "status": "vendored_pending_commit_verify"
   },
   "target_repo": {
     "name": "21Liujj/piers-ljj",
