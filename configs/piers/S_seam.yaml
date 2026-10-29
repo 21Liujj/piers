@@ -1,5 +1,7 @@
 suite: S-seam
+run_id: S-seam
 seed: 0
 variants: [linear, fixed_scm, uniform_extra, adaptive_extra]
 extra_budget_B: 2
 report: [windows, extra_windows, dino_calls, sam_enc, sam_dec, latency_ms, seam_iou, full_miou]
+runs_root: runs

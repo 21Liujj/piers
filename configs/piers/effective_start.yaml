@@ -1,4 +1,5 @@
 # effective_start snapshot (frozen). Values re-verified in repository_audit.
+suite: E0
 run_id: E0-effective-start
 seed: 0
 data:

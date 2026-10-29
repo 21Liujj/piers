@@ -1,0 +1,10 @@
+suite: C-combo
+run_id: C-combo
+seed: 0
+worker: omni
+# C: combo (runs only after B1 + M + S singles pass). Fixed seeds, no grid search.
+collab: bidirectional
+collab_params: {alpha: 0.5, qual_thr: 0.8, edge_width: 2, rounds: 1}
+memory: {policy: pos_dedup_priority, budget_tokens: 2048}
+seam: {strategy: adaptive_extra, extra_budget_B: 2}
+runs_root: runs

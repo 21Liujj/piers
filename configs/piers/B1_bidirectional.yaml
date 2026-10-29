@@ -1,0 +1,10 @@
+suite: B1-bidirectional
+run_id: B1-bidirectional
+seed: 0
+worker: omni
+# B1: bidirectional with declared teacher/cache rounds (no unbounded loop).
+collab: bidirectional
+collab_params: {alpha: 0.5, qual_thr: 0.8, edge_width: 2, rounds: 1}
+semantic_cache: runs/E0/semantics
+revision_dir: runs/U1-text-to-pseudo/revisions
+runs_root: runs

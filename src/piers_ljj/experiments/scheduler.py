@@ -42,11 +42,17 @@ def write_status(d: str, st: dict) -> str:
 
 
 def check_deps(suite: str, root: str) -> list:
-    """Return missing dep run_ids for a suite (empty = ready)."""
+    """Return missing dep run_ids for a suite (empty = ready).
+
+    `suite` may be a canonical code ("T2") or a long name ("T2-semantic-to-text");
+    both are canonicalized first. Dependency directories are resolved through
+    SUITE_RUN_IDS so they match the configs' `run_id:` fields exactly.
+    """
+    from piers_ljj.experiments.suites import canonical_suite, run_id_for
+
     missing = []
-    for dep in DEPS.get(suite, []):
-        # dep suite -> its canonical run dir must hold a completed status
-        dep_dir = os.path.join(root, dep)
+    for dep in DEPS.get(canonical_suite(suite), []):
+        dep_dir = os.path.join(root, run_id_for(dep))
         st = read_status(dep_dir)
         if st.get("status") not in ("completed_real", "passed_gpu_smoke", "passed_cpu"):
             missing.append(dep)

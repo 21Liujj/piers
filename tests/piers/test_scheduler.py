@@ -6,6 +6,7 @@ from piers_ljj.experiments.scheduler import config_hash, check_deps
 
 def test_run_dry_run_validates_deps(tmp_path, monkeypatch):
     import yaml
+    from piers_ljj.experiments.suites import SUITE_RUN_IDS
     cfg = {"suite": "T2", "run_id": "T2", "runs_root": str(tmp_path),
            "manifest": "q.json", "fov": {"win_w": 32}}
     cp = tmp_path / "t2.yaml"
@@ -14,9 +15,11 @@ def test_run_dry_run_validates_deps(tmp_path, monkeypatch):
     assert cli_main(["run", "--config", str(cp)]) == 3
     st = json.loads((tmp_path / "T2" / "status.json").read_text())
     assert st["status"] == "blocked" and st["missing_deps"] == ["E0"]
-    # fake E0 completed -> dry-run passes
-    (tmp_path / "E0").mkdir()
-    (tmp_path / "E0" / "status.json").write_text(json.dumps({"status": "completed_real"}))
+    # fake E0 completed -> dry-run passes.
+    # The dependency lives under E0's run_id, NOT the canonical code "E0".
+    dep = tmp_path / SUITE_RUN_IDS["E0"]
+    dep.mkdir()
+    (dep / "status.json").write_text(json.dumps({"status": "completed_real"}))
     assert cli_main(["run", "--config", str(cp), "--dry-run"]) == 0
 
 

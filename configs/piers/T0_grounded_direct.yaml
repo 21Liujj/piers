@@ -1,0 +1,13 @@
+suite: T0-grounded-direct
+run_id: T0-grounded-direct
+seed: 0
+worker: grounded
+text_backend: hf_grounding_dino_sam2
+# T0: single FoV covering whole ERP (records model resize cost, no remap).
+fov: {mode: direct}
+thresholds: {det: 0.35, text: 0.25}
+collab: none
+seam: {strategy: fixed_scm, extra_budget_B: 0}
+manifest: null  # fill with query manifest json path before GPU run
+grounded: {sam2_ckpt: null, sam2_cfg: sam2_hiera_l.yaml, dtype: bf16}
+runs_root: runs

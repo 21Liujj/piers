@@ -1,0 +1,13 @@
+suite: NEG-controls
+run_id: NEG-controls
+seed: 0
+worker: grounded
+# NEG: negative controls — no-guide, mismatched semantics, shuffled query.
+# Same FoV/cost as T1/T2; must NOT beat guided runs (sanity gate).
+controls: [no_guide, mismatched_semantics, shuffled_query]
+fov: {win_w: 1024, win_h: 1024, stride_x: 512}
+thresholds: {det: 0.35, text: 0.25}
+collab: none
+seam: {strategy: fixed_scm, extra_budget_B: 0}
+manifest: null  # fill before GPU run
+runs_root: runs

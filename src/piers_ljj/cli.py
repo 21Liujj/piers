@@ -49,10 +49,99 @@ def cmd_smoke(a):
 
 
 def cmd_validate_data(a):
+    """Static + optional real-path validation. Never downloads, never scans pixels."""
+    import os
+    import json
+    import hashlib
     from piers_ljj.evaluation.metrics import MAP19_TO_13
     assert MAP19_TO_13 == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 11, 12, 12, 12, 255, 12, 12], "map drift"
-    print("19->13 map OK; train/eval split + query manifest checks: pending real data paths")
-    return 0
+
+    report = {"map19_to_13": "OK", "errors": [], "warnings": [], "checked": {}}
+
+    # ---- paths.yaml (optional, skipped when absent or still a template) ----
+    paths_fp = a.paths
+    if paths_fp and os.path.exists(paths_fp):
+        import yaml
+        with open(paths_fp, encoding="utf-8") as f:
+            paths = yaml.safe_load(f) or {}
+        placeholders = ("D:/path/to", "path/to", "/path/to")
+        checked = {}
+        for key in ("omni_ckpt", "omni_src_root", "grounded_weights_dir",
+                    "sam2_cfg", "data_root"):
+            val = paths.get(key)
+            if val is None:
+                report["warnings"].append(f"{key}: unset")
+                continue
+            if any(p in str(val) for p in placeholders):
+                report["warnings"].append(f"{key}: still a template value ({val})")
+                continue
+            # sam2_cfg is a config NAME (e.g. sam2_hiera_l.yaml), not a path
+            if key == "sam2_cfg":
+                checked[key] = str(val)
+                continue
+            exists = os.path.exists(str(val))
+            checked[key] = {"path": str(val), "exists": exists}
+            if not exists:
+                report["errors"].append(f"{key} missing on disk: {val}")
+        # checkpoint SHA (compute when asked, compare when supplied)
+        ckpt = paths.get("omni_ckpt")
+        if ckpt and os.path.isfile(str(ckpt)) and not any(
+                p in str(ckpt) for p in placeholders):
+            if getattr(a, "sha256", False) or paths.get("omni_ckpt_sha256"):
+                h = hashlib.sha256()
+                with open(ckpt, "rb") as fh:
+                    for chunk in iter(lambda: fh.read(1 << 20), b""):
+                        h.update(chunk)
+                got = h.hexdigest()
+                checked["omni_ckpt_sha256"] = got
+                want = paths.get("omni_ckpt_sha256")
+                if want and str(want).lower() != got.lower():
+                    report["errors"].append(
+                        f"omni_ckpt SHA mismatch: want {want} got {got}")
+        report["checked"]["paths"] = checked
+    elif paths_fp:
+        report["warnings"].append(f"paths file not found: {paths_fp}")
+
+    # ---- query manifest (optional) ----
+    if getattr(a, "manifest", None):
+        from piers_ljj.text.manifest import worker_view, subset_ids, negative_ids
+        with open(a.manifest, encoding="utf-8") as f:
+            man = json.load(f)
+        qs = man.get("queries", [])
+        imgs = {im["image_id"]: im for im in man.get("images", [])}
+        split = man.get("split")
+        if split not in ("train", "dev-calib", "final-eval", "dev"):
+            report["errors"].append(f"manifest split invalid: {split}")
+        missing_img = [q["query_id"] for q in qs if q.get("image_id") not in imgs]
+        if missing_img:
+            report["errors"].append(f"queries reference unknown images: {missing_img[:5]}")
+        bad_task = [q["query_id"] for q in qs
+                    if q.get("task_type") not in ("category_union", "instance_referring")]
+        if bad_task:
+            report["errors"].append(f"bad task_type: {bad_task[:5]}")
+        neg_no_basis = [q["query_id"] for q in qs
+                        if q.get("negative") and not q.get("missing_basis")]
+        if neg_no_basis:
+            report["errors"].append(
+                f"negatives without verifiable missing_basis: {neg_no_basis[:5]}")
+        leaked = [q["query_id"] for q in worker_view(man)["queries"]
+                  if any(k.startswith("gt") or k == "negative"
+                         for k in q.keys())]
+        if leaked:
+            report["errors"].append(f"GT fields leak into worker view: {leaked[:5]}")
+        if getattr(a, "check_images", False):
+            miss = [im["image_id"] for im in imgs.values()
+                    if not os.path.exists(im.get("path", ""))]
+            if miss:
+                report["errors"].append(f"image files missing: {miss[:5]}")
+        report["checked"]["manifest"] = {
+            "split": split, "images": len(imgs), "queries": len(qs),
+            "category_union": len(subset_ids(man, "category_union")),
+            "instance_referring": len(subset_ids(man, "instance_referring")),
+            "negatives": len(negative_ids(man))}
+
+    print(json.dumps(report, indent=2, sort_keys=True, default=str))
+    return 0 if not report["errors"] else 1
 
 
 def cmd_run(a):
@@ -61,10 +150,14 @@ def cmd_run(a):
     from piers_ljj.experiments.scheduler import (config_hash, run_dir, read_status,
                                                  write_status, check_deps,
                                                  launch_worker)
+    from piers_ljj.experiments.suites import canonical_suite, run_id_for
     with open(a.config, encoding="utf-8") as f:
         cfg = yaml.safe_load(f)
-    suite = cfg.get("suite", "custom")
-    run_id = cfg.get("run_id", suite)
+    raw_suite = cfg.get("suite", "custom")
+    # Canonicalize so dependency lookups work for both "T2" and
+    # "T2-semantic-to-text" style config values.
+    suite = canonical_suite(raw_suite)
+    run_id = cfg.get("run_id") or run_id_for(suite)
     root = cfg.get("runs_root", "runs")
     d = run_dir(root, run_id)
     with open(os.path.join(d, "resolved_config.yaml"), "w", encoding="utf-8") as f:
@@ -120,19 +213,20 @@ def cmd_run(a):
 
 
 def cmd_sweep(a):
-    from piers_ljj.experiments.suites import SUITES, DEPS
+    from piers_ljj.experiments.suites import SUITES, DEPS, canonical_suite
     from piers_ljj.experiments.scheduler import check_deps
-    print(f"suite {a.suite}: {SUITES.get(a.suite, 'unknown')}; deps {DEPS.get(a.suite, [])}")
-    order = [a.suite]
+    suite = canonical_suite(a.suite)
+    print(f"suite {suite}: {SUITES.get(suite, 'unknown')}; deps {DEPS.get(suite, [])}")
+    order = [suite]
     # expand transitive deps first
-    stack = list(DEPS.get(a.suite, []))
+    stack = list(DEPS.get(suite, []))
     while stack:
         s = stack.pop()
         order.append(s)
         stack.extend(DEPS.get(s, []))
     print("order (deps-first): " + " -> ".join(reversed(order)))
     if getattr(a, "check_only", False):
-        missing = check_deps(a.suite, getattr(a, "runs_root", "runs"))
+        missing = check_deps(suite, getattr(a, "runs_root", "runs"))
         print(f"missing: {missing or 'none'}")
     return 0
 
@@ -208,7 +302,11 @@ def main(argv=None):
     sub = ap.add_subparsers(dest="c", required=True)
     sub.add_parser("doctor")
     sub.add_parser("smoke")
-    sub.add_parser("validate-data")
+    pv = sub.add_parser("validate-data")
+    pv.add_argument("--paths", default="configs/piers/paths.yaml")
+    pv.add_argument("--manifest", default=None)
+    pv.add_argument("--sha256", dest="sha256", action="store_true")
+    pv.add_argument("--check-images", dest="check_images", action="store_true")
     p = sub.add_parser("run"); p.add_argument("--config", required=True); p.add_argument("--dry-run", dest="dry_run", action="store_true")
     p = sub.add_parser("sweep"); p.add_argument("--suite", required=True); p.add_argument("--check-only", dest="check_only", action="store_true"); p.add_argument("--runs-root", dest="runs_root", default="runs")
     p = sub.add_parser("evaluate"); p.add_argument("--pred-npz", required=True); p.add_argument("--gt-npz", required=True); p.add_argument("--task", choices=["text", "uda"], required=True); p.add_argument("--out", required=True); p.add_argument("--n-cls", dest="n_cls", type=int, default=13); p.add_argument("--area-thr", dest="area_thr", type=int, default=16); p.add_argument("--synthetic", action="store_true")

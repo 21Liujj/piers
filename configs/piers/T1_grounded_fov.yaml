@@ -1,7 +1,12 @@
 suite: T1-grounded-fov
+run_id: T1-grounded-fov
 seed: 0
+worker: grounded
 text_backend: hf_grounding_dino_sam2
 fov: {win_w: 1024, win_h: 1024, stride_x: 512}
 thresholds: {det: 0.35, text: 0.25}
 collab: none
 seam: {strategy: fixed_scm, extra_budget_B: 0}
+manifest: null  # fill with query manifest json path before GPU run
+grounded: {sam2_ckpt: null, sam2_cfg: sam2_hiera_s.yaml, dtype: bf16}
+runs_root: runs

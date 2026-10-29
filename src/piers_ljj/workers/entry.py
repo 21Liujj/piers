@@ -32,6 +32,51 @@ def _fail(msg: str) -> int:
     return 2
 
 
+def _post_process_grounded(processor, outputs, input_ids, box_thr: float,
+                           text_thr: float, target_sizes):
+    """Call post_process_grounded_object_detection across transformers versions.
+
+    The box-threshold kwarg was renamed `threshold` -> `box_threshold` between
+    transformers releases. Resolve it from the live signature instead of
+    hard-coding either name, so the worker does not break on a version bump.
+
+    Falls back to trying both names when the signature only exposes **kwargs
+    (e.g. a wrapper/mock), and raises loudly if neither is accepted.
+    """
+    import inspect
+    fn = processor.post_process_grounded_object_detection
+    kwargs = {"text_threshold": text_thr, "target_sizes": target_sizes}
+    try:
+        params = inspect.signature(fn).parameters
+    except (TypeError, ValueError):
+        params = {}
+
+    def _call():
+        return fn(outputs, input_ids, **kwargs)
+
+    if "box_threshold" in params:
+        kwargs["box_threshold"] = box_thr
+        return _call()
+    if "threshold" in params:
+        kwargs["threshold"] = box_thr
+        return _call()
+
+    # Signature is opaque (**kwargs only) -> try the modern name first, then
+    # the legacy name, and report clearly if neither works.
+    last_err = None
+    for name in ("box_threshold", "threshold"):
+        attempt = dict(kwargs)
+        attempt[name] = box_thr
+        try:
+            return fn(outputs, input_ids, **attempt)
+        except TypeError as e:
+            last_err = e
+    raise TypeError(
+        "post_process_grounded_object_detection accepts neither "
+        "'box_threshold' nor 'threshold'; transformers version unsupported "
+        f"(last error: {last_err})")
+
+
 def omni_main(args=None):
     diag()
     # Real OmniSAM invocation resolved in gpu_runbook after source audit.
@@ -101,14 +146,18 @@ def _build_hf_backend(cfg, device: str):
                         outputs = dino_model(**inputs)
                 else:
                     outputs = dino_model(**inputs)
-            results = processor.post_process_grounded_object_detection(
-                outputs, inputs.input_ids, threshold=box_thr,
-                text_threshold=text_thr, target_sizes=[pil_img.size[::-1]])
+            # (threshold -> box_threshold). Inspect the signature so the same
+            # code runs on old and new transformers without guessing.
+            results = _post_process_grounded(
+                processor, outputs, inputs.input_ids, box_thr, text_thr,
+                target_sizes=[pil_img.size[::-1]])
             r0 = results[0]
             import numpy as np
             boxes = [np.asarray(b, dtype=np.float64) for b in r0["boxes"].detach().cpu().numpy()]
             scores = [float(s) for s in r0["scores"].detach().cpu().numpy().tolist()]
-            return boxes, scores
+            labels = r0.get("text_labels", r0.get("labels"))
+            phrases = list(labels) if labels is not None else []
+            return boxes, scores, phrases
 
     class _Sam:
         def __init__(self):

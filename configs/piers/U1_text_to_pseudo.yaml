@@ -1,0 +1,11 @@
+suite: U1-text-to-pseudo
+run_id: U1-text-to-pseudo
+seed: 0
+worker: omni
+# U1: text_to_pseudo adaptation + matched no-text control (control toggled via collab).
+# Train reads versioned revision patch; never forces background outside masks.
+collab: text_to_pseudo
+collab_params: {qual_thr: 0.8, edge_width: 2, target_space: densepass13@v1}
+revision_dir: runs/T1-grounded-fov/revisions
+pseudo_space: densepass13@v1
+runs_root: runs

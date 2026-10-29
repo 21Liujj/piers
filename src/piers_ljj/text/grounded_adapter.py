@@ -62,12 +62,18 @@ def run_fov_text_branch(pil_crop, raw_text: str, cfg: GroundedConfig,
             "(see docs/piers/gpu_runbook.md); refusing synthetic fallback")
     dino, sam = backend
     image_enc = sam.set_image(pil_crop)  # one encode per FoV; caller counts calls
-    boxes, det_scores = dino(pil_crop, norm, cfg.box_thr, cfg.text_thr)
+    # The dino backend returns (boxes, scores) or (boxes, scores, phrases).
+    dino_out = dino(pil_crop, norm, cfg.box_thr, cfg.text_thr)
+    if len(dino_out) == 3:
+        boxes, det_scores, phrases = dino_out
+    else:
+        boxes, det_scores = dino_out
+        phrases = [norm] * len(boxes)
     out = []
-    for b, s in zip(boxes, det_scores):
+    for b, s, ph in zip(boxes, det_scores, phrases):
         masks, sam_q = sam.predict_boxes(image_enc, [b])
         for m, q in zip(masks, sam_q):
             out.append(TextCandidate(box_xyxy=tuple(b), detector_score=float(s),
-                                     sam_quality=float(q), mask=m, phrase=norm))
+                                     sam_quality=float(q), mask=m, phrase=str(ph)))
     return {"norm_text": norm, "candidates": out,
             "meta": {"image_encodes": 1, "mask_decoder_calls": len(out)}}
