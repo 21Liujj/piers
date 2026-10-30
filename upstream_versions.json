@@ -22,8 +22,8 @@
     "status": "vendored_pending_commit_verify"
   },
   "target_repo": {
-    "name": "21Liujj/piers-ljj",
-    "visibility": "private (keep same as source)",
-    "push_policy": "local commit only until user confirms remote exists + auth via PAT/SSH; never force-push; never push to upstream-effective"
+    "name": "21Liujj/piers",
+    "visibility": "public",
+    "push_policy": "user creates empty repo manually; then add remote + push; never force-push; never push to upstream-effective"
   }
 }
