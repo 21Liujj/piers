@@ -1,0 +1,233 @@
+CKPT Zoo Index
+Generated: 2026-04-24T19:50:48
+Repo: /root/autodl-tmp/OmniSAM-main
+
+How to use:
+  python tools/ckpt_zoo.py list
+  python tools/ckpt_zoo.py val --id <ID> --dataset DensePASS
+  python tools/ckpt_zoo.py val --match <keyword> --dataset DensePASS
+
+Entries:
+[000] text_prototypes_cityscapes13_vitb32__7f201b86ef.pt  (0.0 MB, 2026-04-22T20:04:01)
+      src=/root/autodl-tmp/OmniSAM-main/assets/text_prototypes_cityscapes13_vitb32.pt
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/text_prototypes_cityscapes13_vitb32__7f201b86ef.pt
+[001] resume_sam2_s__e78291e3ce.pth  (412.9 MB, 2026-04-22T23:57:50)
+      src=/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_only_clean_p1_r1_tt0.05_gmhard_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__e78291e3ce.pth
+[002] best_iou59.99__c9495df72a.pth  (180.0 MB, 2026-04-23T09:58:12)
+      src=/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r10_tt0.10_gmhard_wa0.05_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/best_iou59.99.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_iou59.99__c9495df72a.pth
+[003] last_sam2_s_13cls__c1b55c99c1.pth  (180.0 MB, 2026-04-23T09:58:12)
+      src=/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r10_tt0.10_gmhard_wa0.05_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__c1b55c99c1.pth
+[004] resume_sam2_s__1dcfebb501.pth  (412.9 MB, 2026-04-23T09:58:13)
+      src=/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r10_tt0.10_gmhard_wa0.05_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__1dcfebb501.pth
+[005] best_iou48.78__e5655f4d99.pth  (180.0 MB, 2026-04-23T10:59:25)
+      src=/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r11_tt0.10_gmsoft_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/best_iou48.78.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_iou48.78__e5655f4d99.pth
+[006] last_sam2_s_13cls__46400bbabc.pth  (180.0 MB, 2026-04-23T10:59:25)
+      src=/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r11_tt0.10_gmsoft_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__46400bbabc.pth
+[007] resume_sam2_s__9d2bd07d4a.pth  (412.9 MB, 2026-04-23T10:59:25)
+      src=/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r11_tt0.10_gmsoft_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__9d2bd07d4a.pth
+[008] best_iou35.85__1c798c9e6f.pth  (180.0 MB, 2026-04-23T12:03:59)
+      src=/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r12_tt0.10_gmsoft_wa0.05_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/best_iou35.85.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_iou35.85__1c798c9e6f.pth
+[009] last_sam2_s_13cls__4bc35826db.pth  (180.0 MB, 2026-04-23T12:03:58)
+      src=/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r12_tt0.10_gmsoft_wa0.05_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__4bc35826db.pth
+[010] resume_sam2_s__1a077c9579.pth  (412.9 MB, 2026-04-23T12:03:59)
+      src=/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r12_tt0.10_gmsoft_wa0.05_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__1a077c9579.pth
+[011] best_iou59.91__3e77b84b80.pth  (180.0 MB, 2026-04-23T00:57:56)
+      src=/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r1_tt0.05_gmhard_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/best_iou59.91.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_iou59.91__3e77b84b80.pth
+[012] last_sam2_s_13cls__eb31c86692.pth  (180.0 MB, 2026-04-23T00:57:56)
+      src=/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r1_tt0.05_gmhard_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__eb31c86692.pth
+[013] resume_sam2_s__b9d7aad99e.pth  (412.9 MB, 2026-04-23T00:57:57)
+      src=/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r1_tt0.05_gmhard_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__b9d7aad99e.pth
+[014] best_iou60.00__4339e34695.pth  (180.0 MB, 2026-04-23T01:57:06)
+      src=/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r2_tt0.05_gmhard_wa0.05_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/best_iou60.00.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_iou60.00__4339e34695.pth
+[015] last_sam2_s_13cls__e46b316938.pth  (180.0 MB, 2026-04-23T01:57:06)
+      src=/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r2_tt0.05_gmhard_wa0.05_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__e46b316938.pth
+[016] resume_sam2_s__25eb79ff93.pth  (412.9 MB, 2026-04-23T01:57:07)
+      src=/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r2_tt0.05_gmhard_wa0.05_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__25eb79ff93.pth
+[017] best_iou55.79__89187b0f28.pth  (180.0 MB, 2026-04-23T02:56:33)
+      src=/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r3_tt0.05_gmsoft_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/best_iou55.79.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_iou55.79__89187b0f28.pth
+[018] last_sam2_s_13cls__5fb944c345.pth  (180.0 MB, 2026-04-23T02:56:33)
+      src=/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r3_tt0.05_gmsoft_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__5fb944c345.pth
+[019] resume_sam2_s__4d880ef7e3.pth  (412.9 MB, 2026-04-23T02:56:34)
+      src=/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r3_tt0.05_gmsoft_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__4d880ef7e3.pth
+[020] best_iou38.28__fd5586f302.pth  (180.0 MB, 2026-04-23T03:56:21)
+      src=/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r4_tt0.05_gmsoft_wa0.05_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/best_iou38.28.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_iou38.28__fd5586f302.pth
+[021] last_sam2_s_13cls__0f0c4e958f.pth  (180.0 MB, 2026-04-23T03:56:20)
+      src=/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r4_tt0.05_gmsoft_wa0.05_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__0f0c4e958f.pth
+[022] resume_sam2_s__72ed07aa04.pth  (412.9 MB, 2026-04-23T03:56:21)
+      src=/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r4_tt0.05_gmsoft_wa0.05_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__72ed07aa04.pth
+[023] best_iou60.05__ad13e351e9.pth  (180.0 MB, 2026-04-23T04:55:29)
+      src=/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r5_tt0.08_gmhard_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/best_iou60.05.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_iou60.05__ad13e351e9.pth
+[024] last_sam2_s_13cls__da108d4f71.pth  (180.0 MB, 2026-04-23T04:55:28)
+      src=/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r5_tt0.08_gmhard_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__da108d4f71.pth
+[025] resume_sam2_s__01174d7b7d.pth  (412.9 MB, 2026-04-23T04:55:29)
+      src=/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r5_tt0.08_gmhard_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__01174d7b7d.pth
+[026] best_iou59.97__b36aec58bf.pth  (180.0 MB, 2026-04-23T05:54:57)
+      src=/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r6_tt0.08_gmhard_wa0.05_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/best_iou59.97.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_iou59.97__b36aec58bf.pth
+[027] last_sam2_s_13cls__5965642756.pth  (180.0 MB, 2026-04-23T05:54:57)
+      src=/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r6_tt0.08_gmhard_wa0.05_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__5965642756.pth
+[028] resume_sam2_s__b38d4a5f24.pth  (412.9 MB, 2026-04-23T05:54:58)
+      src=/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r6_tt0.08_gmhard_wa0.05_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__b38d4a5f24.pth
+[029] best_iou49.53__c3912ba88d.pth  (180.0 MB, 2026-04-23T06:56:41)
+      src=/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r7_tt0.08_gmsoft_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/best_iou49.53.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_iou49.53__c3912ba88d.pth
+[030] last_sam2_s_13cls__d9f02aff8a.pth  (180.0 MB, 2026-04-23T06:56:40)
+      src=/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r7_tt0.08_gmsoft_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__d9f02aff8a.pth
+[031] resume_sam2_s__b47deb7cae.pth  (412.9 MB, 2026-04-23T06:56:41)
+      src=/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r7_tt0.08_gmsoft_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__b47deb7cae.pth
+[032] best_iou35.93__bc89644d6a.pth  (180.0 MB, 2026-04-23T07:55:57)
+      src=/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r8_tt0.08_gmsoft_wa0.05_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/best_iou35.93.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_iou35.93__bc89644d6a.pth
+[033] last_sam2_s_13cls__a03798e1c0.pth  (180.0 MB, 2026-04-23T07:55:57)
+      src=/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r8_tt0.08_gmsoft_wa0.05_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__a03798e1c0.pth
+[034] resume_sam2_s__d6a3afd8ef.pth  (412.9 MB, 2026-04-23T07:55:57)
+      src=/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r8_tt0.08_gmsoft_wa0.05_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__d6a3afd8ef.pth
+[035] best_iou60.06__2db31599d5.pth  (180.0 MB, 2026-04-23T08:54:51)
+      src=/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r9_tt0.10_gmhard_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/best_iou60.06.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_iou60.06__2db31599d5.pth
+[036] last_sam2_s_13cls__427fa8260e.pth  (180.0 MB, 2026-04-23T08:54:51)
+      src=/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r9_tt0.10_gmhard_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__427fa8260e.pth
+[037] resume_sam2_s__b4d8161413.pth  (412.9 MB, 2026-04-23T08:54:51)
+      src=/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r9_tt0.10_gmhard_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__b4d8161413.pth
+[038] best_iou60.06__6f734cdfe2.pth  (180.0 MB, 2026-04-23T13:05:21)
+      src=/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p2_top1_D_tt0.10_gmhard_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/best_iou60.06.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_iou60.06__6f734cdfe2.pth
+[039] last_sam2_s_13cls__e73e741f8c.pth  (180.0 MB, 2026-04-23T13:05:20)
+      src=/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p2_top1_D_tt0.10_gmhard_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__e73e741f8c.pth
+[040] resume_sam2_s__b7fd96e21b.pth  (0.0 MB, 2026-04-23T13:43:08)
+      src=/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p2_top1_D_tt0.10_gmhard_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__b7fd96e21b.pth
+[041] best_sam2_s_10__ec1407948a.pth  (177.7 MB, 2026-04-05T21:24:52)
+      src=/root/autodl-tmp/OmniSAM-main/exp2/Cityscapes/best_sam2_s_10.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_sam2_s_10__ec1407948a.pth
+[042] best_iou60.26__68334ae305.pth  (177.7 MB, 2026-04-26T04:59:17+08:00)
+      src=/root/autodl-tmp/OmniSAM-main/data_pd_exp_final_2000/base_last_20260425_232941/checkpoints/Cityscapes_13cls/sam2_s/best_iou60.26.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_iou60.26__68334ae305.pth
+      note=zoo 符号链接已对齐到现存唯一 best_iou60.26.pth（原 time_ablation 路径已删除会断链）
+[043] last_sam2_s_13cls__23fe9e66f5.pth  (178.2 MB, 2026-04-23T17:51:04)
+      src=/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick/main4/aps_only/Cityscapes_seed0_bank9_comp-none_loc-before_attention_sched-adaptive_stride/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__23fe9e66f5.pth
+[044] resume_sam2_s__a13b870065.pth  (405.8 MB, 2026-04-23T17:51:05)
+      src=/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick/main4/aps_only/Cityscapes_seed0_bank9_comp-none_loc-before_attention_sched-adaptive_stride/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__a13b870065.pth
+[045] best_iou60.28__903e3851fa.pth  (178.2 MB, 2026-04-23T17:32:14)
+      src=/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick/main4/baseline/Cityscapes_seed0_bank9_comp-none_loc-before_attention_sched-none/checkpoints/Cityscapes_13cls/sam2_s/best_iou60.28.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_iou60.28__903e3851fa.pth
+[046] last_sam2_s_13cls__5e1142ef4c.pth  (178.2 MB, 2026-04-23T17:32:13)
+      src=/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick/main4/baseline/Cityscapes_seed0_bank9_comp-none_loc-before_attention_sched-none/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__5e1142ef4c.pth
+[047] resume_sam2_s__1240dc266c.pth  (405.8 MB, 2026-04-23T17:32:14)
+      src=/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick/main4/baseline/Cityscapes_seed0_bank9_comp-none_loc-before_attention_sched-none/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__1240dc266c.pth
+[048] best_iou59.96__c0ad1faecd.pth  (178.2 MB, 2026-04-23T17:59:33)
+      src=/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick/main4/both/Cityscapes_seed0_bank9_comp-hybrid_loc-before_attention_sched-adaptive_stride/checkpoints/Cityscapes_13cls/sam2_s/best_iou59.96.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_iou59.96__c0ad1faecd.pth
+[049] last_sam2_s_13cls__8aab8be2b0.pth  (178.2 MB, 2026-04-23T17:59:33)
+      src=/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick/main4/both/Cityscapes_seed0_bank9_comp-hybrid_loc-before_attention_sched-adaptive_stride/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__8aab8be2b0.pth
+[050] resume_sam2_s__7b3f7966cb.pth  (405.8 MB, 2026-04-23T17:59:34)
+      src=/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick/main4/both/Cityscapes_seed0_bank9_comp-hybrid_loc-before_attention_sched-adaptive_stride/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__7b3f7966cb.pth
+[051] best_iou59.98__a931d22e19.pth  (178.2 MB, 2026-04-23T18:36:17)
+      src=/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick/main4/mem_only/Cityscapes_seed0_bank9_comp-hybrid_loc-before_attention_sched-none/checkpoints/Cityscapes_13cls/sam2_s/best_iou59.98.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_iou59.98__a931d22e19.pth
+[052] last_sam2_s_13cls__5d2ab7dbd3.pth  (178.2 MB, 2026-04-23T18:36:17)
+      src=/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick/main4/mem_only/Cityscapes_seed0_bank9_comp-hybrid_loc-before_attention_sched-none/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__5d2ab7dbd3.pth
+[053] resume_sam2_s__0a2a723fa5.pth  (405.8 MB, 2026-04-23T18:36:18)
+      src=/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick/main4/mem_only/Cityscapes_seed0_bank9_comp-hybrid_loc-before_attention_sched-none/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__0a2a723fa5.pth
+[054] best_iou60.29__ffbd4e7cde.pth  (178.2 MB, 2026-04-23T20:54:09)
+      src=/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick_recheck_once/main4/aps_only/Cityscapes_seed0_bank9_comp-none_loc-before_attention_sched-adaptive_stride/checkpoints/Cityscapes_13cls/sam2_s/best_iou60.29.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_iou60.29__ffbd4e7cde.pth
+[055] last_sam2_s_13cls__ab2b1174a0.pth  (178.2 MB, 2026-04-23T20:54:09)
+      src=/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick_recheck_once/main4/aps_only/Cityscapes_seed0_bank9_comp-none_loc-before_attention_sched-adaptive_stride/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__ab2b1174a0.pth
+[056] resume_sam2_s__f40a89a059.pth  (405.8 MB, 2026-04-23T20:54:09)
+      src=/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick_recheck_once/main4/aps_only/Cityscapes_seed0_bank9_comp-none_loc-before_attention_sched-adaptive_stride/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__f40a89a059.pth
+[057] best_iou60.28__0a2ffa3fef.pth  (178.2 MB, 2026-04-23T20:38:03)
+      src=/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick_recheck_once/main4/baseline/Cityscapes_seed0_bank9_comp-none_loc-before_attention_sched-none/checkpoints/Cityscapes_13cls/sam2_s/best_iou60.28.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_iou60.28__0a2ffa3fef.pth
+[058] last_sam2_s_13cls__a2948ab22e.pth  (178.2 MB, 2026-04-23T20:38:03)
+      src=/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick_recheck_once/main4/baseline/Cityscapes_seed0_bank9_comp-none_loc-before_attention_sched-none/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__a2948ab22e.pth
+[059] resume_sam2_s__20a4825553.pth  (405.8 MB, 2026-04-23T20:38:04)
+      src=/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick_recheck_once/main4/baseline/Cityscapes_seed0_bank9_comp-none_loc-before_attention_sched-none/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__20a4825553.pth
+[060] best_iou59.96__709d71c88e.pth  (178.2 MB, 2026-04-23T20:29:04)
+      src=/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick_recheck_once/main4/both/Cityscapes_seed0_bank9_comp-hybrid_loc-before_attention_sched-adaptive_stride/checkpoints/Cityscapes_13cls/sam2_s/best_iou59.96.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_iou59.96__709d71c88e.pth
+[061] last_sam2_s_13cls__c3e6e8b232.pth  (178.2 MB, 2026-04-23T20:29:04)
+      src=/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick_recheck_once/main4/both/Cityscapes_seed0_bank9_comp-hybrid_loc-before_attention_sched-adaptive_stride/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__c3e6e8b232.pth
+[062] resume_sam2_s__f7a523dfc7.pth  (405.8 MB, 2026-04-23T20:29:05)
+      src=/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick_recheck_once/main4/both/Cityscapes_seed0_bank9_comp-hybrid_loc-before_attention_sched-adaptive_stride/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__f7a523dfc7.pth
+[063] best_iou59.98__bfbc9c88be.pth  (178.2 MB, 2026-04-23T20:20:40)
+      src=/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick_recheck_once/main4/mem_only/Cityscapes_seed0_bank9_comp-hybrid_loc-before_attention_sched-none/checkpoints/Cityscapes_13cls/sam2_s/best_iou59.98.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_iou59.98__bfbc9c88be.pth
+[064] last_sam2_s_13cls__87fa40d220.pth  (178.2 MB, 2026-04-23T20:20:39)
+      src=/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick_recheck_once/main4/mem_only/Cityscapes_seed0_bank9_comp-hybrid_loc-before_attention_sched-none/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__87fa40d220.pth
+[065] resume_sam2_s__a273f83482.pth  (405.8 MB, 2026-04-23T20:20:40)
+      src=/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick_recheck_once/main4/mem_only/Cityscapes_seed0_bank9_comp-hybrid_loc-before_attention_sched-none/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__a273f83482.pth
+[066] best_sam2_s_iou60.14__7b4890059a.pth  (177.7 MB, 2026-04-10T02:04:18)
+      src=/root/autodl-tmp/OmniSAM-main/pd_auto_iter/checkpoints/Cityscapes_13cls/sam2_s/best_sam2_s_iou60.14.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_sam2_s_iou60.14__7b4890059a.pth
+[067] last_sam2_s_13cls__c2c9f6d62d.pth  (177.7 MB, 2026-04-10T10:20:29)
+      src=/root/autodl-tmp/OmniSAM-main/pd_auto_iter/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__c2c9f6d62d.pth
+[068] resume_sam2_s__3550c39651.pth  (403.8 MB, 2026-04-10T10:35:00)
+      src=/root/autodl-tmp/OmniSAM-main/pd_auto_iter/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__3550c39651.pth
+[069] sam2.1_hiera_base_plus__0aa0d8f404.pt  (308.6 MB, 2024-09-29T11:15:00)
+      src=/root/autodl-tmp/OmniSAM-main/sam/checkpoints/sam2.1_hiera_base_plus.pt
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/sam2.1_hiera_base_plus__0aa0d8f404.pt
+[070] sam2.1_hiera_large__8518721cb3.pt  (856.5 MB, 2024-09-29T11:15:23)
+      src=/root/autodl-tmp/OmniSAM-main/sam/checkpoints/sam2.1_hiera_large.pt
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/sam2.1_hiera_large__8518721cb3.pt
+[071] sam2.1_hiera_small__7c8d22d2e9.pt  (175.9 MB, 2024-09-29T11:14:18)
+      src=/root/autodl-tmp/OmniSAM-main/sam/checkpoints/sam2.1_hiera_small.pt
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/sam2.1_hiera_small__7c8d22d2e9.pt
+[072] sam2.1_hiera_tiny__9a55f92861.pt  (148.8 MB, 2024-09-29T11:13:57)
+      src=/root/autodl-tmp/OmniSAM-main/sam/checkpoints/sam2.1_hiera_tiny.pt
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/sam2.1_hiera_tiny__9a55f92861.pt
+[073] omnisam_s__0a1c5c2f1c.pth  (177.7 MB, 2026-04-05T21:24:52)
+      src=/root/autodl-tmp/omnisam_s.pth
+      zoo=/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/omnisam_s__0a1c5c2f1c.pth

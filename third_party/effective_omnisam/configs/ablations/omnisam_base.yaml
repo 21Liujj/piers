@@ -1,0 +1,48 @@
+plugins:
+  pseudo_conf_mask:
+    enabled: false
+    threshold: 0.85
+    min_valid_ratio: 0.01
+    min_valid_pixels: 0
+    ignore_index: 255
+    fallback: "skip"
+
+  efficient_tam_memory:
+    enabled: false
+    mode: "pool"
+    compress_ratio: 0.5
+    pool_stride: 2
+    apply_in_pl: true
+    apply_in_train: true
+
+  efficient_sam2_sparse:
+    enabled: false
+    mode: "attn_topk"
+    keep_ratio: 0.5
+    min_keep_tokens: 64
+    saliency_source: "feature_norm"
+    cache_saliency: true
+    fallback_full_when_uncertain: true
+    apply_in_pl: true
+    apply_in_train: true
+
+  geo_memory:
+    enabled: false
+    mode: "diagnosis"
+    log_jsonl: "experiments/geo_memory/results/geo_memory_diag.jsonl"
+    erp_width: 4096
+    erp_height: 1024
+    window_size: 1024
+    stride: 384
+    allow_tensor_order_inference: false
+    seam_selection_enabled: false
+    latitude_source: "mem_hw_token_row"
+    token_writer:
+      enabled: false
+      summary_jsonl: "experiments/geo_memory/results/token_geometry_summary.jsonl"
+      token_jsonl: "experiments/geo_memory/results/token_geometry_diag.jsonl"
+      max_records: 5
+      max_summary_records: 200
+      sample_rate: 1.0
+      first_n_batches: 1
+

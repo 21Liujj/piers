@@ -1,0 +1,16 @@
+# configs/psr_pld/scan_template.yaml
+# Used by pl_threshold_scan.py – do NOT use for training.
+pseudo_label_reliability:
+  enabled: true
+
+  pl_merge:
+    enabled: true
+    mode: normalized_mean   # overridden programmatically by the scan script
+    threshold: 0.85         # overridden programmatically by the scan script
+    ignore_index: 255
+    save_debug_maps: false
+    debug_max_images: 0
+
+  saving:
+    save_confidence: true   # scan always saves sidecar so we can inspect
+    dtype: float16

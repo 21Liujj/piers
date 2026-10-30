@@ -1,0 +1,13 @@
+id	path	type	size_bytes	size_human	risk	question	suggested_action
+1	wandb/	dir	94371840	90MB	Low	哪些 offline run 已同步 wandb？metrics 是否已在 metrics.jsonl 中完整记录？	确认后整体删除（metrics 已在 jsonl 中）
+2	runs/sam2_s_Cityscapes_13cls/	dir	13631488	13MB	Low	这些 TensorBoard events 是否已被 wandb 覆盖？是否仍需要 TensorBoard 查看？	确认后删除
+3	logs/cdsweep_only_p1_r5_tt0.08_gmhard_wa0.02.log	log	522	522B	Low	是否是失败启动日志？	确认后删除
+4	logs/multimodal_abcd_A_baseline.log	log	431	431B	Low	是否是失败启动日志？	确认后删除
+5	logs/multimodal_abcd_20260422_144235.master.log	log	135420	135KB	Medium	含 A_generate_only 独立数据，是否需要保留？	保留（含独立 A_generate_only 数据）
+6	logs/multimodal_abcd_20260422_200620.master.log	log	94380	94KB	Low	中途中断版本，被 212119 完全取代	可删除
+7	logs/uda_densepass_originalish_20260410_133124.pid	pid	7	7B	Low	git tracked PID 文件，进程早已结束	人工确认（git tracked）
+8	logs/uda_densepass_originalish_20260410_154811.pid	pid	7	7B	Low	git tracked PID 文件，进程早已结束	人工确认（git tracked）
+9	data_pd_cg_src_2000_01_ori/	dir	0	0B	Low	空目录，是否有计划使用？	确认后删除空目录
+10	ablation_outputs/	dir	0	0B	Low	空目录	确认后删除空目录
+11	exp2/	dir	0	0B	Low	空目录，是否有计划使用？	确认后删除空目录
+12	sam2/	dir	8192	8KB	Low	仅含 __pycache__，疑似废弃目录	确认后删除

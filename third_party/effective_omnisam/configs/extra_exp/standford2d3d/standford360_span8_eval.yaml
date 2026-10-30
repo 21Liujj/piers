@@ -1,0 +1,16 @@
+dataset_name: standford360_span8
+root: /root/autodl-tmp/OmniSAM-main/data_extra/processed/Stanford360_SPAN8
+image_dir: images
+label_dir: labels_trainid
+train_list: lists/train.txt
+val_list: lists/val.txt
+num_classes: 8
+ignore_index: 255
+image_type: panorama
+usage: indoor_panorama_eval
+setting: SPin8_to_SPAN8
+processed_root: /root/autodl-tmp/OmniSAM-main/data_extra/processed/Stanford360_SPAN8
+crop_size: [3072, 1024]
+sliding_window: [256, 1024]
+passes: 2
+legacy_area_crop: false

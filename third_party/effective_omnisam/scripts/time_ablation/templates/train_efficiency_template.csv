@@ -1,0 +1,1 @@
+Method,CompressorMode,CompressLocation,SchedulerMode,MemoryBankSize,IterTotalTime,TrainImagesPerSec,TrainPatchesPerSec,EpochTrainTime,EpochTotalTime,PeakMemTrain

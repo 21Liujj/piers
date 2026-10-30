@@ -1,0 +1,22 @@
+depth_prior:
+  enable: false
+  depth_dir: ""
+  source_depth_dir: null
+  file_exts: [".png", ".jpg", ".jpeg", ".npy", ".pt"]
+  normalize: "minmax"
+
+depth_confidence:
+  enable: false
+
+depth_adapter:
+  enable: false
+  inject_position: decoder_feature
+  encoder_type: light_cnn
+  mid_channels: 32
+  norm: "gn"
+  gate_init: 0.0
+  depth_loss_weight: 0.0
+
+plugins:
+  depth_confidence:
+    enabled: false

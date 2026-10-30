@@ -1,0 +1,38 @@
+depth_prior:
+  enable: true
+  depth_dir: ""
+  source_depth_dir: null
+  file_exts: [".png", ".jpg", ".jpeg", ".npy", ".pt"]
+  normalize: "minmax"
+
+depth_confidence:
+  enable: true
+  edge_consistency: true
+  smooth_region_consistency: true
+  weight_min: 0.3
+  weight_max: 1.0
+  edge_beta: 0.5
+  smooth_beta: 0.5
+  ignore_index: 255
+  debug_vis: false
+
+depth_adapter:
+  enable: true
+  inject_position: decoder_feature
+  encoder_type: light_cnn
+  mid_channels: 32
+  norm: "gn"
+  gate_init: 0.0
+  depth_loss_weight: 0.0
+
+plugins:
+  depth_confidence:
+    enabled: true
+    edge_consistency: true
+    smooth_region_consistency: true
+    weight_min: 0.3
+    weight_max: 1.0
+    edge_beta: 0.5
+    smooth_beta: 0.5
+    ignore_index: 255
+    debug_vis: false

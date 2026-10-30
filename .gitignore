@@ -7,6 +7,8 @@ outputs/
 *.npz
 *.pth
 *.pt
+# keep tiny text-prototype assets vendored from effective-omnisam
+!third_party/effective_omnisam/assets/*.pt
 *.ckpt
 # personal paths (never commit real paths)
 configs/piers/paths.yaml

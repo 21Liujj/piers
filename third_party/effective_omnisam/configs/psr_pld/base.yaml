@@ -1,0 +1,20 @@
+# configs/psr_pld/base.yaml
+# Base PSR-PLD config.  All modules disabled → identical to current baseline.
+pseudo_label_reliability:
+  enabled: false          # master switch; set true to activate any sub-module
+
+  pl_merge:
+    enabled: false        # merge-mode override; false → legacy_sum behaviour
+    mode: legacy_sum      # legacy_sum | normalized_mean | paper_strict
+    threshold: 0.85
+    ignore_index: 255
+    save_debug_maps: false
+    debug_max_images: 10
+
+  saving:
+    save_confidence: false  # write pseudo_meta/*.npz sidecar
+    dtype: float16
+
+  train_filter:
+    mask_source: online     # online (current behaviour) | pl_sidecar | intersection
+    weight_source: none     # none | pl_confidence

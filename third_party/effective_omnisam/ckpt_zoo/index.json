@@ -1,0 +1,594 @@
+[
+  {
+    "id": 0,
+    "name": "text_prototypes_cityscapes13_vitb32__7f201b86ef.pt",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/assets/text_prototypes_cityscapes13_vitb32.pt",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/text_prototypes_cityscapes13_vitb32__7f201b86ef.pt",
+    "size_mb": 0.02769184112548828,
+    "mtime": "2026-04-22T20:04:01"
+  },
+  {
+    "id": 1,
+    "name": "resume_sam2_s__e78291e3ce.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_only_clean_p1_r1_tt0.05_gmhard_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__e78291e3ce.pth",
+    "size_mb": 412.87739086151123,
+    "mtime": "2026-04-22T23:57:50"
+  },
+  {
+    "id": 2,
+    "name": "best_iou59.99__c9495df72a.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r10_tt0.10_gmhard_wa0.05_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/best_iou59.99.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_iou59.99__c9495df72a.pth",
+    "size_mb": 179.9606122970581,
+    "mtime": "2026-04-23T09:58:12"
+  },
+  {
+    "id": 3,
+    "name": "last_sam2_s_13cls__c1b55c99c1.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r10_tt0.10_gmhard_wa0.05_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__c1b55c99c1.pth",
+    "size_mb": 179.96296215057373,
+    "mtime": "2026-04-23T09:58:12"
+  },
+  {
+    "id": 4,
+    "name": "resume_sam2_s__1dcfebb501.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r10_tt0.10_gmhard_wa0.05_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__1dcfebb501.pth",
+    "size_mb": 412.87751293182373,
+    "mtime": "2026-04-23T09:58:13"
+  },
+  {
+    "id": 5,
+    "name": "best_iou48.78__e5655f4d99.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r11_tt0.10_gmsoft_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/best_iou48.78.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_iou48.78__e5655f4d99.pth",
+    "size_mb": 179.9606122970581,
+    "mtime": "2026-04-23T10:59:25"
+  },
+  {
+    "id": 6,
+    "name": "last_sam2_s_13cls__46400bbabc.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r11_tt0.10_gmsoft_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__46400bbabc.pth",
+    "size_mb": 179.96296215057373,
+    "mtime": "2026-04-23T10:59:25"
+  },
+  {
+    "id": 7,
+    "name": "resume_sam2_s__9d2bd07d4a.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r11_tt0.10_gmsoft_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__9d2bd07d4a.pth",
+    "size_mb": 412.87751293182373,
+    "mtime": "2026-04-23T10:59:25"
+  },
+  {
+    "id": 8,
+    "name": "best_iou35.85__1c798c9e6f.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r12_tt0.10_gmsoft_wa0.05_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/best_iou35.85.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_iou35.85__1c798c9e6f.pth",
+    "size_mb": 179.9606122970581,
+    "mtime": "2026-04-23T12:03:59"
+  },
+  {
+    "id": 9,
+    "name": "last_sam2_s_13cls__4bc35826db.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r12_tt0.10_gmsoft_wa0.05_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__4bc35826db.pth",
+    "size_mb": 179.96296215057373,
+    "mtime": "2026-04-23T12:03:58"
+  },
+  {
+    "id": 10,
+    "name": "resume_sam2_s__1a077c9579.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r12_tt0.10_gmsoft_wa0.05_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__1a077c9579.pth",
+    "size_mb": 412.87751293182373,
+    "mtime": "2026-04-23T12:03:59"
+  },
+  {
+    "id": 11,
+    "name": "best_iou59.91__3e77b84b80.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r1_tt0.05_gmhard_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/best_iou59.91.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_iou59.91__3e77b84b80.pth",
+    "size_mb": 179.9606122970581,
+    "mtime": "2026-04-23T00:57:56"
+  },
+  {
+    "id": 12,
+    "name": "last_sam2_s_13cls__eb31c86692.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r1_tt0.05_gmhard_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__eb31c86692.pth",
+    "size_mb": 179.96296215057373,
+    "mtime": "2026-04-23T00:57:56"
+  },
+  {
+    "id": 13,
+    "name": "resume_sam2_s__b9d7aad99e.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r1_tt0.05_gmhard_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__b9d7aad99e.pth",
+    "size_mb": 412.87751293182373,
+    "mtime": "2026-04-23T00:57:57"
+  },
+  {
+    "id": 14,
+    "name": "best_iou60.00__4339e34695.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r2_tt0.05_gmhard_wa0.05_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/best_iou60.00.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_iou60.00__4339e34695.pth",
+    "size_mb": 179.9606122970581,
+    "mtime": "2026-04-23T01:57:06"
+  },
+  {
+    "id": 15,
+    "name": "last_sam2_s_13cls__e46b316938.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r2_tt0.05_gmhard_wa0.05_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__e46b316938.pth",
+    "size_mb": 179.96296215057373,
+    "mtime": "2026-04-23T01:57:06"
+  },
+  {
+    "id": 16,
+    "name": "resume_sam2_s__25eb79ff93.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r2_tt0.05_gmhard_wa0.05_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__25eb79ff93.pth",
+    "size_mb": 412.87751293182373,
+    "mtime": "2026-04-23T01:57:07"
+  },
+  {
+    "id": 17,
+    "name": "best_iou55.79__89187b0f28.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r3_tt0.05_gmsoft_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/best_iou55.79.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_iou55.79__89187b0f28.pth",
+    "size_mb": 179.9606122970581,
+    "mtime": "2026-04-23T02:56:33"
+  },
+  {
+    "id": 18,
+    "name": "last_sam2_s_13cls__5fb944c345.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r3_tt0.05_gmsoft_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__5fb944c345.pth",
+    "size_mb": 179.96296215057373,
+    "mtime": "2026-04-23T02:56:33"
+  },
+  {
+    "id": 19,
+    "name": "resume_sam2_s__4d880ef7e3.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r3_tt0.05_gmsoft_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__4d880ef7e3.pth",
+    "size_mb": 412.87751293182373,
+    "mtime": "2026-04-23T02:56:34"
+  },
+  {
+    "id": 20,
+    "name": "best_iou38.28__fd5586f302.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r4_tt0.05_gmsoft_wa0.05_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/best_iou38.28.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_iou38.28__fd5586f302.pth",
+    "size_mb": 179.9606122970581,
+    "mtime": "2026-04-23T03:56:21"
+  },
+  {
+    "id": 21,
+    "name": "last_sam2_s_13cls__0f0c4e958f.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r4_tt0.05_gmsoft_wa0.05_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__0f0c4e958f.pth",
+    "size_mb": 179.96296215057373,
+    "mtime": "2026-04-23T03:56:20"
+  },
+  {
+    "id": 22,
+    "name": "resume_sam2_s__72ed07aa04.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r4_tt0.05_gmsoft_wa0.05_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__72ed07aa04.pth",
+    "size_mb": 412.87751293182373,
+    "mtime": "2026-04-23T03:56:21"
+  },
+  {
+    "id": 23,
+    "name": "best_iou60.05__ad13e351e9.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r5_tt0.08_gmhard_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/best_iou60.05.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_iou60.05__ad13e351e9.pth",
+    "size_mb": 179.9606122970581,
+    "mtime": "2026-04-23T04:55:29"
+  },
+  {
+    "id": 24,
+    "name": "last_sam2_s_13cls__da108d4f71.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r5_tt0.08_gmhard_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__da108d4f71.pth",
+    "size_mb": 179.96296215057373,
+    "mtime": "2026-04-23T04:55:28"
+  },
+  {
+    "id": 25,
+    "name": "resume_sam2_s__01174d7b7d.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r5_tt0.08_gmhard_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__01174d7b7d.pth",
+    "size_mb": 412.87751293182373,
+    "mtime": "2026-04-23T04:55:29"
+  },
+  {
+    "id": 26,
+    "name": "best_iou59.97__b36aec58bf.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r6_tt0.08_gmhard_wa0.05_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/best_iou59.97.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_iou59.97__b36aec58bf.pth",
+    "size_mb": 179.9606122970581,
+    "mtime": "2026-04-23T05:54:57"
+  },
+  {
+    "id": 27,
+    "name": "last_sam2_s_13cls__5965642756.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r6_tt0.08_gmhard_wa0.05_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__5965642756.pth",
+    "size_mb": 179.96296215057373,
+    "mtime": "2026-04-23T05:54:57"
+  },
+  {
+    "id": 28,
+    "name": "resume_sam2_s__b38d4a5f24.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r6_tt0.08_gmhard_wa0.05_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__b38d4a5f24.pth",
+    "size_mb": 412.87751293182373,
+    "mtime": "2026-04-23T05:54:58"
+  },
+  {
+    "id": 29,
+    "name": "best_iou49.53__c3912ba88d.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r7_tt0.08_gmsoft_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/best_iou49.53.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_iou49.53__c3912ba88d.pth",
+    "size_mb": 179.9606122970581,
+    "mtime": "2026-04-23T06:56:41"
+  },
+  {
+    "id": 30,
+    "name": "last_sam2_s_13cls__d9f02aff8a.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r7_tt0.08_gmsoft_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__d9f02aff8a.pth",
+    "size_mb": 179.96296215057373,
+    "mtime": "2026-04-23T06:56:40"
+  },
+  {
+    "id": 31,
+    "name": "resume_sam2_s__b47deb7cae.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r7_tt0.08_gmsoft_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__b47deb7cae.pth",
+    "size_mb": 412.87751293182373,
+    "mtime": "2026-04-23T06:56:41"
+  },
+  {
+    "id": 32,
+    "name": "best_iou35.93__bc89644d6a.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r8_tt0.08_gmsoft_wa0.05_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/best_iou35.93.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_iou35.93__bc89644d6a.pth",
+    "size_mb": 179.9606122970581,
+    "mtime": "2026-04-23T07:55:57"
+  },
+  {
+    "id": 33,
+    "name": "last_sam2_s_13cls__a03798e1c0.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r8_tt0.08_gmsoft_wa0.05_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__a03798e1c0.pth",
+    "size_mb": 179.96296215057373,
+    "mtime": "2026-04-23T07:55:57"
+  },
+  {
+    "id": 34,
+    "name": "resume_sam2_s__d6a3afd8ef.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r8_tt0.08_gmsoft_wa0.05_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__d6a3afd8ef.pth",
+    "size_mb": 412.87751293182373,
+    "mtime": "2026-04-23T07:55:57"
+  },
+  {
+    "id": 35,
+    "name": "best_iou60.06__2db31599d5.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r9_tt0.10_gmhard_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/best_iou60.06.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_iou60.06__2db31599d5.pth",
+    "size_mb": 179.9606122970581,
+    "mtime": "2026-04-23T08:54:51"
+  },
+  {
+    "id": 36,
+    "name": "last_sam2_s_13cls__427fa8260e.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r9_tt0.10_gmhard_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__427fa8260e.pth",
+    "size_mb": 179.96296215057373,
+    "mtime": "2026-04-23T08:54:51"
+  },
+  {
+    "id": 37,
+    "name": "resume_sam2_s__b4d8161413.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p1_r9_tt0.10_gmhard_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__b4d8161413.pth",
+    "size_mb": 412.87751293182373,
+    "mtime": "2026-04-23T08:54:51"
+  },
+  {
+    "id": 38,
+    "name": "best_iou60.06__6f734cdfe2.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p2_top1_D_tt0.10_gmhard_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/best_iou60.06.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_iou60.06__6f734cdfe2.pth",
+    "size_mb": 179.9606122970581,
+    "mtime": "2026-04-23T13:05:21"
+  },
+  {
+    "id": 39,
+    "name": "last_sam2_s_13cls__e73e741f8c.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p2_top1_D_tt0.10_gmhard_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__e73e741f8c.pth",
+    "size_mb": 179.96296215057373,
+    "mtime": "2026-04-23T13:05:20"
+  },
+  {
+    "id": 40,
+    "name": "resume_sam2_s__b7fd96e21b.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/data_pd_cdsweep_p2_top1_D_tt0.10_gmhard_wa0.02_D_text_gate_hard_with_adapter/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__b7fd96e21b.pth",
+    "size_mb": 0.0,
+    "mtime": "2026-04-23T13:43:08"
+  },
+  {
+    "id": 41,
+    "name": "best_sam2_s_10__ec1407948a.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/exp2/Cityscapes/best_sam2_s_10.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_sam2_s_10__ec1407948a.pth",
+    "size_mb": 177.67891120910645,
+    "mtime": "2026-04-05T21:24:52"
+  },
+  {
+    "id": 42,
+    "name": "best_iou60.26__68334ae305.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/data_pd_exp_final_2000/base_last_20260425_232941/checkpoints/Cityscapes_13cls/sam2_s/best_iou60.26.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_iou60.26__68334ae305.pth",
+    "size_mb": 177.67891120910645,
+    "mtime": "2026-04-26T04:59:17"
+  },
+  {
+    "id": 43,
+    "name": "last_sam2_s_13cls__23fe9e66f5.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick/main4/aps_only/Cityscapes_seed0_bank9_comp-none_loc-before_attention_sched-adaptive_stride/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__23fe9e66f5.pth",
+    "size_mb": 178.204852104187,
+    "mtime": "2026-04-23T17:51:04"
+  },
+  {
+    "id": 44,
+    "name": "resume_sam2_s__a13b870065.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick/main4/aps_only/Cityscapes_seed0_bank9_comp-none_loc-before_attention_sched-adaptive_stride/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__a13b870065.pth",
+    "size_mb": 405.8431520462036,
+    "mtime": "2026-04-23T17:51:05"
+  },
+  {
+    "id": 45,
+    "name": "best_iou60.28__903e3851fa.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick/main4/baseline/Cityscapes_seed0_bank9_comp-none_loc-before_attention_sched-none/checkpoints/Cityscapes_13cls/sam2_s/best_iou60.28.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_iou60.28__903e3851fa.pth",
+    "size_mb": 178.20252895355225,
+    "mtime": "2026-04-23T17:32:14"
+  },
+  {
+    "id": 46,
+    "name": "last_sam2_s_13cls__5e1142ef4c.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick/main4/baseline/Cityscapes_seed0_bank9_comp-none_loc-before_attention_sched-none/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__5e1142ef4c.pth",
+    "size_mb": 178.204852104187,
+    "mtime": "2026-04-23T17:32:13"
+  },
+  {
+    "id": 47,
+    "name": "resume_sam2_s__1240dc266c.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick/main4/baseline/Cityscapes_seed0_bank9_comp-none_loc-before_attention_sched-none/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__1240dc266c.pth",
+    "size_mb": 405.8431520462036,
+    "mtime": "2026-04-23T17:32:14"
+  },
+  {
+    "id": 48,
+    "name": "best_iou59.96__c0ad1faecd.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick/main4/both/Cityscapes_seed0_bank9_comp-hybrid_loc-before_attention_sched-adaptive_stride/checkpoints/Cityscapes_13cls/sam2_s/best_iou59.96.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_iou59.96__c0ad1faecd.pth",
+    "size_mb": 178.20326137542725,
+    "mtime": "2026-04-23T17:59:33"
+  },
+  {
+    "id": 49,
+    "name": "last_sam2_s_13cls__8aab8be2b0.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick/main4/both/Cityscapes_seed0_bank9_comp-hybrid_loc-before_attention_sched-adaptive_stride/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__8aab8be2b0.pth",
+    "size_mb": 178.205584526062,
+    "mtime": "2026-04-23T17:59:33"
+  },
+  {
+    "id": 50,
+    "name": "resume_sam2_s__7b3f7966cb.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick/main4/both/Cityscapes_seed0_bank9_comp-hybrid_loc-before_attention_sched-adaptive_stride/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__7b3f7966cb.pth",
+    "size_mb": 405.84743881225586,
+    "mtime": "2026-04-23T17:59:34"
+  },
+  {
+    "id": 51,
+    "name": "best_iou59.98__a931d22e19.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick/main4/mem_only/Cityscapes_seed0_bank9_comp-hybrid_loc-before_attention_sched-none/checkpoints/Cityscapes_13cls/sam2_s/best_iou59.98.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_iou59.98__a931d22e19.pth",
+    "size_mb": 178.20326137542725,
+    "mtime": "2026-04-23T18:36:17"
+  },
+  {
+    "id": 52,
+    "name": "last_sam2_s_13cls__5d2ab7dbd3.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick/main4/mem_only/Cityscapes_seed0_bank9_comp-hybrid_loc-before_attention_sched-none/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__5d2ab7dbd3.pth",
+    "size_mb": 178.205584526062,
+    "mtime": "2026-04-23T18:36:17"
+  },
+  {
+    "id": 53,
+    "name": "resume_sam2_s__0a2a723fa5.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick/main4/mem_only/Cityscapes_seed0_bank9_comp-hybrid_loc-before_attention_sched-none/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__0a2a723fa5.pth",
+    "size_mb": 405.84743881225586,
+    "mtime": "2026-04-23T18:36:18"
+  },
+  {
+    "id": 54,
+    "name": "best_iou60.29__ffbd4e7cde.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick_recheck_once/main4/aps_only/Cityscapes_seed0_bank9_comp-none_loc-before_attention_sched-adaptive_stride/checkpoints/Cityscapes_13cls/sam2_s/best_iou60.29.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_iou60.29__ffbd4e7cde.pth",
+    "size_mb": 178.20252895355225,
+    "mtime": "2026-04-23T20:54:09"
+  },
+  {
+    "id": 55,
+    "name": "last_sam2_s_13cls__ab2b1174a0.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick_recheck_once/main4/aps_only/Cityscapes_seed0_bank9_comp-none_loc-before_attention_sched-adaptive_stride/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__ab2b1174a0.pth",
+    "size_mb": 178.204852104187,
+    "mtime": "2026-04-23T20:54:09"
+  },
+  {
+    "id": 56,
+    "name": "resume_sam2_s__f40a89a059.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick_recheck_once/main4/aps_only/Cityscapes_seed0_bank9_comp-none_loc-before_attention_sched-adaptive_stride/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__f40a89a059.pth",
+    "size_mb": 405.84321308135986,
+    "mtime": "2026-04-23T20:54:09"
+  },
+  {
+    "id": 57,
+    "name": "best_iou60.28__0a2ffa3fef.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick_recheck_once/main4/baseline/Cityscapes_seed0_bank9_comp-none_loc-before_attention_sched-none/checkpoints/Cityscapes_13cls/sam2_s/best_iou60.28.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_iou60.28__0a2ffa3fef.pth",
+    "size_mb": 178.20252895355225,
+    "mtime": "2026-04-23T20:38:03"
+  },
+  {
+    "id": 58,
+    "name": "last_sam2_s_13cls__a2948ab22e.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick_recheck_once/main4/baseline/Cityscapes_seed0_bank9_comp-none_loc-before_attention_sched-none/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__a2948ab22e.pth",
+    "size_mb": 178.204852104187,
+    "mtime": "2026-04-23T20:38:03"
+  },
+  {
+    "id": 59,
+    "name": "resume_sam2_s__20a4825553.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick_recheck_once/main4/baseline/Cityscapes_seed0_bank9_comp-none_loc-before_attention_sched-none/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__20a4825553.pth",
+    "size_mb": 405.8431520462036,
+    "mtime": "2026-04-23T20:38:04"
+  },
+  {
+    "id": 60,
+    "name": "best_iou59.96__709d71c88e.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick_recheck_once/main4/both/Cityscapes_seed0_bank9_comp-hybrid_loc-before_attention_sched-adaptive_stride/checkpoints/Cityscapes_13cls/sam2_s/best_iou59.96.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_iou59.96__709d71c88e.pth",
+    "size_mb": 178.20326137542725,
+    "mtime": "2026-04-23T20:29:04"
+  },
+  {
+    "id": 61,
+    "name": "last_sam2_s_13cls__c3e6e8b232.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick_recheck_once/main4/both/Cityscapes_seed0_bank9_comp-hybrid_loc-before_attention_sched-adaptive_stride/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__c3e6e8b232.pth",
+    "size_mb": 178.205584526062,
+    "mtime": "2026-04-23T20:29:04"
+  },
+  {
+    "id": 62,
+    "name": "resume_sam2_s__f7a523dfc7.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick_recheck_once/main4/both/Cityscapes_seed0_bank9_comp-hybrid_loc-before_attention_sched-adaptive_stride/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__f7a523dfc7.pth",
+    "size_mb": 405.84743881225586,
+    "mtime": "2026-04-23T20:29:05"
+  },
+  {
+    "id": 63,
+    "name": "best_iou59.98__bfbc9c88be.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick_recheck_once/main4/mem_only/Cityscapes_seed0_bank9_comp-hybrid_loc-before_attention_sched-none/checkpoints/Cityscapes_13cls/sam2_s/best_iou59.98.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_iou59.98__bfbc9c88be.pth",
+    "size_mb": 178.20326137542725,
+    "mtime": "2026-04-23T20:20:40"
+  },
+  {
+    "id": 64,
+    "name": "last_sam2_s_13cls__87fa40d220.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick_recheck_once/main4/mem_only/Cityscapes_seed0_bank9_comp-hybrid_loc-before_attention_sched-none/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__87fa40d220.pth",
+    "size_mb": 178.205584526062,
+    "mtime": "2026-04-23T20:20:39"
+  },
+  {
+    "id": 65,
+    "name": "resume_sam2_s__a273f83482.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/logs/time_ablation/quick_recheck_once/main4/mem_only/Cityscapes_seed0_bank9_comp-hybrid_loc-before_attention_sched-none/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__a273f83482.pth",
+    "size_mb": 405.84743881225586,
+    "mtime": "2026-04-23T20:20:40"
+  },
+  {
+    "id": 66,
+    "name": "best_sam2_s_iou60.14__7b4890059a.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/pd_auto_iter/checkpoints/Cityscapes_13cls/sam2_s/best_sam2_s_iou60.14.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/best_sam2_s_iou60.14__7b4890059a.pth",
+    "size_mb": 177.6798906326294,
+    "mtime": "2026-04-10T02:04:18"
+  },
+  {
+    "id": 67,
+    "name": "last_sam2_s_13cls__c2c9f6d62d.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/pd_auto_iter/checkpoints/Cityscapes_13cls/sam2_s/last_sam2_s_13cls.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/last_sam2_s_13cls__c2c9f6d62d.pth",
+    "size_mb": 177.67809581756592,
+    "mtime": "2026-04-10T10:20:29"
+  },
+  {
+    "id": 68,
+    "name": "resume_sam2_s__3550c39651.pth",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/pd_auto_iter/checkpoints/Cityscapes_13cls/sam2_s/resume_sam2_s.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/resume_sam2_s__3550c39651.pth",
+    "size_mb": 403.7886657714844,
+    "mtime": "2026-04-10T10:35:00"
+  },
+  {
+    "id": 69,
+    "name": "sam2.1_hiera_base_plus__0aa0d8f404.pt",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/sam/checkpoints/sam2.1_hiera_base_plus.pt",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/sam2.1_hiera_base_plus__0aa0d8f404.pt",
+    "size_mb": 308.6154956817627,
+    "mtime": "2024-09-29T11:15:00"
+  },
+  {
+    "id": 70,
+    "name": "sam2.1_hiera_large__8518721cb3.pt",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/sam/checkpoints/sam2.1_hiera_large.pt",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/sam2.1_hiera_large__8518721cb3.pt",
+    "size_mb": 856.4792737960815,
+    "mtime": "2024-09-29T11:15:23"
+  },
+  {
+    "id": 71,
+    "name": "sam2.1_hiera_small__7c8d22d2e9.pt",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/sam/checkpoints/sam2.1_hiera_small.pt",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/sam2.1_hiera_small__7c8d22d2e9.pt",
+    "size_mb": 175.87307453155518,
+    "mtime": "2024-09-29T11:14:18"
+  },
+  {
+    "id": 72,
+    "name": "sam2.1_hiera_tiny__9a55f92861.pt",
+    "src_path": "/root/autodl-tmp/OmniSAM-main/sam/checkpoints/sam2.1_hiera_tiny.pt",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/sam2.1_hiera_tiny__9a55f92861.pt",
+    "size_mb": 148.7812671661377,
+    "mtime": "2024-09-29T11:13:57"
+  },
+  {
+    "id": 73,
+    "name": "omnisam_s__0a1c5c2f1c.pth",
+    "src_path": "/root/autodl-tmp/omnisam_s.pth",
+    "zoo_path": "/root/autodl-tmp/OmniSAM-main/ckpt_zoo/files/omnisam_s__0a1c5c2f1c.pth",
+    "size_mb": 177.67891120910645,
+    "mtime": "2026-04-05T21:24:52"
+  }
+]

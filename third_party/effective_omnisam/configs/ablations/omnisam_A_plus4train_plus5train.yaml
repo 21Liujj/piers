@@ -1,0 +1,38 @@
+plugins:
+  # 1) pseudo_conf_mask (Module A): enable for training stability
+  pseudo_conf_mask:
+    enabled: true
+    threshold: 0.85
+    min_valid_ratio: 0.01
+    min_valid_pixels: 0
+    ignore_index: 255
+    fallback: "skip"
+
+  # 4) efficient_tam_memory (Module D): train-only
+  efficient_tam_memory:
+    enabled: true
+    mode: "pool"
+    compress_ratio: 0.5
+    pool_stride: 2
+    apply_in_pl: false
+    apply_in_train: true
+
+  # 5) efficient_sam2_sparse (Module E): train-only
+  efficient_sam2_sparse:
+    enabled: true
+    mode: "attn_topk"
+    keep_ratio: 0.5
+    min_keep_tokens: 64
+    saliency_source: "feature_norm"
+    cache_saliency: true
+    fallback_full_when_uncertain: true
+    apply_in_pl: false
+    apply_in_train: true
+
+  # Pano-SMB Stage 1: fixed-total, batch-shared adaptive FoV quotas.
+  pano_smb:
+    enabled: false
+    min_tokens: 256
+    verbose: false
+    log_interval: 200
+

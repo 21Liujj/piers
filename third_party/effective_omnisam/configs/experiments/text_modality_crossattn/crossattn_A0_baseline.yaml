@@ -1,0 +1,13 @@
+multimodal:
+  use_text_proto: false
+
+text_fusion:
+  enabled: false
+  type: none
+
+text_gate:
+  enabled: false
+
+weight_txt_align: 0.0
+lambda_txt: 0.0
+text_train_stage: stage2

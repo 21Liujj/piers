@@ -1,0 +1,12 @@
+{
+  "road": "a drivable road surface in a panoramic street scene",
+  "sidewalk": "a pedestrian sidewalk beside the road",
+  "building": "building facade in an urban street scene",
+  "pole": "a thin vertical pole or street lamp",
+  "traffic light": "a small traffic light at an intersection",
+  "traffic sign": "a traffic sign beside the road",
+  "vegetation": "trees, grass, bushes and plants",
+  "sky": "open sky region",
+  "person": "pedestrian walking or standing",
+  "car": "car or vehicle on the road"
+}

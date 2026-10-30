@@ -1,0 +1,40 @@
+plugins:
+  # Keep the same accelerate/stability config as omnisam_A_plus4train_plus5train.yaml
+  pseudo_conf_mask:
+    enabled: true
+    threshold: 0.85
+    min_valid_ratio: 0.01
+    min_valid_pixels: 0
+    ignore_index: 255
+    fallback: "skip"
+
+  efficient_tam_memory:
+    enabled: true
+    mode: "pool"
+    compress_ratio: 0.5
+    pool_stride: 2
+    apply_in_pl: false
+    apply_in_train: true
+
+  efficient_sam2_sparse:
+    enabled: true
+    mode: "attn_topk"
+    keep_ratio: 0.5
+    min_keep_tokens: 64
+    saliency_source: "feature_norm"
+    cache_saliency: true
+    fallback_full_when_uncertain: true
+    apply_in_pl: false
+    apply_in_train: true
+
+  # Route-A depth prior (soft weighting on unsup loss)
+  depth_boundary_prior:
+    enabled: true
+    depth_prior_root: ""
+    weight_on_inconsistent: 0.2
+    semantic_boundary_dilate: 1
+    missing_fallback: "skip"
+
+# Dataset-side loader for depth boundary patches.
+depth_prior_root: ""
+

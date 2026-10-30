@@ -1,0 +1,9 @@
+id	path	type	size_bytes	size_human	reason	replacement_or_summary
+1	logs/multimodal_cdsweep_only_p1_r5_tt0.08_gmhard_wa0.02_D_text_gate_hard_with_adapter.log	log	0	0B	零字节文件，进程启动即失败	N/A
+2	logs/uda_densepass_reuse_epoch1_opt_20260409_194826.log	log	4121	4KB	仅含启动信息（PID），无训练内容，被 195415 取代	logs/uda_densepass_reuse_epoch1_opt_20260409_195415.log
+3	logs/uda_densepass_reuse_epoch1_opt_20260409_195036.log	log	5110	5KB	仅含启动信息（PID），重复启动，被 195415 取代	logs/uda_densepass_reuse_epoch1_opt_20260409_195415.log
+4	docs/efficient_sam2_style_sparse_memory_retrieval.md	doc	0	0B	零字节空文件，已有完整中文版 _zh.md	docs/efficient_sam2_style_sparse_memory_retrieval_zh.md
+5	logs/cdsweep.pid	pid	7	7B	历史 PID 文件，进程早已结束	N/A
+6	logs/cdsweep_only.pid	pid	7	7B	历史 PID 文件，进程早已结束	N/A
+7	logs/cdsweep_only_clean.pid	pid	7	7B	历史 PID 文件，进程早已结束	N/A
+8	logs/multimodal_abcd.pid	pid	6	6B	历史 PID 文件，进程早已结束	N/A

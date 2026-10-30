@@ -1,0 +1,15 @@
+{
+  "road": "drivable asphalt road surface in an urban street scene, flat ground for vehicles",
+  "sidewalk": "pedestrian sidewalk or pavement next to the road, walkable area for people",
+  "building": "building facade in an urban street scene, large static architectural structure",
+  "wall": "vertical wall structure along the street, non-building barrier surface",
+  "fence": "roadside fence or guard barrier with thin repeated bars or mesh pattern",
+  "pole": "thin vertical pole, utility pole, or street lamp post",
+  "traffic light": "small hanging or mounted traffic light signal at an intersection",
+  "traffic sign": "roadside traffic sign board with symbol or text mounted on a pole",
+  "vegetation": "trees, bushes, grass, and other green plants in outdoor street environment",
+  "terrain": "natural ground such as soil, dirt, or slope beside the road, not paved",
+  "sky": "open sky region above the scene, background atmosphere with clouds or clear sky",
+  "person": "pedestrian person walking or standing on road or sidewalk",
+  "car": "car, sedan, or passenger vehicle on the road"
+}

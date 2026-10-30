@@ -1,0 +1,29 @@
+# Base OmniSAM indoor setting for Stanford360 flat layout — plugins disabled (WildPASS train_base parity).
+dataset: Stanford2D3D
+class_set: 13
+backbone: sam2_s
+data_root: data
+stanford_processed_root: data_extra/processed/Stanford360_SPAN8
+stanford_flat_layout: true
+stanford_legacy_area_crop: false
+
+num_epochs: 1
+batch_size: 4
+train_max_iters: 500
+amp: true
+tf32: true
+
+warmup_pl: 50
+iters_pl: 50
+pl_shuffle: false
+pl_num_workers: 0
+
+plugins:
+  pseudo_conf_mask:
+    enabled: false
+  efficient_tam_memory:
+    enabled: false
+  efficient_sam2_sparse:
+    enabled: false
+  depth_boundary_prior:
+    enabled: false

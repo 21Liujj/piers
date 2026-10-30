@@ -1,0 +1,16 @@
+plugins:
+  pseudo_conf_mask:
+    enabled: false
+
+  depth_boundary_prior:
+    enabled: true
+    # Offline depth prior root should contain depth_boundary_npy/...
+    # Also set top-level depth_prior_root below (used by dataset to load priors).
+    depth_prior_root: ""
+    weight_on_inconsistent: 0.2
+    semantic_boundary_dilate: 1
+    missing_fallback: "skip"
+
+# Dataset-side loader for depth boundary patches.
+depth_prior_root: ""
+

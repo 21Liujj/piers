@@ -1,0 +1,55 @@
+multimodal:
+  use_text_proto: true
+
+text_proto:
+  path: assets/text_prototypes_openclip_text_latest.pt
+  mode: shuffle
+  normalize: true
+  shuffle_seed: 0
+  random_seed: 0
+
+text_adapter:
+  enabled: true
+  hidden_dim: 512
+  dropout: 0.0
+  normalize_output: true
+  zero_init_last: false
+  projector_type: linear
+  freeze: false
+
+text_fusion:
+  enabled: true
+  type: text_to_image_grounding
+  num_heads: 4
+  num_layers: 2
+  dropout: 0.0
+  gamma_init: 0.05
+  gamma_learnable: true
+  logit_scale_init: 10.0
+  logit_scale_learnable: true
+  use_query_self_attn: true
+  use_ffn: true
+  ffn_ratio: 4.0
+  num_queries_per_class: 1
+  use_tie_breaker: false
+  query_delta_init: 0.0
+  use_learnable_query_delta: false
+  kv_stride: 1
+  return_attn: true
+  ground_attn_temperature: 1.0
+  log_every: 20
+  save_debug_vis: false
+  save_vis_num: 20
+
+text_gate:
+  enabled: false
+
+loss_text_grounding:
+  enabled: true
+  weight: 0.05
+  apply_source: true
+  apply_target: false
+
+weight_txt_align: 0.0
+lambda_txt: 0.0
+text_train_stage: stage2

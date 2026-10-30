@@ -1,0 +1,20 @@
+# 仅作「路径备忘」：复制为 demo_ckpts.yaml 后把 path 粘到命令行。
+#
+# 单 ckpt（原图 + 分割 + 三列图例）:
+#   python tools/demo_segment.py --image ... --ckpt /path/to/a.pth
+#
+# 多 ckpt（每个 ckpt 各输出 pred + demo；默认再生成一张纵向汇总对比图）:
+#   python tools/demo_segment.py --image ... \
+#     --ckpt /path/paper.pth --label Paper \
+#     --ckpt /path/uda.pth --label "UDA 60.36" \
+#     --out_dir demo_compare
+# 不要纵向汇总时加: --no_compare_stack
+
+entries:
+  paper:
+    path: /root/autodl-tmp/omnisam_s.pth
+    label: Paper (omnisam_s)
+
+  uda_60_36:
+    path: pd_uda_densepass/checkpoints/Cityscapes/sam2_s/best_sam2_s_iou60.36.pth
+    label: UDA 60.36
