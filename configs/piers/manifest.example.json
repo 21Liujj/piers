@@ -1,0 +1,13 @@
+{
+  "_comment": "Query manifest template for T0/T1. Worker reads image+query text only; GT is evaluator-side. Negatives require missing_basis (taxonomy-missing != absent, verify per image). split must be train/dev-calib/final-eval.",
+  "split": "dev-calib",
+  "query_set_version": "v0",
+  "images": [
+    {"image_id": "dpass_val_000001", "path": "D:/datasets/DensePASS/val/img/dpass_val_000001.jpg", "width": 2048, "height": 1024, "dataset": "DensePASS-val", "split": "dev-calib"}
+  ],
+  "queries": [
+    {"query_id": "q001", "image_id": "dpass_val_000001", "raw_text": "car", "task_type": "category_union", "ontology": {"map13": 12, "relation": "coarse_compatible"}, "language": "en", "gt_mask": "D:/datasets/DensePASS/val/gt/dpass_val_000001_car.png"},
+    {"query_id": "q002", "image_id": "dpass_val_000001", "raw_text": "the red car on the left", "task_type": "instance_referring", "language": "en", "gt_mask": "D:/datasets/DensePASS/val/gt/dpass_val_000001_car_left.png"},
+    {"query_id": "q003", "image_id": "dpass_val_000001", "raw_text": "train", "task_type": "category_union", "negative": true, "missing_basis": "verified-absent: annotator checked full ERP, no rail vehicle", "language": "en", "gt_mask": null}
+  ]
+}
