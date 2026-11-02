@@ -98,10 +98,22 @@ class SparseMemoryRetriever:
         feat_norm = torch.linalg.norm(memory_tokens_lbc.float(), dim=-1).mean(dim=1)  # [L_m]
 
         # Component 2: Query-affinity (query-aware selection)
+        # NOTE: vision_feats (hidden_dim=256) and memory tokens (mem_dim=64) live in
+        # different spaces. Align channels by adaptive channel-pooling to memory dim
+        # so the dot-product is defined. Recorded as approximation in run logs.
         if query_features is not None and query_features.numel() > 0:
             query_2d = query_features.float()
             if query_2d.dim() > 2:
                 query_2d = query_2d.reshape(-1, query_2d.shape[-1])
+            _cq, _cm = int(query_2d.shape[-1]), int(memory_2d.shape[-1])
+            if _cq != _cm:
+                if _cq > _cm and _cq % _cm == 0:
+                    _r = _cq // _cm
+                    query_2d = query_2d.reshape(query_2d.shape[0], _cm, _r).mean(dim=-1)
+                else:
+                    query_2d = torch.nn.functional.adaptive_avg_pool1d(
+                        query_2d.unsqueeze(0).permute(0, 2, 1), _cm
+                    ).permute(0, 2, 1).squeeze(0)
             query_norm = F.normalize(query_2d, dim=-1)  # [L_q, C]
             memory_norm = F.normalize(memory_2d, dim=-1)  # [L_m, C]
             # Cross-attention scores: best match across all queries
@@ -344,6 +356,31 @@ class SparseMemoryRetriever:
                 used_mode = "feature_norm"
             return score, fallback_used, used_mode
 
+        if mode == "uniform":
+            # I2 baseline: position-only uniform stride (no feature, no pseudo-label).
+            L = int(tokens_lbc.shape[0]); k = L  # score only for ranking; actual idx strided below
+            import torch as _t
+            stride = max(1, L // max(1, min(L, 4096)))
+            # score that yields strided topk: give high score to strided positions
+            score = _t.zeros(L, device=tokens_lbc.device)
+            score[::stride] = 1.0
+            # add tiny norm tiebreak so topk is deterministic
+            score = score + 1e-6 * self._feature_norm_score(tokens_lbc)
+            return score, fallback_used, used_mode
+
+        if mode == "pool":
+            # I2 baseline: spatial average-pool local summary (position-structure only).
+            # Approximate by block-average of feature norm: uniform within each block.
+            L = int(tokens_lbc.shape[0])
+            import torch as _t
+            fn = self._feature_norm_score(tokens_lbc)
+            # block size to ~keep_ratio budget: pool 4x4 blocks (16 tokens) for kr=0.0625
+            bs = 16
+            nb = (L + bs - 1) // bs
+            pooled = fn[:nb*bs].reshape(nb, bs).mean(dim=1) if L >= bs else fn.mean().expand(nb)
+            score = pooled.repeat_interleave(bs)[:L]
+            return score, fallback_used, used_mode
+
         if mode == "cams":
             if query_features is None or query_features.numel() == 0:
                 return _fallback(), fallback_used, used_mode
@@ -356,7 +393,8 @@ class SparseMemoryRetriever:
                     gamma=0.2,
                 )
                 return score, fallback_used, used_mode
-            except Exception:
+            except Exception as _e:
+                print(f"[SMR][cams-exc] {type(_e).__name__}: {_e}", flush=True)
                 return _fallback(), fallback_used, used_mode
 
         return _fallback(), fallback_used, used_mode

@@ -1,4 +1,3 @@
-numpy>=1.24
-pyyaml>=6.0
-pillow>=10.0
-pytest>=7.0
+# DEPRECATED — merged into requirements.txt (single unified env).
+# Use: pip install -r requirements.txt
+-r requirements.txt

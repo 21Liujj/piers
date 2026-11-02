@@ -291,3 +291,7 @@ def main(argv=None):
     if a.which == "omni":
         return omni_main(rest)
     return grounded_main(rest)
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

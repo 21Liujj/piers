@@ -1,0 +1,62 @@
+# PIERS unified env — single conda env for BOTH paths:
+#   (A) Effective-OmniSAM UDA (Cityscapes -> DensePASS/WildPASS)
+#   (B) Grounded text branch (HF Grounding-DINO + vendored SAM2 predictor)
+#
+# Design decisions (RTX 6000D, cc 12.0 Blackwell sm_120, CUDA 12.8):
+# - torch 2.8.0+cu128 / torchvision 0.23.0+cu128: first torch line with
+#   official Blackwell sm_120 wheels. cu121 builds CANNOT run on this card.
+# - transformers pinned to 4.57.6 (verified 2026-10-29 on CPU):
+#   transformers 5.x renames/removes GroundingDino API; keep <5.
+#   omni side does NOT import transformers, so no conflict.
+# - sam2 is NOT pip-installed: we import third_party/*/sam(2) directly
+#   (pure-Python path, SAM2_BUILD_CUDA=0 semantics). CUDA ext
+#   (connected_components.cu -> sam2._C) is compiled in-place on GPU host
+#   only if needed; both misc.py fall back gracefully when _C is absent.
+# - Install with:  pip install -r requirements.txt
+#   (extra-index-url brings the cu128 torch wheels; everything else from PyPI)
+# - Env location on AutoDL MUST be on the data disk, e.g.
+#   conda create -p /root/autodl-tmp/envs/piers python=3.12 -y
+#   NOT /root/miniconda3/envs/ (root overlay / is only 30G).
+
+--extra-index-url https://download.pytorch.org/whl/cu128
+
+# --- CUDA backbone (Blackwell sm_120) ---
+torch==2.8.0
+torchvision==0.23.0
+
+# --- Grounded text branch (HF) ---
+# VERIFIED 2026-10-29 (Windows/py3.12, torch 2.6.0+cpu): 4.57.6 works with
+# vendored sam2 + local grounding weights. workers/entry.py resolves the
+# box-threshold kwarg (threshold -> box_threshold rename) at runtime.
+transformers==4.57.6
+
+# --- OmniSAM / Effective-OmniSAM runtime (third_party/effective_omnisam/requirements.txt) ---
+icecream
+safetensors
+timm
+wandb>=0.16
+hydra-core>=1.3.2
+omegaconf>=2.3.0
+iopath>=0.1.10
+opencv-python>=4.8
+tqdm>=4.66.0
+open_clip_torch>=2.24.0
+
+# --- PIERS core ---
+numpy>=1.24,<2.3
+pyyaml>=6.0
+pillow>=10.0
+scipy
+matplotlib
+pandas
+tensorboard
+pytest>=7.0
+
+# --- WEIGHT PREP (required once, offline) ---
+# python scripts/piers/convert_grounding_ckpt.py \
+#     --src <dir>/grounding-dino-tiny/pytorch_model.bin \
+#     --dst <dir>/grounding-dino-tiny-hf --copy-aux
+# The published checkpoint stores decoder/text attention FUSED (in_proj_weight);
+# transformers >= 4.40 expects split query/key/value. Without the conversion,
+# ~36 attention tensors are silently dropped and the detector returns ZERO
+# candidates. See docs/piers/gpu_runbook.md step 3.

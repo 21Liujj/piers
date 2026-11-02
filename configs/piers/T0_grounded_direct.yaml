@@ -9,5 +9,5 @@ thresholds: {det: 0.35, text: 0.25}
 collab: none
 seam: {strategy: fixed_scm, extra_budget_B: 0}
 manifest: null  # fill with query manifest json path before GPU run
-grounded: {sam2_ckpt: null, sam2_cfg: sam2_hiera_l.yaml, dtype: bf16}
+grounded: {sam2_ckpt: null, sam2_cfg: configs/sam2.1/sam2.1_hiera_s.yaml, dtype: bf16}
 runs_root: runs
