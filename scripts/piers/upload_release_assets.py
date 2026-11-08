@@ -49,6 +49,21 @@ def api(method: str, url: str, token: str, body: bytes | None = None,
         return exc.code, exc.read()
 
 
+def _unique_name(path: str) -> str:
+    """Build a release-unique asset name from the file's path.
+
+    The trained checkpoints all live in a directory named `final.pth`, so the
+    meaningful part is the relative path with separators flattened.
+    """
+    parts = [p for p in os.path.normpath(path).split(os.sep) if p not in (".", "")]
+    # Drop a trailing "training/final.pth" style suffix only if there is enough
+    # context left; otherwise keep the whole tail.
+    if len(parts) > 2 and parts[-1] == "final.pth":
+        parts = parts[:-2]
+    slug = "_".join(parts) if parts else os.path.basename(path)
+    return f"{slug}.pth" if slug.endswith(".pth") else f"{slug}.pth"
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--release", required=True, help="release tag")
@@ -70,8 +85,17 @@ def main() -> int:
     print(f"release {release['tag_name']} id={release['id']} assets={len(existing)}")
 
     ok = True
+    planned: list[tuple[str, str]] = []
     for path in args.assets:
         name = os.path.basename(path)
+        # GitHub release assets must have unique names; the trained checkpoints
+        # all live in a directory called "final.pth", so disambiguate them.
+        if name in existing or name in {a for a, _ in planned}:
+            name = _unique_name(path)
+        planned.append((name, path))
+        print(f"PLAN  {path} -> {name}")
+
+    for name, path in planned:
         if name in existing:
             print(f"SKIP  {name} (already uploaded)")
             continue
