@@ -135,8 +135,6 @@ The trained checkpoints used for the reported numbers are published as a
 
 ```bash
 gh release download v0.2-paper-repro --repo 21Liujj/piers --dir ./ckpt
-# or
-curl -L -O https://github.com/21Liujj/piers/releases/download/v0.2-paper-repro/allhard_runs_R0_seed1234_final.pth
 ```
 
 | Asset | SHA256 | Role |
@@ -145,6 +143,12 @@ curl -L -O https://github.com/21Liujj/piers/releases/download/v0.2-paper-repro/a
 | `allhard_runs_R1_seed1234_final.pth` | `07fdc14b7bf072edc78c402fd11e940d28a7e3dd73dcd3ff7f5f4c973b6a7232` | I1 main arm, seed 4321 |
 | `dense_controls_R0_seed1234_final.pth` | `40159d944c8925cd1c61ce4f8929cbde1fdbda761d0c41fb3bdfe27fec8f5625` | Dense-memory control |
 
+Verify a download with:
+
+```bash
+python scripts/piers/verify_release_asset.py
+```
+
 Place them as:
 
 ```
@@ -152,6 +156,9 @@ ckpt/allhard_runs/R0_seed1234/training/final.pth
 ckpt/allhard_runs/R1_seed1234/training/final.pth
 ckpt/dense_controls/trained/R0_seed1234/training/final.pth
 ```
+
+What is inside these checkpoints (and which tensors training actually changed)
+is documented in [`results/CHECKPOINTS.md`](results/CHECKPOINTS.md).
 
 ### 3.3 Datasets
 
@@ -305,6 +312,8 @@ Two known blockers are recorded in `docs/piers/innov2_results.md` §5 and are
 | Check | Command | Expected |
 |---|---|---|
 | Code matches the results | `python scripts/piers/verify_result_fingerprints.py` | `14/14 files match` |
+| Code matches in a fresh clone | `python scripts/piers/verify_snapshot_in_git.py` | `14/14 files match` |
+| Release weights are intact | `python scripts/piers/verify_release_asset.py` | `3/3 release assets verified` |
 | Configs are machine-independent | `python scripts/piers/parametrize_paths.py --check` | `OK: all configs are machine-independent` |
 | Suite configs coherent | `python scripts/piers/check_suite_configs.py` | no errors |
 | Unit tests | `pytest tests -q` | all pass |
