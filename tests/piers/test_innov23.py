@@ -46,6 +46,21 @@ def test_priority_reserves_boundary_rare():
     assert set(r["kept_ids"]) == {"t0", "t1", "t2"}
 
 
+def test_joint_guarded_rare_then_boundary_then_fill():
+    # rare t5 outranks boundary t0/t1; boundary fills before plain fill t2-t4.
+    items = ([_item(i, i * 100, boundary=(i < 2), rare=(i == 5)) for i in range(6)])
+    r = plan_selection(items, "joint_guarded", budget=3)
+    assert r["smr_params"]["sparse_mode"] == "joint_guarded"
+    assert r["kept_ids"] == ["t5", "t1", "t0"]  # rare first, then boundary by score
+    # dedup between rare and boundary: a both-rare-and-boundary token counted once
+    items2 = [_item(0, 0, score=0.9, boundary=True, rare=True),
+              _item(1, 200, score=0.8, boundary=True),
+              _item(2, 400, score=0.7)]
+    r2 = plan_selection(items2, "joint_guarded", budget=2)
+    assert r2["kept_ids"] == ["t0", "t1"]
+    assert len(r2["kept_ids"]) == len(set(r2["kept_ids"]))
+
+
 def test_neighborhood_ranks_by_current_fov():
     cur = (0.0, 0.0, 64.0, 32.0)
     items = [_item(0, 500, score=0.9), _item(1, 0, score=0.1)]
