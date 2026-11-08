@@ -677,9 +677,9 @@ class MemoryBank(nn.Module):
                 feats = chunk["feats"]
                 maskmem_enc = chunk["pos"]
 
-                # NEW: Extract boundary mask for boundary_guarded mode
+                # NEW: Extract boundary mask for boundary_guarded / joint_guarded mode
                 boundary_mask_for_this_chunk = None
-                if self.sparse_mode == "boundary_guarded" and historical_pseudo_labels is not None:
+                if self.sparse_mode in ("boundary_guarded", "joint_guarded") and historical_pseudo_labels is not None:
                     t_rel = self.num_maskmem - chunk["t_pos"]
                     prev_frame_idx = frame_idx - t_rel
                     pseudo_label_bhw = historical_pseudo_labels.get(prev_frame_idx, None)
@@ -709,9 +709,9 @@ class MemoryBank(nn.Module):
                             # Fallback to None if boundary extraction fails
                             boundary_mask_for_this_chunk = None
 
-                # NEW: Extract rare-class mask for class_aware mode
+                # NEW: Extract rare-class mask for class_aware / joint_guarded mode
                 rare_class_mask_for_this_chunk = None
-                if self.sparse_mode == "class_aware" and historical_pseudo_labels is not None and self.rare_class_ids:
+                if self.sparse_mode in ("class_aware", "joint_guarded") and historical_pseudo_labels is not None and self.rare_class_ids:
                     t_rel = self.num_maskmem - chunk["t_pos"]
                     prev_frame_idx = frame_idx - t_rel
                     pseudo_label_bhw = historical_pseudo_labels.get(prev_frame_idx, None)

@@ -1,0 +1,30 @@
+{
+  "name": "omnisam_s",
+  "dataset": "DensePASS",
+  "backbone": "sam2_s",
+  "ckpt": "/root/autodl-tmp/weights/omnisam_s.pth",
+  "mIoU": 60.4594,
+  "mAcc": 71.7285,
+  "PixAcc": 88.9669,
+  "FWIoU": 81.233,
+  "mDice": 72.8909,
+  "FWDice": 88.7226,
+  "per_class_iou_pct": [
+    80.9941,
+    46.6678,
+    90.0194,
+    45.187,
+    49.6533,
+    45.9353,
+    30.0532,
+    26.0174,
+    79.6228,
+    46.375,
+    94.5788,
+    66.4713,
+    84.3975
+  ],
+  "eval_time_sec": 262.1031,
+  "num_eval_images": 100,
+  "images_per_sec": 0.3815
+}

@@ -1,0 +1,9 @@
+Dataset audit notice: existing data_extra/WildPASS13 directory name is not evidence of DensePASS13 ground truth.
+Official WildPASS raw labels use8evaluationIDs:car4,truck5,bus8,road11,sidewalk12,person17,curb13,crosswalk24;raw0isignored.
+Existing labels_trainid and its backup used incompatible mappings. Do not use these derived folders for13class thesis accuracy tables.
+Original files and prior results have been preserved. This does not modify the sealed Innovation2 algorithm.
+Any older WildPASS13 metric using those derived labels requires reevaluation; the DensePASS100 nativeGT main results are separate.
+The current Innovation1 release uses only a clearly documented4shared-class sparse-GT supplemental evaluation on400RGB-deduplicated images.
+Mapping:raw11->road0,12->sidewalk1,17->person11,4/5/8->vehicle12;allothers255.
+Evidence and original-source SHA: runs/I1-local-correction-20261107_2000/wildpass_gt_audit/
+ValidGT: runs/I1-local-correction-20261107_2000/evaluation_gt/wildpass_common4/

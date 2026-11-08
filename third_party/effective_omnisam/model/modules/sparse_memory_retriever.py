@@ -268,6 +268,79 @@ class SparseMemoryRetriever:
         indices = torch.where(selected)[0]
         return torch.sort(indices).values, False  # sorted for positional encoding consistency
 
+    def _joint_guarded_selection(
+        self,
+        memory_tokens: torch.Tensor,
+        rare_class_mask_hw: torch.Tensor,
+        boundary_mask_hw: torch.Tensor,
+        quota: int,
+        rare_reserve_ratio: float = 0.15,
+        boundary_reserve_ratio: float = 0.125,
+        base_score: Optional[torch.Tensor] = None,
+    ) -> Tuple[torch.Tensor, bool]:
+        """
+        Joint route (I2 complete): rare-class insurance + boundary insurance.
+
+        Stage 1: reserve rare_reserve_ratio of quota for rare-class tokens.
+        Stage 2: reserve boundary_reserve_ratio of quota for boundary tokens
+                 (excluding already-selected).
+        Stage 3: fill the rest with score-based Top-K (excluding selected).
+
+        Masks are derived from the same historical pseudo-label; a token that
+        is both rare-class and boundary is only counted once (selected set
+        dedups). Returns (indices, mismatch).
+        """
+        L_m = memory_tokens.shape[0]
+        device = memory_tokens.device
+
+        rare_mask = (rare_class_mask_hw.flatten().to(device)
+                     if rare_class_mask_hw.ndim == 2
+                     else rare_class_mask_hw.to(device))
+        bd_mask = (boundary_mask_hw.flatten().to(device)
+                   if boundary_mask_hw.ndim == 2
+                   else boundary_mask_hw.to(device))
+
+        if rare_mask.shape[0] != L_m or bd_mask.shape[0] != L_m:
+            feat_norm = torch.linalg.norm(memory_tokens.float(), dim=-1).mean(dim=1)
+            return torch.topk(feat_norm, k=quota).indices, True
+
+        if base_score is not None and base_score.shape[0] == L_m:
+            feat_norm = base_score.to(device).float()
+        else:
+            feat_norm = torch.linalg.norm(memory_tokens.float(), dim=-1).mean(dim=1)
+        selected = torch.zeros(L_m, dtype=torch.bool, device=device)
+
+        # Stage 1: rare-class insurance
+        rare_quota = int(quota * rare_reserve_ratio)
+        rare_tokens = torch.where(rare_mask > 0)[0]
+        if len(rare_tokens) > 0 and rare_quota > 0:
+            rare_scores = feat_norm[rare_tokens]
+            k_rare = min(rare_quota, len(rare_tokens))
+            topk_in_rare = torch.topk(rare_scores, k=k_rare).indices
+            selected[rare_tokens[topk_in_rare]] = True
+
+        # Stage 2: boundary insurance (excluding already selected)
+        boundary_quota = int(quota * boundary_reserve_ratio)
+        bd_tokens = torch.where((bd_mask > 0) & (~selected))[0]
+        if len(bd_tokens) > 0 and boundary_quota > 0:
+            bd_scores = feat_norm[bd_tokens]
+            k_bd = min(boundary_quota, len(bd_tokens))
+            topk_in_bd = torch.topk(bd_scores, k=k_bd).indices
+            selected[bd_tokens[topk_in_bd]] = True
+
+        # Stage 3: norm-based fill
+        remaining_quota = quota - int(selected.sum().item())
+        if remaining_quota > 0:
+            not_selected = torch.where(~selected)[0]
+            if len(not_selected) > 0:
+                remaining_scores = feat_norm[not_selected]
+                k_fill = min(remaining_quota, len(not_selected))
+                topk_fill = torch.topk(remaining_scores, k=k_fill).indices
+                selected[not_selected[topk_fill]] = True
+
+        indices = torch.where(selected)[0]
+        return torch.sort(indices).values, False
+
     def _resolve_score(
         self,
         mode: str,
@@ -523,6 +596,37 @@ class SparseMemoryRetriever:
                     jaccard = inter / union if union > 0 else 1.0
                     rare_count = int((rare_class_mask.flatten() > 0).sum().item())
                     print(f"[SMR][overlap] class_aware mem_id={sid} jaccard={jaccard:.4f} inter={inter} union={union} quota={k} rare_pixels={rare_count}", flush=True)
+            else:
+                score = self._feature_norm_score(memory_tokens)
+                idx = torch.topk(score, k=k, dim=0, largest=True, sorted=False).indices.long()
+                idx = torch.sort(idx).values
+                fallback_used = True
+                mask_shape_mismatch = False
+                sel_mode = "feature_norm"
+            if cache_enabled and memory_id is not None:
+                self._cached_indices[sid] = idx.detach().cpu()
+        elif mode_l == "joint_guarded":
+            # Joint route (I2 complete): rare-class + boundary insurance, one pass.
+            if rare_class_mask is not None and boundary_mask is not None:
+                idx, mask_shape_mismatch = self._joint_guarded_selection(
+                    memory_tokens=memory_tokens,
+                    rare_class_mask_hw=rare_class_mask,
+                    boundary_mask_hw=boundary_mask,
+                    quota=k,
+                    rare_reserve_ratio=rare_reserve_ratio,
+                    boundary_reserve_ratio=boundary_reserve_ratio,
+                    base_score=uncertainty_map,
+                )
+                fallback_used = mask_shape_mismatch
+                sel_mode = "joint_guarded" if not mask_shape_mismatch else "feature_norm"
+                if mask_shape_mismatch:
+                    print(f"[SMR] joint_guarded SHAPE MISMATCH at {sid}: rare={rare_class_mask.numel()}, bd={boundary_mask.numel()}, L_m={l0}, fallback to feature_norm", flush=True)
+                else:
+                    baseline_idx = torch.topk(self._feature_norm_score(memory_tokens), k=k, dim=0, largest=True, sorted=False).indices
+                    set_g, set_b = set(idx.tolist()), set(baseline_idx.tolist())
+                    inter, union = len(set_g & set_b), len(set_g | set_b)
+                    jaccard = inter / union if union > 0 else 1.0
+                    print(f"[SMR][overlap] joint_guarded mem_id={sid} jaccard={jaccard:.4f} inter={inter} union={union} quota={k}", flush=True)
             else:
                 score = self._feature_norm_score(memory_tokens)
                 idx = torch.topk(score, k=k, dim=0, largest=True, sorted=False).indices.long()

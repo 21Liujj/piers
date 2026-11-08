@@ -1,0 +1,1038 @@
+{
+  "images": [
+    {
+      "dataset": "DensePASS",
+      "height": 400,
+      "image_id": "dpass_dev-calib_000000",
+      "path": "${PIERS_DATA_ROOT}/DensePASS/leftImg8bit/val/100_.png",
+      "split": "dev-calib",
+      "src_file": "100_.png",
+      "width": 2048
+    },
+    {
+      "dataset": "DensePASS",
+      "height": 400,
+      "image_id": "dpass_dev-calib_000001",
+      "path": "${PIERS_DATA_ROOT}/DensePASS/leftImg8bit/val/101_.png",
+      "split": "dev-calib",
+      "src_file": "101_.png",
+      "width": 2048
+    },
+    {
+      "dataset": "DensePASS",
+      "height": 400,
+      "image_id": "dpass_dev-calib_000002",
+      "path": "${PIERS_DATA_ROOT}/DensePASS/leftImg8bit/val/102_.png",
+      "split": "dev-calib",
+      "src_file": "102_.png",
+      "width": 2048
+    },
+    {
+      "dataset": "DensePASS",
+      "height": 400,
+      "image_id": "dpass_dev-calib_000003",
+      "path": "${PIERS_DATA_ROOT}/DensePASS/leftImg8bit/val/103_.png",
+      "split": "dev-calib",
+      "src_file": "103_.png",
+      "width": 2048
+    },
+    {
+      "dataset": "DensePASS",
+      "height": 400,
+      "image_id": "dpass_dev-calib_000004",
+      "path": "${PIERS_DATA_ROOT}/DensePASS/leftImg8bit/val/104_.png",
+      "split": "dev-calib",
+      "src_file": "104_.png",
+      "width": 2048
+    },
+    {
+      "dataset": "DensePASS",
+      "height": 400,
+      "image_id": "dpass_dev-calib_000005",
+      "path": "${PIERS_DATA_ROOT}/DensePASS/leftImg8bit/val/105_.png",
+      "split": "dev-calib",
+      "src_file": "105_.png",
+      "width": 2048
+    },
+    {
+      "dataset": "DensePASS",
+      "height": 400,
+      "image_id": "dpass_dev-calib_000006",
+      "path": "${PIERS_DATA_ROOT}/DensePASS/leftImg8bit/val/106_.png",
+      "split": "dev-calib",
+      "src_file": "106_.png",
+      "width": 2048
+    },
+    {
+      "dataset": "DensePASS",
+      "height": 400,
+      "image_id": "dpass_dev-calib_000007",
+      "path": "${PIERS_DATA_ROOT}/DensePASS/leftImg8bit/val/107_.png",
+      "split": "dev-calib",
+      "src_file": "107_.png",
+      "width": 2048
+    },
+    {
+      "dataset": "DensePASS",
+      "height": 400,
+      "image_id": "dpass_dev-calib_000008",
+      "path": "${PIERS_DATA_ROOT}/DensePASS/leftImg8bit/val/108_.png",
+      "split": "dev-calib",
+      "src_file": "108_.png",
+      "width": 2048
+    },
+    {
+      "dataset": "DensePASS",
+      "height": 400,
+      "image_id": "dpass_dev-calib_000009",
+      "path": "${PIERS_DATA_ROOT}/DensePASS/leftImg8bit/val/109_.png",
+      "split": "dev-calib",
+      "src_file": "109_.png",
+      "width": 2048
+    }
+  ],
+  "queries": [
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/100__q000.png",
+      "image_id": "dpass_dev-calib_000000",
+      "language": "en",
+      "ontology": {
+        "map13": 12,
+        "relation": "coarse_compatible"
+      },
+      "query_id": "dpass_dev-calib_000000_q000",
+      "query_set_version": "v0",
+      "raw_text": "car",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/100__q001.png",
+      "image_id": "dpass_dev-calib_000000",
+      "language": "en",
+      "ontology": {
+        "map13": 11,
+        "relation": "coarse_compatible"
+      },
+      "query_id": "dpass_dev-calib_000000_q001",
+      "query_set_version": "v0",
+      "raw_text": "person",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/100__q002.png",
+      "image_id": "dpass_dev-calib_000000",
+      "language": "en",
+      "ontology": {
+        "map13": 0,
+        "relation": "exact"
+      },
+      "query_id": "dpass_dev-calib_000000_q002",
+      "query_set_version": "v0",
+      "raw_text": "road",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/100__q003.png",
+      "image_id": "dpass_dev-calib_000000",
+      "language": "en",
+      "ontology": {
+        "map13": 8,
+        "relation": "exact"
+      },
+      "query_id": "dpass_dev-calib_000000_q003",
+      "query_set_version": "v0",
+      "raw_text": "vegetation",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/100__q004.png",
+      "image_id": "dpass_dev-calib_000000",
+      "language": "en",
+      "ontology": {
+        "map13": 10,
+        "relation": "exact"
+      },
+      "query_id": "dpass_dev-calib_000000_q004",
+      "query_set_version": "v0",
+      "raw_text": "sky",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/100__q005.png",
+      "image_id": "dpass_dev-calib_000000",
+      "language": "en",
+      "query_id": "dpass_dev-calib_000000_q005",
+      "query_set_version": "v0",
+      "raw_text": "the leftmost car",
+      "task_type": "instance_referring"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/100__q006.png",
+      "image_id": "dpass_dev-calib_000000",
+      "language": "en",
+      "query_id": "dpass_dev-calib_000000_q006",
+      "query_set_version": "v0",
+      "raw_text": "the nearest person",
+      "task_type": "instance_referring"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/100__q007.png",
+      "image_id": "dpass_dev-calib_000000",
+      "language": "en",
+      "missing_basis": "taxonomy-missing in densepass13 (id 255): confirm absent per image",
+      "negative": true,
+      "query_id": "dpass_dev-calib_000000_q007",
+      "query_set_version": "v0",
+      "raw_text": "train",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/101__q000.png",
+      "image_id": "dpass_dev-calib_000001",
+      "language": "en",
+      "ontology": {
+        "map13": 12,
+        "relation": "coarse_compatible"
+      },
+      "query_id": "dpass_dev-calib_000001_q000",
+      "query_set_version": "v0",
+      "raw_text": "car",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/101__q001.png",
+      "image_id": "dpass_dev-calib_000001",
+      "language": "en",
+      "ontology": {
+        "map13": 11,
+        "relation": "coarse_compatible"
+      },
+      "query_id": "dpass_dev-calib_000001_q001",
+      "query_set_version": "v0",
+      "raw_text": "person",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/101__q002.png",
+      "image_id": "dpass_dev-calib_000001",
+      "language": "en",
+      "ontology": {
+        "map13": 0,
+        "relation": "exact"
+      },
+      "query_id": "dpass_dev-calib_000001_q002",
+      "query_set_version": "v0",
+      "raw_text": "road",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/101__q003.png",
+      "image_id": "dpass_dev-calib_000001",
+      "language": "en",
+      "ontology": {
+        "map13": 8,
+        "relation": "exact"
+      },
+      "query_id": "dpass_dev-calib_000001_q003",
+      "query_set_version": "v0",
+      "raw_text": "vegetation",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/101__q004.png",
+      "image_id": "dpass_dev-calib_000001",
+      "language": "en",
+      "ontology": {
+        "map13": 10,
+        "relation": "exact"
+      },
+      "query_id": "dpass_dev-calib_000001_q004",
+      "query_set_version": "v0",
+      "raw_text": "sky",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/101__q005.png",
+      "image_id": "dpass_dev-calib_000001",
+      "language": "en",
+      "query_id": "dpass_dev-calib_000001_q005",
+      "query_set_version": "v0",
+      "raw_text": "the leftmost car",
+      "task_type": "instance_referring"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/101__q006.png",
+      "image_id": "dpass_dev-calib_000001",
+      "language": "en",
+      "query_id": "dpass_dev-calib_000001_q006",
+      "query_set_version": "v0",
+      "raw_text": "the nearest person",
+      "task_type": "instance_referring"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/101__q007.png",
+      "image_id": "dpass_dev-calib_000001",
+      "language": "en",
+      "missing_basis": "taxonomy-missing in densepass13 (id 255): confirm absent per image",
+      "negative": true,
+      "query_id": "dpass_dev-calib_000001_q007",
+      "query_set_version": "v0",
+      "raw_text": "train",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/102__q000.png",
+      "image_id": "dpass_dev-calib_000002",
+      "language": "en",
+      "ontology": {
+        "map13": 12,
+        "relation": "coarse_compatible"
+      },
+      "query_id": "dpass_dev-calib_000002_q000",
+      "query_set_version": "v0",
+      "raw_text": "car",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/102__q001.png",
+      "image_id": "dpass_dev-calib_000002",
+      "language": "en",
+      "ontology": {
+        "map13": 11,
+        "relation": "coarse_compatible"
+      },
+      "query_id": "dpass_dev-calib_000002_q001",
+      "query_set_version": "v0",
+      "raw_text": "person",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/102__q002.png",
+      "image_id": "dpass_dev-calib_000002",
+      "language": "en",
+      "ontology": {
+        "map13": 0,
+        "relation": "exact"
+      },
+      "query_id": "dpass_dev-calib_000002_q002",
+      "query_set_version": "v0",
+      "raw_text": "road",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/102__q003.png",
+      "image_id": "dpass_dev-calib_000002",
+      "language": "en",
+      "ontology": {
+        "map13": 8,
+        "relation": "exact"
+      },
+      "query_id": "dpass_dev-calib_000002_q003",
+      "query_set_version": "v0",
+      "raw_text": "vegetation",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/102__q004.png",
+      "image_id": "dpass_dev-calib_000002",
+      "language": "en",
+      "ontology": {
+        "map13": 10,
+        "relation": "exact"
+      },
+      "query_id": "dpass_dev-calib_000002_q004",
+      "query_set_version": "v0",
+      "raw_text": "sky",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/102__q005.png",
+      "image_id": "dpass_dev-calib_000002",
+      "language": "en",
+      "query_id": "dpass_dev-calib_000002_q005",
+      "query_set_version": "v0",
+      "raw_text": "the leftmost car",
+      "task_type": "instance_referring"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/102__q006.png",
+      "image_id": "dpass_dev-calib_000002",
+      "language": "en",
+      "query_id": "dpass_dev-calib_000002_q006",
+      "query_set_version": "v0",
+      "raw_text": "the nearest person",
+      "task_type": "instance_referring"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/102__q007.png",
+      "image_id": "dpass_dev-calib_000002",
+      "language": "en",
+      "missing_basis": "taxonomy-missing in densepass13 (id 255): confirm absent per image",
+      "negative": true,
+      "query_id": "dpass_dev-calib_000002_q007",
+      "query_set_version": "v0",
+      "raw_text": "train",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/103__q000.png",
+      "image_id": "dpass_dev-calib_000003",
+      "language": "en",
+      "ontology": {
+        "map13": 12,
+        "relation": "coarse_compatible"
+      },
+      "query_id": "dpass_dev-calib_000003_q000",
+      "query_set_version": "v0",
+      "raw_text": "car",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/103__q001.png",
+      "image_id": "dpass_dev-calib_000003",
+      "language": "en",
+      "ontology": {
+        "map13": 11,
+        "relation": "coarse_compatible"
+      },
+      "query_id": "dpass_dev-calib_000003_q001",
+      "query_set_version": "v0",
+      "raw_text": "person",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/103__q002.png",
+      "image_id": "dpass_dev-calib_000003",
+      "language": "en",
+      "ontology": {
+        "map13": 0,
+        "relation": "exact"
+      },
+      "query_id": "dpass_dev-calib_000003_q002",
+      "query_set_version": "v0",
+      "raw_text": "road",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/103__q003.png",
+      "image_id": "dpass_dev-calib_000003",
+      "language": "en",
+      "ontology": {
+        "map13": 8,
+        "relation": "exact"
+      },
+      "query_id": "dpass_dev-calib_000003_q003",
+      "query_set_version": "v0",
+      "raw_text": "vegetation",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/103__q004.png",
+      "image_id": "dpass_dev-calib_000003",
+      "language": "en",
+      "ontology": {
+        "map13": 10,
+        "relation": "exact"
+      },
+      "query_id": "dpass_dev-calib_000003_q004",
+      "query_set_version": "v0",
+      "raw_text": "sky",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/103__q005.png",
+      "image_id": "dpass_dev-calib_000003",
+      "language": "en",
+      "query_id": "dpass_dev-calib_000003_q005",
+      "query_set_version": "v0",
+      "raw_text": "the leftmost car",
+      "task_type": "instance_referring"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/103__q006.png",
+      "image_id": "dpass_dev-calib_000003",
+      "language": "en",
+      "query_id": "dpass_dev-calib_000003_q006",
+      "query_set_version": "v0",
+      "raw_text": "the nearest person",
+      "task_type": "instance_referring"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/103__q007.png",
+      "image_id": "dpass_dev-calib_000003",
+      "language": "en",
+      "missing_basis": "taxonomy-missing in densepass13 (id 255): confirm absent per image",
+      "negative": true,
+      "query_id": "dpass_dev-calib_000003_q007",
+      "query_set_version": "v0",
+      "raw_text": "train",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/104__q000.png",
+      "image_id": "dpass_dev-calib_000004",
+      "language": "en",
+      "ontology": {
+        "map13": 12,
+        "relation": "coarse_compatible"
+      },
+      "query_id": "dpass_dev-calib_000004_q000",
+      "query_set_version": "v0",
+      "raw_text": "car",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/104__q001.png",
+      "image_id": "dpass_dev-calib_000004",
+      "language": "en",
+      "ontology": {
+        "map13": 11,
+        "relation": "coarse_compatible"
+      },
+      "query_id": "dpass_dev-calib_000004_q001",
+      "query_set_version": "v0",
+      "raw_text": "person",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/104__q002.png",
+      "image_id": "dpass_dev-calib_000004",
+      "language": "en",
+      "ontology": {
+        "map13": 0,
+        "relation": "exact"
+      },
+      "query_id": "dpass_dev-calib_000004_q002",
+      "query_set_version": "v0",
+      "raw_text": "road",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/104__q003.png",
+      "image_id": "dpass_dev-calib_000004",
+      "language": "en",
+      "ontology": {
+        "map13": 8,
+        "relation": "exact"
+      },
+      "query_id": "dpass_dev-calib_000004_q003",
+      "query_set_version": "v0",
+      "raw_text": "vegetation",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/104__q004.png",
+      "image_id": "dpass_dev-calib_000004",
+      "language": "en",
+      "ontology": {
+        "map13": 10,
+        "relation": "exact"
+      },
+      "query_id": "dpass_dev-calib_000004_q004",
+      "query_set_version": "v0",
+      "raw_text": "sky",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/104__q005.png",
+      "image_id": "dpass_dev-calib_000004",
+      "language": "en",
+      "query_id": "dpass_dev-calib_000004_q005",
+      "query_set_version": "v0",
+      "raw_text": "the leftmost car",
+      "task_type": "instance_referring"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/104__q006.png",
+      "image_id": "dpass_dev-calib_000004",
+      "language": "en",
+      "query_id": "dpass_dev-calib_000004_q006",
+      "query_set_version": "v0",
+      "raw_text": "the nearest person",
+      "task_type": "instance_referring"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/104__q007.png",
+      "image_id": "dpass_dev-calib_000004",
+      "language": "en",
+      "missing_basis": "taxonomy-missing in densepass13 (id 255): confirm absent per image",
+      "negative": true,
+      "query_id": "dpass_dev-calib_000004_q007",
+      "query_set_version": "v0",
+      "raw_text": "train",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/105__q000.png",
+      "image_id": "dpass_dev-calib_000005",
+      "language": "en",
+      "ontology": {
+        "map13": 12,
+        "relation": "coarse_compatible"
+      },
+      "query_id": "dpass_dev-calib_000005_q000",
+      "query_set_version": "v0",
+      "raw_text": "car",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/105__q001.png",
+      "image_id": "dpass_dev-calib_000005",
+      "language": "en",
+      "ontology": {
+        "map13": 11,
+        "relation": "coarse_compatible"
+      },
+      "query_id": "dpass_dev-calib_000005_q001",
+      "query_set_version": "v0",
+      "raw_text": "person",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/105__q002.png",
+      "image_id": "dpass_dev-calib_000005",
+      "language": "en",
+      "ontology": {
+        "map13": 0,
+        "relation": "exact"
+      },
+      "query_id": "dpass_dev-calib_000005_q002",
+      "query_set_version": "v0",
+      "raw_text": "road",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/105__q003.png",
+      "image_id": "dpass_dev-calib_000005",
+      "language": "en",
+      "ontology": {
+        "map13": 8,
+        "relation": "exact"
+      },
+      "query_id": "dpass_dev-calib_000005_q003",
+      "query_set_version": "v0",
+      "raw_text": "vegetation",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/105__q004.png",
+      "image_id": "dpass_dev-calib_000005",
+      "language": "en",
+      "ontology": {
+        "map13": 10,
+        "relation": "exact"
+      },
+      "query_id": "dpass_dev-calib_000005_q004",
+      "query_set_version": "v0",
+      "raw_text": "sky",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/105__q005.png",
+      "image_id": "dpass_dev-calib_000005",
+      "language": "en",
+      "query_id": "dpass_dev-calib_000005_q005",
+      "query_set_version": "v0",
+      "raw_text": "the leftmost car",
+      "task_type": "instance_referring"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/105__q006.png",
+      "image_id": "dpass_dev-calib_000005",
+      "language": "en",
+      "query_id": "dpass_dev-calib_000005_q006",
+      "query_set_version": "v0",
+      "raw_text": "the nearest person",
+      "task_type": "instance_referring"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/105__q007.png",
+      "image_id": "dpass_dev-calib_000005",
+      "language": "en",
+      "missing_basis": "taxonomy-missing in densepass13 (id 255): confirm absent per image",
+      "negative": true,
+      "query_id": "dpass_dev-calib_000005_q007",
+      "query_set_version": "v0",
+      "raw_text": "train",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/106__q000.png",
+      "image_id": "dpass_dev-calib_000006",
+      "language": "en",
+      "ontology": {
+        "map13": 12,
+        "relation": "coarse_compatible"
+      },
+      "query_id": "dpass_dev-calib_000006_q000",
+      "query_set_version": "v0",
+      "raw_text": "car",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/106__q001.png",
+      "image_id": "dpass_dev-calib_000006",
+      "language": "en",
+      "ontology": {
+        "map13": 11,
+        "relation": "coarse_compatible"
+      },
+      "query_id": "dpass_dev-calib_000006_q001",
+      "query_set_version": "v0",
+      "raw_text": "person",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/106__q002.png",
+      "image_id": "dpass_dev-calib_000006",
+      "language": "en",
+      "ontology": {
+        "map13": 0,
+        "relation": "exact"
+      },
+      "query_id": "dpass_dev-calib_000006_q002",
+      "query_set_version": "v0",
+      "raw_text": "road",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/106__q003.png",
+      "image_id": "dpass_dev-calib_000006",
+      "language": "en",
+      "ontology": {
+        "map13": 8,
+        "relation": "exact"
+      },
+      "query_id": "dpass_dev-calib_000006_q003",
+      "query_set_version": "v0",
+      "raw_text": "vegetation",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/106__q004.png",
+      "image_id": "dpass_dev-calib_000006",
+      "language": "en",
+      "ontology": {
+        "map13": 10,
+        "relation": "exact"
+      },
+      "query_id": "dpass_dev-calib_000006_q004",
+      "query_set_version": "v0",
+      "raw_text": "sky",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/106__q005.png",
+      "image_id": "dpass_dev-calib_000006",
+      "language": "en",
+      "query_id": "dpass_dev-calib_000006_q005",
+      "query_set_version": "v0",
+      "raw_text": "the leftmost car",
+      "task_type": "instance_referring"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/106__q006.png",
+      "image_id": "dpass_dev-calib_000006",
+      "language": "en",
+      "query_id": "dpass_dev-calib_000006_q006",
+      "query_set_version": "v0",
+      "raw_text": "the nearest person",
+      "task_type": "instance_referring"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/106__q007.png",
+      "image_id": "dpass_dev-calib_000006",
+      "language": "en",
+      "missing_basis": "taxonomy-missing in densepass13 (id 255): confirm absent per image",
+      "negative": true,
+      "query_id": "dpass_dev-calib_000006_q007",
+      "query_set_version": "v0",
+      "raw_text": "train",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/107__q000.png",
+      "image_id": "dpass_dev-calib_000007",
+      "language": "en",
+      "ontology": {
+        "map13": 12,
+        "relation": "coarse_compatible"
+      },
+      "query_id": "dpass_dev-calib_000007_q000",
+      "query_set_version": "v0",
+      "raw_text": "car",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/107__q001.png",
+      "image_id": "dpass_dev-calib_000007",
+      "language": "en",
+      "ontology": {
+        "map13": 11,
+        "relation": "coarse_compatible"
+      },
+      "query_id": "dpass_dev-calib_000007_q001",
+      "query_set_version": "v0",
+      "raw_text": "person",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/107__q002.png",
+      "image_id": "dpass_dev-calib_000007",
+      "language": "en",
+      "ontology": {
+        "map13": 0,
+        "relation": "exact"
+      },
+      "query_id": "dpass_dev-calib_000007_q002",
+      "query_set_version": "v0",
+      "raw_text": "road",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/107__q003.png",
+      "image_id": "dpass_dev-calib_000007",
+      "language": "en",
+      "ontology": {
+        "map13": 8,
+        "relation": "exact"
+      },
+      "query_id": "dpass_dev-calib_000007_q003",
+      "query_set_version": "v0",
+      "raw_text": "vegetation",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/107__q004.png",
+      "image_id": "dpass_dev-calib_000007",
+      "language": "en",
+      "ontology": {
+        "map13": 10,
+        "relation": "exact"
+      },
+      "query_id": "dpass_dev-calib_000007_q004",
+      "query_set_version": "v0",
+      "raw_text": "sky",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/107__q005.png",
+      "image_id": "dpass_dev-calib_000007",
+      "language": "en",
+      "query_id": "dpass_dev-calib_000007_q005",
+      "query_set_version": "v0",
+      "raw_text": "the leftmost car",
+      "task_type": "instance_referring"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/107__q006.png",
+      "image_id": "dpass_dev-calib_000007",
+      "language": "en",
+      "query_id": "dpass_dev-calib_000007_q006",
+      "query_set_version": "v0",
+      "raw_text": "the nearest person",
+      "task_type": "instance_referring"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/107__q007.png",
+      "image_id": "dpass_dev-calib_000007",
+      "language": "en",
+      "missing_basis": "taxonomy-missing in densepass13 (id 255): confirm absent per image",
+      "negative": true,
+      "query_id": "dpass_dev-calib_000007_q007",
+      "query_set_version": "v0",
+      "raw_text": "train",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/108__q000.png",
+      "image_id": "dpass_dev-calib_000008",
+      "language": "en",
+      "ontology": {
+        "map13": 12,
+        "relation": "coarse_compatible"
+      },
+      "query_id": "dpass_dev-calib_000008_q000",
+      "query_set_version": "v0",
+      "raw_text": "car",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/108__q001.png",
+      "image_id": "dpass_dev-calib_000008",
+      "language": "en",
+      "ontology": {
+        "map13": 11,
+        "relation": "coarse_compatible"
+      },
+      "query_id": "dpass_dev-calib_000008_q001",
+      "query_set_version": "v0",
+      "raw_text": "person",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/108__q002.png",
+      "image_id": "dpass_dev-calib_000008",
+      "language": "en",
+      "ontology": {
+        "map13": 0,
+        "relation": "exact"
+      },
+      "query_id": "dpass_dev-calib_000008_q002",
+      "query_set_version": "v0",
+      "raw_text": "road",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/108__q003.png",
+      "image_id": "dpass_dev-calib_000008",
+      "language": "en",
+      "ontology": {
+        "map13": 8,
+        "relation": "exact"
+      },
+      "query_id": "dpass_dev-calib_000008_q003",
+      "query_set_version": "v0",
+      "raw_text": "vegetation",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/108__q004.png",
+      "image_id": "dpass_dev-calib_000008",
+      "language": "en",
+      "ontology": {
+        "map13": 10,
+        "relation": "exact"
+      },
+      "query_id": "dpass_dev-calib_000008_q004",
+      "query_set_version": "v0",
+      "raw_text": "sky",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/108__q005.png",
+      "image_id": "dpass_dev-calib_000008",
+      "language": "en",
+      "query_id": "dpass_dev-calib_000008_q005",
+      "query_set_version": "v0",
+      "raw_text": "the leftmost car",
+      "task_type": "instance_referring"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/108__q006.png",
+      "image_id": "dpass_dev-calib_000008",
+      "language": "en",
+      "query_id": "dpass_dev-calib_000008_q006",
+      "query_set_version": "v0",
+      "raw_text": "the nearest person",
+      "task_type": "instance_referring"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/108__q007.png",
+      "image_id": "dpass_dev-calib_000008",
+      "language": "en",
+      "missing_basis": "taxonomy-missing in densepass13 (id 255): confirm absent per image",
+      "negative": true,
+      "query_id": "dpass_dev-calib_000008_q007",
+      "query_set_version": "v0",
+      "raw_text": "train",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/109__q000.png",
+      "image_id": "dpass_dev-calib_000009",
+      "language": "en",
+      "ontology": {
+        "map13": 12,
+        "relation": "coarse_compatible"
+      },
+      "query_id": "dpass_dev-calib_000009_q000",
+      "query_set_version": "v0",
+      "raw_text": "car",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/109__q001.png",
+      "image_id": "dpass_dev-calib_000009",
+      "language": "en",
+      "ontology": {
+        "map13": 11,
+        "relation": "coarse_compatible"
+      },
+      "query_id": "dpass_dev-calib_000009_q001",
+      "query_set_version": "v0",
+      "raw_text": "person",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/109__q002.png",
+      "image_id": "dpass_dev-calib_000009",
+      "language": "en",
+      "ontology": {
+        "map13": 0,
+        "relation": "exact"
+      },
+      "query_id": "dpass_dev-calib_000009_q002",
+      "query_set_version": "v0",
+      "raw_text": "road",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/109__q003.png",
+      "image_id": "dpass_dev-calib_000009",
+      "language": "en",
+      "ontology": {
+        "map13": 8,
+        "relation": "exact"
+      },
+      "query_id": "dpass_dev-calib_000009_q003",
+      "query_set_version": "v0",
+      "raw_text": "vegetation",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/109__q004.png",
+      "image_id": "dpass_dev-calib_000009",
+      "language": "en",
+      "ontology": {
+        "map13": 10,
+        "relation": "exact"
+      },
+      "query_id": "dpass_dev-calib_000009_q004",
+      "query_set_version": "v0",
+      "raw_text": "sky",
+      "task_type": "category_union"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/109__q005.png",
+      "image_id": "dpass_dev-calib_000009",
+      "language": "en",
+      "query_id": "dpass_dev-calib_000009_q005",
+      "query_set_version": "v0",
+      "raw_text": "the leftmost car",
+      "task_type": "instance_referring"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/109__q006.png",
+      "image_id": "dpass_dev-calib_000009",
+      "language": "en",
+      "query_id": "dpass_dev-calib_000009_q006",
+      "query_set_version": "v0",
+      "raw_text": "the nearest person",
+      "task_type": "instance_referring"
+    },
+    {
+      "gt_mask": "${PIERS_DATA_ROOT}/DensePASS/gtFine/val/109__q007.png",
+      "image_id": "dpass_dev-calib_000009",
+      "language": "en",
+      "missing_basis": "taxonomy-missing in densepass13 (id 255): confirm absent per image",
+      "negative": true,
+      "query_id": "dpass_dev-calib_000009_q007",
+      "query_set_version": "v0",
+      "raw_text": "train",
+      "task_type": "category_union"
+    }
+  ],
+  "query_set_version": "v0",
+  "split": "dev-calib"
+}

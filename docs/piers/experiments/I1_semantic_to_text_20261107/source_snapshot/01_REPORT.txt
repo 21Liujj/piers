@@ -1,0 +1,97 @@
+创新点一：实现、原始 OmniSAM 基线对齐与短程实验报告
+生成时间：2026-11-07T15:10:37.294658+08:00
+远端运行目录：/root/autodl-tmp/piers-main/runs/I1-densepass-20261107_121457
+
+结论与适用范围
+实现与真实推理/续训链路已跑通。冻结推理对照尚无稳健证据证明语义分割超过原始 OmniSAM；续训相对初始Original的变化与R1相对等预算R0的额外贡献必须分别看。文本掩码有相对独立文本分支的改善，不能改写成原论文语义 mIoU 增益。
+所有 DensePASS100 已被历史选模和本次方法选择使用，属于开发集。以下 bootstrap 是开发图像抽样不确定性；不能视为独立测试或只有两个种子时的训练种子总体置信区间。
+目标训练全集已恢复2000张；本次为40城市每城4张、共160张的平衡短程续训，非全部2000张完整训练。
+
+1. 原论文与复现基线
+论文：https://arxiv.org/html/2503.07098v2#S4.T3；官方代码：https://github.com/Ding-Zhong/OmniSAM
+表3：OmniSAM-S w/MA=60.23；OmniSAM-B w/MA=62.46。现有ckpt为Small，不能混用Base的62.46。论文数字单独列为文献参考，不与复现预测混作配对实验。
+官方主model、Memory、decoder、LoRA已下载，使用原始ckpt严格加载，在真实9-patch序列与本地原始路径logits逐元素完全一致。完整100图官方源码评测另存official_baseline_evaluation。仅审计环境安装mmcv-lite到run/work隔离目录，没有修改主训练环境或I2代码。
+主表Original以下载的官方model/Memory/decoder/LoRA代码、既有Small ckpt严格加载、num_maskmem9、未压缩最大32768 tokens的完整100图实测为准，使用同一SAM2 runtime。其余分支为用户Effective-Omnisam代码；未压缩路径已与官方真实9patch逐元素对齐。无.git，保存源码快照与SHA，不能宣称复现论文完整训练过程或验证了权重公开下载来源。官方DensePASS19→13与原始GT评分规则已核对。
+此前60.17966是仅创新点二压缩基线，不是原始OmniSAM。旧60.4594复现分数使用fork里的GT缩放回采样；相同预测用未改动原始GT评分为60.29496。旧结果和创新点二封存代码均保留。
+所有新主对比统一未改动2048×400原始GT，映射13类并保留255。GT经旧PIL+cv2上采样/下采样改变579000像素，禁止跨口径直接相减。详见evaluation_protocol_audit.json。
+
+2. 主表：全部锚定原始 OmniSAM-S，同一GT口径，单位%
+Original_OmniSAM_S: mIoU=60.294963, 相对Original=+0.000000个百分点
+Original_plus_I1_only: mIoU=60.361083, 相对Original=+0.066120个百分点
+Original_plus_fixed_I2_only: mIoU=60.179658, 相对Original=-0.115306个百分点
+Original_plus_I1_and_fixed_I2: mIoU=60.310072, 相对Original=+0.015109个百分点
+仅I1相对Original的图像bootstrap95%CI：[-0.041819156602831774, 0.179122170798813]
+I1+I2相对Original的图像bootstrap95%CI：[-0.48678625669248204, 0.5025682587620244]
+两者区间均跨零；不能使用“显著超过原始OmniSAM”或“语义精度提升0.13”作为主结论。+0.13仅为I2压缩后基线上的增量。
+
+3. 文本任务：真实 Grounding DINO + SAM2，600类别查询
+T0 ERP直接文本: 正样本MaskIoU=54.3715%, Dice=62.4520%, recall=58.3050%, 负查询FP=20/122 (阈值16有效像素)
+T1 独立固定FoV文本: 正样本MaskIoU=66.9112%, Dice=75.4666%, recall=76.4941%, 负查询FP=58/122 (阈值16有效像素)
+仅I1的门控文本: 正样本MaskIoU=67.9674%, Dice=76.2448%, recall=78.6571%, 负查询FP=58/122 (阈值16有效像素)
+I1+I2的门控文本: 正样本MaskIoU=67.9089%, Dice=76.2071%, recall=78.5072%, 负查询FP=58/122 (阈值16有效像素)
+I1+I2无门控文本消融: 正样本MaskIoU=69.2178%, Dice=77.3686%, recall=76.9787%, 负查询FP=57/122 (阈值16有效像素)
+478正查询、122经原始完整GT确认的负查询；car/person严格用原19类细分类GT，不用合并13类冒充；200条实例/指代表达缺少可信实例GT，仅做定性。
+仅I1文本相对T1的IoU增量及95%CI：{'positive_Mask_IoU_delta_pp': 1.0562395797416693, 'image_bootstrap_95CI_pp': [0.7860044865687837, 1.3215600053995686], 'resampling_unit': 'image, preserving all positive queries in each sampled image', 'bootstrap_draws': 5000}
+原始OmniSAM没有任意文本输入，原论文未报告MaskIoU600。新增文本任务以T1为模块消融，同时另报共享road/vegetation/sky共300查询的Original闭集输出类别投影比较，避免把新任务分数伪装成超过论文。
+共享3类别辅助比较 Original_closed_category_projection: MaskIoU=81.4772%
+共享3类别辅助比较 T1_independent_text: MaskIoU=73.4050%
+共享3类别辅助比较 I1_only_text: MaskIoU=75.1165%
+共享3类别辅助比较 I1_I2_text: MaskIoU=75.0216%
+这一辅助对比仅适用于共享类别。不能据此声称具备任意文本或实例定位能力。原始闭集模型若更优同样保留。
+无门控文本IoU高于主门控方法；不能声称门控全指标最优。主门控保留冲突/未知类/细粒度查询的独立文本结果。负查询误报仍高，未得到解决；purple flying elephant等复合表达存在真实误检，见定性图。
+
+4. 续训结果，和推理融合分开报告
+均独立从omnisam_s.pth开始，不从R0接着训练R1，不从随机初始化开始。只训练已有语义decoder stage2；图像encoder、LoRA、DINO与文本SAM2冻结。AdamW lr2e-6、wd1e-4、AMP，batch1全景，每全景9patch，共160迭代/1440次实际optimizer.step。
+源域监督CE + 目标冻结伪标签CE + 原有prototype正则；160源图从2975源集确定性抽样，160目标图固定并按种子洗牌；R0/R1每种子源/目标顺序哈希相同。训练/生成伪标签不读目标GT；训练有强制读GT拦截。
+原始dense模型配对对照：
+R0_seed1234: 60.350555% (相对未续训Original +0.055591pp)
+R1_seed1234: 60.334841% (相对未续训Original +0.039878pp)
+R0_seed4321: 60.277838% (相对未续训Original -0.017125pp)
+R1_seed4321: 60.266074% (相对未续训Original -0.028889pp)
+dense R1相对Original的图像bootstrap：{'delta_mIoU_pp': 0.005494394620107812, 'image_bootstrap_95CI_pp': [-0.16758078589660333, 0.19061034969125631], 'bootstrap_draws': 5000, 'resampling_unit': 'image (all queries/seed predictions kept together)', 'training_seed_population_uncertainty_estimated': False}
+dense R0/R1均值：{'R0': 60.31419643989516, 'R1': 60.300457809930016}
+dense R1-R0：{'delta_mIoU_pp': -0.013738629965146743, 'image_bootstrap_95CI_pp': [-0.02917057901769029, 0.002980591190617853], 'bootstrap_draws': 5000, 'resampling_unit': 'image (all queries/seed predictions kept together)', 'training_seed_population_uncertainty_estimated': False}
+dense R1均值相对Original：0.005494394620107812pp
+固定I2下的先前模块对照：
+R0_seed1234: 60.028863%
+R1_seed1234: 59.982710%
+R0_seed4321: 60.169247%
+R1_seed4321: 60.139000%
+均值：{'R0': 60.099054551367104, 'R1': 60.060855260578016}；R1-R0：{'delta_mIoU_pp': -0.03819929078909112, 'image_bootstrap_95CI_pp': [-0.06558652018865212, -0.008092470286257307], 'bootstrap_draws': 5000, 'resampling_unit': 'image (all queries/seed predictions kept together)', 'training_seed_population_uncertainty_estimated': False}
+其R1均值相对Original约-0.234pp；主配对相对R0约-0.0382pp，两个种子均为负。没有训练收益。
+去掉0.85置信掩码的单种子补充诊断：R0=60.05103、R1=60.02336，差-0.02767pp，区间跨零。它不能替代主两种子对照。20迭代/180更新的早期Rsingle/Rnaive筛查亦保留在screens，预算不同不能作为正式160迭代主结论。
+主R0先以0.85置信度保留标签；R1的0.8强冲突保护使已保留的高置信类别不被覆盖，因此主训练操作是增补255忽略区监督，不应夸称修复了高置信错标签。实际改动类型逐像素统计在PSEUDO_OPERATION_AUDIT.json；全hard标签修正另有单种子诊断。
+源域labelIds→trainIds转换只写run内source_cityscapes；原始标签不变。伪标签存储为目标13类ID0..12/255，已针对目标loader实际identity映射核对。
+I2联合方法的开发集新增监督正确率75.19%，原高置信监督92.60%，同一新增区域原teacher hard准确率60.45%。这说明修正并非全错，但新增监督噪声较高；这是开发集审计，不是无标签训练集准确率，也不能直接证明训练下降的因果。
+
+5. 实现与防自我强化机制
+真实独立raw_text传入DINO与SAM2；固定4个1024×400 FoV、stride512、ERP横向循环映射。原有语义模型4096×1024、9patch×正反两遍；RGB/BICUBIC/ImageNet归一化与基线一致。
+三态agree/conflict/uncertain；平均类别支持≥0.5、SAM质量≥0.8才允许协同；≥0.8强像素冲突阻止写入。语义→文本仅对exact taxonomy候选、原DINO boxes和有效FoV内做有界概率融合：alpha0.5，文本内/外先验0.7/0.3。
+coarse car/person、tire/leftmost/服饰/未知类等保持独立文本掩码。没有把tire映射为car，没有仅因语义漏检删除有效文本。语义回写使用独立raw SAM mask，经同一冻结teacher gate接受后腐蚀2像素，再进行一次回写；不把语义修正过的文本掩码当成独立证据反复回灌。
+创新点二完全固定：class_aware uncertainty1024、rare[3,4,6,7] reserve0.15、num_maskmem9；无重开发或调参。Original与I1-only对照禁用压缩是基线消融，不是重调创新点二。创新点三未开发。
+早期score-only gate不改变掩码；consensus trimming降低召回；core扩展仅约0.01pp不采用；均保留原始结果，不择优隐藏。
+
+6. 速度与资源：独立实测，RTX6000D
+常驻模型暖态全链路单图单road查询：4.717s；已有语义缓存的新查询：0.976s；T1纯文本FoV：0.750s。
+双模型启动6.602s；首图含启动18.895s。1张warmup+5张测量，属于小样本性能预试。
+三查询文本batch：{'wall_s': 1.5624857130460441, 'queries_per_sec': 1.9200175559695467, 'DINO_calls': 12, 'SAM_image_encodes': 4, 'note': 'Batch throughput; not unary query latency.'}；含语义的三查询batch：{'wall_s': 5.575937583576888, 'queries_per_sec': 0.5380261086200216, 'DINO_calls': 12, 'SAM_image_encodes': 4}
+语义worker peak allocated/reserved=6708.4/6726.0MiB；文本worker=2099.4/2406.0MiB。各进程独立峰值，不等同同一时刻总峰值。
+性能器使用常驻worker，完整暖态包含读图、真实语义+文本模型、IPC解码与协同，不含PNG文件落盘；缓存查询是在常驻性能器中测量。公开i1_run.py为逐次启动进程的批处理入口，新文本需新输出目录，其单次冷启动与共享计算smoke耗时不可冒充这项暖态延迟。
+全设备占用含其他暂停任务常驻上下文，不作为本方法显存；正式测量时无并行GPU计算。不能把新文本任务和原始闭集OmniSAM用单个延迟数字混成同功能加速。I2自身独立profile保持原封存结果。
+精确算费GPU小时无法从现有日志恢复；runtime_ledger.json报告已记录成功进程wall-time之和及其缺项，明确不是kernel-time或账单小时。
+
+7. 数据、模型、验证与交付索引
+DensePASS train2000原图、100原始完整GT全部哈希核对；目标train官方无GT，不需要将城市jpg与val的__q掩码配对。800二值query masks不冒充100张完整语义GT。
+OmniSAM ckpt SHA256 ec0c607a6247651cb8c5eb04e3c15a7ae4b067655c4ca6cb5b6ff9d80adaba85。数据来源/归档校验在data/DensePASS/recovery_20261107。
+checkpoint_tensor_audit.json逐张量核对初始权重与训练后checkpoint，证明除decoder外encoder/LoRA/Memory未更新。
+77个项目测试通过；7项真实修改/冲突/未知/ERP边界检查；真实2图×2查询缓存与原文本流程逐像素一致；公开入口2图16查询与独立评测逐像素一致；3图12自由文本回退逐像素一致。
+公开入口支持 --memory-mode dense（仅创新点一）和fixed_i2（联合，默认）。封存输入为2048x400，其他尺寸显式拒绝。接受raw_text不等于保证任意复合指代或多语言理解。
+公开入口：scripts/piers/i1_run.py；核心：src/piers_ljj/collaboration/reliable_cooperation.py；训练与完整实验脚本位于本run。
+reports/MAIN_PAPER_ANCHORED.csv：主表；RESULTS.json：全结果；text_per_category.csv：细分类文本；dense_training_metrics.csv：原始dense训练；training_metrics.csv：固定I2模块训练；acceptance.json：原验收；final_package_acceptance.json：最终附加验收。
+reports/figures：成功/失败/真实负例/小目标/跨FoV/自由文本/训练伪标签/训练最佳最差/loss/原始baseline总览；cases.json记录选择规则。图像crop只展示局部，指标仍按完整查询计算。
+reports/REPRODUCE.sh：按stage执行，不会默认重跑训练；environment_pip_freeze.txt、SOURCE_MANIFEST.json、source_snapshot_final.tar.gz保存环境和版本证据。无.git，不捏造commit。
+最终模型位置：dense_controls/trained/{R0,R1}_seed{1234,4321}/training/final.pth；固定I2模型：final_runs同结构。没有因R1负收益而把某个挑选ckpt伪称最终最优。
+
+8. 是否达到今天的研究目标
+已完成：数据硬阻塞解除、真实任意文本入口、双向一次协同与回退、伪标签实际非零修正、同预算真实续训、原始OmniSAM主基线对齐、原GT评分、消融与负结果、bootstrap、资源计时、案例和复现脚本。
+尚未建立：创新点一对原始OmniSAM的稳定语义精度贡献、修正伪标签相对等预算R0的额外训练收益、较低负查询误报、可靠复合指代能力、全2000训练预算/独立测试验证。续训可能相对初始Original略升，若未超过R0则不能归因于创新点一。不能把工程完成写成论文精度目标已达成，也不能靠换比较基线或将推理融合当成训练提升。

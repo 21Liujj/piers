@@ -1,0 +1,44 @@
+{
+  "status": "u1_revision_eval_with_gt",
+  "n_images": 100,
+  "pseudo_label_quality": {
+    "teacher": {
+      "precision": 0.32848294677734374,
+      "recall": 1.0,
+      "iou": 0.32848294677734374,
+      "tp": 26909323,
+      "fp": 55010677,
+      "fn": 0
+    },
+    "S1_quality_old": {
+      "precision": 0.32846750758943494,
+      "recall": 0.9719228893215575,
+      "iou": 0.325380029296875,
+      "tp": 26655132,
+      "fp": 54494849,
+      "fn": 770019
+    },
+    "S2_pixel_gate": {
+      "precision": 0.32859728379908393,
+      "recall": 0.9986010983671464,
+      "iou": 0.32844609375,
+      "tp": 26906304,
+      "fp": 54976004,
+      "fn": 37692
+    }
+  },
+  "change_correctness": {
+    "S1": {
+      "correct_changes": 121381,
+      "wrong_changes": 1028525,
+      "net": -907144,
+      "precision_of_changes": 0.10555732381603365
+    },
+    "S2": {
+      "correct_changes": 15937,
+      "wrong_changes": 46551,
+      "net": -30614,
+      "precision_of_changes": 0.25504096786583025
+    }
+  }
+}

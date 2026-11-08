@@ -36,6 +36,8 @@ VARIANT_TO_SMR = {
     "pos_dedup": {"sparse_mode": "feature_norm", "prefilter": "overlap"},
     "pos_dedup_priority": {"sparse_mode": "boundary_guarded",
                            "fallback": "class_aware"},
+    "joint_guarded": {"sparse_mode": "joint_guarded",
+                      "fallback": "feature_norm"},
     "neighborhood": {"sparse_mode": "cams", "fallback": "hybrid"},
 }
 
@@ -96,7 +98,7 @@ def plan_selection(items: list, variant: str, budget: int,
                            "plan_ms": (time.perf_counter() - t0) * 1000}}
     pool = list(items)
     dropped = []
-    if variant == "pos_dedup" or variant == "pos_dedup_priority":
+    if variant in ("pos_dedup", "pos_dedup_priority", "joint_guarded"):
         # M1: same-bucket/overlap dedup, stable+compatible only, keep best score
         seen: dict = {}
         kept_pool = []
@@ -112,7 +114,17 @@ def plan_selection(items: list, variant: str, budget: int,
             seen[b] = it
             kept_pool.append(it)
         pool = kept_pool
-    if variant == "pos_dedup_priority":
+    if variant == "joint_guarded":
+        # I2-complete: rare first, then boundary (excluding rare-picked), then fill.
+        rare = [it for it in pool if it.get("rare")]
+        rest1 = [it for it in pool if it not in rare]
+        bd = [it for it in rest1 if it.get("boundary")]
+        rest2 = [it for it in rest1 if it not in bd]
+        rare = sorted(rare, key=lambda x: -x.get("score", 0.0))
+        bd = sorted(bd, key=lambda x: -x.get("score", 0.0))
+        rest2 = sorted(rest2, key=lambda x: -x.get("score", 0.0))
+        pool = rare + bd + rest2
+    elif variant == "pos_dedup_priority":
         # M2: reserve quota for boundary/rare, fill rest by score
         pri = [it for it in pool if it.get("boundary") or it.get("rare")]
         rest = [it for it in pool if it not in pri]
@@ -124,8 +136,8 @@ def plan_selection(items: list, variant: str, budget: int,
         pool = sorted(pool,
                       key=lambda it: footprint_overlap(it["footprint"], cur_footprint),
                       reverse=True)
-    elif variant != "pos_dedup_priority":
-        # pos_dedup_priority already ordered as pri+rest; do not re-sort.
+    elif variant not in ("pos_dedup_priority", "joint_guarded"):
+        # pos_dedup_priority / joint_guarded already ordered as pri+rest; do not re-sort.
         pool = sorted(pool, key=lambda x: -x.get("score", 0.0))
     kept = [it["id"] for it in pool[:budget]]
     dropped += [it["id"] for it in pool[budget:]]

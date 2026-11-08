@@ -46,6 +46,7 @@ def run_erp_text(erp: Image.Image | np.ndarray, query_id: str, raw_text: str,
                          stride_x=fov_cfg.get("stride_x", fov_cfg["win_w"]),
                          y_start=fov_cfg.get("y_start", 0))
     preds, cands_for_assoc = [], []
+    masks_global = []
     n_enc, n_dec = 0, 0
     for f in fovs:
         crop, cov = crop_erp_wrap(erp_np, f["x_start"], f["y_start"], f["win_w"], f["win_h"])
@@ -78,9 +79,13 @@ def run_erp_text(erp: Image.Image | np.ndarray, query_id: str, raw_text: str,
                           "synthetic": getattr(c.mask, "synthetic", False)})
             cands_for_assoc.append({"id": pid, "query_id": query_id, "mask": gm,
                                     "valid": valid, "phrase": c.phrase})
+            # ERP-global mask per candidate (for text IoU evaluation).
+            # Kept out of the JSON payload (huge) -> returned separately.
+            masks_global.append(gm)
     groups = associate(cands_for_assoc)
     dt_ms = (time.perf_counter() - t0) * 1000
     return {"query_id": query_id, "mode": mode, "fovs": len(fovs),
             "predictions": preds, "groups": groups,
+            "masks": masks_global,
             "calls": {"fov_windows": len(fovs), "sam_image_encodes": n_enc,
                       "sam_mask_decoder_calls": n_dec, "latency_ms": dt_ms}}

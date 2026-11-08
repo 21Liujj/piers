@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "checks": [
+    "actual_nonzero_revision",
+    "confident_conflict_unchanged",
+    "unmapped_text_exact_fallback",
+    "unmapped_semantic_exact_fallback",
+    "conflict_text_exact_fallback",
+    "ERP_horizontal_wrap_morphology",
+    "prediction_ignore_counted_as_error"
+  ],
+  "revision_stats": {
+    "candidates": 1,
+    "accepted": 1,
+    "agree": 1,
+    "conflict": 0,
+    "uncertain": 0,
+    "blocked_conflicts": 4,
+    "changed_pixels": 4,
+    "recovered_ignore": 0,
+    "written_pixels": 430,
+    "cross_class_conflicts": 0,
+    "coverage": 1.0
+  }
+}

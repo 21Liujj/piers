@@ -208,8 +208,10 @@ def grounded_main(argv=None) -> int:
 
     with open(a.config, encoding="utf-8") as f:
         run_cfg = yaml.safe_load(f)
-    with open(a.manifest, encoding="utf-8") as f:
-        manifest = json.load(f)
+    # Configs/manifests may contain ${PIERS_*} path placeholders -> expand them.
+    from piers_ljj.paths import resolve
+    run_cfg = resolve(run_cfg)
+    manifest = resolve(json.load(open(a.manifest, encoding="utf-8")))
 
     from piers_ljj.text.grounded_adapter import GroundedConfig
     from piers_ljj.text.manifest import worker_view
@@ -253,6 +255,7 @@ def grounded_main(argv=None) -> int:
 
     t_all = time.perf_counter()
     all_preds, all_logs = [], []
+    mask_store = {}          # query_id -> ERP-global binary mask (union of FoV cands)
     img_index = {im["image_id"]: im for im in wman["images"]}
     for q in wman["queries"]:
         im = img_index[q["image_id"]]
@@ -270,7 +273,28 @@ def grounded_main(argv=None) -> int:
             all_logs.extend({**l, "reason": "no cache for image; kept original"} for l in log)
         all_preds.append({"query_id": q["query_id"], "image_id": q["image_id"],
                           "mode": mode, "result": r, "predictions": preds})
+        # stack this query's ERP-global masks (union over FoV candidates)
+        gm = r.get("masks") or []
+        if gm:
+            import numpy as np
+            stack = np.zeros_like(np.asarray(gm[0], dtype=bool))
+            for m in gm:
+                stack |= (np.asarray(m) > 0)
+            mask_store[q["query_id"]] = stack
     dt = time.perf_counter() - t_all
+
+    # Persist per-query binary masks for text IoU evaluation (evaluate reads
+    # predictions only; never re-runs inference).
+    try:
+        import numpy as np
+        if mask_store:
+            qids = sorted(mask_store.keys())
+            stack = np.stack([mask_store[k] for k in qids]).astype(np.uint8)
+            np.savez_compressed(os.path.join(a.out, "masks.npz"),
+                                query_ids=np.array(qids), masks=stack)
+            print(f"mask store: {stack.shape} -> {os.path.join(a.out, 'masks.npz')}")
+    except Exception as e:
+        print(f"WARN mask store failed: {e}")
 
     with open(os.path.join(a.out, "predictions.json"), "w", encoding="utf-8") as f:
         json.dump(all_preds, f, indent=2, default=str)

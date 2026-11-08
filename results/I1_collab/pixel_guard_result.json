@@ -1,0 +1,1606 @@
+{
+  "status": "complete",
+  "images": [
+    {
+      "image_id": "dpass_dev-calib_000000",
+      "stats": {
+        "candidates": 37,
+        "accepted": 26,
+        "skipped_low_quality": 2,
+        "skipped_unmapped": 8,
+        "skipped_semantic_disagreement": 1,
+        "written_pixels": 316887,
+        "changed_pixels": 920,
+        "ignored_edge_pixels": 4303,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 3219,
+        "confident_edges_preserved": 24009
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000001",
+      "stats": {
+        "candidates": 59,
+        "accepted": 40,
+        "skipped_low_quality": 7,
+        "skipped_unmapped": 9,
+        "skipped_semantic_disagreement": 3,
+        "written_pixels": 406587,
+        "changed_pixels": 3025,
+        "ignored_edge_pixels": 5762,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 2084,
+        "confident_edges_preserved": 35606
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000002",
+      "stats": {
+        "candidates": 91,
+        "accepted": 64,
+        "skipped_low_quality": 10,
+        "skipped_unmapped": 14,
+        "skipped_semantic_disagreement": 3,
+        "written_pixels": 332664,
+        "changed_pixels": 2394,
+        "ignored_edge_pixels": 5979,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 3456,
+        "confident_edges_preserved": 37382
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000003",
+      "stats": {
+        "candidates": 64,
+        "accepted": 40,
+        "skipped_low_quality": 8,
+        "skipped_unmapped": 10,
+        "skipped_semantic_disagreement": 6,
+        "written_pixels": 158293,
+        "changed_pixels": 1779,
+        "ignored_edge_pixels": 6239,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 4341,
+        "confident_edges_preserved": 20054
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000004",
+      "stats": {
+        "candidates": 37,
+        "accepted": 26,
+        "skipped_low_quality": 2,
+        "skipped_unmapped": 5,
+        "skipped_semantic_disagreement": 4,
+        "written_pixels": 327265,
+        "changed_pixels": 4056,
+        "ignored_edge_pixels": 3671,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 12263,
+        "confident_edges_preserved": 25419
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000005",
+      "stats": {
+        "candidates": 46,
+        "accepted": 26,
+        "skipped_low_quality": 7,
+        "skipped_unmapped": 8,
+        "skipped_semantic_disagreement": 5,
+        "written_pixels": 489001,
+        "changed_pixels": 3584,
+        "ignored_edge_pixels": 2929,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 14647,
+        "confident_edges_preserved": 45142
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000006",
+      "stats": {
+        "candidates": 39,
+        "accepted": 23,
+        "skipped_low_quality": 6,
+        "skipped_unmapped": 9,
+        "skipped_semantic_disagreement": 1,
+        "written_pixels": 412095,
+        "changed_pixels": 664,
+        "ignored_edge_pixels": 6639,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 3501,
+        "confident_edges_preserved": 30362
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000007",
+      "stats": {
+        "candidates": 37,
+        "accepted": 15,
+        "skipped_low_quality": 10,
+        "skipped_unmapped": 8,
+        "skipped_semantic_disagreement": 4,
+        "written_pixels": 93738,
+        "changed_pixels": 1403,
+        "ignored_edge_pixels": 2707,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 2408,
+        "confident_edges_preserved": 8906
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000008",
+      "stats": {
+        "candidates": 65,
+        "accepted": 42,
+        "skipped_low_quality": 14,
+        "skipped_unmapped": 8,
+        "skipped_semantic_disagreement": 1,
+        "written_pixels": 173988,
+        "changed_pixels": 480,
+        "ignored_edge_pixels": 5125,
+        "conflict_pixels": 16,
+        "pixel_blocked_changes": 714,
+        "confident_edges_preserved": 29011
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000009",
+      "stats": {
+        "candidates": 65,
+        "accepted": 35,
+        "skipped_low_quality": 6,
+        "skipped_unmapped": 7,
+        "skipped_semantic_disagreement": 17,
+        "written_pixels": 356984,
+        "changed_pixels": 427,
+        "ignored_edge_pixels": 3056,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 3902,
+        "confident_edges_preserved": 31708
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000010",
+      "stats": {
+        "candidates": 117,
+        "accepted": 78,
+        "skipped_low_quality": 31,
+        "skipped_unmapped": 7,
+        "skipped_semantic_disagreement": 1,
+        "written_pixels": 338075,
+        "changed_pixels": 64,
+        "ignored_edge_pixels": 2047,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 517,
+        "confident_edges_preserved": 33491
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000011",
+      "stats": {
+        "candidates": 31,
+        "accepted": 20,
+        "skipped_low_quality": 1,
+        "skipped_unmapped": 4,
+        "skipped_semantic_disagreement": 6,
+        "written_pixels": 523588,
+        "changed_pixels": 4968,
+        "ignored_edge_pixels": 3408,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 5852,
+        "confident_edges_preserved": 35048
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000012",
+      "stats": {
+        "candidates": 76,
+        "accepted": 39,
+        "skipped_low_quality": 22,
+        "skipped_unmapped": 8,
+        "skipped_semantic_disagreement": 7,
+        "written_pixels": 76849,
+        "changed_pixels": 57,
+        "ignored_edge_pixels": 2152,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 503,
+        "confident_edges_preserved": 14483
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000013",
+      "stats": {
+        "candidates": 49,
+        "accepted": 32,
+        "skipped_low_quality": 4,
+        "skipped_unmapped": 10,
+        "skipped_semantic_disagreement": 3,
+        "written_pixels": 325501,
+        "changed_pixels": 2092,
+        "ignored_edge_pixels": 4674,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 15482,
+        "confident_edges_preserved": 34307
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000014",
+      "stats": {
+        "candidates": 41,
+        "accepted": 24,
+        "skipped_low_quality": 2,
+        "skipped_unmapped": 10,
+        "skipped_semantic_disagreement": 5,
+        "written_pixels": 235259,
+        "changed_pixels": 5183,
+        "ignored_edge_pixels": 4419,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 29501,
+        "confident_edges_preserved": 20894
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000015",
+      "stats": {
+        "candidates": 43,
+        "accepted": 29,
+        "skipped_low_quality": 2,
+        "skipped_unmapped": 8,
+        "skipped_semantic_disagreement": 4,
+        "written_pixels": 237556,
+        "changed_pixels": 2962,
+        "ignored_edge_pixels": 4677,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 9488,
+        "confident_edges_preserved": 21131
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000016",
+      "stats": {
+        "candidates": 62,
+        "accepted": 50,
+        "skipped_low_quality": 2,
+        "skipped_unmapped": 9,
+        "skipped_semantic_disagreement": 1,
+        "written_pixels": 480647,
+        "changed_pixels": 1070,
+        "ignored_edge_pixels": 2356,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 3772,
+        "confident_edges_preserved": 38481
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000017",
+      "stats": {
+        "candidates": 76,
+        "accepted": 51,
+        "skipped_low_quality": 4,
+        "skipped_unmapped": 12,
+        "skipped_semantic_disagreement": 9,
+        "written_pixels": 455795,
+        "changed_pixels": 295,
+        "ignored_edge_pixels": 2865,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 4714,
+        "confident_edges_preserved": 51038
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000018",
+      "stats": {
+        "candidates": 33,
+        "accepted": 12,
+        "skipped_low_quality": 8,
+        "skipped_unmapped": 6,
+        "skipped_semantic_disagreement": 7,
+        "written_pixels": 120377,
+        "changed_pixels": 270,
+        "ignored_edge_pixels": 4330,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 883,
+        "confident_edges_preserved": 10870
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000019",
+      "stats": {
+        "candidates": 68,
+        "accepted": 45,
+        "skipped_low_quality": 8,
+        "skipped_unmapped": 10,
+        "skipped_semantic_disagreement": 5,
+        "written_pixels": 214427,
+        "changed_pixels": 1814,
+        "ignored_edge_pixels": 3011,
+        "conflict_pixels": 3,
+        "pixel_blocked_changes": 5010,
+        "confident_edges_preserved": 21852
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000020",
+      "stats": {
+        "candidates": 43,
+        "accepted": 23,
+        "skipped_low_quality": 10,
+        "skipped_unmapped": 8,
+        "skipped_semantic_disagreement": 2,
+        "written_pixels": 231419,
+        "changed_pixels": 3617,
+        "ignored_edge_pixels": 3999,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 12575,
+        "confident_edges_preserved": 22305
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000021",
+      "stats": {
+        "candidates": 79,
+        "accepted": 69,
+        "skipped_low_quality": 3,
+        "skipped_unmapped": 7,
+        "skipped_semantic_disagreement": 0,
+        "written_pixels": 488073,
+        "changed_pixels": 383,
+        "ignored_edge_pixels": 2653,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 5769,
+        "confident_edges_preserved": 44097
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000022",
+      "stats": {
+        "candidates": 40,
+        "accepted": 27,
+        "skipped_low_quality": 2,
+        "skipped_unmapped": 8,
+        "skipped_semantic_disagreement": 3,
+        "written_pixels": 212501,
+        "changed_pixels": 3082,
+        "ignored_edge_pixels": 4132,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 22186,
+        "confident_edges_preserved": 21340
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000023",
+      "stats": {
+        "candidates": 37,
+        "accepted": 22,
+        "skipped_low_quality": 2,
+        "skipped_unmapped": 7,
+        "skipped_semantic_disagreement": 6,
+        "written_pixels": 518860,
+        "changed_pixels": 238,
+        "ignored_edge_pixels": 2269,
+        "conflict_pixels": 16,
+        "pixel_blocked_changes": 2693,
+        "confident_edges_preserved": 31956
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000024",
+      "stats": {
+        "candidates": 79,
+        "accepted": 55,
+        "skipped_low_quality": 15,
+        "skipped_unmapped": 7,
+        "skipped_semantic_disagreement": 2,
+        "written_pixels": 207988,
+        "changed_pixels": 59,
+        "ignored_edge_pixels": 1505,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 8237,
+        "confident_edges_preserved": 30824
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000025",
+      "stats": {
+        "candidates": 55,
+        "accepted": 33,
+        "skipped_low_quality": 6,
+        "skipped_unmapped": 8,
+        "skipped_semantic_disagreement": 8,
+        "written_pixels": 319125,
+        "changed_pixels": 379,
+        "ignored_edge_pixels": 4256,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 756,
+        "confident_edges_preserved": 25022
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000026",
+      "stats": {
+        "candidates": 30,
+        "accepted": 15,
+        "skipped_low_quality": 0,
+        "skipped_unmapped": 10,
+        "skipped_semantic_disagreement": 5,
+        "written_pixels": 455745,
+        "changed_pixels": 4864,
+        "ignored_edge_pixels": 6382,
+        "conflict_pixels": 235,
+        "pixel_blocked_changes": 16317,
+        "confident_edges_preserved": 35114
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000027",
+      "stats": {
+        "candidates": 29,
+        "accepted": 18,
+        "skipped_low_quality": 0,
+        "skipped_unmapped": 6,
+        "skipped_semantic_disagreement": 5,
+        "written_pixels": 462755,
+        "changed_pixels": 18795,
+        "ignored_edge_pixels": 3833,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 84487,
+        "confident_edges_preserved": 36438
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000028",
+      "stats": {
+        "candidates": 42,
+        "accepted": 22,
+        "skipped_low_quality": 2,
+        "skipped_unmapped": 11,
+        "skipped_semantic_disagreement": 7,
+        "written_pixels": 479205,
+        "changed_pixels": 431,
+        "ignored_edge_pixels": 1915,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 756,
+        "confident_edges_preserved": 35848
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000029",
+      "stats": {
+        "candidates": 83,
+        "accepted": 71,
+        "skipped_low_quality": 4,
+        "skipped_unmapped": 7,
+        "skipped_semantic_disagreement": 1,
+        "written_pixels": 534028,
+        "changed_pixels": 50,
+        "ignored_edge_pixels": 2557,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 103,
+        "confident_edges_preserved": 44396
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000030",
+      "stats": {
+        "candidates": 33,
+        "accepted": 26,
+        "skipped_low_quality": 2,
+        "skipped_unmapped": 5,
+        "skipped_semantic_disagreement": 0,
+        "written_pixels": 454279,
+        "changed_pixels": 289,
+        "ignored_edge_pixels": 2940,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 777,
+        "confident_edges_preserved": 37123
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000031",
+      "stats": {
+        "candidates": 30,
+        "accepted": 16,
+        "skipped_low_quality": 2,
+        "skipped_unmapped": 12,
+        "skipped_semantic_disagreement": 0,
+        "written_pixels": 426321,
+        "changed_pixels": 1363,
+        "ignored_edge_pixels": 5229,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 27800,
+        "confident_edges_preserved": 36395
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000032",
+      "stats": {
+        "candidates": 36,
+        "accepted": 23,
+        "skipped_low_quality": 6,
+        "skipped_unmapped": 5,
+        "skipped_semantic_disagreement": 2,
+        "written_pixels": 246063,
+        "changed_pixels": 199,
+        "ignored_edge_pixels": 773,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 6491,
+        "confident_edges_preserved": 19923
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000033",
+      "stats": {
+        "candidates": 82,
+        "accepted": 64,
+        "skipped_low_quality": 2,
+        "skipped_unmapped": 11,
+        "skipped_semantic_disagreement": 5,
+        "written_pixels": 459761,
+        "changed_pixels": 263,
+        "ignored_edge_pixels": 2456,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 224,
+        "confident_edges_preserved": 37303
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000034",
+      "stats": {
+        "candidates": 56,
+        "accepted": 40,
+        "skipped_low_quality": 1,
+        "skipped_unmapped": 11,
+        "skipped_semantic_disagreement": 4,
+        "written_pixels": 447533,
+        "changed_pixels": 2768,
+        "ignored_edge_pixels": 2209,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 39708,
+        "confident_edges_preserved": 43072
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000035",
+      "stats": {
+        "candidates": 57,
+        "accepted": 44,
+        "skipped_low_quality": 0,
+        "skipped_unmapped": 8,
+        "skipped_semantic_disagreement": 5,
+        "written_pixels": 574000,
+        "changed_pixels": 274,
+        "ignored_edge_pixels": 4358,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 24994,
+        "confident_edges_preserved": 35256
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000036",
+      "stats": {
+        "candidates": 68,
+        "accepted": 43,
+        "skipped_low_quality": 15,
+        "skipped_unmapped": 9,
+        "skipped_semantic_disagreement": 1,
+        "written_pixels": 301053,
+        "changed_pixels": 619,
+        "ignored_edge_pixels": 2737,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 3075,
+        "confident_edges_preserved": 29905
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000037",
+      "stats": {
+        "candidates": 118,
+        "accepted": 71,
+        "skipped_low_quality": 39,
+        "skipped_unmapped": 8,
+        "skipped_semantic_disagreement": 0,
+        "written_pixels": 260658,
+        "changed_pixels": 338,
+        "ignored_edge_pixels": 2139,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 3005,
+        "confident_edges_preserved": 31963
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000038",
+      "stats": {
+        "candidates": 81,
+        "accepted": 60,
+        "skipped_low_quality": 10,
+        "skipped_unmapped": 9,
+        "skipped_semantic_disagreement": 2,
+        "written_pixels": 391925,
+        "changed_pixels": 555,
+        "ignored_edge_pixels": 3290,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 13192,
+        "confident_edges_preserved": 27815
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000039",
+      "stats": {
+        "candidates": 60,
+        "accepted": 39,
+        "skipped_low_quality": 8,
+        "skipped_unmapped": 10,
+        "skipped_semantic_disagreement": 3,
+        "written_pixels": 375248,
+        "changed_pixels": 104,
+        "ignored_edge_pixels": 2140,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 183,
+        "confident_edges_preserved": 23201
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000040",
+      "stats": {
+        "candidates": 63,
+        "accepted": 45,
+        "skipped_low_quality": 9,
+        "skipped_unmapped": 9,
+        "skipped_semantic_disagreement": 0,
+        "written_pixels": 350873,
+        "changed_pixels": 815,
+        "ignored_edge_pixels": 2481,
+        "conflict_pixels": 1,
+        "pixel_blocked_changes": 18796,
+        "confident_edges_preserved": 38807
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000041",
+      "stats": {
+        "candidates": 61,
+        "accepted": 37,
+        "skipped_low_quality": 8,
+        "skipped_unmapped": 8,
+        "skipped_semantic_disagreement": 8,
+        "written_pixels": 292494,
+        "changed_pixels": 4202,
+        "ignored_edge_pixels": 4539,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 34358,
+        "confident_edges_preserved": 29000
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000042",
+      "stats": {
+        "candidates": 34,
+        "accepted": 21,
+        "skipped_low_quality": 1,
+        "skipped_unmapped": 8,
+        "skipped_semantic_disagreement": 4,
+        "written_pixels": 511712,
+        "changed_pixels": 2041,
+        "ignored_edge_pixels": 4535,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 2376,
+        "confident_edges_preserved": 28541
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000043",
+      "stats": {
+        "candidates": 48,
+        "accepted": 37,
+        "skipped_low_quality": 0,
+        "skipped_unmapped": 4,
+        "skipped_semantic_disagreement": 7,
+        "written_pixels": 370343,
+        "changed_pixels": 8651,
+        "ignored_edge_pixels": 5203,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 29618,
+        "confident_edges_preserved": 42576
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000044",
+      "stats": {
+        "candidates": 59,
+        "accepted": 41,
+        "skipped_low_quality": 7,
+        "skipped_unmapped": 3,
+        "skipped_semantic_disagreement": 8,
+        "written_pixels": 385162,
+        "changed_pixels": 1321,
+        "ignored_edge_pixels": 3371,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 7085,
+        "confident_edges_preserved": 20699
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000045",
+      "stats": {
+        "candidates": 70,
+        "accepted": 47,
+        "skipped_low_quality": 7,
+        "skipped_unmapped": 10,
+        "skipped_semantic_disagreement": 6,
+        "written_pixels": 371808,
+        "changed_pixels": 2911,
+        "ignored_edge_pixels": 2295,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 12226,
+        "confident_edges_preserved": 25454
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000046",
+      "stats": {
+        "candidates": 57,
+        "accepted": 37,
+        "skipped_low_quality": 11,
+        "skipped_unmapped": 7,
+        "skipped_semantic_disagreement": 2,
+        "written_pixels": 234690,
+        "changed_pixels": 436,
+        "ignored_edge_pixels": 3944,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 398,
+        "confident_edges_preserved": 30826
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000047",
+      "stats": {
+        "candidates": 110,
+        "accepted": 77,
+        "skipped_low_quality": 19,
+        "skipped_unmapped": 7,
+        "skipped_semantic_disagreement": 7,
+        "written_pixels": 304670,
+        "changed_pixels": 31,
+        "ignored_edge_pixels": 1681,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 27,
+        "confident_edges_preserved": 31587
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000048",
+      "stats": {
+        "candidates": 82,
+        "accepted": 55,
+        "skipped_low_quality": 7,
+        "skipped_unmapped": 9,
+        "skipped_semantic_disagreement": 11,
+        "written_pixels": 367412,
+        "changed_pixels": 162,
+        "ignored_edge_pixels": 3880,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 324,
+        "confident_edges_preserved": 38336
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000049",
+      "stats": {
+        "candidates": 44,
+        "accepted": 24,
+        "skipped_low_quality": 9,
+        "skipped_unmapped": 10,
+        "skipped_semantic_disagreement": 1,
+        "written_pixels": 65466,
+        "changed_pixels": 97,
+        "ignored_edge_pixels": 1249,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 242,
+        "confident_edges_preserved": 9122
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000050",
+      "stats": {
+        "candidates": 49,
+        "accepted": 38,
+        "skipped_low_quality": 2,
+        "skipped_unmapped": 8,
+        "skipped_semantic_disagreement": 1,
+        "written_pixels": 241385,
+        "changed_pixels": 1860,
+        "ignored_edge_pixels": 3027,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 6671,
+        "confident_edges_preserved": 22494
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000051",
+      "stats": {
+        "candidates": 27,
+        "accepted": 10,
+        "skipped_low_quality": 0,
+        "skipped_unmapped": 10,
+        "skipped_semantic_disagreement": 7,
+        "written_pixels": 63557,
+        "changed_pixels": 416,
+        "ignored_edge_pixels": 944,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 1760,
+        "confident_edges_preserved": 7431
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000052",
+      "stats": {
+        "candidates": 93,
+        "accepted": 50,
+        "skipped_low_quality": 29,
+        "skipped_unmapped": 13,
+        "skipped_semantic_disagreement": 1,
+        "written_pixels": 189159,
+        "changed_pixels": 465,
+        "ignored_edge_pixels": 1886,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 1767,
+        "confident_edges_preserved": 19769
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000053",
+      "stats": {
+        "candidates": 74,
+        "accepted": 36,
+        "skipped_low_quality": 31,
+        "skipped_unmapped": 4,
+        "skipped_semantic_disagreement": 3,
+        "written_pixels": 283594,
+        "changed_pixels": 501,
+        "ignored_edge_pixels": 2855,
+        "conflict_pixels": 835,
+        "pixel_blocked_changes": 3192,
+        "confident_edges_preserved": 32404
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000054",
+      "stats": {
+        "candidates": 53,
+        "accepted": 27,
+        "skipped_low_quality": 11,
+        "skipped_unmapped": 9,
+        "skipped_semantic_disagreement": 6,
+        "written_pixels": 242374,
+        "changed_pixels": 1914,
+        "ignored_edge_pixels": 5107,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 8585,
+        "confident_edges_preserved": 20830
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000055",
+      "stats": {
+        "candidates": 39,
+        "accepted": 24,
+        "skipped_low_quality": 0,
+        "skipped_unmapped": 11,
+        "skipped_semantic_disagreement": 4,
+        "written_pixels": 223580,
+        "changed_pixels": 17,
+        "ignored_edge_pixels": 1443,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 10,
+        "confident_edges_preserved": 19019
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000056",
+      "stats": {
+        "candidates": 36,
+        "accepted": 25,
+        "skipped_low_quality": 0,
+        "skipped_unmapped": 9,
+        "skipped_semantic_disagreement": 2,
+        "written_pixels": 459896,
+        "changed_pixels": 592,
+        "ignored_edge_pixels": 2229,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 2690,
+        "confident_edges_preserved": 30359
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000057",
+      "stats": {
+        "candidates": 63,
+        "accepted": 32,
+        "skipped_low_quality": 6,
+        "skipped_unmapped": 11,
+        "skipped_semantic_disagreement": 14,
+        "written_pixels": 301018,
+        "changed_pixels": 1518,
+        "ignored_edge_pixels": 2282,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 4254,
+        "confident_edges_preserved": 29724
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000058",
+      "stats": {
+        "candidates": 43,
+        "accepted": 26,
+        "skipped_low_quality": 11,
+        "skipped_unmapped": 4,
+        "skipped_semantic_disagreement": 2,
+        "written_pixels": 235620,
+        "changed_pixels": 82,
+        "ignored_edge_pixels": 1839,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 427,
+        "confident_edges_preserved": 22202
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000059",
+      "stats": {
+        "candidates": 133,
+        "accepted": 115,
+        "skipped_low_quality": 8,
+        "skipped_unmapped": 10,
+        "skipped_semantic_disagreement": 0,
+        "written_pixels": 613747,
+        "changed_pixels": 421,
+        "ignored_edge_pixels": 2568,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 236,
+        "confident_edges_preserved": 46887
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000060",
+      "stats": {
+        "candidates": 86,
+        "accepted": 67,
+        "skipped_low_quality": 7,
+        "skipped_unmapped": 7,
+        "skipped_semantic_disagreement": 5,
+        "written_pixels": 315978,
+        "changed_pixels": 2004,
+        "ignored_edge_pixels": 2562,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 6869,
+        "confident_edges_preserved": 38469
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000061",
+      "stats": {
+        "candidates": 70,
+        "accepted": 49,
+        "skipped_low_quality": 10,
+        "skipped_unmapped": 9,
+        "skipped_semantic_disagreement": 2,
+        "written_pixels": 476591,
+        "changed_pixels": 94,
+        "ignored_edge_pixels": 2142,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 11174,
+        "confident_edges_preserved": 39787
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000062",
+      "stats": {
+        "candidates": 72,
+        "accepted": 56,
+        "skipped_low_quality": 8,
+        "skipped_unmapped": 7,
+        "skipped_semantic_disagreement": 1,
+        "written_pixels": 331651,
+        "changed_pixels": 20,
+        "ignored_edge_pixels": 1891,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 394,
+        "confident_edges_preserved": 30628
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000063",
+      "stats": {
+        "candidates": 47,
+        "accepted": 18,
+        "skipped_low_quality": 2,
+        "skipped_unmapped": 8,
+        "skipped_semantic_disagreement": 19,
+        "written_pixels": 85742,
+        "changed_pixels": 1690,
+        "ignored_edge_pixels": 1169,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 12023,
+        "confident_edges_preserved": 11552
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000064",
+      "stats": {
+        "candidates": 90,
+        "accepted": 76,
+        "skipped_low_quality": 4,
+        "skipped_unmapped": 8,
+        "skipped_semantic_disagreement": 2,
+        "written_pixels": 434833,
+        "changed_pixels": 352,
+        "ignored_edge_pixels": 2623,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 13777,
+        "confident_edges_preserved": 39353
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000065",
+      "stats": {
+        "candidates": 35,
+        "accepted": 21,
+        "skipped_low_quality": 0,
+        "skipped_unmapped": 12,
+        "skipped_semantic_disagreement": 2,
+        "written_pixels": 398148,
+        "changed_pixels": 1469,
+        "ignored_edge_pixels": 3345,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 7848,
+        "confident_edges_preserved": 21769
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000066",
+      "stats": {
+        "candidates": 77,
+        "accepted": 31,
+        "skipped_low_quality": 19,
+        "skipped_unmapped": 9,
+        "skipped_semantic_disagreement": 18,
+        "written_pixels": 38259,
+        "changed_pixels": 5,
+        "ignored_edge_pixels": 902,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 8,
+        "confident_edges_preserved": 8462
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000067",
+      "stats": {
+        "candidates": 33,
+        "accepted": 18,
+        "skipped_low_quality": 3,
+        "skipped_unmapped": 8,
+        "skipped_semantic_disagreement": 4,
+        "written_pixels": 314852,
+        "changed_pixels": 346,
+        "ignored_edge_pixels": 1685,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 417,
+        "confident_edges_preserved": 17601
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000068",
+      "stats": {
+        "candidates": 90,
+        "accepted": 74,
+        "skipped_low_quality": 7,
+        "skipped_unmapped": 7,
+        "skipped_semantic_disagreement": 2,
+        "written_pixels": 446007,
+        "changed_pixels": 513,
+        "ignored_edge_pixels": 2740,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 1966,
+        "confident_edges_preserved": 32765
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000069",
+      "stats": {
+        "candidates": 57,
+        "accepted": 44,
+        "skipped_low_quality": 3,
+        "skipped_unmapped": 8,
+        "skipped_semantic_disagreement": 2,
+        "written_pixels": 307546,
+        "changed_pixels": 682,
+        "ignored_edge_pixels": 4514,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 3258,
+        "confident_edges_preserved": 40133
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000070",
+      "stats": {
+        "candidates": 88,
+        "accepted": 69,
+        "skipped_low_quality": 7,
+        "skipped_unmapped": 8,
+        "skipped_semantic_disagreement": 4,
+        "written_pixels": 252646,
+        "changed_pixels": 28,
+        "ignored_edge_pixels": 1602,
+        "conflict_pixels": 52,
+        "pixel_blocked_changes": 19259,
+        "confident_edges_preserved": 30719
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000071",
+      "stats": {
+        "candidates": 82,
+        "accepted": 44,
+        "skipped_low_quality": 23,
+        "skipped_unmapped": 8,
+        "skipped_semantic_disagreement": 7,
+        "written_pixels": 127706,
+        "changed_pixels": 132,
+        "ignored_edge_pixels": 1809,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 216,
+        "confident_edges_preserved": 17806
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000072",
+      "stats": {
+        "candidates": 25,
+        "accepted": 19,
+        "skipped_low_quality": 0,
+        "skipped_unmapped": 5,
+        "skipped_semantic_disagreement": 1,
+        "written_pixels": 183121,
+        "changed_pixels": 220,
+        "ignored_edge_pixels": 1835,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 791,
+        "confident_edges_preserved": 12913
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000073",
+      "stats": {
+        "candidates": 60,
+        "accepted": 33,
+        "skipped_low_quality": 16,
+        "skipped_unmapped": 9,
+        "skipped_semantic_disagreement": 2,
+        "written_pixels": 239549,
+        "changed_pixels": 317,
+        "ignored_edge_pixels": 1963,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 3212,
+        "confident_edges_preserved": 22887
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000074",
+      "stats": {
+        "candidates": 63,
+        "accepted": 29,
+        "skipped_low_quality": 16,
+        "skipped_unmapped": 6,
+        "skipped_semantic_disagreement": 12,
+        "written_pixels": 139499,
+        "changed_pixels": 426,
+        "ignored_edge_pixels": 5043,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 1979,
+        "confident_edges_preserved": 24448
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000075",
+      "stats": {
+        "candidates": 54,
+        "accepted": 30,
+        "skipped_low_quality": 12,
+        "skipped_unmapped": 9,
+        "skipped_semantic_disagreement": 3,
+        "written_pixels": 220500,
+        "changed_pixels": 281,
+        "ignored_edge_pixels": 1685,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 705,
+        "confident_edges_preserved": 16848
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000076",
+      "stats": {
+        "candidates": 61,
+        "accepted": 47,
+        "skipped_low_quality": 7,
+        "skipped_unmapped": 6,
+        "skipped_semantic_disagreement": 1,
+        "written_pixels": 535117,
+        "changed_pixels": 1500,
+        "ignored_edge_pixels": 3085,
+        "conflict_pixels": 101,
+        "pixel_blocked_changes": 7274,
+        "confident_edges_preserved": 41218
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000077",
+      "stats": {
+        "candidates": 53,
+        "accepted": 29,
+        "skipped_low_quality": 14,
+        "skipped_unmapped": 7,
+        "skipped_semantic_disagreement": 3,
+        "written_pixels": 160710,
+        "changed_pixels": 512,
+        "ignored_edge_pixels": 3027,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 2614,
+        "confident_edges_preserved": 20939
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000078",
+      "stats": {
+        "candidates": 60,
+        "accepted": 49,
+        "skipped_low_quality": 4,
+        "skipped_unmapped": 5,
+        "skipped_semantic_disagreement": 2,
+        "written_pixels": 534544,
+        "changed_pixels": 123,
+        "ignored_edge_pixels": 2875,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 1538,
+        "confident_edges_preserved": 51094
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000079",
+      "stats": {
+        "candidates": 50,
+        "accepted": 34,
+        "skipped_low_quality": 13,
+        "skipped_unmapped": 3,
+        "skipped_semantic_disagreement": 0,
+        "written_pixels": 510641,
+        "changed_pixels": 9214,
+        "ignored_edge_pixels": 4000,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 71305,
+        "confident_edges_preserved": 44714
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000080",
+      "stats": {
+        "candidates": 24,
+        "accepted": 16,
+        "skipped_low_quality": 3,
+        "skipped_unmapped": 4,
+        "skipped_semantic_disagreement": 1,
+        "written_pixels": 366527,
+        "changed_pixels": 1898,
+        "ignored_edge_pixels": 2922,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 15456,
+        "confident_edges_preserved": 30051
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000081",
+      "stats": {
+        "candidates": 45,
+        "accepted": 37,
+        "skipped_low_quality": 1,
+        "skipped_unmapped": 7,
+        "skipped_semantic_disagreement": 0,
+        "written_pixels": 264623,
+        "changed_pixels": 70,
+        "ignored_edge_pixels": 1615,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 68,
+        "confident_edges_preserved": 40175
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000082",
+      "stats": {
+        "candidates": 41,
+        "accepted": 30,
+        "skipped_low_quality": 2,
+        "skipped_unmapped": 8,
+        "skipped_semantic_disagreement": 1,
+        "written_pixels": 291346,
+        "changed_pixels": 2095,
+        "ignored_edge_pixels": 5103,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 764,
+        "confident_edges_preserved": 20452
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000083",
+      "stats": {
+        "candidates": 57,
+        "accepted": 49,
+        "skipped_low_quality": 1,
+        "skipped_unmapped": 5,
+        "skipped_semantic_disagreement": 2,
+        "written_pixels": 500061,
+        "changed_pixels": 139,
+        "ignored_edge_pixels": 1715,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 2104,
+        "confident_edges_preserved": 31182
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000084",
+      "stats": {
+        "candidates": 48,
+        "accepted": 33,
+        "skipped_low_quality": 1,
+        "skipped_unmapped": 10,
+        "skipped_semantic_disagreement": 4,
+        "written_pixels": 90609,
+        "changed_pixels": 6,
+        "ignored_edge_pixels": 1771,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 4,
+        "confident_edges_preserved": 13847
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000085",
+      "stats": {
+        "candidates": 50,
+        "accepted": 41,
+        "skipped_low_quality": 1,
+        "skipped_unmapped": 4,
+        "skipped_semantic_disagreement": 4,
+        "written_pixels": 410722,
+        "changed_pixels": 2168,
+        "ignored_edge_pixels": 2960,
+        "conflict_pixels": 16,
+        "pixel_blocked_changes": 8254,
+        "confident_edges_preserved": 30050
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000086",
+      "stats": {
+        "candidates": 71,
+        "accepted": 54,
+        "skipped_low_quality": 5,
+        "skipped_unmapped": 8,
+        "skipped_semantic_disagreement": 4,
+        "written_pixels": 516005,
+        "changed_pixels": 536,
+        "ignored_edge_pixels": 2002,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 1741,
+        "confident_edges_preserved": 33892
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000087",
+      "stats": {
+        "candidates": 66,
+        "accepted": 52,
+        "skipped_low_quality": 9,
+        "skipped_unmapped": 4,
+        "skipped_semantic_disagreement": 1,
+        "written_pixels": 289708,
+        "changed_pixels": 77,
+        "ignored_edge_pixels": 2110,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 706,
+        "confident_edges_preserved": 28350
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000088",
+      "stats": {
+        "candidates": 78,
+        "accepted": 52,
+        "skipped_low_quality": 12,
+        "skipped_unmapped": 10,
+        "skipped_semantic_disagreement": 4,
+        "written_pixels": 92976,
+        "changed_pixels": 110,
+        "ignored_edge_pixels": 3301,
+        "conflict_pixels": 113,
+        "pixel_blocked_changes": 7391,
+        "confident_edges_preserved": 16071
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000089",
+      "stats": {
+        "candidates": 36,
+        "accepted": 25,
+        "skipped_low_quality": 2,
+        "skipped_unmapped": 6,
+        "skipped_semantic_disagreement": 3,
+        "written_pixels": 66286,
+        "changed_pixels": 213,
+        "ignored_edge_pixels": 1889,
+        "conflict_pixels": 2708,
+        "pixel_blocked_changes": 826,
+        "confident_edges_preserved": 10755
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000090",
+      "stats": {
+        "candidates": 36,
+        "accepted": 19,
+        "skipped_low_quality": 7,
+        "skipped_unmapped": 10,
+        "skipped_semantic_disagreement": 0,
+        "written_pixels": 246139,
+        "changed_pixels": 1495,
+        "ignored_edge_pixels": 4236,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 2566,
+        "confident_edges_preserved": 17034
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000091",
+      "stats": {
+        "candidates": 73,
+        "accepted": 46,
+        "skipped_low_quality": 19,
+        "skipped_unmapped": 7,
+        "skipped_semantic_disagreement": 1,
+        "written_pixels": 172832,
+        "changed_pixels": 321,
+        "ignored_edge_pixels": 2417,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 13292,
+        "confident_edges_preserved": 21480
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000092",
+      "stats": {
+        "candidates": 53,
+        "accepted": 44,
+        "skipped_low_quality": 0,
+        "skipped_unmapped": 9,
+        "skipped_semantic_disagreement": 0,
+        "written_pixels": 526562,
+        "changed_pixels": 41,
+        "ignored_edge_pixels": 2253,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 2954,
+        "confident_edges_preserved": 43430
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000093",
+      "stats": {
+        "candidates": 87,
+        "accepted": 66,
+        "skipped_low_quality": 11,
+        "skipped_unmapped": 8,
+        "skipped_semantic_disagreement": 2,
+        "written_pixels": 402313,
+        "changed_pixels": 166,
+        "ignored_edge_pixels": 2025,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 1884,
+        "confident_edges_preserved": 39879
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000094",
+      "stats": {
+        "candidates": 95,
+        "accepted": 65,
+        "skipped_low_quality": 9,
+        "skipped_unmapped": 7,
+        "skipped_semantic_disagreement": 14,
+        "written_pixels": 405999,
+        "changed_pixels": 131,
+        "ignored_edge_pixels": 3360,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 271,
+        "confident_edges_preserved": 49095
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000095",
+      "stats": {
+        "candidates": 124,
+        "accepted": 89,
+        "skipped_low_quality": 17,
+        "skipped_unmapped": 7,
+        "skipped_semantic_disagreement": 11,
+        "written_pixels": 561202,
+        "changed_pixels": 1089,
+        "ignored_edge_pixels": 2819,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 23125,
+        "confident_edges_preserved": 47759
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000096",
+      "stats": {
+        "candidates": 71,
+        "accepted": 36,
+        "skipped_low_quality": 21,
+        "skipped_unmapped": 13,
+        "skipped_semantic_disagreement": 1,
+        "written_pixels": 317191,
+        "changed_pixels": 280,
+        "ignored_edge_pixels": 1457,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 1818,
+        "confident_edges_preserved": 40745
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000097",
+      "stats": {
+        "candidates": 63,
+        "accepted": 52,
+        "skipped_low_quality": 1,
+        "skipped_unmapped": 8,
+        "skipped_semantic_disagreement": 2,
+        "written_pixels": 451861,
+        "changed_pixels": 552,
+        "ignored_edge_pixels": 2878,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 1842,
+        "confident_edges_preserved": 32404
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000098",
+      "stats": {
+        "candidates": 64,
+        "accepted": 48,
+        "skipped_low_quality": 6,
+        "skipped_unmapped": 10,
+        "skipped_semantic_disagreement": 0,
+        "written_pixels": 254564,
+        "changed_pixels": 1788,
+        "ignored_edge_pixels": 2667,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 3951,
+        "confident_edges_preserved": 16802
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000099",
+      "stats": {
+        "candidates": 50,
+        "accepted": 35,
+        "skipped_low_quality": 3,
+        "skipped_unmapped": 7,
+        "skipped_semantic_disagreement": 5,
+        "written_pixels": 382165,
+        "changed_pixels": 10241,
+        "ignored_edge_pixels": 3304,
+        "conflict_pixels": 0,
+        "pixel_blocked_changes": 9150,
+        "confident_edges_preserved": 20926
+      }
+    }
+  ],
+  "elapsed_sec": 5.534550633747131
+}

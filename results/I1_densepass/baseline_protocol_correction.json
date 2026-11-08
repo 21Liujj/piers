@@ -1,0 +1,18 @@
+{
+  "at": "2026-11-07T14:33:01.620852",
+  "user_requirement": "All main comparisons must be anchored to original OmniSAM paper baseline.",
+  "paper_reference": {
+    "url": "https://arxiv.org/html/2503.07098v2#S4.T3",
+    "OmniSAM_S_MA": 60.23,
+    "OmniSAM_B_MA": 62.46
+  },
+  "correction": "Previously reported S0=60.17966 is fixed-I2 compressed control, not original dense-memory OmniSAM. R0/R1 incremental controls retained as ablations.",
+  "new_matrix": [
+    "Original OmniSAM-S (dense memory,9 frames)",
+    "Original + Innovation1 only (same thresholds, no I2)",
+    "Original + fixed Innovation2 only",
+    "Original + Innovation1 + fixed Innovation2"
+  ],
+  "new_training": "Matched dense-memory R0/R1, same initial checkpoint, decoder-only160-panorama1440-step continuation, seeds1234,4321, originalGT scoring. These remain short controls, not reproduction of paper full-training budget.",
+  "no_I2_retuning": true
+}

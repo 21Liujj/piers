@@ -1,0 +1,29 @@
+[
+  {
+    "method": "T1",
+    "reference": "T0",
+    "positive_macro_iou_delta_pp": 8.019615156566495,
+    "ci95_lo": 6.268679233909041,
+    "ci95_hi": 9.721868134839687,
+    "unit": "percentage points",
+    "image_bootstrap_samples": 5000
+  },
+  {
+    "method": "T2_soft",
+    "reference": "T1",
+    "positive_macro_iou_delta_pp": 0.0,
+    "ci95_lo": 0.0,
+    "ci95_hi": 0.0,
+    "unit": "percentage points",
+    "image_bootstrap_samples": 5000
+  },
+  {
+    "method": "T2_hard",
+    "reference": "T1",
+    "positive_macro_iou_delta_pp": 1.2267924972354294,
+    "ci95_lo": 0.5098715727212558,
+    "ci95_hi": 1.951539596855478,
+    "unit": "percentage points",
+    "image_bootstrap_samples": 5000
+  }
+]

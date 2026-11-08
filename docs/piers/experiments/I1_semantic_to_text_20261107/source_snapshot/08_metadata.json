@@ -1,0 +1,1168 @@
+{
+  "image": {
+    "dataset": "DensePASS",
+    "height": 400,
+    "image_id": "dpass_dev-calib_000000",
+    "path": "/root/autodl-tmp/data/DensePASS/leftImg8bit/val/100_.png",
+    "split": "dev-calib",
+    "src_file": "100_.png",
+    "width": 2048
+  },
+  "candidates": [
+    {
+      "id": "dpass_dev-calib_000000_q000:v000:0",
+      "query_id": "dpass_dev-calib_000000_q000",
+      "fov_id": "v000",
+      "box_segs": [
+        [
+          29.828163146972656,
+          205.06842041015625,
+          191.022705078125,
+          318.9481506347656
+        ]
+      ],
+      "crosses": false,
+      "detector_score": 0.7994422912597656,
+      "sam_quality": 0.9765625,
+      "phrase": "car",
+      "norm_text": "car.",
+      "synthetic": false,
+      "sam_quality_replayed": 0.9765625,
+      "local_box_replayed": [
+        29.828163146972656,
+        205.06842041015625,
+        191.022705078125,
+        318.9481506347656
+      ]
+    },
+    {
+      "id": "dpass_dev-calib_000000_q000:v000:1",
+      "query_id": "dpass_dev-calib_000000_q000",
+      "fov_id": "v000",
+      "box_segs": [
+        [
+          994.5010375976562,
+          212.3055419921875,
+          1023.7796020507812,
+          251.04345703125
+        ]
+      ],
+      "crosses": false,
+      "detector_score": 0.5435901880264282,
+      "sam_quality": 0.9296875,
+      "phrase": "car",
+      "norm_text": "car.",
+      "synthetic": false,
+      "sam_quality_replayed": 0.9296875,
+      "local_box_replayed": [
+        994.5010375976562,
+        212.3055419921875,
+        1023.7796020507812,
+        251.04345703125
+      ]
+    },
+    {
+      "id": "dpass_dev-calib_000000_q001:v000:0",
+      "query_id": "dpass_dev-calib_000000_q001",
+      "fov_id": "v000",
+      "box_segs": [
+        [
+          678.9660034179688,
+          190.0735626220703,
+          691.3534545898438,
+          224.475830078125
+        ]
+      ],
+      "crosses": false,
+      "detector_score": 0.35309353470802307,
+      "sam_quality": 0.78515625,
+      "phrase": "person",
+      "norm_text": "person.",
+      "synthetic": false,
+      "sam_quality_replayed": 0.78515625,
+      "local_box_replayed": [
+        678.9660034179688,
+        190.0735626220703,
+        691.3534545898438,
+        224.475830078125
+      ]
+    },
+    {
+      "id": "dpass_dev-calib_000000_q002:v000:0",
+      "query_id": "dpass_dev-calib_000000_q002",
+      "fov_id": "v000",
+      "box_segs": [
+        [
+          2.520904541015625,
+          224.17636108398438,
+          1020.0552978515625,
+          397.5366516113281
+        ]
+      ],
+      "crosses": false,
+      "detector_score": 0.5004501342773438,
+      "sam_quality": 0.95703125,
+      "phrase": "road",
+      "norm_text": "road.",
+      "synthetic": false,
+      "sam_quality_replayed": 0.95703125,
+      "local_box_replayed": [
+        2.520904541015625,
+        224.17636108398438,
+        1020.0552978515625,
+        397.5366516113281
+      ]
+    },
+    {
+      "id": "dpass_dev-calib_000000_q003:v000:0",
+      "query_id": "dpass_dev-calib_000000_q003",
+      "fov_id": "v000",
+      "box_segs": [
+        [
+          702.135009765625,
+          42.78740692138672,
+          994.7213134765625,
+          254.7914276123047
+        ]
+      ],
+      "crosses": false,
+      "detector_score": 0.4658734202384949,
+      "sam_quality": 0.953125,
+      "phrase": "vegetation",
+      "norm_text": "vegetation.",
+      "synthetic": false,
+      "sam_quality_replayed": 0.953125,
+      "local_box_replayed": [
+        702.135009765625,
+        42.78740692138672,
+        994.7213134765625,
+        254.7914276123047
+      ]
+    },
+    {
+      "id": "dpass_dev-calib_000000_q003:v000:1",
+      "query_id": "dpass_dev-calib_000000_q003",
+      "fov_id": "v000",
+      "box_segs": [
+        [
+          2.0490875244140625,
+          0.6965517997741699,
+          470.50946044921875,
+          220.02810668945312
+        ]
+      ],
+      "crosses": false,
+      "detector_score": 0.3656831681728363,
+      "sam_quality": 0.92578125,
+      "phrase": "vegetation",
+      "norm_text": "vegetation.",
+      "synthetic": false,
+      "sam_quality_replayed": 0.92578125,
+      "local_box_replayed": [
+        2.0490875244140625,
+        0.6965517997741699,
+        470.50946044921875,
+        220.02810668945312
+      ]
+    },
+    {
+      "id": "dpass_dev-calib_000000_q004:v000:0",
+      "query_id": "dpass_dev-calib_000000_q004",
+      "fov_id": "v000",
+      "box_segs": [
+        [
+          808.150390625,
+          0.8019566535949707,
+          1022.6260986328125,
+          162.55490112304688
+        ]
+      ],
+      "crosses": false,
+      "detector_score": 0.42441198229789734,
+      "sam_quality": 0.9453125,
+      "phrase": "sky",
+      "norm_text": "sky.",
+      "synthetic": false,
+      "sam_quality_replayed": 0.9453125,
+      "local_box_replayed": [
+        808.150390625,
+        0.8019566535949707,
+        1022.6260986328125,
+        162.55490112304688
+      ]
+    },
+    {
+      "id": "dpass_dev-calib_000000_q004:v000:1",
+      "query_id": "dpass_dev-calib_000000_q004",
+      "fov_id": "v000",
+      "box_segs": [
+        [
+          0.909637451171875,
+          0.5287110805511475,
+          1020.799072265625,
+          165.47520446777344
+        ]
+      ],
+      "crosses": false,
+      "detector_score": 0.35667070746421814,
+      "sam_quality": 0.9453125,
+      "phrase": "sky",
+      "norm_text": "sky.",
+      "synthetic": false,
+      "sam_quality_replayed": 0.9453125,
+      "local_box_replayed": [
+        0.909637451171875,
+        0.5287110805511475,
+        1020.799072265625,
+        165.47520446777344
+      ]
+    },
+    {
+      "id": "dpass_dev-calib_000000_q005:v000:0",
+      "query_id": "dpass_dev-calib_000000_q005",
+      "fov_id": "v000",
+      "box_segs": [
+        [
+          26.976715087890625,
+          201.05239868164062,
+          194.2019500732422,
+          321.39422607421875
+        ]
+      ],
+      "crosses": false,
+      "detector_score": 0.8587185740470886,
+      "sam_quality": 0.97265625,
+      "phrase": "the leftmost car",
+      "norm_text": "the leftmost car.",
+      "synthetic": false,
+      "sam_quality_replayed": 0.97265625,
+      "local_box_replayed": [
+        26.976715087890625,
+        201.05239868164062,
+        194.2019500732422,
+        321.39422607421875
+      ]
+    },
+    {
+      "id": "dpass_dev-calib_000000_q006:v000:0",
+      "query_id": "dpass_dev-calib_000000_q006",
+      "fov_id": "v000",
+      "box_segs": [
+        [
+          629.1138916015625,
+          260.116943359375,
+          786.39404296875,
+          370.2583923339844
+        ]
+      ],
+      "crosses": false,
+      "detector_score": 0.4368622601032257,
+      "sam_quality": 0.91015625,
+      "phrase": "the nearest person",
+      "norm_text": "the nearest person.",
+      "synthetic": false,
+      "sam_quality_replayed": 0.91015625,
+      "local_box_replayed": [
+        629.1138916015625,
+        260.116943359375,
+        786.39404296875,
+        370.2583923339844
+      ]
+    },
+    {
+      "id": "dpass_dev-calib_000000_q000:v001:0",
+      "query_id": "dpass_dev-calib_000000_q000",
+      "fov_id": "v001",
+      "box_segs": [
+        [
+          994.4258422851562,
+          212.4528350830078,
+          1042.9219970703125,
+          251.5839080810547
+        ]
+      ],
+      "crosses": false,
+      "detector_score": 0.8128673434257507,
+      "sam_quality": 0.9453125,
+      "phrase": "car",
+      "norm_text": "car.",
+      "synthetic": false,
+      "sam_quality_replayed": 0.9453125,
+      "local_box_replayed": [
+        482.42584228515625,
+        212.4528350830078,
+        530.9219970703125,
+        251.5839080810547
+      ]
+    },
+    {
+      "id": "dpass_dev-calib_000000_q001:v001:0",
+      "query_id": "dpass_dev-calib_000000_q001",
+      "fov_id": "v001",
+      "box_segs": [
+        [
+          679.0778045654297,
+          190.30044555664062,
+          691.9269866943359,
+          225.7225799560547
+        ]
+      ],
+      "crosses": false,
+      "detector_score": 0.446977436542511,
+      "sam_quality": 0.8125,
+      "phrase": "person",
+      "norm_text": "person.",
+      "synthetic": false,
+      "sam_quality_replayed": 0.8125,
+      "local_box_replayed": [
+        167.0778045654297,
+        190.30044555664062,
+        179.92698669433594,
+        225.7225799560547
+      ]
+    },
+    {
+      "id": "dpass_dev-calib_000000_q001:v001:1",
+      "query_id": "dpass_dev-calib_000000_q001",
+      "fov_id": "v001",
+      "box_segs": [
+        [
+          532.385009765625,
+          262.3161926269531,
+          552.285213470459,
+          299.2259521484375
+        ]
+      ],
+      "crosses": false,
+      "detector_score": 0.4177464544773102,
+      "sam_quality": 0.87890625,
+      "phrase": "person",
+      "norm_text": "person.",
+      "synthetic": false,
+      "sam_quality_replayed": 0.87890625,
+      "local_box_replayed": [
+        20.385009765625,
+        262.3161926269531,
+        40.285213470458984,
+        299.2259521484375
+      ]
+    },
+    {
+      "id": "dpass_dev-calib_000000_q002:v001:0",
+      "query_id": "dpass_dev-calib_000000_q002",
+      "fov_id": "v001",
+      "box_segs": [
+        [
+          513.9559326171875,
+          223.81747436523438,
+          1359.1632690429688,
+          398.26190185546875
+        ]
+      ],
+      "crosses": false,
+      "detector_score": 0.42155182361602783,
+      "sam_quality": 0.9453125,
+      "phrase": "road",
+      "norm_text": "road.",
+      "synthetic": false,
+      "sam_quality_replayed": 0.9453125,
+      "local_box_replayed": [
+        1.9559326171875,
+        223.81747436523438,
+        847.1632690429688,
+        398.26190185546875
+      ]
+    },
+    {
+      "id": "dpass_dev-calib_000000_q003:v001:0",
+      "query_id": "dpass_dev-calib_000000_q003",
+      "fov_id": "v001",
+      "box_segs": [
+        [
+          702.4490661621094,
+          42.374359130859375,
+          993.9988708496094,
+          252.13746643066406
+        ]
+      ],
+      "crosses": false,
+      "detector_score": 0.4964142143726349,
+      "sam_quality": 0.953125,
+      "phrase": "vegetation",
+      "norm_text": "vegetation.",
+      "synthetic": false,
+      "sam_quality_replayed": 0.953125,
+      "local_box_replayed": [
+        190.44906616210938,
+        42.374359130859375,
+        481.9988708496094,
+        252.13746643066406
+      ]
+    },
+    {
+      "id": "dpass_dev-calib_000000_q004:v001:0",
+      "query_id": "dpass_dev-calib_000000_q004",
+      "fov_id": "v001",
+      "box_segs": [
+        [
+          805.9066162109375,
+          0.581735372543335,
+          1102.2015991210938,
+          165.33486938476562
+        ]
+      ],
+      "crosses": false,
+      "detector_score": 0.6548947095870972,
+      "sam_quality": 0.953125,
+      "phrase": "sky",
+      "norm_text": "sky.",
+      "synthetic": false,
+      "sam_quality_replayed": 0.953125,
+      "local_box_replayed": [
+        293.9066162109375,
+        0.581735372543335,
+        590.2015991210938,
+        165.33486938476562
+      ]
+    },
+    {
+      "id": "dpass_dev-calib_000000_q005:v001:0",
+      "query_id": "dpass_dev-calib_000000_q005",
+      "fov_id": "v001",
+      "box_segs": [
+        [
+          991.6079406738281,
+          209.25454711914062,
+          1045.5842895507812,
+          253.3141632080078
+        ]
+      ],
+      "crosses": false,
+      "detector_score": 0.8278281688690186,
+      "sam_quality": 0.9375,
+      "phrase": "the leftmost car",
+      "norm_text": "the leftmost car.",
+      "synthetic": false,
+      "sam_quality_replayed": 0.9375,
+      "local_box_replayed": [
+        479.6079406738281,
+        209.25454711914062,
+        533.5842895507812,
+        253.3141632080078
+      ]
+    },
+    {
+      "id": "dpass_dev-calib_000000_q006:v001:0",
+      "query_id": "dpass_dev-calib_000000_q006",
+      "fov_id": "v001",
+      "box_segs": [
+        [
+          629.2813720703125,
+          246.7813262939453,
+          786.8880004882812,
+          369.6678466796875
+        ]
+      ],
+      "crosses": false,
+      "detector_score": 0.45035937428474426,
+      "sam_quality": 0.88671875,
+      "phrase": "the nearest person",
+      "norm_text": "the nearest person.",
+      "synthetic": false,
+      "sam_quality_replayed": 0.88671875,
+      "local_box_replayed": [
+        117.2813720703125,
+        246.7813262939453,
+        274.88800048828125,
+        369.6678466796875
+      ]
+    },
+    {
+      "id": "dpass_dev-calib_000000_q006:v001:1",
+      "query_id": "dpass_dev-calib_000000_q006",
+      "fov_id": "v001",
+      "box_segs": [
+        [
+          527.960542678833,
+          259.70635986328125,
+          562.4789810180664,
+          301.1632995605469
+        ]
+      ],
+      "crosses": false,
+      "detector_score": 0.3674972355365753,
+      "sam_quality": 0.859375,
+      "phrase": "the nearest person",
+      "norm_text": "the nearest person.",
+      "synthetic": false,
+      "sam_quality_replayed": 0.859375,
+      "local_box_replayed": [
+        15.960542678833008,
+        259.70635986328125,
+        50.478981018066406,
+        301.1632995605469
+      ]
+    },
+    {
+      "id": "dpass_dev-calib_000000_q000:v002:0",
+      "query_id": "dpass_dev-calib_000000_q000",
+      "fov_id": "v002",
+      "box_segs": [
+        [
+          2034.5697631835938,
+          198.53843688964844,
+          2047.9426879882812,
+          234.35421752929688
+        ]
+      ],
+      "crosses": false,
+      "detector_score": 0.39606815576553345,
+      "sam_quality": 0.8203125,
+      "phrase": "car",
+      "norm_text": "car.",
+      "synthetic": false,
+      "sam_quality_replayed": 0.8203125,
+      "local_box_replayed": [
+        1010.5697631835938,
+        198.53843688964844,
+        1023.9426879882812,
+        234.35421752929688
+      ]
+    },
+    {
+      "id": "dpass_dev-calib_000000_q000:v002:1",
+      "query_id": "dpass_dev-calib_000000_q000",
+      "fov_id": "v002",
+      "box_segs": [
+        [
+          1023.9666233062744,
+          212.52102661132812,
+          1042.914197921753,
+          250.96249389648438
+        ]
+      ],
+      "crosses": false,
+      "detector_score": 0.7122321724891663,
+      "sam_quality": 0.93359375,
+      "phrase": "car",
+      "norm_text": "car.",
+      "synthetic": false,
+      "sam_quality_replayed": 0.93359375,
+      "local_box_replayed": [
+        -0.03337669372558594,
+        212.52102661132812,
+        18.91419792175293,
+        250.96249389648438
+      ]
+    },
+    {
+      "id": "dpass_dev-calib_000000_q002:v002:0",
+      "query_id": "dpass_dev-calib_000000_q002",
+      "fov_id": "v002",
+      "box_segs": [
+        [
+          1630.54345703125,
+          218.38555908203125,
+          2046.0511474609375,
+          398.0532531738281
+        ]
+      ],
+      "crosses": false,
+      "detector_score": 0.4344612956047058,
+      "sam_quality": 0.9609375,
+      "phrase": "road",
+      "norm_text": "road.",
+      "synthetic": false,
+      "sam_quality_replayed": 0.9609375,
+      "local_box_replayed": [
+        606.54345703125,
+        218.38555908203125,
+        1022.0511474609375,
+        398.0532531738281
+      ]
+    },
+    {
+      "id": "dpass_dev-calib_000000_q003:v002:0",
+      "query_id": "dpass_dev-calib_000000_q003",
+      "fov_id": "v002",
+      "box_segs": [
+        [
+          1814.2847290039062,
+          53.089420318603516,
+          2000.7235717773438,
+          224.5140380859375
+        ]
+      ],
+      "crosses": false,
+      "detector_score": 0.4757270812988281,
+      "sam_quality": 0.91796875,
+      "phrase": "vegetation",
+      "norm_text": "vegetation.",
+      "synthetic": false,
+      "sam_quality_replayed": 0.91796875,
+      "local_box_replayed": [
+        790.2847290039062,
+        53.089420318603516,
+        976.7235717773438,
+        224.5140380859375
+      ]
+    },
+    {
+      "id": "dpass_dev-calib_000000_q003:v002:1",
+      "query_id": "dpass_dev-calib_000000_q003",
+      "fov_id": "v002",
+      "box_segs": [
+        [
+          1024.6731758117676,
+          139.89572143554688,
+          1103.9579010009766,
+          225.40927124023438
+        ]
+      ],
+      "crosses": false,
+      "detector_score": 0.4054487347602844,
+      "sam_quality": 0.94140625,
+      "phrase": "vegetation",
+      "norm_text": "vegetation.",
+      "synthetic": false,
+      "sam_quality_replayed": 0.94140625,
+      "local_box_replayed": [
+        0.6731758117675781,
+        139.89572143554688,
+        79.95790100097656,
+        225.40927124023438
+      ]
+    },
+    {
+      "id": "dpass_dev-calib_000000_q003:v002:2",
+      "query_id": "dpass_dev-calib_000000_q003",
+      "fov_id": "v002",
+      "box_segs": [
+        [
+          1986.4833984375,
+          63.542503356933594,
+          2046.9173583984375,
+          200.743408203125
+        ]
+      ],
+      "crosses": false,
+      "detector_score": 0.37662312388420105,
+      "sam_quality": 0.95703125,
+      "phrase": "vegetation",
+      "norm_text": "vegetation.",
+      "synthetic": false,
+      "sam_quality_replayed": 0.95703125,
+      "local_box_replayed": [
+        962.4833984375,
+        63.542503356933594,
+        1022.9173583984375,
+        200.743408203125
+      ]
+    },
+    {
+      "id": "dpass_dev-calib_000000_q004:v002:0",
+      "query_id": "dpass_dev-calib_000000_q004",
+      "fov_id": "v002",
+      "box_segs": [
+        [
+          1808.6846313476562,
+          0.7934451103210449,
+          2046.4758911132812,
+          131.82179260253906
+        ]
+      ],
+      "crosses": false,
+      "detector_score": 0.4153730273246765,
+      "sam_quality": 0.9765625,
+      "phrase": "sky",
+      "norm_text": "sky.",
+      "synthetic": false,
+      "sam_quality_replayed": 0.9765625,
+      "local_box_replayed": [
+        784.6846313476562,
+        0.7934451103210449,
+        1022.4758911132812,
+        131.82179260253906
+      ]
+    },
+    {
+      "id": "dpass_dev-calib_000000_q004:v002:1",
+      "query_id": "dpass_dev-calib_000000_q004",
+      "fov_id": "v002",
+      "box_segs": [
+        [
+          1024.8734436035156,
+          0.574713945388794,
+          2044.84716796875,
+          164.1732940673828
+        ]
+      ],
+      "crosses": false,
+      "detector_score": 0.39326852560043335,
+      "sam_quality": 0.96875,
+      "phrase": "sky",
+      "norm_text": "sky.",
+      "synthetic": false,
+      "sam_quality_replayed": 0.96875,
+      "local_box_replayed": [
+        0.873443603515625,
+        0.574713945388794,
+        1020.84716796875,
+        164.1732940673828
+      ]
+    },
+    {
+      "id": "dpass_dev-calib_000000_q005:v002:0",
+      "query_id": "dpass_dev-calib_000000_q005",
+      "fov_id": "v002",
+      "box_segs": [
+        [
+          1024.2422666549683,
+          209.74722290039062,
+          1045.5805397033691,
+          252.75973510742188
+        ]
+      ],
+      "crosses": false,
+      "detector_score": 0.7416740655899048,
+      "sam_quality": 0.9296875,
+      "phrase": "the leftmost car",
+      "norm_text": "the leftmost car.",
+      "synthetic": false,
+      "sam_quality_replayed": 0.9296875,
+      "local_box_replayed": [
+        0.24226665496826172,
+        209.74722290039062,
+        21.58053970336914,
+        252.75973510742188
+      ]
+    },
+    {
+      "id": "dpass_dev-calib_000000_q000:v003:0",
+      "query_id": "dpass_dev-calib_000000_q000",
+      "fov_id": "v003",
+      "box_segs": [
+        [
+          29.9542236328125,
+          205.0484161376953,
+          190.663330078125,
+          318.78179931640625
+        ]
+      ],
+      "crosses": false,
+      "detector_score": 0.8116759657859802,
+      "sam_quality": 0.9765625,
+      "phrase": "car",
+      "norm_text": "car.",
+      "synthetic": false,
+      "sam_quality_replayed": 0.9765625,
+      "local_box_replayed": [
+        541.9542236328125,
+        205.0484161376953,
+        702.663330078125,
+        318.78179931640625
+      ]
+    },
+    {
+      "id": "dpass_dev-calib_000000_q000:v003:1",
+      "query_id": "dpass_dev-calib_000000_q000",
+      "fov_id": "v003",
+      "box_segs": [
+        [
+          2034.9549255371094,
+          198.64031982421875,
+          2048.0,
+          236.34326171875
+        ],
+        [
+          0.0,
+          198.64031982421875,
+          38.842529296875,
+          236.34326171875
+        ]
+      ],
+      "crosses": true,
+      "detector_score": 0.5039672255516052,
+      "sam_quality": 0.9140625,
+      "phrase": "car",
+      "norm_text": "car.",
+      "synthetic": false,
+      "sam_quality_replayed": 0.9140625,
+      "local_box_replayed": [
+        498.9549255371094,
+        198.64031982421875,
+        550.842529296875,
+        236.34326171875
+      ]
+    },
+    {
+      "id": "dpass_dev-calib_000000_q000:v003:2",
+      "query_id": "dpass_dev-calib_000000_q000",
+      "fov_id": "v003",
+      "box_segs": [
+        [
+          2033.1437683105469,
+          197.57752990722656,
+          2048.0,
+          218.72740173339844
+        ],
+        [
+          0.0,
+          197.57752990722656,
+          11.10791015625,
+          218.72740173339844
+        ]
+      ],
+      "crosses": true,
+      "detector_score": 0.3789186179637909,
+      "sam_quality": 0.79296875,
+      "phrase": "car",
+      "norm_text": "car.",
+      "synthetic": false,
+      "sam_quality_replayed": 0.79296875,
+      "local_box_replayed": [
+        497.1437683105469,
+        197.57752990722656,
+        523.10791015625,
+        218.72740173339844
+      ]
+    },
+    {
+      "id": "dpass_dev-calib_000000_q002:v003:0",
+      "query_id": "dpass_dev-calib_000000_q002",
+      "fov_id": "v003",
+      "box_segs": [
+        [
+          1625.4928894042969,
+          215.7625732421875,
+          2048.0,
+          397.8526611328125
+        ],
+        [
+          0.0,
+          215.7625732421875,
+          508.241455078125,
+          397.8526611328125
+        ]
+      ],
+      "crosses": true,
+      "detector_score": 0.5101915001869202,
+      "sam_quality": 0.92578125,
+      "phrase": "road",
+      "norm_text": "road.",
+      "synthetic": false,
+      "sam_quality_replayed": 0.92578125,
+      "local_box_replayed": [
+        89.49288940429688,
+        215.7625732421875,
+        1020.241455078125,
+        397.8526611328125
+      ]
+    },
+    {
+      "id": "dpass_dev-calib_000000_q003:v003:0",
+      "query_id": "dpass_dev-calib_000000_q003",
+      "fov_id": "v003",
+      "box_segs": [
+        [
+          1814.6331176757812,
+          52.718563079833984,
+          2000.9948120117188,
+          223.6702423095703
+        ]
+      ],
+      "crosses": false,
+      "detector_score": 0.4153730273246765,
+      "sam_quality": 0.921875,
+      "phrase": "vegetation",
+      "norm_text": "vegetation.",
+      "synthetic": false,
+      "sam_quality_replayed": 0.921875,
+      "local_box_replayed": [
+        278.63311767578125,
+        52.718563079833984,
+        464.99481201171875,
+        223.6702423095703
+      ]
+    },
+    {
+      "id": "dpass_dev-calib_000000_q003:v003:1",
+      "query_id": "dpass_dev-calib_000000_q003",
+      "fov_id": "v003",
+      "box_segs": [
+        [
+          2047.6636962890625,
+          0.5914688110351562,
+          2048.0,
+          212.84078979492188
+        ],
+        [
+          0.0,
+          0.5914688110351562,
+          471.099365234375,
+          212.84078979492188
+        ]
+      ],
+      "crosses": true,
+      "detector_score": 0.3839877247810364,
+      "sam_quality": 0.90625,
+      "phrase": "vegetation",
+      "norm_text": "vegetation.",
+      "synthetic": false,
+      "sam_quality_replayed": 0.90625,
+      "local_box_replayed": [
+        511.6636962890625,
+        0.5914688110351562,
+        983.099365234375,
+        212.84078979492188
+      ]
+    },
+    {
+      "id": "dpass_dev-calib_000000_q004:v003:0",
+      "query_id": "dpass_dev-calib_000000_q004",
+      "fov_id": "v003",
+      "box_segs": [
+        [
+          1808.102294921875,
+          0.7897138595581055,
+          2048.0,
+          133.38778686523438
+        ],
+        [
+          0.0,
+          0.7897138595581055,
+          106.42437744140625,
+          133.38778686523438
+        ]
+      ],
+      "crosses": true,
+      "detector_score": 0.5616957545280457,
+      "sam_quality": 0.96484375,
+      "phrase": "sky",
+      "norm_text": "sky.",
+      "synthetic": false,
+      "sam_quality_replayed": 0.96484375,
+      "local_box_replayed": [
+        272.102294921875,
+        0.7897138595581055,
+        618.4243774414062,
+        133.38778686523438
+      ]
+    },
+    {
+      "id": "dpass_dev-calib_000000_q005:v003:0",
+      "query_id": "dpass_dev-calib_000000_q005",
+      "fov_id": "v003",
+      "box_segs": [
+        [
+          26.0509033203125,
+          201.33595275878906,
+          193.942626953125,
+          320.956787109375
+        ]
+      ],
+      "crosses": false,
+      "detector_score": 0.8872045874595642,
+      "sam_quality": 0.97265625,
+      "phrase": "the leftmost car",
+      "norm_text": "the leftmost car.",
+      "synthetic": false,
+      "sam_quality_replayed": 0.97265625,
+      "local_box_replayed": [
+        538.0509033203125,
+        201.33595275878906,
+        705.942626953125,
+        320.956787109375
+      ]
+    },
+    {
+      "id": "dpass_dev-calib_000000_q006:v003:0",
+      "query_id": "dpass_dev-calib_000000_q006",
+      "fov_id": "v003",
+      "box_segs": [
+        [
+          26.68988037109375,
+          201.65859985351562,
+          193.28277587890625,
+          320.342041015625
+        ]
+      ],
+      "crosses": false,
+      "detector_score": 0.621540904045105,
+      "sam_quality": 0.9765625,
+      "phrase": "the nearest person",
+      "norm_text": "the nearest person.",
+      "synthetic": false,
+      "sam_quality_replayed": 0.9765625,
+      "local_box_replayed": [
+        538.6898803710938,
+        201.65859985351562,
+        705.2827758789062,
+        320.342041015625
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "image_id": "dpass_dev-calib_000000",
+      "language": "en",
+      "ontology": {
+        "map13": 12,
+        "relation": "coarse_compatible"
+      },
+      "query_id": "dpass_dev-calib_000000_q000",
+      "query_set_version": "v0",
+      "raw_text": "car",
+      "task_type": "category_union"
+    },
+    {
+      "image_id": "dpass_dev-calib_000000",
+      "language": "en",
+      "ontology": {
+        "map13": 11,
+        "relation": "coarse_compatible"
+      },
+      "query_id": "dpass_dev-calib_000000_q001",
+      "query_set_version": "v0",
+      "raw_text": "person",
+      "task_type": "category_union"
+    },
+    {
+      "image_id": "dpass_dev-calib_000000",
+      "language": "en",
+      "ontology": {
+        "map13": 0,
+        "relation": "exact"
+      },
+      "query_id": "dpass_dev-calib_000000_q002",
+      "query_set_version": "v0",
+      "raw_text": "road",
+      "task_type": "category_union"
+    },
+    {
+      "image_id": "dpass_dev-calib_000000",
+      "language": "en",
+      "ontology": {
+        "map13": 8,
+        "relation": "exact"
+      },
+      "query_id": "dpass_dev-calib_000000_q003",
+      "query_set_version": "v0",
+      "raw_text": "vegetation",
+      "task_type": "category_union"
+    },
+    {
+      "image_id": "dpass_dev-calib_000000",
+      "language": "en",
+      "ontology": {
+        "map13": 10,
+        "relation": "exact"
+      },
+      "query_id": "dpass_dev-calib_000000_q004",
+      "query_set_version": "v0",
+      "raw_text": "sky",
+      "task_type": "category_union"
+    },
+    {
+      "image_id": "dpass_dev-calib_000000",
+      "language": "en",
+      "query_id": "dpass_dev-calib_000000_q005",
+      "query_set_version": "v0",
+      "raw_text": "the leftmost car",
+      "task_type": "instance_referring"
+    },
+    {
+      "image_id": "dpass_dev-calib_000000",
+      "language": "en",
+      "query_id": "dpass_dev-calib_000000_q006",
+      "query_set_version": "v0",
+      "raw_text": "the nearest person",
+      "task_type": "instance_referring"
+    },
+    {
+      "image_id": "dpass_dev-calib_000000",
+      "language": "en",
+      "query_id": "dpass_dev-calib_000000_q007",
+      "query_set_version": "v0",
+      "raw_text": "train",
+      "task_type": "category_union"
+    }
+  ],
+  "fovs": [
+    {
+      "view_id": "v000",
+      "x_start": 0,
+      "y_start": 0,
+      "win_w": 1024,
+      "win_h": 400,
+      "order": 0
+    },
+    {
+      "view_id": "v001",
+      "x_start": 512,
+      "y_start": 0,
+      "win_w": 1024,
+      "win_h": 400,
+      "order": 1
+    },
+    {
+      "view_id": "v002",
+      "x_start": 1024,
+      "y_start": 0,
+      "win_w": 1024,
+      "win_h": 400,
+      "order": 2
+    },
+    {
+      "view_id": "v003",
+      "x_start": 1536,
+      "y_start": 0,
+      "win_w": 1024,
+      "win_h": 400,
+      "order": 3
+    }
+  ],
+  "parity": [
+    {
+      "query_id": "dpass_dev-calib_000000_q000",
+      "different_pixels": 0,
+      "union_iou": 1.0
+    },
+    {
+      "query_id": "dpass_dev-calib_000000_q001",
+      "different_pixels": 0,
+      "union_iou": 1.0
+    },
+    {
+      "query_id": "dpass_dev-calib_000000_q002",
+      "different_pixels": 0,
+      "union_iou": 1.0
+    },
+    {
+      "query_id": "dpass_dev-calib_000000_q003",
+      "different_pixels": 0,
+      "union_iou": 1.0
+    },
+    {
+      "query_id": "dpass_dev-calib_000000_q004",
+      "different_pixels": 0,
+      "union_iou": 1.0
+    },
+    {
+      "query_id": "dpass_dev-calib_000000_q005",
+      "different_pixels": 0,
+      "union_iou": 1.0
+    },
+    {
+      "query_id": "dpass_dev-calib_000000_q006",
+      "different_pixels": 0,
+      "union_iou": 1.0
+    },
+    {
+      "query_id": "dpass_dev-calib_000000_q007",
+      "different_pixels": 0,
+      "union_iou": 1.0
+    }
+  ],
+  "sam_quality_max_abs_diff": 0.0
+}

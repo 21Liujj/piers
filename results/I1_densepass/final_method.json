@@ -1,0 +1,37 @@
+{
+  "status": "frozen_for_final",
+  "text_method": "Gated bounded probability fusion on exact-taxonomy candidates only",
+  "semantic_method": "Independent raw-SAM text feedback after shared frozen-teacher candidate gate; reject strong pixel conflicts",
+  "I2": "class_aware uncertainty1024, rare IDs[3,4,6,7], reserve.15, num_maskmem9",
+  "gate": {
+    "mean_support": 0.5,
+    "quality": 0.8,
+    "high_pixel_conflict": 0.8
+  },
+  "text_fusion": {
+    "semantic_weight": 0.5,
+    "text_inside_prior": 0.7,
+    "text_outside_prior": 0.3,
+    "scope": "original DINO boxes and valid FoV coverage; coarse/free queries exactly fall back"
+  },
+  "pseudo_teacher_confidence": 0.85,
+  "pseudo_interior_erosion": 2,
+  "no_circular_evidence": "The semantic-derived text refinement is not re-fed as independent evidence; raw SAM masks enter feedback once after the common gate.",
+  "core_extension": "Not adopted: ~0.01pp text change did not justify extra thresholds.",
+  "training": {
+    "iterations": 160,
+    "optimizer_updates": 1440,
+    "seeds": [
+      1234,
+      4321
+    ],
+    "batch_size": 1,
+    "lr": 2e-06,
+    "optimizer": "AdamW",
+    "stage": "decoder-only existing UDA stage2",
+    "amp": true,
+    "source": "Cityscapes2975 full source set, deterministic sampled order",
+    "target": "160 images (4 each of40 cities), deterministic shuffled order matched within seed",
+    "target_gt_access": "hard-disabled"
+  }
+}

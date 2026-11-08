@@ -1,0 +1,35 @@
+{
+  "version": "innovation3-candidate-v1",
+  "status": "full100_paired_evaluated_functional_candidate",
+  "entry_point": "${PIERS_REPO_ROOT}/runs/I3-seam-20261107/run_all3.py",
+  "semantic_entry_point": "${PIERS_REPO_ROOT}/runs/I3-seam-20261107/run_i3_semantic.py",
+  "defaults": {
+    "memory": "i2",
+    "strategy": "adaptive",
+    "budget": 2
+  },
+  "I1_final_config": "${PIERS_REPO_ROOT}/configs/piers/innovation1_local_correction_final.json",
+  "I2_final_config": "${PIERS_REPO_ROOT}/configs/piers/innovation2_final.json",
+  "runtime_source_sha256": {
+    "${PIERS_REPO_ROOT}/runs/I3-seam-20261107/run_all3.py": "d828d09d8d16c466808059893773da77b3466d4ea6c542822f547fd720286797",
+    "${PIERS_REPO_ROOT}/runs/I3-seam-20261107/run_i3_semantic.py": "3c70e77f75277965e7958f91d6421963da4c9f4cf81a90093cea8986125dd7a1",
+    "${PIERS_REPO_ROOT}/runs/I3-seam-20261107/seam_core.py": "335c4c4647da430fa13e20f1ddae932dff2caada0cbf8c237211b1f173c9c394",
+    "${PIERS_REPO_ROOT}/runs/I3-seam-20261107/seam_cuda.py": "07b55350943b500c5ae15ac024109b38b3865c1dd9a960f6f847f9ea17e8fb4d",
+    "${PIERS_REPO_ROOT}/runs/I3-seam-20261107/semantic_worker.py": "014ff80bcfdd4c4d4bc65c544be405d573fa6c8b4df85db094ceee0cbd762498",
+    "${PIERS_REPO_ROOT}/runs/I3-seam-20261107/paired_native_worker.py": "8010b3603da476cc6cb1176f698d17e7b7ca5375a50ce8a89fadaaf155264214"
+  },
+  "original_I1_I2_sources_modified": false,
+  "text_extra_default": false,
+  "text_extra_reason": "Connectedzoomtext module retained asdevelopment candidate; fullmodeldefaultI3is semanticextras withfrozen I1textguide",
+  "data_scope": "DensePASS100 development reused, no newdatasets indoor ortraining",
+  "current_reports": "${PIERS_REPO_ROOT}/runs/I3-seam-20261107/paired_native/evaluation",
+  "cudnn_benchmark": false,
+  "release_scope": "Inferencecandidate; scientificclaims determined byrecorded samebudget andnativeGT comparisons",
+  "latest_summary": "${PIERS_REPO_ROOT}/runs/I3-seam-20261107/reports/INNOVATION3_STATUS.txt",
+  "validation": {
+    "all200B0identity": true,
+    "single_batch4cases_bitwise_equal": true,
+    "fullmodel_GTfree_smoke": true,
+    "samebudget_stable_superiority_established": false
+  }
+}

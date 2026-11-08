@@ -1,0 +1,4 @@
+python 3.12.16
+torch 2.8.0+cu128
+cuda 12.8
+gpu NVIDIA RTX 6000D

@@ -1,0 +1,15 @@
+{
+  "baseline": "/root/autodl-tmp/piers-main/runs/I1-reliable-20261107_1535/correction_training/seed1234_R0/evaluation",
+  "treatment": "/root/autodl-tmp/piers-main/runs/I1-reliable-20261107_1535/correction_training/seed1234/evaluation",
+  "R0_mIoU": 60.35958492844862,
+  "R1_mIoU": 60.36146542703823,
+  "delta_pp": 0.0018804985896139215,
+  "paired_original_image_bootstrap_95ci_pp": [
+    -0.006088012304539525,
+    0.011297579506332055
+  ],
+  "bootstrap_seed": 20261107,
+  "bootstrap_replicates": 10000,
+  "seed_and_CUDA_nondeterminism_covered": false,
+  "evaluation": "Repeatedly-used DensePASS100 development, not independent testing"
+}

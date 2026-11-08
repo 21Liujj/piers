@@ -1,0 +1,26 @@
+suite: T1-grounded-fov
+run_id: T1-smoke5
+seed: 0
+worker: grounded
+text_backend: hf_grounding_dino_sam2
+fov:
+  win_w: 1024
+  win_h: 400
+  stride_x: 512
+  y_start: 0
+thresholds:
+  det: 0.35
+  text: 0.25
+collab: none
+seam:
+  strategy: fixed_scm
+  extra_budget_B: 0
+manifest: configs/piers/manifest.smoke5.json
+grounded:
+  grounding_model_id: ${PIERS_WEIGHTS_ROOT}/grounding-dino-tiny-hf
+  sam2_ckpt: ${PIERS_WEIGHTS_ROOT}/sam2.1_hiera_small.pt
+  sam2_cfg: configs/sam2.1/sam2.1_hiera_s.yaml
+  dtype: bf16
+  local_files_only: true
+  disable_custom_kernels: true
+runs_root: runs

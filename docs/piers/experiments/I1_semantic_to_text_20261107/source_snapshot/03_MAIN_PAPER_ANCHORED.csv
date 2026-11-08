@@ -1,0 +1,5 @@
+method,mIoU_pct,delta_vs_original_pp,stage
+Original_OmniSAM_S,60.29496341530991,0.0,frozen weights; original GT; development100
+Original_plus_I1_only,60.361083208061885,0.06611979275197655,frozen weights; original GT; development100
+Original_plus_fixed_I2_only,60.17965782042302,-0.11530559488689107,frozen weights; original GT; development100
+Original_plus_I1_and_fixed_I2,60.31007227910261,0.015108863792704597,frozen weights; original GT; development100

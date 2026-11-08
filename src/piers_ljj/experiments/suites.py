@@ -52,6 +52,6 @@ def run_id_for(suite: str) -> str:
     return SUITE_RUN_IDS.get(canonical_suite(suite), canonical_suite(suite))
 
 MEMORY_VARIANTS = ["current", "nocompress_ref", "uniform_budget", "topk_fixed",
-                   "pos_dedup", "pos_dedup_priority", "neighborhood"]
+                   "pos_dedup", "pos_dedup_priority", "joint_guarded", "neighborhood"]
 SEAM_VARIANTS = ["linear", "fixed_scm", "uniform_extra", "adaptive_extra"]
 COLLAB_MODES = ["none", "semantic_to_text", "text_to_pseudo", "bidirectional"]

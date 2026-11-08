@@ -1,0 +1,22 @@
+[
+  {
+    "shard": 0,
+    "pid": 24417,
+    "out": "/root/autodl-tmp/piers-main/runs/I1-collab-20261106_213607/t1_candidate_shards/0"
+  },
+  {
+    "shard": 1,
+    "pid": 24418,
+    "out": "/root/autodl-tmp/piers-main/runs/I1-collab-20261106_213607/t1_candidate_shards/1"
+  },
+  {
+    "shard": 2,
+    "pid": 24419,
+    "out": "/root/autodl-tmp/piers-main/runs/I1-collab-20261106_213607/t1_candidate_shards/2"
+  },
+  {
+    "shard": 3,
+    "pid": 24420,
+    "out": "/root/autodl-tmp/piers-main/runs/I1-collab-20261106_213607/t1_candidate_shards/3"
+  }
+]
