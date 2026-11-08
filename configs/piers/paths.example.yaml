@@ -10,16 +10,16 @@
 # Dataset root. Must contain the dataset subtrees below.
 #   DensePASS/{leftImg8bit,gtFine}/...
 #   WildPASS/..., SynPASS/..., Cityscapes/...
-data_root: "/root/autodl-tmp/data"
+data_root: "${PIERS_DATA_ROOT}"
 
 # Extra datasets kept outside the main dataset root.
 #   WildPASS13/..., Stanford360_SPAN8/...
-data_extra_root: "/root/autodl-tmp/data_extra"
+data_extra_root: "${PIERS_DATA_EXTRA_ROOT}"
 
 # Model weights.
 #   sam2.1_hiera_small.pt
 #   grounding-dino-tiny-hf/   (converted dir, see scripts/piers/convert_grounding_ckpt.py)
-weights_root: "/root/autodl-tmp/weights"
+weights_root: "${PIERS_WEIGHTS_ROOT}"
 
 # The piers checkout itself (auto-detected; no need to set).
 # repo_root: "/path/to/piers"

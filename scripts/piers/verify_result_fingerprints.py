@@ -2,6 +2,10 @@
 file hashes recorded in source_fingerprints.json (the hashes of the code that
 actually produced the paper numbers).
 
+The recorded hashes were computed on Linux (LF line endings). When this repo is
+checked out on Windows the working tree may use CRLF, so the comparison
+normalises line endings before hashing. Content must otherwise be identical.
+
 Run:  python scripts/piers/verify_result_fingerprints.py
 Exit code 0 => the snapshot in this repo is the code that produced the results.
 """
@@ -21,12 +25,20 @@ FINGERPRINTS = os.path.join(RESULTS, "source_fingerprints.json")
 SERVER_PREFIX = "/root/autodl-tmp/piers-main/"
 
 
-def sha256(path: str) -> str:
-    h = hashlib.sha256()
+def _sha256_bytes(data: bytes) -> str:
+    return hashlib.sha256(data).hexdigest()
+
+
+def sha256_raw(path: str) -> str:
     with open(path, "rb") as fh:
-        for chunk in iter(lambda: fh.read(1 << 20), b""):
-            h.update(chunk)
-    return h.hexdigest()
+        return _sha256_bytes(fh.read())
+
+
+def sha256_lf(path: str) -> str:
+    """Hash the file with line endings normalised to LF."""
+    with open(path, "rb") as fh:
+        data = fh.read()
+    return _sha256_bytes(data.replace(b"\r\n", b"\n"))
 
 
 def main() -> int:
@@ -48,12 +60,17 @@ def main() -> int:
             missing += 1
             failures.append(("MISSING", rel, expected, ""))
             continue
-        got = sha256(cand)
-        if got == expected:
+        raw = sha256_raw(cand)
+        lf = sha256_lf(cand)
+        if raw == expected:
             matched += 1
+        elif lf == expected:
+            # Same content, different line endings (Windows checkout).
+            matched += 1
+            print(f"NOTE    {rel} (matches after LF normalisation)")
         else:
             differed += 1
-            failures.append(("DIFFER", rel, expected, got))
+            failures.append(("DIFFER", rel, expected, raw))
 
     for kind, rel, expected, got in failures:
         print(f"{kind:8s} {rel}")

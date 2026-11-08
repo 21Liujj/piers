@@ -2,6 +2,13 @@
 # experiment code stay valid across Windows / Linux checkouts.
 * text=auto eol=lf
 
+# The source snapshot under results/ is a byte-for-byte archive of the code
+# that produced the paper numbers. Its SHA256 is checked against
+# results/I1_densepass/source_fingerprints.json, so it MUST be stored
+# verbatim - no line-ending conversion.
+results/I1_densepass/source_snapshot/** -text
+results/I1_densepass/source_snapshot.tar.gz -text
+
 # Binary assets
 *.pt binary
 *.pth binary
