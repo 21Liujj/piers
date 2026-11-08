@@ -1,0 +1,8 @@
+{
+  "/root/autodl-tmp/piers-main/src/piers_ljj/collaboration/semantic_bridge.py": "c856f5d516d4edf920da94a966fbdd23bf5d3f72dc89d2580c8b72315a110a27",
+  "/root/autodl-tmp/piers-main/src/piers_ljj/collaboration/revision.py": "3ed5144f9e8a6e34c5fced94c87d14a82b2b26d183189cb941e5287f11d2c2c1",
+  "/root/autodl-tmp/piers-main/src/piers_ljj/collaboration/text_guide.py": "0c8a19f6a80677e3fe276d8c234d2b8e45526dc86edb900e47b96e4e7e45523f",
+  "/root/autodl-tmp/piers-main/src/piers_ljj/workers/entry.py": "820451fa52b3f8bd5db0c247d6b82ddd8d741ce29bcb8e07e341533fb443ff0b",
+  "/root/autodl-tmp/piers-main/tests/piers/test_i1_semantic_bridge.py": "a59fd9f14f5d4378174e8f49c9c38de3dd3c74f4963d182ea3e6404e394874c8",
+  "/root/autodl-tmp/piers-main/configs/piers/T2_semantic_to_text.yaml": "3831c66688a99ba2fec9bbf6b8bb0e97d8b4d103e03670f2f5d79d6db4b7c11b"
+}

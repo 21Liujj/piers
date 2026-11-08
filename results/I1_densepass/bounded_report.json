@@ -1,0 +1,45 @@
+{
+  "status": "complete",
+  "text": {
+    "T2_bounded": {
+      "positive_mask_IoU": 0.6790886395656025,
+      "positive_mask_Dice": 0.7620710971211162,
+      "positive_recall": 0.785072491132339,
+      "positive_queries": 478,
+      "negative_queries": 122,
+      "negative_FP_area16": 58,
+      "negative_FPR_area16": 0.47540983606557374
+    },
+    "T2_bounded_no_gate": {
+      "positive_mask_IoU": 0.6921782945168371,
+      "positive_mask_Dice": 0.7736859380016912,
+      "positive_recall": 0.7697869493007726,
+      "positive_queries": 478,
+      "negative_queries": 122,
+      "negative_FP_area16": 57,
+      "negative_FPR_area16": 0.4672131147540984
+    }
+  },
+  "semantic_S2": {
+    "mIoU": 60.255992146312074,
+    "mAcc": 72.05522812409471,
+    "PixAcc": 88.71084183084773,
+    "per_class_iou_pct": [
+      80.69011874530243,
+      46.605339701829024,
+      89.76073955718043,
+      44.821635163007365,
+      48.63786633740455,
+      45.15525771478383,
+      30.515808414017652,
+      27.150812661965706,
+      78.80639887533303,
+      46.28165086889163,
+      94.51456170648646,
+      65.99472813667101,
+      84.39298001918378
+    ]
+  },
+  "elapsed_s": 30.493880693800747,
+  "hypothesis": "Error analysis showed consensus trimming loses recall; bound exact-class probability fusion to original DINO boxes, preserve coarse/free queries and conflict fallback."
+}

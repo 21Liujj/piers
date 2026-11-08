@@ -1,0 +1,42 @@
+[
+  {
+    "shard": 0,
+    "pid": 23179,
+    "out": "/root/autodl-tmp/piers-main/runs/I1-collab-20261106_213607/e0_shards/0"
+  },
+  {
+    "shard": 1,
+    "pid": 23180,
+    "out": "/root/autodl-tmp/piers-main/runs/I1-collab-20261106_213607/e0_shards/1"
+  },
+  {
+    "shard": 2,
+    "pid": 23181,
+    "out": "/root/autodl-tmp/piers-main/runs/I1-collab-20261106_213607/e0_shards/2"
+  },
+  {
+    "shard": 3,
+    "pid": 23182,
+    "out": "/root/autodl-tmp/piers-main/runs/I1-collab-20261106_213607/e0_shards/3"
+  },
+  {
+    "shard": 4,
+    "pid": 23183,
+    "out": "/root/autodl-tmp/piers-main/runs/I1-collab-20261106_213607/e0_shards/4"
+  },
+  {
+    "shard": 5,
+    "pid": 23184,
+    "out": "/root/autodl-tmp/piers-main/runs/I1-collab-20261106_213607/e0_shards/5"
+  },
+  {
+    "shard": 6,
+    "pid": 23185,
+    "out": "/root/autodl-tmp/piers-main/runs/I1-collab-20261106_213607/e0_shards/6"
+  },
+  {
+    "shard": 7,
+    "pid": 23186,
+    "out": "/root/autodl-tmp/piers-main/runs/I1-collab-20261106_213607/e0_shards/7"
+  }
+]

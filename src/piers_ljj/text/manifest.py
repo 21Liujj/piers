@@ -56,5 +56,7 @@ def save(path: str, manifest: dict) -> str:
 
 
 def load(path: str) -> dict:
-    with open(path, encoding="utf-8") as f:
-        return json.load(f)
+    """Load a manifest JSON, expanding any ${PIERS_*} path placeholders."""
+    from piers_ljj.paths import load_manifest
+
+    return load_manifest(path)

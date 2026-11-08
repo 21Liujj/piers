@@ -1,0 +1,14 @@
+# Normalise line endings so that the SHA256 fingerprints recorded for the
+# experiment code stay valid across Windows / Linux checkouts.
+* text=auto eol=lf
+
+# Binary assets
+*.pt binary
+*.pth binary
+*.npz binary
+*.ckpt binary
+*.png binary
+*.jpg binary
+*.zip binary
+*.gz binary
+*.tar binary

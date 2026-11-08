@@ -1,0 +1,102 @@
+{
+  "status": "complete",
+  "isolation": "All other GPU processes stopped; five supplementary contexts still reside in memory. No concurrent GPU compute allowed.",
+  "startup_both_resident_workers_s": 6.656018065288663,
+  "cold_first_end_to_end_s": 18.810249022208154,
+  "warmup_images": 1,
+  "measured_images": 5,
+  "query": "road",
+  "precision": "semantic FP32, text DINO/SAM decode bf16, SAM image encoder original backend dtype",
+  "full_end_to_end_mean_s": 4.537368921563029,
+  "cached_semantic_query_mean_s": 0.9090745620429516,
+  "semantic_mean_s": 3.4062849022448063,
+  "text_mean_s": 0.7208673947490751,
+  "three_query_batch": {
+    "wall_s": 1.63114432990551,
+    "queries_per_sec": 1.839199600549012,
+    "DINO_calls": 12,
+    "SAM_image_encodes": 4,
+    "note": "Batch throughput; not unary query latency."
+  },
+  "device_total_used_utilization_csv": "85651 MiB, 23637 MiB, 39 %",
+  "rows": [
+    {
+      "image_id": "dpass_dev-calib_000000",
+      "warmup": true,
+      "full_end_to_end_s": 12.154230956919491,
+      "cached_semantic_query_s": 1.003066232893616,
+      "semantic_compute_s": 9.75777488714084,
+      "text_compute_s": 1.9281957731582224,
+      "collaboration_and_decode_IPC_s": 0.36331847589462996,
+      "semantic_peak_allocated_mib": 6708.43505859375,
+      "text_peak_allocated_mib": 2099.40478515625,
+      "DINO_calls": 4,
+      "SAM_encodes": 4
+    },
+    {
+      "image_id": "dpass_dev-calib_000010",
+      "warmup": false,
+      "full_end_to_end_s": 4.668414920102805,
+      "cached_semantic_query_s": 0.9176508048549294,
+      "semantic_compute_s": 3.490091683808714,
+      "text_compute_s": 0.7438585171476007,
+      "collaboration_and_decode_IPC_s": 0.3552574892528355,
+      "semantic_peak_allocated_mib": 3808.95068359375,
+      "text_peak_allocated_mib": 2098.474609375,
+      "DINO_calls": 4,
+      "SAM_encodes": 4
+    },
+    {
+      "image_id": "dpass_dev-calib_000020",
+      "warmup": false,
+      "full_end_to_end_s": 4.405050426721573,
+      "cached_semantic_query_s": 0.8509800229221582,
+      "semantic_compute_s": 3.3343017883598804,
+      "text_compute_s": 0.6976641220971942,
+      "collaboration_and_decode_IPC_s": 0.3385817469097674,
+      "semantic_peak_allocated_mib": 3808.95068359375,
+      "text_peak_allocated_mib": 2098.474609375,
+      "DINO_calls": 4,
+      "SAM_encodes": 4
+    },
+    {
+      "image_id": "dpass_dev-calib_000030",
+      "warmup": false,
+      "full_end_to_end_s": 4.519992807414383,
+      "cached_semantic_query_s": 0.9298024522140622,
+      "semantic_compute_s": 3.4067385070957243,
+      "text_compute_s": 0.7043524738401175,
+      "collaboration_and_decode_IPC_s": 0.3729633940383792,
+      "semantic_peak_allocated_mib": 3808.95068359375,
+      "text_peak_allocated_mib": 2098.474609375,
+      "DINO_calls": 4,
+      "SAM_encodes": 4
+    },
+    {
+      "image_id": "dpass_dev-calib_000040",
+      "warmup": false,
+      "full_end_to_end_s": 4.544779089279473,
+      "cached_semantic_query_s": 0.9165002810768783,
+      "semantic_compute_s": 3.3776832409203053,
+      "text_compute_s": 0.7326701949350536,
+      "collaboration_and_decode_IPC_s": 0.3602619799785316,
+      "semantic_peak_allocated_mib": 3808.95068359375,
+      "text_peak_allocated_mib": 2098.474609375,
+      "DINO_calls": 4,
+      "SAM_encodes": 4
+    },
+    {
+      "image_id": "dpass_dev-calib_000050",
+      "warmup": false,
+      "full_end_to_end_s": 4.548607364296913,
+      "cached_semantic_query_s": 0.9304392491467297,
+      "semantic_compute_s": 3.4226092910394073,
+      "text_compute_s": 0.72579166572541,
+      "collaboration_and_decode_IPC_s": 0.36922075133770704,
+      "semantic_peak_allocated_mib": 3808.95068359375,
+      "text_peak_allocated_mib": 2098.474609375,
+      "DINO_calls": 4,
+      "SAM_encodes": 4
+    }
+  ]
+}

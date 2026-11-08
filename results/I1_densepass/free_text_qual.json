@@ -1,0 +1,167 @@
+{
+  "split": "qualitative",
+  "query_set_version": "free-text-qual-v1",
+  "images": [
+    {
+      "dataset": "DensePASS",
+      "height": 400,
+      "image_id": "dpass_dev-calib_000000",
+      "path": "/root/autodl-tmp/data/DensePASS/leftImg8bit/val/100_.png",
+      "split": "dev-calib",
+      "src_file": "100_.png",
+      "width": 2048
+    },
+    {
+      "dataset": "DensePASS",
+      "height": 400,
+      "image_id": "dpass_dev-calib_000033",
+      "path": "/root/autodl-tmp/data/DensePASS/leftImg8bit/val/162_.png",
+      "split": "dev-calib",
+      "src_file": "162_.png",
+      "width": 2048
+    },
+    {
+      "dataset": "DensePASS",
+      "height": 400,
+      "image_id": "dpass_dev-calib_000066",
+      "path": "/root/autodl-tmp/data/DensePASS/leftImg8bit/val/309_.png",
+      "split": "dev-calib",
+      "src_file": "309_.png",
+      "width": 2048
+    }
+  ],
+  "queries": [
+    {
+      "image_id": "dpass_dev-calib_000000",
+      "query_id": "dpass_dev-calib_000000_free0",
+      "raw_text": "the leftmost car",
+      "task_type": "instance_referring",
+      "ontology": {
+        "relation": "unmapped"
+      },
+      "language": "en",
+      "query_set_version": "free-text-qual-v1"
+    },
+    {
+      "image_id": "dpass_dev-calib_000000",
+      "query_id": "dpass_dev-calib_000000_free1",
+      "raw_text": "a tire",
+      "task_type": "category_union",
+      "ontology": {
+        "relation": "unmapped"
+      },
+      "language": "en",
+      "query_set_version": "free-text-qual-v1"
+    },
+    {
+      "image_id": "dpass_dev-calib_000000",
+      "query_id": "dpass_dev-calib_000000_free2",
+      "raw_text": "a pedestrian wearing dark clothes",
+      "task_type": "instance_referring",
+      "ontology": {
+        "relation": "unmapped"
+      },
+      "language": "en",
+      "query_set_version": "free-text-qual-v1"
+    },
+    {
+      "image_id": "dpass_dev-calib_000000",
+      "query_id": "dpass_dev-calib_000000_free3",
+      "raw_text": "a purple flying elephant",
+      "task_type": "category_union",
+      "ontology": {
+        "relation": "unmapped"
+      },
+      "language": "en",
+      "query_set_version": "free-text-qual-v1"
+    },
+    {
+      "image_id": "dpass_dev-calib_000033",
+      "query_id": "dpass_dev-calib_000033_free0",
+      "raw_text": "the leftmost car",
+      "task_type": "instance_referring",
+      "ontology": {
+        "relation": "unmapped"
+      },
+      "language": "en",
+      "query_set_version": "free-text-qual-v1"
+    },
+    {
+      "image_id": "dpass_dev-calib_000033",
+      "query_id": "dpass_dev-calib_000033_free1",
+      "raw_text": "a tire",
+      "task_type": "category_union",
+      "ontology": {
+        "relation": "unmapped"
+      },
+      "language": "en",
+      "query_set_version": "free-text-qual-v1"
+    },
+    {
+      "image_id": "dpass_dev-calib_000033",
+      "query_id": "dpass_dev-calib_000033_free2",
+      "raw_text": "a pedestrian wearing dark clothes",
+      "task_type": "instance_referring",
+      "ontology": {
+        "relation": "unmapped"
+      },
+      "language": "en",
+      "query_set_version": "free-text-qual-v1"
+    },
+    {
+      "image_id": "dpass_dev-calib_000033",
+      "query_id": "dpass_dev-calib_000033_free3",
+      "raw_text": "a purple flying elephant",
+      "task_type": "category_union",
+      "ontology": {
+        "relation": "unmapped"
+      },
+      "language": "en",
+      "query_set_version": "free-text-qual-v1"
+    },
+    {
+      "image_id": "dpass_dev-calib_000066",
+      "query_id": "dpass_dev-calib_000066_free0",
+      "raw_text": "the leftmost car",
+      "task_type": "instance_referring",
+      "ontology": {
+        "relation": "unmapped"
+      },
+      "language": "en",
+      "query_set_version": "free-text-qual-v1"
+    },
+    {
+      "image_id": "dpass_dev-calib_000066",
+      "query_id": "dpass_dev-calib_000066_free1",
+      "raw_text": "a tire",
+      "task_type": "category_union",
+      "ontology": {
+        "relation": "unmapped"
+      },
+      "language": "en",
+      "query_set_version": "free-text-qual-v1"
+    },
+    {
+      "image_id": "dpass_dev-calib_000066",
+      "query_id": "dpass_dev-calib_000066_free2",
+      "raw_text": "a pedestrian wearing dark clothes",
+      "task_type": "instance_referring",
+      "ontology": {
+        "relation": "unmapped"
+      },
+      "language": "en",
+      "query_set_version": "free-text-qual-v1"
+    },
+    {
+      "image_id": "dpass_dev-calib_000066",
+      "query_id": "dpass_dev-calib_000066_free3",
+      "raw_text": "a purple flying elephant",
+      "task_type": "category_union",
+      "ontology": {
+        "relation": "unmapped"
+      },
+      "language": "en",
+      "query_set_version": "free-text-qual-v1"
+    }
+  ]
+}

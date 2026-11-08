@@ -1,0 +1,3106 @@
+{
+  "status": "complete",
+  "images": [
+    {
+      "image_id": "dpass_dev-calib_000007",
+      "candidates": 37,
+      "queries": 8,
+      "hard_dropped": 7,
+      "changed_queries": 3,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 37,
+          "accepted": 19,
+          "skipped_low_quality": 10,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 123126,
+          "changed_pixels": 28799,
+          "ignored_edge_pixels": 14718,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 37,
+          "accepted": 15,
+          "skipped_low_quality": 10,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 4,
+          "written_pixels": 96146,
+          "changed_pixels": 3811,
+          "ignored_edge_pixels": 11613,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000004",
+      "candidates": 37,
+      "queries": 8,
+      "hard_dropped": 4,
+      "changed_queries": 2,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 37,
+          "accepted": 30,
+          "skipped_low_quality": 2,
+          "skipped_unmapped": 5,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 353486,
+          "changed_pixels": 28871,
+          "ignored_edge_pixels": 34969,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 37,
+          "accepted": 26,
+          "skipped_low_quality": 2,
+          "skipped_unmapped": 5,
+          "skipped_semantic_disagreement": 4,
+          "written_pixels": 339528,
+          "changed_pixels": 16319,
+          "ignored_edge_pixels": 29090,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000000",
+      "candidates": 37,
+      "queries": 8,
+      "hard_dropped": 2,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 37,
+          "accepted": 27,
+          "skipped_low_quality": 2,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 320281,
+          "changed_pixels": 4314,
+          "ignored_edge_pixels": 28495,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 37,
+          "accepted": 26,
+          "skipped_low_quality": 2,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 1,
+          "written_pixels": 320106,
+          "changed_pixels": 4139,
+          "ignored_edge_pixels": 28312,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000006",
+      "candidates": 39,
+      "queries": 8,
+      "hard_dropped": 1,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 39,
+          "accepted": 24,
+          "skipped_low_quality": 6,
+          "skipped_unmapped": 9,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 422281,
+          "changed_pixels": 10847,
+          "ignored_edge_pixels": 39735,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 39,
+          "accepted": 23,
+          "skipped_low_quality": 6,
+          "skipped_unmapped": 9,
+          "skipped_semantic_disagreement": 1,
+          "written_pixels": 415596,
+          "changed_pixels": 4165,
+          "ignored_edge_pixels": 37001,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000005",
+      "candidates": 46,
+      "queries": 8,
+      "hard_dropped": 5,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 46,
+          "accepted": 31,
+          "skipped_low_quality": 7,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 505880,
+          "changed_pixels": 20463,
+          "ignored_edge_pixels": 48939,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 46,
+          "accepted": 26,
+          "skipped_low_quality": 7,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 5,
+          "written_pixels": 503648,
+          "changed_pixels": 18231,
+          "ignored_edge_pixels": 48071,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000001",
+      "candidates": 59,
+      "queries": 8,
+      "hard_dropped": 2,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 59,
+          "accepted": 43,
+          "skipped_low_quality": 7,
+          "skipped_unmapped": 9,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 411400,
+          "changed_pixels": 7836,
+          "ignored_edge_pixels": 42000,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 59,
+          "accepted": 40,
+          "skipped_low_quality": 7,
+          "skipped_unmapped": 9,
+          "skipped_semantic_disagreement": 3,
+          "written_pixels": 408671,
+          "changed_pixels": 5109,
+          "ignored_edge_pixels": 41368,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000003",
+      "candidates": 64,
+      "queries": 8,
+      "hard_dropped": 4,
+      "changed_queries": 2,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 64,
+          "accepted": 46,
+          "skipped_low_quality": 8,
+          "skipped_unmapped": 10,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 120867,
+          "changed_pixels": 8656,
+          "ignored_edge_pixels": 27163,
+          "conflict_pixels": 44887
+        },
+        "U1_consensus_gate": {
+          "candidates": 64,
+          "accepted": 40,
+          "skipped_low_quality": 8,
+          "skipped_unmapped": 10,
+          "skipped_semantic_disagreement": 6,
+          "written_pixels": 162634,
+          "changed_pixels": 6120,
+          "ignored_edge_pixels": 26293,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000002",
+      "candidates": 91,
+      "queries": 8,
+      "hard_dropped": 3,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 91,
+          "accepted": 67,
+          "skipped_low_quality": 10,
+          "skipped_unmapped": 14,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 338958,
+          "changed_pixels": 8688,
+          "ignored_edge_pixels": 44118,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 91,
+          "accepted": 64,
+          "skipped_low_quality": 10,
+          "skipped_unmapped": 14,
+          "skipped_semantic_disagreement": 3,
+          "written_pixels": 336120,
+          "changed_pixels": 5850,
+          "ignored_edge_pixels": 43361,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000011",
+      "candidates": 31,
+      "queries": 8,
+      "hard_dropped": 6,
+      "changed_queries": 2,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 31,
+          "accepted": 26,
+          "skipped_low_quality": 1,
+          "skipped_unmapped": 4,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 578006,
+          "changed_pixels": 58343,
+          "ignored_edge_pixels": 49772,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 31,
+          "accepted": 20,
+          "skipped_low_quality": 1,
+          "skipped_unmapped": 4,
+          "skipped_semantic_disagreement": 6,
+          "written_pixels": 529440,
+          "changed_pixels": 10820,
+          "ignored_edge_pixels": 38456,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000008",
+      "candidates": 65,
+      "queries": 8,
+      "hard_dropped": 1,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 65,
+          "accepted": 43,
+          "skipped_low_quality": 14,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 178481,
+          "changed_pixels": 4973,
+          "ignored_edge_pixels": 34955,
+          "conflict_pixels": 16
+        },
+        "U1_consensus_gate": {
+          "candidates": 65,
+          "accepted": 42,
+          "skipped_low_quality": 14,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 1,
+          "written_pixels": 174702,
+          "changed_pixels": 1194,
+          "ignored_edge_pixels": 34136,
+          "conflict_pixels": 16
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000014",
+      "candidates": 41,
+      "queries": 8,
+      "hard_dropped": 3,
+      "changed_queries": 2,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 41,
+          "accepted": 29,
+          "skipped_low_quality": 2,
+          "skipped_unmapped": 10,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 276520,
+          "changed_pixels": 43300,
+          "ignored_edge_pixels": 27563,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 41,
+          "accepted": 24,
+          "skipped_low_quality": 2,
+          "skipped_unmapped": 10,
+          "skipped_semantic_disagreement": 5,
+          "written_pixels": 264760,
+          "changed_pixels": 34684,
+          "ignored_edge_pixels": 25313,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000009",
+      "candidates": 65,
+      "queries": 8,
+      "hard_dropped": 16,
+      "changed_queries": 2,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 65,
+          "accepted": 52,
+          "skipped_low_quality": 6,
+          "skipped_unmapped": 7,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 374927,
+          "changed_pixels": 17996,
+          "ignored_edge_pixels": 38485,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 65,
+          "accepted": 35,
+          "skipped_low_quality": 6,
+          "skipped_unmapped": 7,
+          "skipped_semantic_disagreement": 17,
+          "written_pixels": 360886,
+          "changed_pixels": 4329,
+          "ignored_edge_pixels": 34764,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000013",
+      "candidates": 49,
+      "queries": 8,
+      "hard_dropped": 4,
+      "changed_queries": 3,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 49,
+          "accepted": 35,
+          "skipped_low_quality": 4,
+          "skipped_unmapped": 10,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 344992,
+          "changed_pixels": 22403,
+          "ignored_edge_pixels": 39876,
+          "conflict_pixels": 855
+        },
+        "U1_consensus_gate": {
+          "candidates": 49,
+          "accepted": 32,
+          "skipped_low_quality": 4,
+          "skipped_unmapped": 10,
+          "skipped_semantic_disagreement": 3,
+          "written_pixels": 340983,
+          "changed_pixels": 17574,
+          "ignored_edge_pixels": 38981,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000012",
+      "candidates": 76,
+      "queries": 8,
+      "hard_dropped": 4,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 76,
+          "accepted": 46,
+          "skipped_low_quality": 22,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 204271,
+          "changed_pixels": 95451,
+          "ignored_edge_pixels": 29489,
+          "conflict_pixels": 25852
+        },
+        "U1_consensus_gate": {
+          "candidates": 76,
+          "accepted": 39,
+          "skipped_low_quality": 22,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 7,
+          "written_pixels": 77352,
+          "changed_pixels": 560,
+          "ignored_edge_pixels": 16635,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000015",
+      "candidates": 43,
+      "queries": 8,
+      "hard_dropped": 1,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 43,
+          "accepted": 33,
+          "skipped_low_quality": 2,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 247257,
+          "changed_pixels": 12559,
+          "ignored_edge_pixels": 26154,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 43,
+          "accepted": 29,
+          "skipped_low_quality": 2,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 4,
+          "written_pixels": 247044,
+          "changed_pixels": 12450,
+          "ignored_edge_pixels": 25808,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000010",
+      "candidates": 117,
+      "queries": 8,
+      "hard_dropped": 1,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 117,
+          "accepted": 79,
+          "skipped_low_quality": 31,
+          "skipped_unmapped": 7,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 338622,
+          "changed_pixels": 603,
+          "ignored_edge_pixels": 35631,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 117,
+          "accepted": 78,
+          "skipped_low_quality": 31,
+          "skipped_unmapped": 7,
+          "skipped_semantic_disagreement": 1,
+          "written_pixels": 338592,
+          "changed_pixels": 581,
+          "ignored_edge_pixels": 35538,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000018",
+      "candidates": 33,
+      "queries": 8,
+      "hard_dropped": 7,
+      "changed_queries": 3,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 33,
+          "accepted": 19,
+          "skipped_low_quality": 8,
+          "skipped_unmapped": 6,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 191913,
+          "changed_pixels": 62476,
+          "ignored_edge_pixels": 29512,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 33,
+          "accepted": 12,
+          "skipped_low_quality": 8,
+          "skipped_unmapped": 6,
+          "skipped_semantic_disagreement": 7,
+          "written_pixels": 121260,
+          "changed_pixels": 1153,
+          "ignored_edge_pixels": 15200,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000016",
+      "candidates": 62,
+      "queries": 8,
+      "hard_dropped": 1,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 62,
+          "accepted": 51,
+          "skipped_low_quality": 2,
+          "skipped_unmapped": 9,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 486093,
+          "changed_pixels": 6516,
+          "ignored_edge_pixels": 41418,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 62,
+          "accepted": 50,
+          "skipped_low_quality": 2,
+          "skipped_unmapped": 9,
+          "skipped_semantic_disagreement": 1,
+          "written_pixels": 484419,
+          "changed_pixels": 4842,
+          "ignored_edge_pixels": 40837,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000019",
+      "candidates": 68,
+      "queries": 8,
+      "hard_dropped": 0,
+      "changed_queries": 0,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 68,
+          "accepted": 50,
+          "skipped_low_quality": 8,
+          "skipped_unmapped": 10,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 226302,
+          "changed_pixels": 11757,
+          "ignored_edge_pixels": 26123,
+          "conflict_pixels": 3
+        },
+        "U1_consensus_gate": {
+          "candidates": 68,
+          "accepted": 45,
+          "skipped_low_quality": 8,
+          "skipped_unmapped": 10,
+          "skipped_semantic_disagreement": 5,
+          "written_pixels": 219437,
+          "changed_pixels": 6824,
+          "ignored_edge_pixels": 24863,
+          "conflict_pixels": 3
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000020",
+      "candidates": 43,
+      "queries": 8,
+      "hard_dropped": 2,
+      "changed_queries": 2,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 43,
+          "accepted": 25,
+          "skipped_low_quality": 10,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 334060,
+          "changed_pixels": 105585,
+          "ignored_edge_pixels": 32100,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 43,
+          "accepted": 23,
+          "skipped_low_quality": 10,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 2,
+          "written_pixels": 243994,
+          "changed_pixels": 16192,
+          "ignored_edge_pixels": 26304,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000017",
+      "candidates": 76,
+      "queries": 8,
+      "hard_dropped": 5,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 76,
+          "accepted": 60,
+          "skipped_low_quality": 4,
+          "skipped_unmapped": 12,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 460948,
+          "changed_pixels": 5365,
+          "ignored_edge_pixels": 54566,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 76,
+          "accepted": 51,
+          "skipped_low_quality": 4,
+          "skipped_unmapped": 12,
+          "skipped_semantic_disagreement": 9,
+          "written_pixels": 460509,
+          "changed_pixels": 5009,
+          "ignored_edge_pixels": 53903,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000022",
+      "candidates": 40,
+      "queries": 8,
+      "hard_dropped": 3,
+      "changed_queries": 2,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 40,
+          "accepted": 30,
+          "skipped_low_quality": 2,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 259200,
+          "changed_pixels": 49679,
+          "ignored_edge_pixels": 28449,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 40,
+          "accepted": 27,
+          "skipped_low_quality": 2,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 3,
+          "written_pixels": 234687,
+          "changed_pixels": 25268,
+          "ignored_edge_pixels": 25472,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000023",
+      "candidates": 37,
+      "queries": 8,
+      "hard_dropped": 7,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 37,
+          "accepted": 28,
+          "skipped_low_quality": 2,
+          "skipped_unmapped": 7,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 534168,
+          "changed_pixels": 15518,
+          "ignored_edge_pixels": 37760,
+          "conflict_pixels": 16
+        },
+        "U1_consensus_gate": {
+          "candidates": 37,
+          "accepted": 22,
+          "skipped_low_quality": 2,
+          "skipped_unmapped": 7,
+          "skipped_semantic_disagreement": 6,
+          "written_pixels": 521553,
+          "changed_pixels": 2931,
+          "ignored_edge_pixels": 34225,
+          "conflict_pixels": 16
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000021",
+      "candidates": 79,
+      "queries": 8,
+      "hard_dropped": 0,
+      "changed_queries": 0,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 79,
+          "accepted": 69,
+          "skipped_low_quality": 3,
+          "skipped_unmapped": 7,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 493842,
+          "changed_pixels": 6152,
+          "ignored_edge_pixels": 46750,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 79,
+          "accepted": 69,
+          "skipped_low_quality": 3,
+          "skipped_unmapped": 7,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 493842,
+          "changed_pixels": 6152,
+          "ignored_edge_pixels": 46750,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000025",
+      "candidates": 55,
+      "queries": 8,
+      "hard_dropped": 14,
+      "changed_queries": 2,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 55,
+          "accepted": 41,
+          "skipped_low_quality": 6,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 324854,
+          "changed_pixels": 6095,
+          "ignored_edge_pixels": 32408,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 55,
+          "accepted": 33,
+          "skipped_low_quality": 6,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 8,
+          "written_pixels": 319881,
+          "changed_pixels": 1135,
+          "ignored_edge_pixels": 29278,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000026",
+      "candidates": 30,
+      "queries": 8,
+      "hard_dropped": 4,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 30,
+          "accepted": 20,
+          "skipped_low_quality": 0,
+          "skipped_unmapped": 10,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 635920,
+          "changed_pixels": 184853,
+          "ignored_edge_pixels": 47425,
+          "conflict_pixels": 235
+        },
+        "U1_consensus_gate": {
+          "candidates": 30,
+          "accepted": 15,
+          "skipped_low_quality": 0,
+          "skipped_unmapped": 10,
+          "skipped_semantic_disagreement": 5,
+          "written_pixels": 472062,
+          "changed_pixels": 21181,
+          "ignored_edge_pixels": 41496,
+          "conflict_pixels": 235
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000027",
+      "candidates": 29,
+      "queries": 8,
+      "hard_dropped": 1,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 29,
+          "accepted": 23,
+          "skipped_low_quality": 0,
+          "skipped_unmapped": 6,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 564609,
+          "changed_pixels": 119302,
+          "ignored_edge_pixels": 42535,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 29,
+          "accepted": 18,
+          "skipped_low_quality": 0,
+          "skipped_unmapped": 6,
+          "skipped_semantic_disagreement": 5,
+          "written_pixels": 547242,
+          "changed_pixels": 103282,
+          "ignored_edge_pixels": 40271,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000024",
+      "candidates": 79,
+      "queries": 8,
+      "hard_dropped": 0,
+      "changed_queries": 0,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 79,
+          "accepted": 57,
+          "skipped_low_quality": 15,
+          "skipped_unmapped": 7,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 224156,
+          "changed_pixels": 12448,
+          "ignored_edge_pixels": 34663,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 79,
+          "accepted": 55,
+          "skipped_low_quality": 15,
+          "skipped_unmapped": 7,
+          "skipped_semantic_disagreement": 2,
+          "written_pixels": 216225,
+          "changed_pixels": 8296,
+          "ignored_edge_pixels": 32329,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000028",
+      "candidates": 42,
+      "queries": 8,
+      "hard_dropped": 5,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 42,
+          "accepted": 29,
+          "skipped_low_quality": 2,
+          "skipped_unmapped": 11,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 555854,
+          "changed_pixels": 52346,
+          "ignored_edge_pixels": 55117,
+          "conflict_pixels": 5207
+        },
+        "U1_consensus_gate": {
+          "candidates": 42,
+          "accepted": 22,
+          "skipped_low_quality": 2,
+          "skipped_unmapped": 11,
+          "skipped_semantic_disagreement": 7,
+          "written_pixels": 479961,
+          "changed_pixels": 1187,
+          "ignored_edge_pixels": 37763,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000030",
+      "candidates": 33,
+      "queries": 8,
+      "hard_dropped": 0,
+      "changed_queries": 0,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 33,
+          "accepted": 26,
+          "skipped_low_quality": 2,
+          "skipped_unmapped": 5,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 455056,
+          "changed_pixels": 1066,
+          "ignored_edge_pixels": 40063,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 33,
+          "accepted": 26,
+          "skipped_low_quality": 2,
+          "skipped_unmapped": 5,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 455056,
+          "changed_pixels": 1066,
+          "ignored_edge_pixels": 40063,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000031",
+      "candidates": 30,
+      "queries": 8,
+      "hard_dropped": 0,
+      "changed_queries": 0,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 30,
+          "accepted": 16,
+          "skipped_low_quality": 2,
+          "skipped_unmapped": 12,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 454121,
+          "changed_pixels": 29163,
+          "ignored_edge_pixels": 41624,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 30,
+          "accepted": 16,
+          "skipped_low_quality": 2,
+          "skipped_unmapped": 12,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 454121,
+          "changed_pixels": 29163,
+          "ignored_edge_pixels": 41624,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000029",
+      "candidates": 83,
+      "queries": 8,
+      "hard_dropped": 1,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 83,
+          "accepted": 72,
+          "skipped_low_quality": 4,
+          "skipped_unmapped": 7,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 455843,
+          "changed_pixels": 702,
+          "ignored_edge_pixels": 47052,
+          "conflict_pixels": 78887
+        },
+        "U1_consensus_gate": {
+          "candidates": 83,
+          "accepted": 71,
+          "skipped_low_quality": 4,
+          "skipped_unmapped": 7,
+          "skipped_semantic_disagreement": 1,
+          "written_pixels": 534131,
+          "changed_pixels": 153,
+          "ignored_edge_pixels": 46953,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000032",
+      "candidates": 36,
+      "queries": 8,
+      "hard_dropped": 1,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 36,
+          "accepted": 25,
+          "skipped_low_quality": 6,
+          "skipped_unmapped": 5,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 244964,
+          "changed_pixels": 6705,
+          "ignored_edge_pixels": 20739,
+          "conflict_pixels": 7605
+        },
+        "U1_consensus_gate": {
+          "candidates": 36,
+          "accepted": 23,
+          "skipped_low_quality": 6,
+          "skipped_unmapped": 5,
+          "skipped_semantic_disagreement": 2,
+          "written_pixels": 252554,
+          "changed_pixels": 6690,
+          "ignored_edge_pixels": 20696,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000034",
+      "candidates": 56,
+      "queries": 8,
+      "hard_dropped": 0,
+      "changed_queries": 0,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 56,
+          "accepted": 44,
+          "skipped_low_quality": 1,
+          "skipped_unmapped": 11,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 494935,
+          "changed_pixels": 49262,
+          "ignored_edge_pixels": 47062,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 56,
+          "accepted": 40,
+          "skipped_low_quality": 1,
+          "skipped_unmapped": 11,
+          "skipped_semantic_disagreement": 4,
+          "written_pixels": 487241,
+          "changed_pixels": 42476,
+          "ignored_edge_pixels": 45281,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000035",
+      "candidates": 57,
+      "queries": 8,
+      "hard_dropped": 2,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 57,
+          "accepted": 49,
+          "skipped_low_quality": 0,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 598907,
+          "changed_pixels": 25242,
+          "ignored_edge_pixels": 39740,
+          "conflict_pixels": 146
+        },
+        "U1_consensus_gate": {
+          "candidates": 57,
+          "accepted": 44,
+          "skipped_low_quality": 0,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 5,
+          "written_pixels": 598994,
+          "changed_pixels": 25268,
+          "ignored_edge_pixels": 39614,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000033",
+      "candidates": 82,
+      "queries": 8,
+      "hard_dropped": 5,
+      "changed_queries": 2,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 82,
+          "accepted": 69,
+          "skipped_low_quality": 2,
+          "skipped_unmapped": 11,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 462440,
+          "changed_pixels": 2093,
+          "ignored_edge_pixels": 41163,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 82,
+          "accepted": 64,
+          "skipped_low_quality": 2,
+          "skipped_unmapped": 11,
+          "skipped_semantic_disagreement": 5,
+          "written_pixels": 459985,
+          "changed_pixels": 487,
+          "ignored_edge_pixels": 39759,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000036",
+      "candidates": 68,
+      "queries": 8,
+      "hard_dropped": 1,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 68,
+          "accepted": 44,
+          "skipped_low_quality": 15,
+          "skipped_unmapped": 9,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 305481,
+          "changed_pixels": 5047,
+          "ignored_edge_pixels": 33052,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 68,
+          "accepted": 43,
+          "skipped_low_quality": 15,
+          "skipped_unmapped": 9,
+          "skipped_semantic_disagreement": 1,
+          "written_pixels": 304128,
+          "changed_pixels": 3694,
+          "ignored_edge_pixels": 32642,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000038",
+      "candidates": 81,
+      "queries": 8,
+      "hard_dropped": 2,
+      "changed_queries": 2,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 81,
+          "accepted": 62,
+          "skipped_low_quality": 10,
+          "skipped_unmapped": 9,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 405529,
+          "changed_pixels": 14159,
+          "ignored_edge_pixels": 31410,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 81,
+          "accepted": 60,
+          "skipped_low_quality": 10,
+          "skipped_unmapped": 9,
+          "skipped_semantic_disagreement": 2,
+          "written_pixels": 405117,
+          "changed_pixels": 13747,
+          "ignored_edge_pixels": 31105,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000039",
+      "candidates": 60,
+      "queries": 8,
+      "hard_dropped": 4,
+      "changed_queries": 2,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 60,
+          "accepted": 42,
+          "skipped_low_quality": 8,
+          "skipped_unmapped": 10,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 400553,
+          "changed_pixels": 25408,
+          "ignored_edge_pixels": 30922,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 60,
+          "accepted": 39,
+          "skipped_low_quality": 8,
+          "skipped_unmapped": 10,
+          "skipped_semantic_disagreement": 3,
+          "written_pixels": 375431,
+          "changed_pixels": 287,
+          "ignored_edge_pixels": 25341,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000037",
+      "candidates": 118,
+      "queries": 8,
+      "hard_dropped": 1,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 118,
+          "accepted": 71,
+          "skipped_low_quality": 39,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 263663,
+          "changed_pixels": 3343,
+          "ignored_edge_pixels": 34102,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 118,
+          "accepted": 71,
+          "skipped_low_quality": 39,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 263663,
+          "changed_pixels": 3343,
+          "ignored_edge_pixels": 34102,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000040",
+      "candidates": 63,
+      "queries": 8,
+      "hard_dropped": 0,
+      "changed_queries": 0,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 63,
+          "accepted": 45,
+          "skipped_low_quality": 9,
+          "skipped_unmapped": 9,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 369669,
+          "changed_pixels": 19611,
+          "ignored_edge_pixels": 41288,
+          "conflict_pixels": 1
+        },
+        "U1_consensus_gate": {
+          "candidates": 63,
+          "accepted": 45,
+          "skipped_low_quality": 9,
+          "skipped_unmapped": 9,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 369669,
+          "changed_pixels": 19611,
+          "ignored_edge_pixels": 41288,
+          "conflict_pixels": 1
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000042",
+      "candidates": 34,
+      "queries": 8,
+      "hard_dropped": 3,
+      "changed_queries": 2,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 34,
+          "accepted": 25,
+          "skipped_low_quality": 1,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 519560,
+          "changed_pixels": 11626,
+          "ignored_edge_pixels": 34585,
+          "conflict_pixels": 1769
+        },
+        "U1_consensus_gate": {
+          "candidates": 34,
+          "accepted": 21,
+          "skipped_low_quality": 1,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 4,
+          "written_pixels": 514088,
+          "changed_pixels": 4417,
+          "ignored_edge_pixels": 33076,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000041",
+      "candidates": 61,
+      "queries": 8,
+      "hard_dropped": 7,
+      "changed_queries": 2,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 61,
+          "accepted": 45,
+          "skipped_low_quality": 8,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 401480,
+          "changed_pixels": 106214,
+          "ignored_edge_pixels": 40293,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 61,
+          "accepted": 37,
+          "skipped_low_quality": 8,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 8,
+          "written_pixels": 326852,
+          "changed_pixels": 38560,
+          "ignored_edge_pixels": 33539,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000043",
+      "candidates": 48,
+      "queries": 8,
+      "hard_dropped": 2,
+      "changed_queries": 2,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 48,
+          "accepted": 44,
+          "skipped_low_quality": 0,
+          "skipped_unmapped": 4,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 441906,
+          "changed_pixels": 61931,
+          "ignored_edge_pixels": 51223,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 48,
+          "accepted": 37,
+          "skipped_low_quality": 0,
+          "skipped_unmapped": 4,
+          "skipped_semantic_disagreement": 7,
+          "written_pixels": 399961,
+          "changed_pixels": 38269,
+          "ignored_edge_pixels": 47779,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000044",
+      "candidates": 59,
+      "queries": 8,
+      "hard_dropped": 11,
+      "changed_queries": 2,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 59,
+          "accepted": 49,
+          "skipped_low_quality": 7,
+          "skipped_unmapped": 3,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 548254,
+          "changed_pixels": 164413,
+          "ignored_edge_pixels": 35236,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 59,
+          "accepted": 41,
+          "skipped_low_quality": 7,
+          "skipped_unmapped": 3,
+          "skipped_semantic_disagreement": 8,
+          "written_pixels": 392247,
+          "changed_pixels": 8406,
+          "ignored_edge_pixels": 24070,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000045",
+      "candidates": 70,
+      "queries": 8,
+      "hard_dropped": 6,
+      "changed_queries": 3,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 70,
+          "accepted": 53,
+          "skipped_low_quality": 7,
+          "skipped_unmapped": 10,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 380684,
+          "changed_pixels": 15328,
+          "ignored_edge_pixels": 28179,
+          "conflict_pixels": 3584
+        },
+        "U1_consensus_gate": {
+          "candidates": 70,
+          "accepted": 47,
+          "skipped_low_quality": 7,
+          "skipped_unmapped": 10,
+          "skipped_semantic_disagreement": 6,
+          "written_pixels": 384034,
+          "changed_pixels": 15137,
+          "ignored_edge_pixels": 27749,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000046",
+      "candidates": 57,
+      "queries": 8,
+      "hard_dropped": 2,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 57,
+          "accepted": 39,
+          "skipped_low_quality": 11,
+          "skipped_unmapped": 7,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 235236,
+          "changed_pixels": 982,
+          "ignored_edge_pixels": 34893,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 57,
+          "accepted": 37,
+          "skipped_low_quality": 11,
+          "skipped_unmapped": 7,
+          "skipped_semantic_disagreement": 2,
+          "written_pixels": 235088,
+          "changed_pixels": 834,
+          "ignored_edge_pixels": 34770,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000049",
+      "candidates": 44,
+      "queries": 8,
+      "hard_dropped": 4,
+      "changed_queries": 3,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 44,
+          "accepted": 25,
+          "skipped_low_quality": 9,
+          "skipped_unmapped": 10,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 104561,
+          "changed_pixels": 39192,
+          "ignored_edge_pixels": 14180,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 44,
+          "accepted": 24,
+          "skipped_low_quality": 9,
+          "skipped_unmapped": 10,
+          "skipped_semantic_disagreement": 1,
+          "written_pixels": 65708,
+          "changed_pixels": 339,
+          "ignored_edge_pixels": 10371,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000051",
+      "candidates": 27,
+      "queries": 8,
+      "hard_dropped": 7,
+      "changed_queries": 3,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 27,
+          "accepted": 17,
+          "skipped_low_quality": 0,
+          "skipped_unmapped": 10,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 390070,
+          "changed_pixels": 355582,
+          "ignored_edge_pixels": 18344,
+          "conflict_pixels": 28707
+        },
+        "U1_consensus_gate": {
+          "candidates": 27,
+          "accepted": 10,
+          "skipped_low_quality": 0,
+          "skipped_unmapped": 10,
+          "skipped_semantic_disagreement": 7,
+          "written_pixels": 65317,
+          "changed_pixels": 2176,
+          "ignored_edge_pixels": 8375,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000048",
+      "candidates": 82,
+      "queries": 8,
+      "hard_dropped": 3,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 82,
+          "accepted": 66,
+          "skipped_low_quality": 7,
+          "skipped_unmapped": 9,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 372766,
+          "changed_pixels": 4964,
+          "ignored_edge_pixels": 44440,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 82,
+          "accepted": 55,
+          "skipped_low_quality": 7,
+          "skipped_unmapped": 9,
+          "skipped_semantic_disagreement": 11,
+          "written_pixels": 367736,
+          "changed_pixels": 486,
+          "ignored_edge_pixels": 42216,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000050",
+      "candidates": 49,
+      "queries": 8,
+      "hard_dropped": 0,
+      "changed_queries": 0,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 49,
+          "accepted": 39,
+          "skipped_low_quality": 2,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 342560,
+          "changed_pixels": 59917,
+          "ignored_edge_pixels": 32947,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 49,
+          "accepted": 38,
+          "skipped_low_quality": 2,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 1,
+          "written_pixels": 248056,
+          "changed_pixels": 8531,
+          "ignored_edge_pixels": 25521,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000047",
+      "candidates": 110,
+      "queries": 8,
+      "hard_dropped": 8,
+      "changed_queries": 2,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 110,
+          "accepted": 84,
+          "skipped_low_quality": 19,
+          "skipped_unmapped": 7,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 318698,
+          "changed_pixels": 13715,
+          "ignored_edge_pixels": 38403,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 110,
+          "accepted": 77,
+          "skipped_low_quality": 19,
+          "skipped_unmapped": 7,
+          "skipped_semantic_disagreement": 7,
+          "written_pixels": 304697,
+          "changed_pixels": 58,
+          "ignored_edge_pixels": 33268,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000052",
+      "candidates": 93,
+      "queries": 8,
+      "hard_dropped": 0,
+      "changed_queries": 0,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 93,
+          "accepted": 51,
+          "skipped_low_quality": 29,
+          "skipped_unmapped": 13,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 190975,
+          "changed_pixels": 2267,
+          "ignored_edge_pixels": 21761,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 93,
+          "accepted": 50,
+          "skipped_low_quality": 29,
+          "skipped_unmapped": 13,
+          "skipped_semantic_disagreement": 1,
+          "written_pixels": 190926,
+          "changed_pixels": 2232,
+          "ignored_edge_pixels": 21655,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000055",
+      "candidates": 39,
+      "queries": 8,
+      "hard_dropped": 4,
+      "changed_queries": 2,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 39,
+          "accepted": 28,
+          "skipped_low_quality": 0,
+          "skipped_unmapped": 11,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 393763,
+          "changed_pixels": 170200,
+          "ignored_edge_pixels": 25651,
+          "conflict_pixels": 3227
+        },
+        "U1_consensus_gate": {
+          "candidates": 39,
+          "accepted": 24,
+          "skipped_low_quality": 0,
+          "skipped_unmapped": 11,
+          "skipped_semantic_disagreement": 4,
+          "written_pixels": 223590,
+          "changed_pixels": 27,
+          "ignored_edge_pixels": 20462,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000054",
+      "candidates": 53,
+      "queries": 8,
+      "hard_dropped": 4,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 53,
+          "accepted": 33,
+          "skipped_low_quality": 11,
+          "skipped_unmapped": 9,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 253071,
+          "changed_pixels": 12050,
+          "ignored_edge_pixels": 26896,
+          "conflict_pixels": 5
+        },
+        "U1_consensus_gate": {
+          "candidates": 53,
+          "accepted": 27,
+          "skipped_low_quality": 11,
+          "skipped_unmapped": 9,
+          "skipped_semantic_disagreement": 6,
+          "written_pixels": 250959,
+          "changed_pixels": 10499,
+          "ignored_edge_pixels": 25937,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000056",
+      "candidates": 36,
+      "queries": 8,
+      "hard_dropped": 0,
+      "changed_queries": 0,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 36,
+          "accepted": 27,
+          "skipped_low_quality": 0,
+          "skipped_unmapped": 9,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 462658,
+          "changed_pixels": 3349,
+          "ignored_edge_pixels": 32721,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 36,
+          "accepted": 25,
+          "skipped_low_quality": 0,
+          "skipped_unmapped": 9,
+          "skipped_semantic_disagreement": 2,
+          "written_pixels": 462586,
+          "changed_pixels": 3282,
+          "ignored_edge_pixels": 32588,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000053",
+      "candidates": 74,
+      "queries": 8,
+      "hard_dropped": 8,
+      "changed_queries": 2,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 74,
+          "accepted": 39,
+          "skipped_low_quality": 31,
+          "skipped_unmapped": 4,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 286955,
+          "changed_pixels": 3737,
+          "ignored_edge_pixels": 35452,
+          "conflict_pixels": 835
+        },
+        "U1_consensus_gate": {
+          "candidates": 74,
+          "accepted": 36,
+          "skipped_low_quality": 31,
+          "skipped_unmapped": 4,
+          "skipped_semantic_disagreement": 3,
+          "written_pixels": 286786,
+          "changed_pixels": 3693,
+          "ignored_edge_pixels": 35259,
+          "conflict_pixels": 835
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000058",
+      "candidates": 43,
+      "queries": 8,
+      "hard_dropped": 1,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 43,
+          "accepted": 28,
+          "skipped_low_quality": 11,
+          "skipped_unmapped": 4,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 353517,
+          "changed_pixels": 104182,
+          "ignored_edge_pixels": 30873,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 43,
+          "accepted": 26,
+          "skipped_low_quality": 11,
+          "skipped_unmapped": 4,
+          "skipped_semantic_disagreement": 2,
+          "written_pixels": 236047,
+          "changed_pixels": 509,
+          "ignored_edge_pixels": 24041,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000057",
+      "candidates": 63,
+      "queries": 8,
+      "hard_dropped": 18,
+      "changed_queries": 2,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 63,
+          "accepted": 46,
+          "skipped_low_quality": 6,
+          "skipped_unmapped": 11,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 318215,
+          "changed_pixels": 18715,
+          "ignored_edge_pixels": 35216,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 63,
+          "accepted": 32,
+          "skipped_low_quality": 6,
+          "skipped_unmapped": 11,
+          "skipped_semantic_disagreement": 14,
+          "written_pixels": 305272,
+          "changed_pixels": 5772,
+          "ignored_edge_pixels": 32006,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000063",
+      "candidates": 47,
+      "queries": 8,
+      "hard_dropped": 10,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 47,
+          "accepted": 37,
+          "skipped_low_quality": 2,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 158666,
+          "changed_pixels": 51383,
+          "ignored_edge_pixels": 19219,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 47,
+          "accepted": 18,
+          "skipped_low_quality": 2,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 19,
+          "written_pixels": 97765,
+          "changed_pixels": 13713,
+          "ignored_edge_pixels": 12721,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000061",
+      "candidates": 70,
+      "queries": 8,
+      "hard_dropped": 2,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 70,
+          "accepted": 51,
+          "skipped_low_quality": 10,
+          "skipped_unmapped": 9,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 488529,
+          "changed_pixels": 12032,
+          "ignored_edge_pixels": 42196,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 70,
+          "accepted": 49,
+          "skipped_low_quality": 10,
+          "skipped_unmapped": 9,
+          "skipped_semantic_disagreement": 2,
+          "written_pixels": 487765,
+          "changed_pixels": 11268,
+          "ignored_edge_pixels": 41929,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000065",
+      "candidates": 35,
+      "queries": 8,
+      "hard_dropped": 2,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 35,
+          "accepted": 23,
+          "skipped_low_quality": 0,
+          "skipped_unmapped": 12,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 406592,
+          "changed_pixels": 9912,
+          "ignored_edge_pixels": 25366,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 35,
+          "accepted": 21,
+          "skipped_low_quality": 0,
+          "skipped_unmapped": 12,
+          "skipped_semantic_disagreement": 2,
+          "written_pixels": 405996,
+          "changed_pixels": 9317,
+          "ignored_edge_pixels": 25114,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000062",
+      "candidates": 72,
+      "queries": 8,
+      "hard_dropped": 4,
+      "changed_queries": 2,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 72,
+          "accepted": 57,
+          "skipped_low_quality": 8,
+          "skipped_unmapped": 7,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 331369,
+          "changed_pixels": 414,
+          "ignored_edge_pixels": 32519,
+          "conflict_pixels": 676
+        },
+        "U1_consensus_gate": {
+          "candidates": 72,
+          "accepted": 56,
+          "skipped_low_quality": 8,
+          "skipped_unmapped": 7,
+          "skipped_semantic_disagreement": 1,
+          "written_pixels": 332045,
+          "changed_pixels": 414,
+          "ignored_edge_pixels": 32519,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000060",
+      "candidates": 86,
+      "queries": 8,
+      "hard_dropped": 5,
+      "changed_queries": 2,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 86,
+          "accepted": 72,
+          "skipped_low_quality": 7,
+          "skipped_unmapped": 7,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 323328,
+          "changed_pixels": 9354,
+          "ignored_edge_pixels": 41472,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 86,
+          "accepted": 67,
+          "skipped_low_quality": 7,
+          "skipped_unmapped": 7,
+          "skipped_semantic_disagreement": 5,
+          "written_pixels": 322847,
+          "changed_pixels": 8873,
+          "ignored_edge_pixels": 41031,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000059",
+      "candidates": 133,
+      "queries": 8,
+      "hard_dropped": 0,
+      "changed_queries": 0,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 133,
+          "accepted": 115,
+          "skipped_low_quality": 8,
+          "skipped_unmapped": 10,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 613983,
+          "changed_pixels": 657,
+          "ignored_edge_pixels": 49455,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 133,
+          "accepted": 115,
+          "skipped_low_quality": 8,
+          "skipped_unmapped": 10,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 613983,
+          "changed_pixels": 657,
+          "ignored_edge_pixels": 49455,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000064",
+      "candidates": 90,
+      "queries": 8,
+      "hard_dropped": 2,
+      "changed_queries": 2,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 90,
+          "accepted": 78,
+          "skipped_low_quality": 4,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 452240,
+          "changed_pixels": 16988,
+          "ignored_edge_pixels": 43486,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 90,
+          "accepted": 76,
+          "skipped_low_quality": 4,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 2,
+          "written_pixels": 448610,
+          "changed_pixels": 14129,
+          "ignored_edge_pixels": 41976,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000066",
+      "candidates": 77,
+      "queries": 8,
+      "hard_dropped": 20,
+      "changed_queries": 2,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 77,
+          "accepted": 49,
+          "skipped_low_quality": 19,
+          "skipped_unmapped": 9,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 230177,
+          "changed_pixels": 145453,
+          "ignored_edge_pixels": 23911,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 77,
+          "accepted": 31,
+          "skipped_low_quality": 19,
+          "skipped_unmapped": 9,
+          "skipped_semantic_disagreement": 18,
+          "written_pixels": 38267,
+          "changed_pixels": 13,
+          "ignored_edge_pixels": 9364,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000067",
+      "candidates": 33,
+      "queries": 8,
+      "hard_dropped": 5,
+      "changed_queries": 2,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 33,
+          "accepted": 22,
+          "skipped_low_quality": 3,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 432114,
+          "changed_pixels": 115425,
+          "ignored_edge_pixels": 29200,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 33,
+          "accepted": 18,
+          "skipped_low_quality": 3,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 4,
+          "written_pixels": 315269,
+          "changed_pixels": 763,
+          "ignored_edge_pixels": 19286,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000072",
+      "candidates": 25,
+      "queries": 8,
+      "hard_dropped": 1,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 25,
+          "accepted": 20,
+          "skipped_low_quality": 0,
+          "skipped_unmapped": 5,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 208611,
+          "changed_pixels": 25710,
+          "ignored_edge_pixels": 18115,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 25,
+          "accepted": 19,
+          "skipped_low_quality": 0,
+          "skipped_unmapped": 5,
+          "skipped_semantic_disagreement": 1,
+          "written_pixels": 183912,
+          "changed_pixels": 1011,
+          "ignored_edge_pixels": 14748,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000069",
+      "candidates": 57,
+      "queries": 8,
+      "hard_dropped": 0,
+      "changed_queries": 0,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 57,
+          "accepted": 46,
+          "skipped_low_quality": 3,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 311318,
+          "changed_pixels": 4423,
+          "ignored_edge_pixels": 44887,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 57,
+          "accepted": 44,
+          "skipped_low_quality": 3,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 2,
+          "written_pixels": 310804,
+          "changed_pixels": 3940,
+          "ignored_edge_pixels": 44647,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000068",
+      "candidates": 90,
+      "queries": 8,
+      "hard_dropped": 2,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 90,
+          "accepted": 76,
+          "skipped_low_quality": 7,
+          "skipped_unmapped": 7,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 450988,
+          "changed_pixels": 5494,
+          "ignored_edge_pixels": 36194,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 90,
+          "accepted": 74,
+          "skipped_low_quality": 7,
+          "skipped_unmapped": 7,
+          "skipped_semantic_disagreement": 2,
+          "written_pixels": 447973,
+          "changed_pixels": 2479,
+          "ignored_edge_pixels": 35505,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000071",
+      "candidates": 82,
+      "queries": 8,
+      "hard_dropped": 10,
+      "changed_queries": 2,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 82,
+          "accepted": 51,
+          "skipped_low_quality": 23,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 119189,
+          "changed_pixels": 1056,
+          "ignored_edge_pixels": 20216,
+          "conflict_pixels": 9441
+        },
+        "U1_consensus_gate": {
+          "candidates": 82,
+          "accepted": 44,
+          "skipped_low_quality": 23,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 7,
+          "written_pixels": 127922,
+          "changed_pixels": 348,
+          "ignored_edge_pixels": 19615,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000073",
+      "candidates": 60,
+      "queries": 8,
+      "hard_dropped": 4,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 60,
+          "accepted": 35,
+          "skipped_low_quality": 16,
+          "skipped_unmapped": 9,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 243207,
+          "changed_pixels": 3975,
+          "ignored_edge_pixels": 25209,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 60,
+          "accepted": 33,
+          "skipped_low_quality": 16,
+          "skipped_unmapped": 9,
+          "skipped_semantic_disagreement": 2,
+          "written_pixels": 242761,
+          "changed_pixels": 3529,
+          "ignored_edge_pixels": 24850,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000070",
+      "candidates": 88,
+      "queries": 8,
+      "hard_dropped": 4,
+      "changed_queries": 2,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 88,
+          "accepted": 73,
+          "skipped_low_quality": 7,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 297022,
+          "changed_pixels": 44404,
+          "ignored_edge_pixels": 34214,
+          "conflict_pixels": 52
+        },
+        "U1_consensus_gate": {
+          "candidates": 88,
+          "accepted": 69,
+          "skipped_low_quality": 7,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 4,
+          "written_pixels": 271905,
+          "changed_pixels": 19287,
+          "ignored_edge_pixels": 32321,
+          "conflict_pixels": 52
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000074",
+      "candidates": 63,
+      "queries": 8,
+      "hard_dropped": 12,
+      "changed_queries": 3,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 63,
+          "accepted": 41,
+          "skipped_low_quality": 16,
+          "skipped_unmapped": 6,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 215407,
+          "changed_pixels": 51472,
+          "ignored_edge_pixels": 41494,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 63,
+          "accepted": 29,
+          "skipped_low_quality": 16,
+          "skipped_unmapped": 6,
+          "skipped_semantic_disagreement": 12,
+          "written_pixels": 141478,
+          "changed_pixels": 2405,
+          "ignored_edge_pixels": 29491,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000075",
+      "candidates": 54,
+      "queries": 8,
+      "hard_dropped": 5,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 54,
+          "accepted": 33,
+          "skipped_low_quality": 12,
+          "skipped_unmapped": 9,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 224495,
+          "changed_pixels": 4276,
+          "ignored_edge_pixels": 20281,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 54,
+          "accepted": 30,
+          "skipped_low_quality": 12,
+          "skipped_unmapped": 9,
+          "skipped_semantic_disagreement": 3,
+          "written_pixels": 221205,
+          "changed_pixels": 986,
+          "ignored_edge_pixels": 18533,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000076",
+      "candidates": 61,
+      "queries": 8,
+      "hard_dropped": 2,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 61,
+          "accepted": 48,
+          "skipped_low_quality": 7,
+          "skipped_unmapped": 6,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 542436,
+          "changed_pixels": 8819,
+          "ignored_edge_pixels": 44316,
+          "conflict_pixels": 101
+        },
+        "U1_consensus_gate": {
+          "candidates": 61,
+          "accepted": 47,
+          "skipped_low_quality": 7,
+          "skipped_unmapped": 6,
+          "skipped_semantic_disagreement": 1,
+          "written_pixels": 542391,
+          "changed_pixels": 8774,
+          "ignored_edge_pixels": 44303,
+          "conflict_pixels": 101
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000080",
+      "candidates": 24,
+      "queries": 8,
+      "hard_dropped": 2,
+      "changed_queries": 2,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 24,
+          "accepted": 17,
+          "skipped_low_quality": 3,
+          "skipped_unmapped": 4,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 385185,
+          "changed_pixels": 20554,
+          "ignored_edge_pixels": 33854,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 24,
+          "accepted": 16,
+          "skipped_low_quality": 3,
+          "skipped_unmapped": 4,
+          "skipped_semantic_disagreement": 1,
+          "written_pixels": 381983,
+          "changed_pixels": 17354,
+          "ignored_edge_pixels": 32973,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000077",
+      "candidates": 53,
+      "queries": 8,
+      "hard_dropped": 3,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 53,
+          "accepted": 32,
+          "skipped_low_quality": 14,
+          "skipped_unmapped": 7,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 165832,
+          "changed_pixels": 5634,
+          "ignored_edge_pixels": 25228,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 53,
+          "accepted": 29,
+          "skipped_low_quality": 14,
+          "skipped_unmapped": 7,
+          "skipped_semantic_disagreement": 3,
+          "written_pixels": 163324,
+          "changed_pixels": 3126,
+          "ignored_edge_pixels": 23966,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000079",
+      "candidates": 50,
+      "queries": 8,
+      "hard_dropped": 2,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 50,
+          "accepted": 34,
+          "skipped_low_quality": 13,
+          "skipped_unmapped": 3,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 581946,
+          "changed_pixels": 80519,
+          "ignored_edge_pixels": 48714,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 50,
+          "accepted": 34,
+          "skipped_low_quality": 13,
+          "skipped_unmapped": 3,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 581946,
+          "changed_pixels": 80519,
+          "ignored_edge_pixels": 48714,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000081",
+      "candidates": 45,
+      "queries": 8,
+      "hard_dropped": 0,
+      "changed_queries": 0,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 45,
+          "accepted": 37,
+          "skipped_low_quality": 1,
+          "skipped_unmapped": 7,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 264691,
+          "changed_pixels": 138,
+          "ignored_edge_pixels": 41790,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 45,
+          "accepted": 37,
+          "skipped_low_quality": 1,
+          "skipped_unmapped": 7,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 264691,
+          "changed_pixels": 138,
+          "ignored_edge_pixels": 41790,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000082",
+      "candidates": 41,
+      "queries": 8,
+      "hard_dropped": 1,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 41,
+          "accepted": 31,
+          "skipped_low_quality": 2,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 294335,
+          "changed_pixels": 5084,
+          "ignored_edge_pixels": 26193,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 41,
+          "accepted": 30,
+          "skipped_low_quality": 2,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 1,
+          "written_pixels": 292110,
+          "changed_pixels": 2859,
+          "ignored_edge_pixels": 25555,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000078",
+      "candidates": 60,
+      "queries": 8,
+      "hard_dropped": 0,
+      "changed_queries": 0,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 60,
+          "accepted": 51,
+          "skipped_low_quality": 4,
+          "skipped_unmapped": 5,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 536097,
+          "changed_pixels": 1671,
+          "ignored_edge_pixels": 54025,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 60,
+          "accepted": 49,
+          "skipped_low_quality": 4,
+          "skipped_unmapped": 5,
+          "skipped_semantic_disagreement": 2,
+          "written_pixels": 536082,
+          "changed_pixels": 1661,
+          "ignored_edge_pixels": 53969,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000083",
+      "candidates": 57,
+      "queries": 8,
+      "hard_dropped": 1,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 57,
+          "accepted": 51,
+          "skipped_low_quality": 1,
+          "skipped_unmapped": 5,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 502585,
+          "changed_pixels": 2385,
+          "ignored_edge_pixels": 33154,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 57,
+          "accepted": 49,
+          "skipped_low_quality": 1,
+          "skipped_unmapped": 5,
+          "skipped_semantic_disagreement": 2,
+          "written_pixels": 502165,
+          "changed_pixels": 2243,
+          "ignored_edge_pixels": 32897,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000085",
+      "candidates": 50,
+      "queries": 8,
+      "hard_dropped": 4,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 50,
+          "accepted": 45,
+          "skipped_low_quality": 1,
+          "skipped_unmapped": 4,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 420190,
+          "changed_pixels": 11636,
+          "ignored_edge_pixels": 33468,
+          "conflict_pixels": 16
+        },
+        "U1_consensus_gate": {
+          "candidates": 50,
+          "accepted": 41,
+          "skipped_low_quality": 1,
+          "skipped_unmapped": 4,
+          "skipped_semantic_disagreement": 4,
+          "written_pixels": 418976,
+          "changed_pixels": 10422,
+          "ignored_edge_pixels": 33010,
+          "conflict_pixels": 16
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000084",
+      "candidates": 48,
+      "queries": 8,
+      "hard_dropped": 5,
+      "changed_queries": 2,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 48,
+          "accepted": 37,
+          "skipped_low_quality": 1,
+          "skipped_unmapped": 10,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 92011,
+          "changed_pixels": 1403,
+          "ignored_edge_pixels": 16490,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 48,
+          "accepted": 33,
+          "skipped_low_quality": 1,
+          "skipped_unmapped": 10,
+          "skipped_semantic_disagreement": 4,
+          "written_pixels": 90613,
+          "changed_pixels": 10,
+          "ignored_edge_pixels": 15618,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000089",
+      "candidates": 36,
+      "queries": 8,
+      "hard_dropped": 1,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 36,
+          "accepted": 28,
+          "skipped_low_quality": 2,
+          "skipped_unmapped": 6,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 235077,
+          "changed_pixels": 168051,
+          "ignored_edge_pixels": 17493,
+          "conflict_pixels": 2708
+        },
+        "U1_consensus_gate": {
+          "candidates": 36,
+          "accepted": 25,
+          "skipped_low_quality": 2,
+          "skipped_unmapped": 6,
+          "skipped_semantic_disagreement": 3,
+          "written_pixels": 67112,
+          "changed_pixels": 1039,
+          "ignored_edge_pixels": 12644,
+          "conflict_pixels": 2708
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000090",
+      "candidates": 36,
+      "queries": 8,
+      "hard_dropped": 0,
+      "changed_queries": 0,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 36,
+          "accepted": 19,
+          "skipped_low_quality": 7,
+          "skipped_unmapped": 10,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 248705,
+          "changed_pixels": 4061,
+          "ignored_edge_pixels": 21270,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 36,
+          "accepted": 19,
+          "skipped_low_quality": 7,
+          "skipped_unmapped": 10,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 248705,
+          "changed_pixels": 4061,
+          "ignored_edge_pixels": 21270,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000087",
+      "candidates": 66,
+      "queries": 8,
+      "hard_dropped": 1,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 66,
+          "accepted": 53,
+          "skipped_low_quality": 9,
+          "skipped_unmapped": 4,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 290456,
+          "changed_pixels": 825,
+          "ignored_edge_pixels": 30558,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 66,
+          "accepted": 52,
+          "skipped_low_quality": 9,
+          "skipped_unmapped": 4,
+          "skipped_semantic_disagreement": 1,
+          "written_pixels": 290414,
+          "changed_pixels": 783,
+          "ignored_edge_pixels": 30460,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000086",
+      "candidates": 71,
+      "queries": 8,
+      "hard_dropped": 2,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 71,
+          "accepted": 58,
+          "skipped_low_quality": 5,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 522112,
+          "changed_pixels": 6438,
+          "ignored_edge_pixels": 36898,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 71,
+          "accepted": 54,
+          "skipped_low_quality": 5,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 4,
+          "written_pixels": 517746,
+          "changed_pixels": 2277,
+          "ignored_edge_pixels": 35894,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000091",
+      "candidates": 73,
+      "queries": 8,
+      "hard_dropped": 5,
+      "changed_queries": 2,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 73,
+          "accepted": 47,
+          "skipped_low_quality": 19,
+          "skipped_unmapped": 7,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 186348,
+          "changed_pixels": 13837,
+          "ignored_edge_pixels": 24058,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 73,
+          "accepted": 46,
+          "skipped_low_quality": 19,
+          "skipped_unmapped": 7,
+          "skipped_semantic_disagreement": 1,
+          "written_pixels": 186124,
+          "changed_pixels": 13613,
+          "ignored_edge_pixels": 23897,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000092",
+      "candidates": 53,
+      "queries": 8,
+      "hard_dropped": 0,
+      "changed_queries": 0,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 53,
+          "accepted": 44,
+          "skipped_low_quality": 0,
+          "skipped_unmapped": 9,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 529516,
+          "changed_pixels": 2995,
+          "ignored_edge_pixels": 45683,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 53,
+          "accepted": 44,
+          "skipped_low_quality": 0,
+          "skipped_unmapped": 9,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 529516,
+          "changed_pixels": 2995,
+          "ignored_edge_pixels": 45683,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000088",
+      "candidates": 78,
+      "queries": 8,
+      "hard_dropped": 4,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 78,
+          "accepted": 56,
+          "skipped_low_quality": 12,
+          "skipped_unmapped": 10,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 100792,
+          "changed_pixels": 7946,
+          "ignored_edge_pixels": 19788,
+          "conflict_pixels": 273
+        },
+        "U1_consensus_gate": {
+          "candidates": 78,
+          "accepted": 52,
+          "skipped_low_quality": 12,
+          "skipped_unmapped": 10,
+          "skipped_semantic_disagreement": 4,
+          "written_pixels": 100367,
+          "changed_pixels": 7501,
+          "ignored_edge_pixels": 19372,
+          "conflict_pixels": 113
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000093",
+      "candidates": 87,
+      "queries": 8,
+      "hard_dropped": 2,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 87,
+          "accepted": 68,
+          "skipped_low_quality": 11,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 404272,
+          "changed_pixels": 2125,
+          "ignored_edge_pixels": 42012,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 87,
+          "accepted": 66,
+          "skipped_low_quality": 11,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 2,
+          "written_pixels": 404197,
+          "changed_pixels": 2050,
+          "ignored_edge_pixels": 41904,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000098",
+      "candidates": 64,
+      "queries": 8,
+      "hard_dropped": 0,
+      "changed_queries": 0,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 64,
+          "accepted": 48,
+          "skipped_low_quality": 6,
+          "skipped_unmapped": 10,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 258515,
+          "changed_pixels": 5739,
+          "ignored_edge_pixels": 19469,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 64,
+          "accepted": 48,
+          "skipped_low_quality": 6,
+          "skipped_unmapped": 10,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 258515,
+          "changed_pixels": 5739,
+          "ignored_edge_pixels": 19469,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000099",
+      "candidates": 50,
+      "queries": 8,
+      "hard_dropped": 3,
+      "changed_queries": 2,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 50,
+          "accepted": 40,
+          "skipped_low_quality": 3,
+          "skipped_unmapped": 7,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 398170,
+          "changed_pixels": 23267,
+          "ignored_edge_pixels": 26597,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 50,
+          "accepted": 35,
+          "skipped_low_quality": 3,
+          "skipped_unmapped": 7,
+          "skipped_semantic_disagreement": 5,
+          "written_pixels": 391315,
+          "changed_pixels": 19391,
+          "ignored_edge_pixels": 24230,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000096",
+      "candidates": 71,
+      "queries": 8,
+      "hard_dropped": 3,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 71,
+          "accepted": 37,
+          "skipped_low_quality": 21,
+          "skipped_unmapped": 13,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 319176,
+          "changed_pixels": 2265,
+          "ignored_edge_pixels": 42344,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 71,
+          "accepted": 36,
+          "skipped_low_quality": 21,
+          "skipped_unmapped": 13,
+          "skipped_semantic_disagreement": 1,
+          "written_pixels": 319009,
+          "changed_pixels": 2098,
+          "ignored_edge_pixels": 42202,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000094",
+      "candidates": 95,
+      "queries": 8,
+      "hard_dropped": 18,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 95,
+          "accepted": 79,
+          "skipped_low_quality": 9,
+          "skipped_unmapped": 7,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 407104,
+          "changed_pixels": 1515,
+          "ignored_edge_pixels": 53426,
+          "conflict_pixels": 284
+        },
+        "U1_consensus_gate": {
+          "candidates": 95,
+          "accepted": 65,
+          "skipped_low_quality": 9,
+          "skipped_unmapped": 7,
+          "skipped_semantic_disagreement": 14,
+          "written_pixels": 406270,
+          "changed_pixels": 402,
+          "ignored_edge_pixels": 52455,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000097",
+      "candidates": 63,
+      "queries": 8,
+      "hard_dropped": 2,
+      "changed_queries": 1,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 63,
+          "accepted": 54,
+          "skipped_low_quality": 1,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 455098,
+          "changed_pixels": 3789,
+          "ignored_edge_pixels": 35783,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 63,
+          "accepted": 52,
+          "skipped_low_quality": 1,
+          "skipped_unmapped": 8,
+          "skipped_semantic_disagreement": 2,
+          "written_pixels": 453703,
+          "changed_pixels": 2394,
+          "ignored_edge_pixels": 35282,
+          "conflict_pixels": 0
+        }
+      }
+    },
+    {
+      "image_id": "dpass_dev-calib_000095",
+      "candidates": 124,
+      "queries": 8,
+      "hard_dropped": 8,
+      "changed_queries": 2,
+      "revision_stats": {
+        "U1_quality_only": {
+          "candidates": 124,
+          "accepted": 100,
+          "skipped_low_quality": 17,
+          "skipped_unmapped": 7,
+          "skipped_semantic_disagreement": 0,
+          "written_pixels": 584788,
+          "changed_pixels": 24610,
+          "ignored_edge_pixels": 51391,
+          "conflict_pixels": 0
+        },
+        "U1_consensus_gate": {
+          "candidates": 124,
+          "accepted": 89,
+          "skipped_low_quality": 17,
+          "skipped_unmapped": 7,
+          "skipped_semantic_disagreement": 11,
+          "written_pixels": 584327,
+          "changed_pixels": 24214,
+          "ignored_edge_pixels": 50578,
+          "conflict_pixels": 0
+        }
+      }
+    }
+  ],
+  "elapsed_sec": 13.374516810290515
+}

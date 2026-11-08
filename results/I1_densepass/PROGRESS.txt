@@ -1,0 +1,69 @@
+Final paper-anchored short controls complete.
+{
+  "status": "implementation_and_paper_anchored_short_experiments_complete",
+  "research_goal": "Stable semantic improvement over original OmniSAM is not established. Engineering completion is not a claim that accuracy targets are met.",
+  "main": [
+    {
+      "method": "Original_OmniSAM_S",
+      "mIoU_pct": 60.29496341530991,
+      "delta_vs_original_pp": 0.0,
+      "stage": "frozen weights; original GT; development100"
+    },
+    {
+      "method": "Original_plus_I1_only",
+      "mIoU_pct": 60.361083208061885,
+      "delta_vs_original_pp": 0.06611979275197655,
+      "stage": "frozen weights; original GT; development100"
+    },
+    {
+      "method": "Original_plus_fixed_I2_only",
+      "mIoU_pct": 60.17965782042302,
+      "delta_vs_original_pp": -0.11530559488689107,
+      "stage": "frozen weights; original GT; development100"
+    },
+    {
+      "method": "Original_plus_I1_and_fixed_I2",
+      "mIoU_pct": 60.31007227910261,
+      "delta_vs_original_pp": 0.015108863792704597,
+      "stage": "frozen weights; original GT; development100"
+    }
+  ],
+  "dense_training_means": {
+    "R0": 60.31419643989516,
+    "R1": 60.300457809930016
+  },
+  "dense_training_R1_minus_R0": {
+    "delta_mIoU_pp": -0.013738629965146743,
+    "image_bootstrap_95CI_pp": [
+      -0.02917057901769029,
+      0.002980591190617853
+    ],
+    "bootstrap_draws": 5000,
+    "resampling_unit": "image (all queries/seed predictions kept together)",
+    "training_seed_population_uncertainty_estimated": false
+  },
+  "dense_training_R1_vs_original": {
+    "delta_mIoU_pp": 0.005494394620107812,
+    "image_bootstrap_95CI_pp": [
+      -0.16758078589660333,
+      0.19061034969125631
+    ],
+    "bootstrap_draws": 5000,
+    "resampling_unit": "image (all queries/seed predictions kept together)",
+    "training_seed_population_uncertainty_estimated": false
+  },
+  "fixed_I2_training_means": {
+    "R0": 60.099054551367104,
+    "R1": 60.060855260578016
+  },
+  "tests_passed": 77,
+  "figures": 13,
+  "target_train_total": 2000,
+  "target_train_used_per_arm": 160,
+  "evaluation": "DensePASS100 development, originalGT",
+  "reports": "/root/autodl-tmp/piers-main/runs/I1-densepass-20261107_121457/reports",
+  "at_unix": 1794035453.0029898,
+  "supplements_resumed": true
+}
+Do not report the +0.13pp compressed-control increment as a gain over original OmniSAM.
+Read reports/REPORT.txt and MAIN_PAPER_ANCHORED.csv.

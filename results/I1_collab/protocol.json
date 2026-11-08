@@ -1,0 +1,23 @@
+{
+  "status": "predeclared",
+  "T2_soft": {
+    "alpha": 0.5,
+    "keeps_all": true
+  },
+  "T2_hard": {
+    "alpha": 0.5,
+    "support_threshold": 0.15
+  },
+  "U1_quality_only": {
+    "sam_quality_threshold": 0.8,
+    "edge_width": 2
+  },
+  "U1_consensus_gate": {
+    "sam_quality_threshold": 0.8,
+    "semantic_support_threshold": 0.5,
+    "edge_width": 2
+  },
+  "fallback": "Unmapped queries keep original text masks. Disagreed/low-quality revisions keep teacher. Cross-class conflicts keep teacher.",
+  "scope": "100 validation images, 800 fixed queries. Offline diagnostics, not trained U1/B1 models.",
+  "GT_use": "No ground truth input to inference workers or revision construction."
+}

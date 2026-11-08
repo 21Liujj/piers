@@ -208,8 +208,10 @@ def grounded_main(argv=None) -> int:
 
     with open(a.config, encoding="utf-8") as f:
         run_cfg = yaml.safe_load(f)
-    with open(a.manifest, encoding="utf-8") as f:
-        manifest = json.load(f)
+    # Configs/manifests may contain ${PIERS_*} path placeholders -> expand them.
+    from piers_ljj.paths import resolve
+    run_cfg = resolve(run_cfg)
+    manifest = resolve(json.load(open(a.manifest, encoding="utf-8")))
 
     from piers_ljj.text.grounded_adapter import GroundedConfig
     from piers_ljj.text.manifest import worker_view

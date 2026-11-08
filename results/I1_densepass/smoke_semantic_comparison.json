@@ -1,0 +1,20 @@
+[
+  {
+    "image": "/root/autodl-tmp/data/DensePASS/leftImg8bit/val/100_.png",
+    "archived_name": "100_.png",
+    "different_pixels": 572,
+    "mass_error": 0.00037664175033569336
+  },
+  {
+    "image": "/root/autodl-tmp/data/DensePASS/leftImg8bit/val/101_.png",
+    "archived_name": "101_.png",
+    "different_pixels": 1670,
+    "mass_error": 0.00040012598037719727
+  },
+  {
+    "image": "/root/autodl-tmp/data/DensePASS/leftImg8bit/val/102_.png",
+    "archived_name": "102_.png",
+    "different_pixels": 900,
+    "mass_error": 0.000383913516998291
+  }
+]

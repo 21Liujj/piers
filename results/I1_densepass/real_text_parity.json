@@ -1,0 +1,26 @@
+[
+  {
+    "image_id": "dpass_train_Amsterdam_42",
+    "query": "car",
+    "different_pixels": 0,
+    "reference_candidates": 67
+  },
+  {
+    "image_id": "dpass_train_Amsterdam_42",
+    "query": "person",
+    "different_pixels": 0,
+    "reference_candidates": 6
+  },
+  {
+    "image_id": "dpass_train_Amsterdam_48",
+    "query": "car",
+    "different_pixels": 0,
+    "reference_candidates": 49
+  },
+  {
+    "image_id": "dpass_train_Amsterdam_48",
+    "query": "person",
+    "different_pixels": 0,
+    "reference_candidates": 6
+  }
+]

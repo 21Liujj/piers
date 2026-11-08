@@ -1,0 +1,31 @@
+Innovation1: semantic guidance improves text-prompted panoramic segmentation
+
+VERIFIED COMPLETED EXPERIMENT RECORD (not a new run)
+T1 independent ERP-window Grounded-SAM2 versus frozen OmniSAM-S semantic guidance.
+
+Positive-query metrics (%):
+                           T1             I1-only
+MaskIoU                    66.9111507579     67.9673903376
+Dice                       75.4665694197     76.2448373292
+Recall                     76.4941049287     78.6570578972
+MaskIoU gain: +1.0562395797 percentage points.
+95% paired-image bootstrap CI: [0.7860044866, 1.3215600054] pp,5000draws.
+600 category queries on100development images:478positive,122negative.
+Both arms:58/122negative-query false positives at>=16predicted pixels.
+
+Actual geometry: ERP2048x400;4direct wrap crops1024x400;
+x starts0/512/1024/1536,stride512. Each crop spans180degrees horizontal
+longitude,step90degrees. NO perspective reprojection; NOT70degree pinhole views.
+Text masks are mapped back and unioned per query.
+
+Interpretation: This records semantic-to-text frozen inference improvement.
+It is NOT semanticmIoU,Grounded-SAM2 retraining,or latestv4checkpoint text performance.
+The primary positive improvement is road/vegetation/sky;car/person/train unchanged.
+The dataset has already been used for development;no independent-test claim.
+The separate latest R1-R0 semantic training delta is only +0.0018804986 pp;
+its95% image CI crosses0,so stable bidirectional gains are not established.
+
+Full-precision results,precise JSON field paths,and limitations are in
+experiment_record.json. Original reports/code/evidence copies are in source_snapshot/.
+Source REPORT.txt is the preexisting Chinese detailed research report.
+SHA256SUMS.txt covers every archived file except the checksum file itself.

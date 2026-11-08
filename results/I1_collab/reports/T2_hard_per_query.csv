@@ -1,0 +1,801 @@
+query_id,image_id,task_type,raw_text,positive,gt_area,pred_area,intersection,union,positive_iou,absent_false_positive_area16,correct_reject,legacy_iou
+dpass_dev-calib_000000_q000,dpass_dev-calib_000000,category_union,car,True,28288,16292,15912,28668,0.5550439514441189,False,False,0.43579473670062635
+dpass_dev-calib_000000_q001,dpass_dev-calib_000000,category_union,person,True,341,461,0,802,0.0,False,False,0.0
+dpass_dev-calib_000000_q002,dpass_dev-calib_000000,category_union,road,True,154663,146028,145651,155040,0.9394414344685242,False,False,0.926668660172926
+dpass_dev-calib_000000_q003,dpass_dev-calib_000000,category_union,vegetation,True,143086,137177,130698,149565,0.8738541771136296,False,False,0.8699281150159744
+dpass_dev-calib_000000_q004,dpass_dev-calib_000000,category_union,sky,True,46649,44733,44478,46904,0.9482773324236738,False,False,0.9331375222909892
+dpass_dev-calib_000000_q005,dpass_dev-calib_000000,instance_referring,the leftmost car,True,14500,14790,13085,16205,0.8074668312249306,False,False,0.7952956907554853
+dpass_dev-calib_000000_q006,dpass_dev-calib_000000,instance_referring,the nearest person,True,341,21334,0,21675,0.0,False,False,0.0
+dpass_dev-calib_000000_q007,dpass_dev-calib_000000,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000001_q000,dpass_dev-calib_000001,category_union,car,True,2926,256,0,3182,0.0,False,False,0.0007765345381384349
+dpass_dev-calib_000001_q001,dpass_dev-calib_000001,category_union,person,True,18328,13660,12346,19642,0.6285510640464311,False,False,0.6256207560555387
+dpass_dev-calib_000001_q002,dpass_dev-calib_000001,category_union,road,True,27002,147603,22138,152467,0.1451986331468449,False,False,0.1449457550103776
+dpass_dev-calib_000001_q003,dpass_dev-calib_000001,category_union,vegetation,True,89648,49325,45117,93856,0.48070448346403,False,False,0.471486346678371
+dpass_dev-calib_000001_q004,dpass_dev-calib_000001,category_union,sky,True,247794,236248,235775,248267,0.9496832039699195,False,False,0.9439495545991392
+dpass_dev-calib_000001_q005,dpass_dev-calib_000001,instance_referring,the leftmost car,True,504,2673,0,3177,0.0,False,False,0.0
+dpass_dev-calib_000001_q006,dpass_dev-calib_000001,instance_referring,the nearest person,True,12648,7087,5148,14587,0.3529169808733804,False,False,0.35197593326952004
+dpass_dev-calib_000001_q007,dpass_dev-calib_000001,category_union,train,False,0,2235,0,2235,,True,False,0.0
+dpass_dev-calib_000002_q000,dpass_dev-calib_000002,category_union,car,True,127541,54511,53911,128141,0.42071624226438065,False,False,0.40159835797104615
+dpass_dev-calib_000002_q001,dpass_dev-calib_000002,category_union,person,True,2530,4077,2151,4456,0.48271992818671455,False,False,0.463377854373115
+dpass_dev-calib_000002_q002,dpass_dev-calib_000002,category_union,road,True,102459,104132,100325,106266,0.9440931248000302,False,False,0.933064861144696
+dpass_dev-calib_000002_q003,dpass_dev-calib_000002,category_union,vegetation,True,138452,155241,111019,182674,0.6077438496994646,False,False,0.6039023912617768
+dpass_dev-calib_000002_q004,dpass_dev-calib_000002,category_union,sky,True,95543,91031,90445,96129,0.9408711210976917,False,False,0.9396199756900797
+dpass_dev-calib_000002_q005,dpass_dev-calib_000002,instance_referring,the leftmost car,True,2622,40839,2391,41070,0.058217677136596056,False,False,0.05669773066799459
+dpass_dev-calib_000002_q006,dpass_dev-calib_000002,instance_referring,the nearest person,True,1085,20646,917,20814,0.04405688478908427,False,False,0.043569154748895327
+dpass_dev-calib_000002_q007,dpass_dev-calib_000002,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000003_q000,dpass_dev-calib_000003,category_union,car,True,52758,47760,46984,53534,0.8776478499645085,False,False,0.8028270686789666
+dpass_dev-calib_000003_q001,dpass_dev-calib_000003,category_union,person,True,47239,38942,38150,48031,0.794278695009473,False,False,0.7932712301422274
+dpass_dev-calib_000003_q002,dpass_dev-calib_000003,category_union,road,True,83830,101772,72610,112992,0.6426118663268195,False,False,0.6377185817546264
+dpass_dev-calib_000003_q003,dpass_dev-calib_000003,category_union,vegetation,False,0,0,0,0,,False,True,
+dpass_dev-calib_000003_q004,dpass_dev-calib_000003,category_union,sky,True,30704,38003,27607,41100,0.6717031630170316,False,False,0.6689200649366384
+dpass_dev-calib_000003_q005,dpass_dev-calib_000003,instance_referring,the leftmost car,True,54,63233,0,63287,0.0,False,False,0.0
+dpass_dev-calib_000003_q006,dpass_dev-calib_000003,instance_referring,the nearest person,True,12632,17369,0,30001,0.0,False,False,0.0
+dpass_dev-calib_000003_q007,dpass_dev-calib_000003,category_union,train,False,0,47042,0,47042,,True,False,0.0
+dpass_dev-calib_000004_q000,dpass_dev-calib_000004,category_union,car,True,3811,1344,1236,3919,0.31538657820872673,False,False,0.11317999269806499
+dpass_dev-calib_000004_q001,dpass_dev-calib_000004,category_union,person,True,72,72,61,83,0.7349397590361446,False,False,0.7349397590361446
+dpass_dev-calib_000004_q002,dpass_dev-calib_000004,category_union,road,True,238754,233108,232573,239289,0.9719335197188337,False,False,0.9715640404377976
+dpass_dev-calib_000004_q003,dpass_dev-calib_000004,category_union,vegetation,True,283801,55899,53575,286125,0.1872433377020533,False,False,0.18715568768143534
+dpass_dev-calib_000004_q004,dpass_dev-calib_000004,category_union,sky,True,88000,77290,75471,89819,0.8402565158819404,False,False,0.827596416391609
+dpass_dev-calib_000004_q005,dpass_dev-calib_000004,instance_referring,the leftmost car,True,958,1067,862,1163,0.7411865864144453,False,False,0.7386461011139674
+dpass_dev-calib_000004_q006,dpass_dev-calib_000004,instance_referring,the nearest person,True,72,2469,0,2541,0.0,False,False,0.0
+dpass_dev-calib_000004_q007,dpass_dev-calib_000004,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000005_q000,dpass_dev-calib_000005,category_union,car,True,29920,26359,26317,29962,0.8783459048127629,False,False,0.346334036074022
+dpass_dev-calib_000005_q001,dpass_dev-calib_000005,category_union,person,True,4897,4146,3625,5418,0.6690660760428202,False,False,0.6593306656966169
+dpass_dev-calib_000005_q002,dpass_dev-calib_000005,category_union,road,True,125860,239011,121956,242915,0.5020521581623202,False,False,0.501315400046039
+dpass_dev-calib_000005_q003,dpass_dev-calib_000005,category_union,vegetation,True,306283,235713,230730,311266,0.7412630997282067,False,False,0.7136075019562118
+dpass_dev-calib_000005_q004,dpass_dev-calib_000005,category_union,sky,True,40731,35293,34425,41599,0.8275439313445034,False,False,0.8153911745896397
+dpass_dev-calib_000005_q005,dpass_dev-calib_000005,instance_referring,the leftmost car,True,10404,26560,8675,28289,0.30665629750079537,False,False,0.30257054166230685
+dpass_dev-calib_000005_q006,dpass_dev-calib_000005,instance_referring,the nearest person,True,1586,2312,1410,2488,0.5667202572347267,False,False,0.5610823716673299
+dpass_dev-calib_000005_q007,dpass_dev-calib_000005,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000006_q000,dpass_dev-calib_000006,category_union,car,True,3203,816,656,3363,0.19506393101397562,False,False,0.08880465682956545
+dpass_dev-calib_000006_q001,dpass_dev-calib_000006,category_union,person,True,620,441,387,674,0.5741839762611276,False,False,0.5741839762611276
+dpass_dev-calib_000006_q002,dpass_dev-calib_000006,category_union,road,True,152280,149533,147517,154296,0.9560649660393011,False,False,0.9546666494091456
+dpass_dev-calib_000006_q003,dpass_dev-calib_000006,category_union,vegetation,True,201172,138494,134116,205550,0.652473850644612,False,False,0.6510833102738496
+dpass_dev-calib_000006_q004,dpass_dev-calib_000006,category_union,sky,True,176041,167971,167078,176934,0.944295613053455,False,False,0.9414011877528482
+dpass_dev-calib_000006_q005,dpass_dev-calib_000006,instance_referring,the leftmost car,True,127,3880,0,4007,0.0,False,False,0.0
+dpass_dev-calib_000006_q006,dpass_dev-calib_000006,instance_referring,the nearest person,True,251,474,181,544,0.3327205882352941,False,False,0.3327205882352941
+dpass_dev-calib_000006_q007,dpass_dev-calib_000006,category_union,train,False,0,312,0,312,,True,False,0.0
+dpass_dev-calib_000007_q000,dpass_dev-calib_000007,category_union,car,True,50507,12447,12418,50536,0.24572581921798323,False,False,0.2067324262666382
+dpass_dev-calib_000007_q001,dpass_dev-calib_000007,category_union,person,True,2509,1796,1524,2781,0.5480043149946062,False,False,0.5413854351687389
+dpass_dev-calib_000007_q002,dpass_dev-calib_000007,category_union,road,True,76039,72634,70726,77947,0.9073601293186396,False,False,0.8921489479792118
+dpass_dev-calib_000007_q003,dpass_dev-calib_000007,category_union,vegetation,True,8833,9251,8351,9733,0.8580088359190383,False,False,0.8512742099898063
+dpass_dev-calib_000007_q004,dpass_dev-calib_000007,category_union,sky,True,20470,11075,10016,21529,0.46523294161363743,False,False,0.46078115655334223
+dpass_dev-calib_000007_q005,dpass_dev-calib_000007,instance_referring,the leftmost car,True,12756,32255,12342,32669,0.37778934157764243,False,False,0.3708979444644789
+dpass_dev-calib_000007_q006,dpass_dev-calib_000007,instance_referring,the nearest person,True,892,12418,0,13310,0.0,False,False,0.0
+dpass_dev-calib_000007_q007,dpass_dev-calib_000007,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000008_q000,dpass_dev-calib_000008,category_union,car,True,143032,27875,27477,143430,0.19157080108763858,False,False,0.17895769388982058
+dpass_dev-calib_000008_q001,dpass_dev-calib_000008,category_union,person,True,16285,17377,14009,19653,0.7128173815702438,False,False,0.70045
+dpass_dev-calib_000008_q002,dpass_dev-calib_000008,category_union,road,True,37175,35541,31900,40816,0.7815562524500196,False,False,0.7723596920245993
+dpass_dev-calib_000008_q003,dpass_dev-calib_000008,category_union,vegetation,True,32168,29275,28522,32921,0.8663770845357067,False,False,0.8652206886091309
+dpass_dev-calib_000008_q004,dpass_dev-calib_000008,category_union,sky,True,115618,103699,102624,116693,0.879435784494357,False,False,0.8765438425664941
+dpass_dev-calib_000008_q005,dpass_dev-calib_000008,instance_referring,the leftmost car,True,905,22534,400,23039,0.017361864664264943,False,False,0.017085255424568596
+dpass_dev-calib_000008_q006,dpass_dev-calib_000008,instance_referring,the nearest person,True,5194,8504,4283,9415,0.4549123738714817,False,False,0.4420020639834881
+dpass_dev-calib_000008_q007,dpass_dev-calib_000008,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000009_q000,dpass_dev-calib_000009,category_union,car,True,146091,113596,113278,146409,0.7737092665068405,False,False,0.7396000283211359
+dpass_dev-calib_000009_q001,dpass_dev-calib_000009,category_union,person,True,695,144,134,705,0.1900709219858156,False,False,0.18899858956276447
+dpass_dev-calib_000009_q002,dpass_dev-calib_000009,category_union,road,True,66228,38474,37810,66892,0.5652394905220355,False,False,0.5563648670521932
+dpass_dev-calib_000009_q003,dpass_dev-calib_000009,category_union,vegetation,True,134964,140253,110897,164320,0.6748843719571568,False,False,0.6691708453262372
+dpass_dev-calib_000009_q004,dpass_dev-calib_000009,category_union,sky,True,148088,141762,141066,148784,0.948126142595978,False,False,0.9393878855681637
+dpass_dev-calib_000009_q005,dpass_dev-calib_000009,instance_referring,the leftmost car,True,2813,91640,0,94453,0.0,False,False,0.0
+dpass_dev-calib_000009_q006,dpass_dev-calib_000009,instance_referring,the nearest person,True,203,60456,0,60659,0.0,False,False,0.0
+dpass_dev-calib_000009_q007,dpass_dev-calib_000009,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000010_q000,dpass_dev-calib_000010,category_union,car,True,86020,50892,50426,86486,0.5830539046782138,False,False,0.5397526501766784
+dpass_dev-calib_000010_q001,dpass_dev-calib_000010,category_union,person,True,10841,9890,8264,12467,0.6628699767385898,False,False,0.6625511103984607
+dpass_dev-calib_000010_q002,dpass_dev-calib_000010,category_union,road,True,192438,183905,182187,194156,0.9383536949669338,False,False,0.9363330335346267
+dpass_dev-calib_000010_q003,dpass_dev-calib_000010,category_union,vegetation,True,6180,4698,4517,6361,0.7101084735104544,False,False,0.6916245597917624
+dpass_dev-calib_000010_q004,dpass_dev-calib_000010,category_union,sky,True,135356,126987,126916,135427,0.9371543340692772,False,False,0.9318834301322388
+dpass_dev-calib_000010_q005,dpass_dev-calib_000010,instance_referring,the leftmost car,True,26,41522,0,41548,0.0,False,False,0.0
+dpass_dev-calib_000010_q006,dpass_dev-calib_000010,instance_referring,the nearest person,True,2404,23955,0,26359,0.0,False,False,0.0
+dpass_dev-calib_000010_q007,dpass_dev-calib_000010,category_union,train,False,0,22712,0,22712,,True,False,0.0
+dpass_dev-calib_000011_q000,dpass_dev-calib_000011,category_union,car,False,0,0,0,0,,False,True,0.0
+dpass_dev-calib_000011_q001,dpass_dev-calib_000011,category_union,person,False,0,0,0,0,,False,True,
+dpass_dev-calib_000011_q002,dpass_dev-calib_000011,category_union,road,True,189412,182758,181706,190464,0.9540175571236559,False,False,0.952477302748831
+dpass_dev-calib_000011_q003,dpass_dev-calib_000011,category_union,vegetation,True,138508,137623,106576,169555,0.6285630031553183,False,False,0.6260375119684679
+dpass_dev-calib_000011_q004,dpass_dev-calib_000011,category_union,sky,True,260686,249517,248339,261864,0.9483510524547093,False,False,0.9475802912884381
+dpass_dev-calib_000011_q005,dpass_dev-calib_000011,instance_referring,the leftmost car,False,0,188,0,188,,True,False,0.0
+dpass_dev-calib_000011_q006,dpass_dev-calib_000011,instance_referring,the nearest person,False,0,0,0,0,,False,True,
+dpass_dev-calib_000011_q007,dpass_dev-calib_000011,category_union,train,False,0,33949,0,33949,,True,False,0.0
+dpass_dev-calib_000012_q000,dpass_dev-calib_000012,category_union,car,True,29252,3194,3162,29284,0.10797705231525748,False,False,0.06875186941845063
+dpass_dev-calib_000012_q001,dpass_dev-calib_000012,category_union,person,True,19958,16132,14656,21434,0.683773444060838,False,False,0.6681863773137594
+dpass_dev-calib_000012_q002,dpass_dev-calib_000012,category_union,road,False,0,152323,0,152323,,True,False,0.0
+dpass_dev-calib_000012_q003,dpass_dev-calib_000012,category_union,vegetation,True,142480,2189,1920,142749,0.013450181787613223,False,False,0.013437473754934072
+dpass_dev-calib_000012_q004,dpass_dev-calib_000012,category_union,sky,True,80702,74804,74280,81226,0.9144855095659026,False,False,0.9038255621532172
+dpass_dev-calib_000012_q005,dpass_dev-calib_000012,instance_referring,the leftmost car,True,2682,5080,1152,6610,0.17428139183055977,False,False,0.17346785122722483
+dpass_dev-calib_000012_q006,dpass_dev-calib_000012,instance_referring,the nearest person,True,5096,6223,0,11319,0.0,False,False,0.0
+dpass_dev-calib_000012_q007,dpass_dev-calib_000012,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000013_q000,dpass_dev-calib_000013,category_union,car,True,38378,36133,36105,38406,0.9400874863302608,False,False,0.7036397165874018
+dpass_dev-calib_000013_q001,dpass_dev-calib_000013,category_union,person,True,87,43,41,89,0.4606741573033708,False,False,0.4606741573033708
+dpass_dev-calib_000013_q002,dpass_dev-calib_000013,category_union,road,True,84248,81688,81390,84546,0.9626712085728479,False,False,0.9474970896391153
+dpass_dev-calib_000013_q003,dpass_dev-calib_000013,category_union,vegetation,True,410560,239538,229617,420481,0.5460817492348049,False,False,0.5430416119763029
+dpass_dev-calib_000013_q004,dpass_dev-calib_000013,category_union,sky,True,59319,53397,52201,60515,0.8626125753945303,False,False,0.8479281386547114
+dpass_dev-calib_000013_q005,dpass_dev-calib_000013,instance_referring,the leftmost car,True,3311,29201,2674,29838,0.08961726657282659,False,False,0.08937763219466542
+dpass_dev-calib_000013_q006,dpass_dev-calib_000013,instance_referring,the nearest person,True,87,60778,0,60865,0.0,False,False,0.0
+dpass_dev-calib_000013_q007,dpass_dev-calib_000013,category_union,train,False,0,31133,0,31133,,True,False,0.0
+dpass_dev-calib_000014_q000,dpass_dev-calib_000014,category_union,car,True,12786,10725,10618,12893,0.823547661521756,False,False,0.48244824482448245
+dpass_dev-calib_000014_q001,dpass_dev-calib_000014,category_union,person,False,0,0,0,0,,False,True,
+dpass_dev-calib_000014_q002,dpass_dev-calib_000014,category_union,road,True,121190,146605,114646,153149,0.748591241209541,False,False,0.7422278618689386
+dpass_dev-calib_000014_q003,dpass_dev-calib_000014,category_union,vegetation,True,407375,103293,101808,408860,0.24900454923445678,False,False,0.24882136860551227
+dpass_dev-calib_000014_q004,dpass_dev-calib_000014,category_union,sky,True,45461,40513,40046,45928,0.8719299773558613,False,False,0.8602238309024123
+dpass_dev-calib_000014_q005,dpass_dev-calib_000014,instance_referring,the leftmost car,True,670,6177,0,6847,0.0,False,False,0.0
+dpass_dev-calib_000014_q006,dpass_dev-calib_000014,instance_referring,the nearest person,False,0,8756,0,8756,,True,False,0.0
+dpass_dev-calib_000014_q007,dpass_dev-calib_000014,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000015_q000,dpass_dev-calib_000015,category_union,car,True,2657,1671,1531,2797,0.547372184483375,False,False,0.21176756625334306
+dpass_dev-calib_000015_q001,dpass_dev-calib_000015,category_union,person,True,2914,2467,2383,2998,0.794863242161441,False,False,0.7901193633952255
+dpass_dev-calib_000015_q002,dpass_dev-calib_000015,category_union,road,True,90847,82840,74063,99624,0.7434252790492251,False,False,0.7379365316594431
+dpass_dev-calib_000015_q003,dpass_dev-calib_000015,category_union,vegetation,True,605781,153260,145668,613373,0.23748681471143987,False,False,0.23742913864539494
+dpass_dev-calib_000015_q004,dpass_dev-calib_000015,category_union,sky,True,43628,33942,32980,44590,0.739627719219556,False,False,0.7340960690913947
+dpass_dev-calib_000015_q005,dpass_dev-calib_000015,instance_referring,the leftmost car,True,1301,1394,1143,1552,0.7364690721649485,False,False,0.6475920679886685
+dpass_dev-calib_000015_q006,dpass_dev-calib_000015,instance_referring,the nearest person,True,2243,1955,1938,2260,0.8575221238938053,False,False,0.8560070671378092
+dpass_dev-calib_000015_q007,dpass_dev-calib_000015,category_union,train,False,0,22265,0,22265,,True,False,0.0
+dpass_dev-calib_000016_q000,dpass_dev-calib_000016,category_union,car,True,121755,118664,118089,122330,0.9653314804218098,False,False,0.8931702054332679
+dpass_dev-calib_000016_q001,dpass_dev-calib_000016,category_union,person,True,140,0,0,140,0.0,False,False,0.0
+dpass_dev-calib_000016_q002,dpass_dev-calib_000016,category_union,road,True,196836,196008,192384,200460,0.9597126608799761,False,False,0.9438963001486613
+dpass_dev-calib_000016_q003,dpass_dev-calib_000016,category_union,vegetation,True,145746,136260,133809,148197,0.9029130144334906,False,False,0.8999616634046932
+dpass_dev-calib_000016_q004,dpass_dev-calib_000016,category_union,sky,True,73886,68378,68022,74242,0.9162199294200049,False,False,0.9042232177276776
+dpass_dev-calib_000016_q005,dpass_dev-calib_000016,instance_referring,the leftmost car,True,12583,55273,0,67856,0.0,False,False,0.0
+dpass_dev-calib_000016_q006,dpass_dev-calib_000016,instance_referring,the nearest person,True,140,55210,0,55350,0.0,False,False,0.0
+dpass_dev-calib_000016_q007,dpass_dev-calib_000016,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000017_q000,dpass_dev-calib_000017,category_union,car,True,119975,99571,98878,120668,0.8194218848410515,False,False,0.5096044524543608
+dpass_dev-calib_000017_q001,dpass_dev-calib_000017,category_union,person,True,1287,1062,822,1527,0.5383104125736738,False,False,0.5303225806451612
+dpass_dev-calib_000017_q002,dpass_dev-calib_000017,category_union,road,True,147055,150025,142975,154105,0.9277765160118101,False,False,0.9261898438157921
+dpass_dev-calib_000017_q003,dpass_dev-calib_000017,category_union,vegetation,True,161408,153513,144200,170721,0.8446529718078034,False,False,0.8356997971602435
+dpass_dev-calib_000017_q004,dpass_dev-calib_000017,category_union,sky,True,139534,132121,109044,162611,0.6705819409511041,False,False,0.6641532417699546
+dpass_dev-calib_000017_q005,dpass_dev-calib_000017,instance_referring,the leftmost car,True,807,67205,0,68012,0.0,False,False,0.0
+dpass_dev-calib_000017_q006,dpass_dev-calib_000017,instance_referring,the nearest person,True,710,79088,637,79161,0.008046891777516706,False,False,0.004589998558870154
+dpass_dev-calib_000017_q007,dpass_dev-calib_000017,category_union,train,False,0,29118,0,29118,,True,False,0.0
+dpass_dev-calib_000018_q000,dpass_dev-calib_000018,category_union,car,True,1398,1297,1186,1509,0.7859509609012592,False,False,0.07549199519078656
+dpass_dev-calib_000018_q001,dpass_dev-calib_000018,category_union,person,True,344,2863,129,3078,0.04191033138401559,False,False,0.04191033138401559
+dpass_dev-calib_000018_q002,dpass_dev-calib_000018,category_union,road,True,91357,88576,86560,93373,0.9270345817313356,False,False,0.9230506739464255
+dpass_dev-calib_000018_q003,dpass_dev-calib_000018,category_union,vegetation,True,434617,108400,103040,439977,0.23419406014405297,False,False,0.23206318676987592
+dpass_dev-calib_000018_q004,dpass_dev-calib_000018,category_union,sky,True,24244,38343,16271,46316,0.3513040849814319,False,False,0.3511676090991497
+dpass_dev-calib_000018_q005,dpass_dev-calib_000018,instance_referring,the leftmost car,True,96,1307,67,1336,0.050149700598802395,False,False,0.04988830975428146
+dpass_dev-calib_000018_q006,dpass_dev-calib_000018,instance_referring,the nearest person,True,159,3826,0,3985,0.0,False,False,0.0
+dpass_dev-calib_000018_q007,dpass_dev-calib_000018,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000019_q000,dpass_dev-calib_000019,category_union,car,True,58983,18627,17097,60513,0.282534331465966,False,False,0.2298617683520175
+dpass_dev-calib_000019_q001,dpass_dev-calib_000019,category_union,person,True,36810,38735,33690,41855,0.8049217536733962,False,False,0.7960775047258979
+dpass_dev-calib_000019_q002,dpass_dev-calib_000019,category_union,road,True,157368,147043,145405,159006,0.9144623473328051,False,False,0.9060178954189722
+dpass_dev-calib_000019_q003,dpass_dev-calib_000019,category_union,vegetation,True,11969,7337,5354,13952,0.38374426605504586,False,False,0.36290923879888837
+dpass_dev-calib_000019_q004,dpass_dev-calib_000019,category_union,sky,True,60083,56212,54850,61445,0.892668239889332,False,False,0.8881871913205408
+dpass_dev-calib_000019_q005,dpass_dev-calib_000019,instance_referring,the leftmost car,True,1852,13691,1811,13732,0.1318817360908826,False,False,0.13160380786280068
+dpass_dev-calib_000019_q006,dpass_dev-calib_000019,instance_referring,the nearest person,True,9915,22271,8721,23465,0.37165991902834006,False,False,0.3693304535637149
+dpass_dev-calib_000019_q007,dpass_dev-calib_000019,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000020_q000,dpass_dev-calib_000020,category_union,car,True,111439,27823,27539,111723,0.24649355996527125,False,False,0.16879671904700785
+dpass_dev-calib_000020_q001,dpass_dev-calib_000020,category_union,person,True,9663,9058,8243,10478,0.7866959343386143,False,False,0.7727571013405831
+dpass_dev-calib_000020_q002,dpass_dev-calib_000020,category_union,road,True,145230,126778,126004,146004,0.8630174515766691,False,False,0.8494785311229615
+dpass_dev-calib_000020_q003,dpass_dev-calib_000020,category_union,vegetation,True,72589,65399,60131,77857,0.7723261877544729,False,False,0.7702584992186099
+dpass_dev-calib_000020_q004,dpass_dev-calib_000020,category_union,sky,True,61696,57808,54788,64716,0.846591260275666,False,False,0.6515477648681753
+dpass_dev-calib_000020_q005,dpass_dev-calib_000020,instance_referring,the leftmost car,True,111,46675,0,46786,0.0,False,False,0.0
+dpass_dev-calib_000020_q006,dpass_dev-calib_000020,instance_referring,the nearest person,True,7499,30330,6824,31005,0.22009353330108047,False,False,0.219280205655527
+dpass_dev-calib_000020_q007,dpass_dev-calib_000020,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000021_q000,dpass_dev-calib_000021,category_union,car,True,18055,14077,13840,18292,0.7566149136234419,False,False,0.406752782423159
+dpass_dev-calib_000021_q001,dpass_dev-calib_000021,category_union,person,True,552,536,394,694,0.5677233429394812,False,False,0.5677233429394812
+dpass_dev-calib_000021_q002,dpass_dev-calib_000021,category_union,road,True,215072,206116,205141,216047,0.9495202432803973,False,False,0.9394279381594373
+dpass_dev-calib_000021_q003,dpass_dev-calib_000021,category_union,vegetation,True,144582,107990,104333,148239,0.7038161347553613,False,False,0.6999208393710085
+dpass_dev-calib_000021_q004,dpass_dev-calib_000021,category_union,sky,True,232035,207392,206158,233269,0.8837779559221328,False,False,0.879236077347595
+dpass_dev-calib_000021_q005,dpass_dev-calib_000021,instance_referring,the leftmost car,True,4367,5449,941,8875,0.1060281690140845,False,False,0.10478841870824053
+dpass_dev-calib_000021_q006,dpass_dev-calib_000021,instance_referring,the nearest person,True,276,171,0,447,0.0,False,False,0.0
+dpass_dev-calib_000021_q007,dpass_dev-calib_000021,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000022_q000,dpass_dev-calib_000022,category_union,car,True,35721,8249,7598,36372,0.20889695370064884,False,False,0.19590980060917862
+dpass_dev-calib_000022_q001,dpass_dev-calib_000022,category_union,person,True,21431,21394,19765,23060,0.8571118820468343,False,False,0.8570747148866051
+dpass_dev-calib_000022_q002,dpass_dev-calib_000022,category_union,road,True,138683,126777,126293,139167,0.9074924371438631,False,False,0.9010437847363427
+dpass_dev-calib_000022_q003,dpass_dev-calib_000022,category_union,vegetation,True,101292,81148,76773,105667,0.7265560676464743,False,False,0.7239935496647523
+dpass_dev-calib_000022_q004,dpass_dev-calib_000022,category_union,sky,True,47231,21557,20291,48497,0.418397014248304,False,False,0.418397014248304
+dpass_dev-calib_000022_q005,dpass_dev-calib_000022,instance_referring,the leftmost car,True,2410,16651,0,19061,0.0,False,False,0.0
+dpass_dev-calib_000022_q006,dpass_dev-calib_000022,instance_referring,the nearest person,True,11821,22638,11411,23048,0.4950971884762235,False,False,0.4950971884762235
+dpass_dev-calib_000022_q007,dpass_dev-calib_000022,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000023_q000,dpass_dev-calib_000023,category_union,car,True,16722,265,135,16852,0.008010918585331117,False,False,0.0039385676664569205
+dpass_dev-calib_000023_q001,dpass_dev-calib_000023,category_union,person,True,295,177,107,365,0.29315068493150687,False,False,0.2907608695652174
+dpass_dev-calib_000023_q002,dpass_dev-calib_000023,category_union,road,True,309885,302162,302054,309993,0.9743897442845484,False,False,0.9663532445428399
+dpass_dev-calib_000023_q003,dpass_dev-calib_000023,category_union,vegetation,True,47174,24929,18213,53890,0.3379662275004639,False,False,0.33534025629695097
+dpass_dev-calib_000023_q004,dpass_dev-calib_000023,category_union,sky,True,241045,224197,223549,241693,0.9249295593997344,False,False,0.9205608631197496
+dpass_dev-calib_000023_q005,dpass_dev-calib_000023,instance_referring,the leftmost car,True,109,15896,0,16005,0.0,False,False,0.0
+dpass_dev-calib_000023_q006,dpass_dev-calib_000023,instance_referring,the nearest person,True,69,15574,0,15643,0.0,False,False,0.0
+dpass_dev-calib_000023_q007,dpass_dev-calib_000023,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000024_q000,dpass_dev-calib_000024,category_union,car,True,25065,7149,6589,25625,0.2571317073170732,False,False,0.1747181753982162
+dpass_dev-calib_000024_q001,dpass_dev-calib_000024,category_union,person,True,20472,18529,17398,21603,0.8053511086423182,False,False,0.789705415096909
+dpass_dev-calib_000024_q002,dpass_dev-calib_000024,category_union,road,True,78881,67370,66252,79999,0.8281603520044001,False,False,0.8274880095923262
+dpass_dev-calib_000024_q003,dpass_dev-calib_000024,category_union,vegetation,True,33580,15318,7637,41261,0.1850900365963016,False,False,0.18275144176697217
+dpass_dev-calib_000024_q004,dpass_dev-calib_000024,category_union,sky,True,156050,150830,149742,157138,0.9529330906591659,False,False,0.9464163822525598
+dpass_dev-calib_000024_q005,dpass_dev-calib_000024,instance_referring,the leftmost car,True,102,1435,0,1537,0.0,False,False,0.0
+dpass_dev-calib_000024_q006,dpass_dev-calib_000024,instance_referring,the nearest person,True,5322,7283,0,12605,0.0,False,False,0.0
+dpass_dev-calib_000024_q007,dpass_dev-calib_000024,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000025_q000,dpass_dev-calib_000025,category_union,car,True,25506,945,894,25557,0.034980631529522244,False,False,0.019779052475037178
+dpass_dev-calib_000025_q001,dpass_dev-calib_000025,category_union,person,True,1613,1490,1404,1699,0.8263684520306063,False,False,0.813441483198146
+dpass_dev-calib_000025_q002,dpass_dev-calib_000025,category_union,road,True,186331,192128,163024,215435,0.7567201243994708,False,False,0.752670895777353
+dpass_dev-calib_000025_q003,dpass_dev-calib_000025,category_union,vegetation,True,93509,26786,24850,95445,0.2603593692702604,False,False,0.2588757396449704
+dpass_dev-calib_000025_q004,dpass_dev-calib_000025,category_union,sky,True,152075,125905,125329,152651,0.8210165672023112,False,False,0.8202911261503018
+dpass_dev-calib_000025_q005,dpass_dev-calib_000025,instance_referring,the leftmost car,True,961,712,662,1011,0.6547972304648862,False,False,0.6547972304648862
+dpass_dev-calib_000025_q006,dpass_dev-calib_000025,instance_referring,the nearest person,True,846,4354,784,4416,0.17753623188405798,False,False,0.17606108241634852
+dpass_dev-calib_000025_q007,dpass_dev-calib_000025,category_union,train,False,0,13266,0,13266,,True,False,0.0
+dpass_dev-calib_000026_q000,dpass_dev-calib_000026,category_union,car,True,40360,30266,28999,41627,0.6966392005188939,False,False,0.6406943442425832
+dpass_dev-calib_000026_q001,dpass_dev-calib_000026,category_union,person,False,0,0,0,0,,False,True,
+dpass_dev-calib_000026_q002,dpass_dev-calib_000026,category_union,road,True,73690,109427,71032,112085,0.6337333273854664,False,False,0.6290081202900989
+dpass_dev-calib_000026_q003,dpass_dev-calib_000026,category_union,vegetation,True,250593,61521,49079,263035,0.1865873362860456,False,False,0.18657953361769425
+dpass_dev-calib_000026_q004,dpass_dev-calib_000026,category_union,sky,True,347888,314493,313712,348669,0.8997415887274177,False,False,0.8996848212314055
+dpass_dev-calib_000026_q005,dpass_dev-calib_000026,instance_referring,the leftmost car,True,18044,30186,17907,30323,0.5905418329320977,False,False,0.584642005942081
+dpass_dev-calib_000026_q006,dpass_dev-calib_000026,instance_referring,the nearest person,False,0,38676,0,38676,,True,False,0.0
+dpass_dev-calib_000026_q007,dpass_dev-calib_000026,category_union,train,False,0,9173,0,9173,,True,False,0.0
+dpass_dev-calib_000027_q000,dpass_dev-calib_000027,category_union,car,True,7146,6418,6355,7209,0.8815369676792898,False,False,0.24337754672986506
+dpass_dev-calib_000027_q001,dpass_dev-calib_000027,category_union,person,True,67,81,62,86,0.7209302325581395,False,False,0.7209302325581395
+dpass_dev-calib_000027_q002,dpass_dev-calib_000027,category_union,road,True,248458,237717,237707,248468,0.9566905999967803,False,False,0.9183691603949992
+dpass_dev-calib_000027_q003,dpass_dev-calib_000027,category_union,vegetation,True,96084,131152,87916,139320,0.6310364628194085,False,False,0.624962679670728
+dpass_dev-calib_000027_q004,dpass_dev-calib_000027,category_union,sky,True,237261,219913,218998,238176,0.9194797124815263,False,False,0.919340755293604
+dpass_dev-calib_000027_q005,dpass_dev-calib_000027,instance_referring,the leftmost car,True,6460,6448,6111,6797,0.8990731204943357,False,False,0.89762044653349
+dpass_dev-calib_000027_q006,dpass_dev-calib_000027,instance_referring,the nearest person,True,67,6105,0,6172,0.0,False,False,0.0
+dpass_dev-calib_000027_q007,dpass_dev-calib_000027,category_union,train,False,0,3270,0,3270,,True,False,0.0
+dpass_dev-calib_000028_q000,dpass_dev-calib_000028,category_union,car,True,90523,74689,73143,92069,0.7944367811098199,False,False,0.7397545120523277
+dpass_dev-calib_000028_q001,dpass_dev-calib_000028,category_union,person,False,0,0,0,0,,False,True,
+dpass_dev-calib_000028_q002,dpass_dev-calib_000028,category_union,road,True,178955,171812,171722,179045,0.9590996676813092,False,False,0.9555346580380941
+dpass_dev-calib_000028_q003,dpass_dev-calib_000028,category_union,vegetation,True,91930,196662,75746,212846,0.35587232083290266,False,False,0.35499835965693394
+dpass_dev-calib_000028_q004,dpass_dev-calib_000028,category_union,sky,True,276813,258040,257546,277307,0.9287396279214012,False,False,0.9275922924545291
+dpass_dev-calib_000028_q005,dpass_dev-calib_000028,instance_referring,the leftmost car,True,41,79874,0,79915,0.0,False,False,0.0
+dpass_dev-calib_000028_q006,dpass_dev-calib_000028,instance_referring,the nearest person,False,0,77227,0,77227,,True,False,0.0
+dpass_dev-calib_000028_q007,dpass_dev-calib_000028,category_union,train,False,0,6310,0,6310,,True,False,0.0
+dpass_dev-calib_000029_q000,dpass_dev-calib_000029,category_union,car,True,23647,7652,7138,24161,0.2954347916063077,False,False,0.1949346231529712
+dpass_dev-calib_000029_q001,dpass_dev-calib_000029,category_union,person,True,81,0,0,81,0.0,False,False,0.0
+dpass_dev-calib_000029_q002,dpass_dev-calib_000029,category_union,road,True,240854,197645,197548,240951,0.8198679399545966,False,False,0.8195652173913044
+dpass_dev-calib_000029_q003,dpass_dev-calib_000029,category_union,vegetation,True,224783,159806,154630,229959,0.6724242147513252,False,False,0.6715277114293904
+dpass_dev-calib_000029_q004,dpass_dev-calib_000029,category_union,sky,True,229948,217575,216339,231184,0.9357870786905669,False,False,0.9357870786905669
+dpass_dev-calib_000029_q005,dpass_dev-calib_000029,instance_referring,the leftmost car,True,143,15735,128,15750,0.008126984126984127,False,False,0.008116677235256817
+dpass_dev-calib_000029_q006,dpass_dev-calib_000029,instance_referring,the nearest person,True,81,13090,0,13171,0.0,False,False,0.0
+dpass_dev-calib_000029_q007,dpass_dev-calib_000029,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000030_q000,dpass_dev-calib_000030,category_union,car,True,371,330,306,395,0.7746835443037975,False,False,0.07642357642357642
+dpass_dev-calib_000030_q001,dpass_dev-calib_000030,category_union,person,False,0,0,0,0,,False,True,
+dpass_dev-calib_000030_q002,dpass_dev-calib_000030,category_union,road,True,132842,124568,123539,133871,0.9228212234165727,False,False,0.9099875514698841
+dpass_dev-calib_000030_q003,dpass_dev-calib_000030,category_union,vegetation,True,271082,302972,240771,333283,0.7224220857349459,False,False,0.7224220857349459
+dpass_dev-calib_000030_q004,dpass_dev-calib_000030,category_union,sky,True,195372,187355,185640,197087,0.9419190509774871,False,False,0.9419190509774871
+dpass_dev-calib_000030_q005,dpass_dev-calib_000030,instance_referring,the leftmost car,True,315,389,308,396,0.7777777777777778,False,False,0.7777777777777778
+dpass_dev-calib_000030_q006,dpass_dev-calib_000030,instance_referring,the nearest person,False,0,349,0,349,,True,False,0.0
+dpass_dev-calib_000030_q007,dpass_dev-calib_000030,category_union,train,False,0,327,0,327,,True,False,0.0
+dpass_dev-calib_000031_q000,dpass_dev-calib_000031,category_union,car,True,11463,877,827,11513,0.07183184226526536,False,False,0.05757850031330502
+dpass_dev-calib_000031_q001,dpass_dev-calib_000031,category_union,person,True,551,205,193,563,0.3428063943161634,False,False,0.3421985815602837
+dpass_dev-calib_000031_q002,dpass_dev-calib_000031,category_union,road,True,152411,170369,134594,188186,0.7152179226935054,False,False,0.7151609183798173
+dpass_dev-calib_000031_q003,dpass_dev-calib_000031,category_union,vegetation,True,88320,71656,58945,101031,0.5834347873424989,False,False,0.582345386287295
+dpass_dev-calib_000031_q004,dpass_dev-calib_000031,category_union,sky,True,260497,252469,252006,260960,0.9656882280809319,False,False,0.9653996736107386
+dpass_dev-calib_000031_q005,dpass_dev-calib_000031,instance_referring,the leftmost car,True,31,6368,0,6399,0.0,False,False,0.0
+dpass_dev-calib_000031_q006,dpass_dev-calib_000031,instance_referring,the nearest person,True,126,257,114,269,0.42379182156133827,False,False,0.4222222222222222
+dpass_dev-calib_000031_q007,dpass_dev-calib_000031,category_union,train,False,0,61368,0,61368,,True,False,0.0
+dpass_dev-calib_000032_q000,dpass_dev-calib_000032,category_union,car,True,17342,16784,16164,17962,0.899899788442267,False,False,0.32862341675646006
+dpass_dev-calib_000032_q001,dpass_dev-calib_000032,category_union,person,True,1039,871,784,1126,0.6962699822380106,False,False,0.6956521739130435
+dpass_dev-calib_000032_q002,dpass_dev-calib_000032,category_union,road,True,130795,133231,124424,139602,0.8912766292746522,False,False,0.8885207269611168
+dpass_dev-calib_000032_q003,dpass_dev-calib_000032,category_union,vegetation,True,475,0,0,475,0.0,False,False,0.0
+dpass_dev-calib_000032_q004,dpass_dev-calib_000032,category_union,sky,True,122510,121430,120890,123050,0.9824461600975213,False,False,0.9754857659286037
+dpass_dev-calib_000032_q005,dpass_dev-calib_000032,instance_referring,the leftmost car,True,49,16442,0,16491,0.0,False,False,0.0
+dpass_dev-calib_000032_q006,dpass_dev-calib_000032,instance_referring,the nearest person,True,394,59,0,453,0.0,False,False,0.0
+dpass_dev-calib_000032_q007,dpass_dev-calib_000032,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000033_q000,dpass_dev-calib_000033,category_union,car,True,118577,114824,112000,121401,0.9225624171135328,False,False,0.9055581134239626
+dpass_dev-calib_000033_q001,dpass_dev-calib_000033,category_union,person,False,0,0,0,0,,False,True,
+dpass_dev-calib_000033_q002,dpass_dev-calib_000033,category_union,road,True,206664,170238,170148,206754,0.8229490118691779,False,False,0.822062354754393
+dpass_dev-calib_000033_q003,dpass_dev-calib_000033,category_union,vegetation,True,1606,3168,1036,3738,0.27715355805243447,False,False,0.27715355805243447
+dpass_dev-calib_000033_q004,dpass_dev-calib_000033,category_union,sky,True,221274,214497,214258,221513,0.9672479719023263,False,False,0.9672479719023263
+dpass_dev-calib_000033_q005,dpass_dev-calib_000033,instance_referring,the leftmost car,True,20180,58702,17055,61827,0.2758503566403028,False,False,0.27536933882295955
+dpass_dev-calib_000033_q006,dpass_dev-calib_000033,instance_referring,the nearest person,False,0,49478,0,49478,,True,False,0.0
+dpass_dev-calib_000033_q007,dpass_dev-calib_000033,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000034_q000,dpass_dev-calib_000034,category_union,car,True,59837,54696,53982,60551,0.8915129395055408,False,False,0.7823996292219454
+dpass_dev-calib_000034_q001,dpass_dev-calib_000034,category_union,person,False,0,0,0,0,,False,True,
+dpass_dev-calib_000034_q002,dpass_dev-calib_000034,category_union,road,True,90202,143361,87254,146309,0.5963679609593395,False,False,0.5931207939637007
+dpass_dev-calib_000034_q003,dpass_dev-calib_000034,category_union,vegetation,True,78101,63053,61081,80073,0.762816430007618,False,False,0.7611434410397637
+dpass_dev-calib_000034_q004,dpass_dev-calib_000034,category_union,sky,True,292571,280362,280078,292855,0.95637090027488,False,False,0.95637090027488
+dpass_dev-calib_000034_q005,dpass_dev-calib_000034,instance_referring,the leftmost car,True,3157,26733,3065,26825,0.11425908667287978,False,False,0.11422502142883763
+dpass_dev-calib_000034_q006,dpass_dev-calib_000034,instance_referring,the nearest person,False,0,47652,0,47652,,True,False,0.0
+dpass_dev-calib_000034_q007,dpass_dev-calib_000034,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000035_q000,dpass_dev-calib_000035,category_union,car,True,70246,66671,65586,71331,0.9194599823358708,False,False,0.8407368528854524
+dpass_dev-calib_000035_q001,dpass_dev-calib_000035,category_union,person,True,377,387,294,470,0.625531914893617,False,False,0.6163522012578616
+dpass_dev-calib_000035_q002,dpass_dev-calib_000035,category_union,road,True,79799,105889,75253,110435,0.681423461764839,False,False,0.6730676350106435
+dpass_dev-calib_000035_q003,dpass_dev-calib_000035,category_union,vegetation,True,217455,249366,200630,266191,0.7537069247269818,False,False,0.751896324278947
+dpass_dev-calib_000035_q004,dpass_dev-calib_000035,category_union,sky,True,221434,213860,213190,222104,0.9598656485250153,False,False,0.9570260770415194
+dpass_dev-calib_000035_q005,dpass_dev-calib_000035,instance_referring,the leftmost car,True,13080,37786,10608,40258,0.26350042227631776,False,False,0.2634088200238379
+dpass_dev-calib_000035_q006,dpass_dev-calib_000035,instance_referring,the nearest person,True,217,37790,0,38007,0.0,False,False,0.0
+dpass_dev-calib_000035_q007,dpass_dev-calib_000035,category_union,train,False,0,10666,0,10666,,True,False,0.0
+dpass_dev-calib_000036_q000,dpass_dev-calib_000036,category_union,car,True,23259,20436,20019,23676,0.8455397871262037,False,False,0.7621640143150842
+dpass_dev-calib_000036_q001,dpass_dev-calib_000036,category_union,person,True,2300,1898,1557,2641,0.5895494131010981,False,False,0.5893262679788039
+dpass_dev-calib_000036_q002,dpass_dev-calib_000036,category_union,road,True,127904,121273,116968,132209,0.8847204048135906,False,False,0.8835976038133513
+dpass_dev-calib_000036_q003,dpass_dev-calib_000036,category_union,vegetation,True,7601,6752,5775,8578,0.673233854045232,False,False,0.673233854045232
+dpass_dev-calib_000036_q004,dpass_dev-calib_000036,category_union,sky,True,190993,187325,186718,191600,0.9745198329853862,False,False,0.973899708953589
+dpass_dev-calib_000036_q005,dpass_dev-calib_000036,instance_referring,the leftmost car,True,442,18457,282,18617,0.015147445882795294,False,False,0.015147445882795294
+dpass_dev-calib_000036_q006,dpass_dev-calib_000036,instance_referring,the nearest person,True,477,633,405,705,0.574468085106383,False,False,0.574468085106383
+dpass_dev-calib_000036_q007,dpass_dev-calib_000036,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000037_q000,dpass_dev-calib_000037,category_union,car,True,34350,25511,24417,35444,0.6888895158559982,False,False,0.6697381050322226
+dpass_dev-calib_000037_q001,dpass_dev-calib_000037,category_union,person,True,10522,9531,7933,12120,0.6545379537953795,False,False,0.6544299620524666
+dpass_dev-calib_000037_q002,dpass_dev-calib_000037,category_union,road,True,127956,119731,115375,132312,0.8719919584013544,False,False,0.869815972196045
+dpass_dev-calib_000037_q003,dpass_dev-calib_000037,category_union,vegetation,True,36305,26061,24464,37902,0.6454540657485093,False,False,0.6454540657485093
+dpass_dev-calib_000037_q004,dpass_dev-calib_000037,category_union,sky,True,127025,120412,119515,127922,0.9342802645362017,False,False,0.9342802645362017
+dpass_dev-calib_000037_q005,dpass_dev-calib_000037,instance_referring,the leftmost car,True,34,12217,0,12251,0.0,False,False,0.0
+dpass_dev-calib_000037_q006,dpass_dev-calib_000037,instance_referring,the nearest person,True,2434,3254,2282,3406,0.6699941280093952,False,False,0.6697974757851483
+dpass_dev-calib_000037_q007,dpass_dev-calib_000037,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000038_q000,dpass_dev-calib_000038,category_union,car,True,141505,58863,57526,142842,0.4027246888170146,False,False,0.39996106758250544
+dpass_dev-calib_000038_q001,dpass_dev-calib_000038,category_union,person,True,5116,5946,4646,6416,0.7241271820448878,False,False,0.7222135861961759
+dpass_dev-calib_000038_q002,dpass_dev-calib_000038,category_union,road,True,100606,113909,93277,121238,0.7693709892937858,False,False,0.7688699852452665
+dpass_dev-calib_000038_q003,dpass_dev-calib_000038,category_union,vegetation,True,4191,1876,1276,4791,0.26633270715925694,False,False,0.26506024096385544
+dpass_dev-calib_000038_q004,dpass_dev-calib_000038,category_union,sky,True,262585,256941,256699,262827,0.9766842828172143,False,False,0.9766842828172143
+dpass_dev-calib_000038_q005,dpass_dev-calib_000038,instance_referring,the leftmost car,True,166,92413,0,92579,0.0,False,False,0.0
+dpass_dev-calib_000038_q006,dpass_dev-calib_000038,instance_referring,the nearest person,True,241,5794,0,6035,0.0,False,False,0.0
+dpass_dev-calib_000038_q007,dpass_dev-calib_000038,category_union,train,False,0,99246,0,99246,,True,False,0.0
+dpass_dev-calib_000039_q000,dpass_dev-calib_000039,category_union,car,True,78208,70428,69635,79001,0.8814445386767256,False,False,0.8459694989106754
+dpass_dev-calib_000039_q001,dpass_dev-calib_000039,category_union,person,True,3046,2263,1943,3366,0.577243018419489,False,False,0.577243018419489
+dpass_dev-calib_000039_q002,dpass_dev-calib_000039,category_union,road,True,97522,91815,91357,97980,0.9324045723617065,False,False,0.9269552335727911
+dpass_dev-calib_000039_q003,dpass_dev-calib_000039,category_union,vegetation,True,11895,0,0,11895,0.0,False,False,0.0
+dpass_dev-calib_000039_q004,dpass_dev-calib_000039,category_union,sky,True,240500,235743,235433,240810,0.9776711930567668,False,False,0.9765802911078941
+dpass_dev-calib_000039_q005,dpass_dev-calib_000039,instance_referring,the leftmost car,True,36181,29362,20374,45169,0.45106156877504483,False,False,0.4501546619531595
+dpass_dev-calib_000039_q006,dpass_dev-calib_000039,instance_referring,the nearest person,True,1233,36358,1086,36505,0.029749349404191206,False,False,0.029681051682199568
+dpass_dev-calib_000039_q007,dpass_dev-calib_000039,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000040_q000,dpass_dev-calib_000040,category_union,car,True,17359,7579,7403,17535,0.42218420302252635,False,False,0.31032095144998373
+dpass_dev-calib_000040_q001,dpass_dev-calib_000040,category_union,person,True,1316,1672,1095,1893,0.5784469096671949,False,False,0.5679460580912863
+dpass_dev-calib_000040_q002,dpass_dev-calib_000040,category_union,road,True,180814,199943,173753,207004,0.839370253714904,False,False,0.8386045860622704
+dpass_dev-calib_000040_q003,dpass_dev-calib_000040,category_union,vegetation,True,102795,97523,94297,106021,0.8894181341432358,False,False,0.8844296044795018
+dpass_dev-calib_000040_q004,dpass_dev-calib_000040,category_union,sky,True,110763,106189,105940,111012,0.9543112456311029,False,False,0.9511155002917807
+dpass_dev-calib_000040_q005,dpass_dev-calib_000040,instance_referring,the leftmost car,True,2952,3775,1496,5231,0.28598738290957754,False,False,0.2827977315689981
+dpass_dev-calib_000040_q006,dpass_dev-calib_000040,instance_referring,the nearest person,True,389,1043,313,1119,0.2797140303842717,False,False,0.27384076990376205
+dpass_dev-calib_000040_q007,dpass_dev-calib_000040,category_union,train,False,0,1982,0,1982,,True,False,0.0
+dpass_dev-calib_000041_q000,dpass_dev-calib_000041,category_union,car,True,36463,32791,31670,37584,0.8426458067262665,False,False,0.4644307899869484
+dpass_dev-calib_000041_q001,dpass_dev-calib_000041,category_union,person,False,0,0,0,0,,False,True,
+dpass_dev-calib_000041_q002,dpass_dev-calib_000041,category_union,road,True,60359,145112,51900,153571,0.33795443150073906,False,False,0.33562038036976444
+dpass_dev-calib_000041_q003,dpass_dev-calib_000041,category_union,vegetation,True,218522,28784,24637,222669,0.11064405013719916,False,False,0.1002017293410446
+dpass_dev-calib_000041_q004,dpass_dev-calib_000041,category_union,sky,True,166237,157570,156283,167524,0.9328991666865644,False,False,0.9328991666865644
+dpass_dev-calib_000041_q005,dpass_dev-calib_000041,instance_referring,the leftmost car,True,25546,26026,20089,31483,0.6380903979925674,False,False,0.6380903979925674
+dpass_dev-calib_000041_q006,dpass_dev-calib_000041,instance_referring,the nearest person,False,0,26059,0,26059,,True,False,0.0
+dpass_dev-calib_000041_q007,dpass_dev-calib_000041,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000042_q000,dpass_dev-calib_000042,category_union,car,True,10271,0,0,10271,0.0,False,False,0.0
+dpass_dev-calib_000042_q001,dpass_dev-calib_000042,category_union,person,True,710,339,266,783,0.3397190293742018,False,False,0.3397190293742018
+dpass_dev-calib_000042_q002,dpass_dev-calib_000042,category_union,road,True,283494,275118,274884,283728,0.9688293013026561,False,False,0.9688224720685158
+dpass_dev-calib_000042_q003,dpass_dev-calib_000042,category_union,vegetation,True,202472,73680,72268,203884,0.3544564556316337,False,False,0.3540934769933315
+dpass_dev-calib_000042_q004,dpass_dev-calib_000042,category_union,sky,True,197686,197585,191578,203693,0.9405232384028906,False,False,0.9382615679974925
+dpass_dev-calib_000042_q005,dpass_dev-calib_000042,instance_referring,the leftmost car,True,100,903,0,1003,0.0,False,False,0.0
+dpass_dev-calib_000042_q006,dpass_dev-calib_000042,instance_referring,the nearest person,True,195,2317,0,2512,0.0,False,False,0.0
+dpass_dev-calib_000042_q007,dpass_dev-calib_000042,category_union,train,False,0,75589,0,75589,,True,False,0.0
+dpass_dev-calib_000043_q000,dpass_dev-calib_000043,category_union,car,True,410,194,184,420,0.4380952380952381,False,False,0.01233409304196273
+dpass_dev-calib_000043_q001,dpass_dev-calib_000043,category_union,person,False,0,0,0,0,,False,True,
+dpass_dev-calib_000043_q002,dpass_dev-calib_000043,category_union,road,True,115366,179442,110814,183994,0.6022696392273661,False,False,0.5987453870551176
+dpass_dev-calib_000043_q003,dpass_dev-calib_000043,category_union,vegetation,True,178215,150639,144088,184766,0.7798404468354567,False,False,0.7774546357097765
+dpass_dev-calib_000043_q004,dpass_dev-calib_000043,category_union,sky,True,169489,159391,157384,171496,0.9177123664691887,False,False,0.9103023853041204
+dpass_dev-calib_000043_q005,dpass_dev-calib_000043,instance_referring,the leftmost car,True,76,534,0,610,0.0,False,False,0.0
+dpass_dev-calib_000043_q006,dpass_dev-calib_000043,instance_referring,the nearest person,False,0,310,0,310,,True,False,0.0
+dpass_dev-calib_000043_q007,dpass_dev-calib_000043,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000044_q000,dpass_dev-calib_000044,category_union,car,True,10704,6539,6163,11080,0.5562274368231047,False,False,0.40862449668788153
+dpass_dev-calib_000044_q001,dpass_dev-calib_000044,category_union,person,True,93,0,0,93,0.0,False,False,0.0
+dpass_dev-calib_000044_q002,dpass_dev-calib_000044,category_union,road,True,80971,111280,77805,114446,0.679840274015693,False,False,0.6792349058909802
+dpass_dev-calib_000044_q003,dpass_dev-calib_000044,category_union,vegetation,True,43978,4929,4818,44089,0.10927895847036675,False,False,0.10927895847036675
+dpass_dev-calib_000044_q004,dpass_dev-calib_000044,category_union,sky,True,300899,293581,292992,301488,0.9718197739213501,False,False,0.9706607299037926
+dpass_dev-calib_000044_q005,dpass_dev-calib_000044,instance_referring,the leftmost car,True,16,1685,0,1701,0.0,False,False,0.0
+dpass_dev-calib_000044_q006,dpass_dev-calib_000044,instance_referring,the nearest person,True,34,0,0,34,0.0,False,False,0.0
+dpass_dev-calib_000044_q007,dpass_dev-calib_000044,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000045_q000,dpass_dev-calib_000045,category_union,car,True,77315,23369,22582,78102,0.2891347212619395,False,False,0.2814781812331378
+dpass_dev-calib_000045_q001,dpass_dev-calib_000045,category_union,person,True,4840,3592,3280,5152,0.6366459627329193,False,False,0.6349206349206349
+dpass_dev-calib_000045_q002,dpass_dev-calib_000045,category_union,road,True,225851,212895,212774,225972,0.9415945338360505,False,False,0.9411655424084927
+dpass_dev-calib_000045_q003,dpass_dev-calib_000045,category_union,vegetation,True,19826,3980,3439,20367,0.1688515736239996,False,False,0.16884328358208955
+dpass_dev-calib_000045_q004,dpass_dev-calib_000045,category_union,sky,True,176843,168235,167474,177604,0.9429629963289116,False,False,0.9429629963289116
+dpass_dev-calib_000045_q005,dpass_dev-calib_000045,instance_referring,the leftmost car,True,1511,56137,1391,56257,0.024725811898963685,False,False,0.02469903050534465
+dpass_dev-calib_000045_q006,dpass_dev-calib_000045,instance_referring,the nearest person,True,1921,41844,1721,42044,0.04093330796308629,False,False,0.04093330796308629
+dpass_dev-calib_000045_q007,dpass_dev-calib_000045,category_union,train,False,0,4354,0,4354,,True,False,0.0
+dpass_dev-calib_000046_q000,dpass_dev-calib_000046,category_union,car,True,48314,36990,36530,48774,0.748964612293435,False,False,0.6766239749378052
+dpass_dev-calib_000046_q001,dpass_dev-calib_000046,category_union,person,True,5020,5647,4149,6518,0.6365449524393986,False,False,0.6309306569343066
+dpass_dev-calib_000046_q002,dpass_dev-calib_000046,category_union,road,True,132800,112464,111110,134154,0.8282272612072693,False,False,0.8235799897710342
+dpass_dev-calib_000046_q003,dpass_dev-calib_000046,category_union,vegetation,True,204205,46906,44394,206717,0.2147573736073956,False,False,0.21461721424013305
+dpass_dev-calib_000046_q004,dpass_dev-calib_000046,category_union,sky,True,74962,71685,70045,76602,0.9144017127490144,False,False,0.9144017127490144
+dpass_dev-calib_000046_q005,dpass_dev-calib_000046,instance_referring,the leftmost car,True,26,25369,0,25395,0.0,False,False,0.0
+dpass_dev-calib_000046_q006,dpass_dev-calib_000046,instance_referring,the nearest person,True,3650,21683,3335,21998,0.15160469133557597,False,False,0.15021845862798974
+dpass_dev-calib_000046_q007,dpass_dev-calib_000046,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000047_q000,dpass_dev-calib_000047,category_union,car,True,31394,16791,15782,32403,0.48705366787025894,False,False,0.42129099288701816
+dpass_dev-calib_000047_q001,dpass_dev-calib_000047,category_union,person,True,2179,1517,1339,2357,0.5680950360627917,False,False,0.5676133955065705
+dpass_dev-calib_000047_q002,dpass_dev-calib_000047,category_union,road,True,221415,187127,187067,221475,0.844641607404899,False,False,0.843765363884441
+dpass_dev-calib_000047_q003,dpass_dev-calib_000047,category_union,vegetation,True,80542,28202,27413,81331,0.3370547515707418,False,False,0.3366904530883455
+dpass_dev-calib_000047_q004,dpass_dev-calib_000047,category_union,sky,True,113734,109582,108531,114785,0.9455155290325391,False,False,0.9455155290325391
+dpass_dev-calib_000047_q005,dpass_dev-calib_000047,instance_referring,the leftmost car,True,184,7319,0,7503,0.0,False,False,0.0
+dpass_dev-calib_000047_q006,dpass_dev-calib_000047,instance_referring,the nearest person,True,552,3329,334,3547,0.09416408232308994,False,False,0.09416408232308994
+dpass_dev-calib_000047_q007,dpass_dev-calib_000047,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000048_q000,dpass_dev-calib_000048,category_union,car,True,41853,4992,4776,42069,0.11352777579690508,False,False,0.1080060593728097
+dpass_dev-calib_000048_q001,dpass_dev-calib_000048,category_union,person,True,4468,4809,3229,6048,0.5338955026455027,False,False,0.5338955026455027
+dpass_dev-calib_000048_q002,dpass_dev-calib_000048,category_union,road,True,229803,202221,202015,230009,0.8782917190196905,False,False,0.8781275537704519
+dpass_dev-calib_000048_q003,dpass_dev-calib_000048,category_union,vegetation,True,135649,96515,94143,138021,0.6820918555871932,False,False,0.6820523223380593
+dpass_dev-calib_000048_q004,dpass_dev-calib_000048,category_union,sky,True,107643,106276,104637,109282,0.9574952874215332,False,False,0.9473955834019937
+dpass_dev-calib_000048_q005,dpass_dev-calib_000048,instance_referring,the leftmost car,True,33,5308,0,5341,0.0,False,False,0.0
+dpass_dev-calib_000048_q006,dpass_dev-calib_000048,instance_referring,the nearest person,True,834,2389,674,2549,0.26441741859552764,False,False,0.26441741859552764
+dpass_dev-calib_000048_q007,dpass_dev-calib_000048,category_union,train,False,0,1203,0,1203,,True,False,0.0
+dpass_dev-calib_000049_q000,dpass_dev-calib_000049,category_union,car,True,3857,1279,1117,4019,0.27792983329186366,False,False,0.04935847080387536
+dpass_dev-calib_000049_q001,dpass_dev-calib_000049,category_union,person,True,1518,1109,946,1681,0.562760261748959,False,False,0.5594322885866351
+dpass_dev-calib_000049_q002,dpass_dev-calib_000049,category_union,road,True,75924,65401,63485,77840,0.8155832476875642,False,False,0.8130763319672131
+dpass_dev-calib_000049_q003,dpass_dev-calib_000049,category_union,vegetation,True,272140,8079,7737,272482,0.028394536152846792,False,False,0.02838599374825729
+dpass_dev-calib_000049_q004,dpass_dev-calib_000049,category_union,sky,True,80577,13556,13395,80738,0.16590700785256013,False,False,0.16397757320536677
+dpass_dev-calib_000049_q005,dpass_dev-calib_000049,instance_referring,the leftmost car,True,22,1021,0,1043,0.0,False,False,0.0
+dpass_dev-calib_000049_q006,dpass_dev-calib_000049,instance_referring,the nearest person,True,330,684,0,1014,0.0,False,False,0.0
+dpass_dev-calib_000049_q007,dpass_dev-calib_000049,category_union,train,False,0,40951,0,40951,,True,False,0.0
+dpass_dev-calib_000050_q000,dpass_dev-calib_000050,category_union,car,True,37985,43621,37160,44446,0.8360707375241867,False,False,0.7942831753554502
+dpass_dev-calib_000050_q001,dpass_dev-calib_000050,category_union,person,False,0,0,0,0,,False,True,
+dpass_dev-calib_000050_q002,dpass_dev-calib_000050,category_union,road,True,142798,127859,127732,142925,0.8936994927409481,False,False,0.8868614912481687
+dpass_dev-calib_000050_q003,dpass_dev-calib_000050,category_union,vegetation,True,130291,172257,107966,194582,0.5548611896269953,False,False,0.5544594115743903
+dpass_dev-calib_000050_q004,dpass_dev-calib_000050,category_union,sky,True,35298,35264,34375,36187,0.9499267692817863,False,False,0.9458752958010016
+dpass_dev-calib_000050_q005,dpass_dev-calib_000050,instance_referring,the leftmost car,True,1108,43228,1073,43263,0.024801793680512215,False,False,0.024585280909174227
+dpass_dev-calib_000050_q006,dpass_dev-calib_000050,instance_referring,the nearest person,False,0,42112,0,42112,,True,False,0.0
+dpass_dev-calib_000050_q007,dpass_dev-calib_000050,category_union,train,False,0,87759,0,87759,,True,False,0.0
+dpass_dev-calib_000051_q000,dpass_dev-calib_000051,category_union,car,False,0,0,0,0,,False,True,0.0
+dpass_dev-calib_000051_q001,dpass_dev-calib_000051,category_union,person,False,0,0,0,0,,False,True,
+dpass_dev-calib_000051_q002,dpass_dev-calib_000051,category_union,road,True,50200,40897,40893,50204,0.8145366903035615,False,False,0.8125782414307005
+dpass_dev-calib_000051_q003,dpass_dev-calib_000051,category_union,vegetation,True,35956,32364,31896,36424,0.8756863606413354,False,False,0.868296401154244
+dpass_dev-calib_000051_q004,dpass_dev-calib_000051,category_union,sky,True,4030,0,0,4030,0.0,False,False,0.0
+dpass_dev-calib_000051_q005,dpass_dev-calib_000051,instance_referring,the leftmost car,False,0,652967,0,652967,,True,False,0.0
+dpass_dev-calib_000051_q006,dpass_dev-calib_000051,instance_referring,the nearest person,False,0,651101,0,651101,,True,False,0.0
+dpass_dev-calib_000051_q007,dpass_dev-calib_000051,category_union,train,False,0,653769,0,653769,,True,False,0.0
+dpass_dev-calib_000052_q000,dpass_dev-calib_000052,category_union,car,True,7113,2168,2054,7227,0.28421198284211985,False,False,0.20897344592532302
+dpass_dev-calib_000052_q001,dpass_dev-calib_000052,category_union,person,True,17709,14809,13595,18923,0.7184378798287798,False,False,0.7183999154512788
+dpass_dev-calib_000052_q002,dpass_dev-calib_000052,category_union,road,True,126903,117961,117831,127033,0.927562129525399,False,False,0.927518321145475
+dpass_dev-calib_000052_q003,dpass_dev-calib_000052,category_union,vegetation,True,59508,30476,27107,62877,0.43111153521955564,False,False,0.43111153521955564
+dpass_dev-calib_000052_q004,dpass_dev-calib_000052,category_union,sky,True,80539,79472,77008,83003,0.9277736949266894,False,False,0.9277736949266894
+dpass_dev-calib_000052_q005,dpass_dev-calib_000052,instance_referring,the leftmost car,True,39,1534,0,1573,0.0,False,False,0.0
+dpass_dev-calib_000052_q006,dpass_dev-calib_000052,instance_referring,the nearest person,True,7081,7581,5137,9525,0.5393175853018373,False,False,0.5393175853018373
+dpass_dev-calib_000052_q007,dpass_dev-calib_000052,category_union,train,False,0,47911,0,47911,,True,False,0.0
+dpass_dev-calib_000053_q000,dpass_dev-calib_000053,category_union,car,True,646,287,0,933,0.0,False,False,0.0010710460549803642
+dpass_dev-calib_000053_q001,dpass_dev-calib_000053,category_union,person,True,2361,1364,1090,2635,0.41366223908918404,False,False,0.40992854456562616
+dpass_dev-calib_000053_q002,dpass_dev-calib_000053,category_union,road,False,0,0,0,0,,False,True,
+dpass_dev-calib_000053_q003,dpass_dev-calib_000053,category_union,vegetation,True,228023,185696,171037,242682,0.7047782695049488,False,False,0.7041979232713829
+dpass_dev-calib_000053_q004,dpass_dev-calib_000053,category_union,sky,True,147444,140966,136633,151777,0.9002220362769062,False,False,0.9002220362769062
+dpass_dev-calib_000053_q005,dpass_dev-calib_000053,instance_referring,the leftmost car,False,0,1130,0,1130,,True,False,0.0
+dpass_dev-calib_000053_q006,dpass_dev-calib_000053,instance_referring,the nearest person,True,151,163,0,314,0.0,False,False,0.0
+dpass_dev-calib_000053_q007,dpass_dev-calib_000053,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000054_q000,dpass_dev-calib_000054,category_union,car,True,244547,111214,106997,248764,0.4301144860188773,False,False,0.43863838207569217
+dpass_dev-calib_000054_q001,dpass_dev-calib_000054,category_union,person,True,1722,3238,1406,3554,0.39561057962858753,False,False,0.39561057962858753
+dpass_dev-calib_000054_q002,dpass_dev-calib_000054,category_union,road,True,15825,32078,10215,37688,0.2710411802165145,False,False,0.2690777862655744
+dpass_dev-calib_000054_q003,dpass_dev-calib_000054,category_union,vegetation,True,35099,23080,21435,36744,0.5833605486610058,False,False,0.5833605486610058
+dpass_dev-calib_000054_q004,dpass_dev-calib_000054,category_union,sky,True,103684,104711,101141,107254,0.9430044567102392,False,False,0.9323469764011799
+dpass_dev-calib_000054_q005,dpass_dev-calib_000054,instance_referring,the leftmost car,True,52112,106705,48167,110650,0.4353095345684591,False,False,0.41431127320270433
+dpass_dev-calib_000054_q006,dpass_dev-calib_000054,instance_referring,the nearest person,True,889,94497,767,94619,0.008106194316152147,False,False,0.007652704886955481
+dpass_dev-calib_000054_q007,dpass_dev-calib_000054,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000055_q000,dpass_dev-calib_000055,category_union,car,True,1282,492,460,1314,0.350076103500761,False,False,0.09085522417539009
+dpass_dev-calib_000055_q001,dpass_dev-calib_000055,category_union,person,True,16973,14678,14524,17127,0.8480177497518538,False,False,0.8479682391405885
+dpass_dev-calib_000055_q002,dpass_dev-calib_000055,category_union,road,True,139014,134005,133132,139887,0.9517110238978604,False,False,0.9405763619536113
+dpass_dev-calib_000055_q003,dpass_dev-calib_000055,category_union,vegetation,True,1808,736,610,1934,0.3154084798345398,False,False,0.31443298969072164
+dpass_dev-calib_000055_q004,dpass_dev-calib_000055,category_union,sky,True,92111,92478,91052,93537,0.9734329730480986,False,False,0.9734329730480986
+dpass_dev-calib_000055_q005,dpass_dev-calib_000055,instance_referring,the leftmost car,True,698,178802,0,179500,0.0,False,False,0.0
+dpass_dev-calib_000055_q006,dpass_dev-calib_000055,instance_referring,the nearest person,True,7890,184367,6550,185707,0.03527061446256738,False,False,0.03527061446256738
+dpass_dev-calib_000055_q007,dpass_dev-calib_000055,category_union,train,False,0,179870,0,179870,,True,False,0.0
+dpass_dev-calib_000056_q000,dpass_dev-calib_000056,category_union,car,True,8082,6043,5695,8430,0.6755634638196916,False,False,0.48989247311827955
+dpass_dev-calib_000056_q001,dpass_dev-calib_000056,category_union,person,True,10,0,0,10,0.0,False,False,0.0
+dpass_dev-calib_000056_q002,dpass_dev-calib_000056,category_union,road,True,177739,172033,170043,179729,0.9461077511141774,False,False,0.9449878294116993
+dpass_dev-calib_000056_q003,dpass_dev-calib_000056,category_union,vegetation,True,66266,45645,43614,68297,0.6385932032153682,False,False,0.6384249432774647
+dpass_dev-calib_000056_q004,dpass_dev-calib_000056,category_union,sky,True,280081,271024,270153,280952,0.9615628292377345,False,False,0.9601650548583492
+dpass_dev-calib_000056_q005,dpass_dev-calib_000056,instance_referring,the leftmost car,True,78,5668,0,5746,0.0,False,False,0.0
+dpass_dev-calib_000056_q006,dpass_dev-calib_000056,instance_referring,the nearest person,True,10,3974,0,3984,0.0,False,False,0.0
+dpass_dev-calib_000056_q007,dpass_dev-calib_000056,category_union,train,False,0,2590,0,2590,,True,False,0.0
+dpass_dev-calib_000057_q000,dpass_dev-calib_000057,category_union,car,True,26830,19153,18629,27354,0.6810338524530233,False,False,0.4178418492029684
+dpass_dev-calib_000057_q001,dpass_dev-calib_000057,category_union,person,True,67,0,0,67,0.0,False,False,0.0
+dpass_dev-calib_000057_q002,dpass_dev-calib_000057,category_union,road,True,172407,168557,166062,174902,0.9494574104355582,False,False,0.9476531514822952
+dpass_dev-calib_000057_q003,dpass_dev-calib_000057,category_union,vegetation,True,15532,13184,7317,21399,0.34193186597504555,False,False,0.3415647465222668
+dpass_dev-calib_000057_q004,dpass_dev-calib_000057,category_union,sky,True,159558,134816,134178,160196,0.8375864565906764,False,False,0.8285303216484405
+dpass_dev-calib_000057_q005,dpass_dev-calib_000057,instance_referring,the leftmost car,True,1509,18357,1303,18563,0.07019339546409524,False,False,0.07019339546409524
+dpass_dev-calib_000057_q006,dpass_dev-calib_000057,instance_referring,the nearest person,True,67,9930,9,9988,0.0009010812975570685,False,False,0.0009010812975570685
+dpass_dev-calib_000057_q007,dpass_dev-calib_000057,category_union,train,False,0,121321,0,121321,,True,False,0.0
+dpass_dev-calib_000058_q000,dpass_dev-calib_000058,category_union,car,True,2928,1847,1813,2962,0.6120864280891289,False,False,0.07370218301556974
+dpass_dev-calib_000058_q001,dpass_dev-calib_000058,category_union,person,True,628,430,274,784,0.3494897959183674,False,False,0.3494897959183674
+dpass_dev-calib_000058_q002,dpass_dev-calib_000058,category_union,road,True,154125,152293,150684,155734,0.9675729127871884,False,False,0.9675729127871884
+dpass_dev-calib_000058_q003,dpass_dev-calib_000058,category_union,vegetation,True,70311,52727,49483,73555,0.6727346883284617,False,False,0.6722685650626308
+dpass_dev-calib_000058_q004,dpass_dev-calib_000058,category_union,sky,True,53165,53979,50707,56437,0.8984708613143859,False,False,0.898200304672831
+dpass_dev-calib_000058_q005,dpass_dev-calib_000058,instance_referring,the leftmost car,True,8,1774,0,1782,0.0,False,False,0.0
+dpass_dev-calib_000058_q006,dpass_dev-calib_000058,instance_referring,the nearest person,True,127,0,0,127,0.0,False,False,0.0
+dpass_dev-calib_000058_q007,dpass_dev-calib_000058,category_union,train,False,0,5472,0,5472,,True,False,0.0
+dpass_dev-calib_000059_q000,dpass_dev-calib_000059,category_union,car,True,131223,120322,118769,132776,0.8945065373260228,False,False,0.8748692796017262
+dpass_dev-calib_000059_q001,dpass_dev-calib_000059,category_union,person,True,22,0,0,22,0.0,False,False,0.0
+dpass_dev-calib_000059_q002,dpass_dev-calib_000059,category_union,road,True,228314,218568,217856,229026,0.9512282448280981,False,False,0.949764363782212
+dpass_dev-calib_000059_q003,dpass_dev-calib_000059,category_union,vegetation,True,51033,34224,33103,52154,0.6347164167657322,False,False,0.6341084974331469
+dpass_dev-calib_000059_q004,dpass_dev-calib_000059,category_union,sky,True,300416,291289,290837,300868,0.9666597976521265,False,False,0.9665505712823445
+dpass_dev-calib_000059_q005,dpass_dev-calib_000059,instance_referring,the leftmost car,True,66957,50242,13729,103470,0.13268580264811056,False,False,0.13268580264811056
+dpass_dev-calib_000059_q006,dpass_dev-calib_000059,instance_referring,the nearest person,True,22,64997,0,65019,0.0,False,False,0.0
+dpass_dev-calib_000059_q007,dpass_dev-calib_000059,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000060_q000,dpass_dev-calib_000060,category_union,car,True,71755,72559,64263,80051,0.8027757304718243,False,False,0.7595702686411933
+dpass_dev-calib_000060_q001,dpass_dev-calib_000060,category_union,person,True,1114,493,466,1141,0.4084136722173532,False,False,0.4084136722173532
+dpass_dev-calib_000060_q002,dpass_dev-calib_000060,category_union,road,True,79402,140924,8001,212325,0.0376827975980219,False,False,0.037416349836557755
+dpass_dev-calib_000060_q003,dpass_dev-calib_000060,category_union,vegetation,True,136018,60017,54067,141968,0.3808393440775386,False,False,0.3808393440775386
+dpass_dev-calib_000060_q004,dpass_dev-calib_000060,category_union,sky,True,94155,89557,87275,96437,0.9049949708099588,False,False,0.9049949708099588
+dpass_dev-calib_000060_q005,dpass_dev-calib_000060,instance_referring,the leftmost car,True,13896,44671,13161,45406,0.28985156146764746,False,False,0.2898451780562468
+dpass_dev-calib_000060_q006,dpass_dev-calib_000060,instance_referring,the nearest person,True,565,11351,503,11413,0.044072548847805135,False,False,0.044072548847805135
+dpass_dev-calib_000060_q007,dpass_dev-calib_000060,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000061_q000,dpass_dev-calib_000061,category_union,car,True,65333,60588,59821,66100,0.9050075642965204,False,False,0.1583514214622267
+dpass_dev-calib_000061_q001,dpass_dev-calib_000061,category_union,person,True,599,504,455,648,0.7021604938271605,False,False,0.7021604938271605
+dpass_dev-calib_000061_q002,dpass_dev-calib_000061,category_union,road,True,125512,140740,119865,146387,0.818822709666842,False,False,0.8174657300688809
+dpass_dev-calib_000061_q003,dpass_dev-calib_000061,category_union,vegetation,True,30923,26210,25396,31737,0.8002016573715222,False,False,0.7972875396351992
+dpass_dev-calib_000061_q004,dpass_dev-calib_000061,category_union,sky,False,0,630,0,630,,True,False,0.0
+dpass_dev-calib_000061_q005,dpass_dev-calib_000061,instance_referring,the leftmost car,True,625,49573,0,50198,0.0,False,False,0.0
+dpass_dev-calib_000061_q006,dpass_dev-calib_000061,instance_referring,the nearest person,True,540,33718,462,33796,0.013670256835128418,False,False,0.013670256835128418
+dpass_dev-calib_000061_q007,dpass_dev-calib_000061,category_union,train,False,0,80237,0,80237,,True,False,0.0
+dpass_dev-calib_000062_q000,dpass_dev-calib_000062,category_union,car,True,71830,59795,59138,72487,0.8158428407852443,False,False,0.8015125435398398
+dpass_dev-calib_000062_q001,dpass_dev-calib_000062,category_union,person,True,847,906,661,1092,0.6053113553113553,False,False,0.6053113553113553
+dpass_dev-calib_000062_q002,dpass_dev-calib_000062,category_union,road,True,121793,116242,114468,123567,0.9263638350044915,False,False,0.9253453837012845
+dpass_dev-calib_000062_q003,dpass_dev-calib_000062,category_union,vegetation,True,41178,39063,36473,43768,0.833325717419119,False,False,0.8332876399360293
+dpass_dev-calib_000062_q004,dpass_dev-calib_000062,category_union,sky,True,151701,147984,147438,152247,0.968413170702871,False,False,0.9624581399447741
+dpass_dev-calib_000062_q005,dpass_dev-calib_000062,instance_referring,the leftmost car,True,805,37053,0,37858,0.0,False,False,0.0
+dpass_dev-calib_000062_q006,dpass_dev-calib_000062,instance_referring,the nearest person,True,274,23290,0,23564,0.0,False,False,0.0
+dpass_dev-calib_000062_q007,dpass_dev-calib_000062,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000063_q000,dpass_dev-calib_000063,category_union,car,True,10121,13099,9645,13575,0.7104972375690608,False,False,0.6797519205017971
+dpass_dev-calib_000063_q001,dpass_dev-calib_000063,category_union,person,True,30,0,0,30,0.0,False,False,0.0
+dpass_dev-calib_000063_q002,dpass_dev-calib_000063,category_union,road,True,110741,131032,106126,135647,0.7823689429180152,False,False,0.7820345602593861
+dpass_dev-calib_000063_q003,dpass_dev-calib_000063,category_union,vegetation,True,13391,13357,12010,14738,0.8149002578368842,False,False,0.8149002578368842
+dpass_dev-calib_000063_q004,dpass_dev-calib_000063,category_union,sky,True,16725,16614,16211,17128,0.9464619336758524,False,False,0.9464619336758524
+dpass_dev-calib_000063_q005,dpass_dev-calib_000063,instance_referring,the leftmost car,True,634,35077,0,35711,0.0,False,False,0.0
+dpass_dev-calib_000063_q006,dpass_dev-calib_000063,instance_referring,the nearest person,True,30,9222,0,9252,0.0,False,False,0.0
+dpass_dev-calib_000063_q007,dpass_dev-calib_000063,category_union,train,False,0,222815,0,222815,,True,False,0.0
+dpass_dev-calib_000064_q000,dpass_dev-calib_000064,category_union,car,True,52931,38309,36863,54377,0.6779152950696067,False,False,0.6446169717952753
+dpass_dev-calib_000064_q001,dpass_dev-calib_000064,category_union,person,True,918,543,485,976,0.4969262295081967,False,False,0.4969262295081967
+dpass_dev-calib_000064_q002,dpass_dev-calib_000064,category_union,road,True,99543,114139,81508,132174,0.616671962715814,False,False,0.6151407892651487
+dpass_dev-calib_000064_q003,dpass_dev-calib_000064,category_union,vegetation,True,21915,20572,15534,26953,0.5763365859088042,False,False,0.5763365859088042
+dpass_dev-calib_000064_q004,dpass_dev-calib_000064,category_union,sky,True,333618,321892,321618,333892,0.9632396104129479,False,False,0.9632396104129479
+dpass_dev-calib_000064_q005,dpass_dev-calib_000064,instance_referring,the leftmost car,True,1671,12675,0,14346,0.0,False,False,0.0
+dpass_dev-calib_000064_q006,dpass_dev-calib_000064,instance_referring,the nearest person,True,279,13215,248,13246,0.018722633247772912,False,False,0.018722633247772912
+dpass_dev-calib_000064_q007,dpass_dev-calib_000064,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000065_q000,dpass_dev-calib_000065,category_union,car,True,45149,2473,2406,45216,0.053211252653927815,False,False,0.05052392851893072
+dpass_dev-calib_000065_q001,dpass_dev-calib_000065,category_union,person,True,49,0,0,49,0.0,False,False,0.0
+dpass_dev-calib_000065_q002,dpass_dev-calib_000065,category_union,road,True,250946,239920,238148,252718,0.9423468055302748,False,False,0.9413410912770567
+dpass_dev-calib_000065_q003,dpass_dev-calib_000065,category_union,vegetation,True,14390,15273,13613,16050,0.8481619937694704,False,False,0.8481619937694704
+dpass_dev-calib_000065_q004,dpass_dev-calib_000065,category_union,sky,True,176385,173174,172188,177371,0.9707787631574496,False,False,0.9707787631574496
+dpass_dev-calib_000065_q005,dpass_dev-calib_000065,instance_referring,the leftmost car,True,87,42992,0,43079,0.0,False,False,0.0
+dpass_dev-calib_000065_q006,dpass_dev-calib_000065,instance_referring,the nearest person,True,32,27034,0,27066,0.0,False,False,0.0
+dpass_dev-calib_000065_q007,dpass_dev-calib_000065,category_union,train,False,0,75413,0,75413,,True,False,0.0
+dpass_dev-calib_000066_q000,dpass_dev-calib_000066,category_union,car,True,1465,0,0,1465,0.0,False,False,0.0
+dpass_dev-calib_000066_q001,dpass_dev-calib_000066,category_union,person,True,16143,13250,12669,16724,0.7575340827553217,False,False,0.7575340827553217
+dpass_dev-calib_000066_q002,dpass_dev-calib_000066,category_union,road,True,682,199086,0,199768,0.0,False,False,0.0
+dpass_dev-calib_000066_q003,dpass_dev-calib_000066,category_union,vegetation,True,10042,10248,9361,10929,0.8565285021502425,False,False,0.8565285021502425
+dpass_dev-calib_000066_q004,dpass_dev-calib_000066,category_union,sky,True,24498,43086,24235,43349,0.5590671065076472,False,False,0.5584487406963615
+dpass_dev-calib_000066_q005,dpass_dev-calib_000066,instance_referring,the leftmost car,False,0,1232,0,1232,,True,False,0.0
+dpass_dev-calib_000066_q006,dpass_dev-calib_000066,instance_referring,the nearest person,True,5763,5632,0,11395,0.0,False,False,0.0
+dpass_dev-calib_000066_q007,dpass_dev-calib_000066,category_union,train,False,0,514678,0,514678,,True,False,0.0
+dpass_dev-calib_000067_q000,dpass_dev-calib_000067,category_union,car,True,24146,23854,23548,24452,0.9630296090299362,False,False,0.8117618868312053
+dpass_dev-calib_000067_q001,dpass_dev-calib_000067,category_union,person,True,367,353,212,508,0.41732283464566927,False,False,0.41732283464566927
+dpass_dev-calib_000067_q002,dpass_dev-calib_000067,category_union,road,True,67546,52447,52338,67655,0.7736013598403666,False,False,0.7419304537657883
+dpass_dev-calib_000067_q003,dpass_dev-calib_000067,category_union,vegetation,True,32701,0,0,32701,0.0,False,False,0.0
+dpass_dev-calib_000067_q004,dpass_dev-calib_000067,category_union,sky,True,264391,255201,254852,264740,0.9626501473143462,False,False,0.9626501473143462
+dpass_dev-calib_000067_q005,dpass_dev-calib_000067,instance_referring,the leftmost car,True,107,19843,0,19950,0.0,False,False,0.0
+dpass_dev-calib_000067_q006,dpass_dev-calib_000067,instance_referring,the nearest person,True,305,20028,253,20080,0.012599601593625498,False,False,0.01249567837210451
+dpass_dev-calib_000067_q007,dpass_dev-calib_000067,category_union,train,False,0,275405,0,275405,,True,False,0.0
+dpass_dev-calib_000068_q000,dpass_dev-calib_000068,category_union,car,True,92803,72188,71734,93257,0.7692076734186174,False,False,0.7412162231556892
+dpass_dev-calib_000068_q001,dpass_dev-calib_000068,category_union,person,True,250,291,180,361,0.4986149584487535,False,False,0.4986149584487535
+dpass_dev-calib_000068_q002,dpass_dev-calib_000068,category_union,road,True,106903,106257,103348,109812,0.9411357592977088,False,False,0.9344472775276226
+dpass_dev-calib_000068_q003,dpass_dev-calib_000068,category_union,vegetation,True,30924,25304,22962,33266,0.6902543137137017,False,False,0.6902543137137017
+dpass_dev-calib_000068_q004,dpass_dev-calib_000068,category_union,sky,True,283860,278552,278295,284117,0.9795084419446918,False,False,0.9793292019889572
+dpass_dev-calib_000068_q005,dpass_dev-calib_000068,instance_referring,the leftmost car,True,21,49966,0,49987,0.0,False,False,0.0
+dpass_dev-calib_000068_q006,dpass_dev-calib_000068,instance_referring,the nearest person,True,174,34817,0,34991,0.0,False,False,0.0
+dpass_dev-calib_000068_q007,dpass_dev-calib_000068,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000069_q000,dpass_dev-calib_000069,category_union,car,True,10745,9831,8548,12028,0.7106750914532757,False,False,0.5492514296729423
+dpass_dev-calib_000069_q001,dpass_dev-calib_000069,category_union,person,True,2213,1933,1784,2362,0.7552921253175275,False,False,0.7552921253175275
+dpass_dev-calib_000069_q002,dpass_dev-calib_000069,category_union,road,True,122407,117358,115505,124260,0.9295428939320779,False,False,0.9191574357015534
+dpass_dev-calib_000069_q003,dpass_dev-calib_000069,category_union,vegetation,True,262126,145477,140774,266829,0.5275813348624026,False,False,0.5274726098229943
+dpass_dev-calib_000069_q004,dpass_dev-calib_000069,category_union,sky,True,76493,79230,73194,82529,0.8868882453440609,False,False,0.8748983982787473
+dpass_dev-calib_000069_q005,dpass_dev-calib_000069,instance_referring,the leftmost car,True,850,6489,668,6671,0.10013491230700045,False,False,0.10013491230700045
+dpass_dev-calib_000069_q006,dpass_dev-calib_000069,instance_referring,the nearest person,True,993,1385,827,1551,0.533204384268214,False,False,0.533204384268214
+dpass_dev-calib_000069_q007,dpass_dev-calib_000069,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000070_q000,dpass_dev-calib_000070,category_union,car,True,99909,71754,70261,101402,0.6928956036370091,False,False,0.6863528931166292
+dpass_dev-calib_000070_q001,dpass_dev-calib_000070,category_union,person,True,3451,3035,2858,3628,0.7877618522601985,False,False,0.7877618522601985
+dpass_dev-calib_000070_q002,dpass_dev-calib_000070,category_union,road,True,75025,83083,56356,101752,0.5538564352543439,False,False,0.552433979649852
+dpass_dev-calib_000070_q003,dpass_dev-calib_000070,category_union,vegetation,True,10683,7916,7550,11049,0.6833197574441126,False,False,0.6833197574441126
+dpass_dev-calib_000070_q004,dpass_dev-calib_000070,category_union,sky,True,141539,138390,137910,142019,0.9710672515649315,False,False,0.9710672515649315
+dpass_dev-calib_000070_q005,dpass_dev-calib_000070,instance_referring,the leftmost car,True,30,23616,0,23646,0.0,False,False,0.0
+dpass_dev-calib_000070_q006,dpass_dev-calib_000070,instance_referring,the nearest person,True,1013,27109,892,27230,0.032757987513771576,False,False,0.03271593618191821
+dpass_dev-calib_000070_q007,dpass_dev-calib_000070,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000071_q000,dpass_dev-calib_000071,category_union,car,True,248437,18841,18468,248810,0.07422531248744021,False,False,0.07377809631885962
+dpass_dev-calib_000071_q001,dpass_dev-calib_000071,category_union,person,True,4844,5859,3655,7048,0.5185868331441543,False,False,0.5182926829268293
+dpass_dev-calib_000071_q002,dpass_dev-calib_000071,category_union,road,True,86572,79135,78350,87357,0.896894353056996,False,False,0.8839822639423239
+dpass_dev-calib_000071_q003,dpass_dev-calib_000071,category_union,vegetation,False,0,0,0,0,,False,True,
+dpass_dev-calib_000071_q004,dpass_dev-calib_000071,category_union,sky,True,45522,46103,45197,46428,0.9734858275178772,False,False,0.9734858275178772
+dpass_dev-calib_000071_q005,dpass_dev-calib_000071,instance_referring,the leftmost car,True,15,92910,0,92925,0.0,False,False,0.0
+dpass_dev-calib_000071_q006,dpass_dev-calib_000071,instance_referring,the nearest person,True,1966,1402,0,3368,0.0,False,False,0.0
+dpass_dev-calib_000071_q007,dpass_dev-calib_000071,category_union,train,False,0,123006,0,123006,,True,False,0.0
+dpass_dev-calib_000072_q000,dpass_dev-calib_000072,category_union,car,True,262,282,234,310,0.7548387096774194,False,False,0.12367864693446089
+dpass_dev-calib_000072_q001,dpass_dev-calib_000072,category_union,person,True,47,0,0,47,0.0,False,False,0.0
+dpass_dev-calib_000072_q002,dpass_dev-calib_000072,category_union,road,True,178253,169374,169234,178393,0.9486582993727333,False,False,0.9481215054847782
+dpass_dev-calib_000072_q003,dpass_dev-calib_000072,category_union,vegetation,True,19149,18494,17469,20174,0.8659165262218698,False,False,0.8424885459368218
+dpass_dev-calib_000072_q004,dpass_dev-calib_000072,category_union,sky,True,9530,9848,9269,10109,0.9169057275694925,False,False,0.9169057275694925
+dpass_dev-calib_000072_q005,dpass_dev-calib_000072,instance_referring,the leftmost car,True,14,303,0,317,0.0,False,False,0.0
+dpass_dev-calib_000072_q006,dpass_dev-calib_000072,instance_referring,the nearest person,True,47,0,0,47,0.0,False,False,0.0
+dpass_dev-calib_000072_q007,dpass_dev-calib_000072,category_union,train,False,0,214070,0,214070,,True,False,0.0
+dpass_dev-calib_000073_q000,dpass_dev-calib_000073,category_union,car,True,62593,59227,57923,63897,0.9065057827441038,False,False,0.861187906893784
+dpass_dev-calib_000073_q001,dpass_dev-calib_000073,category_union,person,True,3961,3506,2881,4586,0.6282163105102486,False,False,0.6282163105102486
+dpass_dev-calib_000073_q002,dpass_dev-calib_000073,category_union,road,True,136647,154507,131371,159783,0.8221838368286989,False,False,0.8142140851704711
+dpass_dev-calib_000073_q003,dpass_dev-calib_000073,category_union,vegetation,True,1422,0,0,1422,0.0,False,False,0.0
+dpass_dev-calib_000073_q004,dpass_dev-calib_000073,category_union,sky,True,53172,50762,49946,53988,0.9251315107060828,False,False,0.92299447452553
+dpass_dev-calib_000073_q005,dpass_dev-calib_000073,instance_referring,the leftmost car,True,20569,46829,11491,55907,0.2055377680791314,False,False,0.2055377680791314
+dpass_dev-calib_000073_q006,dpass_dev-calib_000073,instance_referring,the nearest person,True,1224,13094,855,13463,0.06350739062616059,False,False,0.06350739062616059
+dpass_dev-calib_000073_q007,dpass_dev-calib_000073,category_union,train,False,0,195857,0,195857,,True,False,0.0
+dpass_dev-calib_000074_q000,dpass_dev-calib_000074,category_union,car,True,57055,31632,30642,58045,0.5279007666465673,False,False,0.5072003178071308
+dpass_dev-calib_000074_q001,dpass_dev-calib_000074,category_union,person,True,1843,1940,1514,2269,0.6672542970471573,False,False,0.6672542970471573
+dpass_dev-calib_000074_q002,dpass_dev-calib_000074,category_union,road,True,76480,112271,56332,132419,0.4254072300802755,False,False,0.4228494220087074
+dpass_dev-calib_000074_q003,dpass_dev-calib_000074,category_union,vegetation,True,124125,66912,54994,136043,0.4042398359342267,False,False,0.4042398359342267
+dpass_dev-calib_000074_q004,dpass_dev-calib_000074,category_union,sky,True,21808,22860,20245,24423,0.8289317446669123,False,False,0.8289317446669123
+dpass_dev-calib_000074_q005,dpass_dev-calib_000074,instance_referring,the leftmost car,True,14330,24223,13778,24775,0.5561251261352169,False,False,0.5561251261352169
+dpass_dev-calib_000074_q006,dpass_dev-calib_000074,instance_referring,the nearest person,True,422,5395,0,5817,0.0,False,False,0.0
+dpass_dev-calib_000074_q007,dpass_dev-calib_000074,category_union,train,False,0,181026,0,181026,,True,False,0.0
+dpass_dev-calib_000075_q000,dpass_dev-calib_000075,category_union,car,True,138035,133836,133433,138438,0.9638466317051677,False,False,0.9545246963793866
+dpass_dev-calib_000075_q001,dpass_dev-calib_000075,category_union,person,True,1271,1267,948,1590,0.5962264150943396,False,False,0.5962264150943396
+dpass_dev-calib_000075_q002,dpass_dev-calib_000075,category_union,road,True,24871,47141,18714,53298,0.3511201170775639,False,False,0.34849810983444757
+dpass_dev-calib_000075_q003,dpass_dev-calib_000075,category_union,vegetation,True,3083,3099,2877,3305,0.8704992435703479,False,False,0.8691842900302115
+dpass_dev-calib_000075_q004,dpass_dev-calib_000075,category_union,sky,True,54440,54457,53527,55370,0.9667148275239299,False,False,0.9654245725416637
+dpass_dev-calib_000075_q005,dpass_dev-calib_000075,instance_referring,the leftmost car,True,154,130839,0,130993,0.0,False,False,0.0
+dpass_dev-calib_000075_q006,dpass_dev-calib_000075,instance_referring,the nearest person,True,507,126890,0,127397,0.0,False,False,0.0
+dpass_dev-calib_000075_q007,dpass_dev-calib_000075,category_union,train,False,0,329806,0,329806,,True,False,0.0
+dpass_dev-calib_000076_q000,dpass_dev-calib_000076,category_union,car,True,9552,8961,8699,9814,0.8863867943753821,False,False,0.7347128378378378
+dpass_dev-calib_000076_q001,dpass_dev-calib_000076,category_union,person,True,28,0,0,28,0.0,False,False,0.0
+dpass_dev-calib_000076_q002,dpass_dev-calib_000076,category_union,road,True,137172,148558,127716,158014,0.8082574961712253,False,False,0.8061097611007669
+dpass_dev-calib_000076_q003,dpass_dev-calib_000076,category_union,vegetation,True,181856,177423,164663,194616,0.8460917910140996,False,False,0.8460917910140996
+dpass_dev-calib_000076_q004,dpass_dev-calib_000076,category_union,sky,True,258985,252205,251031,260159,0.9649137642749241,False,False,0.9642466169110275
+dpass_dev-calib_000076_q005,dpass_dev-calib_000076,instance_referring,the leftmost car,True,13,5676,0,5689,0.0,False,False,0.0
+dpass_dev-calib_000076_q006,dpass_dev-calib_000076,instance_referring,the nearest person,True,21,4263,0,4284,0.0,False,False,0.0
+dpass_dev-calib_000076_q007,dpass_dev-calib_000076,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000077_q000,dpass_dev-calib_000077,category_union,car,True,30053,26187,25609,30631,0.8360484476510724,False,False,0.479994769874477
+dpass_dev-calib_000077_q001,dpass_dev-calib_000077,category_union,person,True,3840,3133,2698,4275,0.6311111111111111,False,False,0.629344529974341
+dpass_dev-calib_000077_q002,dpass_dev-calib_000077,category_union,road,True,70147,83125,67454,85818,0.7860122585005477,False,False,0.7587114480462511
+dpass_dev-calib_000077_q003,dpass_dev-calib_000077,category_union,vegetation,True,77268,29084,23284,83068,0.2803004767178697,False,False,0.2800947924310409
+dpass_dev-calib_000077_q004,dpass_dev-calib_000077,category_union,sky,True,73064,72832,67655,78241,0.864700093301466,False,False,0.864700093301466
+dpass_dev-calib_000077_q005,dpass_dev-calib_000077,instance_referring,the leftmost car,True,23323,21693,13317,31699,0.42010788983879616,False,False,0.41906350305242623
+dpass_dev-calib_000077_q006,dpass_dev-calib_000077,instance_referring,the nearest person,True,1288,14266,796,14758,0.053936847811356554,False,False,0.053936847811356554
+dpass_dev-calib_000077_q007,dpass_dev-calib_000077,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000078_q000,dpass_dev-calib_000078,category_union,car,True,11750,9610,9427,11933,0.7899941339143551,False,False,0.6204014478446858
+dpass_dev-calib_000078_q001,dpass_dev-calib_000078,category_union,person,True,8,0,0,8,0.0,False,False,0.0
+dpass_dev-calib_000078_q002,dpass_dev-calib_000078,category_union,road,True,161330,152250,149270,164310,0.9084657050696854,False,False,0.9019171857911941
+dpass_dev-calib_000078_q003,dpass_dev-calib_000078,category_union,vegetation,True,188462,187196,169325,206333,0.820639451760019,False,False,0.820639451760019
+dpass_dev-calib_000078_q004,dpass_dev-calib_000078,category_union,sky,True,257841,239990,239242,258589,0.9251824323540444,False,False,0.9251824323540444
+dpass_dev-calib_000078_q005,dpass_dev-calib_000078,instance_referring,the leftmost car,True,65,6745,0,6810,0.0,False,False,0.0
+dpass_dev-calib_000078_q006,dpass_dev-calib_000078,instance_referring,the nearest person,True,8,3761,0,3769,0.0,False,False,0.0
+dpass_dev-calib_000078_q007,dpass_dev-calib_000078,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000079_q000,dpass_dev-calib_000079,category_union,car,True,1033,791,756,1068,0.7078651685393258,False,False,0.0968113714944295
+dpass_dev-calib_000079_q001,dpass_dev-calib_000079,category_union,person,True,861,789,628,1022,0.6144814090019569,False,False,0.6091173617846751
+dpass_dev-calib_000079_q002,dpass_dev-calib_000079,category_union,road,True,51527,246199,48241,249485,0.19336232639236828,False,False,0.19272964075683968
+dpass_dev-calib_000079_q003,dpass_dev-calib_000079,category_union,vegetation,True,199480,160811,150772,209519,0.7196101546876417,False,False,0.7195174329264219
+dpass_dev-calib_000079_q004,dpass_dev-calib_000079,category_union,sky,True,227244,222360,221286,228318,0.9692008514440386,False,False,0.9684161695907713
+dpass_dev-calib_000079_q005,dpass_dev-calib_000079,instance_referring,the leftmost car,True,40,888,0,928,0.0,False,False,0.0
+dpass_dev-calib_000079_q006,dpass_dev-calib_000079,instance_referring,the nearest person,True,186,0,0,186,0.0,False,False,0.0
+dpass_dev-calib_000079_q007,dpass_dev-calib_000079,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000080_q000,dpass_dev-calib_000080,category_union,car,True,6182,3219,2721,6680,0.4073353293413174,False,False,0.3764738140937757
+dpass_dev-calib_000080_q001,dpass_dev-calib_000080,category_union,person,True,85,0,0,85,0.0,False,False,0.0
+dpass_dev-calib_000080_q002,dpass_dev-calib_000080,category_union,road,True,211049,214116,194974,230191,0.8470096571977184,False,False,0.8467852613658079
+dpass_dev-calib_000080_q003,dpass_dev-calib_000080,category_union,vegetation,True,61911,10511,7968,64454,0.12362304899618333,False,False,0.12362304899618333
+dpass_dev-calib_000080_q004,dpass_dev-calib_000080,category_union,sky,True,202749,197935,196929,203755,0.966498981620083,False,False,0.966498981620083
+dpass_dev-calib_000080_q005,dpass_dev-calib_000080,instance_referring,the leftmost car,True,65,4628,0,4693,0.0,False,False,0.0
+dpass_dev-calib_000080_q006,dpass_dev-calib_000080,instance_referring,the nearest person,True,85,0,0,85,0.0,False,False,0.0
+dpass_dev-calib_000080_q007,dpass_dev-calib_000080,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000081_q000,dpass_dev-calib_000081,category_union,car,True,62858,28474,27931,63401,0.44054510181227424,False,False,0.4151148101359887
+dpass_dev-calib_000081_q001,dpass_dev-calib_000081,category_union,person,True,74,0,0,74,0.0,False,False,0.0
+dpass_dev-calib_000081_q002,dpass_dev-calib_000081,category_union,road,True,166162,153412,153304,166270,0.9220184038010465,False,False,0.92124271377922
+dpass_dev-calib_000081_q003,dpass_dev-calib_000081,category_union,vegetation,True,20124,17157,15893,21388,0.7430802319057416,False,False,0.7430802319057416
+dpass_dev-calib_000081_q004,dpass_dev-calib_000081,category_union,sky,True,126661,106770,106089,127342,0.8331029825195144,False,False,0.8239538351610799
+dpass_dev-calib_000081_q005,dpass_dev-calib_000081,instance_referring,the leftmost car,True,1854,21575,1436,21993,0.0652935024780612,False,False,0.0652935024780612
+dpass_dev-calib_000081_q006,dpass_dev-calib_000081,instance_referring,the nearest person,True,47,54724,0,54771,0.0,False,False,0.0
+dpass_dev-calib_000081_q007,dpass_dev-calib_000081,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000082_q000,dpass_dev-calib_000082,category_union,car,True,323,491,238,576,0.4131944444444444,False,False,0.08347948088390039
+dpass_dev-calib_000082_q001,dpass_dev-calib_000082,category_union,person,True,333,340,247,426,0.57981220657277,False,False,0.57981220657277
+dpass_dev-calib_000082_q002,dpass_dev-calib_000082,category_union,road,True,80359,80834,75374,85819,0.8782903552826298,False,False,0.876880300615424
+dpass_dev-calib_000082_q003,dpass_dev-calib_000082,category_union,vegetation,True,85569,60027,56808,88788,0.6398161913772131,False,False,0.638945438594518
+dpass_dev-calib_000082_q004,dpass_dev-calib_000082,category_union,sky,True,178377,175776,174659,179494,0.9730631664568175,False,False,0.9724672056301641
+dpass_dev-calib_000082_q005,dpass_dev-calib_000082,instance_referring,the leftmost car,True,150,0,0,150,0.0,False,False,0.0
+dpass_dev-calib_000082_q006,dpass_dev-calib_000082,instance_referring,the nearest person,True,163,374,149,388,0.38402061855670105,False,False,0.38402061855670105
+dpass_dev-calib_000082_q007,dpass_dev-calib_000082,category_union,train,False,0,277685,0,277685,,True,False,0.0
+dpass_dev-calib_000083_q000,dpass_dev-calib_000083,category_union,car,True,105,45,41,109,0.3761467889908257,False,False,0.03218210361067504
+dpass_dev-calib_000083_q001,dpass_dev-calib_000083,category_union,person,False,0,0,0,0,,False,True,
+dpass_dev-calib_000083_q002,dpass_dev-calib_000083,category_union,road,True,92071,90214,87010,95275,0.9132511151928627,False,False,0.9070155321588659
+dpass_dev-calib_000083_q003,dpass_dev-calib_000083,category_union,vegetation,True,146442,108063,105878,148627,0.7123739293668041,False,False,0.7123739293668041
+dpass_dev-calib_000083_q004,dpass_dev-calib_000083,category_union,sky,True,344231,336585,336012,344804,0.9745014558995835,False,False,0.974001466747444
+dpass_dev-calib_000083_q005,dpass_dev-calib_000083,instance_referring,the leftmost car,True,45,62,0,107,0.0,False,False,0.0
+dpass_dev-calib_000083_q006,dpass_dev-calib_000083,instance_referring,the nearest person,False,0,40304,0,40304,,True,False,0.0
+dpass_dev-calib_000083_q007,dpass_dev-calib_000083,category_union,train,False,0,1142,0,1142,,True,False,0.0
+dpass_dev-calib_000084_q000,dpass_dev-calib_000084,category_union,car,True,204767,36045,35416,205396,0.17242789538257805,False,False,0.17230373452746062
+dpass_dev-calib_000084_q001,dpass_dev-calib_000084,category_union,person,True,2296,2110,1894,2512,0.7539808917197452,False,False,0.7539808917197452
+dpass_dev-calib_000084_q002,dpass_dev-calib_000084,category_union,road,True,60679,53372,53237,60814,0.8754069786562305,False,False,0.865656352135807
+dpass_dev-calib_000084_q003,dpass_dev-calib_000084,category_union,vegetation,True,416,347,303,460,0.658695652173913,False,False,0.658695652173913
+dpass_dev-calib_000084_q004,dpass_dev-calib_000084,category_union,sky,True,13290,13076,12882,13484,0.9553544942153663,False,False,0.9469969859589796
+dpass_dev-calib_000084_q005,dpass_dev-calib_000084,instance_referring,the leftmost car,True,13452,73708,10062,77098,0.1305092220291058,False,False,0.13031484335539353
+dpass_dev-calib_000084_q006,dpass_dev-calib_000084,instance_referring,the nearest person,True,1377,111220,1324,111273,0.011898663647066224,False,False,0.011845860659037836
+dpass_dev-calib_000084_q007,dpass_dev-calib_000084,category_union,train,False,0,108457,0,108457,,True,False,0.0
+dpass_dev-calib_000085_q000,dpass_dev-calib_000085,category_union,car,True,699,572,494,777,0.6357786357786358,False,False,0.15356037151702787
+dpass_dev-calib_000085_q001,dpass_dev-calib_000085,category_union,person,False,0,0,0,0,,False,True,
+dpass_dev-calib_000085_q002,dpass_dev-calib_000085,category_union,road,True,111134,96527,95519,112142,0.8517682937703982,False,False,0.851661970826349
+dpass_dev-calib_000085_q003,dpass_dev-calib_000085,category_union,vegetation,True,156517,114613,103896,167234,0.6212612267840272,False,False,0.6207786620778663
+dpass_dev-calib_000085_q004,dpass_dev-calib_000085,category_union,sky,True,286491,283110,281739,287862,0.9787293911666006,False,False,0.9783657268664335
+dpass_dev-calib_000085_q005,dpass_dev-calib_000085,instance_referring,the leftmost car,True,10,3424,0,3434,0.0,False,False,0.0
+dpass_dev-calib_000085_q006,dpass_dev-calib_000085,instance_referring,the nearest person,False,0,0,0,0,,False,True,
+dpass_dev-calib_000085_q007,dpass_dev-calib_000085,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000086_q000,dpass_dev-calib_000086,category_union,car,True,47434,46844,41431,52847,0.783980169167597,False,False,0.7804652915136102
+dpass_dev-calib_000086_q001,dpass_dev-calib_000086,category_union,person,True,102,0,0,102,0.0,False,False,0.0
+dpass_dev-calib_000086_q002,dpass_dev-calib_000086,category_union,road,True,280647,267113,266584,281176,0.9481036788346089,False,False,0.9481036788346089
+dpass_dev-calib_000086_q003,dpass_dev-calib_000086,category_union,vegetation,True,11687,8906,8010,12583,0.6365731542557419,False,False,0.6365731542557419
+dpass_dev-calib_000086_q004,dpass_dev-calib_000086,category_union,sky,True,244753,235476,235225,245004,0.9600863659368827,False,False,0.9594284828610119
+dpass_dev-calib_000086_q005,dpass_dev-calib_000086,instance_referring,the leftmost car,True,3100,17732,0,20832,0.0,False,False,0.0
+dpass_dev-calib_000086_q006,dpass_dev-calib_000086,instance_referring,the nearest person,True,59,15330,0,15389,0.0,False,False,0.0
+dpass_dev-calib_000086_q007,dpass_dev-calib_000086,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000087_q000,dpass_dev-calib_000087,category_union,car,True,59139,28337,27631,59845,0.4617094159913109,False,False,0.43950310954176014
+dpass_dev-calib_000087_q001,dpass_dev-calib_000087,category_union,person,True,1052,846,711,1187,0.598989048020219,False,False,0.598989048020219
+dpass_dev-calib_000087_q002,dpass_dev-calib_000087,category_union,road,True,211296,199589,198800,212085,0.9373600207463989,False,False,0.9321954421832505
+dpass_dev-calib_000087_q003,dpass_dev-calib_000087,category_union,vegetation,True,7239,3569,3222,7586,0.424729765357237,False,False,0.424729765357237
+dpass_dev-calib_000087_q004,dpass_dev-calib_000087,category_union,sky,True,89806,87388,86555,90639,0.9549421330773729,False,False,0.9485583403653739
+dpass_dev-calib_000087_q005,dpass_dev-calib_000087,instance_referring,the leftmost car,True,216,12412,0,12628,0.0,False,False,0.0
+dpass_dev-calib_000087_q006,dpass_dev-calib_000087,instance_referring,the nearest person,True,264,0,0,264,0.0,False,False,0.0
+dpass_dev-calib_000087_q007,dpass_dev-calib_000087,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000088_q000,dpass_dev-calib_000088,category_union,car,True,126664,50145,49447,127362,0.3882398203545799,False,False,0.37041816860249505
+dpass_dev-calib_000088_q001,dpass_dev-calib_000088,category_union,person,True,5688,7445,4736,8397,0.5640109562939145,False,False,0.5616698292220114
+dpass_dev-calib_000088_q002,dpass_dev-calib_000088,category_union,road,True,80059,76118,48352,107825,0.4484303269186181,False,False,0.44596526503168205
+dpass_dev-calib_000088_q003,dpass_dev-calib_000088,category_union,vegetation,True,2595,2716,2286,3025,0.7557024793388429,False,False,0.7557024793388429
+dpass_dev-calib_000088_q004,dpass_dev-calib_000088,category_union,sky,True,13550,13780,13437,13893,0.9671777153962428,False,False,0.9671777153962428
+dpass_dev-calib_000088_q005,dpass_dev-calib_000088,instance_referring,the leftmost car,True,49,20697,0,20746,0.0,False,False,0.0
+dpass_dev-calib_000088_q006,dpass_dev-calib_000088,instance_referring,the nearest person,True,1760,64692,0,66452,0.0,False,False,0.0
+dpass_dev-calib_000088_q007,dpass_dev-calib_000088,category_union,train,False,0,65925,0,65925,,True,False,0.0
+dpass_dev-calib_000089_q000,dpass_dev-calib_000089,category_union,car,True,24161,23841,21586,26416,0.8171562689279225,False,False,0.7737749578807757
+dpass_dev-calib_000089_q001,dpass_dev-calib_000089,category_union,person,True,55,75,38,92,0.41304347826086957,False,False,0.41304347826086957
+dpass_dev-calib_000089_q002,dpass_dev-calib_000089,category_union,road,True,44448,38102,36580,45970,0.7957363497933435,False,False,0.795286546656231
+dpass_dev-calib_000089_q003,dpass_dev-calib_000089,category_union,vegetation,True,22104,23310,18507,26907,0.6878135801092653,False,False,0.6878135801092653
+dpass_dev-calib_000089_q004,dpass_dev-calib_000089,category_union,sky,True,5096,4567,4270,5393,0.7917671055071389,False,False,0.7791970802919708
+dpass_dev-calib_000089_q005,dpass_dev-calib_000089,instance_referring,the leftmost car,True,456,17074,435,17095,0.02544603685288096,False,False,0.02544603685288096
+dpass_dev-calib_000089_q006,dpass_dev-calib_000089,instance_referring,the nearest person,True,55,13070,0,13125,0.0,False,False,0.0
+dpass_dev-calib_000089_q007,dpass_dev-calib_000089,category_union,train,False,0,169522,0,169522,,True,False,0.0
+dpass_dev-calib_000090_q000,dpass_dev-calib_000090,category_union,car,True,1284,323,300,1307,0.22953328232593725,False,False,0.13729977116704806
+dpass_dev-calib_000090_q001,dpass_dev-calib_000090,category_union,person,True,1713,1742,1503,1952,0.7699795081967213,False,False,0.7691914022517912
+dpass_dev-calib_000090_q002,dpass_dev-calib_000090,category_union,road,True,121612,133892,102639,152865,0.6714355804140909,False,False,0.6714355804140909
+dpass_dev-calib_000090_q003,dpass_dev-calib_000090,category_union,vegetation,True,136195,126453,126046,136602,0.9227244110627956,False,False,0.9225623234230673
+dpass_dev-calib_000090_q004,dpass_dev-calib_000090,category_union,sky,True,8333,7995,7902,8426,0.9378115357227629,False,False,0.9378115357227629
+dpass_dev-calib_000090_q005,dpass_dev-calib_000090,instance_referring,the leftmost car,True,18,1333,0,1351,0.0,False,False,0.0
+dpass_dev-calib_000090_q006,dpass_dev-calib_000090,instance_referring,the nearest person,True,855,809,487,1177,0.4137638062871708,False,False,0.4137638062871708
+dpass_dev-calib_000090_q007,dpass_dev-calib_000090,category_union,train,False,0,200089,0,200089,,True,False,0.0
+dpass_dev-calib_000091_q000,dpass_dev-calib_000091,category_union,car,True,81035,79957,78897,82095,0.9610451306413301,False,False,0.9458503109586104
+dpass_dev-calib_000091_q001,dpass_dev-calib_000091,category_union,person,True,2602,2531,2231,2902,0.7687801516195727,False,False,0.7682506887052342
+dpass_dev-calib_000091_q002,dpass_dev-calib_000091,category_union,road,True,50233,64332,46510,68055,0.68341782381897,False,False,0.682475164712615
+dpass_dev-calib_000091_q003,dpass_dev-calib_000091,category_union,vegetation,True,33320,34112,26398,41034,0.6433201735146464,False,False,0.6393780124494393
+dpass_dev-calib_000091_q004,dpass_dev-calib_000091,category_union,sky,True,30437,29576,29253,30760,0.9510078023407023,False,False,0.9510078023407023
+dpass_dev-calib_000091_q005,dpass_dev-calib_000091,instance_referring,the leftmost car,True,34622,66956,30626,70952,0.43164392828954784,False,False,0.4290737912773022
+dpass_dev-calib_000091_q006,dpass_dev-calib_000091,instance_referring,the nearest person,True,713,67337,0,68050,0.0,False,False,0.0
+dpass_dev-calib_000091_q007,dpass_dev-calib_000091,category_union,train,False,0,297646,0,297646,,True,False,0.0
+dpass_dev-calib_000092_q000,dpass_dev-calib_000092,category_union,car,True,32030,23384,23038,32376,0.7115764764022733,False,False,0.586865702058284
+dpass_dev-calib_000092_q001,dpass_dev-calib_000092,category_union,person,False,0,0,0,0,,False,True,
+dpass_dev-calib_000092_q002,dpass_dev-calib_000092,category_union,road,True,259420,252822,252155,260087,0.9695025126207769,False,False,0.9636263580881482
+dpass_dev-calib_000092_q003,dpass_dev-calib_000092,category_union,vegetation,True,21607,15603,14130,23080,0.6122183708838822,False,False,0.6120327457010438
+dpass_dev-calib_000092_q004,dpass_dev-calib_000092,category_union,sky,True,308509,280895,280674,308730,0.9091244776989602,False,False,0.9064760748243076
+dpass_dev-calib_000092_q005,dpass_dev-calib_000092,instance_referring,the leftmost car,True,117,14969,0,15086,0.0,False,False,0.0
+dpass_dev-calib_000092_q006,dpass_dev-calib_000092,instance_referring,the nearest person,False,0,18100,0,18100,,True,False,0.0
+dpass_dev-calib_000092_q007,dpass_dev-calib_000092,category_union,train,False,0,47960,0,47960,,True,False,0.0
+dpass_dev-calib_000093_q000,dpass_dev-calib_000093,category_union,car,True,47061,44412,43556,47917,0.9089884592107186,False,False,0.8252603329994519
+dpass_dev-calib_000093_q001,dpass_dev-calib_000093,category_union,person,True,2763,2625,2103,3285,0.6401826484018265,False,False,0.6399878271454656
+dpass_dev-calib_000093_q002,dpass_dev-calib_000093,category_union,road,True,167699,161511,158811,170399,0.9319949060733924,False,False,0.9261898791021013
+dpass_dev-calib_000093_q003,dpass_dev-calib_000093,category_union,vegetation,True,161013,146320,139248,168085,0.8284379926822738,False,False,0.8283492858545058
+dpass_dev-calib_000093_q004,dpass_dev-calib_000093,category_union,sky,True,94269,90517,89523,95263,0.9397457564846793,False,False,0.9302733989379942
+dpass_dev-calib_000093_q005,dpass_dev-calib_000093,instance_referring,the leftmost car,True,568,24371,0,24939,0.0,False,False,0.0
+dpass_dev-calib_000093_q006,dpass_dev-calib_000093,instance_referring,the nearest person,True,740,1234,534,1440,0.37083333333333335,False,False,0.37083333333333335
+dpass_dev-calib_000093_q007,dpass_dev-calib_000093,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000094_q000,dpass_dev-calib_000094,category_union,car,True,55745,52460,51812,56393,0.9187665135743798,False,False,0.8444867786895923
+dpass_dev-calib_000094_q001,dpass_dev-calib_000094,category_union,person,True,159,347,47,459,0.10239651416122005,False,False,0.10239651416122005
+dpass_dev-calib_000094_q002,dpass_dev-calib_000094,category_union,road,True,151079,147884,146435,152528,0.9600532361271373,False,False,0.9406939171436464
+dpass_dev-calib_000094_q003,dpass_dev-calib_000094,category_union,vegetation,True,204790,167116,151508,220398,0.6874291055272734,False,False,0.6873947978530822
+dpass_dev-calib_000094_q004,dpass_dev-calib_000094,category_union,sky,True,115411,105380,104398,116393,0.8969439742939868,False,False,0.8969439742939868
+dpass_dev-calib_000094_q005,dpass_dev-calib_000094,instance_referring,the leftmost car,True,455,39539,0,39994,0.0,False,False,0.0
+dpass_dev-calib_000094_q006,dpass_dev-calib_000094,instance_referring,the nearest person,True,85,15185,0,15270,0.0,False,False,0.0
+dpass_dev-calib_000094_q007,dpass_dev-calib_000094,category_union,train,True,114,0,0,114,0.0,False,False,
+dpass_dev-calib_000095_q000,dpass_dev-calib_000095,category_union,car,True,35854,30782,29715,36921,0.8048265214918339,False,False,0.6294455628250294
+dpass_dev-calib_000095_q001,dpass_dev-calib_000095,category_union,person,True,5008,5008,4157,5859,0.7095067417648063,False,False,0.7076949267960504
+dpass_dev-calib_000095_q002,dpass_dev-calib_000095,category_union,road,True,217517,231109,210821,237805,0.8865288787031391,False,False,0.8717194897558354
+dpass_dev-calib_000095_q003,dpass_dev-calib_000095,category_union,vegetation,True,142389,120842,114291,148940,0.7673626963878072,False,False,0.7662719909890582
+dpass_dev-calib_000095_q004,dpass_dev-calib_000095,category_union,sky,True,251045,243608,243088,251565,0.9663029435732315,False,False,0.9624769861223843
+dpass_dev-calib_000095_q005,dpass_dev-calib_000095,instance_referring,the leftmost car,True,89,19295,0,19384,0.0,False,False,0.0
+dpass_dev-calib_000095_q006,dpass_dev-calib_000095,instance_referring,the nearest person,True,1537,1971,0,3508,0.0,False,False,0.0
+dpass_dev-calib_000095_q007,dpass_dev-calib_000095,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000096_q000,dpass_dev-calib_000096,category_union,car,True,5505,2811,2609,5707,0.45715787629227267,False,False,0.30484961529494053
+dpass_dev-calib_000096_q001,dpass_dev-calib_000096,category_union,person,True,2478,2334,1916,2896,0.6616022099447514,False,False,0.6597796143250688
+dpass_dev-calib_000096_q002,dpass_dev-calib_000096,category_union,road,True,142286,117849,115767,144368,0.8018882300786878,False,False,0.7946391186463946
+dpass_dev-calib_000096_q003,dpass_dev-calib_000096,category_union,vegetation,True,31122,25999,24108,33013,0.7302577772392693,False,False,0.7302577772392693
+dpass_dev-calib_000096_q004,dpass_dev-calib_000096,category_union,sky,True,240285,212068,211442,240911,0.8776768184101182,False,False,0.8776768184101182
+dpass_dev-calib_000096_q005,dpass_dev-calib_000096,instance_referring,the leftmost car,True,251,141171,0,141422,0.0,False,False,0.0
+dpass_dev-calib_000096_q006,dpass_dev-calib_000096,instance_referring,the nearest person,True,822,140821,730,140913,0.0051805014441534845,False,False,0.0051805014441534845
+dpass_dev-calib_000096_q007,dpass_dev-calib_000096,category_union,train,True,142218,140949,139330,143837,0.9686659204516224,False,False,0.0
+dpass_dev-calib_000097_q000,dpass_dev-calib_000097,category_union,car,True,102638,99327,98620,103345,0.9542793555566307,False,False,0.9310620676674038
+dpass_dev-calib_000097_q001,dpass_dev-calib_000097,category_union,person,False,0,30,0,30,,True,False,0.0
+dpass_dev-calib_000097_q002,dpass_dev-calib_000097,category_union,road,True,253483,243178,242919,253742,0.9573464385084062,False,False,0.9563100107473121
+dpass_dev-calib_000097_q003,dpass_dev-calib_000097,category_union,vegetation,True,41271,26094,25083,42282,0.5932311621966795,False,False,0.592516476507689
+dpass_dev-calib_000097_q004,dpass_dev-calib_000097,category_union,sky,True,121371,119629,118927,122073,0.974228535384565,False,False,0.9732160392798691
+dpass_dev-calib_000097_q005,dpass_dev-calib_000097,instance_referring,the leftmost car,True,104,77776,0,77880,0.0,False,False,0.0
+dpass_dev-calib_000097_q006,dpass_dev-calib_000097,instance_referring,the nearest person,False,0,74956,0,74956,,True,False,0.0
+dpass_dev-calib_000097_q007,dpass_dev-calib_000097,category_union,train,False,0,0,0,0,,False,True,
+dpass_dev-calib_000098_q000,dpass_dev-calib_000098,category_union,car,True,19420,23959,16189,27190,0.5954027215888195,False,False,0.5228088967298847
+dpass_dev-calib_000098_q001,dpass_dev-calib_000098,category_union,person,True,35,0,0,35,0.0,False,False,0.0
+dpass_dev-calib_000098_q002,dpass_dev-calib_000098,category_union,road,True,10979,21752,4436,28295,0.15677681569181834,False,False,0.15085356729919064
+dpass_dev-calib_000098_q003,dpass_dev-calib_000098,category_union,vegetation,True,17166,11544,10241,18469,0.5544967242406195,False,False,0.5537471612414837
+dpass_dev-calib_000098_q004,dpass_dev-calib_000098,category_union,sky,True,225071,222087,221081,226077,0.9779013345010771,False,False,0.9773652636372077
+dpass_dev-calib_000098_q005,dpass_dev-calib_000098,instance_referring,the leftmost car,True,214,16244,0,16458,0.0,False,False,0.0
+dpass_dev-calib_000098_q006,dpass_dev-calib_000098,instance_referring,the nearest person,True,35,15356,0,15391,0.0,False,False,0.0
+dpass_dev-calib_000098_q007,dpass_dev-calib_000098,category_union,train,False,0,368420,0,368420,,True,False,0.0
+dpass_dev-calib_000099_q000,dpass_dev-calib_000099,category_union,car,True,5197,0,0,5197,0.0,False,False,0.0
+dpass_dev-calib_000099_q001,dpass_dev-calib_000099,category_union,person,True,1016,1006,794,1228,0.6465798045602605,False,False,0.6465798045602605
+dpass_dev-calib_000099_q002,dpass_dev-calib_000099,category_union,road,True,258430,253607,253196,258841,0.9781912448182475,False,False,0.9660872086811861
+dpass_dev-calib_000099_q003,dpass_dev-calib_000099,category_union,vegetation,True,63954,58302,52508,69748,0.7528244537477777,False,False,0.7525223572575097
+dpass_dev-calib_000099_q004,dpass_dev-calib_000099,category_union,sky,True,109571,107961,107542,109990,0.9777434312210201,False,False,0.9777434312210201
+dpass_dev-calib_000099_q005,dpass_dev-calib_000099,instance_referring,the leftmost car,True,504,2402,504,2402,0.20982514571190675,False,False,0.20621931260229132
+dpass_dev-calib_000099_q006,dpass_dev-calib_000099,instance_referring,the nearest person,True,505,669,264,910,0.29010989010989013,False,False,0.29010989010989013
+dpass_dev-calib_000099_q007,dpass_dev-calib_000099,category_union,train,False,0,0,0,0,,False,True,

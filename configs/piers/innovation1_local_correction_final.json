@@ -1,0 +1,74 @@
+{
+  "version": "innovation1-local-inference-v1",
+  "frozen_at": "2026-11-07T20:35:09.821576+08:00",
+  "algorithm": "One-shot bidirectional semantic/text inference cooperation with source-calibrated selective text correction",
+  "entry_point": "${PIERS_REPO_ROOT}/runs/I1-local-correction-20261107_2000/run_innovation1.py",
+  "run_directory": "${PIERS_REPO_ROOT}/runs/I1-local-correction-20261107_2000",
+  "model_update_policy": "Foundation checkpoints fixed. Reliability head previously fitted only on Cityscapes sourceGT; no target training in this release.",
+  "defaults": {
+    "semantic_mode": "soft",
+    "text_mode": "gated"
+  },
+  "allowed_ablation_modes": {
+    "semantic": [
+      "soft",
+      "hard"
+    ],
+    "text": [
+      "gated",
+      "no_gate"
+    ]
+  },
+  "soft_rule": "alpha=r*clip((.85-maxp)/(.85-1/13),0,1); p_new=(1-alpha)*p+alpha*onehot(textclass)",
+  "gate": {
+    "Ptext_min": 0.9,
+    "semantic_maxp_upper": 0.85,
+    "strong_conflict_min": 0.8,
+    "distinct_views_min": 2,
+    "cross_class_reject": true
+  },
+  "input_geometry": {
+    "ERP_WH": [
+      2048,
+      400
+    ],
+    "text_crop_WH": [
+      1024,
+      400
+    ],
+    "text_stride": 512,
+    "text_wrap": true,
+    "perspective_reprojection": false,
+    "semantic_resize_WH": [
+      4096,
+      1024
+    ],
+    "semantic_window_WH": [
+      1024,
+      1024
+    ],
+    "semantic_stride": 384,
+    "semantic_passes": 2
+  },
+  "class_scope": "Semantic13 merged human/vehicle; text finecar/person plusother11,unmappedusertextfallback",
+  "no_circular_evidence": true,
+  "runtime_source_sha256": {
+    "${PIERS_REPO_ROOT}/runs/I1-local-correction-20261107_2000/run_innovation1.py": "60800fbc09a80a2791d6e5f7ac825718fa067d9c0dfd7559ffdbcdaf107e9c5a",
+    "${PIERS_REPO_ROOT}/runs/I1-local-correction-20261107_2000/single_image_support.py": "1feaad723660eb64d831edf596f24a75d204566a3e52b41d57895be26e08827e",
+    "${PIERS_REPO_ROOT}/runs/I1-local-correction-20261107_2000/fresh_cooperation/fresh_core.py": "f6e7ec14a2d6eda7627fc25ea918e672fc8af318c3b768e2876f71c8d08d5942",
+    "${PIERS_REPO_ROOT}/runs/I1-local-correction-20261107_2000/fresh_cooperation/soft_core.py": "d31094d5b52f9928b9b2ff5006fcc4fc1a20997fb8a0dcd86337e79f4660508c",
+    "${PIERS_REPO_ROOT}/src/piers_ljj/collaboration/reliable_cooperation.py": "7a7e3727136a8046cba9e7cb552d0b38d0f5729255be451b0000cbf75d704456",
+    "${PIERS_REPO_ROOT}/runs/I1-reliable-20261107_1535/source_calibration/calibrator/predictor.py": "bae68a6dbc943edd8fcab71a610dacad332cf8d2b6850af8251f66b3c3b19853",
+    "${PIERS_REPO_ROOT}/runs/I1-reliable-20261107_1535/source_calibration/calibrator/outputs/full.npz": "ac40109a919a4ff90303232727d013580092367801ce3a99b5df37b13cf69e90",
+    "${PIERS_REPO_ROOT}/runs/I1-reliable-20261107_1535/source_calibration/calibrator/outputs/text_only.npz": "cac7c9032e97c42e40bdf3c4f0ab586626759f09715451c8813836fee3f05d1f",
+    "${PIERS_REPO_ROOT}/runs/I1-reliable-20261107_1535/source_calibration/calibrator/outputs/teacher_only.npz": "3b9c64acab2417f62a912717055bcf73d19284f1bd3a0f077cd6d3bf696a957c",
+    "${PIERS_REPO_ROOT}/runs/I1-local-correction-20261107_2000/fresh_cooperation/FREEZE.json": "5af04cfca1a4dbe3904bddd32ae154e58c3e8cd6bf832cdda88d13ee1d5ace32",
+    "${PIERS_REPO_ROOT}/runs/I1-local-correction-20261107_2000/fresh_inference/i1_dense_runtime.py": "f457c4873a1b0e1b9801bb3a3971718602b243b8072a31fd719f7e239ad8359b",
+    "${PIERS_REPO_ROOT}/runs/I1-local-correction-20261107_2000/fresh_inference/i1_runtime.py": "4c438bd09fc7abb658b929620cdcc0915190f13695ca4b6947ea7fe15db8771a",
+    "${PIERS_REPO_ROOT}/src/piers_ljj/workers/entry.py": "820451fa52b3f8bd5db0c247d6b82ddd8d741ce29bcb8e07e341533fb443ff0b",
+    "${PIERS_REPO_ROOT}/src/piers_ljj/text/grounded_adapter.py": "b33ba0e5df3bd787cd0240178deb82a839386f15bfbde8aa7b55088f1e32a8d2",
+    "${PIERS_REPO_ROOT}/src/piers_ljj/geometry/erp.py": "92d6beb56a0e131ce73475aae073a91c21ad7d080a63bc654a2cadfb7dcae883"
+  },
+  "assessment_note": "Results documented separately; DensePASS100 already-development, Wild400 deduplicated sparsecommon4 supplemental, not independenttest; traininggainnotestablished.",
+  "integrity_coverage_note": "Cheap runtime/FoV/backend/FREEZE anchors added after independent audit; numerical algorithm and model bytes unchanged."
+}

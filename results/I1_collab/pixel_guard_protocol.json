@@ -1,0 +1,8 @@
+{
+  "status": "predeclared_exploratory_v2",
+  "teacher_confidence_threshold": 0.8,
+  "target_probability_ratio": 0.5,
+  "accepted_candidates": "existing SAM>=0.8 and mean semantic support>=0.5, eroded width=2",
+  "intent": "Keep confident teacher disagreements and confident boundary labels; allow plausible uncertain corrections.",
+  "scope": "One additional fixed pixel-gating design, no threshold sweep. GT only used in subsequent evaluation."
+}

@@ -1,0 +1,28 @@
+collab: semantic_to_text
+fov:
+  stride_x: 512
+  win_h: 400
+  win_w: 1024
+  y_start: 0
+grounded:
+  dtype: bf16
+  grounding_model_id: /root/autodl-tmp/weights/grounding-dino-tiny-hf
+  sam2_cfg: configs/sam2.1/sam2.1_hiera_s.yaml
+  sam2_ckpt: /root/autodl-tmp/weights/sam2.1_hiera_small.pt
+manifest: /root/autodl-tmp/piers-main/configs/piers/manifest.dev-calib-100.json
+run_id: T2-semantic-to-text
+runs_root: runs
+seam:
+  extra_budget_B: 0
+  strategy: fixed_scm
+seed: 0
+suite: T2-semantic-to-text
+text_backend: hf_grounding_dino_sam2
+thresholds:
+  det: 0.35
+  text: 0.25
+worker: grounded
+semantic_cache: /root/autodl-tmp/piers-main/runs/E0-effective-start/semantics
+collab_params:
+  alpha: 0.5
+  hard_thr: null

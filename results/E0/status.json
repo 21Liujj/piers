@@ -1,0 +1,17 @@
+{
+  "status": "completed_real",
+  "suite": "E0",
+  "run_id": "E0-effective-start",
+  "config_hash": "54843659bf07955a",
+  "synthetic": false,
+  "device": "cuda",
+  "ckpt": "/root/autodl-tmp/weights/omnisam_s.pth",
+  "metrics": {
+    "mIoU": 60.4594,
+    "mAcc": 71.7285,
+    "PixAcc": 88.9669,
+    "FWIoU": 81.233,
+    "mDice": 72.8909
+  },
+  "eval_time_sec": 262.1031
+}

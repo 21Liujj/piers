@@ -1,0 +1,36 @@
+{
+  "status": "complete_scoped_Innovation1_frozen_inference_release",
+  "completed_at": "2026-11-07T21:06:53.654944+08:00",
+  "user_final_scope": "SameDensePASS100/nativeGT comparisonagainst originalOmniSAM; futuredataset/scenario andindoorfinetuning afterallthreeinnovations",
+  "primary_semantic": {
+    "original_mIoU": 60.29630086373904,
+    "I1_soft_mIoU": 60.59605952363647,
+    "soft_delta_pp": 0.299758659897428,
+    "soft_image95CI": [
+      0.1258418676621691,
+      0.5439316162313851
+    ],
+    "I1_hard_mIoU": 60.695169050696954,
+    "hard_delta_pp": 0.3988681869579125
+  },
+  "primary_text": {
+    "old6": {
+      "T1": 66.91115075789452,
+      "I1_gated": 67.96744582090965,
+      "delta_pp": 1.0562950630151278
+    },
+    "expandedfine13": {
+      "T1": 49.99885412209142,
+      "I1_gated": 50.85110154201693,
+      "delta_pp": 0.8522474199255043
+    }
+  },
+  "training_gain_established": false,
+  "new_independent_test_claimed": false,
+  "supplemental400": "completeexistingappendixonly,notconditionforfullgeneralization",
+  "archive": "/root/autodl-tmp/piers-main/runs/I1-local-correction-20261107_2000/innovation1_inference_release_20261107.tar.gz",
+  "archive_sha256": "21b0d8e09bb1ef1f2e8c8ab8feaafbe58ab94709332a54d83b5c4e18577dd137",
+  "summary": "/root/autodl-tmp/piers-main/runs/I1-local-correction-20261107_2000/reports/INNOVATION1_SUMMARY.txt",
+  "config": "/root/autodl-tmp/piers-main/configs/piers/innovation1_local_correction_final.json",
+  "stable_entry": "/root/autodl-tmp/piers-main/scripts/piers/i1_local_run.py"
+}

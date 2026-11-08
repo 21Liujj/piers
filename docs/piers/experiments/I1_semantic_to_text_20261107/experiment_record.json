@@ -1,0 +1,182 @@
+{
+  "record_id": "I1_semantic_to_text_20261107",
+  "recorded_at": "2026-11-07T19:45:04.953624+08:00",
+  "record_timezone": "Asia/Shanghai",
+  "status": "verified_record_of_existing_completed_experiment_no_new_inference",
+  "scope": "Innovation1 only, original uncompressed OmniSAM-S semantic guidance for independent Grounded-SAM2 text masks; frozen inference comparison, not training gain",
+  "evaluation": {
+    "dataset": "DensePASS100",
+    "role": "repeatedly-used development set, not independent test",
+    "image_count": 100,
+    "category_query_count": 600,
+    "positive_queries": 478,
+    "negative_queries": 122,
+    "categories": [
+      "car",
+      "person",
+      "road",
+      "vegetation",
+      "sky",
+      "train"
+    ],
+    "positive_metrics": "Average per-positive-query mask IoU/Dice/recall; same query and GT protocol in both arms",
+    "negative_FP_rule": "negative-query predicted effective area>=16 pixels",
+    "car_person_GT": "Original fine-grained19-class annotations, not merged13-class masks",
+    "instance_referring_queries": "200 additional expressions qualitative only; excluded from quantitative600"
+  },
+  "text_geometry": {
+    "representation": "ERP",
+    "image_WH": [
+      2048,
+      400
+    ],
+    "crop_WH": [
+      1024,
+      400
+    ],
+    "stride_x": 512,
+    "x_starts": [
+      0,
+      512,
+      1024,
+      1536
+    ],
+    "horizontal_wrap": true,
+    "perspective_reprojection": false,
+    "horizontal_longitude_span_degrees": 180,
+    "horizontal_longitude_step_degrees": 90,
+    "not_a_70_degree_perspective_view": true,
+    "fusion": "Map masks back to original ERP and union per query"
+  },
+  "models": {
+    "text_detection": "Grounding DINO tiny HF",
+    "text_masks": "SAM2.1 Hiera Small",
+    "semantic_prior": "Original uncompressed OmniSAM-S,9-patch sequence, max32768memorytokens",
+    "semantic_checkpoint": "/root/autodl-tmp/weights/omnisam_s.pth",
+    "semantic_checkpoint_recorded_sha256": "ec0c607a6247651cb8c5eb04e3c15a7ae4b067655c4ca6cb5b6ff9d80adaba85",
+    "Grounded_SAM2_retrained_for_this_comparison": false,
+    "latest_v4_checkpoint_used_for_these_text_scores": false
+  },
+  "arms": {
+    "T1_independent_text": {
+      "queries": 600,
+      "positive_queries": 478,
+      "negative_queries": 122,
+      "positive_mask_IoU": 0.6691115075789458,
+      "positive_mask_Dice": 0.7546656941967257,
+      "positive_recall": 0.7649410492866884,
+      "negative_FP_area16": 58,
+      "negative_FPR_area16": 0.47540983606557374
+    },
+    "I1_only_semantic_guided_text": {
+      "positive_mask_IoU": 0.6796739033763628,
+      "positive_mask_Dice": 0.7624483732917382,
+      "positive_recall": 0.7865705789716818,
+      "positive_queries": 478,
+      "negative_queries": 122,
+      "negative_FP_area16": 58,
+      "negative_FPR_area16": 0.47540983606557374
+    }
+  },
+  "mask_IoU_gain_pp": 1.0562395797416693,
+  "uncertainty": {
+    "positive_Mask_IoU_delta_pp": 1.0562395797416693,
+    "image_bootstrap_95CI_pp": [
+      0.7860044865687837,
+      1.3215600053995686
+    ],
+    "resampling_unit": "image, preserving all positive queries in each sampled image",
+    "bootstrap_draws": 5000
+  },
+  "source_JSON_paths": {
+    "baseline": "$.text.T1",
+    "treatment": "$.dense_I1_only_frozen.text",
+    "gain_and_CI": "$.dense_I1_only_frozen.text_vs_T1_bootstrap"
+  },
+  "limitations": [
+    "Improvement concentrated inroad/vegetation/sky; car/person/train unchanged in categoryCSV",
+    "Negative-query false positives remain58/122 in both arms",
+    "Only6category queries quantified; arbitrary-language and complex referring robustness not established",
+    "Joint I1+I2 no-gate ablation has higher IoU than its gated variant; do not claim gate dominates all metrics",
+    "No stable text-to-semantic training gain established; distinguish this textMaskIoU from semanticmIoU"
+  ],
+  "separate_latest_semantic_training": {
+    "source_file": "/root/autodl-tmp/piers-main/runs/I1-reliable-20261107_1535/CORRECTION_TRAINING_RESULTS.json",
+    "R0_mIoU": 60.35958492844862,
+    "R1_mIoU": 60.36146542703823,
+    "delta_pp": 0.0018804985896139215,
+    "image_bootstrap95ci_pp": [
+      -0.006088012304539525,
+      0.011297579506332055
+    ],
+    "training_benefit_established": false
+  },
+  "evidence_files": [
+    {
+      "original_path": "/root/autodl-tmp/piers-main/runs/I1-densepass-20261107_121457/reports/RESULTS.json",
+      "snapshot_relative": "source_snapshot/00_RESULTS.json",
+      "sha256": "a3b693801e8816f98b041e5e1ffef571357787df1cfd167ac4208b9003105950",
+      "bytes": 261089
+    },
+    {
+      "original_path": "/root/autodl-tmp/piers-main/runs/I1-densepass-20261107_121457/reports/REPORT.txt",
+      "snapshot_relative": "source_snapshot/01_REPORT.txt",
+      "sha256": "00beab06181818b46dd504f465f8d4b5fe9caa4542ab0e942487a2a6c6138579",
+      "bytes": 13971
+    },
+    {
+      "original_path": "/root/autodl-tmp/piers-main/runs/I1-densepass-20261107_121457/reports/text_per_category.csv",
+      "snapshot_relative": "source_snapshot/02_text_per_category.csv",
+      "sha256": "e25e2e99cec2f7aeb1f0f1a810ce26a43c874846c3c5810c4659514bd18e0afb",
+      "bytes": 1502
+    },
+    {
+      "original_path": "/root/autodl-tmp/piers-main/runs/I1-densepass-20261107_121457/reports/MAIN_PAPER_ANCHORED.csv",
+      "snapshot_relative": "source_snapshot/03_MAIN_PAPER_ANCHORED.csv",
+      "sha256": "41d4cf2e59df1ca48d147943408ee1d1b07a3f401950b789908cf2175f96e74e",
+      "bytes": 462
+    },
+    {
+      "original_path": "/root/autodl-tmp/piers-main/runs/I1-densepass-20261107_121457/dense_control_build.py",
+      "snapshot_relative": "source_snapshot/04_dense_control_build.py",
+      "sha256": "69b632b921e2ec7786b707bf3e7adff1f0e1c9d91e072b935a06c27b62f44370",
+      "bytes": 4672
+    },
+    {
+      "original_path": "/root/autodl-tmp/piers-main/scripts/piers/i1_text_worker.py",
+      "snapshot_relative": "source_snapshot/05_i1_text_worker.py",
+      "sha256": "4f5cc355b3dec3b41a86042f45d194782a5f0db4f9da67eb73d727f36251418e",
+      "bytes": 4436
+    },
+    {
+      "original_path": "/root/autodl-tmp/piers-main/src/piers_ljj/geometry/erp.py",
+      "snapshot_relative": "source_snapshot/06_erp.py",
+      "sha256": "92d6beb56a0e131ce73475aae073a91c21ad7d080a63bc654a2cadfb7dcae883",
+      "bytes": 4561
+    },
+    {
+      "original_path": "/root/autodl-tmp/piers-main/src/piers_ljj/collaboration/reliable_cooperation.py",
+      "snapshot_relative": "source_snapshot/07_reliable_cooperation.py",
+      "sha256": "7a7e3727136a8046cba9e7cb552d0b38d0f5729255be451b0000cbf75d704456",
+      "bytes": 8202
+    },
+    {
+      "original_path": "/root/autodl-tmp/piers-main/runs/I1-collab-20261106_213607/t1_candidate_shards/0/dpass_dev-calib_000000/metadata.json",
+      "snapshot_relative": "source_snapshot/08_metadata.json",
+      "sha256": "568c687366c64420ee21b76f3905f7f138ea70cf0668978d4882d93db81e001e",
+      "bytes": 29572
+    },
+    {
+      "original_path": "/root/autodl-tmp/piers-main/runs/I1-reliable-20261107_1535/CORRECTION_TRAINING_RESULTS.json",
+      "snapshot_relative": "source_snapshot/09_CORRECTION_TRAINING_RESULTS.json",
+      "sha256": "05117dd14e8844a58d7fdeb392c00335b25976ab07e66a3d841ad4500737e8ae",
+      "bytes": 958
+    },
+    {
+      "original_path": "/root/autodl-tmp/piers-main/runs/I1-reliable-20261107_1535/CORRECTION_PAIRED_UNCERTAINTY.json",
+      "snapshot_relative": "source_snapshot/10_CORRECTION_PAIRED_UNCERTAINTY.json",
+      "sha256": "e83f2d129f159428d371f4548d85a21a42ffab805f3184c02e78fe9889c2f734",
+      "bytes": 640
+    }
+  ]
+}

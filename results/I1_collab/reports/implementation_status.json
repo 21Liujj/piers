@@ -1,0 +1,37 @@
+{
+  "stage": "offline_diagnostics_complete_training_not_run",
+  "updated_at": "2026-11-06T22:24:24.047533+08:00",
+  "e0_cache": {
+    "images": 100,
+    "mIoU_replay": 60.460136123451335
+  },
+  "t1_replay": {
+    "images": 100,
+    "candidates": 5997,
+    "queries": 800,
+    "different_pixels": 0
+  },
+  "T2": {
+    "full_offline_queries": 800,
+    "real_gpu_smoke_queries": 1,
+    "hard_filter_positive_iou": 0.5125454747166116,
+    "baseline_T1_positive_iou": 0.5002775497442573
+  },
+  "U1": {
+    "offline_variants": [
+      "U1_quality_only",
+      "U1_consensus_gate",
+      "U1_pixel_guard"
+    ],
+    "pixel_guard_net_corrected_pixels": 66338,
+    "trained": false
+  },
+  "B1": {
+    "trained": false
+  },
+  "tests_passed": 19,
+  "restrictions": [
+    "Validation revisions are evaluation diagnostics only, not training inputs.",
+    "No final trained bidirectional gain has been demonstrated."
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "/root/autodl-tmp/piers-main/src/piers_ljj/collaboration/__init__.py": "795d4c6ff2590e58de8850c38918a9eea9891716d92396c1f2775ff0d3989379",
+  "/root/autodl-tmp/piers-main/src/piers_ljj/collaboration/revision.py": "3ed5144f9e8a6e34c5fced94c87d14a82b2b26d183189cb941e5287f11d2c2c1",
+  "/root/autodl-tmp/piers-main/src/piers_ljj/collaboration/rules.py": "f59ecafcb167d52ce7876cfb745703dc68eb0a6d5be419facada905b64842c77",
+  "/root/autodl-tmp/piers-main/src/piers_ljj/collaboration/text_guide.py": "0c8a19f6a80677e3fe276d8c234d2b8e45526dc86edb900e47b96e4e7e45523f",
+  "/root/autodl-tmp/piers-main/src/piers_ljj/collaboration/semantic_bridge.py": "3bcf4d839b0b0765f83dc9178d552c8a59f7e55483ef9b998014067682dfab92",
+  "/root/autodl-tmp/piers-main/src/piers_ljj/collaboration/reliability_gate.py": "46e534c475abc8cb175412f03c20ba254aeaf5876d623e0801f66716aca41f11",
+  "/root/autodl-tmp/piers-main/src/piers_ljj/collaboration/pixel_cooperation.py": "fa74fffdc7c7bb6d817d4f52be61b4543c70698ab9685e5854cddcbd9a546833",
+  "/root/autodl-tmp/piers-main/src/piers_ljj/text/__init__.py": "c388ff87e99c847e3d68e77069fedc015ef46a3333f793e3a800857535cec088",
+  "/root/autodl-tmp/piers-main/src/piers_ljj/text/assoc.py": "f15e275a20a4abb93a3bfdb4542bf886acdb236d7ead8afda608f2bbe5e7ac89",
+  "/root/autodl-tmp/piers-main/src/piers_ljj/text/grounded_adapter.py": "b33ba0e5df3bd787cd0240178deb82a839386f15bfbde8aa7b55088f1e32a8d2",
+  "/root/autodl-tmp/piers-main/src/piers_ljj/text/manifest.py": "22594ade2097a03b4ea1d37b4f2d86f7558ae367b8de6bbd9374a532fc1b8862",
+  "/root/autodl-tmp/piers-main/src/piers_ljj/text/pipeline.py": "469a357162c3657e5ae941543103b0412d035ba772e379c5c125ddf82b769d5b",
+  "/root/autodl-tmp/piers-main/configs/piers/innovation2_final.json": "e703b8eb50bfae68181978ff00594f01cb276d83e83b4dd008404833e74b5415",
+  "/root/autodl-tmp/piers-main/i2_full_eval.py": "ab2efcee2983374662251aa97772ae2419325444e28f9d9cfe792833412d83b2"
+}

@@ -1,0 +1,24 @@
+collab: none
+fov:
+  stride_x: 512
+  win_h: 400
+  win_w: 1024
+  y_start: 0
+grounded:
+  dtype: bf16
+  grounding_model_id: ${PIERS_WEIGHTS_ROOT}/grounding-dino-tiny-hf
+  sam2_cfg: configs/sam2.1/sam2.1_hiera_s.yaml
+  sam2_ckpt: ${PIERS_WEIGHTS_ROOT}/sam2.1_hiera_small.pt
+manifest: ${PIERS_REPO_ROOT}/configs/piers/manifest.wildpass13-train.json
+run_id: T1-wildpass13
+runs_root: runs
+seam:
+  extra_budget_B: 0
+  strategy: fixed_scm
+seed: 0
+suite: T1-wildpass13
+text_backend: hf_grounding_dino_sam2
+thresholds:
+  det: 0.35
+  text: 0.25
+worker: grounded
