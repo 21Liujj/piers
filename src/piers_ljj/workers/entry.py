@@ -136,9 +136,15 @@ def _build_hf_backend(cfg, device: str):
 
     use_amp = device.startswith("cuda") and cfg.dtype in ("bf16", "fp16")
     amp_dtype = {"bf16": torch.bfloat16, "fp16": torch.float16}.get(cfg.dtype, torch.bfloat16)
+    feature_cache = None
+    if getattr(cfg, 'cache_prefusion_features', False):
+        from piers_ljj.text.feature_cache import PreFusionFeatureCache
+        feature_cache = PreFusionFeatureCache(dino_model, cfg.max_text_cache_entries)
 
     class _Dino:
         def __call__(self, pil_img: Image.Image, text: str, box_thr: float, text_thr: float):
+            if feature_cache is not None:
+                feature_cache.begin(pil_img, text)
             inputs = processor(images=pil_img, text=text, return_tensors="pt").to(device)
             with torch.no_grad():
                 if use_amp:
@@ -158,6 +164,9 @@ def _build_hf_backend(cfg, device: str):
             labels = r0.get("text_labels", r0.get("labels"))
             phrases = list(labels) if labels is not None else []
             return boxes, scores, phrases
+
+        def cache_stats(self):
+            return feature_cache.stats() if feature_cache is not None else {'enabled': False}
 
     class _Sam:
         def __init__(self):
@@ -199,6 +208,7 @@ def grounded_main(argv=None) -> int:
     ap.add_argument("--manifest", required=True, help="query manifest json (worker_view enforced)")
     ap.add_argument("--out", required=True, help="output run dir")
     ap.add_argument("--device", default=None, help="cuda|cpu (default: cuda if available)")
+    ap.add_argument("--max-queries", type=int, default=0, help="Debug-only query limit; zero means full manifest")
     a = ap.parse_args(argv)
 
     diag(("numpy", "PIL", "yaml", "torch", "transformers"))
@@ -208,17 +218,18 @@ def grounded_main(argv=None) -> int:
 
     with open(a.config, encoding="utf-8") as f:
         run_cfg = yaml.safe_load(f)
-    # Configs/manifests may contain ${PIERS_*} path placeholders -> expand them.
-    from piers_ljj.paths import resolve
-    run_cfg = resolve(run_cfg)
-    manifest = resolve(json.load(open(a.manifest, encoding="utf-8")))
+    with open(a.manifest, encoding="utf-8") as f:
+        manifest = json.load(f)
 
     from piers_ljj.text.grounded_adapter import GroundedConfig
     from piers_ljj.text.manifest import worker_view
     from piers_ljj.text.pipeline import run_erp_text
-    from piers_ljj.collaboration.text_guide import apply_mode
+    from piers_ljj.collaboration.semantic_bridge import FrozenSemanticCache, guide_and_union
+    from piers_ljj.geometry.erp import plan_fovs
 
     wman = worker_view(manifest)  # GT stripped even if present in file
+    if a.max_queries:
+        wman["queries"] = wman["queries"][:a.max_queries]
     g = run_cfg.get("grounded", {})
     gcfg = GroundedConfig(
         grounding_model_id=g.get("grounding_model_id", GroundedConfig.grounding_model_id),
@@ -237,21 +248,20 @@ def grounded_main(argv=None) -> int:
         return _fail(f"backend build failed: {e}")
 
     from PIL import Image
+    import numpy as np
     os.makedirs(a.out, exist_ok=True)
     fov_cfg = run_cfg.get("fov", {})
     mode = "direct" if run_cfg.get("suite", "").startswith("T0") else "fov"
     collab = run_cfg.get("collab", "none")
-    sem_cache = {}
-    if collab.startswith("semantic"):
-        # frozen E0 semantic cache read (never recomputed here)
-        import numpy as np
-        cdir = run_cfg.get("semantic_cache", "")
+    sem_cache = None
+    if collab in {"semantic_to_text", "semantic_to_text_hard"}:
         try:
-            d = np.load(os.path.join(cdir, "probs.npz"))
-            sem_cache = {k: d[k] for k in d.files}
-            print(f"semantic cache: {cdir} keys={list(sem_cache)}")
+            sem_cache = FrozenSemanticCache(run_cfg["semantic_cache"], a.manifest)
+            print(f"semantic cache: {sem_cache.directory}, images={len(sem_cache.ids)}")
         except Exception as e:
-            return _fail(f"semantic cache load failed ({cdir}): {e}")
+            return _fail(f"semantic cache load failed: {e}")
+    elif collab != "none":
+        return _fail(f"unsupported grounded collaboration mode: {collab}")
 
     t_all = time.perf_counter()
     all_preds, all_logs = [], []
@@ -263,24 +273,41 @@ def grounded_main(argv=None) -> int:
         r = run_erp_text(pil, q["query_id"], q.get("norm_text") or q["raw_text"],
                          fov_cfg, gcfg,
                          backend_factory=lambda b=backend: b, mode=mode)
-        preds = r["predictions"]
-        if collab.startswith("semantic") and q["image_id"] in sem_cache:
-            preds, log = apply_mode(preds, sem_cache[q["image_id"]], mode="semantic_to_text",
-                                    alpha=float(run_cfg.get("collab_params", {}).get("alpha", 0.5)))
-            all_logs.extend(log)
-        elif collab.startswith("semantic"):
-            preds, log = apply_mode(preds, {}, mode="none")
-            all_logs.extend({**l, "reason": "no cache for image; kept original"} for l in log)
-        all_preds.append({"query_id": q["query_id"], "image_id": q["image_id"],
-                          "mode": mode, "result": r, "predictions": preds})
-        # stack this query's ERP-global masks (union over FoV candidates)
-        gm = r.get("masks") or []
-        if gm:
-            import numpy as np
-            stack = np.zeros_like(np.asarray(gm[0], dtype=bool))
-            for m in gm:
-                stack |= (np.asarray(m) > 0)
-            mask_store[q["query_id"]] = stack
+        raw_preds = r["predictions"]
+        gm = r.pop("masks", [])
+        H, W = pil.height, pil.width
+        if mode == "direct":
+            fovs = [{"view_id":"v000","x_start":0,"y_start":0,"win_w":W,"win_h":H}]
+        else:
+            fovs = plan_fovs(W,H,win_w=fov_cfg["win_w"],win_h=fov_cfg.get("win_h",H),
+                            stride_x=fov_cfg.get("stride_x",fov_cfg["win_w"]),y_start=fov_cfg.get("y_start",0))
+        valid_by_fov = {}
+        for f in fovs:
+            vv = np.zeros((H,W),bool)
+            cols = (f["x_start"]+np.arange(f["win_w"]))%W
+            vv[np.ix_(np.arange(f["y_start"],f["y_start"]+f["win_h"]),cols)] = True
+            valid_by_fov[f["view_id"]] = vv
+        probs = sem_cache.image(q["image_id"]) if sem_cache is not None else {}
+        preds, union, log = guide_and_union(
+            raw_preds, gm, [valid_by_fov[p["fov_id"]] for p in raw_preds],
+            probs, q.get("ontology"), (H,W), mode=collab,
+            alpha=float(run_cfg.get("collab_params",{}).get("alpha",0.5)),
+            hard_thr=float(run_cfg.get("collab_params",{}).get("hard_thr") or 0.15))
+        all_logs.extend(log)
+        qid = q["query_id"]
+        if os.path.basename(qid) != qid:
+            raise ValueError("Invalid query identifier")
+        candidate_dir = os.path.join(a.out,"candidates")
+        os.makedirs(candidate_dir,exist_ok=True)
+        packed = np.packbits(np.stack(gm).astype(bool),axis=2) if gm else np.zeros((0,H,(W+7)//8),np.uint8)
+        candidate_path = os.path.join(candidate_dir,qid+".npz")
+        np.savez_compressed(candidate_path,candidate_ids=np.asarray([p["id"] for p in raw_preds],dtype=str),
+                            masks_packed=packed,shape=np.asarray([H,W]))
+        mask_store[qid] = union
+        r["candidate_mask_file"] = candidate_path
+        r["candidate_masks_count"] = len(gm)
+        all_preds.append({"query_id":qid,"image_id":q["image_id"],"mode":mode,
+                          "result":r,"predictions":preds,"mask_selection":"kept_candidate_union"})
     dt = time.perf_counter() - t_all
 
     # Persist per-query binary masks for text IoU evaluation (evaluate reads

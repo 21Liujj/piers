@@ -1,0 +1,798 @@
+{
+  "status": "passed_exact_text_outputs",
+  "rows": [
+    {
+      "image_id": "densepass_100",
+      "classes": 13,
+      "uncached": {
+        "mean_seconds": 6.568561643827707,
+        "peak_device_used_mib_sampled": 3611.0625,
+        "peak_allocated_mib": 2101.69677734375
+      },
+      "cached": {
+        "mean_seconds": 4.558847760781646,
+        "peak_device_used_mib_sampled": 3649.0625,
+        "peak_allocated_mib": 1935.55517578125
+      },
+      "latency_reduction_pct": 30.59595071220094
+    },
+    {
+      "image_id": "image00000",
+      "classes": 8,
+      "uncached": {
+        "mean_seconds": 9.0764878266491,
+        "peak_device_used_mib_sampled": 3611.0625,
+        "peak_allocated_mib": 2101.69677734375
+      },
+      "cached": {
+        "mean_seconds": 6.1199039244093,
+        "peak_device_used_mib_sampled": 3649.0625,
+        "peak_allocated_mib": 1935.59814453125
+      },
+      "latency_reduction_pct": 32.57409648651868
+    },
+    {
+      "image_id": "image00500",
+      "classes": 22,
+      "uncached": {
+        "mean_seconds": 12.81810710625723,
+        "peak_device_used_mib_sampled": 3611.0625,
+        "peak_allocated_mib": 2101.69677734375
+      },
+      "cached": {
+        "mean_seconds": 8.252537709195167,
+        "peak_device_used_mib_sampled": 3649.0625,
+        "peak_allocated_mib": 1934.6767578125
+      },
+      "latency_reduction_pct": 35.618124885486054
+    }
+  ],
+  "equivalence": [
+    {
+      "image_id": "densepass_100",
+      "trial": 0,
+      "same_shapes": true,
+      "max_box_score_quality_error": 0.0,
+      "packed_mask_changed_bytes": 0,
+      "query_words_equal": true
+    },
+    {
+      "image_id": "image00000",
+      "trial": 1,
+      "same_shapes": true,
+      "max_box_score_quality_error": 0.0,
+      "packed_mask_changed_bytes": 0,
+      "query_words_equal": true
+    },
+    {
+      "image_id": "image00500",
+      "trial": 2,
+      "same_shapes": true,
+      "max_box_score_quality_error": 0.0,
+      "packed_mask_changed_bytes": 0,
+      "query_words_equal": true
+    },
+    {
+      "image_id": "densepass_100",
+      "trial": 3,
+      "same_shapes": true,
+      "max_box_score_quality_error": 0.0,
+      "packed_mask_changed_bytes": 0,
+      "query_words_equal": true
+    },
+    {
+      "image_id": "image00000",
+      "trial": 4,
+      "same_shapes": true,
+      "max_box_score_quality_error": 0.0,
+      "packed_mask_changed_bytes": 0,
+      "query_words_equal": true
+    },
+    {
+      "image_id": "image00500",
+      "trial": 5,
+      "same_shapes": true,
+      "max_box_score_quality_error": 0.0,
+      "packed_mask_changed_bytes": 0,
+      "query_words_equal": true
+    },
+    {
+      "image_id": "densepass_100",
+      "trial": 6,
+      "same_shapes": true,
+      "max_box_score_quality_error": 0.0,
+      "packed_mask_changed_bytes": 0,
+      "query_words_equal": true
+    },
+    {
+      "image_id": "image00000",
+      "trial": 7,
+      "same_shapes": true,
+      "max_box_score_quality_error": 0.0,
+      "packed_mask_changed_bytes": 0,
+      "query_words_equal": true
+    },
+    {
+      "image_id": "image00500",
+      "trial": 8,
+      "same_shapes": true,
+      "max_box_score_quality_error": 0.0,
+      "packed_mask_changed_bytes": 0,
+      "query_words_equal": true
+    }
+  ],
+  "trials": [
+    {
+      "mode": "uncached",
+      "image_id": "densepass_100",
+      "classes": 13,
+      "trial": 0,
+      "warmup": true,
+      "seconds": 8.219527489505708,
+      "peak_device_used_mib_sampled": 3611.0625,
+      "memory_samples": 410,
+      "sampling_interval_s": 0.02,
+      "peak_allocated_mib": 2101.69677734375,
+      "text_execution": {
+        "detector_calls": 56,
+        "sam_image_encodes": 4,
+        "within_image_SAM_cache_hits": 52,
+        "candidates": 56,
+        "cross_image_candidate_cache_used": false
+      },
+      "cache_before": {
+        "enabled": false
+      },
+      "cache_after": {
+        "enabled": false
+      },
+      "mask_sha256": "690aa5210d075161f4f87f873e6826636327c62cb64e9d624f51fef652db59a8"
+    },
+    {
+      "mode": "uncached",
+      "image_id": "image00000",
+      "classes": 8,
+      "trial": 1,
+      "warmup": true,
+      "seconds": 9.396463074721396,
+      "peak_device_used_mib_sampled": 3611.0625,
+      "memory_samples": 468,
+      "sampling_interval_s": 0.02,
+      "peak_allocated_mib": 2101.69677734375,
+      "text_execution": {
+        "detector_calls": 72,
+        "sam_image_encodes": 4,
+        "within_image_SAM_cache_hits": 68,
+        "candidates": 114,
+        "cross_image_candidate_cache_used": false
+      },
+      "cache_before": {
+        "enabled": false
+      },
+      "cache_after": {
+        "enabled": false
+      },
+      "mask_sha256": "f1e066895df2446e35e5c3f6b70750c37857e5b24212e31cb5037329cc37b61c"
+    },
+    {
+      "mode": "uncached",
+      "image_id": "image00500",
+      "classes": 22,
+      "trial": 2,
+      "warmup": true,
+      "seconds": 12.722876343876123,
+      "peak_device_used_mib_sampled": 3611.0625,
+      "memory_samples": 632,
+      "sampling_interval_s": 0.02,
+      "peak_allocated_mib": 2101.69677734375,
+      "text_execution": {
+        "detector_calls": 100,
+        "sam_image_encodes": 4,
+        "within_image_SAM_cache_hits": 96,
+        "candidates": 143,
+        "cross_image_candidate_cache_used": false
+      },
+      "cache_before": {
+        "enabled": false
+      },
+      "cache_after": {
+        "enabled": false
+      },
+      "mask_sha256": "a3de3f0da83712bf33e5a59a816708a92d73d7b95db80f82f7f98f7d38dddf69"
+    },
+    {
+      "mode": "uncached",
+      "image_id": "densepass_100",
+      "classes": 13,
+      "trial": 3,
+      "warmup": false,
+      "seconds": 6.588567906990647,
+      "peak_device_used_mib_sampled": 3611.0625,
+      "memory_samples": 329,
+      "sampling_interval_s": 0.02,
+      "peak_allocated_mib": 2101.69677734375,
+      "text_execution": {
+        "detector_calls": 56,
+        "sam_image_encodes": 4,
+        "within_image_SAM_cache_hits": 52,
+        "candidates": 56,
+        "cross_image_candidate_cache_used": false
+      },
+      "cache_before": {
+        "enabled": false
+      },
+      "cache_after": {
+        "enabled": false
+      },
+      "mask_sha256": "690aa5210d075161f4f87f873e6826636327c62cb64e9d624f51fef652db59a8"
+    },
+    {
+      "mode": "uncached",
+      "image_id": "image00000",
+      "classes": 8,
+      "trial": 4,
+      "warmup": false,
+      "seconds": 8.962958202697337,
+      "peak_device_used_mib_sampled": 3611.0625,
+      "memory_samples": 447,
+      "sampling_interval_s": 0.02,
+      "peak_allocated_mib": 2101.69677734375,
+      "text_execution": {
+        "detector_calls": 72,
+        "sam_image_encodes": 4,
+        "within_image_SAM_cache_hits": 68,
+        "candidates": 114,
+        "cross_image_candidate_cache_used": false
+      },
+      "cache_before": {
+        "enabled": false
+      },
+      "cache_after": {
+        "enabled": false
+      },
+      "mask_sha256": "f1e066895df2446e35e5c3f6b70750c37857e5b24212e31cb5037329cc37b61c"
+    },
+    {
+      "mode": "uncached",
+      "image_id": "image00500",
+      "classes": 22,
+      "trial": 5,
+      "warmup": false,
+      "seconds": 12.706171370111406,
+      "peak_device_used_mib_sampled": 3611.0625,
+      "memory_samples": 631,
+      "sampling_interval_s": 0.02,
+      "peak_allocated_mib": 2101.69677734375,
+      "text_execution": {
+        "detector_calls": 100,
+        "sam_image_encodes": 4,
+        "within_image_SAM_cache_hits": 96,
+        "candidates": 143,
+        "cross_image_candidate_cache_used": false
+      },
+      "cache_before": {
+        "enabled": false
+      },
+      "cache_after": {
+        "enabled": false
+      },
+      "mask_sha256": "a3de3f0da83712bf33e5a59a816708a92d73d7b95db80f82f7f98f7d38dddf69"
+    },
+    {
+      "mode": "uncached",
+      "image_id": "densepass_100",
+      "classes": 13,
+      "trial": 6,
+      "warmup": false,
+      "seconds": 6.548555380664766,
+      "peak_device_used_mib_sampled": 3611.0625,
+      "memory_samples": 326,
+      "sampling_interval_s": 0.02,
+      "peak_allocated_mib": 2101.69677734375,
+      "text_execution": {
+        "detector_calls": 56,
+        "sam_image_encodes": 4,
+        "within_image_SAM_cache_hits": 52,
+        "candidates": 56,
+        "cross_image_candidate_cache_used": false
+      },
+      "cache_before": {
+        "enabled": false
+      },
+      "cache_after": {
+        "enabled": false
+      },
+      "mask_sha256": "690aa5210d075161f4f87f873e6826636327c62cb64e9d624f51fef652db59a8"
+    },
+    {
+      "mode": "uncached",
+      "image_id": "image00000",
+      "classes": 8,
+      "trial": 7,
+      "warmup": false,
+      "seconds": 9.190017450600863,
+      "peak_device_used_mib_sampled": 3611.0625,
+      "memory_samples": 457,
+      "sampling_interval_s": 0.02,
+      "peak_allocated_mib": 2101.69677734375,
+      "text_execution": {
+        "detector_calls": 72,
+        "sam_image_encodes": 4,
+        "within_image_SAM_cache_hits": 68,
+        "candidates": 114,
+        "cross_image_candidate_cache_used": false
+      },
+      "cache_before": {
+        "enabled": false
+      },
+      "cache_after": {
+        "enabled": false
+      },
+      "mask_sha256": "f1e066895df2446e35e5c3f6b70750c37857e5b24212e31cb5037329cc37b61c"
+    },
+    {
+      "mode": "uncached",
+      "image_id": "image00500",
+      "classes": 22,
+      "trial": 8,
+      "warmup": false,
+      "seconds": 12.930042842403054,
+      "peak_device_used_mib_sampled": 3611.0625,
+      "memory_samples": 643,
+      "sampling_interval_s": 0.02,
+      "peak_allocated_mib": 2101.69677734375,
+      "text_execution": {
+        "detector_calls": 100,
+        "sam_image_encodes": 4,
+        "within_image_SAM_cache_hits": 96,
+        "candidates": 143,
+        "cross_image_candidate_cache_used": false
+      },
+      "cache_before": {
+        "enabled": false
+      },
+      "cache_after": {
+        "enabled": false
+      },
+      "mask_sha256": "a3de3f0da83712bf33e5a59a816708a92d73d7b95db80f82f7f98f7d38dddf69"
+    },
+    {
+      "mode": "cached",
+      "image_id": "densepass_100",
+      "classes": 13,
+      "trial": 0,
+      "warmup": true,
+      "seconds": 4.6682734824717045,
+      "peak_device_used_mib_sampled": 3649.0625,
+      "memory_samples": 233,
+      "sampling_interval_s": 0.02,
+      "peak_allocated_mib": 2100.5361328125,
+      "text_execution": {
+        "detector_calls": 56,
+        "sam_image_encodes": 4,
+        "within_image_SAM_cache_hits": 52,
+        "candidates": 56,
+        "cross_image_candidate_cache_used": false
+      },
+      "cache_before": {
+        "vision_computes": 0,
+        "vision_hits": 0,
+        "text_computes": 0,
+        "text_hits": 0,
+        "projection_computes": 0,
+        "projection_hits": 0,
+        "requests": 0,
+        "visual_invalidations": 0,
+        "text_entries": 0,
+        "visual_entries": 0,
+        "multimodal_encoder_outputs_cached": false,
+        "query_words_or_thresholds_changed": false
+      },
+      "cache_after": {
+        "vision_computes": 4,
+        "vision_hits": 52,
+        "text_computes": 14,
+        "text_hits": 42,
+        "projection_computes": 16,
+        "projection_hits": 208,
+        "requests": 56,
+        "visual_invalidations": 4,
+        "text_entries": 14,
+        "visual_entries": 5,
+        "multimodal_encoder_outputs_cached": false,
+        "query_words_or_thresholds_changed": false
+      },
+      "mask_sha256": "690aa5210d075161f4f87f873e6826636327c62cb64e9d624f51fef652db59a8"
+    },
+    {
+      "mode": "cached",
+      "image_id": "image00000",
+      "classes": 8,
+      "trial": 1,
+      "warmup": true,
+      "seconds": 6.1791475815698504,
+      "peak_device_used_mib_sampled": 3649.0625,
+      "memory_samples": 308,
+      "sampling_interval_s": 0.02,
+      "peak_allocated_mib": 2037.23291015625,
+      "text_execution": {
+        "detector_calls": 72,
+        "sam_image_encodes": 4,
+        "within_image_SAM_cache_hits": 68,
+        "candidates": 114,
+        "cross_image_candidate_cache_used": false
+      },
+      "cache_before": {
+        "vision_computes": 4,
+        "vision_hits": 52,
+        "text_computes": 14,
+        "text_hits": 42,
+        "projection_computes": 16,
+        "projection_hits": 208,
+        "requests": 56,
+        "visual_invalidations": 4,
+        "text_entries": 14,
+        "visual_entries": 5,
+        "multimodal_encoder_outputs_cached": false,
+        "query_words_or_thresholds_changed": false
+      },
+      "cache_after": {
+        "vision_computes": 8,
+        "vision_hits": 120,
+        "text_computes": 18,
+        "text_hits": 110,
+        "projection_computes": 32,
+        "projection_hits": 480,
+        "requests": 128,
+        "visual_invalidations": 8,
+        "text_entries": 18,
+        "visual_entries": 5,
+        "multimodal_encoder_outputs_cached": false,
+        "query_words_or_thresholds_changed": false
+      },
+      "mask_sha256": "f1e066895df2446e35e5c3f6b70750c37857e5b24212e31cb5037329cc37b61c"
+    },
+    {
+      "mode": "cached",
+      "image_id": "image00500",
+      "classes": 22,
+      "trial": 2,
+      "warmup": true,
+      "seconds": 8.403487110510468,
+      "peak_device_used_mib_sampled": 3649.0625,
+      "memory_samples": 419,
+      "sampling_interval_s": 0.02,
+      "peak_allocated_mib": 2037.87939453125,
+      "text_execution": {
+        "detector_calls": 100,
+        "sam_image_encodes": 4,
+        "within_image_SAM_cache_hits": 96,
+        "candidates": 143,
+        "cross_image_candidate_cache_used": false
+      },
+      "cache_before": {
+        "vision_computes": 8,
+        "vision_hits": 120,
+        "text_computes": 18,
+        "text_hits": 110,
+        "projection_computes": 32,
+        "projection_hits": 480,
+        "requests": 128,
+        "visual_invalidations": 8,
+        "text_entries": 18,
+        "visual_entries": 5,
+        "multimodal_encoder_outputs_cached": false,
+        "query_words_or_thresholds_changed": false
+      },
+      "cache_after": {
+        "vision_computes": 12,
+        "vision_hits": 216,
+        "text_computes": 29,
+        "text_hits": 199,
+        "projection_computes": 48,
+        "projection_hits": 864,
+        "requests": 228,
+        "visual_invalidations": 12,
+        "text_entries": 29,
+        "visual_entries": 5,
+        "multimodal_encoder_outputs_cached": false,
+        "query_words_or_thresholds_changed": false
+      },
+      "mask_sha256": "a3de3f0da83712bf33e5a59a816708a92d73d7b95db80f82f7f98f7d38dddf69"
+    },
+    {
+      "mode": "cached",
+      "image_id": "densepass_100",
+      "classes": 13,
+      "trial": 3,
+      "warmup": false,
+      "seconds": 4.570089812390506,
+      "peak_device_used_mib_sampled": 3649.0625,
+      "memory_samples": 229,
+      "sampling_interval_s": 0.02,
+      "peak_allocated_mib": 1935.55517578125,
+      "text_execution": {
+        "detector_calls": 56,
+        "sam_image_encodes": 4,
+        "within_image_SAM_cache_hits": 52,
+        "candidates": 56,
+        "cross_image_candidate_cache_used": false
+      },
+      "cache_before": {
+        "vision_computes": 12,
+        "vision_hits": 216,
+        "text_computes": 29,
+        "text_hits": 199,
+        "projection_computes": 48,
+        "projection_hits": 864,
+        "requests": 228,
+        "visual_invalidations": 12,
+        "text_entries": 29,
+        "visual_entries": 5,
+        "multimodal_encoder_outputs_cached": false,
+        "query_words_or_thresholds_changed": false
+      },
+      "cache_after": {
+        "vision_computes": 16,
+        "vision_hits": 268,
+        "text_computes": 29,
+        "text_hits": 255,
+        "projection_computes": 64,
+        "projection_hits": 1072,
+        "requests": 284,
+        "visual_invalidations": 16,
+        "text_entries": 29,
+        "visual_entries": 5,
+        "multimodal_encoder_outputs_cached": false,
+        "query_words_or_thresholds_changed": false
+      },
+      "mask_sha256": "690aa5210d075161f4f87f873e6826636327c62cb64e9d624f51fef652db59a8"
+    },
+    {
+      "mode": "cached",
+      "image_id": "image00000",
+      "classes": 8,
+      "trial": 4,
+      "warmup": false,
+      "seconds": 6.139157620258629,
+      "peak_device_used_mib_sampled": 3649.0625,
+      "memory_samples": 306,
+      "sampling_interval_s": 0.02,
+      "peak_allocated_mib": 1935.59814453125,
+      "text_execution": {
+        "detector_calls": 72,
+        "sam_image_encodes": 4,
+        "within_image_SAM_cache_hits": 68,
+        "candidates": 114,
+        "cross_image_candidate_cache_used": false
+      },
+      "cache_before": {
+        "vision_computes": 16,
+        "vision_hits": 268,
+        "text_computes": 29,
+        "text_hits": 255,
+        "projection_computes": 64,
+        "projection_hits": 1072,
+        "requests": 284,
+        "visual_invalidations": 16,
+        "text_entries": 29,
+        "visual_entries": 5,
+        "multimodal_encoder_outputs_cached": false,
+        "query_words_or_thresholds_changed": false
+      },
+      "cache_after": {
+        "vision_computes": 20,
+        "vision_hits": 336,
+        "text_computes": 29,
+        "text_hits": 327,
+        "projection_computes": 80,
+        "projection_hits": 1344,
+        "requests": 356,
+        "visual_invalidations": 20,
+        "text_entries": 29,
+        "visual_entries": 5,
+        "multimodal_encoder_outputs_cached": false,
+        "query_words_or_thresholds_changed": false
+      },
+      "mask_sha256": "f1e066895df2446e35e5c3f6b70750c37857e5b24212e31cb5037329cc37b61c"
+    },
+    {
+      "mode": "cached",
+      "image_id": "image00500",
+      "classes": 22,
+      "trial": 5,
+      "warmup": false,
+      "seconds": 8.269916765391827,
+      "peak_device_used_mib_sampled": 3649.0625,
+      "memory_samples": 412,
+      "sampling_interval_s": 0.02,
+      "peak_allocated_mib": 1934.6767578125,
+      "text_execution": {
+        "detector_calls": 100,
+        "sam_image_encodes": 4,
+        "within_image_SAM_cache_hits": 96,
+        "candidates": 143,
+        "cross_image_candidate_cache_used": false
+      },
+      "cache_before": {
+        "vision_computes": 20,
+        "vision_hits": 336,
+        "text_computes": 29,
+        "text_hits": 327,
+        "projection_computes": 80,
+        "projection_hits": 1344,
+        "requests": 356,
+        "visual_invalidations": 20,
+        "text_entries": 29,
+        "visual_entries": 5,
+        "multimodal_encoder_outputs_cached": false,
+        "query_words_or_thresholds_changed": false
+      },
+      "cache_after": {
+        "vision_computes": 24,
+        "vision_hits": 432,
+        "text_computes": 29,
+        "text_hits": 427,
+        "projection_computes": 96,
+        "projection_hits": 1728,
+        "requests": 456,
+        "visual_invalidations": 24,
+        "text_entries": 29,
+        "visual_entries": 5,
+        "multimodal_encoder_outputs_cached": false,
+        "query_words_or_thresholds_changed": false
+      },
+      "mask_sha256": "a3de3f0da83712bf33e5a59a816708a92d73d7b95db80f82f7f98f7d38dddf69"
+    },
+    {
+      "mode": "cached",
+      "image_id": "densepass_100",
+      "classes": 13,
+      "trial": 6,
+      "warmup": false,
+      "seconds": 4.547605709172785,
+      "peak_device_used_mib_sampled": 3649.0625,
+      "memory_samples": 228,
+      "sampling_interval_s": 0.02,
+      "peak_allocated_mib": 1931.806640625,
+      "text_execution": {
+        "detector_calls": 56,
+        "sam_image_encodes": 4,
+        "within_image_SAM_cache_hits": 52,
+        "candidates": 56,
+        "cross_image_candidate_cache_used": false
+      },
+      "cache_before": {
+        "vision_computes": 24,
+        "vision_hits": 432,
+        "text_computes": 29,
+        "text_hits": 427,
+        "projection_computes": 96,
+        "projection_hits": 1728,
+        "requests": 456,
+        "visual_invalidations": 24,
+        "text_entries": 29,
+        "visual_entries": 5,
+        "multimodal_encoder_outputs_cached": false,
+        "query_words_or_thresholds_changed": false
+      },
+      "cache_after": {
+        "vision_computes": 28,
+        "vision_hits": 484,
+        "text_computes": 29,
+        "text_hits": 483,
+        "projection_computes": 112,
+        "projection_hits": 1936,
+        "requests": 512,
+        "visual_invalidations": 28,
+        "text_entries": 29,
+        "visual_entries": 5,
+        "multimodal_encoder_outputs_cached": false,
+        "query_words_or_thresholds_changed": false
+      },
+      "mask_sha256": "690aa5210d075161f4f87f873e6826636327c62cb64e9d624f51fef652db59a8"
+    },
+    {
+      "mode": "cached",
+      "image_id": "image00000",
+      "classes": 8,
+      "trial": 7,
+      "warmup": false,
+      "seconds": 6.100650228559971,
+      "peak_device_used_mib_sampled": 3649.0625,
+      "memory_samples": 304,
+      "sampling_interval_s": 0.02,
+      "peak_allocated_mib": 1931.806640625,
+      "text_execution": {
+        "detector_calls": 72,
+        "sam_image_encodes": 4,
+        "within_image_SAM_cache_hits": 68,
+        "candidates": 114,
+        "cross_image_candidate_cache_used": false
+      },
+      "cache_before": {
+        "vision_computes": 28,
+        "vision_hits": 484,
+        "text_computes": 29,
+        "text_hits": 483,
+        "projection_computes": 112,
+        "projection_hits": 1936,
+        "requests": 512,
+        "visual_invalidations": 28,
+        "text_entries": 29,
+        "visual_entries": 5,
+        "multimodal_encoder_outputs_cached": false,
+        "query_words_or_thresholds_changed": false
+      },
+      "cache_after": {
+        "vision_computes": 32,
+        "vision_hits": 552,
+        "text_computes": 29,
+        "text_hits": 555,
+        "projection_computes": 128,
+        "projection_hits": 2208,
+        "requests": 584,
+        "visual_invalidations": 32,
+        "text_entries": 29,
+        "visual_entries": 5,
+        "multimodal_encoder_outputs_cached": false,
+        "query_words_or_thresholds_changed": false
+      },
+      "mask_sha256": "f1e066895df2446e35e5c3f6b70750c37857e5b24212e31cb5037329cc37b61c"
+    },
+    {
+      "mode": "cached",
+      "image_id": "image00500",
+      "classes": 22,
+      "trial": 8,
+      "warmup": false,
+      "seconds": 8.235158652998507,
+      "peak_device_used_mib_sampled": 3649.0625,
+      "memory_samples": 411,
+      "sampling_interval_s": 0.02,
+      "peak_allocated_mib": 1931.806640625,
+      "text_execution": {
+        "detector_calls": 100,
+        "sam_image_encodes": 4,
+        "within_image_SAM_cache_hits": 96,
+        "candidates": 143,
+        "cross_image_candidate_cache_used": false
+      },
+      "cache_before": {
+        "vision_computes": 32,
+        "vision_hits": 552,
+        "text_computes": 29,
+        "text_hits": 555,
+        "projection_computes": 128,
+        "projection_hits": 2208,
+        "requests": 584,
+        "visual_invalidations": 32,
+        "text_entries": 29,
+        "visual_entries": 5,
+        "multimodal_encoder_outputs_cached": false,
+        "query_words_or_thresholds_changed": false
+      },
+      "cache_after": {
+        "vision_computes": 36,
+        "vision_hits": 648,
+        "text_computes": 29,
+        "text_hits": 655,
+        "projection_computes": 144,
+        "projection_hits": 2592,
+        "requests": 684,
+        "visual_invalidations": 36,
+        "text_entries": 29,
+        "visual_entries": 5,
+        "multimodal_encoder_outputs_cached": false,
+        "query_words_or_thresholds_changed": false
+      },
+      "mask_sha256": "a3de3f0da83712bf33e5a59a816708a92d73d7b95db80f82f7f98f7d38dddf69"
+    }
+  ],
+  "scope": "Text branch on RTX6000D; original per-query words/thresholds preserved; visual/text prefusion caches only",
+  "limitations": [
+    "3 fixed images,2 measured repeats per mode; descriptive only",
+    "No Jetson speed claim",
+    "No whole-system latency claim from this component benchmark"
+  ]
+}

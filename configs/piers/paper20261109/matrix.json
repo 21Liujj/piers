@@ -1,0 +1,26 @@
+{
+  "release": "v0.3-paper-20261109",
+  "primary_variant": "full",
+  "variants": {
+    "original": {"i1": false, "memory": "dense", "budget": 0},
+    "i1": {"i1": true, "memory": "dense", "budget": 0},
+    "i2": {"i1": false, "memory": "i2", "budget": 0},
+    "i3": {"i1": false, "memory": "dense", "budget": 2},
+    "i1_i2": {"i1": true, "memory": "i2", "budget": 0},
+    "i1_i3": {"i1": true, "memory": "dense", "budget": 2},
+    "i2_i3": {"i1": false, "memory": "i2", "budget": 2},
+    "full": {"i1": true, "memory": "i2", "budget": 2},
+    "full_cached": {"i1": true, "memory": "i2", "budget": 2, "text_feature_cache": true, "status": "experimental exact-prefusion-cache candidate; not a frozen-paper main row"},
+    "i2_512": {"i1": false, "memory": "i2", "budget": 0, "memory_config": {"budget": 512, "keep_ratio": 0.015625}},
+    "i2_2048": {"i1": false, "memory": "i2", "budget": 0, "memory_config": {"budget": 2048, "keep_ratio": 0.0625}},
+    "i2_uniform": {"i1": false, "memory": "i2", "budget": 0, "memory_config": {"mode": "uniform"}},
+    "i2_uncertainty_only": {"i1": false, "memory": "i2", "budget": 0, "memory_config": {"mode": "uncertainty_topk"}},
+    "i3_fixed": {"i1": false, "memory": "i2", "budget": 2, "strategy": "fixed"},
+    "i3_uniform": {"i1": false, "memory": "i2", "budget": 2, "strategy": "uniform"},
+    "i3_B1": {"i1": false, "memory": "i2", "budget": 1}
+  },
+  "factorial": ["original", "i1", "i2", "i3", "i1_i2", "i1_i3", "i2_i3", "full"],
+  "memory_controls": ["original", "i2_uniform", "i2_uncertainty_only", "i2_512", "i2", "i2_2048"],
+  "seam_controls": ["i2", "i3_B1", "i3_fixed", "i3_uniform", "i2_i3"],
+  "scope": "All ablations are preregistered for DensePASS13 development validation. Defaults remain frozen; no best-on-test retuning. Native target main tables compare original/full only."
+}

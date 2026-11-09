@@ -1,355 +1,105 @@
-# Reproducing the paper results
+# Outdoor reproduction — v0.3-paper-20261109
 
-This repository is self-contained: cloning it on a fresh machine gives you the
-code, the configs, the result ledgers and the trained checkpoints needed to
-reproduce every number reported in the paper.
+This is the active guide for the frozen complete-v3 outdoor results. It replaces the earlier run-directory-dependent instructions. A clone contains code, source calibrators, exact sample manifests and pixel-count ledgers. The three large inference weights are downloaded from the matching GitHub Release with SHA256 verification. Dataset images/labels must be obtained separately under their original terms; they are not included in Git.
 
-```
+## 1. Clone and environment
+
+```bash
 git clone https://github.com/21Liujj/piers.git
 cd piers
+git checkout v0.3-paper-20261109
+python3.12 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements-paper-20261109.txt
+pip install -e . --no-deps
+python scripts/paper/reproduce.py fetch-assets
+python scripts/paper/reproduce.py verify-ledgers
 ```
 
-Everything below is what the experiments actually ran with. Where a value came
-from the machine where the experiments were executed, it is recorded here and
-in `results/`.
+The recorded host is Linux x86_64, Python3.12.16, PyTorch2.8.0+cu128, torchvision0.23.0+cu128, transformers4.57.6, RTX6000D. `requirements-paper-20261109.txt` pins the directly used packages from that host; transitive dependencies are resolved by pip. No clean reinstallation of that entire environment is claimed by the GPU smoke check. Jetson needs its platform-specific PyTorch stack; this file is not a Jetson installer. New hardware/library versions can introduce floating-point differences and different timings.
 
----
+Both semantic and grounded SAM2 sources are vendored. Do not install another `sam2` into this environment. The launcher uses separate processes because those two vendor namespaces are incompatible in one interpreter. Inference runs offline after assets are ready. `fetch-assets` includes the already converted, verified HF DINO checkpoint; do not reconvert it. All files/sizes/SHA256 values are recorded in `assets/paper20261109/weights.json`.
 
-## 0. TL;DR
+## 2. Dataset layout and exact inputs
+
+Set roots, or place the data under the repository's default `data/` and `data_extra/`:
 
 ```bash
-git clone https://github.com/21Liujj/piers.git && cd piers
-pip install -r requirements.txt
-
-# 1. point the repo at your data / weights
-cp configs/piers/paths.example.yaml configs/piers/paths.yaml
-$EDITOR configs/piers/paths.yaml
-
-# 2. sanity-check that the shipped result ledgers match the shipped code
-python scripts/piers/verify_result_fingerprints.py
-
-# 3. check the suite configs are coherent
-python scripts/piers/check_suite_configs.py
-
-# 4. run the CPU acceptance tests
-pytest tests -q
+export PIERS_DATA_ROOT=/your/data
+export PIERS_DATA_EXTRA_ROOT=/your/data_extra
+# Optional external weight directory; use the same root when fetching:
+# export PIERS_WEIGHTS_ROOT=/your/weights
+# python scripts/paper/reproduce.py fetch-assets
 ```
 
-Step 2 is the important one: it proves that the code snapshot stored in
-`results/I1_densepass/source_snapshot/` is byte-for-byte the code that produced
-the numbers in `results/I1_densepass/`.
+Expected examples, relative to the chosen roots:
 
----
-
-## 1. What is in this repository
-
-| Path | Contents |
-|---|---|
-| `src/piers_ljj/` | The framework: contracts, geometry, collaboration, memory, seam, text, evaluation, worker entry point |
-| `configs/piers/` | Suite configs and query manifests. Paths are `${PIERS_*}` placeholders, never absolute |
-| `experiments/I1_densepass/code/` | The exact scripts that produced the Innovation-1 numbers |
-| `experiments/top_level_scripts/` | Cross-dataset evaluation drivers (`m_eval_*.py`) and shell runners |
-| `results/I1_densepass/` | Innovation-1 result ledgers, protocol record, environment freeze, source fingerprints |
-| `results/I1_collab/` | Collaboration experiment ledgers (`reports/`, `reports_gate/`) |
-| `results/E0/` | Baseline (OmniSAM-S) evaluation output |
-| `results/I2_I3/` | Innovation-2 / Innovation-3 run records |
-| `docs/piers/` | Architecture, data protocol, GPU runbooks, per-innovation status |
-| `third_party/effective_omnisam/` | Vendored inherited engine (PanoSMB / SMR / MemoryBank / MTC / DynamicSCM) |
-
-### The three innovations and where their evidence lives
-
-| Innovation | Code | Results | Status |
-|---|---|---|---|
-| **I1** — reliable text↔semantic cooperation | `src/piers_ljj/collaboration/` | `results/I1_densepass/`, `results/I1_collab/` | Frozen inference release; see `docs/piers/INNOVATION1_STATUS.json` |
-| **I2** — class-aware sparse memory | `src/piers_ljj/memory/`, `configs/piers/innovation2_final.json` | `docs/piers/innov2_results.md`, `results/I2_I3/` | DensePASS100 frozen; cross-domain partially blocked (see ledger) |
-| **I3** — adaptive seam budgeting | `src/piers_ljj/seam/` | `results/I2_I3/` | Candidate; `configs/piers/innovation3_candidate.json` |
-
----
-
-## 2. Environment
-
-Recorded on the experiment machine in
-`results/I1_densepass/environment_runtime.txt` and
-`results/I1_densepass/environment_pip_freeze.txt`:
-
-```
-python 3.12.16
-torch 2.8.0+cu128
-cuda 12.8
-gpu NVIDIA RTX 6000D (85 GB)
+```text
+data/DensePASS/leftImg8bit/val/100_.png
+data/DensePASS/gtFine/val/100_labelTrainIds.png
+data/WildPASS/leftImg8bit/val/cs/1.png
+data/WildPASS/gtFine/val/cs/1.png
+data/SynPASS/img/cloud/val/MAP_6_point10/000000.jpg
+data/SynPASS/semantic/cloud/val/MAP_6_point10/000000_trainID.png
+data_extra/WildPASS13/images/1.png    # accepted equivalent WildPASS RGB source
 ```
 
-Create the environment:
+The complete filename lists and GT/canonical-pixel hashes are in `configs/piers/paper20261109/datasets/*_samples.json`: DensePASS100, WildPASS500, SynPASS1690. If your official distribution has a different directory layout, organize copies/symlinks to these paths. The prepare step fails if the actual decoded input pixels, geometry or label bytes differ. It permits different RGB file encodings only if canonical pixels are identical. Images become2048x400 RGB with PIL BICUBIC; native-size predictions are scored against the original labels. GT files are not modified. Ground truth is available to preparation/scoring only; inference workers reject GT file access.
+
+WildPASS uses8 native valid classes. SynPASS raw0 is void, leaving22 valid classes. The13-class SynPASS experiment is a separate13-category inference run, followed by the recorded GT mapping in the scorer: RoadLine/Road merge, nonshared categories are ignored. It is not the22-class result with a new denominator. DensePASS uses the recorded standard19-to13 mapping. No new manual labels or target-domain training are required.
+
+## 3. Paired full-dataset inference
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate          # Windows: .venv\Scripts\activate
-pip install -r requirements-core.txt
-pip install -r requirements-grounded.txt   # only needed for T0/T1/T2 text suites
-pip install -r requirements-omni.txt       # only needed for the dense/memory suites
+python scripts/paper/reproduce.py prepare --task densepass13 --out runs/inputs_dense13
+python scripts/paper/reproduce.py prepare --task wildpass8 --out runs/inputs_wild8
+python scripts/paper/reproduce.py prepare --task synpass22 --out runs/inputs_syn22
+python scripts/paper/reproduce.py prepare --task synpass13 --out runs/inputs_syn13
+
+python scripts/paper/reproduce.py run --prepared runs/inputs_dense13 --out runs/paired_dense13 --variants original,full --workers-per-variant 3 --text-workers 2 --max-gpu-workers 8
+python scripts/paper/reproduce.py run --prepared runs/inputs_wild8 --out runs/paired_wild8 --variants original,full --workers-per-variant 3 --text-workers 2 --max-gpu-workers 8
+python scripts/paper/reproduce.py run --prepared runs/inputs_syn22 --out runs/paired_syn22 --variants original,full --workers-per-variant 3 --text-workers 2 --max-gpu-workers 8
+python scripts/paper/reproduce.py run --prepared runs/inputs_syn13 --out runs/paired_syn13 --variants original,full --workers-per-variant 3 --text-workers 2 --max-gpu-workers 8
 ```
 
-`requirements.txt` is the union of all three.
+Each command parallelizes its workers on one idle GPU and scores after all predictions finish. Run task commands sequentially; they refuse to start over unrelated GPU work. Eight workers are a starting point for the recorded85GB GPU; lower worker counts on smaller cards. Always use fresh output directories. Accuracy can reuse a completed matching text-evidence directory with `--text-cache /path/to/text`; this is not an end-to-end latency measurement. Input hashes, category names, frozen checkpoint hash, memory audit and GT-access status are recorded per prediction. `results/summary.json`, confusion arrays and per-image histograms are produced per run.
 
-`SAM 2` and `Grounding-DINO` are **vendored, not pip-installed**:
-`third_party/effective_omnisam/` (SAM2) and `third_party/grounded_sam2/`
-(Grounding-DINO). Do not `pip install` them — the vendored copies are the ones
-the results were produced with.
+For a quick installation check, prepare one sample with `--limit 1` and run original/full with one worker each and one text worker. A small smoke test does not reproduce the complete dataset aggregate.
 
-> **Note on `upstream_versions.json`** — it records the audited upstream
-> commits of Effective-Omnisam and Grounded-SAM-2. Verify them on checkout;
-> do not silently fall back to upstream `main`.
+The inference API receives image, geometry and requested category names. Dataset identities and GT mapping are used by preparation/scoring. The original baseline has a13-class head: requested novel classes have zero source support and can produce explicit abstentions. Full-v3 uses text masks to add their channels. This is an inherited source-head restriction, not proof of arbitrary out-of-domain inability. Frozen weights mean no target training; source LoRA was trained before transfer. Source I1 calibrators are supplied as three small NPZ models under `assets/paper20261109/calibrators`.
 
----
+## 4. Innovation controls and historical evidence
 
-## 3. External assets you must supply
-
-These are **not** in the repository (weights and images are too large). The
-repository stores their checksums and the expected layout instead.
-
-### 3.1 Model weights
-
-Expected under `$PIERS_WEIGHTS_ROOT` (default `/root/autodl-tmp/weights`):
-
-| File | SHA256 | Notes |
-|---|---|---|
-| `sam2.1_hiera_small.pt` | `6d1aa6f30de5c92224f8172114de081d104bbd23dd9dc5c58996f0cad5dc4d38` | SAM 2.1 small backbone |
-| `grounding-dino-tiny-hf/` | directory of files, checksums in `results/I1_densepass/weights_checksums.txt` | **converted** HF format — run `scripts/piers/convert_grounding_ckpt.py` once on the raw download |
-
-The baseline OmniSAM-S checkpoint (`omnisam_s.pth`, 177 MB) is the initial
-checkpoint for every training run. It is distributed through the upstream
-Effective-Omnisam / OmniSAM project rather than through this repository.
-**Its expected checksum and the exact download instructions are recorded in
-`results/I1_densepass/weights_checksums.txt`.**
-
-Verify what you have:
+`configs/piers/paper20261109/matrix.json` registers the original, I1, I2, I3 and combined variants, plus memory/seam controls. For example:
 
 ```bash
-sha256sum $PIERS_WEIGHTS_ROOT/sam2.1_hiera_small.pt
+python scripts/paper/reproduce.py run --prepared runs/inputs_dense13 --out runs/dense_components --variants original,i2,i2_i3,i1_i3,full --workers-per-variant 2 --text-workers 2 --max-gpu-workers 8
 ```
 
-### 3.2 Trained checkpoints (Innovation 1)
+These controls are registered for DensePASS development validation. The release contains the completed matched original/I2/I2+I3/full accuracy data and the complete-system I2-on/off control. Not every registered factorial/control variant has a completed new measurement. See `docs/piers/PAPER_RELEASE_STATUS_20261109.md`; a runnable variant is not an experimental result. The historical18-row memory selection matrix and original calibrator bytes were unavailable; do not describe them as newly reconstructed. Older results/source snapshots remain historical and have their own protocols.
 
-The trained checkpoints used for the reported numbers are published as a
-**GitHub Release**, so you do not need to retrain to reproduce the numbers:
+The active memory budget is1024, inherited from the frozen November6 configuration. The defense-stage2048 configuration is a different historical budget. Default1024 is not reselected on the target datasets. I2 reduces attention inputs32768->1024 while retaining dense stored history. Its matched component timing improves locally; the full-system I2 toggle shows only about0.56% mean latency reduction and no device-memory saving. The current full pipeline is slower than the original baseline.
+
+## 5. Efficiency measurements
+
+For serial real-text timing, use the recorded plans. First prepare all relevant tasks above, then materialize a plan with local paths:
 
 ```bash
-gh release download v0.2-paper-repro --repo 21Liujj/piers --dir ./ckpt
+python scripts/paper/benchmark.py --prepared runs/inputs_dense13 --plan results/paper20261109/densepass_efficiency_protocol.json --out runs/bench_dense
+python scripts/paper/benchmark.py --prepared runs/inputs_wild8 runs/inputs_syn22 runs/inputs_syn13 --plan results/paper20261109/native_efficiency_protocol.json --out runs/bench_targets
 ```
 
-| Asset | SHA256 | Role |
-|---|---|---|
-| `allhard_runs_R0_seed1234_final.pth` | `ff79b0b0f766dbe7ad695bd56535d11cade9b12f608ce0ddb13778ba49f9a1d3` | I1 main arm, seed 1234 |
-| `allhard_runs_R1_seed1234_final.pth` | `07fdc14b7bf072edc78c402fd11e940d28a7e3dd73dcd3ff7f5f4c973b6a7232` | I1 main arm, seed 4321 |
-| `dense_controls_R0_seed1234_final.pth` | `40159d944c8925cd1c61ce4f8929cbde1fdbda761d0c41fb3bdfe27fec8f5625` | Dense-memory control |
+The benchmark loads resident models, runs genuine DINO/SAM2 for every full-model request, excludes weight-loading time, includes image loading, IPC and output writing, and samples whole-device memory on an otherwise idle GPU. It refuses concurrent GPU inference. Frozen plans use3 images x2 measured repeats per task, with warmups; these are descriptive small-sample measurements. Hardware timing is not expected to equal archived seconds bit-for-bit.
 
-Verify a download with:
+`full_cached` is an optional experimental prefusion feature cache. It preserves separate class queries and recomputes the text-conditioned multimodal encoder/decoder. The current evidence is only3 fixed images and2 measured repeats per image on RTX6000D, with exactly matching text outputs; text time fell31–36%. No full-system or Jetson acceleration claim has been established. The frozen main `full` variant keeps this option off.
+
+## 6. Verification and boundaries
 
 ```bash
-python scripts/piers/verify_release_asset.py
+python scripts/paper/reproduce.py verify-ledgers
+pytest tests/piers/test_full_model_contract.py tests/piers/test_open_vocab_competition.py tests/piers/test_requested_literal_queries.py tests/piers/test_prefusion_feature_cache.py -q
 ```
 
-Place them as:
+Integer ledgers reconstruct all four main accuracy rows exactly, including per-class metrics and abstention misses. New inference has been checked in an isolated checkout against the existing frozen predictions as recorded in `results/paper20261109/release_validation.json`; refer to the listed sample counts rather than assuming every dataset was re-run during packaging. Source calibrator rebuilding and old model-training runs are not rerun by the commands above. The v0.2 trained checkpoints are historical and are not the checkpoint used in this frozen main table.
 
-```
-ckpt/allhard_runs/R0_seed1234/training/final.pth
-ckpt/allhard_runs/R1_seed1234/training/final.pth
-ckpt/dense_controls/trained/R0_seed1234/training/final.pth
-```
-
-What is inside these checkpoints (and which tensors training actually changed)
-is documented in [`results/CHECKPOINTS.md`](results/CHECKPOINTS.md).
-
-### 3.3 Datasets
-
-Expected layout (recorded from the experiment machine in
-`results/I1_densepass/weights_checksums.txt`):
-
-```
-$PIERS_DATA_ROOT/
-├── DensePASS/
-│   ├── leftImg8bit/val/     # 100 ERP images  (100_.png ... )
-│   └── gtFine/val/          # labelTrainIds
-├── WildPASS/
-│   ├── leftImg8bit/
-│   └── gtFine/
-├── SynPASS/
-│   ├── img/
-│   └── semantic/
-└── Cityscapes/
-    ├── leftImg8bit/
-    └── gtFine/
-
-$PIERS_DATA_EXTRA_ROOT/
-├── WildPASS13/
-│   ├── images/        (500)
-│   ├── labels_raw/    (500)
-│   ├── labels_trainid/(500)
-│   └── lists/
-└── Stanford360_SPAN8/
-    ├── images/        (1040)
-    ├── labels_raw/    (1040)
-    ├── labels_trainid/(1040)
-    └── lists/
-```
-
-The query manifests in `configs/piers/` reference these files by their
-`${PIERS_DATA_ROOT}` / `${PIERS_DATA_EXTRA_ROOT}` placeholders, so no edit is
-needed as long as `paths.yaml` is correct.
-
----
-
-## 4. Configuring paths
-
-Committed configs and manifests never contain absolute paths. They use
-placeholders that are expanded at load time by `src/piers_ljj/paths.py`.
-
-```bash
-cp configs/piers/paths.example.yaml configs/piers/paths.yaml
-```
-
-`configs/piers/paths.yaml` is git-ignored, so your local paths never leak into
-the repository.
-
-Precedence: explicit overrides → environment variables → `paths.yaml` →
-`paths.example.yaml`.
-
-Either edit `paths.yaml`:
-
-```yaml
-data_root: "/data/piers"
-data_extra_root: "/data/piers-extra"
-weights_root: "/data/piers-weights"
-```
-
-or use environment variables:
-
-```bash
-export PIERS_DATA_ROOT=/data/piers
-export PIERS_DATA_EXTRA_ROOT=/data/piers-extra
-export PIERS_WEIGHTS_ROOT=/data/piers-weights
-```
-
-Check that nothing machine-specific leaked into the configs:
-
-```bash
-python scripts/piers/parametrize_paths.py --check
-```
-
----
-
-## 5. Reproducing each result
-
-### 5.1 Innovation 1 — reliable text↔semantic cooperation
-
-Main ledger: `results/I1_densepass/`. Protocol: `results/I1_densepass/protocol.json`.
-Headline numbers: `docs/piers/INNOVATION1_STATUS.json`.
-
-```bash
-cd experiments/I1_densepass/code
-
-# inference with the published checkpoints
-python -u semantic_worker.py --manifest ../../results/I1_densepass/val100.json \
-    --out "$PIERS_RUNS_ROOT/i1/val_cache" --ckpt <ckpt>/allhard_runs/R0_seed1234/training/final.pth
-
-# scoring
-python score_trained.py ...
-```
-
-Key protocol facts (from `protocol.json`):
-
-- train split: 160 images, 4 per city × 40 cities, seed `20261107`, **no GT used**
-- validation: DensePASS100 — **development set**, not an independent test
-- GT: original `*_labelTrainIds.png`, 19 trainIds mapped to the project 13,
-  `255` preserved
-- seed: `1234`; final seeds `1234` and `4321`
-- optimizer: AdamW, lr `2e-06`, batch size 1, 160 iterations, 9 updates/image
-- memory policy: sealed Innovation-2 class-aware uncertainty-1024, both arms
-- frozen pseudo threshold `0.85`
-
-### 5.2 Innovation 2 — class-aware sparse memory
-
-Main ledger: `docs/piers/innov2_results.md`.
-Config: `configs/piers/innovation2_final.json`.
-
-| Variant | Memory | Tokens | mIoU |
-|---|---|---|---|
-| dense | baseline | 32768 | 60.46 |
-| **ca** | class-aware (rare-class preserving) | 2048 | 60.30 (−0.16) |
-| bg | boundary-preserving | 2048 | 60.27 (−0.19) |
-| pool / topk / uniform / cams | ablations | 2048 | 60.07 / 59.83 / 59.80 / 59.75 |
-
-Same pipeline as the baseline (`sam2_s`, `num_maskmem=9`, sliding window
-1024 / stride 384 / 2 passes / 18 windows, `validation()`); the **only** variable
-is how memory is read.
-
-### 5.3 Innovation 3 — adaptive seam budgeting
-
-Config: `configs/piers/innovation3_candidate.json`. Run records in
-`results/I2_I3/`. This one is a **candidate**, not a frozen claim — keep the
-paper wording aligned with `docs/piers/innov2_results.md`.
-
-### 5.4 Cross-dataset evaluation
-
-```bash
-python experiments/top_level_scripts/m_eval_xdom.py        # WildPASS500 + SPAN260
-python experiments/top_level_scripts/m_eval_text.py        # text suite
-python experiments/top_level_scripts/m_eval_wildpass_native8.py
-```
-
-Two known blockers are recorded in `docs/piers/innov2_results.md` §5 and are
-**not** model failures:
-
-- XW500-dense: the manifest's flat `labels_trainid` maps void to road, so GT
-  is wrong and the number is voided.
-- SPAN8 (XS260): the 13-class checkpoint cannot be evaluated on an 8-class
-  dataset (`decoder 13 vs 8 mismatch`). Table 3 therefore excludes SPAN8.
-
----
-
-## 6. Verifying a reproduction
-
-| Check | Command | Expected |
-|---|---|---|
-| Code matches the results | `python scripts/piers/verify_result_fingerprints.py` | `14/14 files match` |
-| Code matches in a fresh clone | `python scripts/piers/verify_snapshot_in_git.py` | `14/14 files match` |
-| Release weights are intact | `python scripts/piers/verify_release_asset.py` | `3/3 release assets verified` |
-| Configs are machine-independent | `python scripts/piers/parametrize_paths.py --check` | `OK: all configs are machine-independent` |
-| Suite configs coherent | `python scripts/piers/check_suite_configs.py` | no errors |
-| Unit tests | `pytest tests -q` | all pass |
-
-The fingerprint check is the strong one: it compares the SHA256 of every source
-file against the hashes recorded at experiment time, so it proves the code in
-this repository is the code that produced the published numbers.
-
----
-
-## 7. Reproducibility caveats — read this before writing claims
-
-These are stated in the ledgers themselves and must be reflected in the paper:
-
-1. **All DensePASS100 metrics are development-set results.** The existing
-   DensePASS100 split was used for model selection. No fresh independent
-   target test split is claimed.
-2. **Training gain is not established.** The released Innovation-1 numbers are
-   an *inference-time* release over the frozen baseline checkpoint.
-3. **The 400-image supplement is an existing appendix only** and is not a
-   condition for the generalization claim.
-4. **Cross-domain (SPAN8 / XW500) is blocked for data and architecture
-   reasons**, not model quality — see §5.4.
-5. **Single-machine, single-GPU** results. Reproducing the exact numbers
-   assumes the same GPU, torch build and seeds.
-
----
-
-## 8. Server-side helper
-
-On the GPU machine used for the experiments the working copy lives in
-`/root/autodl-tmp/piers-main` and the conda env in `/root/autodl-tmp/envs/piers`.
-`runs/I1-densepass-20261107_121457/` holds the full run tree including the
-per-image prediction caches (not committed — they are large), while
-`results/` in this repository holds the compact, versionable ledgers.
-
-`results/I1_densepass/source_snapshot/` is the code snapshot captured during
-the run; `results/I1_densepass/source_snapshot.tar.gz` is the same content
-as archived on the machine.
+Report DensePASS as development validation, retain v1/v2 failed or partial results, and disclose that target diagnostics informed v3 repairs. Target-domain fine-tuning/UDA, indoor adaptation and a complete-system speed advantage remain future work. This release archives the current evidence without claiming those unfinished goals.

@@ -1,0 +1,58 @@
+{
+  "release": "v0.3-paper-20261109",
+  "repository": "21Liujj/piers",
+  "assets": [
+    {
+      "name": "omnisam_s.pth",
+      "bytes": 186309842,
+      "sha256": "ec0c607a6247651cb8c5eb04e3c15a7ae4b067655c4ca6cb5b6ff9d80adaba85",
+      "url": "https://github.com/21Liujj/piers/releases/download/v0.3-paper-20261109/omnisam_s.pth"
+    },
+    {
+      "name": "sam2.1_hiera_small.pt",
+      "bytes": 184416285,
+      "sha256": "6d1aa6f30de5c92224f8172114de081d104bbd23dd9dc5c58996f0cad5dc4d38",
+      "url": "https://github.com/21Liujj/piers/releases/download/v0.3-paper-20261109/sam2.1_hiera_small.pt"
+    },
+    {
+      "name": "grounding-dino-tiny-hf-verified.zip",
+      "bytes": 692886461,
+      "sha256": "e05307b13593206f2d89df3f92339b7da65175b825a0aac31a2d48db2686cf7f",
+      "url": "https://github.com/21Liujj/piers/releases/download/v0.3-paper-20261109/grounding-dino-tiny-hf-verified.zip"
+    }
+  ],
+  "grounding_dino_files": {
+    "added_tokens.json": {
+      "sha256": "909e96cb32d92ce728a01bc99850cbba26196d74115c17ebeb019275412588f2",
+      "bytes": 82
+    },
+    "config.json": {
+      "sha256": "eec82c5ab66e16df12a9a212e68ac011779927c2536cf9078658e35d85f0c67a",
+      "bytes": 1644
+    },
+    "conversion_report.json": {
+      "sha256": "a70adeb7639527abd3d4c8fca8623afa26355f03ccb6243225c41f1d71e77dd5",
+      "bytes": 171
+    },
+    "preprocessor_config.json": {
+      "sha256": "8454179ba95e2ad22947835aad7b45862a601fc0055ab88bf1ee70892d3aea60",
+      "bytes": 457
+    },
+    "pytorch_model.bin": {
+      "sha256": "46a92be64618d2fbf64da39e644dd9b9fa0fe6ec176caaf7162dd7b87db4bf99",
+      "bytes": 691938698
+    },
+    "tokenizer.json": {
+      "sha256": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66",
+      "bytes": 711396
+    },
+    "tokenizer_config.json": {
+      "sha256": "d40ab645b68211910b9170d22433d43186a6ec8ee6fd10ba170524b25bf4fb56",
+      "bytes": 1237
+    },
+    "vocab.txt": {
+      "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3",
+      "bytes": 231508
+    }
+  }
+}

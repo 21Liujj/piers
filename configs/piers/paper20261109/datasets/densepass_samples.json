@@ -1,0 +1,1905 @@
+{
+  "dataset": "DensePASS",
+  "samples": [
+    {
+      "image_id": "densepass_100",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/100_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/100_labelTrainIds.png"
+      },
+      "source_sha256": "4360ed7c6f42119f9c3817f65d46865afce5461ef3762861eb59b9c2acc9715d",
+      "GT_sha256": "72a206482a67bcc22da12d10e6dedb998ab2dfae64cf4cbded04bb4a7bb0154f",
+      "canonical_pixel_sha256": "b00ca1e45eef3f40c2e09ce576617665f6d552afa216e6593e71c5dc7765a7dd",
+      "historical_canonical_png_sha256": "4360ed7c6f42119f9c3817f65d46865afce5461ef3762861eb59b9c2acc9715d",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_101",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/101_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/101_labelTrainIds.png"
+      },
+      "source_sha256": "638bef799aa4222f9f9a6bbaee39c39b39414ca62c17c366313064870683532b",
+      "GT_sha256": "7384814e0eca36c7b395d9f9cc0b9150e8577ac3ae53e707d8c45e3a19da8c17",
+      "canonical_pixel_sha256": "606e35a76bf84ba4e424699ba7a86e9d1541674cfea65ff60427f5f2e9f8513b",
+      "historical_canonical_png_sha256": "638bef799aa4222f9f9a6bbaee39c39b39414ca62c17c366313064870683532b",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_102",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/102_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/102_labelTrainIds.png"
+      },
+      "source_sha256": "b876777bfc4f92a744598d8805db8bd51799b65eafe8ad69cbe8f143d384df6c",
+      "GT_sha256": "e185852a4c3237904269182360c1991a561329d7569cb0c7b47d4738130d3073",
+      "canonical_pixel_sha256": "4f043554c7f5e2003ae186e94976e01214f35d412de15f7f2099aa7235eff888",
+      "historical_canonical_png_sha256": "b876777bfc4f92a744598d8805db8bd51799b65eafe8ad69cbe8f143d384df6c",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_103",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/103_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/103_labelTrainIds.png"
+      },
+      "source_sha256": "ccb8786830d082ba4d52bc51ce85c6ef1527440fb945d9c2c4d236a9b2353271",
+      "GT_sha256": "c062ccd8a78ec1807695062d8098c1b24573df1413c94088ebab2a2ecf8f00bc",
+      "canonical_pixel_sha256": "fcc274e77954ff4d923ec123a26c92a8237121deba12cbdf3b6b1914ff69e13d",
+      "historical_canonical_png_sha256": "ccb8786830d082ba4d52bc51ce85c6ef1527440fb945d9c2c4d236a9b2353271",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_104",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/104_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/104_labelTrainIds.png"
+      },
+      "source_sha256": "e962951242bd2870e4bf910fd9936e703954e96a24360de9b26d4bbdf75a22fc",
+      "GT_sha256": "dc4471559271eaedd36f0076f5fa2bad574f0e8adf2acf4571a7de9f3203f50a",
+      "canonical_pixel_sha256": "ef3206588cff2144a7e22b7b85f2aa8116103d9b60974a6a2d12bc20e505294b",
+      "historical_canonical_png_sha256": "e962951242bd2870e4bf910fd9936e703954e96a24360de9b26d4bbdf75a22fc",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_105",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/105_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/105_labelTrainIds.png"
+      },
+      "source_sha256": "a6d52300dccad292679c51196cb43a29f47660c1e7af090640233b4d6d12b5ba",
+      "GT_sha256": "4f352c97f4152e6a46d957d546298f37de61bd553b734b796135d8f8077d46ab",
+      "canonical_pixel_sha256": "da2c126f0df82340cc578d513c3b368657abf3fa341908ba2f9fccfd8bd2cf2f",
+      "historical_canonical_png_sha256": "a6d52300dccad292679c51196cb43a29f47660c1e7af090640233b4d6d12b5ba",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_106",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/106_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/106_labelTrainIds.png"
+      },
+      "source_sha256": "d15eb8e50505f6b7495e82f5ae6f1b22e36b18bce1abe7a9c211f33905bd159a",
+      "GT_sha256": "c9b6b82fce2da9d62e654371bc7eb0e3ccc745d1d770de75beb1d06a2cf81c57",
+      "canonical_pixel_sha256": "e9b08e8662730f2b26e8be9882feca30c13813e3f422146fb3b4ae43e529a6f9",
+      "historical_canonical_png_sha256": "d15eb8e50505f6b7495e82f5ae6f1b22e36b18bce1abe7a9c211f33905bd159a",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_107",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/107_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/107_labelTrainIds.png"
+      },
+      "source_sha256": "2b182b9635bfccdeffd7243228ff6d9d00465f27240d08c91ca6f5a2298c6a69",
+      "GT_sha256": "b036fc87080fba404e5d60f7c63a43a80706edae1067106a929c2dbcf44154d1",
+      "canonical_pixel_sha256": "04cbacce707208e6f690fbe4c2e86eb36d5a9fd1dfc79f7fe4d4a344777d0701",
+      "historical_canonical_png_sha256": "2b182b9635bfccdeffd7243228ff6d9d00465f27240d08c91ca6f5a2298c6a69",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_108",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/108_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/108_labelTrainIds.png"
+      },
+      "source_sha256": "2c44e331bdaf24fcd801eda78bb0b5b3626fa7913a06678b9ad684ce00fc3708",
+      "GT_sha256": "245f1864b96bccc2e70b7d8b2b7ea32db7fea5161d4973239400ed20b0b29d93",
+      "canonical_pixel_sha256": "27ecd8cb782eb984ef2c1a044bb0b78c29c3cb624d7fe3fdfd462039eb4eee98",
+      "historical_canonical_png_sha256": "2c44e331bdaf24fcd801eda78bb0b5b3626fa7913a06678b9ad684ce00fc3708",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_109",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/109_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/109_labelTrainIds.png"
+      },
+      "source_sha256": "8cadb8391c039433bbca842a96f4db5d062fc43beded0c3a1ee78f18df2ac933",
+      "GT_sha256": "89ade62b7802ab1cc2d7a304686d0b0f21fbb987ab86978c16f96d155f517708",
+      "canonical_pixel_sha256": "c819b178f104fb2a2c4a7c8cf951e9d6c85dcaea607426961671439b06a28fac",
+      "historical_canonical_png_sha256": "8cadb8391c039433bbca842a96f4db5d062fc43beded0c3a1ee78f18df2ac933",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_10",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/10_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/10_labelTrainIds.png"
+      },
+      "source_sha256": "bb3338a1262ffa63cd2d765553d7211d95c9c9937cbf099ecaf604996802eb02",
+      "GT_sha256": "3dea7cfd80e0cd5bc0e5203d9b6f29112e8090c17da3d52fd072369599c096ae",
+      "canonical_pixel_sha256": "601d2cbce9bc4f3816ede159ffdf1a8f890a8fd20f9b79a35e0c83a62401ff79",
+      "historical_canonical_png_sha256": "bb3338a1262ffa63cd2d765553d7211d95c9c9937cbf099ecaf604996802eb02",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_110",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/110_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/110_labelTrainIds.png"
+      },
+      "source_sha256": "81010e96483f63cdadee20359863a06825caf6c299e61882a5882ea7cba8d341",
+      "GT_sha256": "b8de8a9cc21297630f9dd1c980d5c65bfd2605d3cd0e8ed05b1b88cc4629f412",
+      "canonical_pixel_sha256": "2baf69fd6584f375c785d255ea5aa0068a167359aa1aaa663688fc13c23ca820",
+      "historical_canonical_png_sha256": "81010e96483f63cdadee20359863a06825caf6c299e61882a5882ea7cba8d341",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_111",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/111_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/111_labelTrainIds.png"
+      },
+      "source_sha256": "7b79c76a5f0ddaaa407acb79f742a96bb6f8309a77faa585f93c9f674161e732",
+      "GT_sha256": "be400386e539e1ba460031fd147c48fd1ebc533f51341a8c61e9fe0f20efe5b1",
+      "canonical_pixel_sha256": "603916affc0e723f2a40a459fe7ce96fbe5f4b41b49a0d38cf702a89df30605d",
+      "historical_canonical_png_sha256": "7b79c76a5f0ddaaa407acb79f742a96bb6f8309a77faa585f93c9f674161e732",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_112",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/112_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/112_labelTrainIds.png"
+      },
+      "source_sha256": "0dfff7167beb73d7ee4d9b2dde9850ffb4e90b90575186270bb761915c9cb738",
+      "GT_sha256": "f4630ebef99aa1a06df78c8495f55a75db3b6e453fbd8756d6dcbf78240d5ad0",
+      "canonical_pixel_sha256": "327d12a02d572595c33b8b210e9a55b3358d5b2f9d10071ecd8fe37d3ab04d4a",
+      "historical_canonical_png_sha256": "0dfff7167beb73d7ee4d9b2dde9850ffb4e90b90575186270bb761915c9cb738",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_113",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/113_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/113_labelTrainIds.png"
+      },
+      "source_sha256": "57af7fa7b24757b04c2929105a6ef0295401ebecd8c839914bb84c7d6a325585",
+      "GT_sha256": "e1f3cb627e35a9a47cc09984c61fe101e5efab45d97742d98afb741a77d49ef4",
+      "canonical_pixel_sha256": "9b88c6021abebfbe26740e6866a5f8424d01316c65c86a1f82980c55264bccfc",
+      "historical_canonical_png_sha256": "57af7fa7b24757b04c2929105a6ef0295401ebecd8c839914bb84c7d6a325585",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_114",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/114_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/114_labelTrainIds.png"
+      },
+      "source_sha256": "336e8851cac13f7fdd44115579d2aa9d31f097be039d7f4d81e83ab5fbdab1e9",
+      "GT_sha256": "02b4918c5b82166def760cde8f5d82faf280220a19c5fe509da77e732b0006bb",
+      "canonical_pixel_sha256": "93573a11bdb82582eb55425fd8851cd98c25d235e8144820dd5742700112dc10",
+      "historical_canonical_png_sha256": "336e8851cac13f7fdd44115579d2aa9d31f097be039d7f4d81e83ab5fbdab1e9",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_115",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/115_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/115_labelTrainIds.png"
+      },
+      "source_sha256": "a087b491255fc218c08691d448ccc87b95e4486c95ba98f792daf9420ad4f3b5",
+      "GT_sha256": "dca80ad3f39345090d5d2b20edfb4e28bebf9035b4f7568e3acf0e875e2f6c36",
+      "canonical_pixel_sha256": "9d45e9aa59c31ffa2cb79d1eef9302ac89b7b0939059f54b9f5953aa4e309601",
+      "historical_canonical_png_sha256": "a087b491255fc218c08691d448ccc87b95e4486c95ba98f792daf9420ad4f3b5",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_116",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/116_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/116_labelTrainIds.png"
+      },
+      "source_sha256": "5b58c5b3f84ad3cc332fc4382f7ee96b9eeb5477178d5f764ba258ae080e3117",
+      "GT_sha256": "57a56fa2d46796b4ee6b39f29f1d2a3f25d50abd3d186b8bbe30f0b3b3993908",
+      "canonical_pixel_sha256": "0da13a08e3ba439e47ab0826a683fc6e75bec5ff4174dc40fb40329aef233920",
+      "historical_canonical_png_sha256": "5b58c5b3f84ad3cc332fc4382f7ee96b9eeb5477178d5f764ba258ae080e3117",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_117",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/117_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/117_labelTrainIds.png"
+      },
+      "source_sha256": "32f76036534b350b7f4efd91be02ac6f4ca3310f0a29f427c84b882b273571f9",
+      "GT_sha256": "7138a92737a44b8df39f2545ff2dabdeebe5d54203178ed87abbe1beafb6c416",
+      "canonical_pixel_sha256": "c8145fb94aa65ff1b2b255555861fac870785310cd74eeaf385ea4fb4eaf26a1",
+      "historical_canonical_png_sha256": "32f76036534b350b7f4efd91be02ac6f4ca3310f0a29f427c84b882b273571f9",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_118",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/118_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/118_labelTrainIds.png"
+      },
+      "source_sha256": "f754723534441e2770645cc14c1b68e80af5080eda48d8811e9df2a3f107174e",
+      "GT_sha256": "71a027dc944e140306134e71e378edf3aa49fef493aae0e1c2957811b063fe21",
+      "canonical_pixel_sha256": "2b4a28af4cfebd671e47083d93106725ac032425b3ead49f3640bb592df0697e",
+      "historical_canonical_png_sha256": "f754723534441e2770645cc14c1b68e80af5080eda48d8811e9df2a3f107174e",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_119",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/119_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/119_labelTrainIds.png"
+      },
+      "source_sha256": "28972616599e97c3939220ce59c4c78760a572cc62b3e9f73fdd3f60c6f9e10b",
+      "GT_sha256": "13d6431caa6ea5f02901290e5d6ca830cc68f3fe428930cced086cba66fcaf05",
+      "canonical_pixel_sha256": "b976ba97f69d3979f48492a8471e62cbef6c977f21f29ee351caa68e30331a38",
+      "historical_canonical_png_sha256": "28972616599e97c3939220ce59c4c78760a572cc62b3e9f73fdd3f60c6f9e10b",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_11",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/11_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/11_labelTrainIds.png"
+      },
+      "source_sha256": "a8e034ba2165034ffce0a8eeb0d126e23ec7e7978b5a30c5e8f78b9214c5048c",
+      "GT_sha256": "a52534871d170d3fabe1607031a0abae8de0b8b63a489d54e36ca7c65f6c6106",
+      "canonical_pixel_sha256": "5e63b970085acf24156699fe22486faaec62e7c067fe16de9d36bebbb4b1cfde",
+      "historical_canonical_png_sha256": "a8e034ba2165034ffce0a8eeb0d126e23ec7e7978b5a30c5e8f78b9214c5048c",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_120",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/120_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/120_labelTrainIds.png"
+      },
+      "source_sha256": "154c2d775b6c48b819950e7c66e9fe56a32bbfd297012a6513d8c5cfbd19ea64",
+      "GT_sha256": "222f6bc5b8cdd67458b904f6930a35f3ab6402b708ff1bac8d893210266e4698",
+      "canonical_pixel_sha256": "8782471c1a96191f4eb44002d4c858ff8444c3960c75a83f901bb0c5526c059e",
+      "historical_canonical_png_sha256": "154c2d775b6c48b819950e7c66e9fe56a32bbfd297012a6513d8c5cfbd19ea64",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_121",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/121_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/121_labelTrainIds.png"
+      },
+      "source_sha256": "568b5e5106a6778b98ed3ba1edb669b3170e000a3620db9a4c0035012cff731e",
+      "GT_sha256": "397a290b0ebd1e44a118e4d81baff1bdca8cd53e8ae78d7f5245f9ac13407230",
+      "canonical_pixel_sha256": "81a2021c5dcc867cebc37301c3ee1caf2064f913db21c95dc3d95c4c826529b9",
+      "historical_canonical_png_sha256": "568b5e5106a6778b98ed3ba1edb669b3170e000a3620db9a4c0035012cff731e",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_122",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/122_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/122_labelTrainIds.png"
+      },
+      "source_sha256": "d2b5399cb2da2ff68c3d063540e7126be5c9f38f5a2957f852c74e5e9d44cc4c",
+      "GT_sha256": "edf48153eca46256eb64ada784116927e7b1d164063c3fb3fcb49cecbdbf53fd",
+      "canonical_pixel_sha256": "cd59c9e9f28769a8a7f333feac3de3a7d87a29154b05856b738d393a36cba4c8",
+      "historical_canonical_png_sha256": "d2b5399cb2da2ff68c3d063540e7126be5c9f38f5a2957f852c74e5e9d44cc4c",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_123",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/123_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/123_labelTrainIds.png"
+      },
+      "source_sha256": "5bfc62d0482828111b30e32cef43a92e13e1087d9786ef2032e14d85e9bf39e5",
+      "GT_sha256": "1dc687d21cde95e0a2dd835dd2d2dc7fae9635ac162d7a6141185cfe74f1821d",
+      "canonical_pixel_sha256": "6638094d96589d91dc03cb024f2cfcb559f803259d1962794b54280e882e93a0",
+      "historical_canonical_png_sha256": "5bfc62d0482828111b30e32cef43a92e13e1087d9786ef2032e14d85e9bf39e5",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_124",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/124_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/124_labelTrainIds.png"
+      },
+      "source_sha256": "456e1141fe4a7e62db5d6300b269c8e4959c50eb2476a6b02d17156473eef470",
+      "GT_sha256": "806fb3739599be1b4dfb10d736bfa40fb913efc755346e7c50f9f6f95fde3876",
+      "canonical_pixel_sha256": "6c3e113547ba16d1493cb52300a42511b6bc2c0ee9ba4258f2287fb00c7627af",
+      "historical_canonical_png_sha256": "456e1141fe4a7e62db5d6300b269c8e4959c50eb2476a6b02d17156473eef470",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_125",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/125_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/125_labelTrainIds.png"
+      },
+      "source_sha256": "d4893eff5c63fdbfe26822f88bea4b0ef9919eaa787ea8e7d31e0f7fa13535c6",
+      "GT_sha256": "4eaf698bcc7aeb0be6842be55358b567fa7aa7407d82bed12ef00d1d5b87f412",
+      "canonical_pixel_sha256": "d41cedc509e71e08cf43e3179a9dc61c0dcea2cd41c99bbab0057bdf66de4b75",
+      "historical_canonical_png_sha256": "d4893eff5c63fdbfe26822f88bea4b0ef9919eaa787ea8e7d31e0f7fa13535c6",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_126",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/126_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/126_labelTrainIds.png"
+      },
+      "source_sha256": "c1c63812214c1b771702c529c2df12c5675e9725456a522c25158c4db939d29c",
+      "GT_sha256": "203733224a3d1add1180d51e0adb565fa5ac014471df5e9a2c93de429106d8fb",
+      "canonical_pixel_sha256": "ab57e29f37d4a969ac844ef51046a7e15743d107c92d84cdf311483a70eae336",
+      "historical_canonical_png_sha256": "c1c63812214c1b771702c529c2df12c5675e9725456a522c25158c4db939d29c",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_12",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/12_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/12_labelTrainIds.png"
+      },
+      "source_sha256": "c19a3a511e617164a58183096e0c81cd796d49c3b7f1d0b8f604fcee9f2b06e0",
+      "GT_sha256": "5f0ff21109352f378885414dfeeeb8c63ee6f7a20229c1c752ab8714241e5c51",
+      "canonical_pixel_sha256": "6e7933da09654c79ee5289744066512cab82873fa206d96d12ad0334c33550cd",
+      "historical_canonical_png_sha256": "c19a3a511e617164a58183096e0c81cd796d49c3b7f1d0b8f604fcee9f2b06e0",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_147",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/147_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/147_labelTrainIds.png"
+      },
+      "source_sha256": "1ad9443be190ba83318d0247571ceb7d5de9155972765479e6525593e1ef2673",
+      "GT_sha256": "0ea9488a8e54fa31fa82384bbc16d1c45a98c5eb3c796fdb10055d8ee147bed8",
+      "canonical_pixel_sha256": "401a7fe61d56a1f294bd9d186943553b43c00ee4df802b03c0f62d6862ec630c",
+      "historical_canonical_png_sha256": "1ad9443be190ba83318d0247571ceb7d5de9155972765479e6525593e1ef2673",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_155",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/155_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/155_labelTrainIds.png"
+      },
+      "source_sha256": "8bb2c58a86a6e8d2c28ad7f3555530fa2118aa28d1de7b564ac040818fc05c36",
+      "GT_sha256": "539c631f15398299477c5e7dc8a2d9b15c3b6c5365488f6ee229947c3dece855",
+      "canonical_pixel_sha256": "abbcf2455b1797b851fdd6f109d2c6a546d6861979863c3d7ad337414ce34f08",
+      "historical_canonical_png_sha256": "8bb2c58a86a6e8d2c28ad7f3555530fa2118aa28d1de7b564ac040818fc05c36",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_161",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/161_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/161_labelTrainIds.png"
+      },
+      "source_sha256": "c55c5a28267f54401353f7c310453baa7228e0765c045caeab575b357e4029d6",
+      "GT_sha256": "4ac1b0d50b30dfc1bb953e6e760688ee5fa99d70baecb3c3eae94aac985edfb5",
+      "canonical_pixel_sha256": "3278305425e5ed021493ec266bf9d77b3600161d9ab20aa6b76590bdc7a0a0e3",
+      "historical_canonical_png_sha256": "c55c5a28267f54401353f7c310453baa7228e0765c045caeab575b357e4029d6",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_162",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/162_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/162_labelTrainIds.png"
+      },
+      "source_sha256": "c8a4b0333c0723ebe7943e097051add121bc4d3cd8066cfd3105d4b4917414ed",
+      "GT_sha256": "3a90cf341c23122291b7c996ef6eec54a2e6eed486c9b415267bfdf633311216",
+      "canonical_pixel_sha256": "8e403f76dea14a2ae8773e40162743a6750c859facdc3078f8d612e3ee531376",
+      "historical_canonical_png_sha256": "c8a4b0333c0723ebe7943e097051add121bc4d3cd8066cfd3105d4b4917414ed",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_163",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/163_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/163_labelTrainIds.png"
+      },
+      "source_sha256": "4bc4bea21f6699d22bc0f608c809c62290e1f85f49024d1be7cf909cc05a7104",
+      "GT_sha256": "3e6f84b9038a4ff9f7da6ca2649aca3b66b21c3c4d15e476a6acf7ea305ca7b9",
+      "canonical_pixel_sha256": "fd7c7b3588fbba2d065e640e25686958dc19f1a6231b155c05d5c98ad6d1520a",
+      "historical_canonical_png_sha256": "4bc4bea21f6699d22bc0f608c809c62290e1f85f49024d1be7cf909cc05a7104",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_170",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/170_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/170_labelTrainIds.png"
+      },
+      "source_sha256": "551ab4660a7331b772c10a338c984cec5ee14eede374c4aa896c0bc714386d02",
+      "GT_sha256": "57fea6afd55c0d1a6e45fbfca1afc57ea5fd9026c5f415965559ca29eab12f7f",
+      "canonical_pixel_sha256": "874e41f0cf5b1a4787aed74d27ee493d40ad264b542a0bf62dae2ce4f846ef56",
+      "historical_canonical_png_sha256": "551ab4660a7331b772c10a338c984cec5ee14eede374c4aa896c0bc714386d02",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_183",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/183_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/183_labelTrainIds.png"
+      },
+      "source_sha256": "4a5cebb3708e2a8fc56baa470f27e945e6bb6f10972d44a24ba4bd90f0e62892",
+      "GT_sha256": "b4b83991552d4b47d90a9cbd4ee72af9f0c6e1be1cfed7b26c87b550a75a250d",
+      "canonical_pixel_sha256": "60e3f271da93634a1613dc6603010adc020355cd1814a6bcd4d5ffd57e656f8d",
+      "historical_canonical_png_sha256": "4a5cebb3708e2a8fc56baa470f27e945e6bb6f10972d44a24ba4bd90f0e62892",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_188",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/188_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/188_labelTrainIds.png"
+      },
+      "source_sha256": "254c590fb2698b8b3ceebe7c9d06b629d4002cbf33b4523c170dd977e94582d5",
+      "GT_sha256": "89d095e483ebcb45b2ded4831aa7e93f62478cc67d1f9a0d2b5b4aea96abde6f",
+      "canonical_pixel_sha256": "94527d68cecd061dbc3f00040599088286dabae134192bd4f488a82023c17ad2",
+      "historical_canonical_png_sha256": "254c590fb2698b8b3ceebe7c9d06b629d4002cbf33b4523c170dd977e94582d5",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_196",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/196_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/196_labelTrainIds.png"
+      },
+      "source_sha256": "f80ef3d1700f7003d91c3850ff22f262b221ee0c138e156de54360d61e58afe8",
+      "GT_sha256": "69d5a5ec5a3a262c2e452a7d9b7f7eb6db2489051ddf333535cc0c8019ef5ed6",
+      "canonical_pixel_sha256": "3bfbb8b9fc9d8ca51b80702df24ec755d66b76adf54f62dc979b4ac6f40b06f3",
+      "historical_canonical_png_sha256": "f80ef3d1700f7003d91c3850ff22f262b221ee0c138e156de54360d61e58afe8",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_197",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/197_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/197_labelTrainIds.png"
+      },
+      "source_sha256": "d6f0bf0fea587f9e737205c7efd90c2da1a0e82a18ebaa86625203342f0be6a5",
+      "GT_sha256": "0291b9f51b7396d20bfa68016da5b174f0a508c65946bef2d9a7cda4b6b963f7",
+      "canonical_pixel_sha256": "dbb25d9e9d75bc20f1a69380616581fa777fc132ac454ab104a8c8a63d79073d",
+      "historical_canonical_png_sha256": "d6f0bf0fea587f9e737205c7efd90c2da1a0e82a18ebaa86625203342f0be6a5",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_1",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/1_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/1_labelTrainIds.png"
+      },
+      "source_sha256": "d90e5674a5cba45bcbfeea31cc06de910d6eab69decf0ba43dbbbaa043a44754",
+      "GT_sha256": "fb178ecfd014033f4a4effb76a4d0a96466b9d5182f5561ab1df98f7ed304b60",
+      "canonical_pixel_sha256": "0c60987fd6eef709ddca1a242f9009abedc78217ddaf206e56e69a37ee98ea22",
+      "historical_canonical_png_sha256": "d90e5674a5cba45bcbfeea31cc06de910d6eab69decf0ba43dbbbaa043a44754",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_201",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/201_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/201_labelTrainIds.png"
+      },
+      "source_sha256": "190cfd45ca8ac9c54f7cae175a9682893cd3193ea8fde49a9ba14b8bdc90e490",
+      "GT_sha256": "bdff249eac4debf9559b0a0ab934d0cb4cf8cd027d582db91b45202debff571b",
+      "canonical_pixel_sha256": "fed6c65cb19513c7af3d0eb80607dc3650ed9bd1e9d17d496bd1171bad3821cf",
+      "historical_canonical_png_sha256": "190cfd45ca8ac9c54f7cae175a9682893cd3193ea8fde49a9ba14b8bdc90e490",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_202",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/202_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/202_labelTrainIds.png"
+      },
+      "source_sha256": "e8053c23a8d94b8c2f484339dbd12cb8a3325cf69739c895cd5d81f80dc1a16f",
+      "GT_sha256": "03c29ca79b8b6034921775c458bc7f93792852e955995b16e5eb622bbd32c540",
+      "canonical_pixel_sha256": "d234df25fd52eca02970b96d1a15233f404ca8414657d385a1ae4cb7dfc218f5",
+      "historical_canonical_png_sha256": "e8053c23a8d94b8c2f484339dbd12cb8a3325cf69739c895cd5d81f80dc1a16f",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_204",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/204_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/204_labelTrainIds.png"
+      },
+      "source_sha256": "cbf2fe839422037426d895cc6edfb4c8bedd57ff11e1c5310ae6f23e7b55c616",
+      "GT_sha256": "b1e522d3824cc80afffae1af7e864d006f8267a86ec31b16a9a7ad601499430a",
+      "canonical_pixel_sha256": "52364e2c6289c69695ba9124b4193cfd37e65beb6a28ab79c6ee48051b6426fe",
+      "historical_canonical_png_sha256": "cbf2fe839422037426d895cc6edfb4c8bedd57ff11e1c5310ae6f23e7b55c616",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_210",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/210_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/210_labelTrainIds.png"
+      },
+      "source_sha256": "2cf8db58f2eac3fd42ae47537f861c96cfcb5b57be4c05e676e0f396308123cb",
+      "GT_sha256": "b222c5a3c75144a37142ce9fec379cb20bac6badb23b94fd66fdbeb45add991c",
+      "canonical_pixel_sha256": "d03b0591c6aa1fa8031700405872be7b28102e46c16635426116f075678d4c76",
+      "historical_canonical_png_sha256": "2cf8db58f2eac3fd42ae47537f861c96cfcb5b57be4c05e676e0f396308123cb",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_21",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/21_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/21_labelTrainIds.png"
+      },
+      "source_sha256": "4a103fecb14f91af7ce22c3c745eeade94bb4f850fd12f105b029dd6a2af69af",
+      "GT_sha256": "713f3b8b63fa226d8f986acb5b10eddd8bcf8a9e98cb76967e3cdee8681d4801",
+      "canonical_pixel_sha256": "1674c23188d5d805d4566e690ca7fcc0c99a533ed28bac56306435074a96eb36",
+      "historical_canonical_png_sha256": "4a103fecb14f91af7ce22c3c745eeade94bb4f850fd12f105b029dd6a2af69af",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_225",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/225_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/225_labelTrainIds.png"
+      },
+      "source_sha256": "12e2b7c55a67d3d6d8e74648ccfb45876ba9276e233e9e4d817b3acbae04702f",
+      "GT_sha256": "662938d637ac634b7fb0c863f0e6238dd9b589ce0817339d8195d18d8f667098",
+      "canonical_pixel_sha256": "1e5fa5c22e14a5ae65cfcaa7545b87b9f086c97a40ba14125ac80bcdcdede7fd",
+      "historical_canonical_png_sha256": "12e2b7c55a67d3d6d8e74648ccfb45876ba9276e233e9e4d817b3acbae04702f",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_226",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/226_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/226_labelTrainIds.png"
+      },
+      "source_sha256": "0718cad9516e41f63225b2d335176f5deff94f9efb0cdbc641908d17d906b694",
+      "GT_sha256": "84457c22f13aa87c17cf70ad3f7275cfdfe9981d9420882416ee99cc651efbc3",
+      "canonical_pixel_sha256": "8f9bd628b5428c88c5b56fae48531c22e12dab78bdb9b252acb7fefa5c5a7581",
+      "historical_canonical_png_sha256": "0718cad9516e41f63225b2d335176f5deff94f9efb0cdbc641908d17d906b694",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_228",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/228_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/228_labelTrainIds.png"
+      },
+      "source_sha256": "9b6b738d7b6154328c2f506e6051654b1ecfe7cdc8915691929ea0ec4f97d79d",
+      "GT_sha256": "2b034db1d133c3de3083943eca54ddbc5aea07bd5deb1229dff43e5693d81c9c",
+      "canonical_pixel_sha256": "abe0733eded568946735b46596d20f807c5603a3eaf8d9bdb26f05e9d08a5e82",
+      "historical_canonical_png_sha256": "9b6b738d7b6154328c2f506e6051654b1ecfe7cdc8915691929ea0ec4f97d79d",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_22",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/22_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/22_labelTrainIds.png"
+      },
+      "source_sha256": "9859e1422f3602fba7edea74b83e4f9de4d1ce097bb25979b683674e0e13d92d",
+      "GT_sha256": "cddf8ea131abe559eb6e95f8c21cdfa5ccc762d576720891ae01af08ab74ed81",
+      "canonical_pixel_sha256": "53411cbf973771460a099c501405da1e99c99e8a8f286ab2a6a3bfb0e3370fad",
+      "historical_canonical_png_sha256": "9859e1422f3602fba7edea74b83e4f9de4d1ce097bb25979b683674e0e13d92d",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_231",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/231_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/231_labelTrainIds.png"
+      },
+      "source_sha256": "3fcebc4a6ff9c1f3fada8eb849a647e1b33882b8c8b774551479b94154af8385",
+      "GT_sha256": "86774bc6cf966c0c6c2130c6516b48d0d154f1e4caa7eb57fb7185eaf51e9c37",
+      "canonical_pixel_sha256": "aa1d4653512b8e34584b1c2eff53651cd757502eaf703b3636f0e5518deed98d",
+      "historical_canonical_png_sha256": "3fcebc4a6ff9c1f3fada8eb849a647e1b33882b8c8b774551479b94154af8385",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_246",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/246_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/246_labelTrainIds.png"
+      },
+      "source_sha256": "a6339bf7412d6bb6bef9ac3dac85876d62ff73ddc91abdf184ab9f8c505ecbb0",
+      "GT_sha256": "73b423a2a759197b30a30b8101fcee0c086741e12119a5589d6233c12ef13c4d",
+      "canonical_pixel_sha256": "ac3486e2ac95379c6127cf437e8d580659e44a2caf0e382d0177e963fa8273d5",
+      "historical_canonical_png_sha256": "a6339bf7412d6bb6bef9ac3dac85876d62ff73ddc91abdf184ab9f8c505ecbb0",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_247",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/247_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/247_labelTrainIds.png"
+      },
+      "source_sha256": "629ab1f11317eba910ea3abb86bb715f0cdd44dea2dd492900f18197bdc34bef",
+      "GT_sha256": "8c77ee81616dbd1942716e1ea9b83b5c9d6fb1d4d96c6635fb665d5d36f41853",
+      "canonical_pixel_sha256": "e150a4e4b6dd2e34caa926beacc4c906f90280711a45ca33502759d818d8cd4f",
+      "historical_canonical_png_sha256": "629ab1f11317eba910ea3abb86bb715f0cdd44dea2dd492900f18197bdc34bef",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_24",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/24_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/24_labelTrainIds.png"
+      },
+      "source_sha256": "9bbc6ba57ec3669d7d1aa9baf5911a40e0230a97cccf9e029bdcb019890f5949",
+      "GT_sha256": "35178fe220c85bd91590ef8846a921e6c06bd415ed6b84fb424948b16ce4595d",
+      "canonical_pixel_sha256": "392d38699b075f687108f9e43658443720adf33789731971f5737cc3bf87a847",
+      "historical_canonical_png_sha256": "9bbc6ba57ec3669d7d1aa9baf5911a40e0230a97cccf9e029bdcb019890f5949",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_252",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/252_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/252_labelTrainIds.png"
+      },
+      "source_sha256": "9ba7f218bd2bb981411bc01cc2dc721850fef8be57dae8957e5c746c2b8a9330",
+      "GT_sha256": "a26f60966b44b7d21a119dc2a679f1cbb66e15246dc06789775663e2d2fb4736",
+      "canonical_pixel_sha256": "702a37d7891fe3af9b49011fe5b36aadc0aa9871b3cb99e665da6484ef45956c",
+      "historical_canonical_png_sha256": "9ba7f218bd2bb981411bc01cc2dc721850fef8be57dae8957e5c746c2b8a9330",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_258",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/258_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/258_labelTrainIds.png"
+      },
+      "source_sha256": "b9e3b8c66f5051eb65b9ecbbbee3c5c2e3e8e4021c51d8c99f936af9b27ee256",
+      "GT_sha256": "11b867313f663f99706139e98702d28ab6bab80b605084706102102c075172d8",
+      "canonical_pixel_sha256": "6580662bb3e86d744d6de29a44f20b26f633fb80e8b2598474cbda62c14c063e",
+      "historical_canonical_png_sha256": "b9e3b8c66f5051eb65b9ecbbbee3c5c2e3e8e4021c51d8c99f936af9b27ee256",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_263",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/263_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/263_labelTrainIds.png"
+      },
+      "source_sha256": "ddd4bc5d37955b6e34f8fd147b8723e2e819eb01683a22638b322e1e53a4a064",
+      "GT_sha256": "6f12d84ec02b62e5fb20ae19f552bedd5d13ccd118440296ba7e15c67cc7a532",
+      "canonical_pixel_sha256": "7da89f5dda3af8de12129323e6a02b7c66542d8dedb794d26f99bdf86dfce6af",
+      "historical_canonical_png_sha256": "ddd4bc5d37955b6e34f8fd147b8723e2e819eb01683a22638b322e1e53a4a064",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_265",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/265_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/265_labelTrainIds.png"
+      },
+      "source_sha256": "863c1e865b49a3835a6ea816974bb8e8114f95c37e5ff9e6fd36204b601aec4d",
+      "GT_sha256": "03f7ab621fb46bdaee0f4630e482f3a2db1d293c15c0978b1c5651fd7a8ffbb4",
+      "canonical_pixel_sha256": "09b07142d73f03a7a139b2a62bb445599e513323e0067c522b1650e8ae94866e",
+      "historical_canonical_png_sha256": "863c1e865b49a3835a6ea816974bb8e8114f95c37e5ff9e6fd36204b601aec4d",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_267",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/267_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/267_labelTrainIds.png"
+      },
+      "source_sha256": "bd37c5990118c282d44b43b78f3795904bd2f8914fcafaa920da62aef08ceba0",
+      "GT_sha256": "6052c17c08b68b35c62ab5ee8d4e7d4c5f4a98b139bfc8294c77a55e2854be7a",
+      "canonical_pixel_sha256": "273aba60a1aab432960400ae61d8b72ea1ceacdc1af460214d2aafd8cdd0ed05",
+      "historical_canonical_png_sha256": "bd37c5990118c282d44b43b78f3795904bd2f8914fcafaa920da62aef08ceba0",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_272",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/272_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/272_labelTrainIds.png"
+      },
+      "source_sha256": "709f147b245b96c8a8362ec3cdcb8ae3b3cb4a4dc96eadb7a277bc74f34d37b5",
+      "GT_sha256": "25f50faff7abfb36abbccc1cb629a26b085d01d94f42116f23e60d23d2434c29",
+      "canonical_pixel_sha256": "c1878388d17df19170b6c03ae03253c14c88fbc0de756e4b829d99e3b31e6917",
+      "historical_canonical_png_sha256": "709f147b245b96c8a8362ec3cdcb8ae3b3cb4a4dc96eadb7a277bc74f34d37b5",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_281",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/281_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/281_labelTrainIds.png"
+      },
+      "source_sha256": "c851547be5e9090b2636fcfb26b8f8f7220127e76e8c88a147b5d31b8bbe205e",
+      "GT_sha256": "63058c00cc6d2fa47b34f9362e3870bd9765db5bb638d2afc27e75222017bdd3",
+      "canonical_pixel_sha256": "01d68cc4088f0375655e396553352a8498ed453b3792c5dd25092dd0f46114ce",
+      "historical_canonical_png_sha256": "c851547be5e9090b2636fcfb26b8f8f7220127e76e8c88a147b5d31b8bbe205e",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_286",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/286_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/286_labelTrainIds.png"
+      },
+      "source_sha256": "b5b739513b1253e71afa9ad0a5dcca64b7bbf20d6e637de6a48d12451605d2ab",
+      "GT_sha256": "3f43254e3a77e78bb8bba250a4f23b5dd73d1bf1e984739eb2c84ff92453c3dc",
+      "canonical_pixel_sha256": "0630846bc15ef7e0594976da49f4351a0501a2300df881591911bcb2284c0163",
+      "historical_canonical_png_sha256": "b5b739513b1253e71afa9ad0a5dcca64b7bbf20d6e637de6a48d12451605d2ab",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_289",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/289_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/289_labelTrainIds.png"
+      },
+      "source_sha256": "2d2dbd68fc5c08f1ea7378fad9f8c0da84472e6860762a6bef7890242a016782",
+      "GT_sha256": "a63727840a01c8a4620dc124b7acff8b81699b0f4baa0d581e2277434410cbee",
+      "canonical_pixel_sha256": "4d6da38e972552e5dfacee85e7df499a8555c73badd829c37a58806e0cd153ec",
+      "historical_canonical_png_sha256": "2d2dbd68fc5c08f1ea7378fad9f8c0da84472e6860762a6bef7890242a016782",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_294",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/294_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/294_labelTrainIds.png"
+      },
+      "source_sha256": "62288072f66793e5d7c131c896d33958cd021cc22aa4d910e9ce26614da0efd7",
+      "GT_sha256": "5aed2df59d471ecb96333c59531af2999b796098f8e460d9f9b1482bcc5c19ba",
+      "canonical_pixel_sha256": "af9411ca7a194722332e1bf75d9f4abd82fd8cb845224a4a0a08566f107bfcf7",
+      "historical_canonical_png_sha256": "62288072f66793e5d7c131c896d33958cd021cc22aa4d910e9ce26614da0efd7",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_305",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/305_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/305_labelTrainIds.png"
+      },
+      "source_sha256": "cd703a3dfb478d3e03bf36f6bd4b2f1405e93355df30e0cab1daf3ed3e5c35fe",
+      "GT_sha256": "31b574a10d0be36b5be016e58f2ff25be5bad409498e6be4dad0cc12e33ce717",
+      "canonical_pixel_sha256": "8c484820baa983a763d1aeec16692d2bf4451ea0c5337f0a2db033a9e5570fb1",
+      "historical_canonical_png_sha256": "cd703a3dfb478d3e03bf36f6bd4b2f1405e93355df30e0cab1daf3ed3e5c35fe",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_307",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/307_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/307_labelTrainIds.png"
+      },
+      "source_sha256": "e9f59b9abdc4b7ce39643f8d63e96c204a5c2c892c93a02ceb1198eb282a921c",
+      "GT_sha256": "5f2fe233378fe025302d5ea51ec3b9e6155d278546cd04b87dab484e64f79b1f",
+      "canonical_pixel_sha256": "e1cbb7fce67da4db266bdf98f783991a5a20cd96ac98117703db07a714858f21",
+      "historical_canonical_png_sha256": "e9f59b9abdc4b7ce39643f8d63e96c204a5c2c892c93a02ceb1198eb282a921c",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_309",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/309_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/309_labelTrainIds.png"
+      },
+      "source_sha256": "93dcbf74c8658a6bd5b0d29115c5d2a036bac06af8f2736f54219879986dd171",
+      "GT_sha256": "5987d4ca23270453399dd735ef288a15ea93f40bdee5286e776d5e382791821b",
+      "canonical_pixel_sha256": "c69bd9a248635c3b8ae07bb0fa1714795c015072fb8f448319afdeda9a6954f2",
+      "historical_canonical_png_sha256": "93dcbf74c8658a6bd5b0d29115c5d2a036bac06af8f2736f54219879986dd171",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_319",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/319_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/319_labelTrainIds.png"
+      },
+      "source_sha256": "c5b4288de475dacf5c924f9a54b0df24116e52b7d45bc91c8247228220dc89da",
+      "GT_sha256": "3b20ca6b3f32ca60be20ddccae945ae0c020f3f73dc78a142eb34b0c794ab83b",
+      "canonical_pixel_sha256": "ab7d41711b4601aa099b1e005d555a777b388ce381fbbf92087137238ea1bf8a",
+      "historical_canonical_png_sha256": "c5b4288de475dacf5c924f9a54b0df24116e52b7d45bc91c8247228220dc89da",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_342",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/342_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/342_labelTrainIds.png"
+      },
+      "source_sha256": "3fca1b8bfad4f374af5dff53c7e18f85548b89e67620afe7b8b48e123228f3ef",
+      "GT_sha256": "36c6f019c1618b96aae70baa64c921f17ee691f103bf4ee8a70371c74f7d26bc",
+      "canonical_pixel_sha256": "0cdd6793df17945a22070967436143f55df02ee11c352850f7bc445116d10a4c",
+      "historical_canonical_png_sha256": "3fca1b8bfad4f374af5dff53c7e18f85548b89e67620afe7b8b48e123228f3ef",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_343",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/343_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/343_labelTrainIds.png"
+      },
+      "source_sha256": "ef0df1a527566800731a451418df30a94cebba11c9a9af577c330bd49d742f51",
+      "GT_sha256": "035f55816e67a13501f0fad6569576f39aeaa4856f28c835551cbbcb31411217",
+      "canonical_pixel_sha256": "de5491c8930b307493b00de8cbe6fad893d07222c8f10d7e17629bf65ded8f92",
+      "historical_canonical_png_sha256": "ef0df1a527566800731a451418df30a94cebba11c9a9af577c330bd49d742f51",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_344",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/344_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/344_labelTrainIds.png"
+      },
+      "source_sha256": "362f63c9aad3cb96f29e43a3d858e625ec3b6855aa68d05c1be892aa123fa577",
+      "GT_sha256": "e459e333bee51e920b482990fe3aaeefcd60b6f79eb1524da7dafe4dece020d8",
+      "canonical_pixel_sha256": "db721aea99fcdfad6a38623a6ddd65dc0cfc9b5a1f5a09f70257a7b680ee462d",
+      "historical_canonical_png_sha256": "362f63c9aad3cb96f29e43a3d858e625ec3b6855aa68d05c1be892aa123fa577",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_346",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/346_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/346_labelTrainIds.png"
+      },
+      "source_sha256": "d616f328aa94a5be8f882bab6d9ed950e56b11668e7dfa8a3d979df775187b11",
+      "GT_sha256": "07d05564668ac2e3a3b99491f24d6a24e529f2ff6ff3bf1fb321f36d026a3a3e",
+      "canonical_pixel_sha256": "3d3824362c555894a8e66116080ab97523ea74c92d65563f2a4cb0fb389fbfd2",
+      "historical_canonical_png_sha256": "d616f328aa94a5be8f882bab6d9ed950e56b11668e7dfa8a3d979df775187b11",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_361",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/361_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/361_labelTrainIds.png"
+      },
+      "source_sha256": "4c46a8f8b4afa960a1ff7c6886a31c4db483100bc9e6d5a2d2c7e30be4b88e28",
+      "GT_sha256": "9331996bfc47020fa2ea4c706c00184a82e0616fd000c1fd4e1260da840dd6e4",
+      "canonical_pixel_sha256": "ab5d42a4c2573e34051e3e25d1272049099c6f44756774cdd77b8c911d8e875f",
+      "historical_canonical_png_sha256": "4c46a8f8b4afa960a1ff7c6886a31c4db483100bc9e6d5a2d2c7e30be4b88e28",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_363",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/363_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/363_labelTrainIds.png"
+      },
+      "source_sha256": "031d319ae491ce301fceade41e383b77425428c5697a2ffd0073fce67eeca01e",
+      "GT_sha256": "3e16efaaf87f84211ea817532f7212f73e5a73db24da52e3e10eca6a78d372b3",
+      "canonical_pixel_sha256": "1d006cf0669247a860190ad6cdcfcde439ca7444b056e8bd128e682f5c10fb1a",
+      "historical_canonical_png_sha256": "031d319ae491ce301fceade41e383b77425428c5697a2ffd0073fce67eeca01e",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_364",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/364_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/364_labelTrainIds.png"
+      },
+      "source_sha256": "3d1f2243abf644076b4bcf896cd08e14e3b978c4ba50b8febdd7604712159372",
+      "GT_sha256": "a1912c195e54c3b1121abadb68a3d0c8caeaf9d4c2253a4b11a7cd4f1d9f1bdc",
+      "canonical_pixel_sha256": "f383c17e886de2409657ee8f4d706cb6d31cebfc847e1d880d2ab1854e911b9e",
+      "historical_canonical_png_sha256": "3d1f2243abf644076b4bcf896cd08e14e3b978c4ba50b8febdd7604712159372",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_366",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/366_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/366_labelTrainIds.png"
+      },
+      "source_sha256": "7aa20c8283875949909a9aeb4889c2d0c5daf1b6f0aaa5e68e9ec51e0dc89bf8",
+      "GT_sha256": "ca010e9ada60ef557b251b91e0be6bcaf8e2afdc948e209b9a69ebee3559bfd8",
+      "canonical_pixel_sha256": "21a21730d871f4bf448b6cd94bef4431f4352a8f4d864dc4141bff9030ac9be3",
+      "historical_canonical_png_sha256": "7aa20c8283875949909a9aeb4889c2d0c5daf1b6f0aaa5e68e9ec51e0dc89bf8",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_382",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/382_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/382_labelTrainIds.png"
+      },
+      "source_sha256": "c0cadf05a7c1725cf714885381446fd0126894e757cc719e3bc0f4e4e7eb4f72",
+      "GT_sha256": "818cf8fef624f84ae761735e16b4da67a00b4e149415921c6a3ce57528526ea5",
+      "canonical_pixel_sha256": "2eae2c1f13215176406d41bdaf11da6c1fa93a780e17c783b5f2f5ee8803dab3",
+      "historical_canonical_png_sha256": "c0cadf05a7c1725cf714885381446fd0126894e757cc719e3bc0f4e4e7eb4f72",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_383",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/383_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/383_labelTrainIds.png"
+      },
+      "source_sha256": "b0d0644b3c90032b5c020903a3b3099206fe53935591cdf2b53a5d1346f926ac",
+      "GT_sha256": "5dbb247356b1bff91431dd11e6fa8757434c0a195c9470548dc7cc23d0a230c2",
+      "canonical_pixel_sha256": "777e606109b9eecb6dff550d86b1469bf3a2fb9410a4092785587cac6c7a1f43",
+      "historical_canonical_png_sha256": "b0d0644b3c90032b5c020903a3b3099206fe53935591cdf2b53a5d1346f926ac",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_386",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/386_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/386_labelTrainIds.png"
+      },
+      "source_sha256": "e819f69f1ef74bb5e0ca599dbd7d88b591992bbccadfb505b11a5155136170de",
+      "GT_sha256": "0887c0bc634d9fba94785bf2ef8204c05080e2af054836a5395e2debc43fcbad",
+      "canonical_pixel_sha256": "75bba8c62c4a4e919683003f7c020d410002bb711c3ca82e7d4998ca53203168",
+      "historical_canonical_png_sha256": "e819f69f1ef74bb5e0ca599dbd7d88b591992bbccadfb505b11a5155136170de",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_38",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/38_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/38_labelTrainIds.png"
+      },
+      "source_sha256": "d97a78fe4627c6f61bacca8d47c696f88925dffc5656c9eb4f08fcfdc16ef9cb",
+      "GT_sha256": "1a4b2f64268de56f323fa9497340e46cb498e6bf13193a9bb18ad722c5ffed08",
+      "canonical_pixel_sha256": "cbf3d78302aa65c723352e5a078720b9a9afeceae2ba9c7041b419f059646fcb",
+      "historical_canonical_png_sha256": "d97a78fe4627c6f61bacca8d47c696f88925dffc5656c9eb4f08fcfdc16ef9cb",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_390",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/390_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/390_labelTrainIds.png"
+      },
+      "source_sha256": "6716a6d8e5ca2b79c62df79befffd1427fba6f51a933074816637fede14728d2",
+      "GT_sha256": "28d78cabaeea77415a1aac9fd1a0e39f65ed16597fcc89a21add2d8349346bba",
+      "canonical_pixel_sha256": "bd1113aab4c59b08c439b2ad419e5cee074cbb0e6af502e20534e35ea6a243a9",
+      "historical_canonical_png_sha256": "6716a6d8e5ca2b79c62df79befffd1427fba6f51a933074816637fede14728d2",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_402",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/402_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/402_labelTrainIds.png"
+      },
+      "source_sha256": "eac53e6c6f51b150f47d255249162d6fffc01ee47225909dd9899fd712f9389c",
+      "GT_sha256": "f448cb9582f5f82b88051b7032db34ed2c2c133a7d765c745320e9090aaa6083",
+      "canonical_pixel_sha256": "d55e4fd7f78c43b44588a9bec0a9d28ea6bb76630cd43ab6bc7c22cd64d4cfc4",
+      "historical_canonical_png_sha256": "eac53e6c6f51b150f47d255249162d6fffc01ee47225909dd9899fd712f9389c",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_410",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/410_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/410_labelTrainIds.png"
+      },
+      "source_sha256": "56050c35615853e4fced74ea4e5926b9793de333203869af6a8ac2b9d3ff48ae",
+      "GT_sha256": "598c286298b0fe8a0881df4fa9b5c586bccfef4bc1b35e77057949922e6da257",
+      "canonical_pixel_sha256": "f4b58e3b8cc947c15ce29bf945df1ffdf72b7c3af41bcea85552e6d852f5e64b",
+      "historical_canonical_png_sha256": "56050c35615853e4fced74ea4e5926b9793de333203869af6a8ac2b9d3ff48ae",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_443",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/443_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/443_labelTrainIds.png"
+      },
+      "source_sha256": "e03b4318eb9c3fb01ef2ffa545801bc3bc4c18bd1e10da3d4a7957530fa61812",
+      "GT_sha256": "4e0cf38b1d639155055bd83108263b40d1d19eae602ecb122b56b2c4f2d34a9a",
+      "canonical_pixel_sha256": "409fb45d1876a7c74c51277a542f54f5a59f50a86db86c1f7bf4b5b7647c65a9",
+      "historical_canonical_png_sha256": "e03b4318eb9c3fb01ef2ffa545801bc3bc4c18bd1e10da3d4a7957530fa61812",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_44",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/44_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/44_labelTrainIds.png"
+      },
+      "source_sha256": "ee7bc8fe9210e75e7e498c65f90b5a95f66856256bb3e83af1a8ba5d405c96f5",
+      "GT_sha256": "71e9f390249fc04482252c08709b7febd1a5b4cc0cd7a39a57d41fafb38882c1",
+      "canonical_pixel_sha256": "54cb36fe9be8e58029fe5ebcde64d45ace2ed2720cf3a5179de2ba51034272b4",
+      "historical_canonical_png_sha256": "ee7bc8fe9210e75e7e498c65f90b5a95f66856256bb3e83af1a8ba5d405c96f5",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_457",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/457_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/457_labelTrainIds.png"
+      },
+      "source_sha256": "6e0f2467b7d70225d0cce9365eb147d44042d947b3d5948a10c15a45d7553865",
+      "GT_sha256": "ba206eb939e2928e992494bde831043eec2150c1e31383174eddcac48c4c9157",
+      "canonical_pixel_sha256": "cc3049e0a215725b1c26d1c6d59ade76bb1d7f257ee90db08ee66f6c576c9efa",
+      "historical_canonical_png_sha256": "6e0f2467b7d70225d0cce9365eb147d44042d947b3d5948a10c15a45d7553865",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_463",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/463_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/463_labelTrainIds.png"
+      },
+      "source_sha256": "47b937bcc124cdeac5237175b3eaf12dd122fe4afb03e8373539389ec8be9b44",
+      "GT_sha256": "38abde65b6bc0e4ec4fdc70b84ece9a4bbc54f105c7f0eec1e613017d1c3da60",
+      "canonical_pixel_sha256": "523768287fa1ad289b64d8dac72c5e756c431c4e0a068d21190f7d81530369de",
+      "historical_canonical_png_sha256": "47b937bcc124cdeac5237175b3eaf12dd122fe4afb03e8373539389ec8be9b44",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_468",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/468_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/468_labelTrainIds.png"
+      },
+      "source_sha256": "7577836d5240c505fc0cb547c324d904aa2456a1e03d9a595978005767aa2764",
+      "GT_sha256": "6a56f33cf4684d621651a7165bb69cbf3d06e7c144f7e8d6acff7ec4c0d01958",
+      "canonical_pixel_sha256": "622fc47bc1099e6bd1207672f9af55c78b0a48f4eab64f8feb5a7adbea2fe996",
+      "historical_canonical_png_sha256": "7577836d5240c505fc0cb547c324d904aa2456a1e03d9a595978005767aa2764",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_46",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/46_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/46_labelTrainIds.png"
+      },
+      "source_sha256": "2c68e71e419c1f19b1bbfeda14dc03e96626410b7625529da0d27a2719d3080d",
+      "GT_sha256": "fc8ada96cb6ef64850526e19d1cf439b5590a60cb74aedda59c8dd2fa86f7acb",
+      "canonical_pixel_sha256": "3a1eaafce1a6be90455b5ba2e7f5d9a95ae5df86e54fa70a08cae5caade3069f",
+      "historical_canonical_png_sha256": "2c68e71e419c1f19b1bbfeda14dc03e96626410b7625529da0d27a2719d3080d",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_496",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/496_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/496_labelTrainIds.png"
+      },
+      "source_sha256": "3464fb997d95a864f318673b6b060aa3a7e9e24f1758e2f87a7e50eb3c3fe373",
+      "GT_sha256": "3b5ec397705d24350a02db692e902c48124aceb2f633997dafad994c508dc234",
+      "canonical_pixel_sha256": "2ae5eb4a70f0a277b5dd403e142e88676cdfa50027a1a3921f99829cd7be65a9",
+      "historical_canonical_png_sha256": "3464fb997d95a864f318673b6b060aa3a7e9e24f1758e2f87a7e50eb3c3fe373",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_500",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/500_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/500_labelTrainIds.png"
+      },
+      "source_sha256": "d0a2ecd61d412a42542979f521f20857d877a6f822ecd3ec2bd3345c68517a05",
+      "GT_sha256": "0202730f982df71f3ce1da203a1b21f445aca73d7d190f5794d009a5a963c124",
+      "canonical_pixel_sha256": "ae29aff49a959be56d88ac44d3e12f9ec85cb5cf15d8242ab687f8bc12ea665d",
+      "historical_canonical_png_sha256": "d0a2ecd61d412a42542979f521f20857d877a6f822ecd3ec2bd3345c68517a05",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_54",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/54_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/54_labelTrainIds.png"
+      },
+      "source_sha256": "859d4512788d75334d2c7d837fffa543178a7abdaad8de8650dbedd408be3993",
+      "GT_sha256": "ca36092338b41d6141955032485e56e4e761fc4f0c1c944c37f2081cae6b7b4f",
+      "canonical_pixel_sha256": "def2010cbf336dfafcd17d77707388034bfd386c70fbaf0cce81b3fdeeedc68f",
+      "historical_canonical_png_sha256": "859d4512788d75334d2c7d837fffa543178a7abdaad8de8650dbedd408be3993",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_59",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/59_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/59_labelTrainIds.png"
+      },
+      "source_sha256": "624b0437fec4dcd8e1d26ec1e64deb538fe788879301b72f636ed7e0df7df100",
+      "GT_sha256": "611334b9f4d434c21b80334d8967143da6cb908e67a713c652d00c98de13a0fd",
+      "canonical_pixel_sha256": "e96b2ff61b11a34862970a11cc7c2f8cd405467062dd18a8c4370e2128a7fc83",
+      "historical_canonical_png_sha256": "624b0437fec4dcd8e1d26ec1e64deb538fe788879301b72f636ed7e0df7df100",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_65",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/65_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/65_labelTrainIds.png"
+      },
+      "source_sha256": "7be96e1766ad9d6b1c72e9364c3700dc9efde142341437e3786fa80a18745942",
+      "GT_sha256": "39ff0b878532a916e26e1fd2b5f3ae55fa1e4a4bcf8b13f3ea3d5d3021ba5fbc",
+      "canonical_pixel_sha256": "fc6d0b8880bbf745ce426284c22401f3f4de4c5d7fc9bdc340ff242b83184551",
+      "historical_canonical_png_sha256": "7be96e1766ad9d6b1c72e9364c3700dc9efde142341437e3786fa80a18745942",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_66",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/66_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/66_labelTrainIds.png"
+      },
+      "source_sha256": "aced2052f44d53853bc1d5389389042091d233c85db9bc769efb25cd49e68a9f",
+      "GT_sha256": "0db7796197e61c46730582c9e902f507ca5048f4a5dfb16baa308619eb173556",
+      "canonical_pixel_sha256": "bd9ee8fdfb9c3042102ca4be456f888e6c68eac16346318b5c61ac1b329da0ec",
+      "historical_canonical_png_sha256": "aced2052f44d53853bc1d5389389042091d233c85db9bc769efb25cd49e68a9f",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_67",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/67_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/67_labelTrainIds.png"
+      },
+      "source_sha256": "7b53bb074fcfde2461704d1583086d61146b2574d8f5b9bb86079a096bc836be",
+      "GT_sha256": "8d2dc05e4e8639136337b9818c2be2d59bfe1ae413c54e0d27046ac2d6fbaab8",
+      "canonical_pixel_sha256": "611fd7624db79a088c85708ad11942b6eae96ef067ad15821768811476390163",
+      "historical_canonical_png_sha256": "7b53bb074fcfde2461704d1583086d61146b2574d8f5b9bb86079a096bc836be",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_68",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/68_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/68_labelTrainIds.png"
+      },
+      "source_sha256": "78fcc885687e81baa3470527c4ccbc3e6249efe2555c39ca45c60b50684bad78",
+      "GT_sha256": "8e0f1e1ddf26890579dd7f6731d45c12ceba906a600dc6904238b09934bba784",
+      "canonical_pixel_sha256": "b75ac7bef2964674dbe6c96527ec5aff81ec1b47987b36cbeecf28bcb4c4eaec",
+      "historical_canonical_png_sha256": "78fcc885687e81baa3470527c4ccbc3e6249efe2555c39ca45c60b50684bad78",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_81",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/81_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/81_labelTrainIds.png"
+      },
+      "source_sha256": "5f4a1b6eb597ddc692cfd252d1c87b5551905641e11f9afa3a1988777ff9c98b",
+      "GT_sha256": "62791399989b66764c81653d01eed9afa1b4e55977d8f0d7535eb0551f2b1b1b",
+      "canonical_pixel_sha256": "8dbb46aec2987faa5fe10f5158984a0937ca4645edb4adc170dc15802a377c84",
+      "historical_canonical_png_sha256": "5f4a1b6eb597ddc692cfd252d1c87b5551905641e11f9afa3a1988777ff9c98b",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_92",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/92_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/92_labelTrainIds.png"
+      },
+      "source_sha256": "991f5dbb36cf582cc379d28eb49cd8cc60d671f5a6b796ed31e4e01aa4ea3b54",
+      "GT_sha256": "6bfed7a593404a3d7abd535f0592fe968325ec4031c1274ccfde8faf401487d7",
+      "canonical_pixel_sha256": "aeebefb531c97a69796e740427febc48cadde32a9d1f78ae02344bc5fc711539",
+      "historical_canonical_png_sha256": "991f5dbb36cf582cc379d28eb49cd8cc60d671f5a6b796ed31e4e01aa4ea3b54",
+      "original_size": [
+        2048,
+        400
+      ]
+    },
+    {
+      "image_id": "densepass_99",
+      "source": {
+        "root": "data",
+        "path": "DensePASS/leftImg8bit/val/99_.png"
+      },
+      "GT": {
+        "root": "data",
+        "path": "DensePASS/gtFine/val/99_labelTrainIds.png"
+      },
+      "source_sha256": "3910b9c2e2730859090a21faa31945833e6d3390d6d23646a2f94d774ae44a9a",
+      "GT_sha256": "fe3f3b86b4601d5ca020fb16e7d76c2ac72d74959df1185fce8d36e2ec329551",
+      "canonical_pixel_sha256": "30d3db96fbf5c8a3281e121f1bc906fc56fc6c03cd4085b6379935813b1624ad",
+      "historical_canonical_png_sha256": "3910b9c2e2730859090a21faa31945833e6d3390d6d23646a2f94d774ae44a9a",
+      "original_size": [
+        2048,
+        400
+      ]
+    }
+  ]
+}

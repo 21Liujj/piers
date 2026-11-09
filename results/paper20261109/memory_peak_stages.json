@@ -1,0 +1,48 @@
+{
+  "status": "passed",
+  "results": {
+    "dense_B0": {
+      "peak_before_window_merge_mib": 1294.1220703125,
+      "allocated_at_window_merge_entry_mib": 674.1220703125,
+      "logits_shape": [
+        1,
+        18,
+        13,
+        1024,
+        1024
+      ],
+      "single_FP32_window_logits_buffer_mib": 936.0,
+      "peak_during_window_merge_mib": 4158.20068359375,
+      "allocated_after_window_merge_mib": 674.1220703125,
+      "status": "passed",
+      "variant": "dense_B0",
+      "image_id": "densepass_100",
+      "prediction_changed_pixels": 0,
+      "GT_reads": 0,
+      "weights_updated": false,
+      "scope": "Single-image allocation-stage diagnostic; not a latency benchmark"
+    },
+    "i2_B0": {
+      "peak_before_window_merge_mib": 1357.1220703125,
+      "allocated_at_window_merge_entry_mib": 673.1220703125,
+      "logits_shape": [
+        1,
+        18,
+        13,
+        1024,
+        1024
+      ],
+      "single_FP32_window_logits_buffer_mib": 936.0,
+      "peak_during_window_merge_mib": 4157.20068359375,
+      "allocated_after_window_merge_mib": 673.1220703125,
+      "status": "passed",
+      "variant": "i2_B0",
+      "image_id": "densepass_100",
+      "prediction_changed_pixels": 0,
+      "GT_reads": 0,
+      "weights_updated": false,
+      "scope": "Single-image allocation-stage diagnostic; not a latency benchmark"
+    }
+  },
+  "source_files_modified": false
+}

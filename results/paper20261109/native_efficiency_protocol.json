@@ -1,0 +1,305 @@
+{
+  "version": "final-complete-v3-all-spaces-isolated-efficiency-20261109",
+  "created_at": 1794217476.6507974,
+  "scenarios": [
+    {
+      "name": "WildPASS_native8",
+      "images": [
+        {
+          "image_id": "image00000",
+          "path": "${PIERS_REPO_ROOT}/runs/ZERO-SHOT-NATIVE-20261109-v1/inputs/images/image00000.png",
+          "width": 2048,
+          "height": 400,
+          "original_size": [
+            2048,
+            400
+          ],
+          "classes": [
+            "road",
+            "sidewalk",
+            "curb",
+            "crosswalk",
+            "car",
+            "person",
+            "truck",
+            "bus"
+          ],
+          "input_sha256": "d90e5674a5cba45bcbfeea31cc06de910d6eab69decf0ba43dbbbaa043a44754",
+          "source_sha256": "8e7e47d0115f304682c5f8a9534c0bcc538c12e31120bdcb371b6dbbf3f6e5b0"
+        },
+        {
+          "image_id": "image00250",
+          "path": "${PIERS_REPO_ROOT}/runs/ZERO-SHOT-NATIVE-20261109-v1/inputs/images/image00250.png",
+          "width": 2048,
+          "height": 400,
+          "original_size": [
+            2048,
+            400
+          ],
+          "classes": [
+            "road",
+            "sidewalk",
+            "curb",
+            "crosswalk",
+            "car",
+            "person",
+            "truck",
+            "bus"
+          ],
+          "input_sha256": "a61664fda1ed15c0265e3565a8b44dee8904e1b3d87ca90ce3300577938259c6",
+          "source_sha256": "2fdc2a888b7ebeabe7ae59619dc40d1bfbd8b39eadeb2a8330858cfa939f30e2"
+        },
+        {
+          "image_id": "image00499",
+          "path": "${PIERS_REPO_ROOT}/runs/ZERO-SHOT-NATIVE-20261109-v1/inputs/images/image00499.png",
+          "width": 2048,
+          "height": 400,
+          "original_size": [
+            2048,
+            400
+          ],
+          "classes": [
+            "road",
+            "sidewalk",
+            "curb",
+            "crosswalk",
+            "car",
+            "person",
+            "truck",
+            "bus"
+          ],
+          "input_sha256": "3910b9c2e2730859090a21faa31945833e6d3390d6d23646a2f94d774ae44a9a",
+          "source_sha256": "11be2850bc8d3a8ca70d02d413b7e7cf8ce0955559cbaa746c7f6828265a7adc"
+        }
+      ]
+    },
+    {
+      "name": "SynPASS_native22",
+      "images": [
+        {
+          "image_id": "image00500",
+          "path": "${PIERS_REPO_ROOT}/runs/ZERO-SHOT-NATIVE-20261109-v1/inputs/images/image00500.png",
+          "width": 2048,
+          "height": 400,
+          "original_size": [
+            2048,
+            1024
+          ],
+          "classes": [
+            "building",
+            "fence",
+            "other object",
+            "pedestrian",
+            "pole",
+            "road marking",
+            "road",
+            "sidewalk",
+            "vegetation",
+            "vehicles",
+            "wall",
+            "traffic sign",
+            "sky",
+            "ground",
+            "bridge",
+            "railway track",
+            "guardrail",
+            "traffic light",
+            "static object",
+            "moving object",
+            "water",
+            "terrain"
+          ],
+          "input_sha256": "60e388709767d965a6e4fcd5ccdf88bbd66ef2720b65afe9e53e41c4ab60c30f",
+          "source_sha256": "124c84e4689bec36a3cd988c4f45d3c694a3ed9a2d655aa93fcdda4425d91a57"
+        },
+        {
+          "image_id": "image01345",
+          "path": "${PIERS_REPO_ROOT}/runs/ZERO-SHOT-NATIVE-20261109-v1/inputs/images/image01345.png",
+          "width": 2048,
+          "height": 400,
+          "original_size": [
+            2048,
+            1024
+          ],
+          "classes": [
+            "building",
+            "fence",
+            "other object",
+            "pedestrian",
+            "pole",
+            "road marking",
+            "road",
+            "sidewalk",
+            "vegetation",
+            "vehicles",
+            "wall",
+            "traffic sign",
+            "sky",
+            "ground",
+            "bridge",
+            "railway track",
+            "guardrail",
+            "traffic light",
+            "static object",
+            "moving object",
+            "water",
+            "terrain"
+          ],
+          "input_sha256": "235949046734793dd96c26b6624ff72c8eecf8d0dd0dbcf1082f26554dc0395a",
+          "source_sha256": "7e52b720d0adddfda8a42a1688e6cb82a37cd47a027c60109a8971a3601466b7"
+        },
+        {
+          "image_id": "image02189",
+          "path": "${PIERS_REPO_ROOT}/runs/ZERO-SHOT-NATIVE-20261109-v1/inputs/images/image02189.png",
+          "width": 2048,
+          "height": 400,
+          "original_size": [
+            2048,
+            1024
+          ],
+          "classes": [
+            "building",
+            "fence",
+            "other object",
+            "pedestrian",
+            "pole",
+            "road marking",
+            "road",
+            "sidewalk",
+            "vegetation",
+            "vehicles",
+            "wall",
+            "traffic sign",
+            "sky",
+            "ground",
+            "bridge",
+            "railway track",
+            "guardrail",
+            "traffic light",
+            "static object",
+            "moving object",
+            "water",
+            "terrain"
+          ],
+          "input_sha256": "d0fa5d3165366e85631e56d694be5bedbddcde2afdca154161e72b4a1e6a2943",
+          "source_sha256": "d4aa40694295a85e313600929acdea4f7af46e8224c31bc7f8599693914e9c98"
+        }
+      ]
+    },
+    {
+      "name": "SynPASS_shared13",
+      "images": [
+        {
+          "image_id": "image00500",
+          "path": "${PIERS_REPO_ROOT}/runs/ZERO-SHOT-NATIVE-20261109-v1/inputs/images/image00500.png",
+          "width": 2048,
+          "height": 400,
+          "original_size": [
+            2048,
+            1024
+          ],
+          "classes": [
+            "road",
+            "sidewalk",
+            "building",
+            "wall",
+            "fence",
+            "pole",
+            "traffic light",
+            "traffic sign",
+            "vegetation",
+            "terrain",
+            "sky",
+            "person",
+            "car"
+          ],
+          "input_sha256": "60e388709767d965a6e4fcd5ccdf88bbd66ef2720b65afe9e53e41c4ab60c30f",
+          "source_sha256": "124c84e4689bec36a3cd988c4f45d3c694a3ed9a2d655aa93fcdda4425d91a57"
+        },
+        {
+          "image_id": "image01345",
+          "path": "${PIERS_REPO_ROOT}/runs/ZERO-SHOT-NATIVE-20261109-v1/inputs/images/image01345.png",
+          "width": 2048,
+          "height": 400,
+          "original_size": [
+            2048,
+            1024
+          ],
+          "classes": [
+            "road",
+            "sidewalk",
+            "building",
+            "wall",
+            "fence",
+            "pole",
+            "traffic light",
+            "traffic sign",
+            "vegetation",
+            "terrain",
+            "sky",
+            "person",
+            "car"
+          ],
+          "input_sha256": "235949046734793dd96c26b6624ff72c8eecf8d0dd0dbcf1082f26554dc0395a",
+          "source_sha256": "7e52b720d0adddfda8a42a1688e6cb82a37cd47a027c60109a8971a3601466b7"
+        },
+        {
+          "image_id": "image02189",
+          "path": "${PIERS_REPO_ROOT}/runs/ZERO-SHOT-NATIVE-20261109-v1/inputs/images/image02189.png",
+          "width": 2048,
+          "height": 400,
+          "original_size": [
+            2048,
+            1024
+          ],
+          "classes": [
+            "road",
+            "sidewalk",
+            "building",
+            "wall",
+            "fence",
+            "pole",
+            "traffic light",
+            "traffic sign",
+            "vegetation",
+            "terrain",
+            "sky",
+            "person",
+            "car"
+          ],
+          "input_sha256": "d0fa5d3165366e85631e56d694be5bedbddcde2afdca154161e72b4a1e6a2943",
+          "source_sha256": "d4aa40694295a85e313600929acdea4f7af46e8224c31bc7f8599693914e9c98"
+        }
+      ]
+    }
+  ],
+  "repeats": 2,
+  "warmup_images_per_method_per_scenario": 1,
+  "latency_scope": "Resident weights; image loading, preprocessing, real DINO/SAM2 for full, I1/I2/I3, competition, IPC, native prediction PNG writing; initial weight loading excluded and separately logged",
+  "original": "frozen OmniSAM dense memory32768,18 semantic calls; unsupported native classes remain zero",
+  "full": "Frozen I1/I2/I3 plus v2 competition and v3 literal queries. DINO calls:Wild8=72,Syn22=100,shared13=56.",
+  "training": false,
+  "target_labels_read": false,
+  "dataset_identity_input_to_prediction": false,
+  "candidate_cache_reused": false,
+  "inter_image_SAM_embedding_cache": false,
+  "within_image_per_FoV_SAM_embedding_reuse": true,
+  "GPU_isolation": "No unrelated CUDA processes; serial examples and methods",
+  "peak_memory": "Actual NVML device-used memory sampled every20ms plus separate PyTorch allocated/reserved peaks in both worker processes",
+  "runtime_sha256": {
+    "scripts/piers/full_model_queries_v3.py": "cb28be091196aa3a57e55d620388f063b880885fd10668a89cacca4aa3a22de5",
+    "scripts/piers/full_model_fusion_v3.py": "8ff9d762f74d6c46c6728b8b738b863b463b427fb0f56898c032adbced6c9730",
+    "scripts/piers/benchmark_complete_model_v3.py": "917ea536325bab51d6b34c64a436b33e3bb3e883851eae847f8b1c9e4d8c8b69",
+    "scripts/piers/fuse_literal_queries_v3_from_frozen_labels.py": "80afe8cea33ae3f3e953042488a2c36085609adba6fa85cb4340cbe2c3e9d2c6",
+    "scripts/piers/supervise_literal_query_v3.py": "5cc389b300ff1e50d4663ce4de04fa78c2d179ec92a14da2f5f7691eb04336ce",
+    "src/piers_ljj/collaboration/open_vocab_competition.py": "f374acb8b1dad048ea229f5e596af7bc67729313adffe7a77ea91bddac0613c2",
+    "scripts/piers/full_model_semantic.py": "2323c54541e161c4f999435a638bc00aacc790d419392e34b798dcb6abfda5f3"
+  },
+  "checkpoint_sha256": "ec0c607a6247651cb8c5eb04e3c15a7ae4b067655c4ca6cb5b6ff9d80adaba85",
+  "limitations": [
+    "3 fixed images per scenario,2 repetitions; small descriptive sample, not full-dataset speed",
+    "Sequential IPC deployment; does not claim ideal pipelined throughput",
+    "DINO/SAM2 text stage is mandatory for full-system timing",
+    "Memory token retention is not physical deletion of stored memory features"
+  ]
+}

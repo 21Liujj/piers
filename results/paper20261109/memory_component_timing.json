@@ -1,0 +1,1279 @@
+{
+  "status": "complete",
+  "accuracy": {
+    "i2_B0": {
+      "mIoU_pct": 60.1447111286059,
+      "mAcc_pct": 71.99566950903935,
+      "pixel_accuracy_pct": 88.6021024307184,
+      "FWIoU_pct": 80.80704301731004,
+      "mDice_pct": 72.68595249363972,
+      "per_class_IoU_pct": [
+        80.20160712604165,
+        46.42322109851513,
+        89.73099217928774,
+        44.92982355454377,
+        48.61161078188253,
+        45.13420793233872,
+        30.537279526799683,
+        26.638702734432325,
+        78.70273966100058,
+        46.19441207840694,
+        94.46951279669868,
+        65.94142047458261,
+        84.36571472734633
+      ],
+      "GT_pixels_per_class": [
+        13266044,
+        5418841,
+        25547145,
+        1305637,
+        995728,
+        649821,
+        38257,
+        116260,
+        10594916,
+        3147557,
+        14378776,
+        370801,
+        4770257
+      ],
+      "valid_GT_pixels": 80600040,
+      "abstained_valid_pixels": 0,
+      "zero_union_class_indices": [],
+      "macro_denominator": 13,
+      "images": 100
+    },
+    "i2_B2": {
+      "mIoU_pct": 60.50178628177251,
+      "mAcc_pct": 72.46479610941871,
+      "pixel_accuracy_pct": 88.62156023743908,
+      "FWIoU_pct": 80.82995691973397,
+      "mDice_pct": 73.10074742001925,
+      "per_class_IoU_pct": [
+        80.25770096279828,
+        46.47751136917301,
+        89.72289161141447,
+        44.76709561083301,
+        48.778895733689396,
+        45.30642790700948,
+        30.715831422878324,
+        30.573766979474655,
+        78.69817996883296,
+        46.22722550336951,
+        94.49466610330593,
+        66.13825702659626,
+        84.36477146366735
+      ],
+      "GT_pixels_per_class": [
+        13266044,
+        5418841,
+        25547145,
+        1305637,
+        995728,
+        649821,
+        38257,
+        116260,
+        10594916,
+        3147557,
+        14378776,
+        370801,
+        4770257
+      ],
+      "valid_GT_pixels": 80600040,
+      "abstained_valid_pixels": 0,
+      "zero_union_class_indices": [],
+      "macro_denominator": 13,
+      "images": 100
+    },
+    "dense_B0": {
+      "mIoU_pct": 60.29606669652925,
+      "mAcc_pct": 71.58587877813163,
+      "pixel_accuracy_pct": 88.8588529236462,
+      "FWIoU_pct": 81.0498717394737,
+      "mDice_pct": 72.757896921564,
+      "per_class_IoU_pct": [
+        80.73880602516154,
+        46.44691891738536,
+        89.8782207750154,
+        45.08281167906091,
+        49.489588639592924,
+        45.82177669072376,
+        29.915449998878646,
+        25.791662160050954,
+        79.52286730128648,
+        46.282266641586425,
+        94.421356583489,
+        66.3577313830569,
+        84.09941025959203
+      ],
+      "GT_pixels_per_class": [
+        13266044,
+        5418841,
+        25547145,
+        1305637,
+        995728,
+        649821,
+        38257,
+        116260,
+        10594916,
+        3147557,
+        14378776,
+        370801,
+        4770257
+      ],
+      "valid_GT_pixels": 80600040,
+      "abstained_valid_pixels": 0,
+      "zero_union_class_indices": [],
+      "macro_denominator": 13,
+      "images": 100,
+      "classes": [
+        "road",
+        "sidewalk",
+        "building",
+        "wall",
+        "fence",
+        "pole",
+        "traffic light",
+        "traffic sign",
+        "vegetation",
+        "terrain",
+        "sky",
+        "person",
+        "car"
+      ]
+    },
+    "full_v3": {
+      "mIoU_pct": 60.855488498434966,
+      "mAcc_pct": 72.79262710623618,
+      "pixel_accuracy_pct": 88.82451299031612,
+      "FWIoU_pct": 81.10122641396333,
+      "mDice_pct": 73.4339422947068,
+      "per_class_IoU_pct": [
+        80.90768941954391,
+        47.07430014279497,
+        89.85099934117854,
+        44.781399209000185,
+        48.80806780089987,
+        45.24535938689013,
+        32.909288499648405,
+        30.72495323561431,
+        78.9683643790014,
+        46.45155433814758,
+        94.67993742896655,
+        66.28364640991468,
+        84.43579088805394
+      ],
+      "GT_pixels_per_class": [
+        13266044,
+        5418841,
+        25547145,
+        1305637,
+        995728,
+        649821,
+        38257,
+        116260,
+        10594916,
+        3147557,
+        14378776,
+        370801,
+        4770257
+      ],
+      "valid_GT_pixels": 80600040,
+      "abstained_valid_pixels": 0,
+      "zero_union_class_indices": [],
+      "macro_denominator": 13,
+      "images": 100,
+      "classes": [
+        "road",
+        "sidewalk",
+        "building",
+        "wall",
+        "fence",
+        "pole",
+        "traffic light",
+        "traffic sign",
+        "vegetation",
+        "terrain",
+        "sky",
+        "person",
+        "car"
+      ]
+    }
+  },
+  "semantic_timing": {
+    "dense_B0": {
+      "status": "complete",
+      "variant": "dense_B0",
+      "mean_seconds": 4.645493116229773,
+      "median_seconds": 4.6525316829793155,
+      "measurements": 6,
+      "unique_images": 3,
+      "weight_loading_seconds": 4.40310668759048,
+      "peak_device_used_mib_sampled": 6457.0625,
+      "peak_allocated_mib": 4157.20068359375,
+      "max_attention_tokens": 32768,
+      "forward_calls": 18,
+      "mean_MemoryAttention_CUDA_stream_interval_ms": 332.25321674346924,
+      "mean_selection_host_dispatch_ms": 0.0,
+      "profile": [
+        {
+          "image_id": "densepass_100",
+          "MemoryAttention_CUDA_stream_interval_ms": 332.5375051498413,
+          "MemoryAttention_calls": 16,
+          "selection_host_dispatch_ms": 0,
+          "selection_calls": 0
+        },
+        {
+          "image_id": "densepass_231",
+          "MemoryAttention_CUDA_stream_interval_ms": 333.54927825927734,
+          "MemoryAttention_calls": 16,
+          "selection_host_dispatch_ms": 0,
+          "selection_calls": 0
+        },
+        {
+          "image_id": "densepass_99",
+          "MemoryAttention_CUDA_stream_interval_ms": 330.67286682128906,
+          "MemoryAttention_calls": 16,
+          "selection_host_dispatch_ms": 0,
+          "selection_calls": 0
+        }
+      ],
+      "trials": [
+        {
+          "image_id": "densepass_100",
+          "warmup": false,
+          "seconds": 4.643215813674033,
+          "peak_device_used_mib_sampled": 6457.0625,
+          "memory_samples": 230,
+          "sampling_interval_s": 0.02,
+          "peak_allocated_mib": 4157.20068359375,
+          "peak_reserved_mib": 5256.0,
+          "attention_token_lengths": [
+            4096,
+            8192,
+            12288,
+            16384,
+            20480,
+            24576,
+            28672,
+            32768,
+            4096,
+            8192,
+            12288,
+            16384,
+            20480,
+            24576,
+            28672,
+            32768
+          ],
+          "semantic": {
+            "memory": "dense",
+            "I3_budget": 0,
+            "forward_calls": 18,
+            "I3_selected_windows": [],
+            "memory_audit": {
+              "mode": "dense",
+              "calls": 0,
+              "fallbacks": 0,
+              "max_tokens": 32768
+            },
+            "I3_fusion": {
+              "B": 0,
+              "identity": true
+            },
+            "checkpoint_sha256": "ec0c607a6247651cb8c5eb04e3c15a7ae4b067655c4ca6cb5b6ff9d80adaba85",
+            "weights_updated": false,
+            "ground_truth_reads": 0,
+            "elapsed_s": 3.493314997293055
+          },
+          "GT_reads": 0
+        },
+        {
+          "image_id": "densepass_231",
+          "warmup": false,
+          "seconds": 4.6251990450546145,
+          "peak_device_used_mib_sampled": 6457.0625,
+          "memory_samples": 229,
+          "sampling_interval_s": 0.02,
+          "peak_allocated_mib": 4157.20068359375,
+          "peak_reserved_mib": 5256.0,
+          "attention_token_lengths": [
+            4096,
+            8192,
+            12288,
+            16384,
+            20480,
+            24576,
+            28672,
+            32768,
+            4096,
+            8192,
+            12288,
+            16384,
+            20480,
+            24576,
+            28672,
+            32768
+          ],
+          "semantic": {
+            "memory": "dense",
+            "I3_budget": 0,
+            "forward_calls": 18,
+            "I3_selected_windows": [],
+            "memory_audit": {
+              "mode": "dense",
+              "calls": 0,
+              "fallbacks": 0,
+              "max_tokens": 32768
+            },
+            "I3_fusion": {
+              "B": 0,
+              "identity": true
+            },
+            "checkpoint_sha256": "ec0c607a6247651cb8c5eb04e3c15a7ae4b067655c4ca6cb5b6ff9d80adaba85",
+            "weights_updated": false,
+            "ground_truth_reads": 0,
+            "elapsed_s": 3.440892206504941
+          },
+          "GT_reads": 0
+        },
+        {
+          "image_id": "densepass_99",
+          "warmup": false,
+          "seconds": 4.703357306309044,
+          "peak_device_used_mib_sampled": 6457.0625,
+          "memory_samples": 231,
+          "sampling_interval_s": 0.02,
+          "peak_allocated_mib": 4157.20068359375,
+          "peak_reserved_mib": 5256.0,
+          "attention_token_lengths": [
+            4096,
+            8192,
+            12288,
+            16384,
+            20480,
+            24576,
+            28672,
+            32768,
+            4096,
+            8192,
+            12288,
+            16384,
+            20480,
+            24576,
+            28672,
+            32768
+          ],
+          "semantic": {
+            "memory": "dense",
+            "I3_budget": 0,
+            "forward_calls": 18,
+            "I3_selected_windows": [],
+            "memory_audit": {
+              "mode": "dense",
+              "calls": 0,
+              "fallbacks": 0,
+              "max_tokens": 32768
+            },
+            "I3_fusion": {
+              "B": 0,
+              "identity": true
+            },
+            "checkpoint_sha256": "ec0c607a6247651cb8c5eb04e3c15a7ae4b067655c4ca6cb5b6ff9d80adaba85",
+            "weights_updated": false,
+            "ground_truth_reads": 0,
+            "elapsed_s": 3.5066084060817957
+          },
+          "GT_reads": 0
+        },
+        {
+          "image_id": "densepass_100",
+          "warmup": false,
+          "seconds": 4.661847552284598,
+          "peak_device_used_mib_sampled": 6457.0625,
+          "memory_samples": 226,
+          "sampling_interval_s": 0.02,
+          "peak_allocated_mib": 4157.20068359375,
+          "peak_reserved_mib": 5256.0,
+          "attention_token_lengths": [
+            4096,
+            8192,
+            12288,
+            16384,
+            20480,
+            24576,
+            28672,
+            32768,
+            4096,
+            8192,
+            12288,
+            16384,
+            20480,
+            24576,
+            28672,
+            32768
+          ],
+          "semantic": {
+            "memory": "dense",
+            "I3_budget": 0,
+            "forward_calls": 18,
+            "I3_selected_windows": [],
+            "memory_audit": {
+              "mode": "dense",
+              "calls": 0,
+              "fallbacks": 0,
+              "max_tokens": 32768
+            },
+            "I3_fusion": {
+              "B": 0,
+              "identity": true
+            },
+            "checkpoint_sha256": "ec0c607a6247651cb8c5eb04e3c15a7ae4b067655c4ca6cb5b6ff9d80adaba85",
+            "weights_updated": false,
+            "ground_truth_reads": 0,
+            "elapsed_s": 3.5064836964011192
+          },
+          "GT_reads": 0
+        },
+        {
+          "image_id": "densepass_231",
+          "warmup": false,
+          "seconds": 4.5738489385694265,
+          "peak_device_used_mib_sampled": 6457.0625,
+          "memory_samples": 224,
+          "sampling_interval_s": 0.02,
+          "peak_allocated_mib": 4157.20068359375,
+          "peak_reserved_mib": 5256.0,
+          "attention_token_lengths": [
+            4096,
+            8192,
+            12288,
+            16384,
+            20480,
+            24576,
+            28672,
+            32768,
+            4096,
+            8192,
+            12288,
+            16384,
+            20480,
+            24576,
+            28672,
+            32768
+          ],
+          "semantic": {
+            "memory": "dense",
+            "I3_budget": 0,
+            "forward_calls": 18,
+            "I3_selected_windows": [],
+            "memory_audit": {
+              "mode": "dense",
+              "calls": 0,
+              "fallbacks": 0,
+              "max_tokens": 32768
+            },
+            "I3_fusion": {
+              "B": 0,
+              "identity": true
+            },
+            "checkpoint_sha256": "ec0c607a6247651cb8c5eb04e3c15a7ae4b067655c4ca6cb5b6ff9d80adaba85",
+            "weights_updated": false,
+            "ground_truth_reads": 0,
+            "elapsed_s": 3.426066546700895
+          },
+          "GT_reads": 0
+        },
+        {
+          "image_id": "densepass_99",
+          "warmup": false,
+          "seconds": 4.665490041486919,
+          "peak_device_used_mib_sampled": 6457.0625,
+          "memory_samples": 230,
+          "sampling_interval_s": 0.02,
+          "peak_allocated_mib": 4157.20068359375,
+          "peak_reserved_mib": 5256.0,
+          "attention_token_lengths": [
+            4096,
+            8192,
+            12288,
+            16384,
+            20480,
+            24576,
+            28672,
+            32768,
+            4096,
+            8192,
+            12288,
+            16384,
+            20480,
+            24576,
+            28672,
+            32768
+          ],
+          "semantic": {
+            "memory": "dense",
+            "I3_budget": 0,
+            "forward_calls": 18,
+            "I3_selected_windows": [],
+            "memory_audit": {
+              "mode": "dense",
+              "calls": 0,
+              "fallbacks": 0,
+              "max_tokens": 32768
+            },
+            "I3_fusion": {
+              "B": 0,
+              "identity": true
+            },
+            "checkpoint_sha256": "ec0c607a6247651cb8c5eb04e3c15a7ae4b067655c4ca6cb5b6ff9d80adaba85",
+            "weights_updated": false,
+            "ground_truth_reads": 0,
+            "elapsed_s": 3.4708392964676023
+          },
+          "GT_reads": 0
+        }
+      ],
+      "scope": "Semantic engine with the same requested_probabilities13 output mapping as the primary evaluation: image loading/preprocessing,18 or20 forwards, semantic fusion and PNG output; no I1, DINO or text SAM2",
+      "limitations": [
+        "3 fixed images x2 repeats; initial weight loading excluded",
+        "CUDA event intervals can include stream scheduling/host gaps; not FLOP measurements",
+        "Sparse selector host timings can overlap queued GPU work; do not sum as a disjoint wall-time decomposition"
+      ]
+    },
+    "i2_B0": {
+      "status": "complete",
+      "variant": "i2_B0",
+      "mean_seconds": 3.4758644167644284,
+      "median_seconds": 3.4789493465796113,
+      "measurements": 6,
+      "unique_images": 3,
+      "weight_loading_seconds": 3.5911069260910153,
+      "peak_device_used_mib_sampled": 6523.0625,
+      "peak_allocated_mib": 4157.20068359375,
+      "max_attention_tokens": 1024,
+      "forward_calls": 18,
+      "mean_MemoryAttention_CUDA_stream_interval_ms": 79.87037881215413,
+      "mean_selection_host_dispatch_ms": 171.79107976456484,
+      "profile": [
+        {
+          "image_id": "densepass_100",
+          "MemoryAttention_CUDA_stream_interval_ms": 80.96931219100952,
+          "MemoryAttention_calls": 16,
+          "selection_host_dispatch_ms": 170.8548553287983,
+          "selection_calls": 72
+        },
+        {
+          "image_id": "densepass_231",
+          "MemoryAttention_CUDA_stream_interval_ms": 78.0666561126709,
+          "MemoryAttention_calls": 16,
+          "selection_host_dispatch_ms": 172.6699098944664,
+          "selection_calls": 72
+        },
+        {
+          "image_id": "densepass_99",
+          "MemoryAttention_CUDA_stream_interval_ms": 80.57516813278198,
+          "MemoryAttention_calls": 16,
+          "selection_host_dispatch_ms": 171.8484740704298,
+          "selection_calls": 72
+        }
+      ],
+      "trials": [
+        {
+          "image_id": "densepass_100",
+          "warmup": false,
+          "seconds": 3.5298194410279393,
+          "peak_device_used_mib_sampled": 6523.0625,
+          "memory_samples": 176,
+          "sampling_interval_s": 0.02,
+          "peak_allocated_mib": 4157.20068359375,
+          "peak_reserved_mib": 5322.0,
+          "attention_token_lengths": [
+            128,
+            256,
+            384,
+            512,
+            640,
+            768,
+            896,
+            1024,
+            128,
+            256,
+            384,
+            512,
+            640,
+            768,
+            896,
+            1024
+          ],
+          "semantic": {
+            "memory": "i2",
+            "I3_budget": 0,
+            "forward_calls": 18,
+            "I3_selected_windows": [],
+            "memory_audit": {
+              "calls": 72,
+              "fallbacks": 0,
+              "max_tokens": 1024
+            },
+            "I3_fusion": {
+              "B": 0,
+              "identity": true
+            },
+            "checkpoint_sha256": "ec0c607a6247651cb8c5eb04e3c15a7ae4b067655c4ca6cb5b6ff9d80adaba85",
+            "weights_updated": false,
+            "ground_truth_reads": 0,
+            "elapsed_s": 2.616048795171082
+          },
+          "GT_reads": 0
+        },
+        {
+          "image_id": "densepass_231",
+          "warmup": false,
+          "seconds": 3.4515264919027686,
+          "peak_device_used_mib_sampled": 6523.0625,
+          "memory_samples": 172,
+          "sampling_interval_s": 0.02,
+          "peak_allocated_mib": 4157.20068359375,
+          "peak_reserved_mib": 5322.0,
+          "attention_token_lengths": [
+            128,
+            256,
+            384,
+            512,
+            640,
+            768,
+            896,
+            1024,
+            128,
+            256,
+            384,
+            512,
+            640,
+            768,
+            896,
+            1024
+          ],
+          "semantic": {
+            "memory": "i2",
+            "I3_budget": 0,
+            "forward_calls": 18,
+            "I3_selected_windows": [],
+            "memory_audit": {
+              "calls": 72,
+              "fallbacks": 0,
+              "max_tokens": 1024
+            },
+            "I3_fusion": {
+              "B": 0,
+              "identity": true
+            },
+            "checkpoint_sha256": "ec0c607a6247651cb8c5eb04e3c15a7ae4b067655c4ca6cb5b6ff9d80adaba85",
+            "weights_updated": false,
+            "ground_truth_reads": 0,
+            "elapsed_s": 2.5781193068251014
+          },
+          "GT_reads": 0
+        },
+        {
+          "image_id": "densepass_99",
+          "warmup": false,
+          "seconds": 3.4823465049266815,
+          "peak_device_used_mib_sampled": 6523.0625,
+          "memory_samples": 173,
+          "sampling_interval_s": 0.02,
+          "peak_allocated_mib": 4157.20068359375,
+          "peak_reserved_mib": 5322.0,
+          "attention_token_lengths": [
+            128,
+            256,
+            384,
+            512,
+            640,
+            768,
+            896,
+            1024,
+            128,
+            256,
+            384,
+            512,
+            640,
+            768,
+            896,
+            1024
+          ],
+          "semantic": {
+            "memory": "i2",
+            "I3_budget": 0,
+            "forward_calls": 18,
+            "I3_selected_windows": [],
+            "memory_audit": {
+              "calls": 72,
+              "fallbacks": 0,
+              "max_tokens": 1024
+            },
+            "I3_fusion": {
+              "B": 0,
+              "identity": true
+            },
+            "checkpoint_sha256": "ec0c607a6247651cb8c5eb04e3c15a7ae4b067655c4ca6cb5b6ff9d80adaba85",
+            "weights_updated": false,
+            "ground_truth_reads": 0,
+            "elapsed_s": 2.5734148817136884
+          },
+          "GT_reads": 0
+        },
+        {
+          "image_id": "densepass_100",
+          "warmup": false,
+          "seconds": 3.5000026812776923,
+          "peak_device_used_mib_sampled": 6523.0625,
+          "memory_samples": 174,
+          "sampling_interval_s": 0.02,
+          "peak_allocated_mib": 4157.20068359375,
+          "peak_reserved_mib": 5322.0,
+          "attention_token_lengths": [
+            128,
+            256,
+            384,
+            512,
+            640,
+            768,
+            896,
+            1024,
+            128,
+            256,
+            384,
+            512,
+            640,
+            768,
+            896,
+            1024
+          ],
+          "semantic": {
+            "memory": "i2",
+            "I3_budget": 0,
+            "forward_calls": 18,
+            "I3_selected_windows": [],
+            "memory_audit": {
+              "calls": 72,
+              "fallbacks": 0,
+              "max_tokens": 1024
+            },
+            "I3_fusion": {
+              "B": 0,
+              "identity": true
+            },
+            "checkpoint_sha256": "ec0c607a6247651cb8c5eb04e3c15a7ae4b067655c4ca6cb5b6ff9d80adaba85",
+            "weights_updated": false,
+            "ground_truth_reads": 0,
+            "elapsed_s": 2.600599728524685
+          },
+          "GT_reads": 0
+        },
+        {
+          "image_id": "densepass_231",
+          "warmup": false,
+          "seconds": 3.4159391932189465,
+          "peak_device_used_mib_sampled": 6523.0625,
+          "memory_samples": 170,
+          "sampling_interval_s": 0.02,
+          "peak_allocated_mib": 4157.20068359375,
+          "peak_reserved_mib": 5322.0,
+          "attention_token_lengths": [
+            128,
+            256,
+            384,
+            512,
+            640,
+            768,
+            896,
+            1024,
+            128,
+            256,
+            384,
+            512,
+            640,
+            768,
+            896,
+            1024
+          ],
+          "semantic": {
+            "memory": "i2",
+            "I3_budget": 0,
+            "forward_calls": 18,
+            "I3_selected_windows": [],
+            "memory_audit": {
+              "calls": 72,
+              "fallbacks": 0,
+              "max_tokens": 1024
+            },
+            "I3_fusion": {
+              "B": 0,
+              "identity": true
+            },
+            "checkpoint_sha256": "ec0c607a6247651cb8c5eb04e3c15a7ae4b067655c4ca6cb5b6ff9d80adaba85",
+            "weights_updated": false,
+            "ground_truth_reads": 0,
+            "elapsed_s": 2.543732823804021
+          },
+          "GT_reads": 0
+        },
+        {
+          "image_id": "densepass_99",
+          "warmup": false,
+          "seconds": 3.475552188232541,
+          "peak_device_used_mib_sampled": 6523.0625,
+          "memory_samples": 173,
+          "sampling_interval_s": 0.02,
+          "peak_allocated_mib": 4157.20068359375,
+          "peak_reserved_mib": 5322.0,
+          "attention_token_lengths": [
+            128,
+            256,
+            384,
+            512,
+            640,
+            768,
+            896,
+            1024,
+            128,
+            256,
+            384,
+            512,
+            640,
+            768,
+            896,
+            1024
+          ],
+          "semantic": {
+            "memory": "i2",
+            "I3_budget": 0,
+            "forward_calls": 18,
+            "I3_selected_windows": [],
+            "memory_audit": {
+              "calls": 72,
+              "fallbacks": 0,
+              "max_tokens": 1024
+            },
+            "I3_fusion": {
+              "B": 0,
+              "identity": true
+            },
+            "checkpoint_sha256": "ec0c607a6247651cb8c5eb04e3c15a7ae4b067655c4ca6cb5b6ff9d80adaba85",
+            "weights_updated": false,
+            "ground_truth_reads": 0,
+            "elapsed_s": 2.5686665205284953
+          },
+          "GT_reads": 0
+        }
+      ],
+      "scope": "Semantic engine with the same requested_probabilities13 output mapping as the primary evaluation: image loading/preprocessing,18 or20 forwards, semantic fusion and PNG output; no I1, DINO or text SAM2",
+      "limitations": [
+        "3 fixed images x2 repeats; initial weight loading excluded",
+        "CUDA event intervals can include stream scheduling/host gaps; not FLOP measurements",
+        "Sparse selector host timings can overlap queued GPU work; do not sum as a disjoint wall-time decomposition"
+      ]
+    },
+    "i2_B2": {
+      "status": "complete",
+      "variant": "i2_B2",
+      "mean_seconds": 5.08019615135466,
+      "median_seconds": 5.110798153094947,
+      "measurements": 6,
+      "unique_images": 3,
+      "weight_loading_seconds": 3.621972399763763,
+      "peak_device_used_mib_sampled": 6523.0625,
+      "peak_allocated_mib": 4157.20068359375,
+      "max_attention_tokens": 1024,
+      "forward_calls": 20,
+      "mean_MemoryAttention_CUDA_stream_interval_ms": 90.6969067255656,
+      "mean_selection_host_dispatch_ms": 200.53713023662567,
+      "profile": [
+        {
+          "image_id": "densepass_100",
+          "MemoryAttention_CUDA_stream_interval_ms": 91.58252811431885,
+          "MemoryAttention_calls": 18,
+          "selection_host_dispatch_ms": 185.3321073576808,
+          "selection_calls": 88
+        },
+        {
+          "image_id": "densepass_231",
+          "MemoryAttention_CUDA_stream_interval_ms": 90.40345573425293,
+          "MemoryAttention_calls": 18,
+          "selection_host_dispatch_ms": 207.68563076853752,
+          "selection_calls": 88
+        },
+        {
+          "image_id": "densepass_99",
+          "MemoryAttention_CUDA_stream_interval_ms": 90.104736328125,
+          "MemoryAttention_calls": 18,
+          "selection_host_dispatch_ms": 208.5936525836587,
+          "selection_calls": 88
+        }
+      ],
+      "trials": [
+        {
+          "image_id": "densepass_100",
+          "warmup": false,
+          "seconds": 5.0951577899977565,
+          "peak_device_used_mib_sampled": 6523.0625,
+          "memory_samples": 251,
+          "sampling_interval_s": 0.02,
+          "peak_allocated_mib": 4157.20068359375,
+          "peak_reserved_mib": 5322.0,
+          "attention_token_lengths": [
+            128,
+            256,
+            384,
+            512,
+            640,
+            768,
+            896,
+            1024,
+            128,
+            256,
+            384,
+            512,
+            640,
+            768,
+            896,
+            1024,
+            1024,
+            1024
+          ],
+          "semantic": {
+            "memory": "i2",
+            "I3_budget": 2,
+            "forward_calls": 20,
+            "I3_selected_windows": [
+              1728,
+              1856
+            ],
+            "memory_audit": {
+              "calls": 88,
+              "fallbacks": 0,
+              "max_tokens": 1024
+            },
+            "I3_fusion": {
+              "B": 2,
+              "identity": false
+            },
+            "checkpoint_sha256": "ec0c607a6247651cb8c5eb04e3c15a7ae4b067655c4ca6cb5b6ff9d80adaba85",
+            "weights_updated": false,
+            "ground_truth_reads": 0,
+            "elapsed_s": 3.8995325546711683
+          },
+          "GT_reads": 0
+        },
+        {
+          "image_id": "densepass_231",
+          "warmup": false,
+          "seconds": 4.985714239068329,
+          "peak_device_used_mib_sampled": 6523.0625,
+          "memory_samples": 243,
+          "sampling_interval_s": 0.02,
+          "peak_allocated_mib": 4157.20068359375,
+          "peak_reserved_mib": 5322.0,
+          "attention_token_lengths": [
+            128,
+            256,
+            384,
+            512,
+            640,
+            768,
+            896,
+            1024,
+            128,
+            256,
+            384,
+            512,
+            640,
+            768,
+            896,
+            1024,
+            1024,
+            1024
+          ],
+          "semantic": {
+            "memory": "i2",
+            "I3_budget": 2,
+            "forward_calls": 20,
+            "I3_selected_windows": [
+              1792,
+              1664
+            ],
+            "memory_audit": {
+              "calls": 88,
+              "fallbacks": 0,
+              "max_tokens": 1024
+            },
+            "I3_fusion": {
+              "B": 2,
+              "identity": false
+            },
+            "checkpoint_sha256": "ec0c607a6247651cb8c5eb04e3c15a7ae4b067655c4ca6cb5b6ff9d80adaba85",
+            "weights_updated": false,
+            "ground_truth_reads": 0,
+            "elapsed_s": 3.823167860507965
+          },
+          "GT_reads": 0
+        },
+        {
+          "image_id": "densepass_99",
+          "warmup": false,
+          "seconds": 5.126438516192138,
+          "peak_device_used_mib_sampled": 6523.0625,
+          "memory_samples": 253,
+          "sampling_interval_s": 0.02,
+          "peak_allocated_mib": 4157.20068359375,
+          "peak_reserved_mib": 5322.0,
+          "attention_token_lengths": [
+            128,
+            256,
+            384,
+            512,
+            640,
+            768,
+            896,
+            1024,
+            128,
+            256,
+            384,
+            512,
+            640,
+            768,
+            896,
+            1024,
+            1024,
+            1024
+          ],
+          "semantic": {
+            "memory": "i2",
+            "I3_budget": 2,
+            "forward_calls": 20,
+            "I3_selected_windows": [
+              1856,
+              1728
+            ],
+            "memory_audit": {
+              "calls": 88,
+              "fallbacks": 0,
+              "max_tokens": 1024
+            },
+            "I3_fusion": {
+              "B": 2,
+              "identity": false
+            },
+            "checkpoint_sha256": "ec0c607a6247651cb8c5eb04e3c15a7ae4b067655c4ca6cb5b6ff9d80adaba85",
+            "weights_updated": false,
+            "ground_truth_reads": 0,
+            "elapsed_s": 3.9162305435165763
+          },
+          "GT_reads": 0
+        },
+        {
+          "image_id": "densepass_100",
+          "warmup": false,
+          "seconds": 5.158321142196655,
+          "peak_device_used_mib_sampled": 6523.0625,
+          "memory_samples": 255,
+          "sampling_interval_s": 0.02,
+          "peak_allocated_mib": 4157.20068359375,
+          "peak_reserved_mib": 5322.0,
+          "attention_token_lengths": [
+            128,
+            256,
+            384,
+            512,
+            640,
+            768,
+            896,
+            1024,
+            128,
+            256,
+            384,
+            512,
+            640,
+            768,
+            896,
+            1024,
+            1024,
+            1024
+          ],
+          "semantic": {
+            "memory": "i2",
+            "I3_budget": 2,
+            "forward_calls": 20,
+            "I3_selected_windows": [
+              1728,
+              1856
+            ],
+            "memory_audit": {
+              "calls": 88,
+              "fallbacks": 0,
+              "max_tokens": 1024
+            },
+            "I3_fusion": {
+              "B": 2,
+              "identity": false
+            },
+            "checkpoint_sha256": "ec0c607a6247651cb8c5eb04e3c15a7ae4b067655c4ca6cb5b6ff9d80adaba85",
+            "weights_updated": false,
+            "ground_truth_reads": 0,
+            "elapsed_s": 3.932966085150838
+          },
+          "GT_reads": 0
+        },
+        {
+          "image_id": "densepass_231",
+          "warmup": false,
+          "seconds": 4.986578212119639,
+          "peak_device_used_mib_sampled": 6523.0625,
+          "memory_samples": 246,
+          "sampling_interval_s": 0.02,
+          "peak_allocated_mib": 4157.20068359375,
+          "peak_reserved_mib": 5322.0,
+          "attention_token_lengths": [
+            128,
+            256,
+            384,
+            512,
+            640,
+            768,
+            896,
+            1024,
+            128,
+            256,
+            384,
+            512,
+            640,
+            768,
+            896,
+            1024,
+            1024,
+            1024
+          ],
+          "semantic": {
+            "memory": "i2",
+            "I3_budget": 2,
+            "forward_calls": 20,
+            "I3_selected_windows": [
+              1792,
+              1664
+            ],
+            "memory_audit": {
+              "calls": 88,
+              "fallbacks": 0,
+              "max_tokens": 1024
+            },
+            "I3_fusion": {
+              "B": 2,
+              "identity": false
+            },
+            "checkpoint_sha256": "ec0c607a6247651cb8c5eb04e3c15a7ae4b067655c4ca6cb5b6ff9d80adaba85",
+            "weights_updated": false,
+            "ground_truth_reads": 0,
+            "elapsed_s": 3.8245709957554936
+          },
+          "GT_reads": 0
+        },
+        {
+          "image_id": "densepass_99",
+          "warmup": false,
+          "seconds": 5.128967008553445,
+          "peak_device_used_mib_sampled": 6523.0625,
+          "memory_samples": 249,
+          "sampling_interval_s": 0.02,
+          "peak_allocated_mib": 4157.20068359375,
+          "peak_reserved_mib": 5322.0,
+          "attention_token_lengths": [
+            128,
+            256,
+            384,
+            512,
+            640,
+            768,
+            896,
+            1024,
+            128,
+            256,
+            384,
+            512,
+            640,
+            768,
+            896,
+            1024,
+            1024,
+            1024
+          ],
+          "semantic": {
+            "memory": "i2",
+            "I3_budget": 2,
+            "forward_calls": 20,
+            "I3_selected_windows": [
+              1856,
+              1728
+            ],
+            "memory_audit": {
+              "calls": 88,
+              "fallbacks": 0,
+              "max_tokens": 1024
+            },
+            "I3_fusion": {
+              "B": 2,
+              "identity": false
+            },
+            "checkpoint_sha256": "ec0c607a6247651cb8c5eb04e3c15a7ae4b067655c4ca6cb5b6ff9d80adaba85",
+            "weights_updated": false,
+            "ground_truth_reads": 0,
+            "elapsed_s": 3.9159655570983887
+          },
+          "GT_reads": 0
+        }
+      ],
+      "scope": "Semantic engine with the same requested_probabilities13 output mapping as the primary evaluation: image loading/preprocessing,18 or20 forwards, semantic fusion and PNG output; no I1, DINO or text SAM2",
+      "limitations": [
+        "3 fixed images x2 repeats; initial weight loading excluded",
+        "CUDA event intervals can include stream scheduling/host gaps; not FLOP measurements",
+        "Sparse selector host timings can overlap queued GPU work; do not sum as a disjoint wall-time decomposition"
+      ]
+    }
+  },
+  "complete_system_efficiency": [
+    {
+      "scenario": "DensePASS_shared13",
+      "method": "original",
+      "measurements": 6,
+      "unique_images": 3,
+      "mean_seconds": 4.602696674410254,
+      "median_seconds": 4.595052035525441,
+      "p95_seconds_descriptive_small_sample": 4.67359670274891,
+      "serial_images_per_second": 0.2172639369349992,
+      "peak_device_used_mib_sampled": 6457.0625,
+      "semantic_peak_allocated_mib": 4157.20068359375,
+      "semantic_peak_reserved_mib": 5256.0,
+      "text_peak_allocated_mib": 0,
+      "text_peak_reserved_mib": 0
+    },
+    {
+      "scenario": "DensePASS_shared13",
+      "method": "full",
+      "measurements": 6,
+      "unique_images": 3,
+      "mean_seconds": 13.009320680207262,
+      "median_seconds": 13.048600897192955,
+      "p95_seconds_descriptive_small_sample": 13.546194850234315,
+      "serial_images_per_second": 0.07686796448345128,
+      "peak_device_used_mib_sampled": 9522.4375,
+      "semantic_peak_allocated_mib": 4157.20068359375,
+      "semantic_peak_reserved_mib": 5322.0,
+      "text_peak_allocated_mib": 2101.69677734375,
+      "text_peak_reserved_mib": 2406.0
+    }
+  ],
+  "I2_config_modified": false,
+  "target_training": false,
+  "threshold_search": false,
+  "scope": "Same frozen checkpoint and100 DensePASS images; I2 and I3 ablations isolate inference components; DensePASS was previously used for method development"
+}

@@ -1,0 +1,1676 @@
+{
+  "status": "complete",
+  "rows": [
+    {
+      "scenario": "DensePASS_shared13",
+      "method": "original",
+      "measurements": 6,
+      "unique_images": 3,
+      "mean_seconds": 4.602696674410254,
+      "median_seconds": 4.595052035525441,
+      "p95_seconds_descriptive_small_sample": 4.67359670274891,
+      "serial_images_per_second": 0.2172639369349992,
+      "peak_device_used_mib_sampled": 6457.0625,
+      "semantic_peak_allocated_mib": 4157.20068359375,
+      "semantic_peak_reserved_mib": 5256.0,
+      "text_peak_allocated_mib": 0,
+      "text_peak_reserved_mib": 0
+    },
+    {
+      "scenario": "DensePASS_shared13",
+      "method": "full",
+      "measurements": 6,
+      "unique_images": 3,
+      "mean_seconds": 13.009320680207262,
+      "median_seconds": 13.048600897192955,
+      "p95_seconds_descriptive_small_sample": 13.546194850234315,
+      "serial_images_per_second": 0.07686796448345128,
+      "peak_device_used_mib_sampled": 9522.4375,
+      "semantic_peak_allocated_mib": 4157.20068359375,
+      "semantic_peak_reserved_mib": 5322.0,
+      "text_peak_allocated_mib": 2101.69677734375,
+      "text_peak_reserved_mib": 2406.0
+    }
+  ],
+  "measured_trials": [
+    {
+      "method": "original",
+      "scenario": "DensePASS_shared13",
+      "image_id": "densepass_100",
+      "repeat": 0,
+      "warmup": false,
+      "input_sha256": "4360ed7c6f42119f9c3817f65d46865afce5461ef3762861eb59b9c2acc9715d",
+      "end_to_end_seconds": 4.564412152394652,
+      "peak_device_used_mib_sampled": 6457.0625,
+      "memory_samples": 228,
+      "sampling_interval_s": 0.02,
+      "semantic_service": {
+        "semantic": {
+          "memory": "dense",
+          "I3_budget": 0,
+          "forward_calls": 18,
+          "I3_selected_windows": [],
+          "memory_audit": {
+            "mode": "dense",
+            "calls": 0,
+            "fallbacks": 0,
+            "max_tokens": 32768
+          },
+          "I3_fusion": {
+            "B": 0,
+            "identity": true
+          },
+          "checkpoint_sha256": "ec0c607a6247651cb8c5eb04e3c15a7ae4b067655c4ca6cb5b6ff9d80adaba85",
+          "weights_updated": false,
+          "ground_truth_reads": 0,
+          "elapsed_s": 3.349555947817862
+        },
+        "token_trace": [
+          {
+            "before_sparse_selection": 4096,
+            "attention_input_tokens": 4096
+          },
+          {
+            "before_sparse_selection": 8192,
+            "attention_input_tokens": 8192
+          },
+          {
+            "before_sparse_selection": 12288,
+            "attention_input_tokens": 12288
+          },
+          {
+            "before_sparse_selection": 16384,
+            "attention_input_tokens": 16384
+          },
+          {
+            "before_sparse_selection": 20480,
+            "attention_input_tokens": 20480
+          },
+          {
+            "before_sparse_selection": 24576,
+            "attention_input_tokens": 24576
+          },
+          {
+            "before_sparse_selection": 28672,
+            "attention_input_tokens": 28672
+          },
+          {
+            "before_sparse_selection": 32768,
+            "attention_input_tokens": 32768
+          },
+          {
+            "before_sparse_selection": 4096,
+            "attention_input_tokens": 4096
+          },
+          {
+            "before_sparse_selection": 8192,
+            "attention_input_tokens": 8192
+          },
+          {
+            "before_sparse_selection": 12288,
+            "attention_input_tokens": 12288
+          },
+          {
+            "before_sparse_selection": 16384,
+            "attention_input_tokens": 16384
+          },
+          {
+            "before_sparse_selection": 20480,
+            "attention_input_tokens": 20480
+          },
+          {
+            "before_sparse_selection": 24576,
+            "attention_input_tokens": 24576
+          },
+          {
+            "before_sparse_selection": 28672,
+            "attention_input_tokens": 28672
+          },
+          {
+            "before_sparse_selection": 32768,
+            "attention_input_tokens": 32768
+          }
+        ],
+        "prediction_sha256": "9bd1ca8de9116acc7d94cbd58c2c92e4238a3d76baee2771c678496aee2d43d4",
+        "common13_v1_v2_equal": null,
+        "classes": [
+          "road",
+          "sidewalk",
+          "building",
+          "wall",
+          "fence",
+          "pole",
+          "traffic light",
+          "traffic sign",
+          "vegetation",
+          "terrain",
+          "sky",
+          "person",
+          "car"
+        ],
+        "target_GT_reads": 0,
+        "weights_updated": false,
+        "service_seconds": 4.546444677747786,
+        "status": "complete",
+        "peak_allocated_mib": 4157.20068359375,
+        "peak_reserved_mib": 5256.0
+      },
+      "text_service": null,
+      "isolated_from_other_GPU_jobs": true,
+      "cached_candidate_reads": false
+    },
+    {
+      "method": "original",
+      "scenario": "DensePASS_shared13",
+      "image_id": "densepass_231",
+      "repeat": 0,
+      "warmup": false,
+      "input_sha256": "3fcebc4a6ff9c1f3fada8eb849a647e1b33882b8c8b774551479b94154af8385",
+      "end_to_end_seconds": 4.546331129968166,
+      "peak_device_used_mib_sampled": 6457.0625,
+      "memory_samples": 228,
+      "sampling_interval_s": 0.02,
+      "semantic_service": {
+        "semantic": {
+          "memory": "dense",
+          "I3_budget": 0,
+          "forward_calls": 18,
+          "I3_selected_windows": [],
+          "memory_audit": {
+            "mode": "dense",
+            "calls": 0,
+            "fallbacks": 0,
+            "max_tokens": 32768
+          },
+          "I3_fusion": {
+            "B": 0,
+            "identity": true
+          },
+          "checkpoint_sha256": "ec0c607a6247651cb8c5eb04e3c15a7ae4b067655c4ca6cb5b6ff9d80adaba85",
+          "weights_updated": false,
+          "ground_truth_reads": 0,
+          "elapsed_s": 3.322409766726196
+        },
+        "token_trace": [
+          {
+            "before_sparse_selection": 4096,
+            "attention_input_tokens": 4096
+          },
+          {
+            "before_sparse_selection": 8192,
+            "attention_input_tokens": 8192
+          },
+          {
+            "before_sparse_selection": 12288,
+            "attention_input_tokens": 12288
+          },
+          {
+            "before_sparse_selection": 16384,
+            "attention_input_tokens": 16384
+          },
+          {
+            "before_sparse_selection": 20480,
+            "attention_input_tokens": 20480
+          },
+          {
+            "before_sparse_selection": 24576,
+            "attention_input_tokens": 24576
+          },
+          {
+            "before_sparse_selection": 28672,
+            "attention_input_tokens": 28672
+          },
+          {
+            "before_sparse_selection": 32768,
+            "attention_input_tokens": 32768
+          },
+          {
+            "before_sparse_selection": 4096,
+            "attention_input_tokens": 4096
+          },
+          {
+            "before_sparse_selection": 8192,
+            "attention_input_tokens": 8192
+          },
+          {
+            "before_sparse_selection": 12288,
+            "attention_input_tokens": 12288
+          },
+          {
+            "before_sparse_selection": 16384,
+            "attention_input_tokens": 16384
+          },
+          {
+            "before_sparse_selection": 20480,
+            "attention_input_tokens": 20480
+          },
+          {
+            "before_sparse_selection": 24576,
+            "attention_input_tokens": 24576
+          },
+          {
+            "before_sparse_selection": 28672,
+            "attention_input_tokens": 28672
+          },
+          {
+            "before_sparse_selection": 32768,
+            "attention_input_tokens": 32768
+          }
+        ],
+        "prediction_sha256": "9f55f4a7e46f9fd61ce7f6a8444c32251e344bb55fc63d4f3bb8c93f2395317b",
+        "common13_v1_v2_equal": null,
+        "classes": [
+          "road",
+          "sidewalk",
+          "building",
+          "wall",
+          "fence",
+          "pole",
+          "traffic light",
+          "traffic sign",
+          "vegetation",
+          "terrain",
+          "sky",
+          "person",
+          "car"
+        ],
+        "target_GT_reads": 0,
+        "weights_updated": false,
+        "service_seconds": 4.524005736224353,
+        "status": "complete",
+        "peak_allocated_mib": 4157.20068359375,
+        "peak_reserved_mib": 5256.0
+      },
+      "text_service": null,
+      "isolated_from_other_GPU_jobs": true,
+      "cached_candidate_reads": false
+    },
+    {
+      "method": "original",
+      "scenario": "DensePASS_shared13",
+      "image_id": "densepass_99",
+      "repeat": 0,
+      "warmup": false,
+      "input_sha256": "3910b9c2e2730859090a21faa31945833e6d3390d6d23646a2f94d774ae44a9a",
+      "end_to_end_seconds": 4.574853029102087,
+      "peak_device_used_mib_sampled": 6457.0625,
+      "memory_samples": 229,
+      "sampling_interval_s": 0.02,
+      "semantic_service": {
+        "semantic": {
+          "memory": "dense",
+          "I3_budget": 0,
+          "forward_calls": 18,
+          "I3_selected_windows": [],
+          "memory_audit": {
+            "mode": "dense",
+            "calls": 0,
+            "fallbacks": 0,
+            "max_tokens": 32768
+          },
+          "I3_fusion": {
+            "B": 0,
+            "identity": true
+          },
+          "checkpoint_sha256": "ec0c607a6247651cb8c5eb04e3c15a7ae4b067655c4ca6cb5b6ff9d80adaba85",
+          "weights_updated": false,
+          "ground_truth_reads": 0,
+          "elapsed_s": 3.339578539133072
+        },
+        "token_trace": [
+          {
+            "before_sparse_selection": 4096,
+            "attention_input_tokens": 4096
+          },
+          {
+            "before_sparse_selection": 8192,
+            "attention_input_tokens": 8192
+          },
+          {
+            "before_sparse_selection": 12288,
+            "attention_input_tokens": 12288
+          },
+          {
+            "before_sparse_selection": 16384,
+            "attention_input_tokens": 16384
+          },
+          {
+            "before_sparse_selection": 20480,
+            "attention_input_tokens": 20480
+          },
+          {
+            "before_sparse_selection": 24576,
+            "attention_input_tokens": 24576
+          },
+          {
+            "before_sparse_selection": 28672,
+            "attention_input_tokens": 28672
+          },
+          {
+            "before_sparse_selection": 32768,
+            "attention_input_tokens": 32768
+          },
+          {
+            "before_sparse_selection": 4096,
+            "attention_input_tokens": 4096
+          },
+          {
+            "before_sparse_selection": 8192,
+            "attention_input_tokens": 8192
+          },
+          {
+            "before_sparse_selection": 12288,
+            "attention_input_tokens": 12288
+          },
+          {
+            "before_sparse_selection": 16384,
+            "attention_input_tokens": 16384
+          },
+          {
+            "before_sparse_selection": 20480,
+            "attention_input_tokens": 20480
+          },
+          {
+            "before_sparse_selection": 24576,
+            "attention_input_tokens": 24576
+          },
+          {
+            "before_sparse_selection": 28672,
+            "attention_input_tokens": 28672
+          },
+          {
+            "before_sparse_selection": 32768,
+            "attention_input_tokens": 32768
+          }
+        ],
+        "prediction_sha256": "80c710999ba41eb79448095e6922f9837ed58fa735cd4f5971122ff52b83d78b",
+        "common13_v1_v2_equal": null,
+        "classes": [
+          "road",
+          "sidewalk",
+          "building",
+          "wall",
+          "fence",
+          "pole",
+          "traffic light",
+          "traffic sign",
+          "vegetation",
+          "terrain",
+          "sky",
+          "person",
+          "car"
+        ],
+        "target_GT_reads": 0,
+        "weights_updated": false,
+        "service_seconds": 4.559486789628863,
+        "status": "complete",
+        "peak_allocated_mib": 4157.20068359375,
+        "peak_reserved_mib": 5256.0
+      },
+      "text_service": null,
+      "isolated_from_other_GPU_jobs": true,
+      "cached_candidate_reads": false
+    },
+    {
+      "method": "original",
+      "scenario": "DensePASS_shared13",
+      "image_id": "densepass_100",
+      "repeat": 1,
+      "warmup": false,
+      "input_sha256": "4360ed7c6f42119f9c3817f65d46865afce5461ef3762861eb59b9c2acc9715d",
+      "end_to_end_seconds": 4.615251041948795,
+      "peak_device_used_mib_sampled": 6457.0625,
+      "memory_samples": 231,
+      "sampling_interval_s": 0.02,
+      "semantic_service": {
+        "semantic": {
+          "memory": "dense",
+          "I3_budget": 0,
+          "forward_calls": 18,
+          "I3_selected_windows": [],
+          "memory_audit": {
+            "mode": "dense",
+            "calls": 0,
+            "fallbacks": 0,
+            "max_tokens": 32768
+          },
+          "I3_fusion": {
+            "B": 0,
+            "identity": true
+          },
+          "checkpoint_sha256": "ec0c607a6247651cb8c5eb04e3c15a7ae4b067655c4ca6cb5b6ff9d80adaba85",
+          "weights_updated": false,
+          "ground_truth_reads": 0,
+          "elapsed_s": 3.4155372632667422
+        },
+        "token_trace": [
+          {
+            "before_sparse_selection": 4096,
+            "attention_input_tokens": 4096
+          },
+          {
+            "before_sparse_selection": 8192,
+            "attention_input_tokens": 8192
+          },
+          {
+            "before_sparse_selection": 12288,
+            "attention_input_tokens": 12288
+          },
+          {
+            "before_sparse_selection": 16384,
+            "attention_input_tokens": 16384
+          },
+          {
+            "before_sparse_selection": 20480,
+            "attention_input_tokens": 20480
+          },
+          {
+            "before_sparse_selection": 24576,
+            "attention_input_tokens": 24576
+          },
+          {
+            "before_sparse_selection": 28672,
+            "attention_input_tokens": 28672
+          },
+          {
+            "before_sparse_selection": 32768,
+            "attention_input_tokens": 32768
+          },
+          {
+            "before_sparse_selection": 4096,
+            "attention_input_tokens": 4096
+          },
+          {
+            "before_sparse_selection": 8192,
+            "attention_input_tokens": 8192
+          },
+          {
+            "before_sparse_selection": 12288,
+            "attention_input_tokens": 12288
+          },
+          {
+            "before_sparse_selection": 16384,
+            "attention_input_tokens": 16384
+          },
+          {
+            "before_sparse_selection": 20480,
+            "attention_input_tokens": 20480
+          },
+          {
+            "before_sparse_selection": 24576,
+            "attention_input_tokens": 24576
+          },
+          {
+            "before_sparse_selection": 28672,
+            "attention_input_tokens": 28672
+          },
+          {
+            "before_sparse_selection": 32768,
+            "attention_input_tokens": 32768
+          }
+        ],
+        "prediction_sha256": "9bd1ca8de9116acc7d94cbd58c2c92e4238a3d76baee2771c678496aee2d43d4",
+        "common13_v1_v2_equal": null,
+        "classes": [
+          "road",
+          "sidewalk",
+          "building",
+          "wall",
+          "fence",
+          "pole",
+          "traffic light",
+          "traffic sign",
+          "vegetation",
+          "terrain",
+          "sky",
+          "person",
+          "car"
+        ],
+        "target_GT_reads": 0,
+        "weights_updated": false,
+        "service_seconds": 4.597211551852524,
+        "status": "complete",
+        "peak_allocated_mib": 4157.20068359375,
+        "peak_reserved_mib": 5256.0
+      },
+      "text_service": null,
+      "isolated_from_other_GPU_jobs": true,
+      "cached_candidate_reads": false
+    },
+    {
+      "method": "original",
+      "scenario": "DensePASS_shared13",
+      "image_id": "densepass_231",
+      "repeat": 1,
+      "warmup": false,
+      "input_sha256": "3fcebc4a6ff9c1f3fada8eb849a647e1b33882b8c8b774551479b94154af8385",
+      "end_to_end_seconds": 4.625805634073913,
+      "peak_device_used_mib_sampled": 6457.0625,
+      "memory_samples": 227,
+      "sampling_interval_s": 0.02,
+      "semantic_service": {
+        "semantic": {
+          "memory": "dense",
+          "I3_budget": 0,
+          "forward_calls": 18,
+          "I3_selected_windows": [],
+          "memory_audit": {
+            "mode": "dense",
+            "calls": 0,
+            "fallbacks": 0,
+            "max_tokens": 32768
+          },
+          "I3_fusion": {
+            "B": 0,
+            "identity": true
+          },
+          "checkpoint_sha256": "ec0c607a6247651cb8c5eb04e3c15a7ae4b067655c4ca6cb5b6ff9d80adaba85",
+          "weights_updated": false,
+          "ground_truth_reads": 0,
+          "elapsed_s": 3.428357017226517
+        },
+        "token_trace": [
+          {
+            "before_sparse_selection": 4096,
+            "attention_input_tokens": 4096
+          },
+          {
+            "before_sparse_selection": 8192,
+            "attention_input_tokens": 8192
+          },
+          {
+            "before_sparse_selection": 12288,
+            "attention_input_tokens": 12288
+          },
+          {
+            "before_sparse_selection": 16384,
+            "attention_input_tokens": 16384
+          },
+          {
+            "before_sparse_selection": 20480,
+            "attention_input_tokens": 20480
+          },
+          {
+            "before_sparse_selection": 24576,
+            "attention_input_tokens": 24576
+          },
+          {
+            "before_sparse_selection": 28672,
+            "attention_input_tokens": 28672
+          },
+          {
+            "before_sparse_selection": 32768,
+            "attention_input_tokens": 32768
+          },
+          {
+            "before_sparse_selection": 4096,
+            "attention_input_tokens": 4096
+          },
+          {
+            "before_sparse_selection": 8192,
+            "attention_input_tokens": 8192
+          },
+          {
+            "before_sparse_selection": 12288,
+            "attention_input_tokens": 12288
+          },
+          {
+            "before_sparse_selection": 16384,
+            "attention_input_tokens": 16384
+          },
+          {
+            "before_sparse_selection": 20480,
+            "attention_input_tokens": 20480
+          },
+          {
+            "before_sparse_selection": 24576,
+            "attention_input_tokens": 24576
+          },
+          {
+            "before_sparse_selection": 28672,
+            "attention_input_tokens": 28672
+          },
+          {
+            "before_sparse_selection": 32768,
+            "attention_input_tokens": 32768
+          }
+        ],
+        "prediction_sha256": "9f55f4a7e46f9fd61ce7f6a8444c32251e344bb55fc63d4f3bb8c93f2395317b",
+        "common13_v1_v2_equal": null,
+        "classes": [
+          "road",
+          "sidewalk",
+          "building",
+          "wall",
+          "fence",
+          "pole",
+          "traffic light",
+          "traffic sign",
+          "vegetation",
+          "terrain",
+          "sky",
+          "person",
+          "car"
+        ],
+        "target_GT_reads": 0,
+        "weights_updated": false,
+        "service_seconds": 4.608297155238688,
+        "status": "complete",
+        "peak_allocated_mib": 4157.20068359375,
+        "peak_reserved_mib": 5256.0
+      },
+      "text_service": null,
+      "isolated_from_other_GPU_jobs": true,
+      "cached_candidate_reads": false
+    },
+    {
+      "method": "original",
+      "scenario": "DensePASS_shared13",
+      "image_id": "densepass_99",
+      "repeat": 1,
+      "warmup": false,
+      "input_sha256": "3910b9c2e2730859090a21faa31945833e6d3390d6d23646a2f94d774ae44a9a",
+      "end_to_end_seconds": 4.689527058973908,
+      "peak_device_used_mib_sampled": 6457.0625,
+      "memory_samples": 234,
+      "sampling_interval_s": 0.02,
+      "semantic_service": {
+        "semantic": {
+          "memory": "dense",
+          "I3_budget": 0,
+          "forward_calls": 18,
+          "I3_selected_windows": [],
+          "memory_audit": {
+            "mode": "dense",
+            "calls": 0,
+            "fallbacks": 0,
+            "max_tokens": 32768
+          },
+          "I3_fusion": {
+            "B": 0,
+            "identity": true
+          },
+          "checkpoint_sha256": "ec0c607a6247651cb8c5eb04e3c15a7ae4b067655c4ca6cb5b6ff9d80adaba85",
+          "weights_updated": false,
+          "ground_truth_reads": 0,
+          "elapsed_s": 3.4116926370188594
+        },
+        "token_trace": [
+          {
+            "before_sparse_selection": 4096,
+            "attention_input_tokens": 4096
+          },
+          {
+            "before_sparse_selection": 8192,
+            "attention_input_tokens": 8192
+          },
+          {
+            "before_sparse_selection": 12288,
+            "attention_input_tokens": 12288
+          },
+          {
+            "before_sparse_selection": 16384,
+            "attention_input_tokens": 16384
+          },
+          {
+            "before_sparse_selection": 20480,
+            "attention_input_tokens": 20480
+          },
+          {
+            "before_sparse_selection": 24576,
+            "attention_input_tokens": 24576
+          },
+          {
+            "before_sparse_selection": 28672,
+            "attention_input_tokens": 28672
+          },
+          {
+            "before_sparse_selection": 32768,
+            "attention_input_tokens": 32768
+          },
+          {
+            "before_sparse_selection": 4096,
+            "attention_input_tokens": 4096
+          },
+          {
+            "before_sparse_selection": 8192,
+            "attention_input_tokens": 8192
+          },
+          {
+            "before_sparse_selection": 12288,
+            "attention_input_tokens": 12288
+          },
+          {
+            "before_sparse_selection": 16384,
+            "attention_input_tokens": 16384
+          },
+          {
+            "before_sparse_selection": 20480,
+            "attention_input_tokens": 20480
+          },
+          {
+            "before_sparse_selection": 24576,
+            "attention_input_tokens": 24576
+          },
+          {
+            "before_sparse_selection": 28672,
+            "attention_input_tokens": 28672
+          },
+          {
+            "before_sparse_selection": 32768,
+            "attention_input_tokens": 32768
+          }
+        ],
+        "prediction_sha256": "80c710999ba41eb79448095e6922f9837ed58fa735cd4f5971122ff52b83d78b",
+        "common13_v1_v2_equal": null,
+        "classes": [
+          "road",
+          "sidewalk",
+          "building",
+          "wall",
+          "fence",
+          "pole",
+          "traffic light",
+          "traffic sign",
+          "vegetation",
+          "terrain",
+          "sky",
+          "person",
+          "car"
+        ],
+        "target_GT_reads": 0,
+        "weights_updated": false,
+        "service_seconds": 4.673457034863532,
+        "status": "complete",
+        "peak_allocated_mib": 4157.20068359375,
+        "peak_reserved_mib": 5256.0
+      },
+      "text_service": null,
+      "isolated_from_other_GPU_jobs": true,
+      "cached_candidate_reads": false
+    },
+    {
+      "method": "full",
+      "scenario": "DensePASS_shared13",
+      "image_id": "densepass_100",
+      "repeat": 0,
+      "warmup": false,
+      "input_sha256": "4360ed7c6f42119f9c3817f65d46865afce5461ef3762861eb59b9c2acc9715d",
+      "end_to_end_seconds": 13.699999847449362,
+      "peak_device_used_mib_sampled": 9522.4375,
+      "memory_samples": 679,
+      "sampling_interval_s": 0.02,
+      "semantic_service": {
+        "semantic": {
+          "memory": "i2",
+          "I3_budget": 2,
+          "forward_calls": 20,
+          "I3_selected_windows": [
+            1728,
+            1856
+          ],
+          "memory_audit": {
+            "calls": 88,
+            "fallbacks": 0,
+            "max_tokens": 1024
+          },
+          "I3_fusion": {
+            "B": 2,
+            "identity": false
+          },
+          "checkpoint_sha256": "ec0c607a6247651cb8c5eb04e3c15a7ae4b067655c4ca6cb5b6ff9d80adaba85",
+          "weights_updated": false,
+          "ground_truth_reads": 0,
+          "elapsed_s": 3.892760238610208
+        },
+        "token_trace": [
+          {
+            "before_sparse_selection": 4096,
+            "attention_input_tokens": 128
+          },
+          {
+            "before_sparse_selection": 8192,
+            "attention_input_tokens": 256
+          },
+          {
+            "before_sparse_selection": 12288,
+            "attention_input_tokens": 384
+          },
+          {
+            "before_sparse_selection": 16384,
+            "attention_input_tokens": 512
+          },
+          {
+            "before_sparse_selection": 20480,
+            "attention_input_tokens": 640
+          },
+          {
+            "before_sparse_selection": 24576,
+            "attention_input_tokens": 768
+          },
+          {
+            "before_sparse_selection": 28672,
+            "attention_input_tokens": 896
+          },
+          {
+            "before_sparse_selection": 32768,
+            "attention_input_tokens": 1024
+          },
+          {
+            "before_sparse_selection": 4096,
+            "attention_input_tokens": 128
+          },
+          {
+            "before_sparse_selection": 8192,
+            "attention_input_tokens": 256
+          },
+          {
+            "before_sparse_selection": 12288,
+            "attention_input_tokens": 384
+          },
+          {
+            "before_sparse_selection": 16384,
+            "attention_input_tokens": 512
+          },
+          {
+            "before_sparse_selection": 20480,
+            "attention_input_tokens": 640
+          },
+          {
+            "before_sparse_selection": 24576,
+            "attention_input_tokens": 768
+          },
+          {
+            "before_sparse_selection": 28672,
+            "attention_input_tokens": 896
+          },
+          {
+            "before_sparse_selection": 32768,
+            "attention_input_tokens": 1024
+          },
+          {
+            "before_sparse_selection": 32768,
+            "attention_input_tokens": 1024
+          },
+          {
+            "before_sparse_selection": 32768,
+            "attention_input_tokens": 1024
+          }
+        ],
+        "prediction_sha256": "44ff4290fea6e291cd7b1b9eceab492459345a99c61cdeafb4091cfd27a70487",
+        "common13_v1_v2_equal": null,
+        "classes": [
+          "road",
+          "sidewalk",
+          "building",
+          "wall",
+          "fence",
+          "pole",
+          "traffic light",
+          "traffic sign",
+          "vegetation",
+          "terrain",
+          "sky",
+          "person",
+          "car"
+        ],
+        "target_GT_reads": 0,
+        "weights_updated": false,
+        "service_seconds": 6.8070785365998745,
+        "status": "complete",
+        "peak_allocated_mib": 4157.20068359375,
+        "peak_reserved_mib": 5322.0
+      },
+      "text_service": {
+        "detector_calls": 56,
+        "sam_image_encodes": 4,
+        "within_image_SAM_cache_hits": 52,
+        "candidates": 56,
+        "cross_image_candidate_cache_used": false,
+        "service_seconds": 6.86290776822716,
+        "status": "complete",
+        "peak_allocated_mib": 2101.69677734375,
+        "peak_reserved_mib": 2406.0
+      },
+      "isolated_from_other_GPU_jobs": true,
+      "cached_candidate_reads": false
+    },
+    {
+      "method": "full",
+      "scenario": "DensePASS_shared13",
+      "image_id": "densepass_231",
+      "repeat": 0,
+      "warmup": false,
+      "input_sha256": "3fcebc4a6ff9c1f3fada8eb849a647e1b33882b8c8b774551479b94154af8385",
+      "end_to_end_seconds": 12.636926971375942,
+      "peak_device_used_mib_sampled": 9522.4375,
+      "memory_samples": 626,
+      "sampling_interval_s": 0.02,
+      "semantic_service": {
+        "semantic": {
+          "memory": "i2",
+          "I3_budget": 2,
+          "forward_calls": 20,
+          "I3_selected_windows": [
+            1792,
+            1664
+          ],
+          "memory_audit": {
+            "calls": 88,
+            "fallbacks": 0,
+            "max_tokens": 1024
+          },
+          "I3_fusion": {
+            "B": 2,
+            "identity": false
+          },
+          "checkpoint_sha256": "ec0c607a6247651cb8c5eb04e3c15a7ae4b067655c4ca6cb5b6ff9d80adaba85",
+          "weights_updated": false,
+          "ground_truth_reads": 0,
+          "elapsed_s": 2.9424690967425704
+        },
+        "token_trace": [
+          {
+            "before_sparse_selection": 4096,
+            "attention_input_tokens": 128
+          },
+          {
+            "before_sparse_selection": 8192,
+            "attention_input_tokens": 256
+          },
+          {
+            "before_sparse_selection": 12288,
+            "attention_input_tokens": 384
+          },
+          {
+            "before_sparse_selection": 16384,
+            "attention_input_tokens": 512
+          },
+          {
+            "before_sparse_selection": 20480,
+            "attention_input_tokens": 640
+          },
+          {
+            "before_sparse_selection": 24576,
+            "attention_input_tokens": 768
+          },
+          {
+            "before_sparse_selection": 28672,
+            "attention_input_tokens": 896
+          },
+          {
+            "before_sparse_selection": 32768,
+            "attention_input_tokens": 1024
+          },
+          {
+            "before_sparse_selection": 4096,
+            "attention_input_tokens": 128
+          },
+          {
+            "before_sparse_selection": 8192,
+            "attention_input_tokens": 256
+          },
+          {
+            "before_sparse_selection": 12288,
+            "attention_input_tokens": 384
+          },
+          {
+            "before_sparse_selection": 16384,
+            "attention_input_tokens": 512
+          },
+          {
+            "before_sparse_selection": 20480,
+            "attention_input_tokens": 640
+          },
+          {
+            "before_sparse_selection": 24576,
+            "attention_input_tokens": 768
+          },
+          {
+            "before_sparse_selection": 28672,
+            "attention_input_tokens": 896
+          },
+          {
+            "before_sparse_selection": 32768,
+            "attention_input_tokens": 1024
+          },
+          {
+            "before_sparse_selection": 32768,
+            "attention_input_tokens": 1024
+          },
+          {
+            "before_sparse_selection": 32768,
+            "attention_input_tokens": 1024
+          }
+        ],
+        "prediction_sha256": "a853f6037b84f1f65bc835c8626f50b6fd1d0217d71d01f7c22d288bca226ae4",
+        "common13_v1_v2_equal": null,
+        "classes": [
+          "road",
+          "sidewalk",
+          "building",
+          "wall",
+          "fence",
+          "pole",
+          "traffic light",
+          "traffic sign",
+          "vegetation",
+          "terrain",
+          "sky",
+          "person",
+          "car"
+        ],
+        "target_GT_reads": 0,
+        "weights_updated": false,
+        "service_seconds": 5.7780229691416025,
+        "status": "complete",
+        "peak_allocated_mib": 4157.20068359375,
+        "peak_reserved_mib": 5322.0
+      },
+      "text_service": {
+        "detector_calls": 56,
+        "sam_image_encodes": 4,
+        "within_image_SAM_cache_hits": 52,
+        "candidates": 72,
+        "cross_image_candidate_cache_used": false,
+        "service_seconds": 6.84024262893945,
+        "status": "complete",
+        "peak_allocated_mib": 2101.69677734375,
+        "peak_reserved_mib": 2406.0
+      },
+      "isolated_from_other_GPU_jobs": true,
+      "cached_candidate_reads": false
+    },
+    {
+      "method": "full",
+      "scenario": "DensePASS_shared13",
+      "image_id": "densepass_99",
+      "repeat": 0,
+      "warmup": false,
+      "input_sha256": "3910b9c2e2730859090a21faa31945833e6d3390d6d23646a2f94d774ae44a9a",
+      "end_to_end_seconds": 13.025012558326125,
+      "peak_device_used_mib_sampled": 9522.4375,
+      "memory_samples": 643,
+      "sampling_interval_s": 0.02,
+      "semantic_service": {
+        "semantic": {
+          "memory": "i2",
+          "I3_budget": 2,
+          "forward_calls": 20,
+          "I3_selected_windows": [
+            1856,
+            1728
+          ],
+          "memory_audit": {
+            "calls": 88,
+            "fallbacks": 0,
+            "max_tokens": 1024
+          },
+          "I3_fusion": {
+            "B": 2,
+            "identity": false
+          },
+          "checkpoint_sha256": "ec0c607a6247651cb8c5eb04e3c15a7ae4b067655c4ca6cb5b6ff9d80adaba85",
+          "weights_updated": false,
+          "ground_truth_reads": 0,
+          "elapsed_s": 2.972552679479122
+        },
+        "token_trace": [
+          {
+            "before_sparse_selection": 4096,
+            "attention_input_tokens": 128
+          },
+          {
+            "before_sparse_selection": 8192,
+            "attention_input_tokens": 256
+          },
+          {
+            "before_sparse_selection": 12288,
+            "attention_input_tokens": 384
+          },
+          {
+            "before_sparse_selection": 16384,
+            "attention_input_tokens": 512
+          },
+          {
+            "before_sparse_selection": 20480,
+            "attention_input_tokens": 640
+          },
+          {
+            "before_sparse_selection": 24576,
+            "attention_input_tokens": 768
+          },
+          {
+            "before_sparse_selection": 28672,
+            "attention_input_tokens": 896
+          },
+          {
+            "before_sparse_selection": 32768,
+            "attention_input_tokens": 1024
+          },
+          {
+            "before_sparse_selection": 4096,
+            "attention_input_tokens": 128
+          },
+          {
+            "before_sparse_selection": 8192,
+            "attention_input_tokens": 256
+          },
+          {
+            "before_sparse_selection": 12288,
+            "attention_input_tokens": 384
+          },
+          {
+            "before_sparse_selection": 16384,
+            "attention_input_tokens": 512
+          },
+          {
+            "before_sparse_selection": 20480,
+            "attention_input_tokens": 640
+          },
+          {
+            "before_sparse_selection": 24576,
+            "attention_input_tokens": 768
+          },
+          {
+            "before_sparse_selection": 28672,
+            "attention_input_tokens": 896
+          },
+          {
+            "before_sparse_selection": 32768,
+            "attention_input_tokens": 1024
+          },
+          {
+            "before_sparse_selection": 32768,
+            "attention_input_tokens": 1024
+          },
+          {
+            "before_sparse_selection": 32768,
+            "attention_input_tokens": 1024
+          }
+        ],
+        "prediction_sha256": "b7ac467c050ea041b7f7f97437d4ca09fe12c6a6895c0dd41dacab3c4d9c1ba7",
+        "common13_v1_v2_equal": null,
+        "classes": [
+          "road",
+          "sidewalk",
+          "building",
+          "wall",
+          "fence",
+          "pole",
+          "traffic light",
+          "traffic sign",
+          "vegetation",
+          "terrain",
+          "sky",
+          "person",
+          "car"
+        ],
+        "target_GT_reads": 0,
+        "weights_updated": false,
+        "service_seconds": 6.101023516617715,
+        "status": "complete",
+        "peak_allocated_mib": 4157.20068359375,
+        "peak_reserved_mib": 5322.0
+      },
+      "text_service": {
+        "detector_calls": 56,
+        "sam_image_encodes": 4,
+        "within_image_SAM_cache_hits": 52,
+        "candidates": 78,
+        "cross_image_candidate_cache_used": false,
+        "service_seconds": 6.886674196459353,
+        "status": "complete",
+        "peak_allocated_mib": 2101.69677734375,
+        "peak_reserved_mib": 2406.0
+      },
+      "isolated_from_other_GPU_jobs": true,
+      "cached_candidate_reads": false
+    },
+    {
+      "method": "full",
+      "scenario": "DensePASS_shared13",
+      "image_id": "densepass_100",
+      "repeat": 1,
+      "warmup": false,
+      "input_sha256": "4360ed7c6f42119f9c3817f65d46865afce5461ef3762861eb59b9c2acc9715d",
+      "end_to_end_seconds": 12.537015609443188,
+      "peak_device_used_mib_sampled": 9522.4375,
+      "memory_samples": 625,
+      "sampling_interval_s": 0.02,
+      "semantic_service": {
+        "semantic": {
+          "memory": "i2",
+          "I3_budget": 2,
+          "forward_calls": 20,
+          "I3_selected_windows": [
+            1728,
+            1856
+          ],
+          "memory_audit": {
+            "calls": 88,
+            "fallbacks": 0,
+            "max_tokens": 1024
+          },
+          "I3_fusion": {
+            "B": 2,
+            "identity": false
+          },
+          "checkpoint_sha256": "ec0c607a6247651cb8c5eb04e3c15a7ae4b067655c4ca6cb5b6ff9d80adaba85",
+          "weights_updated": false,
+          "ground_truth_reads": 0,
+          "elapsed_s": 3.0094298031181097
+        },
+        "token_trace": [
+          {
+            "before_sparse_selection": 4096,
+            "attention_input_tokens": 128
+          },
+          {
+            "before_sparse_selection": 8192,
+            "attention_input_tokens": 256
+          },
+          {
+            "before_sparse_selection": 12288,
+            "attention_input_tokens": 384
+          },
+          {
+            "before_sparse_selection": 16384,
+            "attention_input_tokens": 512
+          },
+          {
+            "before_sparse_selection": 20480,
+            "attention_input_tokens": 640
+          },
+          {
+            "before_sparse_selection": 24576,
+            "attention_input_tokens": 768
+          },
+          {
+            "before_sparse_selection": 28672,
+            "attention_input_tokens": 896
+          },
+          {
+            "before_sparse_selection": 32768,
+            "attention_input_tokens": 1024
+          },
+          {
+            "before_sparse_selection": 4096,
+            "attention_input_tokens": 128
+          },
+          {
+            "before_sparse_selection": 8192,
+            "attention_input_tokens": 256
+          },
+          {
+            "before_sparse_selection": 12288,
+            "attention_input_tokens": 384
+          },
+          {
+            "before_sparse_selection": 16384,
+            "attention_input_tokens": 512
+          },
+          {
+            "before_sparse_selection": 20480,
+            "attention_input_tokens": 640
+          },
+          {
+            "before_sparse_selection": 24576,
+            "attention_input_tokens": 768
+          },
+          {
+            "before_sparse_selection": 28672,
+            "attention_input_tokens": 896
+          },
+          {
+            "before_sparse_selection": 32768,
+            "attention_input_tokens": 1024
+          },
+          {
+            "before_sparse_selection": 32768,
+            "attention_input_tokens": 1024
+          },
+          {
+            "before_sparse_selection": 32768,
+            "attention_input_tokens": 1024
+          }
+        ],
+        "prediction_sha256": "44ff4290fea6e291cd7b1b9eceab492459345a99c61cdeafb4091cfd27a70487",
+        "common13_v1_v2_equal": null,
+        "classes": [
+          "road",
+          "sidewalk",
+          "building",
+          "wall",
+          "fence",
+          "pole",
+          "traffic light",
+          "traffic sign",
+          "vegetation",
+          "terrain",
+          "sky",
+          "person",
+          "car"
+        ],
+        "target_GT_reads": 0,
+        "weights_updated": false,
+        "service_seconds": 5.770624476484954,
+        "status": "complete",
+        "peak_allocated_mib": 4157.20068359375,
+        "peak_reserved_mib": 5322.0
+      },
+      "text_service": {
+        "detector_calls": 56,
+        "sam_image_encodes": 4,
+        "within_image_SAM_cache_hits": 52,
+        "candidates": 56,
+        "cross_image_candidate_cache_used": false,
+        "service_seconds": 6.738844801671803,
+        "status": "complete",
+        "peak_allocated_mib": 2101.69677734375,
+        "peak_reserved_mib": 2406.0
+      },
+      "isolated_from_other_GPU_jobs": true,
+      "cached_candidate_reads": false
+    },
+    {
+      "method": "full",
+      "scenario": "DensePASS_shared13",
+      "image_id": "densepass_231",
+      "repeat": 1,
+      "warmup": false,
+      "input_sha256": "3fcebc4a6ff9c1f3fada8eb849a647e1b33882b8c8b774551479b94154af8385",
+      "end_to_end_seconds": 13.084779858589172,
+      "peak_device_used_mib_sampled": 9522.4375,
+      "memory_samples": 648,
+      "sampling_interval_s": 0.02,
+      "semantic_service": {
+        "semantic": {
+          "memory": "i2",
+          "I3_budget": 2,
+          "forward_calls": 20,
+          "I3_selected_windows": [
+            1792,
+            1664
+          ],
+          "memory_audit": {
+            "calls": 88,
+            "fallbacks": 0,
+            "max_tokens": 1024
+          },
+          "I3_fusion": {
+            "B": 2,
+            "identity": false
+          },
+          "checkpoint_sha256": "ec0c607a6247651cb8c5eb04e3c15a7ae4b067655c4ca6cb5b6ff9d80adaba85",
+          "weights_updated": false,
+          "ground_truth_reads": 0,
+          "elapsed_s": 3.186224577948451
+        },
+        "token_trace": [
+          {
+            "before_sparse_selection": 4096,
+            "attention_input_tokens": 128
+          },
+          {
+            "before_sparse_selection": 8192,
+            "attention_input_tokens": 256
+          },
+          {
+            "before_sparse_selection": 12288,
+            "attention_input_tokens": 384
+          },
+          {
+            "before_sparse_selection": 16384,
+            "attention_input_tokens": 512
+          },
+          {
+            "before_sparse_selection": 20480,
+            "attention_input_tokens": 640
+          },
+          {
+            "before_sparse_selection": 24576,
+            "attention_input_tokens": 768
+          },
+          {
+            "before_sparse_selection": 28672,
+            "attention_input_tokens": 896
+          },
+          {
+            "before_sparse_selection": 32768,
+            "attention_input_tokens": 1024
+          },
+          {
+            "before_sparse_selection": 4096,
+            "attention_input_tokens": 128
+          },
+          {
+            "before_sparse_selection": 8192,
+            "attention_input_tokens": 256
+          },
+          {
+            "before_sparse_selection": 12288,
+            "attention_input_tokens": 384
+          },
+          {
+            "before_sparse_selection": 16384,
+            "attention_input_tokens": 512
+          },
+          {
+            "before_sparse_selection": 20480,
+            "attention_input_tokens": 640
+          },
+          {
+            "before_sparse_selection": 24576,
+            "attention_input_tokens": 768
+          },
+          {
+            "before_sparse_selection": 28672,
+            "attention_input_tokens": 896
+          },
+          {
+            "before_sparse_selection": 32768,
+            "attention_input_tokens": 1024
+          },
+          {
+            "before_sparse_selection": 32768,
+            "attention_input_tokens": 1024
+          },
+          {
+            "before_sparse_selection": 32768,
+            "attention_input_tokens": 1024
+          }
+        ],
+        "prediction_sha256": "a853f6037b84f1f65bc835c8626f50b6fd1d0217d71d01f7c22d288bca226ae4",
+        "common13_v1_v2_equal": null,
+        "classes": [
+          "road",
+          "sidewalk",
+          "building",
+          "wall",
+          "fence",
+          "pole",
+          "traffic light",
+          "traffic sign",
+          "vegetation",
+          "terrain",
+          "sky",
+          "person",
+          "car"
+        ],
+        "target_GT_reads": 0,
+        "weights_updated": false,
+        "service_seconds": 6.224859854206443,
+        "status": "complete",
+        "peak_allocated_mib": 4157.20068359375,
+        "peak_reserved_mib": 5322.0
+      },
+      "text_service": {
+        "detector_calls": 56,
+        "sam_image_encodes": 4,
+        "within_image_SAM_cache_hits": 52,
+        "candidates": 72,
+        "cross_image_candidate_cache_used": false,
+        "service_seconds": 6.830946741625667,
+        "status": "complete",
+        "peak_allocated_mib": 2101.69677734375,
+        "peak_reserved_mib": 2406.0
+      },
+      "isolated_from_other_GPU_jobs": true,
+      "cached_candidate_reads": false
+    },
+    {
+      "method": "full",
+      "scenario": "DensePASS_shared13",
+      "image_id": "densepass_99",
+      "repeat": 1,
+      "warmup": false,
+      "input_sha256": "3910b9c2e2730859090a21faa31945833e6d3390d6d23646a2f94d774ae44a9a",
+      "end_to_end_seconds": 13.072189236059785,
+      "peak_device_used_mib_sampled": 9522.4375,
+      "memory_samples": 650,
+      "sampling_interval_s": 0.02,
+      "semantic_service": {
+        "semantic": {
+          "memory": "i2",
+          "I3_budget": 2,
+          "forward_calls": 20,
+          "I3_selected_windows": [
+            1856,
+            1728
+          ],
+          "memory_audit": {
+            "calls": 88,
+            "fallbacks": 0,
+            "max_tokens": 1024
+          },
+          "I3_fusion": {
+            "B": 2,
+            "identity": false
+          },
+          "checkpoint_sha256": "ec0c607a6247651cb8c5eb04e3c15a7ae4b067655c4ca6cb5b6ff9d80adaba85",
+          "weights_updated": false,
+          "ground_truth_reads": 0,
+          "elapsed_s": 3.021853852085769
+        },
+        "token_trace": [
+          {
+            "before_sparse_selection": 4096,
+            "attention_input_tokens": 128
+          },
+          {
+            "before_sparse_selection": 8192,
+            "attention_input_tokens": 256
+          },
+          {
+            "before_sparse_selection": 12288,
+            "attention_input_tokens": 384
+          },
+          {
+            "before_sparse_selection": 16384,
+            "attention_input_tokens": 512
+          },
+          {
+            "before_sparse_selection": 20480,
+            "attention_input_tokens": 640
+          },
+          {
+            "before_sparse_selection": 24576,
+            "attention_input_tokens": 768
+          },
+          {
+            "before_sparse_selection": 28672,
+            "attention_input_tokens": 896
+          },
+          {
+            "before_sparse_selection": 32768,
+            "attention_input_tokens": 1024
+          },
+          {
+            "before_sparse_selection": 4096,
+            "attention_input_tokens": 128
+          },
+          {
+            "before_sparse_selection": 8192,
+            "attention_input_tokens": 256
+          },
+          {
+            "before_sparse_selection": 12288,
+            "attention_input_tokens": 384
+          },
+          {
+            "before_sparse_selection": 16384,
+            "attention_input_tokens": 512
+          },
+          {
+            "before_sparse_selection": 20480,
+            "attention_input_tokens": 640
+          },
+          {
+            "before_sparse_selection": 24576,
+            "attention_input_tokens": 768
+          },
+          {
+            "before_sparse_selection": 28672,
+            "attention_input_tokens": 896
+          },
+          {
+            "before_sparse_selection": 32768,
+            "attention_input_tokens": 1024
+          },
+          {
+            "before_sparse_selection": 32768,
+            "attention_input_tokens": 1024
+          },
+          {
+            "before_sparse_selection": 32768,
+            "attention_input_tokens": 1024
+          }
+        ],
+        "prediction_sha256": "b7ac467c050ea041b7f7f97437d4ca09fe12c6a6895c0dd41dacab3c4d9c1ba7",
+        "common13_v1_v2_equal": null,
+        "classes": [
+          "road",
+          "sidewalk",
+          "building",
+          "wall",
+          "fence",
+          "pole",
+          "traffic light",
+          "traffic sign",
+          "vegetation",
+          "terrain",
+          "sky",
+          "person",
+          "car"
+        ],
+        "target_GT_reads": 0,
+        "weights_updated": false,
+        "service_seconds": 6.154443608596921,
+        "status": "complete",
+        "peak_allocated_mib": 4157.20068359375,
+        "peak_reserved_mib": 5322.0
+      },
+      "text_service": {
+        "detector_calls": 56,
+        "sam_image_encodes": 4,
+        "within_image_SAM_cache_hits": 52,
+        "candidates": 78,
+        "cross_image_candidate_cache_used": false,
+        "service_seconds": 6.874111715704203,
+        "status": "complete",
+        "peak_allocated_mib": 2101.69677734375,
+        "peak_reserved_mib": 2406.0
+      },
+      "isolated_from_other_GPU_jobs": true,
+      "cached_candidate_reads": false
+    }
+  ],
+  "latency_scope": "Resident weights; real image I/O, DINO/SAM2, I1/I2/I3, fusion, IPC and prediction output; initial loading separately logged",
+  "limitations": [
+    "3 fixed unique images and2 repeats, descriptive only",
+    "No unrelated GPU jobs during measurement",
+    "No precomputed candidate reuse",
+    "DensePASS100 is a development validation set"
+  ]
+}

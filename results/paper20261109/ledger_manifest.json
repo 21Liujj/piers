@@ -1,0 +1,50 @@
+{
+  "release": "v0.3-paper-20261109",
+  "tasks": {
+    "densepass13": {
+      "table_row": 0,
+      "histograms": "densepass13_histograms.npz",
+      "images": 100
+    },
+    "wildpass8": {
+      "table_row": 1,
+      "histograms": "wildpass8_histograms.npz",
+      "images": 500
+    },
+    "synpass22": {
+      "table_row": 2,
+      "histograms": "synpass22_histograms.npz",
+      "images": 1690
+    },
+    "synpass13": {
+      "table_row": 3,
+      "histograms": "synpass13_histograms.npz",
+      "images": 1690
+    }
+  },
+  "file_sha256": {
+    "complete_table.json": "d0ffe6f9043c2f44d35362d6c39dca9a5738162089649b1840c792b11f597f8a",
+    "densepass13_histograms.npz": "3593452c0965686e4bf59f713f0dbd23c0678b3ec1ff3920ec59ac79c554ef12",
+    "densepass_efficiency.json": "f403e2e3df3876d8d4f33309516ba72c8fceaa602d5d29017a91636ccc20c683",
+    "densepass_efficiency_protocol.json": "9e7b93f30eaa5c0833b7273ca738288ec52368beb198d4c0d9f7e9138e724186",
+    "densepass_paired.json": "8ecab18733d46244231efdba630524298e612ee59936b5d41234dbe3897c3fd4",
+    "environment.json": "c40d0312af05cafc47011afc8709e7fe979514729c7a73d3ec80432d5a2bbaeb",
+    "full_I2_toggle.json": "b75d2e119be90bcad3294902f92d28c64c3acf24541c39c7517a7fd2dce44ceb",
+    "full_I2_toggle_histograms.npz": "4cbc2140a4857156445adc54ef6da2b9408d6a7d6ca1c6ff1de2648deed097b9",
+    "i2_i3_histograms.npz": "3da6ef084a79366e3f6a6c79d7f4a1db2231e415b78805b8bc68ce9329ae8d13",
+    "i2_only_histograms.npz": "6af0b6dfe3d4d40affb4d66757f6338b9b58e00e5c2f52a9fc8686d3aa9e3d15",
+    "memory_component_ABBA.json": "f51e2883bf12571ee567f9e9f88080e29c2aea95c309e1091b196d31d8c8f632",
+    "memory_component_accuracy.json": "ff982356c7621039df5bb8351eb2219c702d7891c853899e90981b8f4acd6899",
+    "memory_component_timing.json": "127cfdd0a2893071ffe85385adfc0c7646fc3a87de2902979b3edf77099dba9b",
+    "memory_peak_stages.json": "f0c73e86867b8a32b25d5321d506b0341d4adf66802431fbd44d1a9bf99cdf5c",
+    "native_efficiency.json": "31ef0a0c401eecf64146ecd8f7d21e0c78240cdd83baf57b1a1e51a0104b4ca9",
+    "native_efficiency_protocol.json": "5fa829a97425886fcf5a1acaaec6ce71fef5ee938a572d9b93b2cccd49bf992f",
+    "native_uncertainty.json": "4b910d74f2e1654b1a4e57fe91d19e02ce12bd8c642ab6c8e851aea97b43648b",
+    "release_validation.json": "4fd85b7ce972b90a0e4284214d47cd5f15f8bacba4b3f18d544e35b4675c913e",
+    "synpass13_histograms.npz": "8df87892b17abd86321b7812d94e7a9ac13cb8c54b770cab5db4c9ad56fc40b4",
+    "synpass22_histograms.npz": "ee1a82db3fd5a7621d1db5814111d0feae9d574a983712c5b7d7c6a61137f33e",
+    "text_cache_candidate.json": "04328a2b7657a29b0a0a28d831b4cd52955d2a4ed813bafc790daf238ae41530",
+    "wildpass8_histograms.npz": "ec54df16cf88aff85a5819d21a350c1e0764f86c195f1d62a9f6ee69b14d7a02"
+  },
+  "interpretation": "Recorded integer pixel counts permit exact CPU reconstruction; new GPU inference and hardware timing are separate checks."
+}

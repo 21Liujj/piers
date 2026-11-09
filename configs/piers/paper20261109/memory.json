@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "status": "final",
+  "method_name": "Uncertainty-ranked class-protected cross-FoV Memory",
+  "mode": "class_aware",
+  "score": "uncertainty",
+  "budget": 1024,
+  "keep_ratio": 0.03125,
+  "rare_class_ids": [
+    3,
+    4,
+    6,
+    7
+  ],
+  "rare_reserve_ratio": 0.15,
+  "boundary_guard_enabled": false,
+  "num_maskmem": 9,
+  "dataset": "DensePASS",
+  "class_set": 13,
+  "seed": 1234,
+  "checkpoint_path": "${PIERS_WEIGHTS_ROOT}/omnisam_s.pth",
+  "checkpoint_sha256": "ec0c607a6247651cb8c5eb04e3c15a7ae4b067655c4ca6cb5b6ff9d80adaba85",
+  "runtime_source_sha256": {
+    "${PIERS_REPO_ROOT}/experiments/top_level_scripts/i2_full_eval.py": "ab2efcee2983374662251aa97772ae2419325444e28f9d9cfe792833412d83b2",
+    "${PIERS_REPO_ROOT}/third_party/effective_omnisam/model/memory_bank.py": "25fd4c660bc0cdb406e4c529f98ff7a099b07ea5799a101883bbe36badf527fb",
+    "${PIERS_REPO_ROOT}/third_party/effective_omnisam/model/modules/sparse_memory_retriever.py": "ad049c7fc40d9a9466988e3441e86b32e3bee8424665b8f0118cd1ef8b56c624",
+    "${PIERS_REPO_ROOT}/third_party/effective_omnisam/model/model.py": "bbcd5a6a34a791d7190a4b38ecf831c84266d7e553590a85b21861d804a18525",
+    "${PIERS_REPO_ROOT}/third_party/effective_omnisam/validation.py": "aa210922dce9b51a54f9dfb95a3b44966376d9b89e248084d43cbfeb53f458b8"
+  },
+  "selection_basis": "Frozen historical1024 configuration; missing18-row historical matrix is not claimed as newly reproduced. New controls never overwrite this default.",
+  "selection_limit": "Selected on this validation set. Extra class-quota gain versus entropy-only at 1024 is small and its paired interval crosses zero.",
+  "supporting_ablations": [
+    "boundary_guarded",
+    "joint_guarded"
+  ],
+  "finalized_at": "2026-11-06T21:21:41.382335+08:00",
+  "isolated_profile": {
+    "warmup_images": 1,
+    "measured_images": 10,
+    "mean_image_sec": 3.2157332852017135,
+    "p50_image_sec": 3.1783765584696084,
+    "p95_image_sec": 3.398263843450695,
+    "attention_cuda_ms_per_image": 81.95888004302978
+  },
+  "peak_allocated_mib": 4396.95068359375,
+  "comparison_to_dense": {
+    "delta_mIoU_pp": -0.14390000000000214,
+    "max_token_reduction_pct": 96.875,
+    "mean_latency_reduction_pct": 10.126537675809155,
+    "memory_attention_latency_reduction_pct": 75.42821095521298,
+    "whole_pipeline_peak_memory_reduction_observed": false
+  },
+  "portable_release": "v0.3-paper-20261109",
+  "historical_observed_metrics": {
+    "name": "D100_ca_unc_1024",
+    "dataset": "DensePASS",
+    "backbone": "sam2_s",
+    "ckpt": "${PIERS_WEIGHTS_ROOT}/omnisam_s.pth",
+    "mIoU": 60.3155,
+    "mAcc": 72.1716,
+    "PixAcc": 88.6938,
+    "FWIoU": 80.9642,
+    "mDice": 72.8412,
+    "FWDice": 88.5511,
+    "per_class_iou_pct": [
+      80.4571,
+      46.604,
+      89.8448,
+      44.9262,
+      48.7463,
+      45.2396,
+      30.6271,
+      27.3898,
+      78.7663,
+      46.2468,
+      94.6079,
+      66.0408,
+      84.6046
+    ],
+    "eval_time_sec": 468.3502,
+    "num_eval_images": 100,
+    "images_per_sec": 0.2135
+  },
+  "historical_record_notice": "Historical selection/profiling records are provenance, not this release's matched measurements. See results/paper20261109 for current matched accuracy/timing."
+}

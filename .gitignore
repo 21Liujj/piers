@@ -5,6 +5,9 @@ __pycache__/
 runs/
 outputs/
 *.npz
+!assets/paper20261109/calibrators/*.npz
+!results/paper20261109/**/*.npz
+!results/paper20261109/*.npz
 *.pth
 *.pt
 # keep tiny text-prototype assets vendored from effective-omnisam
@@ -12,6 +15,9 @@ outputs/
 *.ckpt
 # personal paths (never commit real paths)
 configs/piers/paths.yaml
+assets/weights/
+data/
+data_extra/
 # OS
 .DS_Store
 Thumbs.db

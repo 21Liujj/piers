@@ -684,7 +684,9 @@ def build_sam_model(args: argparse.Namespace, device: torch.device, ckpt_path: O
     if args.backbone not in backbone_to_hydra_and_ckpt:
         raise ValueError(f"Unsupported backbone: {args.backbone}")
     model_cfg, ckpt_name = backbone_to_hydra_and_ckpt[args.backbone]
-    sam2_checkpoint = os.path.join(sam_vendor, "checkpoints", ckpt_name)
+    # A paper checkout can keep verified weights outside the vendored source.
+    weight_root = os.environ.get("PIERS_WEIGHTS_ROOT", os.path.join(sam_vendor, "checkpoints"))
+    sam2_checkpoint = os.path.join(weight_root, ckpt_name)
     if not os.path.isfile(sam2_checkpoint):
         raise FileNotFoundError(f"SAM2 backbone weight not found: {sam2_checkpoint}")
 

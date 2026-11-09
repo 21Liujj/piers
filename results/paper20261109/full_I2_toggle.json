@@ -1,0 +1,182 @@
+{
+  "status": "complete",
+  "accuracy": {
+    "status": "complete",
+    "images": 100,
+    "classes": [
+      "road",
+      "sidewalk",
+      "building",
+      "wall",
+      "fence",
+      "pole",
+      "traffic light",
+      "traffic sign",
+      "vegetation",
+      "terrain",
+      "sky",
+      "person",
+      "car"
+    ],
+    "metrics": {
+      "without_I2": {
+        "mIoU_pct": 60.92178300847162,
+        "mAcc_pct": 72.33939364381301,
+        "pixel_accuracy_pct": 88.98882184177576,
+        "FWIoU_pct": 81.21645957889947,
+        "mDice_pct": 73.4591769425776,
+        "per_class_IoU_pct": [
+          81.14777426224316,
+          46.79696195623293,
+          89.96582215314585,
+          44.900859801094924,
+          49.47626987414303,
+          45.87321608459517,
+          32.06798993071799,
+          30.659830928349503,
+          79.67459985139578,
+          46.04510330687348,
+          94.58837634504475,
+          66.67533778233283,
+          84.11103683396166
+        ],
+        "GT_pixels_per_class": [
+          13266044,
+          5418841,
+          25547145,
+          1305637,
+          995728,
+          649821,
+          38257,
+          116260,
+          10594916,
+          3147557,
+          14378776,
+          370801,
+          4770257
+        ],
+        "valid_GT_pixels": 80600040,
+        "abstained_valid_pixels": 0,
+        "zero_union_class_indices": [],
+        "macro_denominator": 13
+      },
+      "with_I2": {
+        "mIoU_pct": 60.855488498434966,
+        "mAcc_pct": 72.79262710623618,
+        "pixel_accuracy_pct": 88.82451299031612,
+        "FWIoU_pct": 81.10122641396333,
+        "mDice_pct": 73.4339422947068,
+        "per_class_IoU_pct": [
+          80.90768941954391,
+          47.07430014279497,
+          89.85099934117854,
+          44.781399209000185,
+          48.80806780089987,
+          45.24535938689013,
+          32.909288499648405,
+          30.72495323561431,
+          78.9683643790014,
+          46.45155433814758,
+          94.67993742896655,
+          66.28364640991468,
+          84.43579088805394
+        ],
+        "GT_pixels_per_class": [
+          13266044,
+          5418841,
+          25547145,
+          1305637,
+          995728,
+          649821,
+          38257,
+          116260,
+          10594916,
+          3147557,
+          14378776,
+          370801,
+          4770257
+        ],
+        "valid_GT_pixels": 80600040,
+        "abstained_valid_pixels": 0,
+        "zero_union_class_indices": [],
+        "macro_denominator": 13
+      }
+    },
+    "delta_with_I2_minus_without_I2_mIoU_pp": -0.06629451003665565,
+    "delta_95CI": [
+      -0.5544274857038699,
+      0.3502278432813067
+    ],
+    "scope": "DensePASS100 development validation; same I1/I3/OV resources, same source weights/calibrators/query evidence; only runtime memory mode changes"
+  },
+  "timing": {
+    "status": "complete",
+    "rows": [
+      {
+        "memory": "dense",
+        "mean_seconds": 13.456941619204978,
+        "median_seconds": 13.514918635133654,
+        "measurements": 6,
+        "unique_images": 3,
+        "peak_device_used_mib_sampled": 9456.375,
+        "semantic_peak_allocated_mib": 4157.20068359375,
+        "mean_semantic_service_seconds": 6.2799052875489,
+        "mean_text_service_seconds": 7.143825797053675
+      },
+      {
+        "memory": "i2",
+        "mean_seconds": 13.382100242500504,
+        "median_seconds": 13.50833494681865,
+        "measurements": 6,
+        "unique_images": 3,
+        "peak_device_used_mib_sampled": 9522.4375,
+        "semantic_peak_allocated_mib": 4157.20068359375,
+        "mean_semantic_service_seconds": 5.981466114521027,
+        "mean_text_service_seconds": 7.371205556206405
+      }
+    ],
+    "paired_images": [
+      {
+        "image_id": "densepass_100",
+        "dense": 12.932243986986578,
+        "i2": 12.869124149437994,
+        "seconds_saved_with_I2": 0.06311983754858375
+      },
+      {
+        "image_id": "densepass_231",
+        "dense": 13.658963015768677,
+        "i2": 13.50833494681865,
+        "seconds_saved_with_I2": 0.15062806895002723
+      },
+      {
+        "image_id": "densepass_99",
+        "dense": 13.77961785485968,
+        "i2": 13.768841631244868,
+        "seconds_saved_with_I2": 0.010776223614811897
+      }
+    ],
+    "order": [
+      "dense",
+      "i2",
+      "i2",
+      "dense"
+    ],
+    "CPU_affinity": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "seconds_saved_with_I2": 0.0748413767044731,
+    "latency_reduction_pct": 0.556154428118083,
+    "scope": "Identical complete I1/I3/OV system,20 semantic forwards, real56-call DINO plusSAM2 and IPC/output; memory toggle only",
+    "limitations": [
+      "3 fixed images x2 measured repeats per mode, descriptive only",
+      "3 image warmups per independent block; initial weight loading excluded",
+      "No full-dataset latency or training/multihardware variability measured"
+    ]
+  },
+  "I1_I3_OV_checkpoint_calibrators_and_frozen_sources_unchanged": true,
+  "new_training": false,
+  "new_threshold_selection": false
+}

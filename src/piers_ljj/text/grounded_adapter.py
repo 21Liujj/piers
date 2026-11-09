@@ -29,6 +29,8 @@ class GroundedConfig:
     text_thr: float = 0.25
     disable_custom_kernels: bool = True
     local_files_only: bool = True
+    cache_prefusion_features: bool = False
+    max_text_cache_entries: int = 128
 
 
 @dataclass

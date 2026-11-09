@@ -1,0 +1,98 @@
+{
+  "scenarios": [
+    {
+      "name": "DensePASS_shared13",
+      "images": [
+        {
+          "image_id": "densepass_100",
+          "path": "${PIERS_DATA_ROOT}/DensePASS/leftImg8bit/val/100_.png",
+          "width": 2048,
+          "height": 400,
+          "original_size": [
+            2048,
+            400
+          ],
+          "classes": [
+            "road",
+            "sidewalk",
+            "building",
+            "wall",
+            "fence",
+            "pole",
+            "traffic light",
+            "traffic sign",
+            "vegetation",
+            "terrain",
+            "sky",
+            "person",
+            "car"
+          ],
+          "input_sha256": "4360ed7c6f42119f9c3817f65d46865afce5461ef3762861eb59b9c2acc9715d",
+          "source_sha256": "4360ed7c6f42119f9c3817f65d46865afce5461ef3762861eb59b9c2acc9715d"
+        },
+        {
+          "image_id": "densepass_231",
+          "path": "${PIERS_DATA_ROOT}/DensePASS/leftImg8bit/val/231_.png",
+          "width": 2048,
+          "height": 400,
+          "original_size": [
+            2048,
+            400
+          ],
+          "classes": [
+            "road",
+            "sidewalk",
+            "building",
+            "wall",
+            "fence",
+            "pole",
+            "traffic light",
+            "traffic sign",
+            "vegetation",
+            "terrain",
+            "sky",
+            "person",
+            "car"
+          ],
+          "input_sha256": "3fcebc4a6ff9c1f3fada8eb849a647e1b33882b8c8b774551479b94154af8385",
+          "source_sha256": "3fcebc4a6ff9c1f3fada8eb849a647e1b33882b8c8b774551479b94154af8385"
+        },
+        {
+          "image_id": "densepass_99",
+          "path": "${PIERS_DATA_ROOT}/DensePASS/leftImg8bit/val/99_.png",
+          "width": 2048,
+          "height": 400,
+          "original_size": [
+            2048,
+            400
+          ],
+          "classes": [
+            "road",
+            "sidewalk",
+            "building",
+            "wall",
+            "fence",
+            "pole",
+            "traffic light",
+            "traffic sign",
+            "vegetation",
+            "terrain",
+            "sky",
+            "person",
+            "car"
+          ],
+          "input_sha256": "3910b9c2e2730859090a21faa31945833e6d3390d6d23646a2f94d774ae44a9a",
+          "source_sha256": "3910b9c2e2730859090a21faa31945833e6d3390d6d23646a2f94d774ae44a9a"
+        }
+      ]
+    }
+  ],
+  "repeats": 2,
+  "latency_scope": "Resident weights; real image I/O, DINO/SAM2, I1/I2/I3, fusion, IPC and prediction output; initial loading separately logged",
+  "limitations": [
+    "3 fixed unique images and2 repeats, descriptive only",
+    "No unrelated GPU jobs during measurement",
+    "No precomputed candidate reuse",
+    "DensePASS100 is a development validation set"
+  ]
+}

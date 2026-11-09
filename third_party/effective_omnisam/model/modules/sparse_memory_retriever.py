@@ -534,6 +534,27 @@ class SparseMemoryRetriever:
             k = self._safe_topk_count(l0, keep_ratio, min_tokens, max_tokens)
         else:
             k = min(l0, max(1, int(target_tokens)))
+        if mode_l == "spatial_pool":
+            import torch.nn.functional as F
+            if h0 * w0 != l0:
+                raise ValueError("spatial_pool requires the original token grid")
+            candidates = [(a, k // a) for a in range(1, min(h0, k) + 1)
+                          if k % a == 0 and k // a <= w0]
+            if not candidates:
+                raise ValueError("spatial_pool budget cannot be represented by a grid")
+            ph, pw = min(candidates, key=lambda hw: abs(hw[0] / hw[1] - h0 / w0))
+            def pooled(t):
+                b, c = t.shape[1:]
+                grid = t.permute(1, 2, 0).reshape(b, c, h0, w0)
+                return F.adaptive_avg_pool2d(grid, (ph, pw)).flatten(2).permute(2, 0, 1)
+            selected_memory, selected_pos = pooled(memory_tokens), pooled(pos_tokens)
+            stats = SparseRetrieveStats(
+                original_num_tokens=l0, selected_num_tokens=k, keep_ratio=k/max(1,l0),
+                selection_mode="spatial_pool", cache_hit=False, memory_id=sid,
+                original_hw=(h0,w0), selected_token_shape=tuple(selected_memory.shape),
+                selection_time=float(time.perf_counter()-t0))
+            return selected_memory, selected_pos, None, stats
+
         cache_hit = False
         cached_idx = None
         if cache_enabled and memory_id is not None:
@@ -545,6 +566,17 @@ class SparseMemoryRetriever:
             idx = cached_idx.to(memory_tokens.device, non_blocking=True).long()
             sel_mode = f"{mode_l}_cache"
             fallback_used = False
+            mask_shape_mismatch = False
+        elif mode_l == "uncertainty_topk":
+            if uncertainty_map is not None and uncertainty_map.numel() == l0:
+                score = uncertainty_map.detach().to(memory_tokens.device).float().flatten()
+                fallback_used = False
+                sel_mode = "uncertainty_topk"
+            else:
+                score = self._feature_norm_score(memory_tokens)
+                fallback_used = True
+                sel_mode = "feature_norm"
+            idx = torch.sort(torch.topk(score, k=k, sorted=False).indices.long()).values
             mask_shape_mismatch = False
         elif mode_l == "boundary_guarded":
             # Route 1 Phase 1: indices computed directly (not via score+topk)
@@ -560,7 +592,7 @@ class SparseMemoryRetriever:
                 sel_mode = "boundary_guarded" if not mask_shape_mismatch else "feature_norm"
                 if mask_shape_mismatch:
                     print(f"[SMR] boundary_guarded SHAPE MISMATCH at {sid}: mask.numel={boundary_mask.numel()}, L_m={l0}, fallback to feature_norm", flush=True)
-                else:
+                elif getattr(self, "diagnostic_overlap", False):
                     baseline_idx = torch.topk(self._feature_norm_score(memory_tokens), k=k, dim=0, largest=True, sorted=False).indices
                     set_g, set_b = set(idx.tolist()), set(baseline_idx.tolist())
                     inter, union = len(set_g & set_b), len(set_g | set_b)
@@ -589,7 +621,7 @@ class SparseMemoryRetriever:
                 sel_mode = "class_aware" if not mask_shape_mismatch else "feature_norm"
                 if mask_shape_mismatch:
                     print(f"[SMR] class_aware SHAPE MISMATCH at {sid}: mask.numel={rare_class_mask.numel()}, L_m={l0}, fallback to feature_norm", flush=True)
-                else:
+                elif getattr(self, "diagnostic_overlap", False):
                     baseline_idx = torch.topk(self._feature_norm_score(memory_tokens), k=k, dim=0, largest=True, sorted=False).indices
                     set_g, set_b = set(idx.tolist()), set(baseline_idx.tolist())
                     inter, union = len(set_g & set_b), len(set_g | set_b)
@@ -621,7 +653,7 @@ class SparseMemoryRetriever:
                 sel_mode = "joint_guarded" if not mask_shape_mismatch else "feature_norm"
                 if mask_shape_mismatch:
                     print(f"[SMR] joint_guarded SHAPE MISMATCH at {sid}: rare={rare_class_mask.numel()}, bd={boundary_mask.numel()}, L_m={l0}, fallback to feature_norm", flush=True)
-                else:
+                elif getattr(self, "diagnostic_overlap", False):
                     baseline_idx = torch.topk(self._feature_norm_score(memory_tokens), k=k, dim=0, largest=True, sorted=False).indices
                     set_g, set_b = set(idx.tolist()), set(baseline_idx.tolist())
                     inter, union = len(set_g & set_b), len(set_g | set_b)

@@ -1,0 +1,60 @@
+{
+  "runtime_sources": [
+    {
+      "active": "experiments/paper20261109/runtime/predictor.py",
+      "historical": "runs/I1-reliable-20261107_1535/source_calibration/calibrator/predictor.py",
+      "source_sha256": "bae68a6dbc943edd8fcab71a610dacad332cf8d2b6850af8251f66b3c3b19853",
+      "active_sha256": "bae68a6dbc943edd8fcab71a610dacad332cf8d2b6850af8251f66b3c3b19853",
+      "byte_identical": true,
+      "transformation": "none"
+    },
+    {
+      "active": "experiments/paper20261109/runtime/feature_core.py",
+      "historical": "runs/I1-reliable-20261107_1535/source_calibration/feature_pipeline/feature_core.py",
+      "source_sha256": "494c9580883f88a0722afdf08304dcdcab9ea55593eecc2be75483532c9c569c",
+      "active_sha256": "494c9580883f88a0722afdf08304dcdcab9ea55593eecc2be75483532c9c569c",
+      "byte_identical": true,
+      "transformation": "none"
+    },
+    {
+      "active": "experiments/paper20261109/runtime/fresh_core.py",
+      "historical": "runs/I1-local-correction-20261107_2000/fresh_cooperation/fresh_core.py",
+      "source_sha256": "f6e7ec14a2d6eda7627fc25ea918e672fc8af318c3b768e2876f71c8d08d5942",
+      "active_sha256": "f6e7ec14a2d6eda7627fc25ea918e672fc8af318c3b768e2876f71c8d08d5942",
+      "byte_identical": true,
+      "transformation": "none"
+    },
+    {
+      "active": "experiments/paper20261109/runtime/soft_core.py",
+      "historical": "runs/I1-local-correction-20261107_2000/fresh_cooperation/soft_core.py",
+      "source_sha256": "d31094d5b52f9928b9b2ff5006fcc4fc1a20997fb8a0dcd86337e79f4660508c",
+      "active_sha256": "d31094d5b52f9928b9b2ff5006fcc4fc1a20997fb8a0dcd86337e79f4660508c",
+      "byte_identical": true,
+      "transformation": "none"
+    },
+    {
+      "active": "experiments/paper20261109/runtime/seam_core.py",
+      "historical": "runs/I3-seam-20261107/seam_core.py",
+      "source_sha256": "335c4c4647da430fa13e20f1ddae932dff2caada0cbf8c237211b1f173c9c394",
+      "active_sha256": "335c4c4647da430fa13e20f1ddae932dff2caada0cbf8c237211b1f173c9c394",
+      "byte_identical": true,
+      "transformation": "none"
+    },
+    {
+      "active": "experiments/paper20261109/runtime/seam_cuda.py",
+      "historical": "runs/I3-seam-20261107/seam_cuda.py",
+      "source_sha256": "07b55350943b500c5ae15ac024109b38b3865c1dd9a960f6f847f9ea17e8fb4d",
+      "active_sha256": "07b55350943b500c5ae15ac024109b38b3865c1dd9a960f6f847f9ea17e8fb4d",
+      "byte_identical": true,
+      "transformation": "none"
+    }
+  ],
+  "release": "v0.3-paper-20261109",
+  "portability_edits": [
+    {
+      "path": "third_party/effective_omnisam/validation.py",
+      "change": "Allow PIERS_WEIGHTS_ROOT for SAM2 backbone files; tensor/math operations unchanged",
+      "active_sha256": "aa210922dce9b51a54f9dfb95a3b44966376d9b89e248084d43cbfeb53f458b8"
+    }
+  ]
+}

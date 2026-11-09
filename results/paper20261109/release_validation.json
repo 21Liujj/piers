@@ -1,0 +1,62 @@
+{
+  "release": "v0.3-paper-20261109",
+  "accuracy_ledger_replay": {
+    "status": "passed",
+    "tasks": 4,
+    "paired_task_image_counts": [
+      100,
+      500,
+      1690,
+      1690
+    ],
+    "scope": "All four frozen aggregates and per-class metrics reconstructed from recorded integer histograms; not fresh full-dataset GPU inference"
+  },
+  "related_tests": {
+    "status": "passed",
+    "tests": 24,
+    "pytest_log": "........................                                                 [100%]\n24 passed in 1.60s\n"
+  },
+  "isolated_directory_smoke": {
+    "status": "passed",
+    "tasks": [
+      "densepass13",
+      "wildpass8",
+      "synpass22",
+      "synpass13"
+    ],
+    "images_per_task": 1,
+    "variants": [
+      "original",
+      "full"
+    ],
+    "uses_existing_environment_and_external_data_weights": true,
+    "full_environment_reinstallation_tested": false
+  },
+  "frozen_prediction_comparison": {
+    "status": "passed",
+    "comparisons": [
+      {
+        "task": "densepass13",
+        "image_id": "densepass_100",
+        "method": "original",
+        "changed_pixels": 0,
+        "new_sha256": "9bd1ca8de9116acc7d94cbd58c2c92e4238a3d76baee2771c678496aee2d43d4",
+        "reference_sha256": "9bd1ca8de9116acc7d94cbd58c2c92e4238a3d76baee2771c678496aee2d43d4"
+      },
+      {
+        "task": "densepass13",
+        "image_id": "densepass_100",
+        "method": "full",
+        "changed_pixels": 0,
+        "new_sha256": "44ff4290fea6e291cd7b1b9eceab492459345a99c61cdeafb4091cfd27a70487",
+        "reference_sha256": "44ff4290fea6e291cd7b1b9eceab492459345a99c61cdeafb4091cfd27a70487"
+      }
+    ]
+  },
+  "limitations": [
+    "No packaging-time re-run of the full datasets",
+    "No claim that all registered control variants have completed measurements",
+    "No full-system or Jetson speed advantage established",
+    "Indoor and target fine-tuning remain out of scope"
+  ]
+}

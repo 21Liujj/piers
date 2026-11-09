@@ -1,0 +1,50 @@
+{
+  "status": "complete",
+  "order": [
+    "dense_B0",
+    "i2_B0",
+    "i2_B0",
+    "dense_B0"
+  ],
+  "rows": [
+    {
+      "variant": "dense_B0",
+      "mean_seconds": 4.511989783340444,
+      "median_seconds": 4.51435855217278,
+      "measurements": 6,
+      "unique_images": 3,
+      "peak_device_used_mib_sampled": 6457.0625,
+      "peak_allocated_mib": 4157.20068359375,
+      "block_means": [
+        4.5475549679249525,
+        4.476424598755936
+      ]
+    },
+    {
+      "variant": "i2_B0",
+      "mean_seconds": 4.2899777969966335,
+      "median_seconds": 4.293684419244528,
+      "measurements": 6,
+      "unique_images": 3,
+      "peak_device_used_mib_sampled": 6523.0625,
+      "peak_allocated_mib": 4157.20068359375,
+      "block_means": [
+        4.322529363135497,
+        4.25742623085777
+      ]
+    }
+  ],
+  "CPU_affinity": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "all3_sample_images_warmed_before_each_block": true,
+  "scope": "Image I/O/preprocessing,18-forward semantic engine,identicalrequested13 mapping and PNG output; no I1/DINO/textSAM2",
+  "limitations": [
+    "6 measured samples on3 unique images per variant; descriptive only",
+    "CPU affinity differs from earlier unpinned benchmarks; do not splice absolute times as identical protocols"
+  ],
+  "completed_at_UTC": "2026-11-09T12:02:09.237147+00:00"
+}
