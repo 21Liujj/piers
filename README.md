@@ -18,3 +18,9 @@ I1 is source-calibrated text/semantic cooperation. I2 selects uncertainty-ranked
 DensePASS100 is development validation. Target-set failures informed the v2/v3 repairs, so WildPASS/SynPASS results are diagnostic development evidence rather than a fresh untouched holdout. Source calibrators were rebuilt from Cityscapes; historical calibrator bytes were unavailable. Indoor adaptation is outside this release. Older directories under `results/` and the v0.2 release remain historical records, not interchangeable current-main results.
 
 See [the release status](docs/piers/PAPER_RELEASE_STATUS_20261109.md) for completed checks and remaining work. The upstream/vendor licenses remain in their source directories.
+
+## Local panoramic segmentation system
+
+[The web workbench](apps/panorama_web/README.md) runs the interface on a local computer and performs inference on a GPU server over SSH. It supports scene defaults without text, requested text targets, global instance IDs, visual comparison, result export, task history and the archived experiment dashboard. Outdoor inference uses the complete frozen v3 model; indoor inference is a generic zero-shot text route, with adapted indoor weights still pending. Runtime data and credentials are excluded from the repository.
+
+See [the web acceptance record](docs/piers/WEB_WORKBENCH_STATUS_20261111.md) for verification and [the updated efficiency handoff](docs/piers/CURSOR_EFFICIENCY_HANDOFF_20261111.md) for the separate optimization work.

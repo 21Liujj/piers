@@ -1,0 +1,7 @@
+__pycache__/
+.venv*/
+data/
+*.log
+.env*
+connection.json
+known_hosts

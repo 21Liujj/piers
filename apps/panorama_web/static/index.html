@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="全景图像分割系统：上传全景、文本指定目标、查看类别与实例，比较真实实验指标。">
+  <title>全景图像分割系统</title><link rel="stylesheet" href="/styles.css?v=20261111-semantic-title">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%232666ea'/%3E%3Cpath d='M9 13q11-4 22 0v14q-11 4-22 0zM9 20h22M20 10v20' stroke='white' stroke-width='2' fill='none'/%3E%3C/svg%3E">
+</head>
+<body>
+<svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg"><defs>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 10h18M10 10v10"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 3v17h17M8 15v-4m5 4V6m5 9v-7"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 16V4m-4 4 4-4 4 4M4 15v5h16v-5"/></symbol>
+  <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="8" cy="9" r="1"/><path d="m3 17 5-5 4 4 4-6 5 7"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-5-5 5 5-5 5"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-4-4 4 4 4-4M4 17v4h16v-4"/></symbol>
+  <symbol id="i-settings" viewBox="0 0 24 24"><path d="M4 7h16M4 17h16"/><circle cx="8" cy="7" r="3"/><circle cx="16" cy="17" r="3"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+  <symbol id="i-fit" viewBox="0 0 24 24"><path d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5"/></symbol>
+</defs></svg>
+<aside class="sidebar">
+  <a class="brand" href="#workbench" aria-label="全景图像语义分割工作台"><span class="brand-mark"><svg viewBox="0 0 32 32"><path d="M6 10q10-4 20 0v12q-10 4-20 0zM6 16h20M16 7v18"/></svg></span><span><span class="brand-name">全景图像语义分割</span><small>PANORAMA WORKSPACE</small></span></a>
+  <div class="nav-caption">全景视觉工作空间</div>
+  <nav aria-label="主导航">
+    <button class="nav-item active" data-page="workbench"><svg><use href="#i-grid"/></svg>分割工作台<span class="nav-dot"></span></button>
+    <button class="nav-item" data-page="experiments"><svg><use href="#i-chart"/></svg>实验对比</button>
+    <button class="nav-item" data-page="history"><svg><use href="#i-clock"/></svg>任务记录<span id="historyCount" class="nav-count"></span></button>
+  </nav>
+  <div class="sidebar-note"><svg><use href="#i-globe"/></svg><strong>一张全景，多种视角</strong><p>语义类别 · 文本目标 · 独立实例</p><span class="mini-line"></span><small>本机工作台 / 服务器 GPU</small></div>
+  <button id="settingsButton" class="settings-button"><svg><use href="#i-settings"/></svg>连接设置</button>
+</aside>
+<div class="app-shell">
+  <header class="topbar"><div class="breadcrumb">工作空间 <span>/</span> <strong id="breadcrumb">分割工作台</strong></div><button id="connectionBadge" class="connection-badge"><span class="status-dot"></span><span id="connectionText">检查服务器连接</span><span class="chevron">›</span></button></header>
+  <main>
+    <section id="page-workbench" class="page active">
+      <div class="page-heading"><div><div class="eyebrow">PANORAMA SEGMENTATION</div><h1>全景图像语义分割工作台</h1><p>上传一张全景图，探索其中的类别与目标。</p></div><span class="heading-tag"><svg><use href="#i-globe"/></svg>360° 场景理解</span></div>
+      <div class="workspace">
+        <section class="input-panel panel" aria-label="分割设置">
+          <div class="panel-heading"><h2>输入与目标</h2><span class="step-label">01 — 02</span></div>
+          <label class="field-label">全景图像</label>
+          <label id="uploadZone" class="upload-zone" tabindex="0">
+            <input id="imageInput" type="file" accept="image/png,image/jpeg,image/webp" hidden>
+            <span class="upload-icon"><svg><use href="#i-upload"/></svg></span><strong id="uploadTitle">点击上传或拖入图片</strong><span id="uploadDetail">PNG / JPG / WebP · 最大 30 MB</span>
+          </label>
+          <div id="imageInfo" class="image-info hidden"><svg><use href="#i-image"/></svg><div><strong id="imageName"></strong><small id="imageDimensions"></small></div><button id="replaceImage" class="text-button" type="button">更换</button></div>
+          <label class="field-label" id="sceneLabel">场景类型</label>
+          <div class="segmented scene-options" role="group" aria-labelledby="sceneLabel"><button data-scene="street" class="selected">室外街景</button><button data-scene="indoor">室内场景</button></div>
+          <div id="sceneNote" class="scene-note"><span class="tiny-dot"></span>完整模型 · I1 / I2 / I3</div>
+          <label class="field-label" for="queryInput">指定分割目标 <span class="optional">可选</span></label>
+          <textarea id="queryInput" rows="4" placeholder="例如：汽车，行人，公交车&#10;或 car, person, bus"></textarea>
+          <div class="field-hint">多个目标用逗号分隔。留空时，按当前场景的默认类别分割。</div>
+          <div id="queryChips" class="query-chips"><button data-query="car">汽车</button><button data-query="person">行人</button><button data-query="bus">公交车</button></div>
+          <details class="default-classes"><summary>查看默认分割类别 <span id="defaultClassCount">21 类</span></summary><div id="defaultClassList"></div></details>
+          <button id="runButton" class="primary-button" disabled><svg><use href="#i-arrow"/></svg><span>开始分割</span><kbd>Ctrl ↵</kbd></button>
+          <div id="taskProgress" class="task-progress hidden" role="status" aria-live="polite"><div class="progress-heading"><span class="spinner"></span><strong id="progressTitle">准备任务</strong><span id="progressTime"></span></div><div class="progress-track"><span id="progressBar"></span></div><p id="progressMessage"></p><button id="cancelButton" class="text-button">取消任务</button></div>
+          <div class="input-footnote"><svg><use href="#i-check"/></svg>结果保存到本机，可再次打开和下载。</div>
+        </section>
+        <div class="output-column">
+          <section class="viewer-panel panel">
+            <div class="viewer-toolbar"><div class="view-tabs" role="tablist" aria-label="可视化方式"><button data-view="original" role="tab" class="selected">原图</button><button data-view="semantic" role="tab" disabled>语义分割</button><button data-view="instances" role="tab" disabled>实例分割</button><button data-view="compare" role="tab" disabled>对照</button></div><button id="downloadButton" class="small-button" disabled><svg><use href="#i-download"/></svg><span>下载结果</span></button></div>
+            <div id="viewport" class="viewport">
+              <div id="viewerEmpty" class="viewer-empty"><div class="panorama-illustration"><svg viewBox="0 0 360 124" fill="none"><path d="M16 30Q180-4 344 30V100Q180 132 16 100Z" stroke="#c4cedc" stroke-width="1.5"/><path d="M16 77q164 27 328 0M16 54q164 27 328 0" stroke="#dce2ea"/><path d="M84 20v92m96-103v110m96-99v92" stroke="#dce2ea" stroke-dasharray="4 5"/><path d="m65 83 40-29 33 23 52-39 48 42 27-19 37 24" stroke="#95acc6" stroke-width="2"/><circle cx="268" cy="42" r="8" fill="#e3ebf7"/><path d="m144 68 46-30 36 32" stroke="#7496d4" stroke-width="2"/></svg><span>360°</span></div><h3>从一张全景开始</h3><p>查看全图语义，或用文字找到指定目标。</p><button id="emptyUploadButton" class="small-button"><svg><use href="#i-plus"/></svg>选择全景图片</button></div>
+              <div id="imageStack" class="image-stack hidden"><img id="baseImage" alt="上传的全景原图" draggable="false"><img id="maskImage" alt="分割结果" draggable="false" class="hidden"><img id="compareImage" alt="分割对照图" draggable="false" class="hidden"><div id="compareLine" class="compare-line hidden"><span>↔</span></div></div>
+              <div id="viewerLoading" class="viewer-loading hidden"><span class="spinner"></span><strong>GPU 正在处理</strong><span id="viewerStage">请稍候</span></div>
+              <span id="viewLabel" class="view-label hidden">原始图像</span>
+              <button id="clearFocus" class="clear-focus hidden">显示全部类别 ×</button>
+            </div>
+            <div class="viewer-footer"><span id="viewerHint">支持室外街景与室内全景图像</span><div id="compareControl" class="slider-control hidden"><span>对照位置</span><input id="compareSlider" type="range" min="0" max="100" value="50" aria-label="对照位置"></div><div id="opacityControl" class="slider-control hidden"><span>透明度</span><input id="opacitySlider" type="range" min="10" max="90" value="55" aria-label="掩码透明度"></div><div class="zoom-controls"><button id="zoomOut" title="缩小" aria-label="缩小"><svg><use href="#i-minus"/></svg></button><span id="zoomValue">100%</span><button id="zoomIn" title="放大" aria-label="放大"><svg><use href="#i-plus"/></svg></button><button id="zoomFit" title="适应画布" aria-label="适应画布"><svg><use href="#i-fit"/></svg></button></div></div>
+          </section>
+          <div id="resultStats" class="result-stats hidden"><div><small>本次任务耗时</small><strong id="statTime">—</strong><span id="statTimeDetail"></span></div><div><small>有输出的类别</small><strong id="statClasses">—</strong><span id="statClassDetail"></span></div><div><small>识别的独立实例</small><strong id="statInstances">—</strong><span>跨视窗关联后的全图编号</span></div></div>
+          <section id="resultPanel" class="result-panel panel hidden"><div class="result-heading"><div class="result-tabs"><button class="selected" data-result-tab="classes">类别图例</button><button data-result-tab="instances">实例列表 <span id="instanceCount">0</span></button></div><span id="resultModel" class="model-label"></span></div><div id="classResults" class="class-results"></div><div id="instanceResults" class="instance-results hidden"></div><div class="result-bottom"><span id="accuracyHint">无标准标签，未计算准确率</span><button id="evaluateButton" class="text-button">有标注？评估本图</button><button id="auditButton" class="text-button">处理详情</button></div><div id="accuracyResult" class="accuracy-result hidden"></div></section>
+          <div id="taskError" class="notice error hidden" role="alert"></div>
+        </div>
+      </div>
+    </section>
+    <section id="page-experiments" class="page">
+      <div class="page-heading"><div><div class="eyebrow">EVALUATION & INSIGHTS</div><h1>实验对比</h1><p>相同评测协议下，查看原始模型与完整模型的表现。</p></div><a href="/api/experiments/download" class="small-button"><svg><use href="#i-download"/></svg>导出原始指标</a></div>
+      <div class="archive-note"><span class="tiny-dot"></span><strong>冻结实验记录 · 2026.11.09</strong><span>街景模型 v3 · 上传任务不会改变这里的指标</span><a href="https://github.com/21Liujj/piers/tree/82d20b5b4ba24c42666dd8fee548d5c8618505c8" target="_blank" rel="noreferrer">查看复现版本 ↗</a></div>
+      <section class="panel experiment-panel"><div class="panel-heading"><div><h2>跨数据集分割表现</h2><p>统计完整测试图像的混淆矩阵后计算指标。</p></div><label class="inline-select">指标 <select id="metricSelect"><option value="mIoU_pct">mIoU</option><option value="mAcc_pct">mAcc</option><option value="pixel_accuracy_pct">Pixel Accuracy</option><option value="FWIoU_pct">FWIoU</option><option value="mDice_pct">mDice</option></select></label></div><div class="table-scroll"><table class="experiment-table"><thead><tr><th>数据集与评测类别</th><th>图片</th><th>原始 OmniSAM</th><th>完整模型 v3</th><th>变化 / 百分点</th></tr></thead><tbody id="experimentRows"></tbody></table></div><div class="experiment-footnote">DensePASS 为开发集；小幅提升不等于统计显著。WildPASS / SynPASS 曾用于失败诊断。原始模型无对应输出通道的类别会受到结构限制。</div></section>
+      <section class="panel experiment-panel"><div class="panel-heading"><div><h2>逐类别表现</h2><p>同一类别、同一计分口径下比较 IoU。</p></div><select id="datasetSelect" aria-label="选择逐类对比的数据集"></select></div><div class="chart-legend"><span><i class="baseline"></i>原始 OmniSAM</span><span><i class="full"></i>完整模型 v3</span></div><div id="classChart" class="class-chart"></div></section>
+      <section class="panel experiment-panel"><div class="panel-heading"><div><h2>端到端效率</h2><p>RTX6000D · 预热后 · 每组3张图 × 2次；排除首次权重加载。</p></div><span class="neutral-badge">小样本实测</span></div><div id="efficiencyRows" class="efficiency-grid"></div><div class="notice info">当前冻结完整模型的整体耗时与显存均高于原始模型。Memory token 压缩的局部收益不能代表系统已实现加速；效率优化正在单独推进。</div></section>
+    </section>
+    <section id="page-history" class="page"><div class="page-heading"><div><div class="eyebrow">YOUR WORKSPACE</div><h1>任务记录</h1><p>处理进度与结果保存在本机，随时回来查看。</p></div><button id="refreshHistory" class="small-button">刷新记录</button></div><div id="historyList" class="history-list"></div></section>
+    <footer class="app-footer"><span>面向文本指定目标的全景图像分割系统</span><span>Local workspace · GPU inference</span></footer>
+  </main>
+</div>
+<dialog id="settingsDialog" class="dialog"><form id="connectionForm"><div class="dialog-heading"><div><h2>连接 GPU 服务器</h2><p>网页与结果保存在本机，模型在服务器上运行。</p></div><button class="icon-button" type="button" data-close="settingsDialog" aria-label="关闭"><svg><use href="#i-close"/></svg></button></div><div class="form-grid"><label>服务器地址<input id="serverHost" required autocomplete="off"></label><label>SSH 端口<input id="serverPort" type="number" min="1" max="65535" required></label><label>用户名<input id="serverUser" required autocomplete="username"></label><label>服务器密码<input id="serverPassword" type="password" autocomplete="current-password" placeholder="已连接时可留空"></label></div><p class="field-hint">密码仅用于本次本机服务连接，不写入项目文件或日志。</p><details class="advanced-settings"><summary>高级路径设置</summary><label>推理仓库<input id="serverRepo"></label><label>服务器 Python<input id="serverPython"></label><label>权重目录<input id="serverWeights"></label><label>网页运行目录<input id="serverRuntime"></label></details><div id="connectionDetails" class="connection-details"></div><div id="connectionError" class="notice error hidden"></div><div class="dialog-actions"><button id="unloadButton" class="small-button" type="button">释放 GPU 模型</button><button id="connectButton" class="primary-button" type="submit">连接并检查</button></div></form></dialog>
+<dialog id="evaluateDialog" class="dialog"><form id="evaluateForm"><div class="dialog-heading"><div><h2>评估当前图像</h2><p>使用真实标准标签，计算本次结果的精度。</p></div><button class="icon-button" type="button" data-close="evaluateDialog" aria-label="关闭"><svg><use href="#i-close"/></svg></button></div><label class="field-label">标注格式<select id="gtEncoding"><option value="class_ids">类别 ID：按本次图例0…N−1，255忽略</option><option value="binary">单目标二值图：0背景，1或255目标</option></select></label><label class="field-label">标准标签 PNG<input id="gtFile" type="file" accept="image/png" required></label><p class="field-hint">图片尺寸必须与原图一致。这里只计算当前图像；数据集指标需要汇总混淆矩阵。</p><div id="gtError" class="notice error hidden"></div><div class="dialog-actions"><button class="primary-button" id="scoreButton">计算指标</button></div></form></dialog>
+<dialog id="auditDialog" class="dialog wide"><div class="dialog-heading"><div><h2>处理详情</h2><p>本次实际调用的模型、阶段耗时与输出协议。</p></div><button class="icon-button" data-close="auditDialog" aria-label="关闭"><svg><use href="#i-close"/></svg></button></div><pre id="auditContent"></pre></dialog>
+<div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+<script src="/app.js" defer></script>
+</body></html>
