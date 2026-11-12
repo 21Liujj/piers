@@ -75,18 +75,46 @@ def load_manifest_for_split(split):
     return out
 
 
-def build_model(arm, ckpt, device):
+TEXT_PROTO_INDOOR = ("/root/autodl-tmp/piers-main/runs/INDOOR-FOLD1-20261109/"
+                     "indoor_text_prototypes_span8.pt")
+TEXT_PROTO_STREET = "/root/autodl-tmp/eff_omni/assets/text_prototypes_cityscapes13_vitb32.pt"
+
+
+def build_model(arm, ckpt, device, text_proto_path=None, lambda_txt=0.0):
     """Build OmniSAM_adapt according to the arm spec; load the right checkpoint.
 
     Z arms keep the frozen street 13-class head (so their predictions have to go
     through the official 13->8 LUT and the classes without a street counterpart
     are structurally unreachable).  A arms use the fine-tuned 8-class head.
+
+    The text branch (indoor I1) is enabled by passing text prototypes whose
+    class count matches the head:
+      * Z arms -> the frozen street 13-class prototypes (the original model's
+        own text knowledge; the indoor I1 contribution does not exist there,
+        which is exactly the "original vs ours" contrast).
+      * A arms -> the indoor SPAN8 prototypes built by
+        `indoor_text_prototypes.py`.
     """
     from sam.build_sam import build_sam2
     from model.model import OmniSAM_adapt
 
     spec = arm_specs()[arm]
     n_cls = 13 if spec["head"] == "street13" else 8
+
+    text_prototypes = None
+    if spec.get("text_branch"):
+        path = text_proto_path
+        if path is None:
+            path = TEXT_PROTO_STREET if n_cls == 13 else TEXT_PROTO_INDOOR
+        if Path(path).is_file():
+            payload = torch.load(path, map_location="cpu")
+            text_prototypes = payload["text_prototypes"] if isinstance(payload, dict) else payload
+            if text_prototypes.shape[0] != n_cls:
+                raise ValueError(
+                    f"text prototypes class count mismatch: {text_prototypes.shape[0]} vs {n_cls}")
+        else:
+            print(f"[warn] text prototypes not found at {path}; text branch disabled for {arm}")
+
     sam_vendor = EFF / "sam" / "sam"
     sam2_ckpt = sam_vendor / "checkpoints" / "sam2.1_hiera_small.pt"
     if not sam2_ckpt.is_file():
@@ -97,7 +125,13 @@ def build_model(arm, ckpt, device):
             raise FileNotFoundError(f"SAM2 backbone weight not found: {sam2_ckpt}")
     sam = build_sam2("configs/sam2.1/sam2.1_hiera_s.yaml", str(sam2_ckpt),
                      device=torch.device(device))
-    model = OmniSAM_adapt(sam, num_classes=n_cls, num_maskmem=9).to(device)
+    model = OmniSAM_adapt(
+        sam, num_classes=n_cls, num_maskmem=9,
+        text_prototypes=text_prototypes,
+        d_txt=int(text_prototypes.shape[-1]) if text_prototypes is not None else None,
+        lambda_txt=lambda_txt,
+        txt_tau=0.07,
+    ).to(device)
     # Z arms: the frozen street checkpoint (13-cls head loads cleanly).
     # A arms: the fine-tuned checkpoint (the 13-cls classifier is dropped and
     # the 8-cls head comes from the fine-tune).
@@ -134,7 +168,20 @@ def one_hot8(pred):
     return oh * (1.0 - outside)
 
 
-def run_arm(arm, split, ckpt, out_dir, device="cuda", limit=0, dtype=torch.float32):
+def wrap_window(tensor, start, width):
+    """Crop `width` columns starting at `start`, wrapping around the canvas.
+
+    The I3 seam windows straddle x=0 (the ERP seam), so a plain slice would
+    run past the right edge and return a short window.  The outdoor seam
+    windows have the same property and are handled by the modulo indexing in
+    `support()`; here we materialise the wrapped crop explicitly.
+    """
+    idx = (torch.arange(width, device=tensor.device) + start) % tensor.shape[-1]
+    return tensor.index_select(-1, idx)
+
+
+def run_arm(arm, split, ckpt, out_dir, device="cuda", limit=0, dtype=torch.float32,
+            lambda_txt=0.0, text_proto_path=None):
     """Run one arm over a split.
 
     The frozen model runs in fp32 (the outdoor pipeline benchmarks it that way),
@@ -144,7 +191,8 @@ def run_arm(arm, split, ckpt, out_dir, device="cuda", limit=0, dtype=torch.float
     items = load_manifest_for_split(split)
     if limit:
         items = items[:limit]
-    model, spec = build_model(arm, ckpt, device)
+    model, spec = build_model(arm, ckpt, device, text_proto_path=text_proto_path,
+                               lambda_txt=lambda_txt)
 
     starts = semantic_starts(INDOOR_W, INDOOR_WIN, INDOOR_STRIDE)
     passes = INDOOR_PASSES
@@ -176,14 +224,17 @@ def run_arm(arm, split, ckpt, out_dir, device="cuda", limit=0, dtype=torch.float
 
         for p in range(passes):
             order = starts if p == 0 else list(reversed(starts))
-            for s in order:
-                win = tensor[:, :, :, s:s + INDOOR_WIN].to(device=device, dtype=dtype)
-                # frame_idx stays 0 so the memory bank never concatenates a
-                # previous window (each window is an independent crop).
-                out = forward_pred(model, 0, win)
-                n_fwd += 1
-                logits = out[0].float().cpu()
-                pred = to_span8(logits)
+            # Batch the windows of one pass into a single forward.  Each window
+            # is an independent crop, so batching does not change the result --
+            # the memory bank is reset per image and frame_idx stays 0, so the
+            # model never attends across batch entries.
+            wins = torch.cat([tensor[:, :, :, s:s + INDOOR_WIN] for s in order],
+                             dim=0).to(device=device, dtype=dtype)
+            out = forward_pred(model, 0, wins)
+            logits = out.float().cpu()
+            n_fwd += len(order)
+            for k, s in enumerate(order):
+                pred = to_span8(logits[k])
                 canvas[:, :, s:s + INDOOR_WIN] += one_hot8(pred)
                 outside[:, :, s:s + INDOOR_WIN] += (pred >= NUM_CLASSES).unsqueeze(0).float()
 
@@ -199,13 +250,15 @@ def run_arm(arm, split, ckpt, out_dir, device="cuda", limit=0, dtype=torch.float
                                 B=spec["i3_budget"],
                                 min_separation=max(1, INDOOR_WIN // 4))
                 extras = []
-                for s in sel:
-                    win = tensor[:, :, :, s:s + INDOOR_WIN].to(device=device, dtype=dtype)
-                    out = forward_pred(model, 0, win)
-                    n_fwd += 1
-                    logits = out[0].float().cpu()
-                    pred = to_span8(logits)
-                    extras.append((s, one_hot8(pred)))
+                if sel:
+                    wins = torch.cat([wrap_window(tensor, s, INDOOR_WIN) for s in sel],
+                                     dim=0).to(device=device, dtype=dtype)
+                    out = forward_pred(model, 0, wins)
+                    logits = out.float().cpu()
+                    n_fwd += len(sel)
+                    for k, s in enumerate(sel):
+                        # indoor_seam_i3.fuse works on numpy arrays
+                        extras.append((s, one_hot8(to_span8(logits[k])).numpy()))
                 fused, label, info = fuse(base_probs.numpy(), base_label, extras,
                                           base_coverage())
                 canvas = torch.from_numpy(fused)
@@ -249,8 +302,8 @@ def semantic_risk_from_logits(canvas):
     """Normalized entropy + margin risk over the accumulated class votes."""
     q = canvas / torch.clamp(canvas.sum(0, keepdim=True), min=1e-8)
     ent = -(q * torch.log(torch.clamp(q, min=1e-8))).sum(0) / np.log(q.shape[0])
-    top = torch.partition(q, -2, dim=0)[-2:]
-    margin = top[-1] - top[-2]
+    top = torch.topk(q, 2, dim=0).values
+    margin = top[0] - top[1]
     return 0.5 * ent + 0.5 * (1 - margin)
 
 
@@ -263,13 +316,18 @@ def main():
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--seed", type=int, default=1234)
     ap.add_argument("--no-score", action="store_true")
+    ap.add_argument("--lambda-txt", type=float, default=0.5,
+                    help="I1 text fusion weight for the arms that enable the text branch.")
+    ap.add_argument("--text-proto", default=None,
+                    help="Override the text prototype path for the arm.")
     args = ap.parse_args()
 
     set_seed(args.seed)
     device = "cuda" if torch.cuda.is_available() else "cpu"
     out = Path(args.out); out.mkdir(parents=True, exist_ok=True)
 
-    stats = run_arm(args.arm, args.split, args.ckpt, out, device=device, limit=args.limit)
+    stats = run_arm(args.arm, args.split, args.ckpt, out, device=device, limit=args.limit,
+                    lambda_txt=args.lambda_txt, text_proto_path=args.text_proto)
     print(json.dumps(stats, indent=2))
     (out / f"{args.arm}_run_stats.json").write_text(json.dumps(stats, indent=2), encoding="utf-8")
 
