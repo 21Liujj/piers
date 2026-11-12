@@ -1,0 +1,155 @@
+{
+  "version": "indoor-parametrize-checklist-20261109",
+  "isolation": "all new files; frozen outdoor modules untouched",
+  "geometry": {
+    "canonical": [
+      2048,
+      1024
+    ],
+    "semantic_window": [
+      1024,
+      1024
+    ],
+    "semantic_stride": 128,
+    "semantic_starts": [
+      0,
+      128,
+      256,
+      384,
+      512,
+      640,
+      768,
+      896,
+      1024
+    ],
+    "passes": 2,
+    "base_forwards": 18,
+    "i3_extra": 2,
+    "full_forwards": 20,
+    "text_fovs": 4,
+    "text_win": [
+      1024,
+      1024
+    ],
+    "text_stride": 512,
+    "no_2x_width_blowup": true,
+    "no_vertical_crop": true,
+    "module": "scripts/piers/indoor_geometry.py::semantic_starts/check_indoor_geometry"
+  },
+  "taxonomy": {
+    "num_classes": 8,
+    "order": [
+      "ceiling",
+      "chair",
+      "door",
+      "floor",
+      "sofa",
+      "table",
+      "wall",
+      "window"
+    ],
+    "map13_to_8": [
+      255,
+      255,
+      255,
+      0,
+      1,
+      255,
+      255,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "unknown": 255,
+    "keep_native13": true,
+    "module": "scripts/piers/indoor_taxonomy.py::map13_to_span8",
+    "street_head_Z0_smoke": "C8 fusion returns (8,H,W); wall(idx3)->indoor6 only shared channel; others structural zeros"
+  },
+  "frozen_hardcodes_requiring_C_or_geometry_params": [
+    {
+      "file": "scripts/piers/full_model_semantic.py",
+      "lines": "21,35-38,51-54,62",
+      "items": [
+        "num_classes=13/class_set head -> C",
+        "pil.size!=(2048,400) gate -> (2048,1024)",
+        "resize((4096,1024)) 2x blow-up -> no blow-up (2048x1024 direct)",
+        "starts=list(range(0,3073,384)) -> indoor_geometry.semantic_starts()",
+        "logs=np.zeros((1,18,13,1024,1024)) -> (1,18,C,1024,1024)",
+        "merge_width_scatter_np(logs,(1024,4096),1024,384,2) -> (1024,2048),1024,128,2",
+        "cv2.resize(..., (2048,400)) back-map -> (2048,1024)",
+        "tensor.index_select((x*2+...)%4096) 2x coords -> (x+...)%2048",
+        "choose(...,[1664,...],512,2) I3 windows in 4096 coords -> indoor 2048 coords"
+      ]
+    },
+    {
+      "file": "scripts/piers/infer_complete_model_v3.py",
+      "lines": "30-32",
+      "items": [
+        "resize((2048,400)) -> (2048,1024)",
+        "row width/height 2048/400 -> 2048/1024"
+      ]
+    },
+    {
+      "file": "scripts/piers/run_zero_shot_predictions.py",
+      "lines": "validate_manifest/load_text",
+      "items": [
+        "(width,height)!=(2048,400) -> (2048,1024)",
+        "shape!=(400,2048) text shape -> (1024,2048)",
+        "fovs x_start [0,512,1024,1536] keep; win_h 400->1024 via row height",
+        "audit canonical_input_WH [2048,400] -> [2048,1024]"
+      ]
+    },
+    {
+      "file": "scripts/piers/full_model_fusion.py",
+      "lines": "11-60",
+      "items": [
+        "SOURCE_CLASSES 13 fixed -> Z keeps 13; A needs C=8 head + new taxonomy module",
+        "requested_probabilities asserts shape[0]==13 -> C-generic for A-stage"
+      ]
+    },
+    {
+      "file": "scripts/piers/full_model_fusion_v3.py + src/piers_ljj/collaboration/open_vocab_competition.py",
+      "items": [
+        "compete_requested_classes asserts p.shape[0]==13 -> C-generic for A-stage",
+        "common13 bitwise path preserved for street; indoor8 path separate"
+      ]
+    },
+    {
+      "file": "src/piers_ljj/collaboration/reliability_gate.py + calibrator",
+      "items": [
+        "gate already C-generic via _as_prob_array; I1 features 1/C + one-hot must use C=8",
+        "Cityscapes13 calibrator forbidden for indoor8; refit on training calib split only"
+      ]
+    },
+    {
+      "file": "I2 sparse memory",
+      "items": [
+        "street rare[3,4,6,7] forbidden; protect from indoor train stats",
+        "budgets 2048/0.0625 vs 1024/0.03125 decided on internal val only"
+      ]
+    },
+    {
+      "file": "scripts/piers/benchmark_complete_model_v3.py",
+      "items": [
+        "text FoVs already generic (win_h=height) -> OK for 1024 full height",
+        "mask shape check (height,1024) generic -> OK",
+        "semantic engine call must use indoor engine, not frozen street engine"
+      ]
+    }
+  ],
+  "validation_done_isolated": [
+    "indoor_geometry.py check: 9 starts, 18 base, 20 full, 4 text FoVs",
+    "erp.plan_fovs text path: [0,512,1024,1536] OK; semantic uses explicit starts (plan_fovs wraps to 16, not used)",
+    "crop_erp_wrap wrap sanity OK",
+    "indoor_taxonomy map13->8 exact LUT OK",
+    "C8 street-head fusion smoke: (8,8,8) scores, pred all class6 (shared wall) as expected pre-adaptation"
+  ],
+  "not_claimed": [
+    "no indoor mIoU reported (GT blocked)",
+    "no training run started",
+    "no frozen outdoor file edited"
+  ]
+}
