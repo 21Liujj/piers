@@ -1,0 +1,117 @@
+{
+  "generator": "scripts/paper/readme_figures.py",
+  "source_sha256": {
+    "results/paper20261109/complete_table.json": "d0ffe6f9043c2f44d35362d6c39dca9a5738162089649b1840c792b11f597f8a",
+    "results/indoor_matched20261112/indoor_results.json": "e265b8ccc1db8f91b3d0d441f853a8fc1eff4680fe9681aaa691cb6f50c3e407"
+  },
+  "comparison_rows": [
+    {
+      "dataset": "DensePASS · mapped13",
+      "images": 100,
+      "classes": 13,
+      "setting": "frozen source weights",
+      "original_mIoU_pct": 60.29606669652925,
+      "full_mIoU_pct": 60.855488498434966,
+      "delta_pp": 0.5594218019057138,
+      "delta95CI_pp": [
+        -0.17623560430774904,
+        1.3930055682938676
+      ]
+    },
+    {
+      "dataset": "WildPASS · native8",
+      "images": 500,
+      "classes": 8,
+      "setting": "frozen source weights",
+      "original_mIoU_pct": 37.55717076428302,
+      "full_mIoU_pct": 57.5669985392377,
+      "delta_pp": 20.00982777495468,
+      "delta95CI_pp": [
+        16.386624319176143,
+        23.258633476673126
+      ]
+    },
+    {
+      "dataset": "SynPASS · native22",
+      "images": 1690,
+      "classes": 22,
+      "setting": "frozen source weights",
+      "original_mIoU_pct": 25.07231461033641,
+      "full_mIoU_pct": 25.616315103643046,
+      "delta_pp": 0.5440004933066369,
+      "delta95CI_pp": [
+        0.3760055812660455,
+        0.7305399889226292
+      ]
+    },
+    {
+      "dataset": "SynPASS · mapped13",
+      "images": 1690,
+      "classes": 13,
+      "setting": "frozen source weights",
+      "original_mIoU_pct": 43.58107078270276,
+      "full_mIoU_pct": 43.86649336923204,
+      "delta_pp": 0.285422586529279,
+      "delta95CI_pp": [
+        0.15977042862300053,
+        0.4207656649922157
+      ]
+    },
+    {
+      "dataset": "Stanford 2D-3D-S · SPAN8",
+      "images": 373,
+      "classes": 8,
+      "setting": "shared indoor-adapted weights",
+      "original_mIoU_pct": 37.642357820659846,
+      "full_mIoU_pct": 46.55908459878398,
+      "delta_pp": 8.916726778124136,
+      "delta95CI_pp": [
+        8.312551431526469,
+        9.472769987413981
+      ]
+    }
+  ],
+  "wildpass_class_IoU": [
+    {
+      "class": "road",
+      "original": 76.2544073612685,
+      "full": 77.08500756480477
+    },
+    {
+      "class": "sidewalk",
+      "original": 47.74059205640206,
+      "full": 48.76223552209083
+    },
+    {
+      "class": "curb",
+      "original": 0.0,
+      "full": 18.558258380772063
+    },
+    {
+      "class": "crosswalk",
+      "original": 0.0,
+      "full": 16.699450268293482
+    },
+    {
+      "class": "car",
+      "original": 82.75996765060599,
+      "full": 88.28479896379399
+    },
+    {
+      "class": "person",
+      "original": 93.70239904598762,
+      "full": 94.10236365651366
+    },
+    {
+      "class": "truck",
+      "original": 0.0,
+      "full": 60.38132670768529
+    },
+    {
+      "class": "bus",
+      "original": 0.0,
+      "full": 56.662547249947536
+    }
+  ],
+  "all_values": "Measured archived results; no estimated or synthetic measurements"
+}
