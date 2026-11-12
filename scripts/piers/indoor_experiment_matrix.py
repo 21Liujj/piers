@@ -51,6 +51,13 @@ def arm_specs() -> dict:
             "semantic_forwards": 20,
             "i3_budget": 2,
             "text_branch": True,
+            # The frozen street checkpoint carries NO text-branch weights (0 of
+            # its 1806 tensors), so its txt_head projector is random.  The Z
+            # arm therefore runs the text branch *inert* (lambda_txt = 0, i.e.
+            # the text logits are computed but not added to the visual logits).
+            # Claiming a text contribution here would be unfounded.
+            "lambda_txt": 0.0,
+            "text_branch_trained": False,
             "map13_to_span8": True,
         },
         "A0": {
@@ -71,6 +78,10 @@ def arm_specs() -> dict:
             "semantic_forwards": 18,
             "i3_budget": 0,
             "text_branch": True,
+            # The A arms are fine-tuned WITH the indoor text branch, so the
+            # text projector is trained rather than random.
+            "lambda_txt": 0.1,
+            "text_branch_trained": True,
             "map13_to_span8": False,
         },
         "A1_B1": {
@@ -81,6 +92,8 @@ def arm_specs() -> dict:
             "semantic_forwards": 19,
             "i3_budget": 1,
             "text_branch": True,
+            "lambda_txt": 0.1,
+            "text_branch_trained": True,
             "map13_to_span8": False,
         },
         "A1_B2": {
@@ -91,6 +104,8 @@ def arm_specs() -> dict:
             "semantic_forwards": 20,
             "i3_budget": 2,
             "text_branch": True,
+            "lambda_txt": 0.1,
+            "text_branch_trained": True,
             "map13_to_span8": False,
         },
     }

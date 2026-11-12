@@ -35,7 +35,13 @@ def confusion(pred: np.ndarray, gt: np.ndarray, num_classes=NUM_CLASSES):
 
 
 def miou_from_confusion(cms) -> dict:
-    """Aggregate per-image confusion matrices into mIoU / mAcc / per-class IoU."""
+    """Aggregate per-image confusion matrices into mIoU / mAcc / per-class IoU.
+
+    Column `num_classes` of the confusion matrix holds the pixels whose GT is
+    valid but whose prediction fell outside the SPAN8 label set (only the
+    frozen street 13-head can produce those).  Such a pixel is a miss for its
+    GT class but is never a false positive on another class.
+    """
     cm = np.sum(cms, axis=0)
     C = cm.shape[0]
     ious = []
@@ -47,15 +53,22 @@ def miou_from_confusion(cms) -> dict:
         per_class[SPAN8[c]] = iou
         if union > 0:
             ious.append(iou)
-    valid_px = cm[:, :C].sum()
-    acc = float(np.trace(cm[:, :C]) / valid_px) if valid_px else float("nan")
+    # correct pixels = diagonal over the 8 SPAN8 classes
+    correct = float(np.trace(cm[:, :C]))
+    gt_valid = float(cm.sum())
+    acc = float(correct / gt_valid) if gt_valid else float("nan")
     return {
         "miou": float(np.mean(ious)) if ious else float("nan"),
         "mAcc": acc,
         "per_class_iou": per_class,
         "n_images": len(cms),
-        "valid_pixels": int(valid_px),
-        "per_class_support": {SPAN8[c]: int(cm[:, c].sum()) for c in range(C)},
+        "gt_valid_pixels": int(gt_valid),
+        "correct_pixels": int(correct),
+        # per-class GT support = all pixels whose GT is that class
+        "per_class_gt_support": {SPAN8[c]: int(cm[:, c].sum()) for c in range(C)},
+        # per-class predicted support = all pixels predicted as that class
+        "per_class_pred_support": {SPAN8[c]: int(cm[c, :C].sum()) for c in range(C)},
+        "predictions_outside_label_set": int(cm[:, C].sum()),
     }
 
 
@@ -94,6 +107,8 @@ def score_predictions(pred_dir, manifest_path, label_root, area_key="area",
                           "miou": float(np.nanmean(iou)) if np.isfinite(iou).any() else None})
     res = miou_from_confusion(cms)
     res["per_image"] = per_image
+    res["manifest"] = str(manifest_path)
+    res["label_root"] = str(root)
     if out_json:
         Path(out_json).write_text(json.dumps(res, indent=2), encoding="utf-8")
     return res

@@ -62,8 +62,16 @@ def build_stanford_loader(list_name, crop_size=(INDOOR_W, INDOOR_H),
     return ds
 
 
-def build_model(num_classes=NUM_CLASSES, device="cuda", ckpt=CKPT):
-    """Build OmniSAM_adapt with an 8-class head, load the frozen 13-class ckpt."""
+def build_model(num_classes=NUM_CLASSES, device="cuda", ckpt=CKPT,
+                text_protos=None, lambda_txt=0.0):
+    """Build OmniSAM_adapt with an 8-class head, load the frozen 13-class ckpt.
+
+    `text_protos` (optional) attaches the indoor SPAN8 text prototypes so the
+    I1 text branch is *trained* together with the head.  This matters: the
+    frozen street checkpoint contains **no** text-branch weights (0 of its 1806
+    tensors), so an untrained `txt_head` projector would be pure noise and
+    would poison every arm that claims to use I1.
+    """
     import argparse as _ap
     from sam.build_sam import build_sam2
     from model.model import OmniSAM_adapt
@@ -80,7 +88,13 @@ def build_model(num_classes=NUM_CLASSES, device="cuda", ckpt=CKPT):
         else:
             raise FileNotFoundError(f"SAM2 backbone weight not found: {sam2_ckpt}")
     sam = build_sam2(model_cfg, str(sam2_ckpt), device=torch.device(device))
-    model = OmniSAM_adapt(sam, num_classes=num_classes, num_maskmem=9).to(device)
+    model = OmniSAM_adapt(
+        sam, num_classes=num_classes, num_maskmem=9,
+        text_prototypes=text_protos,
+        d_txt=int(text_protos.shape[-1]) if text_protos is not None else None,
+        lambda_txt=float(lambda_txt),
+        txt_tau=0.07,
+    ).to(device)
     # Upstream smart_load_checkpoint uses strict=False, which still raises on a
     # shape mismatch (13-cls classifier vs our 8-cls head).  indoor_ckpt
     # filters that tensor out and reports what happened.
@@ -108,6 +122,12 @@ def split_trainable(model):
         if ".linear_a_" in n or ".linear_b_" in n:
             p.requires_grad_(True); lora.append((n, p))
         elif n.startswith("decoder."):
+            p.requires_grad_(True); head.append((n, p))
+        elif n.startswith("txt_head."):
+            # The I1 text branch.  The frozen street checkpoint has no text
+            # weights at all, so this projector starts from scratch and MUST be
+            # trained together with the head, otherwise the text logits are
+            # random noise added to the visual logits.
             p.requires_grad_(True); head.append((n, p))
         else:
             p.requires_grad_(False); frozen += p.numel()
@@ -157,12 +177,29 @@ def main():
     ap.add_argument("--train-list", default="train_fit.txt")
     ap.add_argument("--val-list", default="train_val.txt")
     ap.add_argument("--audit-only", action="store_true")
+    ap.add_argument("--text-proto", default=None,
+                    help="Indoor SPAN8 text prototypes (.pt).  When given, the I1 "
+                         "text branch is attached and trained jointly with the head.")
+    ap.add_argument("--lambda-txt", type=float, default=0.5,
+                    help="I1 text fusion weight used during training.")
     args = ap.parse_args()
 
     out = Path(args.out); out.mkdir(parents=True, exist_ok=True)
     set_seed(args.seed)
     device = "cuda" if torch.cuda.is_available() else "cpu"
     rep = {"args": vars(args), "device": device}
+
+    # ---------- indoor text prototypes (I1) ----------
+    text_protos = None
+    if args.text_proto:
+        payload = torch.load(args.text_proto, map_location="cpu")
+        text_protos = payload["text_prototypes"] if isinstance(payload, dict) else payload
+        if text_protos.shape[0] != NUM_CLASSES:
+            raise ValueError(f"text prototypes class count {text_protos.shape[0]} "
+                             f"!= {NUM_CLASSES}")
+        rep["text_branch"] = {"protos": str(args.text_proto),
+                              "shape": list(text_protos.shape),
+                              "lambda_txt": args.lambda_txt}
 
     # ---------- CPU-only audit of what will be trainable ----------
     raw = torch.load(CKPT, map_location="cpu")
@@ -183,7 +220,8 @@ def main():
         (out / "TRAINABLE_AUDIT.json").write_text(json.dumps(rep, indent=2), encoding="utf-8")
         print(json.dumps(rep, indent=2)); return
 
-    model = build_model(device=device)
+    model = build_model(device=device, text_protos=text_protos,
+                        lambda_txt=args.lambda_txt if text_protos is not None else 0.0)
     lora, head, frozen = split_trainable(model)
     lora_params = [p for _, p in lora]; head_params = [p for _, p in head]
     rep["trainable"] = {
@@ -270,6 +308,11 @@ def main():
                            "elapsed_s": round(time.time() - t0, 1)}
                     print(json.dumps(msg), flush=True)
                     (out / "train_log.jsonl").open("a", encoding="utf-8").write(json.dumps(msg) + "\n")
+                # periodic checkpoint so a long run is never lost
+                if step % 300 == 0:
+                    torch.save({"model": model.state_dict(), "args": vars(args), "step": step},
+                               out / "indoor_lora_last.pth")
+                    print(f"CHECKPOINT step={step}", flush=True)
                 if step >= total:
                     break
         micro = 0

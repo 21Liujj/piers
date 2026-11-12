@@ -41,11 +41,22 @@ TEMPLATES = [
 ]
 
 
-def build(out_path, device="cuda", text_model="ViT-B-32", text_pretrained="openai"):
+def build(out_path, device="cuda", text_model="ViT-B-32", text_pretrained="openai",
+          weights_dir="/root/autodl-tmp/clip_cache"):
     import open_clip
 
     dev = torch.device(device if torch.cuda.is_available() else "cpu")
-    model, _, _ = open_clip.create_model_and_transforms(text_model, pretrained=text_pretrained)
+
+    # The server has no outbound internet, so the open_clip weights are staged
+    # locally under `weights_dir`.  open_clip accepts a checkpoint path
+    # directly, which avoids the Hub download entirely.
+    local_ckpt = Path(weights_dir) / "open_clip_pytorch_model.bin"
+    if local_ckpt.is_file():
+        model, _, _ = open_clip.create_model_and_transforms(text_model, pretrained=str(local_ckpt))
+        source = str(local_ckpt)
+    else:
+        model, _, _ = open_clip.create_model_and_transforms(text_model, pretrained=text_pretrained)
+        source = f"{text_model}/{text_pretrained}"
     model = model.to(dev).eval()
     for p in model.parameters():
         p.requires_grad_(False)
@@ -69,6 +80,7 @@ def build(out_path, device="cuda", text_model="ViT-B-32", text_pretrained="opena
         templates=TEMPLATES,
         text_model=text_model,
         text_pretrained=text_pretrained,
+        weights_source=source,
         class_descriptions=CLASS_DESCRIPTIONS,
         per_class_prompts=per_class_prompts,
         note="Indoor I1 text prototypes for SPAN8; same open_clip recipe as the "
@@ -85,8 +97,14 @@ def main():
     ap.add_argument("--out", default="/root/autodl-tmp/piers-main/runs/INDOOR-FOLD1-20261109/"
                                      "indoor_text_prototypes_span8.pt")
     ap.add_argument("--device", default="cuda")
+    ap.add_argument("--weights-dir", default="/root/autodl-tmp/clip_cache",
+                    help="Directory holding a locally staged open_clip checkpoint "
+                         "(offline machines cannot reach the Hub).")
+    ap.add_argument("--text-model", default="ViT-B-32")
+    ap.add_argument("--text-pretrained", default="openai")
     args = ap.parse_args()
-    p = build(args.out, args.device)
+    p = build(args.out, args.device, args.text_model, args.text_pretrained,
+              weights_dir=args.weights_dir)
     print(json.dumps({
         "out": args.out,
         "shape": list(p["text_prototypes"].shape),

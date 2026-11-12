@@ -13,9 +13,26 @@ Design rules that keep the comparison honest:
   * Every arm uses the same indoor geometry (indoor_geometry): 512x512 windows,
     stride 64, 9 starts x 2 passes, plus I3 seam windows when i3_budget > 0.
 
+Memory semantics (I2) -- the important part:
+  The memory bank is a *temporal* module: `MemoryBank.forward` only reads the
+  previous frames when `frame_idx != 0` (`if frame_idx != 0:` guards the whole
+  history concatenation).  A forward with `frame_idx=0` therefore never sees
+  any memory, no matter how the memory bank is configured -- so a pipeline that
+  calls every window with `frame_idx=0` silently degenerates to "no memory at
+  all" and the I2 arm would be identical to the dense arm.
+
+  The indoor pipeline therefore drives the windows with an *increasing*
+  `frame_idx` (0,1,...,N-1) inside each pass, exactly like the outdoor
+  `full_model_semantic.py` runtime does.  That is what makes the memory bank
+  (and hence the I2 sparse retrieval) actually do something.
+
+  The window order of a pass is the semantic schedule (left to right, then
+  right to left), so the memory history of window k contains the k previously
+  seen FoVs -- the same causal structure as the outdoor sliding window.
+
 Usage:
     python indoor_eval_runner.py --arm A1_B2 --split heldout \
-        --ckpt runs/INDOOR-FOLD1-20261109/indoor_lora/indoor_lora_last.pth \
+        --ckpt runs/INDOOR-FOLD1-20261109/train/indoor_lora_last.pth \
         --out runs/INDOOR-FOLD1-20261109/eval
 """
 from __future__ import annotations
@@ -49,6 +66,7 @@ IGNORE = 255
 DATA_ROOT = "/root/autodl-tmp/data_extra/Stanford2d3d_Seg"
 PREP_ROOT = "/root/autodl-tmp/data_extra/SPAN8_PREP"
 FROZEN_CKPT = "/root/autodl-tmp/weights/omnisam_s.pth"
+RUN_DIR = Path("/root/autodl-tmp/piers-main/runs/INDOOR-FOLD1-20261109")
 
 SPLIT_LISTS = {
     "fit": "train_fit.txt",
@@ -65,8 +83,7 @@ def set_seed(s):
 
 def load_manifest_for_split(split):
     """Return [(image_name, label_path_absolute), ...] for a split."""
-    run = Path("/root/autodl-tmp/piers-main/runs/INDOOR-FOLD1-20261109")
-    p = run / f"split_{split}.jsonl"
+    p = RUN_DIR / f"split_{split}.jsonl"
     recs = [json.loads(l) for l in open(p, encoding="utf-8") if l.strip()]
     out = []
     for r in recs:
@@ -75,9 +92,15 @@ def load_manifest_for_split(split):
     return out
 
 
-TEXT_PROTO_INDOOR = ("/root/autodl-tmp/piers-main/runs/INDOOR-FOLD1-20261109/"
-                     "indoor_text_prototypes_span8.pt")
+TEXT_PROTO_INDOOR = str(RUN_DIR / "indoor_text_prototypes_span8.pt")
 TEXT_PROTO_STREET = "/root/autodl-tmp/eff_omni/assets/text_prototypes_cityscapes13_vitb32.pt"
+
+# Checkpoint produced by the indoor stage-2 text alignment
+# (`indoor_text_align_train.py`).  It carries the stage-1 LoRA + the trained
+# 8-class head + the trained `txt_head`, so the A1_* arms get a *learned*
+# text branch instead of a random projector.
+CKPT_TEXT = str(RUN_DIR / "train" / "indoor_lora_text_last.pth")
+CKPT_LORA = str(RUN_DIR / "train" / "indoor_lora_last.pth")
 
 
 def build_model(arm, ckpt, device, text_proto_path=None, lambda_txt=0.0):
@@ -94,6 +117,14 @@ def build_model(arm, ckpt, device, text_proto_path=None, lambda_txt=0.0):
         which is exactly the "original vs ours" contrast).
       * A arms -> the indoor SPAN8 prototypes built by
         `indoor_text_prototypes.py`.
+
+    IMPORTANT: the frozen street checkpoint carries **no** text-branch weights
+    (0 of its 1806 tensors), so `txt_head.projector` and `txt_head.text_scale`
+    are randomly initialised for the Z arms.  The Z arms therefore must NOT
+    claim a text contribution: they run with `lambda_txt=0`, i.e. the text
+    branch is present but its logits are not added to the visual logits
+    (`model.py`: `fusion_type = "none"` when `lambda_txt == 0`).  This is
+    stated in the arm spec and in the results table.
     """
     from sam.build_sam import build_sam2
     from model.model import OmniSAM_adapt
@@ -135,8 +166,20 @@ def build_model(arm, ckpt, device, text_proto_path=None, lambda_txt=0.0):
     # Z arms: the frozen street checkpoint (13-cls head loads cleanly).
     # A arms: the fine-tuned checkpoint (the 13-cls classifier is dropped and
     # the 8-cls head comes from the fine-tune).
+    #
+    # The arms whose spec declares a *trained* text branch must load the
+    # stage-2 text-aligned checkpoint, otherwise `txt_head` stays random.
     from indoor_ckpt import load_indoor_checkpoint
-    load_indoor_checkpoint(model, ckpt or FROZEN_CKPT, verbose=False)
+    if ckpt:
+        chosen = ckpt
+    elif spec.get("text_branch_trained") and Path(CKPT_TEXT).is_file():
+        chosen = CKPT_TEXT
+    elif spec.get("adapted") and Path(CKPT_LORA).is_file():
+        chosen = CKPT_LORA
+    else:
+        chosen = FROZEN_CKPT
+    print(f"[{arm}] checkpoint={chosen}")
+    load_indoor_checkpoint(model, chosen, verbose=False)
     model.eval()
     return model, spec
 
@@ -191,8 +234,20 @@ def run_arm(arm, split, ckpt, out_dir, device="cuda", limit=0, dtype=torch.float
     items = load_manifest_for_split(split)
     if limit:
         items = items[:limit]
+    # The fusion weight comes from the arm spec: the Z arms keep it at 0 (the
+    # frozen checkpoint has no trained text branch, so its text logits would be
+    # random noise), the A1_* arms use the upstream value 0.1.
+    lambda_txt = spec.get("lambda_txt", 0.0)
     model, spec = build_model(arm, ckpt, device, text_proto_path=text_proto_path,
                                lambda_txt=lambda_txt)
+
+    # ---- I2 memory configuration ----------------------------------------
+    from indoor_memory_i2 import install_indoor_i2, install_dense_memory
+    if spec["memory"] == "i2":
+        mem_audit = install_indoor_i2(model, stage="eval")
+    else:
+        mem_audit = install_dense_memory(model)
+    print(f"[{arm}] memory={spec['memory']} audit={json.dumps(mem_audit)[:400]}")
 
     starts = semantic_starts(INDOOR_W, INDOOR_WIN, INDOOR_STRIDE)
     passes = INDOOR_PASSES
@@ -200,10 +255,12 @@ def run_arm(arm, split, ckpt, out_dir, device="cuda", limit=0, dtype=torch.float
     pred_dir.mkdir(parents=True, exist_ok=True)
 
     stats = {"arm": arm, "spec": spec, "split": split, "n": len(items),
-             "forwards_per_image": 0, "wall_s": 0.0}
+             "forwards_per_image": 0, "wall_s": 0.0,
+             "memory_audit": mem_audit}
     t0 = time.time()
 
     from PIL import Image
+    fwd_last = 0
     for idx, (name, lbl_path) in enumerate(items):
         img = Image.open(str(Path(DATA_ROOT) / "images" / name)).convert("RGB")
         if img.size != (INDOOR_W, INDOOR_H):
@@ -221,22 +278,40 @@ def run_arm(arm, split, ckpt, out_dir, device="cuda", limit=0, dtype=torch.float
         outside = torch.zeros((1, INDOOR_H, INDOOR_W), dtype=torch.float32)
         model.memory_bank._init_output_dict_source()
         n_fwd = 0
+        # Per-pass memory context + pseudo labels, exactly like the outdoor
+        # `full_model_semantic.py`: the I3 seam window is re-observed *with*
+        # the memory history of the pass it belongs to, which is what makes it
+        # a "look again with context" rather than a cold re-run.
+        contexts = []
 
         for p in range(passes):
             order = starts if p == 0 else list(reversed(starts))
-            # Batch the windows of one pass into a single forward.  Each window
-            # is an independent crop, so batching does not change the result --
-            # the memory bank is reset per image and frame_idx stays 0, so the
-            # model never attends across batch entries.
-            wins = torch.cat([tensor[:, :, :, s:s + INDOOR_WIN] for s in order],
-                             dim=0).to(device=device, dtype=dtype)
-            out = forward_pred(model, 0, wins)
-            logits = out.float().cpu()
-            n_fwd += len(order)
-            for k, s in enumerate(order):
-                pred = to_span8(logits[k])
+            # The memory bank is temporal: it only reads the history when
+            # `frame_idx != 0`.  We therefore drive the windows of a pass with
+            # an increasing frame index so the I2 memory is actually used.
+            #
+            # The forwards are deliberately SEQUENTIAL (batch size 1), exactly
+            # like the outdoor `full_model_semantic.py` runtime.  Batching the
+            # windows of a pass would collapse the whole history into a single
+            # `frame_idx` (the memory bank stores one entry per frame index) and
+            # silently disable the memory attention -- measured on the heldout
+            # split, batched and sequential outputs agree on only 68% of the
+            # pixels.  The 5.4x speed-up is not worth changing the numbers.
+            model.memory_bank._init_output_dict_source()
+            labels = {}
+            for f, s in enumerate(order):
+                x = tensor[:, :, :, s:s + INDOOR_WIN].to(device=device, dtype=dtype)
+                out = forward_pred(model, f, x)
+                logits = out.float().cpu()
+                n_fwd += 1
+                labels[f] = out.detach().argmax(1).cpu()
+                pred = to_span8(logits[0])
                 canvas[:, :, s:s + INDOOR_WIN] += one_hot8(pred)
                 outside[:, :, s:s + INDOOR_WIN] += (pred >= NUM_CLASSES).unsqueeze(0).float()
+            contexts.append((
+                {k: v for k, v in model.memory_bank.output_dict_source["frame_outputs"].items() if k > 0},
+                {k: v for k, v in labels.items() if k > 0},
+            ))
 
         # I3 seam re-observation: pick the extra windows from the risk map and
         # fuse them with the base prediction exactly like the outdoor I3 does
@@ -251,14 +326,30 @@ def run_arm(arm, split, ckpt, out_dir, device="cuda", limit=0, dtype=torch.float
                                 min_separation=max(1, INDOOR_WIN // 4))
                 extras = []
                 if sel:
-                    wins = torch.cat([wrap_window(tensor, s, INDOOR_WIN) for s in sel],
-                                     dim=0).to(device=device, dtype=dtype)
-                    out = forward_pred(model, 0, wins)
-                    logits = out.float().cpu()
-                    n_fwd += len(sel)
+                    # The I3 window is an *extra look* at a seam region that the
+                    # base pass may have covered poorly.  It is re-observed
+                    # with the memory history of the pass it belongs to (the
+                    # outdoor runtime restores `output_dict_source` from the
+                    # stored context and calls the model with frame_idx = 9 so
+                    # the memory bank can attend over the whole pass), and its
+                    # result is fused into the base prediction by the
+                    # coverage-aware fusion -- never overwritten.
                     for k, s in enumerate(sel):
+                        # The outdoor runtime pairs the B extra windows with the
+                        # B passes (plan[pas] -> contexts[pas]); with B<=2 and
+                        # 2 passes the pairing is one-to-one.
+                        pas = min(k, len(contexts) - 1)
+                        context, plabels = contexts[pas]
+                        model.memory_bank._init_output_dict_source()
+                        model.memory_bank.output_dict_source = {"frame_outputs": dict(context)}
+                        x = wrap_window(tensor, s, INDOOR_WIN).to(device=device, dtype=dtype)
+                        out = forward_pred(model, len(contexts[pas][0]), x,
+                                           historical_pseudo_labels=plabels)
+                        logits = out.float().cpu()
+                        n_fwd += 1
                         # indoor_seam_i3.fuse works on numpy arrays
-                        extras.append((s, one_hot8(to_span8(logits[k])).numpy()))
+                        extras.append((s, one_hot8(to_span8(logits[0])).numpy()))
+                    model.memory_bank._init_output_dict_source()
                 fused, label, info = fuse(base_probs.numpy(), base_label, extras,
                                           base_coverage())
                 canvas = torch.from_numpy(fused)
@@ -267,6 +358,7 @@ def run_arm(arm, split, ckpt, out_dir, device="cuda", limit=0, dtype=torch.float
                 final[out_mask] = 255
                 out_np = final.numpy().astype(np.uint8)
                 np.save(pred_dir / (Path(name).stem + ".npy"), out_np)
+                fwd_last = n_fwd
                 if (idx + 1) % 25 == 0:
                     print(f"[{arm}/{split}] {idx+1}/{len(items)} fwd/img={n_fwd}", flush=True)
                 continue
@@ -277,22 +369,35 @@ def run_arm(arm, split, ckpt, out_dir, device="cuda", limit=0, dtype=torch.float
         pred[out_mask] = 255
         out_np = pred.cpu().numpy()
         np.save(pred_dir / (Path(name).stem + ".npy"), out_np)
+        fwd_last = n_fwd
         if (idx + 1) % 25 == 0:
             print(f"[{arm}/{split}] {idx+1}/{len(items)} fwd/img={n_fwd}", flush=True)
 
-    stats["forwards_per_image"] = n_fwd // max(1, len(items))
+    stats["forwards_per_image"] = fwd_last
     stats["wall_s"] = round(time.time() - t0, 1)
+    stats["memory_audit_final"] = {
+        k: v for k, v in (mem_audit or {}).items()
+        if k in ("calls", "fallbacks", "tokens_before", "tokens_after", "max_tokens")
+    }
     return stats
 
 
-def forward_pred(model, frame_idx, x):
+def forward_pred(model, frame_idx, x, historical_pseudo_labels=None):
     """Return only the prediction logits from OmniSAM_adapt.forward.
 
     The frozen model has text prototypes attached, so forward returns
     `(pred, feat, feat_de, TextAlignAux[, ...])`; a bare tensor when the text
     branch is inactive.  Only the logits are needed here.
+
+    `historical_pseudo_labels` is forwarded so the I3 seam window can be
+    re-observed with the pseudo labels of the pass it belongs to (the outdoor
+    runtime passes them the same way); the memory bank uses them for the
+    class-aware / boundary-guarded sparse selection.
     """
-    out = model(frame_idx, x)
+    if historical_pseudo_labels is None:
+        out = model(frame_idx, x)
+    else:
+        out = model(frame_idx, x, historical_pseudo_labels=historical_pseudo_labels)
     if isinstance(out, (tuple, list)):
         return out[0]
     return out
@@ -312,7 +417,7 @@ def main():
     ap.add_argument("--arm", required=True, choices=list(arm_specs().keys()))
     ap.add_argument("--split", default="heldout", choices=list(SPLIT_LISTS.keys()))
     ap.add_argument("--ckpt", default=None)
-    ap.add_argument("--out", default="/root/autodl-tmp/piers-main/runs/INDOOR-FOLD1-20261109/eval")
+    ap.add_argument("--out", default=str(RUN_DIR / "eval"))
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--seed", type=int, default=1234)
     ap.add_argument("--no-score", action="store_true")
@@ -334,7 +439,7 @@ def main():
     # Score the predictions.  The scorer is the ONLY place that reads GT.
     if not args.no_score:
         from indoor_scorer import score_predictions
-        manifest = Path("/root/autodl-tmp/piers-main/runs/INDOOR-FOLD1-20261109") / f"split_{args.split}.jsonl"
+        manifest = RUN_DIR / f"split_{args.split}.jsonl"
         res = score_predictions(str(out / "preds" / args.arm), str(manifest),
                                 PREP_ROOT, out_json=str(out / f"{args.arm}_{args.split}_metrics.json"))
         res.pop("per_image", None)
