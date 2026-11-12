@@ -1,0 +1,129 @@
+{
+  "dataset": "SPAN8 / Stanford2D3D via 360BEV mirror",
+  "classes": [
+    "ceiling",
+    "chair",
+    "door",
+    "floor",
+    "sofa",
+    "table",
+    "wall",
+    "window"
+  ],
+  "split": "fit 832 / calib 104 / val 104 (train, room-disjoint) / heldout 373 (area_5a+5b)",
+  "canvas": [
+    1024,
+    512
+  ],
+  "semantic_geometry": {
+    "window": [
+      512,
+      512
+    ],
+    "stride": 64,
+    "starts": 9,
+    "passes": 2,
+    "base_forwards": 18
+  },
+  "arms": {
+    "Z0": {
+      "desc": "original OmniSAM, frozen street 13-head, no I1/I2/I3, no adaptation",
+      "head": "street13",
+      "adapted": false,
+      "memory": "dense",
+      "semantic_forwards": 18,
+      "i3_budget": 0,
+      "text_branch": false,
+      "map13_to_span8": true
+    },
+    "Z1": {
+      "desc": "original OmniSAM + full I1/I2/I3 (no indoor adaptation)",
+      "head": "street13",
+      "adapted": false,
+      "memory": "i2",
+      "semantic_forwards": 20,
+      "i3_budget": 2,
+      "text_branch": true,
+      "map13_to_span8": true
+    },
+    "A0": {
+      "desc": "adapted model (LoRA r4 + 8-cls head), dense, 18 forwards",
+      "head": "span8",
+      "adapted": true,
+      "memory": "dense",
+      "semantic_forwards": 18,
+      "i3_budget": 0,
+      "text_branch": false,
+      "map13_to_span8": false
+    },
+    "A1_B0": {
+      "desc": "adapted model + I2 + 18 forwards (strict degradation baseline)",
+      "head": "span8",
+      "adapted": true,
+      "memory": "i2",
+      "semantic_forwards": 18,
+      "i3_budget": 0,
+      "text_branch": true,
+      "map13_to_span8": false
+    },
+    "A1_B1": {
+      "desc": "adapted model + I2 + 19 forwards (1 I3 seam window)",
+      "head": "span8",
+      "adapted": true,
+      "memory": "i2",
+      "semantic_forwards": 19,
+      "i3_budget": 1,
+      "text_branch": true,
+      "map13_to_span8": false
+    },
+    "A1_B2": {
+      "desc": "adapted model + I2 + 20 forwards (full I3, 2 seam windows)",
+      "head": "span8",
+      "adapted": true,
+      "memory": "i2",
+      "semantic_forwards": 20,
+      "i3_budget": 2,
+      "text_branch": true,
+      "map13_to_span8": false
+    }
+  },
+  "compare_pairs": [
+    {
+      "a": "Z0",
+      "b": "A0",
+      "claim": "indoor adaptation gain (original vs our model)"
+    },
+    {
+      "a": "Z1",
+      "b": "A1_B2",
+      "claim": "full-system gain with I1/I2/I3 both sides"
+    },
+    {
+      "a": "A0",
+      "b": "A1_B0",
+      "claim": "I2 memory effect on adapted model"
+    },
+    {
+      "a": "A1_B0",
+      "b": "A1_B1",
+      "claim": "I3 budget step 1"
+    },
+    {
+      "a": "A1_B1",
+      "b": "A1_B2",
+      "claim": "I3 budget step 2"
+    },
+    {
+      "a": "A1_B0",
+      "b": "A1_B2",
+      "claim": "total I3 effect at B=2"
+    }
+  ],
+  "metric": "mIoU over 8 classes + per-class IoU, ignore=255, heldout only",
+  "guards": [
+    "GT read only by scorer",
+    "frozen outdoor modules untouched",
+    "Z arms use street 13-head with map13_to_span8 LUT",
+    "A arms use adapted 8-cls head"
+  ]
+}

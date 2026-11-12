@@ -29,7 +29,7 @@ function showPage(name){
 function sceneChanged(scene){
   S.scene=scene;document.querySelectorAll('[data-scene]').forEach(x=>x.classList.toggle('selected',x.dataset.scene===scene));
   $('sceneNote').classList.toggle('indoor',scene==='indoor');
-  $('sceneNote').innerHTML='<span class="tiny-dot"></span>'+ (scene==='street'?'完整模型 · I1 / I2 / I3':'通用文本分割 · 室内 LoRA 尚未适配');
+  $('sceneNote').innerHTML='<span class="tiny-dot"></span>'+ (scene==='street'?'完整模型 · I1 / I2 / I3':'室内适配 · I1 / I2 / I3');
   const cap=S.cap?.scenes.find(x=>x.id===scene),names=cap?.classes||[];
   $('defaultClassCount').textContent=names.length+' 类';
   $('defaultClassList').innerHTML=names.map(n=>`<span title="${esc(n)}">${esc(S.cap?.labels_zh[n]||n)}</span>`).join('');
@@ -79,10 +79,12 @@ function renderResult(row){
   const r=row.result;toggle('resultStats',true);toggle('resultPanel',true);$('downloadButton').disabled=false;
   document.querySelectorAll('[data-view]').forEach(b=>b.disabled=false);
   $('statTime').textContent=seconds(row.elapsed);const t=r.audit?.timing||{};
-  $('statTimeDetail').textContent=`含等待、加载与传输 · GPU服务 ${seconds(t.warm_processing_seconds)}`;
+  $('statTimeDetail').textContent=t.warm_processing_seconds==null?
+    `含等待、加载与传输 · 服务处理 ${seconds(t.server_processing_seconds)}（含加载）`:
+    `含等待、加载与传输 · GPU服务 ${seconds(t.warm_processing_seconds)}`;
   $('statClasses').textContent=r.classes.filter(x=>x.pixels>0).length+' / '+r.classes.length;
   $('statClassDetail').textContent=row.mode==='text'?'按指定文本查询':'按场景默认类别分割';$('statInstances').textContent=r.instance_count;
-  $('instanceCount').textContent=r.instance_count;$('resultModel').textContent=r.audit?.indoor_adapted===false&&row.scene==='indoor'?'室内通用零样本':'完整模型 · v3';
+  $('instanceCount').textContent=r.instance_count;$('resultModel').textContent=row.scene==='indoor'?(r.audit?.indoor_adapted?'室内适配完整模型':'室内通用文本'):'完整模型 · v3';
   $('classResults').innerHTML=r.classes.map(c=>`<button class="class-item ${c.pixels?'':'zero'}" data-class="${c.index}" title="${esc(c.name)} · 类别 ID ${c.index}"><span class="swatch" style="background:${c.color}"></span><div><strong>${esc(c.name_zh)}</strong><small>${esc(c.name)} · #${c.index}</small></div><span>${num(c.fraction*100,1)}%</span></button>`).join('');
   $('instanceResults').innerHTML=r.instances.length?r.instances.map(i=>`<button class="instance-item" data-instance="${i.id}"><span class="swatch" style="background:${i.color}"></span><strong>${esc(i.label)}</strong><small>检测 ${num(i.detector_score,2)} · SAM ${num(i.sam_quality,2)} · ${i.views.length} 视窗</small></button>`).join('')+'<p class="field-hint">实例数量为模型估计，可能存在漏检或重复；检测分数与 SAM 质量不代表准确率。</p>':'<div class="empty-inline">未检出独立实例。<br>类别区域仍可在“语义分割”中查看。</div>';
   $('accuracyHint').textContent='无标准标签，未计算准确率';toggle('accuracyResult',false);
@@ -118,7 +120,7 @@ async function loadJob(id){
 async function refreshHistoryCount(){try{const {jobs}=await api('/api/jobs');$('historyCount').textContent=jobs.length||'';}catch(e){}}
 async function refreshHistory(){
   try{const {jobs}=await api('/api/jobs');$('historyCount').textContent=jobs.length||'';
-    $('historyList').innerHTML=jobs.length?jobs.map(j=>`<article class="history-card"><img src="/api/images/${j.image_id}/preview" alt="${esc(j.image_name)}" loading="lazy"><div><h3>${esc(j.image_name)}</h3><p>${j.scene==='street'?'室外街景':'室内通用'} · ${j.mode==='text'?esc(j.classes.join(', ')):'默认类别全图分割'}</p><small>${date(j.created)}${j.elapsed?' · '+seconds(j.elapsed):''}</small></div><span class="task-status ${j.status}">${{succeeded:'已完成',failed:'失败',running:'处理中',queued:'排队中',cancelling:'取消中',cancelled:'已取消',interrupted:'已中断'}[j.status]||esc(j.status)}</span><button class="small-button" data-job="${j.id}">${j.status==='succeeded'?'查看结果':'查看任务'} <span>→</span></button></article>`).join(''):'<div class="history-empty"><svg><use href="#i-clock"/></svg>还没有任务记录。上传一张全景图，开始第一次分割。</div>';
+    $('historyList').innerHTML=jobs.length?jobs.map(j=>`<article class="history-card"><img src="/api/images/${j.image_id}/preview" alt="${esc(j.image_name)}" loading="lazy"><div><h3>${esc(j.image_name)}</h3><p>${j.scene==='street'?'室外街景':'室内场景'} · ${j.mode==='text'?esc(j.classes.join(', ')):'默认类别全图分割'}</p><small>${date(j.created)}${j.elapsed?' · '+seconds(j.elapsed):''}</small></div><span class="task-status ${j.status}">${{succeeded:'已完成',failed:'失败',running:'处理中',queued:'排队中',cancelling:'取消中',cancelled:'已取消',interrupted:'已中断'}[j.status]||esc(j.status)}</span><button class="small-button" data-job="${j.id}">${j.status==='succeeded'?'查看结果':'查看任务'} <span>→</span></button></article>`).join(''):'<div class="history-empty"><svg><use href="#i-clock"/></svg>还没有任务记录。上传一张全景图，开始第一次分割。</div>';
   }catch(e){toast(e.message);}
 }
 async function refreshConnection(){

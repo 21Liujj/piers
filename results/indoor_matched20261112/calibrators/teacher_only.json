@@ -1,0 +1,665 @@
+{
+  "format": "numpy_dual_sigmoid_linear_v1",
+  "head_names": [
+    "text_correct",
+    "teacher_correct"
+  ],
+  "input_dim": 26,
+  "feature_names": [
+    "teacher_p_class",
+    "teacher_max_prob",
+    "teacher_entropy_norm",
+    "teacher_top1_top2_margin",
+    "teacher_pred_equals_class",
+    "view_SAM_max",
+    "view_DINO_max",
+    "view_log_candidate_area_max",
+    "text_SAM_mean_views",
+    "text_SAM_max_views",
+    "text_DINO_mean_views",
+    "text_DINO_max_views",
+    "text_log_candidate_area_mean_views",
+    "text_log_candidate_area_max_views",
+    "distinct_FoV_votes",
+    "visible_FoV_count",
+    "distinct_votes_over_visible_views",
+    "view_mask_edge_distance_log_norm",
+    "class_00_onehot",
+    "class_01_onehot",
+    "class_02_onehot",
+    "class_03_onehot",
+    "class_04_onehot",
+    "class_05_onehot",
+    "class_06_onehot",
+    "class_07_onehot"
+  ],
+  "feature_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+  ],
+  "fit_mean": [
+    0.5806067805620253,
+    0.7894457582039864,
+    0.283002021250309,
+    0.643018514364224,
+    0.6530538577709114,
+    0.2834564279491811,
+    0.04329962606236386,
+    0.06692357557074033,
+    0.2025152768227239,
+    0.03273156047898913,
+    0.039714371186113866,
+    0.22161570190528718,
+    0.10974346002460078
+  ],
+  "fit_scale": [
+    0.37626150148587584,
+    0.17709206644141995,
+    0.18309186172099506,
+    0.2948390764581422,
+    0.4759984418266951,
+    0.45067602710092275,
+    0.20353075552658703,
+    0.2498895968294153,
+    0.4018741587563692,
+    0.17793314875986269,
+    0.19528732654067807,
+    0.41533382064829977,
+    0.31256972503175934
+  ],
+  "coef": [
+    [
+      3.402958136107359,
+      -0.7690275012199147
+    ],
+    [
+      0.08964201447191245,
+      -0.31131402622226007
+    ],
+    [
+      0.6142484308403361,
+      -0.8121222047238167
+    ],
+    [
+      0.05073155271516702,
+      0.8292361623720236
+    ],
+    [
+      -0.3714466490300709,
+      2.0021933726223526
+    ],
+    [
+      0.21475520445177512,
+      0.10138003999672451
+    ],
+    [
+      0.2803509899954613,
+      -0.1474367375769498
+    ],
+    [
+      0.18188304464962396,
+      -0.09709447909810127
+    ],
+    [
+      0.16848065106757124,
+      -0.06757005551232027
+    ],
+    [
+      -0.11893789009480113,
+      0.010146685482103896
+    ],
+    [
+      0.12619861291559992,
+      0.019949521351970166
+    ],
+    [
+      -0.34735775356823906,
+      -0.05841428479509175
+    ],
+    [
+      -0.4036974274203802,
+      0.17371011605839495
+    ]
+  ],
+  "intercept": [
+    2.273478571418382,
+    2.669944397861702
+  ],
+  "metadata": {
+    "origin": "indoor training-area calibration104 only",
+    "config": {
+      "steps": 1000,
+      "lr": 0.05,
+      "l2": 0.001,
+      "seed": 20261107,
+      "dtype": "float64",
+      "optimizer": "Adam full batch",
+      "max_samples_per_class_view": 256
+    },
+    "samples": 630766,
+    "images": [
+      {
+        "image_id": "camera_003a0d90636f416393c0bc7a9bbee2c4_office_7_frame_equirectangular_domain_rgb",
+        "samples": 6912
+      },
+      {
+        "image_id": "camera_0ccf3c78ef354902b516c62ef8fb7cf1_lounge_2_frame_equirectangular_domain_rgb",
+        "samples": 5338
+      },
+      {
+        "image_id": "camera_2439b3f7bc184152bf89e6012a511aa6_office_6_frame_equirectangular_domain_rgb",
+        "samples": 6563
+      },
+      {
+        "image_id": "camera_247d69e9f0e64242a9330d70eca2ab0c_hallway_6_frame_equirectangular_domain_rgb",
+        "samples": 2065
+      },
+      {
+        "image_id": "camera_42b39dce313f4feabdbde3e2b837ef1d_office_5_frame_equirectangular_domain_rgb",
+        "samples": 5888
+      },
+      {
+        "image_id": "camera_49bb03c3a37547a7b23e7de1cc0d364d_lounge_1_frame_equirectangular_domain_rgb",
+        "samples": 7410
+      },
+      {
+        "image_id": "camera_4a41b27118ac4c6aad24f60a04f3a559_office_31_frame_equirectangular_domain_rgb",
+        "samples": 5888
+      },
+      {
+        "image_id": "camera_52f12f98a95940fb81148a94b7e2ee52_hallway_6_frame_equirectangular_domain_rgb",
+        "samples": 4609
+      },
+      {
+        "image_id": "camera_5625cf0ef76648e4b21c618bcfe72a13_copyRoom_1_frame_equirectangular_domain_rgb",
+        "samples": 6265
+      },
+      {
+        "image_id": "camera_56313e59f99646f68cefdb8fefaecc5b_hallway_6_frame_equirectangular_domain_rgb",
+        "samples": 6234
+      },
+      {
+        "image_id": "camera_68483b835ebd4c69876cb968aa5b839d_office_9_frame_equirectangular_domain_rgb",
+        "samples": 6400
+      },
+      {
+        "image_id": "camera_6922fce99b0a4f9da148f76a8d57c089_hallway_5_frame_equirectangular_domain_rgb",
+        "samples": 4608
+      },
+      {
+        "image_id": "camera_6cf9b1a7e96d44aeb9a8a147328b6e76_hallway_4_frame_equirectangular_domain_rgb",
+        "samples": 5641
+      },
+      {
+        "image_id": "camera_6e253b2eef4544d38aaa2d11b9e0fd63_office_24_frame_equirectangular_domain_rgb",
+        "samples": 6144
+      },
+      {
+        "image_id": "camera_74edfa47a1c1448e84849533630259c6_hallway_1_frame_equirectangular_domain_rgb",
+        "samples": 5888
+      },
+      {
+        "image_id": "camera_75fb08c7ceac492e87aa90543834c723_office_8_frame_equirectangular_domain_rgb",
+        "samples": 6144
+      },
+      {
+        "image_id": "camera_7d00bccb37f44c72817623aedfb068ae_office_14_frame_equirectangular_domain_rgb",
+        "samples": 5925
+      },
+      {
+        "image_id": "camera_7eb7e942b7ba4db1a26f766d402b2d0c_office_20_frame_equirectangular_domain_rgb",
+        "samples": 5079
+      },
+      {
+        "image_id": "camera_842facf372454735b7fd2880e14de97f_lounge_2_frame_equirectangular_domain_rgb",
+        "samples": 5885
+      },
+      {
+        "image_id": "camera_8655758921c745ac9c8a3558c731450b_WC_1_frame_equirectangular_domain_rgb",
+        "samples": 5120
+      },
+      {
+        "image_id": "camera_87a1bc34ffb4408ba077119216ed763e_hallway_2_frame_equirectangular_domain_rgb",
+        "samples": 5564
+      },
+      {
+        "image_id": "camera_87e6e35f186a4fa1b0e673065a64cb97_hallway_6_frame_equirectangular_domain_rgb",
+        "samples": 4850
+      },
+      {
+        "image_id": "camera_92b146f2cd7a4c5aa54844d2e84d31fb_hallway_6_frame_equirectangular_domain_rgb",
+        "samples": 6755
+      },
+      {
+        "image_id": "camera_937e5a2068b4490bb2298f7a9feb09e6_office_27_frame_equirectangular_domain_rgb",
+        "samples": 5193
+      },
+      {
+        "image_id": "camera_9509f980d9c34837985f9180d5d2bef4_hallway_1_frame_equirectangular_domain_rgb",
+        "samples": 6984
+      },
+      {
+        "image_id": "camera_9accd9c0bf16486aa4cb84cb9b8b3046_hallway_2_frame_equirectangular_domain_rgb",
+        "samples": 5909
+      },
+      {
+        "image_id": "camera_9ad7701d035a4d0499d9cfd834100b12_hallway_7_frame_equirectangular_domain_rgb",
+        "samples": 5325
+      },
+      {
+        "image_id": "camera_a77fba57be66411c908077c69d803797_office_31_frame_equirectangular_domain_rgb",
+        "samples": 6024
+      },
+      {
+        "image_id": "camera_aa9a0c5a20b94d37a09b56e68af96019_hallway_1_frame_equirectangular_domain_rgb",
+        "samples": 6144
+      },
+      {
+        "image_id": "camera_ab03f882ff064d9f8f8faf742384165a_office_10_frame_equirectangular_domain_rgb",
+        "samples": 6912
+      },
+      {
+        "image_id": "camera_b5237408aae04543baee422f39ef3a55_lounge_1_frame_equirectangular_domain_rgb",
+        "samples": 6656
+      },
+      {
+        "image_id": "camera_b73912d7377b41a584725523f3a91883_office_21_frame_equirectangular_domain_rgb",
+        "samples": 6960
+      },
+      {
+        "image_id": "camera_c116e049d9c24baaa3cc01d88d48a5fa_office_28_frame_equirectangular_domain_rgb",
+        "samples": 6912
+      },
+      {
+        "image_id": "camera_c7109a8a24af478d910dc60e79e03963_hallway_2_frame_equirectangular_domain_rgb",
+        "samples": 6144
+      },
+      {
+        "image_id": "camera_c81dc59af88b41f1b5b269f4fba137d8_office_2_frame_equirectangular_domain_rgb",
+        "samples": 5476
+      },
+      {
+        "image_id": "camera_c8c806b1bd7945318612b9aa514221d9_hallway_7_frame_equirectangular_domain_rgb",
+        "samples": 5551
+      },
+      {
+        "image_id": "camera_ccc5a554a89a4bdf89e70b66a79b969c_office_15_frame_equirectangular_domain_rgb",
+        "samples": 6417
+      },
+      {
+        "image_id": "camera_ce0a7ef47557461d97f72a45720d37c9_WC_1_frame_equirectangular_domain_rgb",
+        "samples": 4608
+      },
+      {
+        "image_id": "camera_ce5e2f4043f74ba08e04653d036fc55a_office_9_frame_equirectangular_domain_rgb",
+        "samples": 5632
+      },
+      {
+        "image_id": "camera_d0834679c83f4ecf997c4c808d151482_hallway_1_frame_equirectangular_domain_rgb",
+        "samples": 6080
+      },
+      {
+        "image_id": "camera_d31d981624cc4185abb1f2f93d19ec79_office_8_frame_equirectangular_domain_rgb",
+        "samples": 7362
+      },
+      {
+        "image_id": "camera_d6f28d9f9a2a4e89bb2dfb4594bf5755_office_6_frame_equirectangular_domain_rgb",
+        "samples": 5120
+      },
+      {
+        "image_id": "camera_da4629d565a3435fb701f56f46005a66_office_31_frame_equirectangular_domain_rgb",
+        "samples": 5614
+      },
+      {
+        "image_id": "camera_dd7e6723f06841b3be163b57ae8619ef_office_9_frame_equirectangular_domain_rgb",
+        "samples": 6400
+      },
+      {
+        "image_id": "camera_ddb785f9cddc4d7199e2e7984b76cbcc_lounge_1_frame_equirectangular_domain_rgb",
+        "samples": 7168
+      },
+      {
+        "image_id": "camera_e2e170cb090e44f6bfaf1fa4b4e00595_conferenceRoom_1_frame_equirectangular_domain_rgb",
+        "samples": 7106
+      },
+      {
+        "image_id": "camera_ee20957a3d9c456094a8f905f29c7e44_hallway_6_frame_equirectangular_domain_rgb",
+        "samples": 4608
+      },
+      {
+        "image_id": "camera_f2925d90180f4f37b77b6e70b57e0cd4_office_17_frame_equirectangular_domain_rgb",
+        "samples": 5632
+      },
+      {
+        "image_id": "camera_f5d96061b8b046dcb790052367bb0139_hallway_2_frame_equirectangular_domain_rgb",
+        "samples": 5295
+      },
+      {
+        "image_id": "camera_faee5692da8946fea5e648b3f2714d66_WC_2_frame_equirectangular_domain_rgb",
+        "samples": 3388
+      },
+      {
+        "image_id": "camera_fe973b44ef194948acf5b954e42f6cab_hallway_6_frame_equirectangular_domain_rgb",
+        "samples": 6214
+      },
+      {
+        "image_id": "camera_03aa15b7a35a47739c378aa70fb5478e_hallway_8_frame_equirectangular_domain_rgb",
+        "samples": 6656
+      },
+      {
+        "image_id": "camera_092bf09cd87e49db9eb0b3c26301ef56_hallway_7_frame_equirectangular_domain_rgb",
+        "samples": 4781
+      },
+      {
+        "image_id": "camera_0efa103fa67e4c35ae53f2e6682d18a2_auditorium_2_frame_equirectangular_domain_rgb",
+        "samples": 6400
+      },
+      {
+        "image_id": "camera_123c00e84a394f20adedd231fe54a749_hallway_14_frame_equirectangular_domain_rgb",
+        "samples": 7424
+      },
+      {
+        "image_id": "camera_1a2141e0159e43a7a7ff197576df8db2_auditorium_2_frame_equirectangular_domain_rgb",
+        "samples": 6631
+      },
+      {
+        "image_id": "camera_1c4ce45b153347a78560bada2a10d006_office_21_frame_equirectangular_domain_rgb",
+        "samples": 6183
+      },
+      {
+        "image_id": "camera_1db93072dfb0405bab1ea58e0661d8af_auditorium_1_frame_equirectangular_domain_rgb",
+        "samples": 6144
+      },
+      {
+        "image_id": "camera_1df31413ecf143e8afc0c856ae3caaf8_hallway_2_frame_equirectangular_domain_rgb",
+        "samples": 6015
+      },
+      {
+        "image_id": "camera_1eaaaf75532c4bc1bed6066366223f62_auditorium_1_frame_equirectangular_domain_rgb",
+        "samples": 6037
+      },
+      {
+        "image_id": "camera_239b7a5e20d243ce9cd8b2ff29f8148e_auditorium_2_frame_equirectangular_domain_rgb",
+        "samples": 6377
+      },
+      {
+        "image_id": "camera_2680eea1dd09424091486a543dba29ef_office_16_frame_equirectangular_domain_rgb",
+        "samples": 6400
+      },
+      {
+        "image_id": "camera_2869db404dd24a5e9a0ddd2e619fd224_hallway_12_frame_equirectangular_domain_rgb",
+        "samples": 6290
+      },
+      {
+        "image_id": "camera_29c4d3039cb14983b563b7697a8c333c_conferenceRoom_1_frame_equirectangular_domain_rgb",
+        "samples": 6286
+      },
+      {
+        "image_id": "camera_2f0eb2cfd91d4caab8ea79a4bbcbd950_auditorium_1_frame_equirectangular_domain_rgb",
+        "samples": 6875
+      },
+      {
+        "image_id": "camera_33a07f405c2a4b6aba268f29f6f7573d_hallway_9_frame_equirectangular_domain_rgb",
+        "samples": 6015
+      },
+      {
+        "image_id": "camera_387ce5bbb6f7475e8852de0b22e41151_conferenceRoom_1_frame_equirectangular_domain_rgb",
+        "samples": 6737
+      },
+      {
+        "image_id": "camera_38aa878606b94cb4aa606408e5616c4f_hallway_10_frame_equirectangular_domain_rgb",
+        "samples": 6357
+      },
+      {
+        "image_id": "camera_3a24bb8379684f588a2663ad6a2d733a_hallway_2_frame_equirectangular_domain_rgb",
+        "samples": 4608
+      },
+      {
+        "image_id": "camera_3df7241e4ae444728cdcae24078ab03b_storage_3_frame_equirectangular_domain_rgb",
+        "samples": 6406
+      },
+      {
+        "image_id": "camera_4496fd84fe724e9e9a034c394806425e_office_14_frame_equirectangular_domain_rgb",
+        "samples": 7001
+      },
+      {
+        "image_id": "camera_49a328878f014288a6ea197dcd095253_conferenceRoom_3_frame_equirectangular_domain_rgb",
+        "samples": 6578
+      },
+      {
+        "image_id": "camera_583f3ae15a864cbb8e9e9d6ba4169cbb_hallway_1_frame_equirectangular_domain_rgb",
+        "samples": 5856
+      },
+      {
+        "image_id": "camera_65210065bf434ffcbd8f10fa8d6acd3c_office_4_frame_equirectangular_domain_rgb",
+        "samples": 6400
+      },
+      {
+        "image_id": "camera_6bf4b82c22264ccc9611efe1c1ff5e62_lobby_1_frame_equirectangular_domain_rgb",
+        "samples": 5888
+      },
+      {
+        "image_id": "camera_85e0ac64e83a46fcaa0ff4a6afdefbad_WC_1_frame_equirectangular_domain_rgb",
+        "samples": 7168
+      },
+      {
+        "image_id": "camera_8ca1c3c90a2c46cc940efd4d9481f043_storage_5_frame_equirectangular_domain_rgb",
+        "samples": 6746
+      },
+      {
+        "image_id": "camera_8ce282c556f74895ac7777f9c7ef6aee_conferenceRoom_1_frame_equirectangular_domain_rgb",
+        "samples": 7168
+      },
+      {
+        "image_id": "camera_8f44071d5c364a5b8c2e6c02594a11b1_hallway_3_frame_equirectangular_domain_rgb",
+        "samples": 6458
+      },
+      {
+        "image_id": "camera_8fbccf51248d4d119da6ff9203b01efd_office_10_frame_equirectangular_domain_rgb",
+        "samples": 6229
+      },
+      {
+        "image_id": "camera_964e9c77d0c64810a0e51e8ca33f93b9_hallway_4_frame_equirectangular_domain_rgb",
+        "samples": 5632
+      },
+      {
+        "image_id": "camera_a00880cdfbbb443db3fc7738f1ea830f_lobby_1_frame_equirectangular_domain_rgb",
+        "samples": 6126
+      },
+      {
+        "image_id": "camera_a81c748601ef4e5db4b74c4494ee61bc_office_3_frame_equirectangular_domain_rgb",
+        "samples": 5195
+      },
+      {
+        "image_id": "camera_abbdf0eaf9084065a64d41f7385e0df6_office_16_frame_equirectangular_domain_rgb",
+        "samples": 6473
+      },
+      {
+        "image_id": "camera_af17bc86cadb49389f87b5033788610a_auditorium_2_frame_equirectangular_domain_rgb",
+        "samples": 6912
+      },
+      {
+        "image_id": "camera_b5f79389ebba4d57b4e857138b3794e2_office_2_frame_equirectangular_domain_rgb",
+        "samples": 6912
+      },
+      {
+        "image_id": "camera_bfbcf2eec77a442995a395a354d0263d_auditorium_2_frame_equirectangular_domain_rgb",
+        "samples": 7168
+      },
+      {
+        "image_id": "camera_c009d354c622493ba4e28af1c65d7808_hallway_13_frame_equirectangular_domain_rgb",
+        "samples": 6668
+      },
+      {
+        "image_id": "camera_c0ae765d10c846498a34b8d5323dabd5_hallway_1_frame_equirectangular_domain_rgb",
+        "samples": 7424
+      },
+      {
+        "image_id": "camera_c9f9c2377da749ecb09b15dd7f363a84_office_10_frame_equirectangular_domain_rgb",
+        "samples": 6491
+      },
+      {
+        "image_id": "camera_cb5ed2a13b8e486f905b78ceda920efe_auditorium_1_frame_equirectangular_domain_rgb",
+        "samples": 6656
+      },
+      {
+        "image_id": "camera_ccbd8d3a86a941ce8739ec374ad900ed_auditorium_1_frame_equirectangular_domain_rgb",
+        "samples": 6933
+      },
+      {
+        "image_id": "camera_d6321286a9804fe9b8c2853c9ff8dc8c_hallway_7_frame_equirectangular_domain_rgb",
+        "samples": 5313
+      },
+      {
+        "image_id": "camera_d6d72a602c2147a28def22b7495fed30_office_14_frame_equirectangular_domain_rgb",
+        "samples": 3732
+      },
+      {
+        "image_id": "camera_ddbb1bd29483478ea0b6936f90ca1be1_lobby_2_frame_equirectangular_domain_rgb",
+        "samples": 6480
+      },
+      {
+        "image_id": "camera_dea8211d921f423bb96e5ba3d24e61cb_hallway_12_frame_equirectangular_domain_rgb",
+        "samples": 5461
+      },
+      {
+        "image_id": "camera_e0f4beea0ca141429b206714d9ebde7a_hallway_9_frame_equirectangular_domain_rgb",
+        "samples": 6669
+      },
+      {
+        "image_id": "camera_e1c78ce703f04b96892c3354da398028_hallway_5_frame_equirectangular_domain_rgb",
+        "samples": 7354
+      },
+      {
+        "image_id": "camera_e883589003f44be492f7e09b6c35dc90_storage_4_frame_equirectangular_domain_rgb",
+        "samples": 5579
+      },
+      {
+        "image_id": "camera_ec0a3fd3f8c64545bf1df30c1b2ad393_hallway_5_frame_equirectangular_domain_rgb",
+        "samples": 6854
+      },
+      {
+        "image_id": "camera_ecde5324405745f8877968bb72dabd78_WC_3_frame_equirectangular_domain_rgb",
+        "samples": 4376
+      },
+      {
+        "image_id": "camera_f3711df9c6b1489cb6b589f8739761fa_storage_3_frame_equirectangular_domain_rgb",
+        "samples": 6912
+      },
+      {
+        "image_id": "camera_fab3a2389bc24e6c9abf993a7eda59e2_auditorium_1_frame_equirectangular_domain_rgb",
+        "samples": 4687
+      },
+      {
+        "image_id": "camera_fadcd8771b934b3abb18c0221b1d5cc2_office_10_frame_equirectangular_domain_rgb",
+        "samples": 6636
+      }
+    ],
+    "heldout_GT_reads": 0,
+    "trace": [
+      {
+        "step": 1,
+        "objective": 1.0345914255055209,
+        "nll": [
+          0.5771327870441938,
+          0.457458638461327
+        ]
+      },
+      {
+        "step": 100,
+        "objective": 0.45031040319654814,
+        "nll": [
+          0.19959207419000724,
+          0.24686114494959172
+        ]
+      },
+      {
+        "step": 200,
+        "objective": 0.4387338450166518,
+        "nll": [
+          0.18883900770168172,
+          0.2440577819816822
+        ]
+      },
+      {
+        "step": 300,
+        "objective": 0.4350694576478955,
+        "nll": [
+          0.1839417312019133,
+          0.24356283708096338
+        ]
+      },
+      {
+        "step": 400,
+        "objective": 0.43426181969319294,
+        "nll": [
+          0.18227413086252192,
+          0.24338836637717154
+        ]
+      },
+      {
+        "step": 500,
+        "objective": 0.43413245493595104,
+        "nll": [
+          0.18174988245360602,
+          0.24329705098980978
+        ]
+      },
+      {
+        "step": 600,
+        "objective": 0.4341159585144906,
+        "nll": [
+          0.18159287884811343,
+          0.24324872185593832
+        ]
+      },
+      {
+        "step": 700,
+        "objective": 0.43411403896996864,
+        "nll": [
+          0.18155058989208891,
+          0.2432253902752849
+        ]
+      },
+      {
+        "step": 800,
+        "objective": 0.4341138075345075,
+        "nll": [
+          0.18154088807153382,
+          0.24321523803628636
+        ]
+      },
+      {
+        "step": 900,
+        "objective": 0.43411377940274787,
+        "nll": [
+          0.18153905026694545,
+          0.2432112712941315
+        ]
+      },
+      {
+        "step": 1000,
+        "objective": 0.4341137763487167,
+        "nll": [
+          0.18153876852671486,
+          0.24320988495406845
+        ]
+      }
+    ],
+    "elapsed_s": 18.64958736486733,
+    "fit_only_weighted_population_normalization": true,
+    "intercept_penalized": false,
+    "feature_onehot": "SPAN8,8 classes; indoor feature dimension26"
+  }
+}

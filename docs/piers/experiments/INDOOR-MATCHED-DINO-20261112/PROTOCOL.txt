@@ -1,0 +1,24 @@
+室内跨场景适配的公平对照协议
+
+目标
+在共享室内适配checkpoint与LoRA的条件下，对比原始OmniSAM与完整I1/I2/I3推理方法。室外三数据集实验用于观察冻结模型跨数据集迁移；室内实验用于观察在室内监督适配之后，同一完整方法是否仍然有效。两种实验的训练前提不同，应分别陈述。
+
+模型
+两侧均加载Stage1的indoor_lora_last.pth，含同一SAM2骨干、同一rank4 LoRA与同一8类SegFormer解码器。加载时核对每一个checkpoint张量，逐图记录checkpoint及LoRA的SHA256。两侧均不使用CLIP或indoor_lora_text_last.pth。
+
+方法
+原始侧使用dense memory和18次顺序语义前向。完整侧使用同样的基础模型，加class-aware稀疏memory、2个风险驱动接缝窗口，以及真实Grounding DINO加SAM2文本分支。I1保留室外已发布的可靠性校准、两独立视场投票、跨类别冲突拒绝、不确定性加权语义修正和语义辅助文本掩码。所有8类均已有语义输出通道，因此不触发室外新类别竞争分支。
+
+允许的室内适配
+类别列表替换为SPAN8，特征由18个连续量加13个类别指示量改为加8个类别指示量。画布为1024乘512，语义窗口512，步长64，正反两趟。文本窗口512、步长256，保留4个带水平环绕的视场。稀有类别只由fit统计确定。I1校准器仅用训练区域calib104拟合，训练超参数及门控阈值沿用室外登记值。
+
+数据及限制
+使用当前已准备的Stanford2D3D SPAN8镜像，共1413张，类别顺序为ceiling chair door floor sofa table wall window，255忽略。fit832、calib104、val104来自训练区域，heldout373来自area5。既有训练分区实际按camera UUID划分，不能继续宣称房间级隔离已经验证；heldout与训练区域分开。由于heldout曾用于既有smoke诊断，也不应称其完全未触碰。正式实验不按heldout结果搜索参数。
+
+计分
+由逐图整数混淆矩阵汇总计算数据集mIoU，分别报告平均类别准确率mAcc和全局像素准确率PixelAcc。预测越界保留为额外一列并算作漏检，不能变成ceiling。输出373张图的完整性与相同GT支持量必须同时通过。图像配对bootstrap用于描述区间，不能消除同房间多视角相关性和单heldout区域的限制。
+
+结果与复现
+主结果文件为runs/INDOOR-MATCHED-DINO-20261112/INDOOR_MATCHED_RESULTS.json，配对逐图混淆矩阵为paired_confusions.npz。当前结果以正式运行完成标记与实际JSON为准，不使用旧eval目录或CLIP分支结果代替。运行scripts/piers/run_indoor_matched.sh，新机器需要先准备原始数据、Stage1权重以及已发布DINO和SAM2本地权重。
+
+所有新增实现均位于indoor_matched文件中，冻结室外推理和既有发布结果不改动。结果若未提升，应报告实际差异及限制，不以测试集调参掩盖失败。

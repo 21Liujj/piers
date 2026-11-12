@@ -1,0 +1,510 @@
+{
+  "protocol": {
+    "version": "indoor-matched-full-v1",
+    "classes": [
+      "ceiling",
+      "chair",
+      "door",
+      "floor",
+      "sofa",
+      "table",
+      "wall",
+      "window"
+    ],
+    "shared_checkpoint": "/root/autodl-tmp/piers-main/runs/INDOOR-FOLD1-20261109/train/indoor_lora_last.pth",
+    "checkpoint_sha256": "b3bfc7f54181e62dcababce9cc47709adbc655d9ae423b85e3d37e717749ac02",
+    "fit_images": 832,
+    "calibration_images": 104,
+    "heldout_images": 373,
+    "rare_class_ids": [
+      4,
+      7
+    ],
+    "rare_class_source": "fit split only",
+    "shared_8class_head": true,
+    "original": {
+      "memory": "dense",
+      "I3_budget": 0,
+      "I1": false,
+      "forwards": 18
+    },
+    "full": {
+      "memory": "i2",
+      "I3_budget": 2,
+      "I1": "GroundingDINO+SAM2 calibrated cooperation",
+      "forwards": 20
+    },
+    "geometry": {
+      "canvas": [
+        1024,
+        512
+      ],
+      "window": 512,
+      "stride": 64,
+      "passes": 2
+    },
+    "I3_candidate_starts": [
+      640,
+      704,
+      768,
+      832,
+      896
+    ],
+    "I1_gate": {
+      "pixel_text_confidence_threshold": 0.9,
+      "distinct_FoV_votes_required": 2,
+      "baseline_ignore_confidence": 0.85,
+      "teacher_high_conflict_protection": 0.8
+    },
+    "calibrator_fit": {
+      "steps": 1000,
+      "lr": 0.05,
+      "l2": 0.001,
+      "seed": 20261107,
+      "dtype": "float64",
+      "optimizer": "Adam full batch",
+      "max_samples_per_class_view": 256
+    },
+    "text": {
+      "classes": [
+        "ceiling",
+        "chair",
+        "door",
+        "floor",
+        "sofa",
+        "table",
+        "wall",
+        "window"
+      ],
+      "fovs": 4,
+      "window": 512,
+      "stride": 256,
+      "box_thr": 0.35,
+      "text_thr": 0.25,
+      "dtype": "bf16",
+      "feature_cache": false
+    },
+    "heldout_GT_for_parameter_selection": false,
+    "stage2_CLIP_checkpoint_used": false,
+    "limitations": [
+      "Single area5 heldout fold; fit/calib partition uses camera UUIDs, so room-disjointness is not established. Calibration remains in training areas only."
+    ],
+    "source_sha256": {
+      "indoor_matched_features.py": "fba8d2b1898724290e13a3be8a84e5da47e385751e26e0fdd74d783059c73620",
+      "indoor_matched_finish.py": "1e22e0e4de58b2a5508a0a7651aeb08a333fae562d260f0f84038aac8268b63e",
+      "indoor_matched_gate.py": "f362fbb39d7dde549ba589319c46a767b6edbfcf799a7ad6fded88615ac85597",
+      "indoor_matched_predictor.py": "29e0b90dc542e39234994d6753201fc8636468e8ccfbb322c908bfa0ec71588d",
+      "indoor_matched_soft.py": "59a74a3f6763898d9e4456dbcbf25693425c2740aef16d61460a141348264a76",
+      "indoor_matched_bidirectional.py": "38546737e0d10c0299f6398fb785b565ccbde5515a0a78f3dd35f3a33d2396f6",
+      "indoor_matched_semantic.py": "ab0e9c1fa6f8064f8954835fcdac18c7c7e23501e3710e178aa78ae15cd7955d",
+      "indoor_matched_run.py": "af9a2ddfd1f7d4f58e963fc097a9725047679325817fadc7b759d3e06b094d32"
+    }
+  },
+  "n_images": 373,
+  "split": "heldout",
+  "status": "complete",
+  "arms": {
+    "original": {
+      "mIoU_pct": 37.642357820659846,
+      "mAcc_pct": 42.97898491779639,
+      "PixelAcc_pct": 83.1709626113771,
+      "FWIoU_pct": 71.98223870625937,
+      "mDice_pct": 45.903404975291515,
+      "per_class_iou_pct": {
+        "ceiling": 83.42832143681423,
+        "chair": 13.733950668532785,
+        "door": 5.286178543795544,
+        "floor": 92.62691372202474,
+        "sofa": 0.0,
+        "table": 19.245380121515453,
+        "wall": 66.55407542926962,
+        "window": 20.264042643326448
+      },
+      "gt_valid_pixels": 155096619,
+      "correct_pixels": 128995351,
+      "per_class_gt_support": {
+        "ceiling": 40782327,
+        "chair": 2341514,
+        "door": 10826224,
+        "floor": 50605110,
+        "sofa": 331151,
+        "table": 3831361,
+        "wall": 42589241,
+        "window": 3789691
+      },
+      "per_class_pred_support": {
+        "ceiling": 37652113,
+        "chair": 548990,
+        "door": 2121507,
+        "floor": 52538485,
+        "sofa": 0,
+        "table": 821267,
+        "wall": 60443172,
+        "window": 971085
+      },
+      "predictions_outside_label_set": 0,
+      "confusion_matrix": [
+        [
+          35674173,
+          33,
+          390779,
+          27,
+          0,
+          0,
+          4622234,
+          95081,
+          0
+        ],
+        [
+          1532,
+          349043,
+          64691,
+          1577380,
+          0,
+          43034,
+          304858,
+          976,
+          0
+        ],
+        [
+          1024097,
+          2390,
+          650076,
+          201273,
+          0,
+          441,
+          8939873,
+          8074,
+          0
+        ],
+        [
+          66,
+          41256,
+          19474,
+          49597809,
+          0,
+          13579,
+          931486,
+          1440,
+          0
+        ],
+        [
+          105,
+          6140,
+          1574,
+          76382,
+          0,
+          10302,
+          236391,
+          257,
+          0
+        ],
+        [
+          3857,
+          120356,
+          28335,
+          778577,
+          0,
+          750902,
+          2148590,
+          744,
+          0
+        ],
+        [
+          759810,
+          28836,
+          269094,
+          295158,
+          0,
+          2828,
+          41171175,
+          62340,
+          0
+        ],
+        [
+          188473,
+          936,
+          697484,
+          11879,
+          0,
+          181,
+          2088565,
+          802173,
+          0
+        ]
+      ]
+    },
+    "full_core": {
+      "mIoU_pct": 42.001857804740865,
+      "mAcc_pct": 47.46316539855703,
+      "PixelAcc_pct": 84.09457268697778,
+      "FWIoU_pct": 73.73021046320652,
+      "mDice_pct": 51.187488817147695,
+      "per_class_iou_pct": {
+        "ceiling": 84.74992484864707,
+        "chair": 20.085743702498185,
+        "door": 6.998651344879008,
+        "floor": 92.74967355147538,
+        "sofa": 0.0,
+        "table": 42.02471903134754,
+        "wall": 68.62879109287844,
+        "window": 20.7773588662013
+      },
+      "gt_valid_pixels": 155096619,
+      "correct_pixels": 130427839,
+      "per_class_gt_support": {
+        "ceiling": 40782327,
+        "chair": 2341514,
+        "door": 10826224,
+        "floor": 50605110,
+        "sofa": 331151,
+        "table": 3831361,
+        "wall": 42589241,
+        "window": 3789691
+      },
+      "per_class_pred_support": {
+        "ceiling": 38291184,
+        "chair": 773802,
+        "door": 3313269,
+        "floor": 51602276,
+        "sofa": 0,
+        "table": 1931897,
+        "wall": 58120625,
+        "window": 1063566
+      },
+      "predictions_outside_label_set": 0,
+      "confusion_matrix": [
+        [
+          36273217,
+          115,
+          509687,
+          1,
+          0,
+          0,
+          3853677,
+          145630,
+          0
+        ],
+        [
+          316,
+          521073,
+          122078,
+          1339563,
+          0,
+          131136,
+          226392,
+          956,
+          0
+        ],
+        [
+          1033861,
+          3068,
+          924847,
+          162233,
+          0,
+          915,
+          8682763,
+          18537,
+          0
+        ],
+        [
+          317,
+          66262,
+          162084,
+          49181415,
+          0,
+          51459,
+          1142080,
+          1493,
+          0
+        ],
+        [
+          529,
+          7351,
+          6925,
+          67426,
+          0,
+          29772,
+          218934,
+          214,
+          0
+        ],
+        [
+          3746,
+          135895,
+          99360,
+          589529,
+          0,
+          1705332,
+          1296523,
+          976,
+          0
+        ],
+        [
+          787743,
+          38883,
+          448467,
+          253683,
+          0,
+          12564,
+          40987048,
+          60853,
+          0
+        ],
+        [
+          191455,
+          1155,
+          1039821,
+          8426,
+          0,
+          719,
+          1713208,
+          834907,
+          0
+        ]
+      ]
+    },
+    "full": {
+      "mIoU_pct": 46.55908459878398,
+      "mAcc_pct": 52.03549807364265,
+      "PixelAcc_pct": 86.05811000947739,
+      "FWIoU_pct": 76.5822642719531,
+      "mDice_pct": 56.08208726048763,
+      "per_class_iou_pct": {
+        "ceiling": 88.79470444495736,
+        "chair": 37.55069878606464,
+        "door": 9.129996636257449,
+        "floor": 93.93285856103908,
+        "sofa": 0.8485038742608417,
+        "table": 49.26117390749867,
+        "wall": 71.51773689311608,
+        "window": 21.437003687077723
+      },
+      "gt_valid_pixels": 155096619,
+      "correct_pixels": 133473219,
+      "per_class_gt_support": {
+        "ceiling": 40782327,
+        "chair": 2341514,
+        "door": 10826224,
+        "floor": 50605110,
+        "sofa": 331151,
+        "table": 3831361,
+        "wall": 42589241,
+        "window": 3789691
+      },
+      "per_class_pred_support": {
+        "ceiling": 40129276,
+        "chair": 1345245,
+        "door": 3344891,
+        "floor": 51480819,
+        "sofa": 2949,
+        "table": 2219584,
+        "wall": 55590484,
+        "window": 983371
+      },
+      "predictions_outside_label_set": 0,
+      "confusion_matrix": [
+        [
+          38054679,
+          115,
+          363634,
+          1,
+          0,
+          0,
+          2298236,
+          65662,
+          0
+        ],
+        [
+          202,
+          1006468,
+          84080,
+          1015770,
+          0,
+          94608,
+          139706,
+          680,
+          0
+        ],
+        [
+          1054588,
+          4573,
+          1185579,
+          163259,
+          0,
+          2143,
+          8400096,
+          15986,
+          0
+        ],
+        [
+          317,
+          121028,
+          144746,
+          49446098,
+          133,
+          67864,
+          823379,
+          1545,
+          0
+        ],
+        [
+          529,
+          8156,
+          6982,
+          65926,
+          2811,
+          32597,
+          213989,
+          161,
+          0
+        ],
+        [
+          715,
+          138000,
+          54075,
+          540425,
+          0,
+          1997014,
+          1100242,
+          890,
+          0
+        ],
+        [
+          827088,
+          64457,
+          443850,
+          240789,
+          5,
+          19191,
+          40937992,
+          55869,
+          0
+        ],
+        [
+          191158,
+          2448,
+          1061945,
+          8551,
+          0,
+          6167,
+          1676844,
+          842578,
+          0
+        ]
+      ]
+    }
+  },
+  "timing_note": "Sum of recorded compute stages; excludes load, intermediate cache I/O and orchestration. Not isolated end-to-end latency.",
+  "mean_recorded_compute_s": {
+    "original": 0.4009871895352613,
+    "full_core": 0.6546661213374929,
+    "full": 4.18039469408176
+  },
+  "delta_full_minus_original_mIoU_pp": 8.916726778124136,
+  "paired_image_bootstrap_delta95CI_pp": [
+    8.312551431526469,
+    9.472769987413981
+  ],
+  "CI_limit": "Image bootstrap; correlated same-room views and single heldout area limit generalization."
+}

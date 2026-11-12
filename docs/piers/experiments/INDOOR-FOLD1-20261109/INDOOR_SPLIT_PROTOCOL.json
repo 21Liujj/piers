@@ -1,0 +1,100 @@
+{
+  "protocol": "Fold1: train areas 1/2/3/4/6, heldout areas 5a/5b",
+  "source_root": "/root/autodl-tmp/data_extra/SPAN8_PREP",
+  "classes": [
+    "ceiling",
+    "chair",
+    "door",
+    "floor",
+    "sofa",
+    "table",
+    "wall",
+    "window"
+  ],
+  "canvas": [
+    1024,
+    512
+  ],
+  "counts": {
+    "all": 1413,
+    "train": 1040,
+    "heldout": 373,
+    "fit": 832,
+    "calib": 104,
+    "val": 104
+  },
+  "rooms": {
+    "total_train_rooms": 1040,
+    "fit_rooms": 832,
+    "calib_rooms": 104,
+    "val_rooms": 104
+  },
+  "leakage_check_rooms": {
+    "fit\u2229calib": 0,
+    "fit\u2229val": 0,
+    "calib\u2229val": 0,
+    "train\u2229heldout_rooms": 0
+  },
+  "sample_sha256": [
+    {
+      "id": "camera_0004591bfdc749a88db196a5d8b345cb_office_6_frame_equirectangular_domain_rgb",
+      "area": "area1_3_6",
+      "label_sha256_16": "f78a61e38e8f9e46",
+      "bytes": 9357
+    },
+    {
+      "id": "camera_00d10d86db1e435081a837ced388375f_office_24_frame_equirectangular_domain_rgb",
+      "area": "area1_3_6",
+      "label_sha256_16": "440fd778226dc346",
+      "bytes": 9720
+    },
+    {
+      "id": "camera_0375e17a7a3c4ae3968a0f3e96a081ce_office_8_frame_equirectangular_domain_rgb",
+      "area": "area1_3_6",
+      "label_sha256_16": "f620aefac1ca6d20",
+      "bytes": 11620
+    },
+    {
+      "id": "camera_03eb3fa2e1524ee887ba22d1a4896f3c_WC_1_frame_equirectangular_domain_rgb",
+      "area": "area1_3_6",
+      "label_sha256_16": "1cd74def7e41476c",
+      "bytes": 5173
+    },
+    {
+      "id": "camera_042a479869b44a7c9159922f19a285ea_conferenceRoom_1_frame_equirectangular_domain_rgb",
+      "area": "area1_3_6",
+      "label_sha256_16": "0ef9583839e51285",
+      "bytes": 9123
+    },
+    {
+      "id": "camera_0000896878bd47b2a624ad180aac062e_conferenceRoom_3_frame_equirectangular_domain_rgb",
+      "area": "area5",
+      "label_sha256_16": "bc692b2ace3a10f5",
+      "bytes": 8734
+    },
+    {
+      "id": "camera_01d25d1241b14f61bd143df9c758b914_hallway_14_frame_equirectangular_domain_rgb",
+      "area": "area5",
+      "label_sha256_16": "11c5d21e056f84b0",
+      "bytes": 6360
+    },
+    {
+      "id": "camera_026953a8118c4f07ae9280975e7d9ffc_office_5_frame_equirectangular_domain_rgb",
+      "area": "area5",
+      "label_sha256_16": "5197e132976a7849",
+      "bytes": 8589
+    },
+    {
+      "id": "camera_029bb1440fca47e2886a88559bbf8d00_hallway_1_frame_equirectangular_domain_rgb",
+      "area": "area5",
+      "label_sha256_16": "14739da11d91138e",
+      "bytes": 9011
+    },
+    {
+      "id": "camera_03dacd54ae8b4e838b1ee299f4727b74_hallway_11_frame_equirectangular_domain_rgb",
+      "area": "area5",
+      "label_sha256_16": "b226b8f10999bb71",
+      "bytes": 6419
+    }
+  ]
+}

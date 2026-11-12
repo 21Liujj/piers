@@ -1,0 +1,23 @@
+"""Indoor adaptation isolated config (Fold1). Does not touch outdoor runs/checkpoints.
+
+Geometry follows Option B: the native 2:1 equirectangular canvas (1024x512) with
+512x512 semantic windows at stride 64.  The outdoor path upscales to 4096x1024
+before windowing; the indoor path does not, so a window carries 1/4 of the pixels
+of an outdoor window while the forward budget stays identical (18 base / 20 full).
+"""
+suite: INDOOR-Fold1
+fold: 1
+training_areas: [area_1, area_2, area_3, area_4, area_6]
+heldout_areas: [area_5a, area_5b]
+room_split_within_training: {train: 0.8, internal_val: 0.1, calib: 0.1, seed: 42, unit: room, leakage: none_across_sets}
+erp: {W: 1024, H: 512, native: true, upscale_2x: false}
+semantic: {window: 512, stride: 64, positions: 9, passes: 2, base_forwards: 18, i3_extra: 2, full_forwards: 20, native: true}
+text: {fovs: 4, win_w: 512, win_h: 512, stride_x: 256, full_height: true, wrap: true}
+taxonomy: {num_classes: 8, order: [ceiling, chair, door, floor, sofa, table, wall, window], map13_to_8: [255,255,255,0,1,255,255,2,3,4,5,6,7], unknown: 255, keep_native13: true}
+zero_shot: {Z0: street_frozen_13head_missing_channels_zero, Z1: street_frozen_full_system_same_8names, train_GT_reads: 0}
+supervised: {head_warmup_steps: 200, joint_lora_steps: 1000, optim: AdamW, lr_head_decoder: 1.0e-4, lr_lora: 1.0e-05, weight_decay: 0.01, grad_clip: 1.0, precision: bf16, microbatch: 1, grad_accum: 4, seeds: [1234, 4321, 2026], aug: [yaw_circular_shift, light_color], no_vertical_flip: true, trainable: [lora_rank4_encoder, decoder_head_8cls], frozen: [encoder_base, memory_main, dino, text_sam2], checkpoint_saves_taxonomy: true}
+calibration: {Z: cityscapes_source_rebuilt_only, A: refit_8cls_on_training_calib_split_only, forbid_cityscapes13_for_indoor8: true}
+memory: {candidates: [{tokens: 2048, keep_ratio: 0.0625}, {tokens: 1024, keep_ratio: 0.03125}], select_on: training_internal_val_only, forbid_test_selection: true, protect_from: indoor_train_stats_not_street_rares}
+runs_root: runs/INDOOR-FOLD1-20261109
+frozen_refs: {checkpoint_sha256: ec0c607a6247651cb8c5eb04e3c15a7ae4b067655c4ca6cb5b6ff9d80adaba85, lora_tensors: 192, rank: 4}
+data_gate: {status: passed, source: "HF JunweiZheng/s2d3d (360BEV Stanford2D3D)", images: 1413, valid_pixel_ratio: 0.7889, ignore_pixel_ratio: 0.2111, bad_labels: 0, official_eth_mirror: "throttled_0.56MB_per_s", note: "official ETH no_xyz mirror unusable; verified HF mirror substituted, 1413/1413 rgb+semantic pairs"}

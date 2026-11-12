@@ -1,0 +1,522 @@
+[
+  {
+    "image_id": "camera_003a0d90636f416393c0bc7a9bbee2c4_office_7_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_003a0d90636f416393c0bc7a9bbee2c4_office_7_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "3131bfa103ad9d395111840efb463be32bbea9b69b111f6a8361c76f8bb38ea0"
+  },
+  {
+    "image_id": "camera_0ccf3c78ef354902b516c62ef8fb7cf1_lounge_2_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_0ccf3c78ef354902b516c62ef8fb7cf1_lounge_2_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "7788bf6f1e91fc9a23afb11df90c7ceb089c54b4ed4350310fcaa98943de0c07"
+  },
+  {
+    "image_id": "camera_2439b3f7bc184152bf89e6012a511aa6_office_6_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_2439b3f7bc184152bf89e6012a511aa6_office_6_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "67cb2bfa8ce7aa58b9d0d45cdcb14da81772107da9ae5cc2dbfd0fd3ae5265e6"
+  },
+  {
+    "image_id": "camera_247d69e9f0e64242a9330d70eca2ab0c_hallway_6_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_247d69e9f0e64242a9330d70eca2ab0c_hallway_6_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "572616edd40f32c3c3b73c2aef76f80d3c950241bfc07d84651b44c731495669"
+  },
+  {
+    "image_id": "camera_42b39dce313f4feabdbde3e2b837ef1d_office_5_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_42b39dce313f4feabdbde3e2b837ef1d_office_5_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "ff65677869b347960bd9aa0e867a76adce4ee07ccdadda0be3e0eb6a37db2377"
+  },
+  {
+    "image_id": "camera_49bb03c3a37547a7b23e7de1cc0d364d_lounge_1_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_49bb03c3a37547a7b23e7de1cc0d364d_lounge_1_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "85ef2b2f777ba52ba58e62dd7ad5df48bc6e97c925841ed8ae86617fc03b1a67"
+  },
+  {
+    "image_id": "camera_4a41b27118ac4c6aad24f60a04f3a559_office_31_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_4a41b27118ac4c6aad24f60a04f3a559_office_31_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "cceef434b16cd87911170eb31d2896a4b38814d1b7c7498ac28aa764f1b05e64"
+  },
+  {
+    "image_id": "camera_52f12f98a95940fb81148a94b7e2ee52_hallway_6_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_52f12f98a95940fb81148a94b7e2ee52_hallway_6_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "c1286f5a043b04ba5a2663b5c92b3f89275ed0a2e383cbbec5045c0c2188b3bf"
+  },
+  {
+    "image_id": "camera_5625cf0ef76648e4b21c618bcfe72a13_copyRoom_1_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_5625cf0ef76648e4b21c618bcfe72a13_copyRoom_1_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "0ceae3435d1f9a53f21c131f9c2f9ae65d47df324b3032f3c1fb85d67d800971"
+  },
+  {
+    "image_id": "camera_56313e59f99646f68cefdb8fefaecc5b_hallway_6_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_56313e59f99646f68cefdb8fefaecc5b_hallway_6_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "031f98e3577d050be529fab37519144ee446ceef71c5b942ac515e2c382235b2"
+  },
+  {
+    "image_id": "camera_68483b835ebd4c69876cb968aa5b839d_office_9_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_68483b835ebd4c69876cb968aa5b839d_office_9_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "7dd3711ac44063605f5d3e6b89bc2bd393b51af1922ebd9ce014783891a7e661"
+  },
+  {
+    "image_id": "camera_6922fce99b0a4f9da148f76a8d57c089_hallway_5_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_6922fce99b0a4f9da148f76a8d57c089_hallway_5_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "72fee0d77a416c857e3236af0fbe1c81244ab34b1e1141be5bcba6c226164f32"
+  },
+  {
+    "image_id": "camera_6cf9b1a7e96d44aeb9a8a147328b6e76_hallway_4_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_6cf9b1a7e96d44aeb9a8a147328b6e76_hallway_4_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "7a7c056edba9b2a49bda1878dde148ae9618481052264934cd0e24b4d6f94776"
+  },
+  {
+    "image_id": "camera_6e253b2eef4544d38aaa2d11b9e0fd63_office_24_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_6e253b2eef4544d38aaa2d11b9e0fd63_office_24_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "ca84253302d1bcadd19b6aa3cc4f06978282a41534a61c14bca3c97cd794ca6d"
+  },
+  {
+    "image_id": "camera_74edfa47a1c1448e84849533630259c6_hallway_1_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_74edfa47a1c1448e84849533630259c6_hallway_1_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "99bb1544aa7f728ed7048bea77bcaa24ba46d51075aca9cda2126414048310f3"
+  },
+  {
+    "image_id": "camera_75fb08c7ceac492e87aa90543834c723_office_8_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_75fb08c7ceac492e87aa90543834c723_office_8_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "c63d779f4ab816c013db68919948adb9027a36e69345b0ad35c2a6ae0ba55aa0"
+  },
+  {
+    "image_id": "camera_7d00bccb37f44c72817623aedfb068ae_office_14_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_7d00bccb37f44c72817623aedfb068ae_office_14_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "4d34520adb763cef3306a1805487c40c435d927b9a7fac18cd2eb44f3f2f9d19"
+  },
+  {
+    "image_id": "camera_7eb7e942b7ba4db1a26f766d402b2d0c_office_20_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_7eb7e942b7ba4db1a26f766d402b2d0c_office_20_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "6fe84c5f7478ab59814dce0996bd1c315a026470b9239f1937b9cd6cf1b31bc4"
+  },
+  {
+    "image_id": "camera_842facf372454735b7fd2880e14de97f_lounge_2_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_842facf372454735b7fd2880e14de97f_lounge_2_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "af452cb4610eea9c888a572427759f9e300e524fc4a3b28762185aae406232b6"
+  },
+  {
+    "image_id": "camera_8655758921c745ac9c8a3558c731450b_WC_1_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_8655758921c745ac9c8a3558c731450b_WC_1_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "d4a593d0914463835c5acc347e9ead2e0f2393c5e138ce1d87e7bd2946fa6cdc"
+  },
+  {
+    "image_id": "camera_87a1bc34ffb4408ba077119216ed763e_hallway_2_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_87a1bc34ffb4408ba077119216ed763e_hallway_2_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "1ca24537dfc49ea3b266f21668a9f5d87c160e7dcc63528820f1fbdfabb36a34"
+  },
+  {
+    "image_id": "camera_87e6e35f186a4fa1b0e673065a64cb97_hallway_6_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_87e6e35f186a4fa1b0e673065a64cb97_hallway_6_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "801be9c61fb88a417b987593543eeb55072b01216a8082c049148b330e67487d"
+  },
+  {
+    "image_id": "camera_92b146f2cd7a4c5aa54844d2e84d31fb_hallway_6_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_92b146f2cd7a4c5aa54844d2e84d31fb_hallway_6_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "e237578359db51a9c8fd7d12ea6fc97c0c1026110238fb41ac24eccef58d090e"
+  },
+  {
+    "image_id": "camera_937e5a2068b4490bb2298f7a9feb09e6_office_27_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_937e5a2068b4490bb2298f7a9feb09e6_office_27_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "bcc526774910986c98181f4f7635bd6c92bc3596ec72e3da3f00f642452a942f"
+  },
+  {
+    "image_id": "camera_9509f980d9c34837985f9180d5d2bef4_hallway_1_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_9509f980d9c34837985f9180d5d2bef4_hallway_1_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "07df7bed5183399689b9abb6a4a2ac18ee8d74bce29e08898b26fdca6657bc4c"
+  },
+  {
+    "image_id": "camera_9accd9c0bf16486aa4cb84cb9b8b3046_hallway_2_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_9accd9c0bf16486aa4cb84cb9b8b3046_hallway_2_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "77aef07d2ce68d3dd0c17438ecc0eb8efe572cfda2c01721e501bc19a2e393df"
+  },
+  {
+    "image_id": "camera_9ad7701d035a4d0499d9cfd834100b12_hallway_7_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_9ad7701d035a4d0499d9cfd834100b12_hallway_7_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "74710d1aef0a7a608a58f841e640534f4a213c2a257538a4496294fde90c1259"
+  },
+  {
+    "image_id": "camera_a77fba57be66411c908077c69d803797_office_31_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_a77fba57be66411c908077c69d803797_office_31_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "f943988e79e55614d6b3bbddba2a5b86f5e63a86f123bc6ed4daa4636d26a43c"
+  },
+  {
+    "image_id": "camera_aa9a0c5a20b94d37a09b56e68af96019_hallway_1_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_aa9a0c5a20b94d37a09b56e68af96019_hallway_1_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "6481e7840ec25ff2fea4d9ec02969808b390dc8aa3bafb5d0e4f46f2e30f43cf"
+  },
+  {
+    "image_id": "camera_ab03f882ff064d9f8f8faf742384165a_office_10_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_ab03f882ff064d9f8f8faf742384165a_office_10_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "7098f883f85d53b99ee6e3058e80ef02013694c190b89025676551ac2730c37a"
+  },
+  {
+    "image_id": "camera_b5237408aae04543baee422f39ef3a55_lounge_1_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_b5237408aae04543baee422f39ef3a55_lounge_1_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "4e605e14308068152729a97c8fc2585d5870b326d9af9d80fd2e5e3bf2ab288d"
+  },
+  {
+    "image_id": "camera_b73912d7377b41a584725523f3a91883_office_21_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_b73912d7377b41a584725523f3a91883_office_21_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "0df9f403c07843d0f1f841e156a15b4cf05582cb0fc5794dc06e56aeb89af523"
+  },
+  {
+    "image_id": "camera_c116e049d9c24baaa3cc01d88d48a5fa_office_28_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_c116e049d9c24baaa3cc01d88d48a5fa_office_28_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "60eb15811259083c7a110df1cea6e1d22ade670d79c50a05c9ff9dcb239141f9"
+  },
+  {
+    "image_id": "camera_c7109a8a24af478d910dc60e79e03963_hallway_2_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_c7109a8a24af478d910dc60e79e03963_hallway_2_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "0d066775fd08daedc1c74a23ddfc4bf0fc2343bc2431d053497712b1975d7a89"
+  },
+  {
+    "image_id": "camera_c81dc59af88b41f1b5b269f4fba137d8_office_2_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_c81dc59af88b41f1b5b269f4fba137d8_office_2_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "0879ae6a8870d19d1e9b7e7722e670099a75414c84f1a335becb705630a03b60"
+  },
+  {
+    "image_id": "camera_c8c806b1bd7945318612b9aa514221d9_hallway_7_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_c8c806b1bd7945318612b9aa514221d9_hallway_7_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "767a0d8a841172c97ceb6d8207d3ec8efe1aacbcd9e773a5605950a3868fa8a9"
+  },
+  {
+    "image_id": "camera_ccc5a554a89a4bdf89e70b66a79b969c_office_15_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_ccc5a554a89a4bdf89e70b66a79b969c_office_15_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "7022471e5fe8d8a63ff0110830399a6e6ccd811cb7f98159fe3a989fc55ab7bd"
+  },
+  {
+    "image_id": "camera_ce0a7ef47557461d97f72a45720d37c9_WC_1_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_ce0a7ef47557461d97f72a45720d37c9_WC_1_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "58cef8d317e097cc4ea275641d80070dc36a56ccccb05b3f1ce40c4a2857fa87"
+  },
+  {
+    "image_id": "camera_ce5e2f4043f74ba08e04653d036fc55a_office_9_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_ce5e2f4043f74ba08e04653d036fc55a_office_9_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "fffed4b45dfa192a5452f5c0842345f3df35422c1c67cb9659dd1696b542251d"
+  },
+  {
+    "image_id": "camera_d0834679c83f4ecf997c4c808d151482_hallway_1_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_d0834679c83f4ecf997c4c808d151482_hallway_1_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "21e46a7502346a1fb786e9af78d85caba6f8ca436133daa1ef97cdcd2b04743f"
+  },
+  {
+    "image_id": "camera_d31d981624cc4185abb1f2f93d19ec79_office_8_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_d31d981624cc4185abb1f2f93d19ec79_office_8_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "c6ccd808f0db766e1c8cc2d4aae6d0bba531f761c4df97b074771145cd7e8a63"
+  },
+  {
+    "image_id": "camera_d6f28d9f9a2a4e89bb2dfb4594bf5755_office_6_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_d6f28d9f9a2a4e89bb2dfb4594bf5755_office_6_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "f8f0316b37342d390d54563124d7db7bbc277c8b3b206f4112de736aeef3ef26"
+  },
+  {
+    "image_id": "camera_da4629d565a3435fb701f56f46005a66_office_31_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_da4629d565a3435fb701f56f46005a66_office_31_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "f64f793684d481f5fc381ee94143650e2dacf3068b5d7d313f830b2673de0b3c"
+  },
+  {
+    "image_id": "camera_dd7e6723f06841b3be163b57ae8619ef_office_9_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_dd7e6723f06841b3be163b57ae8619ef_office_9_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "70849432f834543261eddaa980ed81258644147597787c44ca2652c5b35252af"
+  },
+  {
+    "image_id": "camera_ddb785f9cddc4d7199e2e7984b76cbcc_lounge_1_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_ddb785f9cddc4d7199e2e7984b76cbcc_lounge_1_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "64729f18615bbc7e35e7d324a8e6a5da5d9e3e7649a2f98ab772fc256ef4a3af"
+  },
+  {
+    "image_id": "camera_e2e170cb090e44f6bfaf1fa4b4e00595_conferenceRoom_1_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_e2e170cb090e44f6bfaf1fa4b4e00595_conferenceRoom_1_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "b1db60d4cd72003084036afee881ce95bdd7bb5fd758c6906656b8c7f275f6c8"
+  },
+  {
+    "image_id": "camera_ee20957a3d9c456094a8f905f29c7e44_hallway_6_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_ee20957a3d9c456094a8f905f29c7e44_hallway_6_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "07b3339657e4fc312082d72ef6df1c5ff8ec6817f1063b028aab46fb38e7fd3a"
+  },
+  {
+    "image_id": "camera_f2925d90180f4f37b77b6e70b57e0cd4_office_17_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_f2925d90180f4f37b77b6e70b57e0cd4_office_17_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "47950f09972679b55afa5335c31a1b7b3bc0fc3db4dcb6bdece5596074469d54"
+  },
+  {
+    "image_id": "camera_f5d96061b8b046dcb790052367bb0139_hallway_2_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_f5d96061b8b046dcb790052367bb0139_hallway_2_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "a9ca87a58725c30a8b0bd91b6ede9e6068c4def88e7e34511ff9a5bfe50d209f"
+  },
+  {
+    "image_id": "camera_faee5692da8946fea5e648b3f2714d66_WC_2_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_faee5692da8946fea5e648b3f2714d66_WC_2_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "5dd52259414f4bb1be2df4a12e77300b884115add01de11d6e4099967f8231f5"
+  },
+  {
+    "image_id": "camera_fe973b44ef194948acf5b954e42f6cab_hallway_6_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_fe973b44ef194948acf5b954e42f6cab_hallway_6_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "4aa5652b27799f91d4daad405dba8be8cac21102447e11d371d4adb710ce48b3"
+  },
+  {
+    "image_id": "camera_03aa15b7a35a47739c378aa70fb5478e_hallway_8_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_03aa15b7a35a47739c378aa70fb5478e_hallway_8_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "4155952f617bac16fdfa8ef012859a935247b144965ca03cbcfe801e0b8584a2"
+  },
+  {
+    "image_id": "camera_092bf09cd87e49db9eb0b3c26301ef56_hallway_7_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_092bf09cd87e49db9eb0b3c26301ef56_hallway_7_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "f1e7d0afe7447714d0edf60e9dc9fd6600f6216e9ea2c1accc0302ddb04463dc"
+  },
+  {
+    "image_id": "camera_0efa103fa67e4c35ae53f2e6682d18a2_auditorium_2_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_0efa103fa67e4c35ae53f2e6682d18a2_auditorium_2_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "0c1688aecb1b2ac69aff2128fd1a17a6b1090baa602775fa7f46c5040206f712"
+  },
+  {
+    "image_id": "camera_123c00e84a394f20adedd231fe54a749_hallway_14_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_123c00e84a394f20adedd231fe54a749_hallway_14_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "3f8183f8954c993a10a223bc44bbc4a9f77db535c86dbcd10017a2fe2d9412ee"
+  },
+  {
+    "image_id": "camera_1a2141e0159e43a7a7ff197576df8db2_auditorium_2_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_1a2141e0159e43a7a7ff197576df8db2_auditorium_2_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "19f3ba85f806cc81029edb5cd2b343fdbc4edaaa61525fd089047d98a2e1f316"
+  },
+  {
+    "image_id": "camera_1c4ce45b153347a78560bada2a10d006_office_21_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_1c4ce45b153347a78560bada2a10d006_office_21_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "b5a9f8cb0e0a961a7663747fe56b294ef3aef2607bf4d9090f3e1aeef9f3877f"
+  },
+  {
+    "image_id": "camera_1db93072dfb0405bab1ea58e0661d8af_auditorium_1_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_1db93072dfb0405bab1ea58e0661d8af_auditorium_1_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "02606a84163cda029aa8dd8e312d2d656664ee46fc2e342fc3cacc9a27f606d0"
+  },
+  {
+    "image_id": "camera_1df31413ecf143e8afc0c856ae3caaf8_hallway_2_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_1df31413ecf143e8afc0c856ae3caaf8_hallway_2_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "bfe13435cff9c4108a19886eda6ad9e08d240c3db60bf795ab44686dc20b42b9"
+  },
+  {
+    "image_id": "camera_1eaaaf75532c4bc1bed6066366223f62_auditorium_1_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_1eaaaf75532c4bc1bed6066366223f62_auditorium_1_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "63254de46587015a15adc7d6259244e6577e415221d433ef30b874bcd70d8217"
+  },
+  {
+    "image_id": "camera_239b7a5e20d243ce9cd8b2ff29f8148e_auditorium_2_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_239b7a5e20d243ce9cd8b2ff29f8148e_auditorium_2_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "6d4fd18c3f50a6d2c0c991e3fb59adbf57b0938e8bac6a2b2ce0093b8550519c"
+  },
+  {
+    "image_id": "camera_2680eea1dd09424091486a543dba29ef_office_16_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_2680eea1dd09424091486a543dba29ef_office_16_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "74378a0c8d5ccb2fcb4077d8d77d3a7ac340c08622f80d6515c0dde781340f8e"
+  },
+  {
+    "image_id": "camera_2869db404dd24a5e9a0ddd2e619fd224_hallway_12_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_2869db404dd24a5e9a0ddd2e619fd224_hallway_12_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "7d5760ac134c771663035801edc9ed562a9bf947d0f824292ba80afa5eb2890e"
+  },
+  {
+    "image_id": "camera_29c4d3039cb14983b563b7697a8c333c_conferenceRoom_1_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_29c4d3039cb14983b563b7697a8c333c_conferenceRoom_1_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "96183791ddca8895808947fe678e8e3e5d592cba25f031d34f6343b4fc790c3c"
+  },
+  {
+    "image_id": "camera_2f0eb2cfd91d4caab8ea79a4bbcbd950_auditorium_1_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_2f0eb2cfd91d4caab8ea79a4bbcbd950_auditorium_1_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "767f91d6740bff06bec31f4b58439ac4d1835caf260b8471302a00298e98c3f0"
+  },
+  {
+    "image_id": "camera_33a07f405c2a4b6aba268f29f6f7573d_hallway_9_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_33a07f405c2a4b6aba268f29f6f7573d_hallway_9_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "949272b5c32490f7d31285c34145768c90947acd4415bfa94a0ce13f08446dbe"
+  },
+  {
+    "image_id": "camera_387ce5bbb6f7475e8852de0b22e41151_conferenceRoom_1_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_387ce5bbb6f7475e8852de0b22e41151_conferenceRoom_1_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "cb4e2fe855dd5214b3230fa7e12bd7a0e891381ba46b728a7ec2d40ee159fdee"
+  },
+  {
+    "image_id": "camera_38aa878606b94cb4aa606408e5616c4f_hallway_10_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_38aa878606b94cb4aa606408e5616c4f_hallway_10_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "d6dc4a890359cff4a7ad309c7bcc021b3d6c6dce1a5dd27baf3a3b97cdc84381"
+  },
+  {
+    "image_id": "camera_3a24bb8379684f588a2663ad6a2d733a_hallway_2_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_3a24bb8379684f588a2663ad6a2d733a_hallway_2_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "97bb260b658d874f6759a2d4ebc5d0ec7f897383b65f938d90264800a4b7d708"
+  },
+  {
+    "image_id": "camera_3df7241e4ae444728cdcae24078ab03b_storage_3_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_3df7241e4ae444728cdcae24078ab03b_storage_3_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "97478d07b4ca236748fa41e2c97bde268fed78966f8f6c8aa9f4fa75152668a0"
+  },
+  {
+    "image_id": "camera_4496fd84fe724e9e9a034c394806425e_office_14_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_4496fd84fe724e9e9a034c394806425e_office_14_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "4ff4648d92ae675410cc4ebd13937fc74d9e230343574b194a6e348847dd67c6"
+  },
+  {
+    "image_id": "camera_49a328878f014288a6ea197dcd095253_conferenceRoom_3_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_49a328878f014288a6ea197dcd095253_conferenceRoom_3_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "2294e8859281d02fec02c068d29f116087afc6b2bd94990c55b8779585a9fa49"
+  },
+  {
+    "image_id": "camera_583f3ae15a864cbb8e9e9d6ba4169cbb_hallway_1_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_583f3ae15a864cbb8e9e9d6ba4169cbb_hallway_1_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "28a64e8d26a7647ee689e24c332cdef4dff270e48d5ea3158961d26df4456417"
+  },
+  {
+    "image_id": "camera_65210065bf434ffcbd8f10fa8d6acd3c_office_4_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_65210065bf434ffcbd8f10fa8d6acd3c_office_4_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "862801b4bc0d63942b5a76e15855594f36edaadbaf3c141659f44b025fdeb3db"
+  },
+  {
+    "image_id": "camera_6bf4b82c22264ccc9611efe1c1ff5e62_lobby_1_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_6bf4b82c22264ccc9611efe1c1ff5e62_lobby_1_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "7e46f28180019791800920a11d7d1a8a5b2d26fb862d455a075e2a67b3bc14fb"
+  },
+  {
+    "image_id": "camera_85e0ac64e83a46fcaa0ff4a6afdefbad_WC_1_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_85e0ac64e83a46fcaa0ff4a6afdefbad_WC_1_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "693afdf6cb969d817c9c4eaa4ede45640219194ca79834a89b3ccc5fc22b57a6"
+  },
+  {
+    "image_id": "camera_8ca1c3c90a2c46cc940efd4d9481f043_storage_5_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_8ca1c3c90a2c46cc940efd4d9481f043_storage_5_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "08f91151f90a39671919b8100f722d2b06a5ebbacc4cdf4880d46b4d4df5ec93"
+  },
+  {
+    "image_id": "camera_8ce282c556f74895ac7777f9c7ef6aee_conferenceRoom_1_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_8ce282c556f74895ac7777f9c7ef6aee_conferenceRoom_1_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "a1fd6eeb5b0aa0fb20cb2af123ab08b272aa6c39c504816a7e8a708d31d9dba7"
+  },
+  {
+    "image_id": "camera_8f44071d5c364a5b8c2e6c02594a11b1_hallway_3_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_8f44071d5c364a5b8c2e6c02594a11b1_hallway_3_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "ae320f8263bd9a828bd32f08fd195da4f4b09f8fc03514466fe1d8782265cfbe"
+  },
+  {
+    "image_id": "camera_8fbccf51248d4d119da6ff9203b01efd_office_10_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_8fbccf51248d4d119da6ff9203b01efd_office_10_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "41a4c3ac017c649a77268d55bbe741d328c0bc90dcf76c9399ba72415cd9eb5c"
+  },
+  {
+    "image_id": "camera_964e9c77d0c64810a0e51e8ca33f93b9_hallway_4_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_964e9c77d0c64810a0e51e8ca33f93b9_hallway_4_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "be847c5354415257f872246cd05c9b048b1f90cb9f2828bc81ff9209014ce6dc"
+  },
+  {
+    "image_id": "camera_a00880cdfbbb443db3fc7738f1ea830f_lobby_1_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_a00880cdfbbb443db3fc7738f1ea830f_lobby_1_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "76478fcab25c72234c40a48d23df739e0b1cff8d105b9229c7cd89b48a81f89b"
+  },
+  {
+    "image_id": "camera_a81c748601ef4e5db4b74c4494ee61bc_office_3_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_a81c748601ef4e5db4b74c4494ee61bc_office_3_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "d3827014ac2b834d54f25dab72566b8472b89f9b1253eb5e3d6502ea41f043df"
+  },
+  {
+    "image_id": "camera_abbdf0eaf9084065a64d41f7385e0df6_office_16_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_abbdf0eaf9084065a64d41f7385e0df6_office_16_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "f7974bc603d38ecf91aacde6fee72330ac3d43900c6297cb22f2dbc9293cf98a"
+  },
+  {
+    "image_id": "camera_af17bc86cadb49389f87b5033788610a_auditorium_2_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_af17bc86cadb49389f87b5033788610a_auditorium_2_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "4b1c5e97b2dfeb38fa98123dc1411e4c4e7b58953cef9fa17ab82734642c7807"
+  },
+  {
+    "image_id": "camera_b5f79389ebba4d57b4e857138b3794e2_office_2_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_b5f79389ebba4d57b4e857138b3794e2_office_2_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "9df96f92f40dc753506ae378b032e39df0e59d43a293d5be7c8c9d17e059edf2"
+  },
+  {
+    "image_id": "camera_bfbcf2eec77a442995a395a354d0263d_auditorium_2_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_bfbcf2eec77a442995a395a354d0263d_auditorium_2_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "6a47672ed7ae9093b7afda8230e29aaa9aecc6e36bcc18806d4c1b7497499255"
+  },
+  {
+    "image_id": "camera_c009d354c622493ba4e28af1c65d7808_hallway_13_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_c009d354c622493ba4e28af1c65d7808_hallway_13_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "8c298126252a621a2fbc82c0d34323ab62b9e5c7d55ba4f53b127b0bc77c0adb"
+  },
+  {
+    "image_id": "camera_c0ae765d10c846498a34b8d5323dabd5_hallway_1_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_c0ae765d10c846498a34b8d5323dabd5_hallway_1_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "c1501f9ea15e1bdd5b50de5dec0f39cf8f553a01d39d611af9784dfe05418bc7"
+  },
+  {
+    "image_id": "camera_c9f9c2377da749ecb09b15dd7f363a84_office_10_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_c9f9c2377da749ecb09b15dd7f363a84_office_10_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "8af4be5b4080fba361ab342f1b9ef6375c8bbab79edbb0cd62d9c24bf77c7ed2"
+  },
+  {
+    "image_id": "camera_cb5ed2a13b8e486f905b78ceda920efe_auditorium_1_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_cb5ed2a13b8e486f905b78ceda920efe_auditorium_1_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "5604aff0c6c7779669b36546747cb662c2e806d8d3c334bcff482d62e3db6474"
+  },
+  {
+    "image_id": "camera_ccbd8d3a86a941ce8739ec374ad900ed_auditorium_1_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_ccbd8d3a86a941ce8739ec374ad900ed_auditorium_1_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "be64594bb754e5d688929418282ad091aa063bb2488d223d0127a90d9840ff56"
+  },
+  {
+    "image_id": "camera_d6321286a9804fe9b8c2853c9ff8dc8c_hallway_7_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_d6321286a9804fe9b8c2853c9ff8dc8c_hallway_7_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "4fc3ba7434c178e425e23dcf44e780cb7c974da5f99118fec54dae14bdcaa545"
+  },
+  {
+    "image_id": "camera_d6d72a602c2147a28def22b7495fed30_office_14_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_d6d72a602c2147a28def22b7495fed30_office_14_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "38eab61dfe8ea944fe7d9c7ce309049b09367a08836dd4f3a22f925cee81b5f7"
+  },
+  {
+    "image_id": "camera_ddbb1bd29483478ea0b6936f90ca1be1_lobby_2_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_ddbb1bd29483478ea0b6936f90ca1be1_lobby_2_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "3b16b92e4c049780a80c74df33441a0c154e12af702d9a681da4c8dbed23d638"
+  },
+  {
+    "image_id": "camera_dea8211d921f423bb96e5ba3d24e61cb_hallway_12_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_dea8211d921f423bb96e5ba3d24e61cb_hallway_12_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "628a706c0f932640f55429f3a91871c21b85cecd9816a0e7334699bbb23a6cb6"
+  },
+  {
+    "image_id": "camera_e0f4beea0ca141429b206714d9ebde7a_hallway_9_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_e0f4beea0ca141429b206714d9ebde7a_hallway_9_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "e1cc9a280509aab56652b03a4637d29f34fffea1569dc11378cd038b56668d8e"
+  },
+  {
+    "image_id": "camera_e1c78ce703f04b96892c3354da398028_hallway_5_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_e1c78ce703f04b96892c3354da398028_hallway_5_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "374f028869b30c1a621a04a4df7421f6a3b6cffa7cc1ee61fbc486f783347023"
+  },
+  {
+    "image_id": "camera_e883589003f44be492f7e09b6c35dc90_storage_4_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_e883589003f44be492f7e09b6c35dc90_storage_4_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "319d4e5a29a60d91ddddbdae85f214113c2b831a0c6dde7f1fcd9c37506d586a"
+  },
+  {
+    "image_id": "camera_ec0a3fd3f8c64545bf1df30c1b2ad393_hallway_5_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_ec0a3fd3f8c64545bf1df30c1b2ad393_hallway_5_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "195545cf7881c65b80df99a0168cdbcae73bbde0150b1ed13dfcf64d831da7f1"
+  },
+  {
+    "image_id": "camera_ecde5324405745f8877968bb72dabd78_WC_3_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_ecde5324405745f8877968bb72dabd78_WC_3_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "b3fb18fd3b6d4cf533a46b4d8a156dcc422fdad3ecb5de6872978425c46eaf65"
+  },
+  {
+    "image_id": "camera_f3711df9c6b1489cb6b589f8739761fa_storage_3_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_f3711df9c6b1489cb6b589f8739761fa_storage_3_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "f360b0d6b20f86d7bbcf7dbe42cb96b358aae0209a73ef3cdca72218f9e27919"
+  },
+  {
+    "image_id": "camera_fab3a2389bc24e6c9abf993a7eda59e2_auditorium_1_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_fab3a2389bc24e6c9abf993a7eda59e2_auditorium_1_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "11aa90df959ba2d21b8b95912cd440ec41809c6ef1c55efe1a73d2f73e42a346"
+  },
+  {
+    "image_id": "camera_fadcd8771b934b3abb18c0221b1d5cc2_office_10_frame_equirectangular_domain_rgb",
+    "path": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_fadcd8771b934b3abb18c0221b1d5cc2_office_10_frame_equirectangular_domain_rgb.png",
+    "input_sha256": "3748e02c03cdfc09a417f2f4e0c74e6070317d6e58cbb382ccda5a8a7ba6293e"
+  }
+]

@@ -8,6 +8,8 @@ outputs/
 !assets/paper20261109/calibrators/*.npz
 !results/paper20261109/**/*.npz
 !results/paper20261109/*.npz
+!results/indoor_matched20261112/paired_confusions.npz
+!results/indoor_matched20261112/calibrators/*.npz
 *.pth
 *.pt
 # keep tiny text-prototype assets vendored from effective-omnisam

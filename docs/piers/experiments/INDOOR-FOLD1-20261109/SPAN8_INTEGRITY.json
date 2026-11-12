@@ -1,0 +1,21 @@
+{
+  "root": "/root/autodl-tmp/data_extra/SPAN8_PREP",
+  "total": 1413,
+  "ok": 1413,
+  "bad": 0,
+  "bad_examples": [],
+  "train": 1040,
+  "heldout": 373,
+  "sha16_sample": [
+    "f78a61e38e8f9e46",
+    "81f72351d5bc2508",
+    "440fd778226dc346",
+    "f620aefac1ca6d20",
+    "1cd74def7e41476c",
+    "0ef9583839e51285",
+    "645a245e167b70e1",
+    "5e9eef8784b42bea",
+    "5fc0923723a24b29",
+    "603f9823a73a4d1a"
+  ]
+}

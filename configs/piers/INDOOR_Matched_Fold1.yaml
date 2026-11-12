@@ -1,0 +1,50 @@
+suite: INDOOR-MATCHED-DINO-20261112
+purpose: indoor cross-scene adaptation with the same published I1 I2 I3 method
+dataset:
+  name: Stanford 2D-3D-S SPAN8 preprocessed panoramas
+  images: 1413
+  fit: 832
+  calibration: 104
+  validation: 104
+  heldout: 373
+  heldout_area: area5
+  classes: [ceiling, chair, door, floor, sofa, table, wall, window]
+  ignore_index: 255
+  partition_limitation: training partitions use camera UUIDs rather than verified room identities
+shared:
+  checkpoint: runs/INDOOR-FOLD1-20261109/train/indoor_lora_last.pth
+  indoor_training: Stage1 LoRA rank4 and8class decoder,1200 steps on fit only
+  verify_checkpoint_sha256: true
+  verify_lora_sha256: true
+  verify_all_loaded_tensors: true
+  classes: 8
+  encoder_precision: fp32
+  use_clip: false
+  use_stage2_text_checkpoint: false
+geometry: {width: 1024, height: 512, window: 512, stride: 64, passes: 2}
+original: {memory: dense, text_cooperation: false, seam_budget: 0, semantic_forwards: 18}
+full:
+  memory: {mode: class_aware, score: uncertainty, keep_ratio: 0.03125, min_tokens: 64, rare_reserve_ratio: 0.15, rare_ids_from: fit_only}
+  seam: {budget: 2, candidates: [640, 704, 768, 832, 896], min_separation: 128, semantic_forwards: 20}
+  text: {backend: GroundingDINO_tiny_HF_and_SAM2_1_hiera_small, precision: bf16, fovs: 4, window: 512, stride: 256, box_threshold: 0.35, text_threshold: 0.25}
+  cooperation:
+    algorithm: published calibrated two-view proposals and uncertainty-tempered semantic correction plus bounded semantic-to-text guidance
+    calibration: training_area_calibration104_only
+    features: original18continuous_features_plus8class_indicators
+    classifier: two_head_weighted_logistic
+    optimizer: Adam_full_batch_float64
+    steps: 1000
+    learning_rate: 0.05
+    l2: 0.001
+    sample_max_per_class_view: 256
+    seed: 20261107
+    threshold: 0.9
+    distinct_views: 2
+    baseline_ignore_confidence: 0.85
+    teacher_conflict_protection: 0.8
+evaluation:
+  ground_truth_readers: [calibration_on_calibration_split, scorer]
+  heldout_tuning: false
+  metrics: [mIoU, mAcc, PixelAcc, FWIoU, mDice, per_class_IoU, confusion_matrix]
+  paired_image_bootstrap: 2000
+  timing: compute_stage_sum_only_not_isolated_end_to_end_latency

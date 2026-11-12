@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "files_reviewed": 89,
+  "python_files_compiled": 36,
+  "json_files_parsed": 21,
+  "credential_scan": "passed",
+  "oversized_git_files": [],
+  "outdoor_frozen_assets_and_source_unchanged": true,
+  "web_CPU_contract_tests": {
+    "passed": 18,
+    "environment": "local piers-web-venv"
+  },
+  "indoor_protocol_tests": {
+    "passed": 4,
+    "environment": "recorded Linux piers environment, CPU only"
+  },
+  "indoor_metrics_recomputed": {
+    "images": 373,
+    "arms": 3,
+    "metrics_per_arm": 5,
+    "tolerance": 1e-09
+  },
+  "outdoor_ledger_tasks_recomputed": 4,
+  "checkpoint_SHA256_verified": true,
+  "archived_experimental_source_comparisons": 15,
+  "archived_experimental_source_mismatches": 0,
+  "live_web_experiment_rows": 5,
+  "new_training_or_GPU_evaluation_started": false,
+  "fresh_checkout_verification": {
+    "status": "passed",
+    "staged_tree": "bb2ed5a0a40ccdfc7687fe55744969b56b15b3ba",
+    "fresh_git_archive": true,
+    "indoor_recomputed_images": 373,
+    "indoor_source_fingerprints_exact": true,
+    "outdoor_ledger_tasks": 4,
+    "web_CPU_tests": 18,
+    "runtime_installer_existing_checkpoint": "passed twice, identical files retained",
+    "checkpoint_SHA256": "b3bfc7f54181e62dcababce9cc47709adbc655d9ae423b85e3d37e717749ac02"
+  },
+  "experimental_source_line_endings_preserved": true,
+  "git_diff_check": "passed, original CRLF and generated SVG artifacts preserved"
+}

@@ -1,0 +1,131 @@
+{
+  "classes": [
+    "ceiling",
+    "chair",
+    "door",
+    "floor",
+    "sofa",
+    "table",
+    "wall",
+    "window"
+  ],
+  "fit": {
+    "n_images": 832,
+    "pixel_count": 436207616,
+    "valid_ratio": 0.787612,
+    "class_pixel_pct": {
+      "ceiling": 24.0827,
+      "chair": 2.7371,
+      "door": 6.9732,
+      "floor": 24.5337,
+      "sofa": 0.2003,
+      "table": 1.482,
+      "wall": 17.819,
+      "window": 0.933
+    },
+    "class_present": {
+      "ceiling": true,
+      "chair": true,
+      "door": true,
+      "floor": true,
+      "sofa": true,
+      "table": true,
+      "wall": true,
+      "window": true
+    },
+    "rare_classes_under_1pct": [
+      "sofa",
+      "window"
+    ],
+    "absent_classes": []
+  },
+  "calib": {
+    "n_images": 104,
+    "pixel_count": 54525952,
+    "valid_ratio": 0.816424,
+    "class_pixel_pct": {
+      "ceiling": 24.9823,
+      "chair": 2.616,
+      "door": 6.8732,
+      "floor": 25.5074,
+      "sofa": 0.182,
+      "table": 1.5379,
+      "wall": 19.2471,
+      "window": 0.6964
+    },
+    "class_present": {
+      "ceiling": true,
+      "chair": true,
+      "door": true,
+      "floor": true,
+      "sofa": true,
+      "table": true,
+      "wall": true,
+      "window": true
+    },
+    "rare_classes_under_1pct": [
+      "sofa",
+      "window"
+    ],
+    "absent_classes": []
+  },
+  "val": {
+    "n_images": 104,
+    "pixel_count": 54525952,
+    "valid_ratio": 0.757169,
+    "class_pixel_pct": {
+      "ceiling": 24.2295,
+      "chair": 3.2414,
+      "door": 5.8088,
+      "floor": 23.4182,
+      "sofa": 0.2732,
+      "table": 1.5428,
+      "wall": 16.4843,
+      "window": 0.7187
+    },
+    "class_present": {
+      "ceiling": true,
+      "chair": true,
+      "door": true,
+      "floor": true,
+      "sofa": true,
+      "table": true,
+      "wall": true,
+      "window": true
+    },
+    "rare_classes_under_1pct": [
+      "sofa",
+      "window"
+    ],
+    "absent_classes": []
+  },
+  "heldout": {
+    "n_images": 373,
+    "pixel_count": 195559424,
+    "valid_ratio": 0.793092,
+    "class_pixel_pct": {
+      "ceiling": 20.8542,
+      "chair": 1.1973,
+      "door": 5.536,
+      "floor": 25.8771,
+      "sofa": 0.1693,
+      "table": 1.9592,
+      "wall": 21.7782,
+      "window": 1.9379
+    },
+    "class_present": {
+      "ceiling": true,
+      "chair": true,
+      "door": true,
+      "floor": true,
+      "sofa": true,
+      "table": true,
+      "wall": true,
+      "window": true
+    },
+    "rare_classes_under_1pct": [
+      "sofa"
+    ],
+    "absent_classes": []
+  }
+}

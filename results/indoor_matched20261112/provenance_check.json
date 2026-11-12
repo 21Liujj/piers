@@ -1,0 +1,25 @@
+{
+  "image_id_overlaps": {
+    "fit__calib": 0,
+    "fit__val": 0,
+    "fit__heldout": 0,
+    "calib__heldout": 0,
+    "val__heldout": 0
+  },
+  "fit_list_exact_match": true,
+  "label_layout_mismatches": [],
+  "completed_calib_semantic_images": 104,
+  "checkpoint_sha256_values": [
+    "b3bfc7f54181e62dcababce9cc47709adbc655d9ae423b85e3d37e717749ac02"
+  ],
+  "lora_sha256_values": [
+    "7635c438e5d2d0136b0502c35605f1ba45112eaf611a4611cc102bb9669802be"
+  ],
+  "forward_calls_values": [
+    20
+  ],
+  "I2_fallbacks_total": 0,
+  "max_memory_tokens": 512,
+  "all_inference_GT_reads_zero": true,
+  "room_disjointness_claim": "not verified; existing grouping uses camera UUIDs"
+}

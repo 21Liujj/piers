@@ -6,7 +6,7 @@ import paramiko
 from common import VERSION,read_json,write_json
 
 HERE=Path(__file__).resolve().parent
-REMOTE_FILES=['common.py','model_worker.py','remote_agent.py','bootstrap_remote.py','gpu_guard.py']
+REMOTE_FILES=['common.py','model_worker.py','remote_agent.py','bootstrap_remote.py','gpu_guard.py','indoor_adapter.py']
 
 class GPUBridge:
     def __init__(self,home):

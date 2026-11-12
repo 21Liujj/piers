@@ -9,6 +9,12 @@
 results/I1_densepass/source_snapshot/** -text
 results/I1_densepass/source_snapshot.tar.gz -text
 
+# The indoor protocol fingerprints the actual experimental script bytes,
+# including their original line endings. Preserve those bytes in fresh clones.
+scripts/piers/indoor_matched_*.py -text whitespace=cr-at-eol,-blank-at-eof
+# Matplotlib SVGs are exported evidence, preserved verbatim like the PNGs.
+results/indoor_matched20261112/figures/*.svg -text -diff
+
 # Binary assets
 *.pt binary
 *.pth binary

@@ -1,0 +1,30 @@
+{
+  "result_file": "/root/autodl-tmp/piers-main/runs/INDOOR-MATCHED-DINO-20261112/INDOOR_MATCHED_RESULTS.json",
+  "qualitative_manifest_indices": [
+    0,
+    124,
+    248
+  ],
+  "selection": "fixed evenly spaced indices, independent of results",
+  "training_curve": "original logged rolling CE, not interpolation or fabricated estimates",
+  "classes": [
+    "ceiling",
+    "chair",
+    "door",
+    "floor",
+    "sofa",
+    "table",
+    "wall",
+    "window"
+  ],
+  "colors": [
+    "#91c8e4",
+    "#eb745b",
+    "#b79bd5",
+    "#b8cd82",
+    "#efb75a",
+    "#73c2b2",
+    "#c9c9c9",
+    "#6989c3"
+  ]
+}

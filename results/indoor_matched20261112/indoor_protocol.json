@@ -1,0 +1,101 @@
+{
+  "version": "indoor-matched-full-v1",
+  "classes": [
+    "ceiling",
+    "chair",
+    "door",
+    "floor",
+    "sofa",
+    "table",
+    "wall",
+    "window"
+  ],
+  "shared_checkpoint": "/root/autodl-tmp/piers-main/runs/INDOOR-FOLD1-20261109/train/indoor_lora_last.pth",
+  "checkpoint_sha256": "b3bfc7f54181e62dcababce9cc47709adbc655d9ae423b85e3d37e717749ac02",
+  "fit_images": 832,
+  "calibration_images": 104,
+  "heldout_images": 373,
+  "rare_class_ids": [
+    4,
+    7
+  ],
+  "rare_class_source": "fit split only",
+  "shared_8class_head": true,
+  "original": {
+    "memory": "dense",
+    "I3_budget": 0,
+    "I1": false,
+    "forwards": 18
+  },
+  "full": {
+    "memory": "i2",
+    "I3_budget": 2,
+    "I1": "GroundingDINO+SAM2 calibrated cooperation",
+    "forwards": 20
+  },
+  "geometry": {
+    "canvas": [
+      1024,
+      512
+    ],
+    "window": 512,
+    "stride": 64,
+    "passes": 2
+  },
+  "I3_candidate_starts": [
+    640,
+    704,
+    768,
+    832,
+    896
+  ],
+  "I1_gate": {
+    "pixel_text_confidence_threshold": 0.9,
+    "distinct_FoV_votes_required": 2,
+    "baseline_ignore_confidence": 0.85,
+    "teacher_high_conflict_protection": 0.8
+  },
+  "calibrator_fit": {
+    "steps": 1000,
+    "lr": 0.05,
+    "l2": 0.001,
+    "seed": 20261107,
+    "dtype": "float64",
+    "optimizer": "Adam full batch",
+    "max_samples_per_class_view": 256
+  },
+  "text": {
+    "classes": [
+      "ceiling",
+      "chair",
+      "door",
+      "floor",
+      "sofa",
+      "table",
+      "wall",
+      "window"
+    ],
+    "fovs": 4,
+    "window": 512,
+    "stride": 256,
+    "box_thr": 0.35,
+    "text_thr": 0.25,
+    "dtype": "bf16",
+    "feature_cache": false
+  },
+  "heldout_GT_for_parameter_selection": false,
+  "stage2_CLIP_checkpoint_used": false,
+  "limitations": [
+    "Single area5 heldout fold; fit/calib partition uses camera UUIDs, so room-disjointness is not established. Calibration remains in training areas only."
+  ],
+  "source_sha256": {
+    "indoor_matched_features.py": "fba8d2b1898724290e13a3be8a84e5da47e385751e26e0fdd74d783059c73620",
+    "indoor_matched_finish.py": "1e22e0e4de58b2a5508a0a7651aeb08a333fae562d260f0f84038aac8268b63e",
+    "indoor_matched_gate.py": "f362fbb39d7dde549ba589319c46a767b6edbfcf799a7ad6fded88615ac85597",
+    "indoor_matched_predictor.py": "29e0b90dc542e39234994d6753201fc8636468e8ccfbb322c908bfa0ec71588d",
+    "indoor_matched_soft.py": "59a74a3f6763898d9e4456dbcbf25693425c2740aef16d61460a141348264a76",
+    "indoor_matched_bidirectional.py": "38546737e0d10c0299f6398fb785b565ccbde5515a0a78f3dd35f3a33d2396f6",
+    "indoor_matched_semantic.py": "ab0e9c1fa6f8064f8954835fcdac18c7c7e23501e3710e178aa78ae15cd7955d",
+    "indoor_matched_run.py": "af9a2ddfd1f7d4f58e963fc097a9725047679325817fadc7b759d3e06b094d32"
+  }
+}
