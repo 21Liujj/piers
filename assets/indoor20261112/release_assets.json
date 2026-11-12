@@ -1,0 +1,29 @@
+{
+  "release": "v0.4-indoor-20261112",
+  "repository": "21Liujj/piers",
+  "assets": [
+    {
+      "name": "indoor_stage1_shared.pth",
+      "bytes": 186303773,
+      "sha256": "b3bfc7f54181e62dcababce9cc47709adbc655d9ae423b85e3d37e717749ac02",
+      "purpose": "Shared Stage1 checkpoint, rank4 LoRA and 8-class decoder",
+      "url": "https://github.com/21Liujj/piers/releases/download/v0.4-indoor-20261112/indoor_stage1_shared.pth"
+    },
+    {
+      "name": "indoor_experiment_evidence.zip",
+      "bytes": 22353133,
+      "sha256": "3935452ea79aa820f18e633c11d52bf8b864c8b94737cdc909263cd2c321d804",
+      "purpose": "373-image paired predictions, calibration evidence, source and audits",
+      "url": "https://github.com/21Liujj/piers/releases/download/v0.4-indoor-20261112/indoor_experiment_evidence.zip"
+    },
+    {
+      "name": "indoor_web_examples_20261112.zip",
+      "bytes": 3418398,
+      "sha256": "2f62a3e641ad066c61ac333cef5cc662181f66f21c4bb01abaafdcf328ef7eb4",
+      "purpose": "Three real web examples, nine result screenshots and one experiment-page screenshot",
+      "url": "https://github.com/21Liujj/piers/releases/download/v0.4-indoor-20261112/indoor_web_examples_20261112.zip"
+    }
+  ],
+  "scope": "Indoor supervised adaptation plus web integration; outdoor v0.3 evidence retained",
+  "dataset_pixels": "Original dataset is not bundled; only three fixed demonstration images are in the web archive"
+}

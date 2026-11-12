@@ -1,5 +1,7 @@
 # Outdoor reproduction — v0.3-paper-20261109
 
+Current main also contains the completed373-image indoor adaptation and adapted web integration. Use [REPRODUCE_INDOOR.md](REPRODUCE_INDOOR.md) and release `v0.4-indoor-20261112` for that work. This document describes the unchanged historical outdoor v0.3 protocol; checking out its tag omits the later indoor code.
+
 This is the active guide for the frozen complete-v3 outdoor results. It replaces the earlier run-directory-dependent instructions. A clone contains code, source calibrators, exact sample manifests and pixel-count ledgers. The three large inference weights are downloaded from the matching GitHub Release with SHA256 verification. Dataset images/labels must be obtained separately under their original terms; they are not included in Git.
 
 ## 1. Clone and environment
@@ -102,4 +104,4 @@ pytest tests/piers/test_full_model_contract.py tests/piers/test_open_vocab_compe
 
 Integer ledgers reconstruct all four main accuracy rows exactly, including per-class metrics and abstention misses. New inference has been checked in an isolated checkout against the existing frozen predictions as recorded in `results/paper20261109/release_validation.json`; refer to the listed sample counts rather than assuming every dataset was re-run during packaging. Source calibrator rebuilding and old model-training runs are not rerun by the commands above. The v0.2 trained checkpoints are historical and are not the checkpoint used in this frozen main table.
 
-Report DensePASS as development validation, retain v1/v2 failed or partial results, and disclose that target diagnostics informed v3 repairs. Target-domain fine-tuning/UDA, indoor adaptation and a complete-system speed advantage remain future work. This release archives the current evidence without claiming those unfinished goals.
+Report DensePASS as development validation, retain v1/v2 failed or partial results, and disclose that target diagnostics informed v3 repairs. At the outdoor v0.3 freeze, indoor adaptation was still pending; it is now separately completed in [the v0.4 indoor protocol](REPRODUCE_INDOOR.md). Outdoor target-domain fine-tuning/UDA and a complete-system speed advantage remain unestablished. The outdoor table and its limitations are unchanged.

@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "images": 373,
+  "arms": {
+    "original": {
+      "n_images": 373,
+      "forward_calls": 18,
+      "checkpoint_sha256": "b3bfc7f54181e62dcababce9cc47709adbc655d9ae423b85e3d37e717749ac02",
+      "lora_sha256": "7635c438e5d2d0136b0502c35605f1ba45112eaf611a4611cc102bb9669802be",
+      "max_attention_tokens": 8192,
+      "I2_fallbacks_total": 0,
+      "all_GT_reads_zero": true,
+      "all_weights_updated_false": true
+    },
+    "full_core": {
+      "n_images": 373,
+      "forward_calls": 20,
+      "checkpoint_sha256": "b3bfc7f54181e62dcababce9cc47709adbc655d9ae423b85e3d37e717749ac02",
+      "lora_sha256": "7635c438e5d2d0136b0502c35605f1ba45112eaf611a4611cc102bb9669802be",
+      "max_attention_tokens": 512,
+      "I2_fallbacks_total": 0,
+      "all_GT_reads_zero": true,
+      "all_weights_updated_false": true
+    }
+  },
+  "I1_actual_changed_pixels": 4283320,
+  "I1_eligible_pixels": 25843751,
+  "all_GT_support_equal": true,
+  "confusion_arrays_match_results": true,
+  "frozen_source_unchanged": true,
+  "CLIP_used": false,
+  "versions": {
+    "numpy": "2.2.6",
+    "torch": "2.8.0+cu128",
+    "torchvision": "0.23.0+cu128",
+    "transformers": "4.57.6",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2"
+  },
+  "stage1_training_log_records": 240,
+  "stage1_training_loss_first": 2.2287,
+  "stage1_training_loss_last": 0.3426
+}

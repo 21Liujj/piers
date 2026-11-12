@@ -1,0 +1,30 @@
+{
+  "python": "3.12.16 | packaged by Anaconda, Inc. | (main, Oct 26 2026, 20:21:38) [GCC 14.3.0]",
+  "platform": "Linux-5.15.0-78-generic-x86_64-with-glibc2.35",
+  "inference_source_unchanged": true,
+  "matched_source_sha256": {
+    "indoor_matched_features.py": "fba8d2b1898724290e13a3be8a84e5da47e385751e26e0fdd74d783059c73620",
+    "indoor_matched_finish.py": "1e22e0e4de58b2a5508a0a7651aeb08a333fae562d260f0f84038aac8268b63e",
+    "indoor_matched_gate.py": "f362fbb39d7dde549ba589319c46a767b6edbfcf799a7ad6fded88615ac85597",
+    "indoor_matched_predictor.py": "29e0b90dc542e39234994d6753201fc8636468e8ccfbb322c908bfa0ec71588d",
+    "indoor_matched_soft.py": "59a74a3f6763898d9e4456dbcbf25693425c2740aef16d61460a141348264a76",
+    "indoor_matched_bidirectional.py": "38546737e0d10c0299f6398fb785b565ccbde5515a0a78f3dd35f3a33d2396f6",
+    "indoor_matched_semantic.py": "ab0e9c1fa6f8064f8954835fcdac18c7c7e23501e3710e178aa78ae15cd7955d",
+    "indoor_matched_run.py": "af9a2ddfd1f7d4f58e963fc097a9725047679325817fadc7b759d3e06b094d32"
+  },
+  "upstream_source_sha256": {
+    "third_party/effective_omnisam/model/model.py": "bbcd5a6a34a791d7190a4b38ecf831c84266d7e553590a85b21861d804a18525",
+    "third_party/effective_omnisam/model/memory_bank.py": "91ae7477d34edcd7f3e5f12c75d8ed843266fa594231a2e3bca93ac5d51708f7",
+    "third_party/effective_omnisam/model/modules/sparse_memory_retriever.py": "ad049c7fc40d9a9466988e3441e86b32e3bee8424665b8f0118cd1ef8b56c624",
+    "third_party/effective_omnisam/utils/tools.py": "33592c602ecf18cea2c6003b06bdfd437a4493999991a6337c8a1ccd81b4a2af",
+    "src/piers_ljj/workers/entry.py": "820451fa52b3f8bd5db0c247d6b82ddd8d741ce29bcb8e07e341533fb443ff0b",
+    "src/piers_ljj/text/grounded_adapter.py": "b33ba0e5df3bd787cd0240178deb82a839386f15bfbde8aa7b55088f1e32a8d2"
+  },
+  "stage2_CLIP_checkpoint_used": false,
+  "memory_bank_frozen_equivalence": {
+    "frozen_raw_sha256": "25fd4c660bc0cdb406e4c529f98ff7a099b07ea5799a101883bbe36badf527fb",
+    "server_raw_sha256": "91ae7477d34edcd7f3e5f12c75d8ed843266fa594231a2e3bca93ac5d51708f7",
+    "normalized_LF_sha256": "25fd4c660bc0cdb406e4c529f98ff7a099b07ea5799a101883bbe36badf527fb",
+    "identical_after_line_ending_normalization": true
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "command": "python scripts/paper/reproduce.py verify-ledgers",
+  "verified_tasks": [
+    "densepass13",
+    "wildpass8",
+    "synpass22",
+    "synpass13"
+  ],
+  "tasks": 4,
+  "frozen_table_sha256": "d0ffe6f9043c2f44d35362d6c39dca9a5738162089649b1840c792b11f597f8a",
+  "verification": "Recomputed aggregate metrics from integer histogram ledgers and checked hashes, image IDs, dimensions and all metrics to absolute tolerance1e-9. No outdoor result files were modified."
+}

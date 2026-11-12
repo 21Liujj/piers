@@ -1,6 +1,6 @@
 # PIERS 本机全景分割工作台
 
-本机 FastAPI 网页通过 SSH 调用服务器 GPU。街景运行发布版完整 I1/I2/I3＋开放词汇协同模型，默认禁用尚未全量验收的候选特征缓存。室内目前提供通用 DINO/SAM2 文本分割，明确标注未做室内 LoRA 适配。
+本机 FastAPI 网页通过 SSH 调用服务器 GPU。街景运行发布版完整 I1/I2/I3＋开放词汇协同模型，默认禁用尚未全量验收的候选特征缓存。室内默认8类及其子集运行已完成的室内适配 I1/I2/I3，沿用 Grounding DINO＋SAM2，不使用CLIP。超出SPAN8的室内文本查询走单独标注的通用文本路线。
 
 ## 启动
 
@@ -22,6 +22,8 @@ python -m venv .venv-web
 
 可选环境变量：`PIERS_SSH_HOST`、`PIERS_SSH_PORT`、`PIERS_SSH_USER`、`PIERS_SSH_KEY`、`PIERS_REMOTE_REPO`、`PIERS_REMOTE_PYTHON`、`PIERS_REMOTE_WEIGHTS`、`PIERS_REMOTE_RUNTIME`、`PIERS_AGENT_PORT`。密码环境变量 `PIERS_SSH_PASSWORD` 仅用于受控启动会话，不写 `.env` 或仓库。
 
+室内适配还需要服务器上包含本次新脚本的 checkout，默认 `/root/autodl-tmp/piers-main`，与室外冻结 checkout 分开。先按根目录 [REPRODUCE_INDOOR.md](../../REPRODUCE_INDOOR.md) 下载并验证共享权重、安装运行协议与校准器。可通过服务器 GPU agent 的 `PIERS_INDOOR_REPO` 指定室内 checkout；在启动 agent 前设置。仅修改本机同名环境变量不会自动传入远端 agent。服务不会自动训练，也不需要上传图像的GT。
+
 ## 使用与输出
 
 - 上传 PNG/JPEG/WebP（30MB以内，3600万像素以内），选择室外街景或室内。
@@ -32,7 +34,7 @@ python -m venv .venv-web
 - 跨 FoV 关联要求共同可见区域的重叠证据，处理水平环绕；同类相邻实例不会仅因相邻而合并。无重叠碎片可能仍保留为多个实例。此功能未测实例AP，计数是模型估计。
 - 普通上传图无 GT，不显示伪造的 mIoU。可上传与原图同尺寸的单通道PNG计算单图指标，类别ID须对应当前图例；单目标也支持二值标注。GT只在本机评分，不发送给模型。
 
-街景几何使用冻结2048×400协议，输出映射回原图。室内通用文本路线使用2048×1024。不同几何/类别表的交互结果不能直接套用论文指标。“实验对比”展示发布版四个口径的真实历史精度和小样本效率，含性能限制，不把本次上传结果混入主表。
+街景几何使用冻结2048×400协议，室内适配使用正式1024×512协议，输出映射回原图；室内通用文本路线使用2048×1024。不同几何/类别表的交互结果不能直接套用论文指标。“实验对比”展示室外四个口径和室内373张的真实历史精度，效率仍为单独记录的室外小样本测量，不把本次上传结果混入主表。三张固定室内网页案例已与正式完整模型预测逐像素核对一致，见 [验收记录](../../docs/piers/INDOOR_WEB_RELEASE_20261112.md)。
 
 ## GPU 协调与停止
 

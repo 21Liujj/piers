@@ -9,7 +9,7 @@ from pathlib import Path
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 
-VERSION = 'panorama-workbench-20261111-v2'
+VERSION = 'panorama-workbench-20261112-indoor-v3'
 SOURCE_CLASSES = ['road','sidewalk','building','wall','fence','pole','traffic light',
                   'traffic sign','vegetation','terrain','sky','person','car']
 STREET_CLASSES = SOURCE_CLASSES + ['curb','crosswalk','truck','bus','bicycle','motorcycle','train','rider']

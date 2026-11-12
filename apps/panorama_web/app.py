@@ -157,7 +157,7 @@ def create_app(home=None,bridge_override=None):
     def capabilities():
         return {'version':VERSION,'deployment':'local-ui-ssh-gpu','scenes':[
             {'id':'street','name':'室外街景','model':'完整模型 · I1 / I2 / I3','adapted':True,'classes':STREET_CLASSES},
-            {'id':'indoor','name':'室内场景','model':'通用文本分割 · 未经室内微调','adapted':False,'classes':INDOOR_CLASSES}],
+            {'id':'indoor','name':'室内场景','model':'室内适配完整模型 · I1 / I2 / I3','adapted':True,'classes':INDOOR_CLASSES}],
             'semantic':True,'text':True,'instances':True,'labels_zh':ZH,'max_upload_mb':30,
             'notes':['无文本时使用场景默认类别表','实例通过跨视窗关联生成，未声称实例AP','精度指标需要标准标签']}
     @app.get('/api/connection')
@@ -259,18 +259,34 @@ def create_app(home=None,bridge_override=None):
     @app.get('/api/experiments')
     def experiments():
         root=REPO/'results/paper20261109';table=read_json(root/'complete_table.json')
+        rows=list(table['rows'])
+        indoor_path=REPO/'results/indoor_matched20261112/indoor_results.json'
+        if indoor_path.exists():
+            indoor=read_json(indoor_path)
+            def metrics(value):
+                return {'mIoU_pct':value['mIoU_pct'],'mAcc_pct':value['mAcc_pct'],
+                    'pixel_accuracy_pct':value['PixelAcc_pct'],'FWIoU_pct':value['FWIoU_pct'],
+                    'mDice_pct':value['mDice_pct'],
+                    'per_class_IoU_pct':[value['per_class_iou_pct'][c] for c in INDOOR_CLASSES]}
+            rows.append({'evaluation_space':'Stanford2D3D SPAN8 室内适配','images':indoor['n_images'],
+                'classes':INDOOR_CLASSES,'original':metrics(indoor['arms']['original']),
+                'full_final_v3':metrics(indoor['arms']['full']),
+                'delta_mIoU_pp_95CI':indoor['paired_image_bootstrap_delta95CI_pp'],
+                'training_condition':'Same shared indoor Stage1 checkpoint and LoRA; full I1 calibrated on training-area calib104',
+                'CLIP_used':False})
         efficiency=[]
         for name in ('native_efficiency.json','densepass_efficiency.json'):
             data=read_json(root/name)
             efficiency.extend({**r,'source':name} for r in data['rows'])
-        return {'release':table['release'],'created':table['created_at_CST'],'rows':table['rows'],
+        return {'release':table['release']+'+indoor-matched-20261112','created':table['created_at_CST'],'rows':rows,
                 'limitations':table['limitations'],'efficiency':efficiency,
                 'source_commit':'82d20b5b4ba24c42666dd8fee548d5c8618505c8',
-                'notes':['以下是冻结街景模型的历史实验，上传任务不会改变这些指标',
+                'notes':['室外使用冻结源域权重；室内两侧共享适配后的checkpoint和LoRA，上传任务不会改变这些指标',
                          '效率为RTX6000D、3张固定图片各2次测量，排除首次加载；完整系统当前更慢',
-                         '室内适配与全系统加速仍在进行中']}
+                         '室内适配已完成373张评测，mIoU37.64%到46.56%；当前LoRA未声称全局最优']}
     @app.get('/api/experiments/download')
-    def download_experiments():return FileResponse(REPO/'results/paper20261109/complete_table.json',filename='panorama_frozen_experiments.json')
+    def download_experiments():
+        return JSONResponse(experiments(),headers={'Content-Disposition':'attachment; filename="panorama_experiments_20261112.json"'})
     app.mount('/',StaticFiles(directory=str(HERE/'static'),html=True),name='workbench')
     return app
 

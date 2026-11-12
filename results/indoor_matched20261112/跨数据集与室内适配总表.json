@@ -1,0 +1,50 @@
+{
+  "rows": [
+    {
+      "dataset": "DensePASS 映射13类",
+      "role": "outdoor cross-dataset transfer",
+      "images": 100,
+      "classes": 13,
+      "original_mIoU_pct": 60.29606669652925,
+      "full_mIoU_pct": 60.855488498434966,
+      "delta_pp": 0.5594218019057138
+    },
+    {
+      "dataset": "WildPASS 原生8类",
+      "role": "outdoor cross-dataset transfer",
+      "images": 500,
+      "classes": 8,
+      "original_mIoU_pct": 37.55717076428302,
+      "full_mIoU_pct": 57.5669985392377,
+      "delta_pp": 20.00982777495468
+    },
+    {
+      "dataset": "SynPASS 原生22类",
+      "role": "outdoor cross-dataset transfer",
+      "images": 1690,
+      "classes": 22,
+      "original_mIoU_pct": 25.07231461033641,
+      "full_mIoU_pct": 25.616315103643046,
+      "delta_pp": 0.5440004933066369
+    },
+    {
+      "dataset": "SynPASS 映射13类",
+      "role": "outdoor cross-dataset transfer",
+      "images": 1690,
+      "classes": 13,
+      "original_mIoU_pct": 43.58107078270276,
+      "full_mIoU_pct": 43.86649336923204,
+      "delta_pp": 0.285422586529279
+    },
+    {
+      "dataset": "Stanford 2D-3D-S SPAN8",
+      "role": "indoor supervised cross-scene adaptation",
+      "images": 373,
+      "classes": 8,
+      "original_mIoU_pct": 37.642357820659846,
+      "full_mIoU_pct": 46.55908459878398,
+      "delta_pp": 8.916726778124136
+    }
+  ],
+  "note": "Outdoor frozen source weights and indoor shared adapted weights are different training settings. Same checkpoint and LoRA hold within every original/full pair; no cross-dataset mIoU averaging."
+}

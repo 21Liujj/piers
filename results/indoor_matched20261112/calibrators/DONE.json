@@ -1,0 +1,7 @@
+{
+  "calibration_images": 104,
+  "samples": 630766,
+  "text_only_sha256": "aecd9fc9154064529a4fefe5a250640417adb70d1c1af6b43dd53c75c96db16d",
+  "teacher_only_sha256": "745559a186040b893bfec796f69035f904d2e8e173338da9c2b49f364c5237a7",
+  "heldout_GT_reads": 0
+}

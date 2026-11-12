@@ -127,6 +127,28 @@ class Agent:
             time.sleep(2)
         self.check_cancel(jid);queue_s=time.time()-self.status(jid)['created'];started=time.perf_counter()
         self.set(jid,status='running',stage='loading',progress=.05,message='准备模型；首次运行需要加载权重',started=time.time())
+        from indoor_adapter import supported,run_adapted
+        if scene=='indoor' and supported(classes):
+            # Leave published street inference intact; use the verified indoor
+            # implementation in independent backend processes.
+            for service in list(self.services.values()):service.close()
+            self.services.clear()
+            with Image.open(folder/'input.png') as source:image=source.convert('RGB').copy()
+            meta,masks,guided,prediction,audit=run_adapted(folder,image,classes,jid,
+                lambda **values:self.set(jid,**values),lambda:self.check_cancel(jid))
+            mapping={q['query_id']:i for i,q in enumerate(meta['queries'])}
+            self.set(jid,stage='rendering',progress=.85,message='生成室内语义与实例分割结果')
+            audit['timing']['queue_seconds']=queue_s
+            result=build_artifacts(folder/'artifacts',image,classes,meta,masks,mapping,guided,prediction,data['mode'],audit)
+            audit['timing']['server_processing_seconds']=time.perf_counter()-started
+            write_json(folder/'artifacts/result.json',result)
+            import zipfile
+            with zipfile.ZipFile(folder/'artifacts/results.zip','w',compression=zipfile.ZIP_DEFLATED) as archive:
+                for name in result['files']:archive.write(folder/'artifacts'/name,name)
+            self.check_cancel(jid)
+            self.set(jid,status='succeeded',stage='complete',progress=1,message='分割完成',finished=time.time(),
+                     instance_count=result['instance_count'],timing=audit['timing'])
+            return
         load_start=time.perf_counter();text=self.model('text')
         semantic=self.model('semantic') if scene=='street' else None
         load_s=time.perf_counter()-load_start
@@ -210,7 +232,8 @@ class Agent:
                 'active_stage':stage,'other_gpu_processes':len(external),
                 'queued':self.q.qsize(),'loading':self.loading,'models':list(self.services),
                 'idle_release_seconds':self.args.idle_ttl,'gpu_lock':self.args.gpu_lock,
-                'indoor_adapted':False,'repo':str(self.repo),'last_error':self.last_error,
+                'indoor_adapted':Path(os.environ.get('PIERS_INDOOR_REPO','/root/autodl-tmp/piers-main'),'runs/INDOOR-MATCHED-DINO-20261112/protocol.json').is_file(),
+                'repo':str(self.repo),'last_error':self.last_error,
                 'uptime_seconds':time.time()-self.started}
 
 def handler_for(agent):

@@ -1,0 +1,517 @@
+{
+  "status": "passed",
+  "real_web_jobs": 3,
+  "per_image_screenshots": 9,
+  "experiments_page_screenshot": true,
+  "pixel_equivalence_all_three": true,
+  "website": "http://127.0.0.1:8010",
+  "samples": [
+    {
+      "name": "Stanford360_0000896878bd47b2a624ad180aac062e",
+      "dataset": "Stanford360",
+      "scene": "indoor",
+      "manifest_index": 0,
+      "manifest_id": "camera_0000896878bd47b2a624ad180aac062e_conferenceRoom_3_frame_equirectangular_domain_rgb",
+      "source": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_0000896878bd47b2a624ad180aac062e_conferenceRoom_3_frame_equirectangular_domain_rgb.png",
+      "GT_source": "/root/autodl-tmp/data_extra/SPAN8_PREP/area5/labels/camera_0000896878bd47b2a624ad180aac062e_conferenceRoom_3_frame_equirectangular_domain_rgb.png",
+      "matched_full_prediction": "/root/autodl-tmp/piers-main/runs/INDOOR-MATCHED-DINO-20261112/full/heldout/camera_0000896878bd47b2a624ad180aac062e_conferenceRoom_3_frame_equirectangular_domain_rgb.npy",
+      "folder": "C:\\Users\\31542\\Desktop\\研究生毕业论文\\网页分割实验与截图_20261111\\Stanford360\\Stanford360_0000896878bd47b2a624ad180aac062e",
+      "image": "C:\\Users\\31542\\Desktop\\研究生毕业论文\\网页分割实验与截图_20261111\\Stanford360\\Stanford360_0000896878bd47b2a624ad180aac062e\\Stanford360_0000896878bd47b2a624ad180aac062e.png",
+      "GT_original": "C:\\Users\\31542\\Desktop\\研究生毕业论文\\网页分割实验与截图_20261111\\Stanford360\\Stanford360_0000896878bd47b2a624ad180aac062e\\GT_original.png",
+      "job_id": "63451f8b4f454f72949ef27c",
+      "model": "full-indoor-matched-I1-I2-I3",
+      "accuracy": {
+        "scope": "current_image",
+        "encoding": "class_ids",
+        "mIoU_pct": 46.72043107890259,
+        "mDice_pct": 55.84519354737916,
+        "mAcc_pct": 56.007077696236486,
+        "pixel_accuracy_pct": 82.47066571396596,
+        "FWIoU_pct": 73.05425893636186,
+        "per_class_IoU_pct": [
+          85.19243234729298,
+          58.51034734251071,
+          0.5188885117113622,
+          95.92959667292294,
+          null,
+          22.875536480686694,
+          53.29563832545277,
+          10.720577871740662
+        ],
+        "classes": [
+          "ceiling",
+          "chair",
+          "door",
+          "floor",
+          "sofa",
+          "table",
+          "wall",
+          "window"
+        ],
+        "confusion_matrix": [
+          [
+            140628,
+            0,
+            40,
+            0,
+            0,
+            0,
+            23856,
+            0,
+            0
+          ],
+          [
+            0,
+            6418,
+            0,
+            832,
+            0,
+            272,
+            979,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            107,
+            233,
+            0,
+            0,
+            19182,
+            0,
+            0
+          ],
+          [
+            0,
+            2106,
+            7,
+            142089,
+            0,
+            22,
+            2228,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            203,
+            108,
+            462,
+            0,
+            6396,
+            20497,
+            0,
+            0
+          ],
+          [
+            35,
+            104,
+            9,
+            139,
+            0,
+            0,
+            86340,
+            0,
+            0
+          ],
+          [
+            512,
+            55,
+            935,
+            0,
+            0,
+            0,
+            8633,
+            1217,
+            0
+          ]
+        ],
+        "valid_pixels": 464644,
+        "note": "单图指标；数据集mIoU须汇总混淆矩阵后计算"
+      },
+      "elapsed_s": 27.363292,
+      "image_sha256": "0ec0348a50cae6cd250f82fe1e1792d3133623797001886651c5df4e79031c6c",
+      "GT_sha256": "bc692b2ace3a10f52cf3ee7ab4c67c6a59409d10461a4a7e5a4a37b04f11f88b",
+      "prediction_sha256": "7a9fc11e15f1c81e4cb7bff38153c17c6fbdfa0bfebd1d0d079b6a3039cde7d1",
+      "web_formal_pixel_agreement": 1.0,
+      "checkpoint_sha256": "b3bfc7f54181e62dcababce9cc47709adbc655d9ae423b85e3d37e717749ac02",
+      "lora_sha256": "7635c438e5d2d0136b0502c35605f1ba45112eaf611a4611cc102bb9669802be",
+      "instance_count": 20,
+      "exported": true,
+      "screenshots": {
+        "网页_语义分割_全页.jpg": {
+          "sha256": "4a213585b8a41757f98d9a2ad624700caba8e0a159bb9e5af34c18b3af5cb7e4",
+          "size": [
+            1248,
+            1208
+          ]
+        },
+        "网页_实例分割_全页.jpg": {
+          "sha256": "0062a34e36fc470c6e2f7476a2f660b85f9558141d0ff041af3c039f28fbd424",
+          "size": [
+            1248,
+            1208
+          ]
+        },
+        "网页_原图对照_全页.jpg": {
+          "sha256": "8918d05b0cd922b91606e23e4e6e0216b6d73777c38fc77ae65121c4752b34d1",
+          "size": [
+            1248,
+            1208
+          ]
+        }
+      }
+    },
+    {
+      "name": "Stanford360_5aa9284671824e3a88b67c7fd4ab33e1",
+      "dataset": "Stanford360",
+      "scene": "indoor",
+      "manifest_index": 124,
+      "manifest_id": "camera_5aa9284671824e3a88b67c7fd4ab33e1_office_40_frame_equirectangular_domain_rgb",
+      "source": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_5aa9284671824e3a88b67c7fd4ab33e1_office_40_frame_equirectangular_domain_rgb.png",
+      "GT_source": "/root/autodl-tmp/data_extra/SPAN8_PREP/area5/labels/camera_5aa9284671824e3a88b67c7fd4ab33e1_office_40_frame_equirectangular_domain_rgb.png",
+      "matched_full_prediction": "/root/autodl-tmp/piers-main/runs/INDOOR-MATCHED-DINO-20261112/full/heldout/camera_5aa9284671824e3a88b67c7fd4ab33e1_office_40_frame_equirectangular_domain_rgb.npy",
+      "folder": "C:\\Users\\31542\\Desktop\\研究生毕业论文\\网页分割实验与截图_20261111\\Stanford360\\Stanford360_5aa9284671824e3a88b67c7fd4ab33e1",
+      "image": "C:\\Users\\31542\\Desktop\\研究生毕业论文\\网页分割实验与截图_20261111\\Stanford360\\Stanford360_5aa9284671824e3a88b67c7fd4ab33e1\\Stanford360_5aa9284671824e3a88b67c7fd4ab33e1.png",
+      "GT_original": "C:\\Users\\31542\\Desktop\\研究生毕业论文\\网页分割实验与截图_20261111\\Stanford360\\Stanford360_5aa9284671824e3a88b67c7fd4ab33e1\\GT_original.png",
+      "job_id": "c2211c8fdb5841a5bb2c493a",
+      "model": "full-indoor-matched-I1-I2-I3",
+      "accuracy": {
+        "scope": "current_image",
+        "encoding": "class_ids",
+        "mIoU_pct": 48.01413203954345,
+        "mDice_pct": 59.67644744874139,
+        "mAcc_pct": 58.064928956854445,
+        "pixel_accuracy_pct": 77.31278239713392,
+        "FWIoU_pct": 62.114777059816156,
+        "per_class_IoU_pct": [
+          73.15970780093328,
+          21.742957746478872,
+          2.5891396794242723,
+          86.75489894326459,
+          null,
+          41.796875,
+          66.31097066925943,
+          43.744374437443746
+        ],
+        "classes": [
+          "ceiling",
+          "chair",
+          "door",
+          "floor",
+          "sofa",
+          "table",
+          "wall",
+          "window"
+        ],
+        "confusion_matrix": [
+          [
+            29945,
+            0,
+            46,
+            0,
+            0,
+            0,
+            668,
+            27,
+            0
+          ],
+          [
+            0,
+            247,
+            30,
+            405,
+            0,
+            7,
+            199,
+            50,
+            0
+          ],
+          [
+            20,
+            0,
+            1583,
+            707,
+            0,
+            0,
+            58257,
+            133,
+            0
+          ],
+          [
+            0,
+            0,
+            47,
+            93016,
+            0,
+            0,
+            12694,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            81,
+            0,
+            146,
+            0,
+            214,
+            62,
+            0,
+            0
+          ],
+          [
+            10225,
+            117,
+            317,
+            202,
+            0,
+            2,
+            163682,
+            28,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            387,
+            486,
+            0
+          ]
+        ],
+        "valid_pixels": 374030,
+        "note": "单图指标；数据集mIoU须汇总混淆矩阵后计算"
+      },
+      "elapsed_s": 26.21712170000137,
+      "image_sha256": "3f504437f387cba0df1a293b15a79972824f1f9fbc9ca5bf8aff4071ef6f0153",
+      "GT_sha256": "1ff54acfcfb856e4f0a714114788c982a8d3eeedfde86471f0503b481280fb40",
+      "prediction_sha256": "d031f40ef0d19db4eb7329cd63ff1f380d035a1b0f033510f44509fdbe6904c0",
+      "web_formal_pixel_agreement": 1.0,
+      "checkpoint_sha256": "b3bfc7f54181e62dcababce9cc47709adbc655d9ae423b85e3d37e717749ac02",
+      "lora_sha256": "7635c438e5d2d0136b0502c35605f1ba45112eaf611a4611cc102bb9669802be",
+      "instance_count": 7,
+      "exported": true,
+      "screenshots": {
+        "网页_语义分割_全页.jpg": {
+          "sha256": "8604e39e13808f6aa2e27edca1772b5a23913469647bb1d0a5966fb7666e1770",
+          "size": [
+            1248,
+            1208
+          ]
+        },
+        "网页_实例分割_全页.jpg": {
+          "sha256": "c0b004557a931d81ec177e69514ae996c49d0917c444b10407122de99281f40f",
+          "size": [
+            1248,
+            1208
+          ]
+        },
+        "网页_原图对照_全页.jpg": {
+          "sha256": "0a83ed3960fe72adbca72bfc4dfca888ea0924e6a2db36de5caeef0f9b49e808",
+          "size": [
+            1248,
+            1208
+          ]
+        }
+      }
+    },
+    {
+      "name": "Stanford360_a9ae18b52af342fa85a3ae98c5322590",
+      "dataset": "Stanford360",
+      "scene": "indoor",
+      "manifest_index": 248,
+      "manifest_id": "camera_a9ae18b52af342fa85a3ae98c5322590_conferenceRoom_1_frame_equirectangular_domain_rgb",
+      "source": "/root/autodl-tmp/data_extra/Stanford2d3d_Seg/images/camera_a9ae18b52af342fa85a3ae98c5322590_conferenceRoom_1_frame_equirectangular_domain_rgb.png",
+      "GT_source": "/root/autodl-tmp/data_extra/SPAN8_PREP/area5/labels/camera_a9ae18b52af342fa85a3ae98c5322590_conferenceRoom_1_frame_equirectangular_domain_rgb.png",
+      "matched_full_prediction": "/root/autodl-tmp/piers-main/runs/INDOOR-MATCHED-DINO-20261112/full/heldout/camera_a9ae18b52af342fa85a3ae98c5322590_conferenceRoom_1_frame_equirectangular_domain_rgb.npy",
+      "folder": "C:\\Users\\31542\\Desktop\\研究生毕业论文\\网页分割实验与截图_20261111\\Stanford360\\Stanford360_a9ae18b52af342fa85a3ae98c5322590",
+      "image": "C:\\Users\\31542\\Desktop\\研究生毕业论文\\网页分割实验与截图_20261111\\Stanford360\\Stanford360_a9ae18b52af342fa85a3ae98c5322590\\Stanford360_a9ae18b52af342fa85a3ae98c5322590.png",
+      "GT_original": "C:\\Users\\31542\\Desktop\\研究生毕业论文\\网页分割实验与截图_20261111\\Stanford360\\Stanford360_a9ae18b52af342fa85a3ae98c5322590\\GT_original.png",
+      "job_id": "6e59eb54944b437fa67ed832",
+      "model": "full-indoor-matched-I1-I2-I3",
+      "accuracy": {
+        "scope": "current_image",
+        "encoding": "class_ids",
+        "mIoU_pct": 40.33152320717339,
+        "mDice_pct": 49.378150816867894,
+        "mAcc_pct": 52.29301999751652,
+        "pixel_accuracy_pct": 68.90840248126963,
+        "FWIoU_pct": 55.8608059849704,
+        "per_class_IoU_pct": [
+          83.50089234649228,
+          34.7202632816173,
+          1.3679972760229935,
+          90.86889838333568,
+          null,
+          12.454028752925444,
+          51.03993417766154,
+          8.368648232158442
+        ],
+        "classes": [
+          "ceiling",
+          "chair",
+          "door",
+          "floor",
+          "sofa",
+          "table",
+          "wall",
+          "window"
+        ],
+        "confusion_matrix": [
+          [
+            121179,
+            0,
+            28,
+            0,
+            0,
+            0,
+            6778,
+            0,
+            0
+          ],
+          [
+            0,
+            4431,
+            125,
+            6560,
+            0,
+            65,
+            150,
+            0,
+            0
+          ],
+          [
+            0,
+            25,
+            683,
+            72,
+            0,
+            0,
+            3280,
+            0,
+            0
+          ],
+          [
+            0,
+            486,
+            44,
+            116125,
+            0,
+            921,
+            616,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            176,
+            1016,
+            242,
+            0,
+            2235,
+            13291,
+            0,
+            0
+          ],
+          [
+            25,
+            744,
+            459,
+            2728,
+            0,
+            0,
+            86847,
+            0,
+            0
+          ],
+          [
+            17113,
+            0,
+            44195,
+            0,
+            0,
+            0,
+            55237,
+            10644,
+            0
+          ]
+        ],
+        "valid_pixels": 496520,
+        "note": "单图指标；数据集mIoU须汇总混淆矩阵后计算"
+      },
+      "elapsed_s": 28.6943693000012,
+      "image_sha256": "134fc7dc83311a6f829dad952e97bde9abdee1413fc36ddbae319eb191733f2f",
+      "GT_sha256": "7ab9ade03e2744e8bd8f562f9265619cfc6c0981339a5006ee7c11d81be5d839",
+      "prediction_sha256": "78a9d181026d70155f4dcac4eb1d54a812e25b452cdb356a3ac0a34720aa245f",
+      "web_formal_pixel_agreement": 1.0,
+      "checkpoint_sha256": "b3bfc7f54181e62dcababce9cc47709adbc655d9ae423b85e3d37e717749ac02",
+      "lora_sha256": "7635c438e5d2d0136b0502c35605f1ba45112eaf611a4611cc102bb9669802be",
+      "instance_count": 13,
+      "exported": true,
+      "screenshots": {
+        "网页_语义分割_全页.jpg": {
+          "sha256": "eeac6a7fb678269b53f3a8b80b3de29d69fedea4d1edf067379101c6ed5da808",
+          "size": [
+            1248,
+            1208
+          ]
+        },
+        "网页_实例分割_全页.jpg": {
+          "sha256": "0b4815e735bcdd591a358a6a460a11fddd8e29626ae97a639cb55221fe52dfd5",
+          "size": [
+            1248,
+            1208
+          ]
+        },
+        "网页_原图对照_全页.jpg": {
+          "sha256": "0ea0d0c14585ba53c6b8ff5f12aa83a2400a67fddf8bfc1bd09aaec58bdf292d",
+          "size": [
+            1248,
+            1208
+          ]
+        }
+      }
+    }
+  ],
+  "CPU_contract_tests_passed": 18,
+  "CLIP_used": false,
+  "destination": "C:\\Users\\31542\\Desktop\\研究生毕业论文\\网页分割实验与截图_20261111"
+}
