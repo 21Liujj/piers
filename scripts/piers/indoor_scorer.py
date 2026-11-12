@@ -13,12 +13,23 @@ IGNORE = 255
 
 
 def confusion(pred: np.ndarray, gt: np.ndarray, num_classes=NUM_CLASSES):
-    """Return the confusion matrix [num_classes, num_classes+1] (last col = ignore)."""
+    """Return the confusion matrix [num_classes, num_classes+1].
+
+    Column `num_classes` counts "predicted outside the SPAN8 label set" (255).
+    Those pixels are wrong for their GT class (they become false negatives)
+    but must not create false positives on any other class.  This is the
+    standard ignore-prediction protocol and it is what makes the frozen
+    street head's structurally-unreachable classes visible as zero recall
+    instead of being silently absorbed.
+    """
     C = num_classes
     cm = np.zeros((C, C + 1), dtype=np.int64)
     valid = (gt != IGNORE) & (gt >= 0) & (gt < C)
     if valid.any():
-        idx = gt[valid].astype(np.int64) * (C + 1) + pred[valid].astype(np.int64)
+        g = gt[valid].astype(np.int64)
+        p = pred[valid].astype(np.int64)
+        pred_ok = (p >= 0) & (p < C)
+        idx = g * (C + 1) + np.where(pred_ok, p, C)
         cm += np.bincount(idx, minlength=C * (C + 1)).reshape(C, C + 1)
     return cm
 

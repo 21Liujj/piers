@@ -60,10 +60,12 @@ def i3_candidate_starts(width: int = INDOOR_W, win: int = INDOOR_WIN,
     """Candidate extra cross-seam window starts, centred on the ERP seam (x=W).
 
     The outdoor variant uses [1664,1728,1792,1856,1920] on a 4096-wide tensor.
-    For indoor we mirror that layout around the seam of the native canvas.
+    For indoor we mirror that layout around the seam of the native canvas:
+    the seam sits at x=1024 == x=0 (the canvas wraps), so the candidate starts
+    are taken modulo `width` and the last one wraps back to 0.
     """
     base = width - win // 2
-    return [int(base + (i - (n - 1) / 2.0) * (win / 4.0)) for i in range(n)]
+    return [int((base + (i - (n - 1) / 2.0) * (win / 4.0)) % width) for i in range(n)]
 
 
 def i3_base_coverage(width: int = INDOOR_W, win: int = INDOOR_WIN,

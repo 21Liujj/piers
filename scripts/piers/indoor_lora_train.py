@@ -31,7 +31,11 @@ import torch.nn.functional as F
 
 REPO = Path("/root/autodl-tmp/piers-main")
 EFF = REPO / "third_party" / "effective_omnisam"
+# The vendored SAM2 package lives one level deeper than the upstream comment
+# suggests: effective_omnisam/sam/sam/build_sam.py, with the hydra configs
+# under effective_omnisam/sam/sam/configs/sam2.1/.
 sys.path.insert(0, str(EFF))
+sys.path.insert(0, str(EFF / "sam"))
 sys.path.insert(0, str(REPO / "scripts" / "piers"))
 
 from indoor_geometry import INDOOR_W, INDOOR_H, INDOOR_WIN, INDOOR_STRIDE, semantic_starts  # noqa: E402
@@ -65,22 +69,43 @@ def build_model(num_classes=NUM_CLASSES, device="cuda", ckpt=CKPT):
     from model.model import OmniSAM_adapt
     from utils.build import load_checkpoint
 
-    sam_vendor = EFF / "sam"
+    sam_vendor = EFF / "sam" / "sam"
     model_cfg = "configs/sam2.1/sam2.1_hiera_s.yaml"
     sam2_ckpt = sam_vendor / "checkpoints" / "sam2.1_hiera_small.pt"
     if not sam2_ckpt.is_file():
-        raise FileNotFoundError(f"SAM2 backbone weight not found: {sam2_ckpt}")
+        # fall back to the weights that ship outside the vendored package
+        alt = Path("/root/autodl-tmp/weights/sam2.1_hiera_small.pt")
+        if alt.is_file():
+            sam2_ckpt = alt
+        else:
+            raise FileNotFoundError(f"SAM2 backbone weight not found: {sam2_ckpt}")
     sam = build_sam2(model_cfg, str(sam2_ckpt), device=torch.device(device))
     model = OmniSAM_adapt(sam, num_classes=num_classes, num_maskmem=9).to(device)
-    load_checkpoint(model, ckpt)  # strict=False -> 13-cls head skipped
+    # Upstream smart_load_checkpoint uses strict=False, which still raises on a
+    # shape mismatch (13-cls classifier vs our 8-cls head).  indoor_ckpt
+    # filters that tensor out and reports what happened.
+    from indoor_ckpt import load_indoor_checkpoint
+    load_indoor_checkpoint(model, ckpt)
     return model
 
 
 def split_trainable(model):
-    """Return (trainable_params, lora_params, head_params, frozen_count)."""
+    """Return (trainable_params, lora_params, head_params, frozen_count).
+
+    The LoRA adapters are named `...qkv.linear_a_q` / `linear_b_q` /
+    `linear_a_v` / `linear_b_v` (192 tensors over 16 trunk blocks).  Note that
+    `LoRA_Sam.w_As` / `w_Bs` are plain Python lists holding the *same* Linear
+    modules that `_LoRA_qkv` already owns, so `named_parameters()` yields 64
+    unique entries while `state_dict()` holds 192 -- both refer to the same
+    parameters, and the optimizer must use the `named_parameters()` view.
+    """
     lora, head, frozen = [], [], 0
+    seen = set()
     for n, p in model.named_parameters():
-        if "linear_a_" in n or "linear_b_" in n:
+        if id(p) in seen:
+            continue
+        seen.add(id(p))
+        if ".linear_a_" in n or ".linear_b_" in n:
             p.requires_grad_(True); lora.append((n, p))
         elif n.startswith("decoder."):
             p.requires_grad_(True); head.append((n, p))
@@ -90,8 +115,32 @@ def split_trainable(model):
 
 
 def window_loss(logits, labels):
-    """Per-window CE with ignore=255. logits: (B,C,H,W), labels: (B,H,W)."""
-    return F.cross_entropy(logits, labels, ignore_index=IGNORE)
+    """Per-window CE with ignore=255. logits: (B,C,H,W), labels: (B,H,W).
+
+    A window whose labels are *entirely* ignore (255) produces NaN with the
+    plain cross_entropy (0/0).  Such windows do occur in the SPAN8 panoramas
+    (a crop can land entirely on unlabelled pixels), so we mask them out
+    explicitly and return a zero loss instead of poisoning the run with NaN.
+    """
+    ce = F.cross_entropy(logits, labels, ignore_index=IGNORE, reduction="none")
+    valid = (labels != IGNORE)
+    if not bool(valid.any()):
+        return logits.sum() * 0.0
+    return ce[valid].mean()
+
+
+def forward_pred(model, frame_idx, x):
+    """Call the model and return only the prediction logits.
+
+    `OmniSAM_adapt.forward` returns a bare tensor when the text branch is
+    inactive, but a `(pred, feat, feat_de, TextAlignAux[, ...])` tuple as soon
+    as text prototypes are present (the frozen checkpoint's model does have
+    them).  We only need the logits, so unpack defensively.
+    """
+    out = model(frame_idx, x)
+    if isinstance(out, (tuple, list)):
+        return out[0]
+    return out
 
 
 def main():
@@ -120,12 +169,15 @@ def main():
     ks = list(raw.keys())
     rep["ckpt_audit"] = {
         "total_tensors": len(ks),
-        "lora_tensors": len([k for k in ks if "linear_a_" in k or "linear_b_" in k]),
+        "lora_tensors": len([k for k in ks if ".linear_a_" in k or ".linear_b_" in k]),
         "decoder_tensors": len([k for k in ks if k.startswith("decoder.")]),
         "memory_tensors": len([k for k in ks if "memory" in k.lower()]),
         "head_shape_13cls": list(raw["decoder.linear_pred.weight"].shape),
-        "note": "decoder.linear_pred (13 cls) is shape-mismatched vs the new 8-cls head "
-                "-> skipped by strict=False and trained from scratch",
+        "note": "The frozen checkpoint already carries trained LoRA weights "
+                "(192 tensors) plus a trained 13-class classifier.  For the "
+                "indoor run the 13-cls classifier is dropped (shape mismatch) "
+                "and the new 8-cls head is trained from scratch; the LoRA "
+                "adapters continue from their checkpoint values.",
     }
     if args.audit_only:
         (out / "TRAINABLE_AUDIT.json").write_text(json.dumps(rep, indent=2), encoding="utf-8")
@@ -166,7 +218,9 @@ def main():
     losses = []
     model.memory_bank._init_output_dict_source()
     while step < total:
-        for img, lbl, size, name in dl:
+        for batch in dl:
+            # Stanford360Span8 returns (image, label, size, name, <extra>)
+            img, lbl = batch[0], batch[1]
             if micro == 0:
                 # warmup: freeze LoRA, only head trains
                 for p in lora_params:
@@ -175,21 +229,42 @@ def main():
             lbl = lbl[0].to(device)      # (W,512,512)
             model.memory_bank._init_output_dict_source()
             total_loss = 0.0
+            n_valid = 0
             for w in range(img.shape[0]):
-                out_w, _, _ = model(w, img[w:w+1].contiguous())
-                total_loss = total_loss + window_loss(out_w, lbl[w:w+1])
-            loss = total_loss / img.shape[0]
+                # frame_idx must stay 0: memory_bank.forward only concatenates
+                # past frames when frame_idx != 0, which would leak the previous
+                # window's memory into this one.  Each indoor window is an
+                # independent crop, so 0 is the correct semantic.
+                pred = forward_pred(model, 0, img[w:w+1].contiguous())
+                if not torch.isfinite(pred).all():
+                    # a non-finite forward poisons every parameter update
+                    raise FloatingPointError(
+                        f"non-finite logits at window {w} of image {batch[3] if len(batch) > 3 else '?'}")
+                lw = window_loss(pred, lbl[w:w+1])
+                if bool(torch.isfinite(lw)):
+                    total_loss = total_loss + lw
+                    n_valid += 1
+            if n_valid == 0:
+                continue
+            loss = total_loss / n_valid
             (loss / args.accum).backward()
             losses.append(float(loss.detach()))
             micro += 1
             if micro % args.accum == 0:
-                torch.nn.utils.clip_grad_norm_(lora_params + head_params, args.clip)
+                gnorm = torch.nn.utils.clip_grad_norm_(lora_params + head_params, args.clip)
+                if not torch.isfinite(gnorm):
+                    # a non-finite gradient would poison every parameter; drop
+                    # this micro-batch group instead of corrupting the run.
+                    opt.zero_grad(set_to_none=True)
+                    micro = 0
+                    continue
                 for g, base in zip(opt.param_groups, [args.lr_lora, args.lr_head]):
                     g["lr"] = base * lr_scale(step)
                 opt.step(); opt.zero_grad(set_to_none=True)
                 step += 1
-                if step % 20 == 0:
+                if step % 5 == 0 or step == total:
                     msg = {"step": step, "loss": round(float(np.mean(losses[-80:])), 4),
+                           "grad_norm": round(float(gnorm), 4),
                            "lr_head": opt.param_groups[1]["lr"],
                            "lr_lora": opt.param_groups[0]["lr"],
                            "elapsed_s": round(time.time() - t0, 1)}
@@ -199,7 +274,18 @@ def main():
                     break
         micro = 0
     torch.save({"model": model.state_dict(), "args": vars(args)}, out / "indoor_lora_last.pth")
+    # Also export the LoRA adapters on their own, in the upstream key format
+    # (w_a_XXX / w_b_XXX), so the indoor adapter is portable and comparable
+    # with the outdoor one.
+    enc = model.encoder
+    lora_state = {}
+    for i, w_a in enumerate(enc.w_As):
+        lora_state[f"w_a_{i:03d}"] = w_a.weight.detach().cpu()
+    for i, w_b in enumerate(enc.w_Bs):
+        lora_state[f"w_b_{i:03d}"] = w_b.weight.detach().cpu()
+    torch.save(lora_state, out / "indoor_lora_adapters.pth")
     print("SAVED", out / "indoor_lora_last.pth")
+    print("SAVED", out / "indoor_lora_adapters.pth")
 
 
 if __name__ == "__main__":
